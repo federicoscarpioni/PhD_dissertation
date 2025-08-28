@@ -1,0 +1,32 @@
+{
+    "InternalPDFViewer": {
+        "Embedded": true,
+        "File": "main.pdf"
+    },
+    "Session": {
+        "Bookmarks": [
+        ],
+        "CurrentFile": "preable.tex",
+        "FileVersion": 1,
+        "Files": [
+            {
+                "Col": 11,
+                "EditorGroup": 0,
+                "FileName": "main.tex",
+                "FirstLine": 0,
+                "FoldedLines": "",
+                "Line": 13
+            },
+            {
+                "Col": 1,
+                "EditorGroup": 0,
+                "FileName": "preable.tex",
+                "FirstLine": 12,
+                "FoldedLines": "",
+                "Line": 29
+            }
+        ],
+        "MasterFile": "",
+        "VerticalSplit": true
+    }
+}

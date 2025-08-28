@@ -1,0 +1,166 @@
+% Load packages 
+\usepackage{amsmath, amssymb,mathrsfs}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{caption}
+\usepackage{listings} % format code
+\usepackage{multicol}
+\usepackage{makecell} % Allow text to wrap in tables
+\usepackage{booktabs} % Rulers in tabels
+\usepackage{changepage}
+\usepackage{indentfirst}
+
+
+% Set page layout
+\usepackage{geometry} %[showframe]
+\geometry{
+a4paper,
+%includeheadfoot,
+total={190mm,257mm},
+inner = 25mm,
+outer = 60mm,
+top=25mm,
+bottom=25mm,
+marginparwidth = 50mm
+}
+
+
+% Choose main font for the text
+%\usepackage{XCharter}
+%\usepackage{mlmodern}
+%\usepackage{fourier}
+%\usepackage[scaled]{helvet}
+%\usepackage{bookman}
+%\usepackage{lexend}
+\usepackage[T1]{fontenc}
+
+% Create custom command for settimang fonts
+\newcommand{\helvetfont}{\fontfamily{phv}\selectfont}
+
+\newcommand{\bookfont}{\fontfamily{pbk }\selectfont}
+
+\newcommand{\palafont}{\fontfamily{ppl }\selectfont}
+
+% Custommize headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+%\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+\fancyhead[LEH]{\thepage \qquad \leftmark}
+\fancyhead[ROH]{\rightmark \qquad \thepage }
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+
+% Remove numbers from empty pages
+\let\origdoublepage\cleardoublepage
+\newcommand{\clearemptydoublepage}{\clearpage{\pagestyle{empty}\origdoublepage}}
+\let\cleardoublepage\clearemptydoublepage
+
+
+% Format the titles style
+\setcounter{secnumdepth}{0}
+\usepackage{titlesec}
+
+\newlength\fullchapwidth
+\setlength\fullchapwidth{%
+  \dimexpr\textwidth+\marginparsep+\marginparwidth\relax
+}
+
+\titleformat{\chapter}[display]
+  {\filleft\Huge\bfseries\palafont}
+  {\fontfamily{pbk}\selectfont\scalebox{4}{\color{lightgray}\ \thechapter}
+  }
+  {0pt}
+  {}
+
+% Works only for the number
+% \titleformat{\chapter}[display]
+%   {\Huge\bfseries\palafont}                             % overall font
+%   {                                                       % label (your grey number)
+%     \makebox[\fullchapwidth][\ifodd\value{page}r\else l\fi]{%
+%       \fontfamily{pbk}\selectfont
+%       \scalebox{4}{\color{lightgray}\thechapter}%
+%     }%
+%   }
+%   {1ex}
+%   {}
+
+
+\titleformat{\section}[display]
+  {\LARGE\bfseries\palafont}
+  {\fontfamily{pbk}\selectfont\scalebox{1}{\color{lightgray}\thesection}\quad}
+  {0pt}
+  {}
+
+\titleformat{\subsection}[block]
+  {\Large\bfseries\palafont}
+  {\fontfamily{pbk}\selectfont\scalebox{0.8}{\color{lightgray}\thesubsection}\quad}
+  {0pt}
+  {}
+
+\titleformat{\subsubsection}[block]
+  {\normalsize\bfseries\palafont}
+  {\fontfamily{qag}\selectfont\scalebox{0.8}}
+  {0pt}
+  {}
+
+% Format tables of content
+
+% Main ToC
+%\usepackage{titletoc}
+
+
+% Mini ToC for each chapter
+\usepackage[nohints,tight]{minitoc} 
+\setcounter{minitocdepth}{1}
+\renewcommand{\mtifont}{\large\bookfont}
+\renewcommand{\mtcfont}{\small\bookfont}
+\renewcommand{\mtcSfont}{\small\bookfont}
+\renewcommand{\mtcSSfont}{\small\bookfont}
+\renewcommand{\mtcSSSfont}{\small\bookfont}
+
+
+% Create custom environment for whill width content
+\usepackage{changepage}
+% The following code should be used *after* any changes to the margins and
+% page layout are made (e.g., after the geometry package has been loaded).
+\newlength{\fullwidthlen}
+\setlength{\fullwidthlen}{\marginparwidth}
+\addtolength{\fullwidthlen}{\marginparsep}
+
+\usepackage{fullwidth}
+
+\captionsetup{
+  justification=raggedright,
+  labelfont={color=Gray,bf},
+  font=small}
+
+\newenvironment{fullwidthfigure}[1][]{
+  \begin{figure}[#1]
+  \noindent
+  \checkoddpage
+  \ifoddpage
+    \hspace*{-\oddsidemargin}\hspace*{-1in}%
+  \else
+    \hspace*{-\evensidemargin}\hspace*{-1in}%
+  \fi
+  \bgroup
+}{
+  \egroup
+  \end{figure}
+}
+
+\usepackage{adjmulticol}
+\newenvironment{TwoCol}{\small\begin{adjmulticols}{2}{0in}{-2in}}{\end{adjmulticols}}
+\newenvironment{OneCol}{\small\begin{adjmulticols}{1}{0in}{-2in}}{\end{adjmulticols}}
+
+% Set rules for links
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}

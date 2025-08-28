@@ -1,0 +1,143 @@
+\chapter{Electrochemsitry}
+\minitoc
+
+\section{Thermodynamics}
+
+Electrochemistry is the transformation of chemical energy into electrical energy. The process happens at the electrode. The electrode is considered an interphase between two phases (solid-solid) or (solid-liquid) in which the electrical current carried by ions is converted to electronics current after a redox reaction.
+
+This principle was first discovered by the chemists XXX and defines empirically the relationship between electrical charge and mass of electroactive material dissolved in solution (during oxidation) or deposited from solution to the electrode (during reduction).
+
+<put the math here>
+
+
+\subsection{The origin of the chemical potential}
+
+It is then important to understand the origin of the chemical potential from a foundamental perspective. This is particularly useful when describing the electrochemical potential of battery materials. From a materials science or inorganic chemistry perspective, the chemical potential at room temperature correspond to the fermi level of the electrones in the solid, hence the distance from the latest occupied atomic orbit and the void state (where the electrone is not bounded).
+The Fermi level depends on the class of material. For metals, the situation is quite simple because the electrons can occupy any energy from a continous band. For semiconductors and insulators this is not true. A gap of unaccsesible energy levels is found, known as band gap. Depending on the material composition and strucutre, the band gap can be different leading to a different chemical potential and hence the electrochemical potential of the electrochemical cell were said material is used. When designing useful electrochemical device, the scientist put a lot of effort on the design of materials with certain properties. The description of the electronic structure, also known as density of states, is an hard task and require to solve big system of equations. The Density Functional Theory allow to semplify the calculation under certain conditions and led to a new reserach field of computation material science discovery, altough it is not matter of this thesis to dive deeper into it. 
+
+Electrochemistry first developed studying redox reaction of metals in aqueous electrolytic solutions. While today there is a lot of focus on insulating materials for their properties described later in the text. It is important to remember the distinction, especially for the case of energy storage device that might have materials from both types in the same cell, as well as elecgtrlyzers and fuell cells.
+
+It is not the topic of this work, but rather interesting to mention, that the redox reaction can be also of the type of biologic reactions in living organisms. 
+
+\subsection{The electrochemical potential as a function of concnetration and temperature}
+
+We saw that the parts that compose the electrochemical potential but we have not yet considered two important aspect of the thermodynamic: the temperature of the system and the number of particle, or better, the concentration.
+
+The effect of these quantities on the electrochemical potential was firstly deduce by XXX Nerst in XXXX. The Nernst equation is still quite important and has the form of
+
+<put the math here>
+
+\subsection{Measuring the electrochemical potential}
+
+It is clear already how improtant is the direct measurement of the electrochemical potential for a specific electrode. Unfortunatly it is impossible to get this value from direct measurement. In fact, the simplest electrochemical cells is made of two electrodes and ehnce we can only get a voltage difference. One can get the electrochemical potential of an electrode under study if the second electrode in the cell has a known electrochemical potential. For this task has been developed specific electrode that can deliver such properties called "reference electrodes". The most known reference is the standard hydrogen electrodes made of a platinum electrode immersed in a sulforic acid solution at the temperature of 25 degrees in which pure hydrogen is bubbled at the pressure of 1 atm giving a solution of unitary fugacity. This set-up is reproducible which lead to the decision of using it as a reference point. The electrochemical potential of all the metals are measured in respect to this value and it is referred to "standard reduction potential" (standard beacuase standard conditions) and it is the value used in the nerst equation.
+
+The standard hydrogen electrode, unfortunalty precents some practical shortcoming mostly due to the handling and storage of the flammable hydrogen gas. For the everyday labowork, simpler and safer electrodes are used. Exemples are the calomel electrode and the silver/silver chloride. The latter being the standard in every lab. These electrodes are not as stable and reproducible as the standard hydrogen electrode but they are easilly to prepare and handle and present a quasi-stable electrochemical potential when well maintained. 
+
+It is interesting to consider the case of silver/silver chloride beacuse offer an example of a quasi-reference electrode. Silver is complittly surrounded by silver cloride between which an equilibrium redox reaction is present. Such electrode is immersed in a superconcetrated solution of KCl (3M) in order to have enough Cl ions to not change the coposition of the AgCl. The whole semi-cell is incpsulate into a glass container which terminates with a glass fret to allow the passage of ion.
+
+It is sometimes forgotten that to measure any voltage a small quantity of current has to flow, in fact the electrochemical potential is the measure of work needed to move the electrode from its orbital. This leads to some redox reaction to happen, altering the surface morfology of the electrode as well as concentrations of the solution which alters the electrochemical potential.
+
+One can even think of putting silver directly in contact with a solution containing silver ions, even in direct contact with the electrode of which measuring one is interested of measuring the potential. In principle, this type of configuration can be used as reference electrode, but it has to be granted a constant concentration of silver ion and absence of other ions that might alter the silver redox. This type of reference electrodes are called pseudo-reference electrode and altough much more prone to drift, they might be the only possible solution for certain cell configuration, especially when introducing them in real working devices.
+
+Other issues of secondary reference electrodes might be the interference of the redox reaction at the reference electrode of ions coming from the other electrodes (known as poisoning) or the other way around, where the components of the reference electrode are interfering with the other part of the cell. 
+
+Note: in general the cell is considered to be divide in two semi-cell. Each semi-cell is in ionic contact and have their own electrode. A salt bridge help to keep separated the electrolyte of the two.
+
+\subsection{The effect of the pH and temperature (the Paurbax diagram)}
+
+The pH of the solution, or the diffusive layer (important remark), effect also the chemical equilibrium of the redox species. Some reaction becaome thermodynamiccaly favorable under certain combination of these factor, altering the electrochemical reaction and enche the electrochemical potential of the electrode. See Paurbaix diagram about this.
+
+\section{Kinetics}
+
+Up to this moment, I only covered the case of systems at the equilibrium which represent an interesting case for study the principles of electrode potential and electromotive force but lacks the decription of the effect of the current on the double layer. This aspects are particularly important in applications as for example corrosion of metals, anodization, energy strorage in batteries and electrocatalisys.
+
+When a current flows though the poles of a cell, the double layer at each electrodes is altered because of the change of concentration of ions. What happens is an increase (oxidation) or deplition (reduction) of ions at the interface which alters the double layer capacitance. A change in the latter modifies the electrical field which is reduces or increase in respect to the equilibrium value. This difference is referred to as over-potential or under-potential (potential can be swapped with voltage when there is no reference electrode in the cell). The over- or under-potential is stronger the higher is the current, beacuse the faster is the chemical kinetics of the reaction and hence the amount of ion produced or depleted at the interface. The amount of over- under- potential depends on how fast new ions are brought towordes the surface when depleted or moved out the surface when generated, a behaviour that depends on the diffusivity and mobility of the charged species. This effect can be easily notices when sweeping the voltage applied to an electrochemical cell from the equilibrium value to above. There is a zone where the current is small enough that only the redox reaction is the limiting factor while the ions are moved in or out the surface fast enough to not change the concentration. On the end of the curve the diffusivity of the ions become the rate determining step. In the middle there is a gray zone.
+The first part, that depends only on the transfer of electrones between the redox active scpecies and the external circuit, was firstly described empyrically by Tafel in XXX and later formalize in the Butler-Volmer equation dervied from the Fick's laws of diffusion. 
+
+<Tafel equation>
+[put plot and linearization]
+<B-V equation>
+[plot]
+
+\subsection{Double layer structure}
+
+Since the electrode is a conductor, it can in first principles considered to behave like an ideal resistor. In fact, early experiments showed that imposing a direct current trough two electrode (that makes up an electrochemical cell) produces a certain voltage difference betweens the poles. It follows that the voltage measured is produced by the electrochemical work or Gibb's free energy of the chemical reaction. To be precise, the voltage difference between the electrode correspond to the different in free energy between the redox reaction of the two electrodes, which means that no voltage difference is produce when the two electrodes are of the same chemical nature. One of the first historical examples of electrochemical cell is the pile of Alessandro Volta made of zinc and copper put immersed in an electrolyte solution. 
+
+This leads to the second empirical quantity of early electrochemsitry which is the electromotive force of a cell. The electromotive force integrate in time gives the electrochemical work of the cell.
+
+This simple models though falls short when imposing an alternate current at the cell terminal. In fact, using the language of electrotechnics, the phase of the current get shifted that means there is a beaviour similar to an ideal capacitor present in the circuit. To be precise, the capacitor has been demostrated to be in parallel with the resistor, making up the so called RC circuit; more on this later. The presence of a capacitor in the model means that there is a separation of charge at the interface between the redox active material and the electrolyte phase. Different models were proposed to represent the properties of such capacitive interphase:
+- the Stern model
+- Helmoltz-Perrin
+- the Guy-Chapman model
+The most recent model describes the interphase as composed by different layers (from here the name electrical Double-layer): 
+- asdorbed ions
+- gradient of concentration made of two parts
+-- the diffused where the electric field is not zero (then the bulk starts) and migration takes place
+-- the diffusion layer where the gradient of ion concentration cause diffusion from the bulk to the surface of the electro-active material.
+The most important take on the existance of a capacity double layer is that the voltage difference across the intrerphase is not anymore just the Gibbs free energy of reaction but there is also a component of electrostatic interaction between charges and the electrical field. In other words, the voltage difference between the two terminals is the difference between the electrochemical potential. A quantity made of the sum of chemical potential and electrical potential acting to the species.
+A note on terminology: the word electrode is often vague and used to describe the electro-active material only or the current collector but here is used to indicate the threedimensional region of space in which the electrochemical reaction takes place, as for IUPAC convention.
+
+\section{Electrochemical methods}
+This chapter described the foundamentals principles behind electrochemistry and about battery technology. 
+The electrohemical methods are devided in two big families, direct current method and alternate current method. The first family deals with applying a voltage or a current and observing the other witht time. Also in this case we can make a distinction between constant perturbation method or sweeping methods. In the first case the control is kept constant in time, this methods are known as galvanostatic and potentiostatic. The constant perturbation can be also stepped from zero to the value to zero again (pulsed) or continou to increase in constant increments as a stiarcase. In the latter falls the method of polarization experiment used in certain fields. This class of experiment is used in corrosion, electrodeposition and battery characterazion, more on this later. The other type of method instead involve the sweep of the control quantity, which means a constant increase in time with fiexed ratio. This is a very thypcal experiment done from early days of electrochemistry to explore windows of potential and find the electrochemical potential value for an analytes. It is common to sweep the voltage in both directions and this is known as cyclic voltammetry. Voltammetry is used for characterizing HOMO and LUMO of molecules as well as sensing and qualitative analysis of chemicals in solution. \\
+The second family of methods is based on alternating current. As mentioned before, the method is crucial to caracterize capacitive behaviour in the electrode. The most common technique under this family the Electrochemical Impedance Spectroscopy. The peculiarity of it is to apply an alternating voltage or current (sinus wave) at difference frequency to the electrochemical cell and measure the output. The output will have a change in amplitude, following Ohm's Law, as well as phase. The change in amplitude and phase is a characteristic of the electrode and can be thought as a unique fingerprint. Using alternate methods at different frequencies allows to capture the kinetics of different processes and to quantify the resistance. This topic is divulged in the next section of the chapter.
+\subsection{Three electrode cells}
+Taking back the concept of reference electrodes introduced before, it is now important a precisation for the case of measurment outside the thermodynamical equilibrium. In fact, reference electrodes should stay at equilibrium and they acceppt only small current though them (order of pA) for the sick of probing the voltage. If one is interested of measuring the potential of an electrode when a bigger current is flown, an auxiliray electrode is needed. This electrode has the role of closing the electrical circuit between the electrode under study, called workin electrode) for the flow of current. At the same time a second high-impedance circuit is used to measure the voltage difference between the working electrode and the refernce electrode. This gives also experimental access to the over-potential generated by the current.\\
+The position of the reference electrode in a three-electrode set-up is quite important. Consider that between working and auxiliary electrodes current is flowing in the form of flux of ions. The movement of charged particles generate an alectomagnetic field which alters the local electric field. This means that the double layer of the reference electrode might be altered and shift the electrochemical potential of the electrode. It is then raccomended to place the reference electrode far from the current lines. Furthermore, it is not wise to put the reference electrode too far beacase of the longer path for the ionic current between working and reference electrode. A longer path produces an ohmic drop in the measure voltage difference which also alters read out voltage. The voltage drop due to the placement of the reference electrode is called "I-R drop", and can be corrected though alternate current methods. Modern electrochemistry device have the feature to perform an I-R drop compensation automatically, but it is generally better to place the reference electrode as close as possible to the working electrode, still not in the middle of current lines.
+
+\section{Electrochemical impedance spectroscopy}
+This technique is complex and interesting enough to deserve its own section. It is also the main experimental technique explored during this work, so it is necessary to divulge into the details.\\
+The full power of the technique is achieved when the impedance spectrum of the same electrode is obtain under different conditions. The first is temperature because one can extract the activation energy of the process via Arhenious law. Or otherwise one can change the voltage at which the impedance is measured to activate thermodynamically or not specific reactions.\\
+In the study of electrochemistry it is advantageus to be familiar with basic electrotechnic concepts for both simplify electrochemical processes as their equivalent circuit, for the analysis of data, or understand the electrochemical isntrumentation to confidently design the experiment, understand the output and troublshooting. This section deals with the basic passive elements, basic circuits, operational amplifiers and the concept of noise.
+\subsection{Resistance and impedance}
+Electrical circuits have at least two poles at different voltage, usually one put tu ground that is considered the reference point for zero. Inside the circuit flows the current. The flow can be continous and we call it direct current or oscillating and we call it alternating current. This distinction is important because defines two similar quantities: electrical resistance and electrical impedance. Both are defined as the ratio of voltage and current for the cases of direct and alternate current. When describing the passive elements in the following, it is highlighted the impedance that later will became important for characterizing the properites of electrochemical systems. The main difference between the two signals is that voltage and current are not only related by a different in amplitude but also a shift in phase. For two oscillating signal, the phase or phase shift is the time difference between the same reference point in the two signals, for example the crest of a sinusoidal wave.
+
+\subsection{Passive elements}
+
+\subsubsection{Resistor}
+
+The resistor is the simplest ideal element. The voltage applied to it is linearly related to the current and no phase shift is happening. The linear relationship is defined with the Ohm's law
+$$
+V = R I
+$$
+with the resistance $R$ as proportionality factor, measured in Ohm. When an alternating current is appliead, the same relationship holds so the impedance $Z$ is equal to the $R$.
+
+\subsubsection{Capacitor}
+
+The ideal capacitor is a device constitute by a two paralle conductive plate separate by an insulator. When current flows in the circuit, the charges accumulates on the plate untile the voltage between them is equal but opposite to the voltage applied to the circuit. The behaviour of a capacitor under constant current is then dynamic. The plates charges for a certain caracteristic time that depends on the current applied and then no more current flows, behaving like an open circuit. 
+
+When an alternating current is appliead to a capacitor, the voltage produced has a phase shift of 90° and no current flowing. The mathematical expression of the impedance for an ideal capacitor is then:
+$$
+Z = -\frac{1}{j\omega C}
+$$
+Where $C$ is the capacitance. 
+
+\subsubsection{Inductor}
+
+The ideal inductor is a device that opposes to the change ???
+
+[I don't know]
+
+The mathematical expression of its impedance is:
+$$
+Z = \frac{1}{j\omega L}
+$$
+Where $L$ is the inductance.
+\subsection{Impedance of simple circuits}
+
+The impedance of a circuit of simple element is quite straightforward to calculate when considering the Thevenin and Norton laws. They state that in a branch of circuit the voltage drops of each electrical element adds up so at each node only one value of the voltage is present and the currents for each branch are equal on each electronic element that compose it and at a node all the currents sum up. It follows that the impedance of element in the same branch, i.e. connected in series, is also additive while the impedance of a circuit made of branches connected to the same nodes, i.e. connected in parallel, are inversely additive. For the scope of this work is interesting to consider the case of circuits of resistance, capacitors and inductors connect in various configuration. The most interesting will be the series and parallel connection of capacitors and resistor as well as the integration of an inductor to them.
+
+\subsubsection{The R-C circuit}
+
+When a circuit if formed by the series connection of a resistor and a capacitor
+
+\subsection{Graphic reppresentation of the impedance}
+
+The impedance is a complex-valued number collected over a range of frequencies. Its analysis consist on evaluating how the module and phase change with the frequency.
+$$
+Module= \sqrt{Z_{real}^2+Z_{imag}^2}
+$$
+$$
+Phase = arctan(Z)
+$$
+A visual evaluation allows to understand at a glance the behavior of the impedance.

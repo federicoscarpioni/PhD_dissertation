@@ -1,0 +1,145 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {part}{I\hspace {1em}Theoretical framework}{3}{part.1}%
+\contentsline {xpart}{Theoretical framework}{5}{part.1}%
+\contentsline {chapter}{\numberline {2}Electrochemsitry}{5}{chapter.2}%
+\contentsline {section}{Thermodynamics}{5}{section*.2}%
+\contentsline {subsection}{The origin of the chemical potential}{5}{subsection*.3}%
+\contentsline {subsection}{The electrochemical potential as a function of concnetration and temperature}{6}{subsection*.4}%
+\contentsline {subsection}{Measuring the electrochemical potential}{6}{subsection*.5}%
+\contentsline {subsection}{The effect of the pH and temperature (the Paurbax diagram)}{7}{subsection*.6}%
+\contentsline {section}{Kinetics}{7}{section*.7}%
+\contentsline {subsection}{Double layer structure}{8}{subsection*.8}%
+\contentsline {section}{Electrochemical methods}{9}{section*.9}%
+\contentsline {subsection}{Three electrode cells}{10}{subsection*.10}%
+\contentsline {section}{Electrochemical impedance spectroscopy}{10}{section*.11}%
+\contentsline {subsection}{Resistance and impedance}{11}{subsection*.12}%
+\contentsline {subsection}{Passive elements}{11}{subsection*.13}%
+\contentsline {subsubsection}{Resistor}{11}{subsubsection*.14}%
+\contentsline {subsubsection}{Capacitor}{11}{subsubsection*.15}%
+\contentsline {subsubsection}{Inductor}{11}{subsubsection*.16}%
+\contentsline {subsection}{Impedance of simple circuits}{12}{subsection*.17}%
+\contentsline {subsubsection}{The R-C circuit}{12}{subsubsection*.18}%
+\contentsline {subsection}{Graphic reppresentation of the impedance}{12}{subsection*.19}%
+\contentsline {chapter}{\numberline {3}Batteries}{13}{chapter.3}%
+\contentsline {section}{Non-rechargible battries}{13}{section*.20}%
+\contentsline {section}{A brief hystorical overview}{14}{section*.21}%
+\contentsline {section}{Performance of batteries}{14}{section*.22}%
+\contentsline {section}{Secondary batteries}{14}{section*.23}%
+\contentsline {section}{The choice of metallic ion for shuttling}{15}{section*.24}%
+\contentsline {section}{Electrolytes}{16}{section*.25}%
+\contentsline {section}{State of the art of Li-ion batteries}{16}{section*.26}%
+\contentsline {subsection}{Positive electrodes}{16}{subsection*.27}%
+\contentsline {subsection}{Graphite as negative electrode}{17}{subsection*.28}%
+\contentsline {subsection}{The solid-electrolyte interface}{17}{subsection*.29}%
+\contentsline {subsection}{Solid electrolytes}{18}{subsection*.30}%
+\contentsline {section}{On the nomenclature}{18}{section*.31}%
+\contentsline {section}{Manifacturing of batteries}{19}{section*.32}%
+\contentsline {section}{Battery degradation}{20}{section*.33}%
+\contentsline {section}{Electrochemical characterization of batteries}{20}{section*.34}%
+\contentsline {section}{Fast charging}{21}{section*.35}%
+\contentsline {chapter}{\numberline {4}Identification of dynamical systems}{23}{chapter.4}%
+\contentsline {section}{Definition of system and properties}{23}{section*.36}%
+\contentsline {subsection}{Modeling with differential equations}{24}{subsection*.37}%
+\contentsline {subsection}{Transfer function}{25}{subsection*.38}%
+\contentsline {subsection}{Kramers-Kroning relationship}{26}{subsection*.39}%
+\contentsline {subsection}{Time-domain response}{26}{subsection*.40}%
+\contentsline {subsection}{Frequency-domain response}{27}{subsection*.41}%
+\contentsline {subsection}{State-space formulation}{28}{subsection*.42}%
+\contentsline {subsection}{Model parameters and order}{29}{subsection*.43}%
+\contentsline {subsection}{Non-linear systems}{31}{subsection*.44}%
+\contentsline {subsection}{Non-stationary systems}{31}{subsection*.45}%
+\contentsline {section}{System identification in the frequency domain}{32}{section*.46}%
+\contentsline {subsection}{Definition}{32}{subsection*.47}%
+\contentsline {subsection}{Excitation signals}{33}{subsection*.48}%
+\contentsline {subsection}{Parameters estimation}{34}{subsection*.49}%
+\contentsline {subsection}{Model selection and validation}{35}{subsection*.50}%
+\contentsline {subsection}{Model selection criteria}{36}{subsection*.51}%
+\contentsline {subsection}{Identification in non-stationary case}{38}{subsection*.52}%
+\contentsline {section}{Digital signal processing}{38}{section*.53}%
+\contentsline {subsection}{Digital sampling}{38}{subsection*.54}%
+\contentsline {subsection}{Discrete Fourier Transform}{39}{subsection*.55}%
+\contentsline {subsubsection}{Spectral leakage}{40}{subsubsection*.56}%
+\contentsline {subsection}{Noise}{41}{subsection*.57}%
+\contentsline {subsection}{Wavelets method}{42}{subsection*.58}%
+\contentsline {subsection}{Filters}{42}{subsection*.59}%
+\contentsline {subsection}{Removal of trends}{43}{subsection*.60}%
+\contentsline {subsection}{Signal synthesis}{43}{subsection*.61}%
+\contentsline {subsubsection}{Direct Digital Synthesis}{43}{subsubsection*.62}%
+\contentsline {subsection}{Further resources}{44}{subsection*.63}%
+\contentsline {chapter}{\numberline {5}Dynamic Electrochemical Impedance spectroscopy: \\state of the art}{45}{chapter.5}%
+\contentsline {part}{II\hspace {1em}Methodologies}{47}{part.2}%
+\contentsline {xpart}{Methodologies}{49}{part.2}%
+\contentsline {chapter}{\numberline {6}Acquisition of non-stationary impedance}{49}{chapter.6}%
+\contentsline {section}{Multi-frequency data acquisition}{49}{section*.64}%
+\contentsline {subsection}{Description of the set-up}{50}{subsection*.65}%
+\contentsline {section}{Automation of the acquisition for batteries}{50}{section*.66}%
+\contentsline {subsection}{Problem statement}{50}{subsection*.67}%
+\contentsline {subsection}{Software solution}{52}{subsection*.68}%
+\contentsline {subsection}{Design principle}{52}{subsection*.69}%
+\contentsline {section}{Automatic calculation of the impedance}{53}{section*.70}%
+\contentsline {section}{DEIStools: a Python application for dynamic impedance}{54}{section*.71}%
+\contentsline {subsection}{Software limits}{54}{subsection*.72}%
+\contentsline {section}{Multi-sine design}{55}{section*.73}%
+\contentsline {subsection}{Frequencies selection}{55}{subsection*.74}%
+\contentsline {subsection}{Amplitude optimization}{55}{subsection*.75}%
+\contentsline {subsection}{Phase optimization}{56}{subsection*.76}%
+\contentsline {subsection}{Multi-sine splitting}{57}{subsection*.77}%
+\contentsline {subsection}{Software}{58}{subsection*.79}%
+\contentsline {section}{Impedance estimation}{59}{section*.80}%
+\contentsline {section}{Old part}{60}{section*.81}%
+\contentsline {subsection}{Arbitrary waveform generator}{60}{subsection*.82}%
+\contentsline {section}{Multi-sine design}{61}{section*.83}%
+\contentsline {subsection}{Running the multi-sine in the waveform generator}{61}{subsection*.84}%
+\contentsline {subsection}{Digital acquisition device}{61}{subsection*.85}%
+\contentsline {section}{Connecting cells in three-electrode configuration}{63}{section*.86}%
+\contentsline {section}{Electrochemical devices}{63}{section*.87}%
+\contentsline {section}{Connecting the device and acquiring the signals: set-up version 1}{64}{section*.88}%
+\contentsline {section}{Automatic cycling with}{64}{section*.89}%
+\contentsline {chapter}{\numberline {7}Analysis of impedance}{65}{chapter.7}%
+\contentsline {section}{Parametric models}{65}{section*.90}%
+\contentsline {subsection}{Physical model}{66}{subsection*.91}%
+\contentsline {subsection}{Transfer function model}{66}{subsection*.92}%
+\contentsline {section}{Simultaneous fitting}{66}{section*.93}%
+\contentsline {subsection}{Fitting error}{67}{subsection*.94}%
+\contentsline {section}{Determination of the system degrees of freedom}{67}{section*.95}%
+\contentsline {section}{Determining transfer function structure}{67}{section*.96}%
+\contentsline {part}{III\hspace {1em}Results and discussions}{69}{part.3}%
+\contentsline {xpart}{Results and discussions}{71}{part.3}%
+\contentsline {chapter}{\numberline {8}Coin cells}{71}{chapter.8}%
+\contentsline {section}{Method}{72}{section*.97}%
+\contentsline {subsection}{Cycling test}{72}{subsection*.98}%
+\contentsline {subsection}{Operando acquisition of stating impedance}{72}{subsection*.99}%
+\contentsline {subsection}{Real time acquisition of dynamic impedance}{72}{subsection*.100}%
+\contentsline {subsection}{Analysis of impedance data}{73}{subsection*.101}%
+\contentsline {section}{Results}{73}{section*.102}%
+\contentsline {section}{Discussion}{73}{section*.103}%
+\contentsline {subsection}{Choice of the cell}{74}{subsection*.104}%
+\contentsline {subsection}{Performance test of the cell}{75}{subsection*.105}%
+\contentsline {subsection}{Static impedance evaluation}{75}{subsection*.107}%
+\contentsline {subsection}{Time-varying impedance acquisition}{75}{subsection*.109}%
+\contentsline {subsection}{regression of rational polynomial}{79}{subsection*.114}%
+\contentsline {subsection}{Associating measurement values with battery state}{82}{subsection*.119}%
+\contentsline {chapter}{\numberline {9}Identify lithium plating on graphite}{83}{chapter.9}%
+\contentsline {subsection}{Cell assembling}{83}{subsection*.120}%
+\contentsline {subsection}{Time-varying impedance measurements}{84}{subsection*.121}%
+\contentsline {chapter}{\numberline {10}Discriminating sodium storage mechanisms}{87}{chapter.10}%
+\contentsline {subsection}{Silicon carbonitride}{87}{subsection*.130}%
+\contentsline {subsection}{Storage mechanisms}{88}{subsection*.131}%
+\contentsline {subsection}{Cell housing for three electrodes and optimization}{89}{subsection*.134}%
+\contentsline {subsection}{Microscopic reference electrode of sodium}{90}{subsection*.136}%
+\contentsline {subsection}{Time-varying impedance}{91}{subsection*.138}%
+\contentsline {subsection}{Sodium electrodeposition on sodium substrate}{92}{subsection*.144}%
+\contentsline {subsection}{Time-Varying impedance during SEI formation}{92}{subsection*.150}%
+\contentsline {chapter}{\numberline {11}Studying intercalation}{99}{chapter.11}%
+\contentsline {subsection}{Materials and cell assembly}{99}{subsection*.157}%
+\contentsline {subsection}{Measurement set-up}{99}{subsection*.158}%
+\contentsline {subsection}{Physical model for intercalation}{100}{subsection*.159}%
+\contentsline {subsection}{Results and discussions}{100}{subsection*.160}%
+\contentsline {section}{Comment}{101}{section*.161}%
+\contentsline {chapter}{\numberline {12}Studying non-Faradic reaction in symmetric cell}{103}{chapter.12}%
+\contentsline {subsection}{Materials and cell assembling}{103}{subsection*.162}%
+\contentsline {subsection}{Reference electrode and position in the stack}{104}{subsection*.163}%
+\contentsline {subsection}{Physical model}{104}{subsection*.165}%
+\contentsline {subsection}{Results and discussions}{104}{subsection*.166}%
+\contentsline {subsection}{Quantitative interpretation of the impedance}{105}{subsection*.168}%
+\contentsline {subsection}{Remarks}{105}{subsection*.169}%

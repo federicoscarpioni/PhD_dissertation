@@ -1,0 +1,28 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Definition of system and properties}{\reset@font\mtcSfont 23}{section*.36}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Modeling with differential equations}{\reset@font\mtcSSfont 24}{subsection*.37}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Transfer function}{\reset@font\mtcSSfont 25}{subsection*.38}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Kramers-Kroning relationship}{\reset@font\mtcSSfont 26}{subsection*.39}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Time-domain response}{\reset@font\mtcSSfont 26}{subsection*.40}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Frequency-domain response}{\reset@font\mtcSSfont 27}{subsection*.41}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode State-space formulation}{\reset@font\mtcSSfont 28}{subsection*.42}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Model parameters and order}{\reset@font\mtcSSfont 29}{subsection*.43}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Non-linear systems}{\reset@font\mtcSSfont 31}{subsection*.44}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Non-stationary systems}{\reset@font\mtcSSfont 31}{subsection*.45}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode System identification in the frequency domain}{\reset@font\mtcSfont 32}{section*.46}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Definition}{\reset@font\mtcSSfont 32}{subsection*.47}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Excitation signals}{\reset@font\mtcSSfont 33}{subsection*.48}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Parameters estimation}{\reset@font\mtcSSfont 34}{subsection*.49}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Model selection and validation}{\reset@font\mtcSSfont 35}{subsection*.50}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Model selection criteria}{\reset@font\mtcSSfont 36}{subsection*.51}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Identification in non-stationary case}{\reset@font\mtcSSfont 38}{subsection*.52}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Digital signal processing}{\reset@font\mtcSfont 38}{section*.53}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Digital sampling}{\reset@font\mtcSSfont 38}{subsection*.54}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Discrete Fourier Transform}{\reset@font\mtcSSfont 39}{subsection*.55}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Spectral leakage}{\reset@font\mtcSSSfont 40}{subsubsection*.56}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Noise}{\reset@font\mtcSSfont 41}{subsection*.57}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Wavelets method}{\reset@font\mtcSSfont 42}{subsection*.58}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Filters}{\reset@font\mtcSSfont 42}{subsection*.59}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Removal of trends}{\reset@font\mtcSSfont 43}{subsection*.60}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Signal synthesis}{\reset@font\mtcSSfont 43}{subsection*.61}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode Direct Digital Synthesis}{\reset@font\mtcSSSfont 43}{subsubsection*.62}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Further resources}{\reset@font\mtcSSfont 44}{subsection*.63}}

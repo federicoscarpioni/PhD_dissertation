@@ -1,0 +1,371 @@
+\chapter{Identification of dynamical systems}
+\minitoc
+
+\section{Definition of system and properties}
+A dynamic system is as system whose output evolves over time in response to one or more inputs.  To describe such a system rigorously, we begin by defining its inputs u(t) (the signals or forces we apply), its outputs y(t) (the measurable responses), and its internal state x(t), which encodes the minimum set of variables (e.g. concentrations, voltages, positions) that, together with the inputs, fully determine future behavior. 
+
+From these definition follow three properties: causality, stationary and linearity. Causality means that the system cannot “anticipate” the future—its output at time t depends only on inputs (and states) at times less or equal t, never on future values.  This reflects physical intuition (you cannot react before being stimulated) and is essential when designing real-time controllers or simulators. The next property is system stationarity that means system internal state $x(t)$ doesn't change with over time. In other words, when the input has a time delay, the output is delayed by the same ammount without change in response shape. A stationary system, also referred as time-invariant, it is easier to analyse beacuse it behaves uniformly across all time, allowing to use frequency-domain techniques for its analysis like the Fourier Trasnform that rely on shift simmetry as will be discussed later in detail. Many real systems though, are not stationary that means the internal state $x(t)$ is changes over time: it is time-variant. In this case, any delay of the input does not simply delay the output but there is also a memory effect of the previous states of the system. Time-variant and invariant system requires defferent formalisms that will be discussed in the following of this section. Lastly, the linearity property includes homogeneity and superposition principle: scaling the input by a constant results in the output scaled by the same constant as well as the sum of inputs produces an output that is the sum of the individual inputs response. Linear system admit algebraic representation that means that the input-output representation can be written as ordinary algebraic equations and rapresented as matrices which can be manipulated with well-known linear algebra methods. Again, in the real world, many systems respond to input in a non-linear manner and the homogeneity and superposition principles do not hold. The output depends on the amplitude of the imput and the state of the system and all behaviours cannot be representaed by a constant-coefficient matrix as for the linear case.
+
+\subsection{Modeling with differential equations}
+When we model the physics of a system, we must choose between lumped‐parameter and distributed‐parameter descriptions.  Lumped‐parameter models assume that each state variable is uniform over its domain (e.g. the voltage across an ideal capacitor or the temperature of a well‐stirred reactor), yielding ordinary differential equations (ODEs) in time only.  Distributed‐parameter models recognize spatial variation (e.g. diffusion of ions in an electrode, heat conduction in a battery cell) and lead to partial differential equations (PDEs) in both space and time.  While lumped models are simpler to analyze and simulate, distributed models capture gradients and wave‐like phenomena that can dominate behavior in large or heterogeneous electrochemical systems.
+
+ If one can assume each variable (say, ion concentration or electrode potential) to be spatially uniform within its region, then you partition the system into discrete lumps and write ordinary differential equations (ODEs) of the form
+$$
+\frac{dx}{dt} = f(x, u, t),
+$$
+where x(t) is a vector of state variables, u(t) the inputs (current, temperature, etc.), and f encapsulates generation, consumption or storage rates (e.g. reaction kinetics, double‐layer charging). This lumped‐parameter approach yields a finite set of ODEs requiring only initial conditions $x(t_0)=x_0$ to specify a unique time‐evolution.
+When spatial gradients cannot be neglected—such as ion diffusion through porous electrodes or potential drops across an electrolyte—you must adopt a distributed‐parameter model and derive partial differential equations (PDEs). A canonical example is the diffusion equation for concentration c(x,t):
+$$
+\frac{\partial c}{ \partial t} =-\nabla J + R(c,\varphi,t),
+$$
+with flux J often given by Fick’s law $J= -D\nabla c$ and R representing local reaction or source terms. The solution of such a PDE demands, in addition to an initial concentration profile $c(x,t_0)=c_0(x)$, boundary conditions on the domain’s edges—Dirichlet (fixed value), Neumann (prescribed flux) or mixed Robin types—so that the problem is well posed.
+
+Formally, ODE‐ and PDE‐based models differ only in whether your independent variables include space; both require clear statements of (1) governing equations from conservation or constitutive relations, (2) initial conditions for all states, and (3) boundary conditions for spatial domains. Analytic solutions exist only for the simplest geometries and linear kinetics; in practice, one discretizes PDEs (via method of lines, finite differences or finite elements) into a large ODE system and then integrates numerically. This rigorous ODE/PDE formalism ensures that key electrochemical phenomena—time‐constant separation between fast surface reactions and slow diffusion, non‐uniform current distributions, dynamic adsorption—are faithfully captured, setting the stage for accurate simulation, control design and parameter estimation.
+
+Electrochemical systems are described by a special case of partial differential equation in which the order of the derivatives is not an integer but rather a fraction, hence the physical model must be described with fraction differential equations (FDE).
+
+This type of models based on differential equation are reffere to as parameteric models for they contain coefficients, or parameters, that multiply each N-th order temporal derivate variable. System can be also model used non-parametric discriptions, but will not be considered in this work.
+
+\subsection{Transfer function}
+
+In a linear time‐invariant (LTI) system, the transfer function provides an algebraic description of how inputs are mapped to outputs in the complex‐frequency domain. For a dynamic system with lamped parameters described by $dt/dt=f(x,u,t)$ the function f must be linear and time invariant in this limiting case of LTI. Hence $f$ can only be described as a linear combination of the states of wich the coefficents are time-indipendent parameters, which leads to the ordinary differential equation to take the form
+$$
+a_n y^n (t) + a_{n-1} y^{n-1} (t) + ... + a_0 y(t)  =  b_m x^m (t) + b_{m-1} x^{m-1} (t) + ... + b_0 x(t),  
+$$
+where n is the order of the ODE.
+Solving the equation for $a_i$ and $b_i$ is impossible with algebraic method for the presence of the derivative. This historic mathematical problem was tackled by Pierre-Simon Laplace across the eighttenth and nineteenth centuries. He had the intuition of applying a variable trasnformation to convert derivatives into multiplication, simply identify the coefficients in the new space and then invert the trasnformation to its original variable space for the solution of the equation. The transformation is now known as Laplace transform, an operator denoted as $\mathcal{L}$ that acts on the function f(u,x,t)
+$$
+\mathcal{L}\{f\}(s) = \int_0^\infty f(t)e^{-st}dt,
+$$
+where s is a complex number.
+the resulting functional is usually written with capital letter : $F(s)$ in the new variable s. (Note: not to be confused with the Fourier transform. Here I am using F only beacuse of the functin f(u,x,t,) defined before)
+When taking the Laplace transform under zero initial conditions to the constant-coefficient ordinary differential equation it become: 
+$$
+Y(s)[a_0 + a_1 s + ... + a_n s^n] = X(s)[b_0 + b_1 s + ... + b_m s^m].  
+$$
+Here it is introduced the definition of transfer function as the ration
+$$
+H(s)= \frac{Y(s)}{X(s)} 
+$$
+or
+$$
+H(s) = \frac{b_0 + b_1 s + ... + b_m s^m}{a_0 + a_1 s + ... + a_n s^n}.  
+$$
+By evaluating H(s) on the imaginary axis (s=j$\omega$), one directly obtains the frequency response, much clearer for practical applications. The Laplace transform can be written directly as function of j$\omega$ an be called Fourier Transform.
+When plotted in Bode plots, the shape of the magnitude and phase of the trasnfer function is used to study resonance analysis and controller design. In fact, the transfer function is a rational polynomial function and as such one can calculate the solution for zero, or roots, for the numerator and denominator, usually referred as zeroes and poles for the reason that the transfer function approaches zeroes (i.e. attenuates the input) when the nominator tends to zero and approaches infinite (i.e. system natural modes, where it is stationary; it means that before that value, the system decays esponentially after an impulse while for greater values it gorws unstable) when the denominator tends to zero.
+In discrete‐time, an equivalent formulation arises by applying the z‐transform to a linear difference equation, yielding $H(z)=Y(z)/X(z)$.  Thus, the transfer‐function formulation transforms differential (or difference) equations into algebraic ratios in s or z, enabling powerful tools for analysis, simulation and design entirely within the complex‐frequency domain.\\
+In signal processing and control theory, a transfer function is a compact mathematical description of how a linear time-invariant (LTI) system maps an input to an output in the complex‐frequency domain. Here, “linear time-invariant” means the system’s output depends linearly on past inputs and its characteristics do not change over time. By applying the Laplace transform to the input signal x(t) and output signal y(t), one obtains X(s) and Y(s) as functions of the complex frequency variable s; under zero initial conditions, the transfer function is defined as
+H(s) = Y(s) / X(s).
+In discrete time, the analogous definition uses the z-transform, H(z) = Y(z)/X(z). Because H(s) (or H(z)) is typically a ratio of two polynomials, its zeros (numerator roots) create frequency bands of attenuation, while its poles (denominator roots) correspond to the system’s natural modes and govern stability. Evaluating $H(s)$ along the imaginary axis ($s = j\omega$) yields the frequency response $H(j\omega)$, whose magnitude and phase plotted against $\omega$ (Bode plots) immediately reveal gain, bandwidth, resonances, roll-off rates and phase margins. Transfer functions therefore serve as the foundation for system analysis (predicting step and impulse responses), filter design (pole–zero placement), controller tuning (adjusting crossover frequencies and margins), and system identification from measured input–output data.
+
+
+\subsection{Kramers-Kroning relationship}
+???
+
+\subsection{Time-domain response}
+Time‐domain responses offer an intuitive picture of a system’s dynamics by showing how it reacts over time to simple probes such as an ideal impulse $\delta(t)$ and a unit step u(t). The impulse response h(t) fully characterizes the system—any output follows by convolution,
+$$
+y(t)=\int _0 ^\infty h(\tau) x(t-\tau)d\tau,
+$$
+while the step response 
+$$ 
+y_s(t)=\int _0 ^\infty h(\tau)d\tau 
+$$
+highlights cumulative behaviors such as rise time, overshoot and settling. Each term in h(t) corresponds to a modal response $e^{p_i t}$, where poles $p_i=\sigma_i\pm j\omega_i$ set decay rates ($\tau_i=-1/\sigma_i$) and oscillation frequencies $\omega_i$.
+In principle, a single time‐domain experiment can excite all of a cell’s characteristic modes—charging, diffusion, adsorption—in one go, revealing the distinct “humps” or decays associated with each physical process. Another approach for probing the system is using a broadband excitations and Deconvolution such as a chirp, multi-sine or pseudo-random binary sequence (PRBS) that spans the desired frequency range with known amplitude and phase, then compute the impulse response by deconvolving the input from the output (or by cross-correlation for PRBS).
+Experimentally, $\delta(t)$ is approximated by a very short voltage or current pulse of duration $\Delta t << min(\tau_i)$, yielding a near-flat spectrum across all modes, whereas step tests involve abrupt, sustained input changes. By recording the resulting transients in voltage or current, one observes distinct decays or “humps” that map directly to physical processes (for electrochemical systems double-layer charging, charge-transfer kinetics and mass-transport diffusion) and can extract each time constant and gain from a single measurement. 
+In practice, however, generating an ideal input is challenging: pulses must be short yet energetic enough for a clean signal, and extracting the true impulse response often amplifies noise when one differentiates a measured step. Moreover, overlapping time constants can blur together, making it hard to assign each feature to its underlying mechanism.
+
+\subsection{Frequency-domain response}
+The frequency-domain response is the quantitave measure of the magnitude and phase of the output as a function of input frequency. The frequency response for a linear and time-invariant system (LTI) is the ratio of the Fourier spectra $X(\omega)$ and $Y(\omega)$ of the input x(t) and the output y(t):
+$$
+H(\omega) = \frac{Y(\omega)}{X(\omega)}.
+$$
+For electrochemical systems inputs and outputs are generally voltages u(t) or current i(t) giving as transfer function the impedance or admittance:
+$$
+Z(\omega) = \frac{u(\omega)}{i(\omega)} \quad \text{or} \quad Y(\omega) = \frac{1}{Z(\omega)}= \frac{i(\omega)}{u(\omega)}.
+$$
+The input can be a waveform with a single frequency components, such as a sine, or a broadband excitation such as chirp, multi-sine or pseudo-random binary sequences. In practice, when stimulating the system with input with different frequencies one obtains the frequency response function (FRF) over those (angular) frequencies. The frequency response function is the practical realization of the transfer function. 
+Frequency and time -domain characterization methods are looking at the same system from two different perspective so the choice of the method depend on the particular case.\\
+Here are some difference between the two approaches:\
+
+Excitation\
+
+Time-domain: single step or short pulse (broadband in principle)\
+
+Frequency-domain: sinusoids (one at a time) or broadband signals (chirps, multi-sine, PRBS)\
+
+Measurement\
+
+Time-domain: record transient y(t) immediately after input; extract h(t) or step response $y_s$(t) features\
+
+Frequency-domain: wait for (or isolate) steady-state sinusoidal output, then measure gain and phase at each $\omega$ (or compute $H(\omega)=\frac{Y(\omega)}{X(\omega)}$)\
+
+Data Processing\
+
+Time-domain: curve-fit exponentials or deconvolve pulses; may differentiate noisy data to obtain h(t)\
+
+Frequency-domain: FFT (or cross-spectra) and ratio formation; Bode/Nyquist plotting\
+
+Advantages\
+
+Time-domain: one test captures all modes at once; intuitive identification of time‐constants and overshoot\
+
+Frequency-domain: high SNR at each $\omega$; clean separation of processes by frequency; easy to apply windowing and averaging\
+
+Limitations\
+
+Time-domain: hard to generate ideal impulses; overlapping decays can be ambiguous; noise amplification in differentiation\
+
+Frequency-domain: sequential $\omega$-points lengthen total test time (unless using broadband patterns); requires steady-state per tone\
+
+Typical Use\
+
+Time-domain: fast‐survey of overall dynamics; educational demonstrations; some controller designs (pulse response)\
+
+Frequency-domain: impedance spectroscopy; precision filter or controller tuning; system identification with narrow-band models\
+
+\subsection{State-space formulation}
+Beyond single‐input/single‐output ODEs or transfer functions, the state-space approach offers a compact, general framework—especially powerful for multi-input/multi-output (MIMO) or high-order systems, and a natural bridge from distributed-parameter (PDE) models after spatial discretization. You begin by collecting all the system’s “memory” variables (e.g. surface concentrations, electrode potentials, capacitor voltages) into a state vector x(t). The evolution of x is then governed by a first-order vector differential equation 
+$\dot{x}(t) = Ax(t) + B u(t)$
+where u(t) is the input vector (voltage, current, temperature, ecc.), A is the state-matrix that encodes internal coupling and time-constants, and B maps inputs into the state dynamics. The output vector y(t)—the measurable voltages, currents or other signals—follows 
+$y(t)=Cx(t)+Du(t)$
+with C selecting or combining states into outputs and D capturing any direct feedthrough from input to output. Why use state-space?
+\begin{itemize}
+    \item  Universality: any LTI system (of order N) can be cast in this form, whether it started as a set of ODEs, after discretizing a PDE, or even as a higher-order transfer function.
+    \item  MIMO handling: A,B,C,D naturally generalize to multiple inputs and outputs without cumbersome transfer-matrix algebra.
+    \item Time-domain clarity: initial conditions x(0) enter directly, so you can simulate transients under arbitrary start-up states.
+    \item Analytical tools: eigenvalues of A are the system poles (modes), and the resolvent $(sI–A)^{-1}$ appears in the transfer-function relation
+    $$
+    H(s) = C (sI-A)^{-1}B+D,
+    $$
+    linking state-space and frequency-domain descriptions.
+    \item Extension to time-varying or nonlinear dynamics: by allowing A, B, C, D to depend on t or x, u, you move naturally into more advanced modeling without abandoning the same notation.In electrochemical systems, state-space models let you represent coupled reaction kinetics, double-layer capacitance, and diffusion processes in one unified set of matrices—ready for simulation, model reduction or control design. 
+\end{itemize}
+Compared to the use of transfer function for frequency-domain characterization, state-space representation is used for characterize system in time. Not only state-space has the advantage of handling multiple input systems but also its linear algebra nature make it easy to scale to higher dimensions and use algebraic techniques like validating the internal stabilty with the Lyapunov method. \\
+\subsection{Model parameters and order}
+In dynamic‐systems modeling, the “order” of a model refers to the number of state variables (or energy‐storage elements) needed to capture its behavior—in essence, the dimension of the underlying set of differential equations. High‐order or distributed‐parameter models (e.g. detailed diffusion PDEs) can faithfully describe every subtle spatial and temporal effect but become computationally expensive, hard to identify from data, and unwieldy for control or optimization. Model reduction seeks a lower‐order approximation that retains the system’s dominant dynamics over the frequency or time range of interest.
+Model order—the number of state variables in your model—directly ties to which internal modes actually matter for input–output behavior. Controllability asks “can my inputs excite each state?” and observability asks “can I infer each state from my outputs?” In a full‐order model some states may be neither reachable by any input nor visible in any output; those uncontrollable or unobservable modes never influence the signals you care about. By applying the Kalman decomposition (or checking the rank of the controllability and observability Gramians), you identify and remove exactly those redundant states, yielding a minimal realization whose order equals the dimension of the controllable‐and‐observable subspace. Thus, controllability and observability are the gatekeepers for model reduction: they tell you which state dynamics you can safely discard without altering the measured transfer behavior, ensuring your reduced‐order model remains both compact and faithful.Frequency‐domain methods (i.e. electrochemical impedance spectroscopy) have become the gold standard for battery characterization because they deliver a direct, frequency‐resolved view of each physical process—charge transfer, double‐layer charging, solid‐state diffusion—by measuring complex impedance Z($\omega$)=V($\omega$)/I($\omega$). Modern potentiostats integrate precision waveform generators (single‐ or multi‐sine, chirp) and phase‐sensitive detectors, so although the hardware is more involved than a simple current‐pulse setup, you gain much higher signal-to-noise ratio at each frequency and unambiguous separation of overlapping time‐constants.
+By contrast, time‐domain techniques apply a step or short pulse and monitor the transient voltage (or current) relaxation. You cannot produce a true Dirac impulse, but methods like GITT (Galvanostatic Intermittent Titration Technique) approximate it by applying small current pulses followed by long rest periods and analyzing the potential versus $\sqrt{t}$ to extract diffusion coefficients and resistances. GITT is widely used for diffusion quantification and state‐of‐charge profiling, but it smears together fast and slow processes and typically requires curve-fitting of overlapping exponentials—making interpretation more model-dependent.
+From a systems‐theoretic viewpoint, neither domain changes the underlying controllability or observability of the battery’s modes: as long as your excitation (pulse or broadband waveform) contains energy at a mode’s frequency, that mode is controllable; and as long as you measure the resulting voltage/current, it is observable. The practical advantage of the frequency domain is that you can concentrate excitation energy into narrow bands—boosting SNR where you need it—and directly read off gain and phase without deconvolution or numerical differentiation. Time-domain tests remain valuable for rapid surveys or diffusion-specific studies (via GITT/PITT), but for full dynamic system identification and high-fidelity equivalent‐circuit fitting, frequency-domain characterization typically offers superior precision and clarity.
+Beyond diffusion‐limited behavior, a current‐step transient actually unfolds in several phases:
+\begin{enumerate}
+    \item Instantaneous IR drop: the very first jump in voltage reflects the cell’s ohmic resistance (electrolyte, wiring, contacts).\\
+\item Fast exponential decay(s): immediately after the IR drop, you often see one or more exponentials whose time constants ($\tau \approx R_{ct} \times C_{dl} $ or adsorption time constants) arise from charge‐transfer resistance (Rct) and double‐layer or adsorbed‐species capacitances (Cdl, Cads).\\
+\item $\sqrt{t}$–dependent diffusion regime: on longer time scales the voltage relaxes roughly linearly with $\sqrt{t}$, characteristic of semi‐infinite solid‐state or porous‐electrode diffusion.
+\end{enumerate}
+GITT and similar methods typically focus on the third regime—using long enough pulses and rest periods to isolate diffusion and extract D via the $\sqrt{t}$ slope. The earlier exponential phases do contain charge‐transfer and adsorption information, but they are short, often buried in noise, and overlap when multiple time constants coexist. Extracting them reliably requires very high time resolution, careful baseline subtraction, and multi‐exponential fitting—challenges that make time-domain extraction of Rct and Cdl less robust than frequency-domain impedance, where each process cleanly appears at its own corner frequency.
+
+\subsection{Non-linear systems}
+Nonlinear systems are those in which the principle of superposition (i.e. the sum of individual responses equals the response to the sum of inputs) no longer holds because one or more elements—reaction rates, transport coefficients or material properties—depend on the current state or input amplitude. Unlike linear systems, whose behavior is fully captured by constant‐coefficient ODEs, transfer functions and fixed poles/zeros, nonlinear systems can exhibit amplitude‐dependent gains, harmonics, limit cycles, multiple equilibria or even chaotic dynamics. An applied sinusoid may generate new frequencies through distortion, and small changes in operating point can dramatically alter time‐constants or stability. Analytically, one often resorts to numerical integration, perturbation expansions around an operating point to compensate or remove the non-linearity from the output. In alternative to approximate describing‐function techniques to study such behavior. The magnitude and phase of these harmonics can be directly linked to physical nonlinearities—such as the exponential dependence of Faradaic current on overpotential (revealing Tafel slopes), coverage‐dependent adsorption pseudocapacitance, or concentration‐polarization effects under large polarization. By extracting and modeling these higher‐order impedance kernels, one gains insight into reaction orders, adsorption isotherms, and dynamic coupling between charge transfer and mass transport—information that is invisible in conventional, strictly linear EIS. 
+In the classic electrochemical impedance spectroscopy, however, one deliberately keeps perturbations small enough (typically a few millivolts or microamperes) that the cell’s response remains in its nearly linear regime. This “small‐signal” assumption ensures that the measured impedance truly reflects the linearized transfer function around the chosen operating point, avoiding the complications of nonlinear dynamics. 
+The simple transfer‐function definition
+$H(s)=Y(s)/X(s)$
+only holds for linear, time-invariant (LTI) systems under zero initial conditions.
+Time-varying systems
+– Their impulse response h(t,$\tau$) depends on both the observation time t and the input time $\tau$, so you write
+$y(t)=\int h(t,\tau)x(\tau)d\tau$
+– You cannot collapse this into a single‐variable H(s); instead you must work with the two-time‐index kernel h(t,$\tau$) or its time-varying Fourier/Laplace counterparts.
+Nonlinear systems
+– Superposition no longer applies, so $y(t) \approx h * x$.
+– You must resort to Volterra/Wiener series (multi-kernel expansions) or describing-function methods for small-signal, approximate frequency-domain descriptions.
+
+\subsection{Non-stationary systems}
+In contrast to time‐invariant systems—whose rules never change—a time‐varying (non‐stationary) system has dynamics that explicitly depend on the absolute time at which inputs are applied. Formally, its input–output relation must be written with a two‐time kernel $y(t)=\int _{0}^t h(t,\tau)·x(\tau),d\tau$,
+where $h(t,\tau)$ no longer “slides” with t but changes shape as t evolves. Equivalently, in state‐space one writes
+$$
+\dot{x}(t)=A(t)x(t)+B(t)u(t),
+y(t)=C(t)x(t)+D(t)u(t),
+$$
+with A,B,C,D all functions of t.
+Why does this matter? In batteries and electrochemical cells, internal parameters (resistances, diffusivities, capacitances) drift with state‐of‐charge, temperature or aging. As a result, the same excitation at two different instants produces outputs with different gains, time‐constants or phase lags.
+Special cases and analysis tools include:
+\begin{itemize}
+    \item Linear‐Parameter‐Varying (LPV) models, where A,B,C,D depend smoothly on measurable “scheduling” variables (e.g. SoC), allowing global nonlinearity to be handled via local LTI patches.
+    \item Periodic (Floquet) systems, in which $h(t+T,\tau+T)=h(t,\tau)$ and one can use harmonic‐balance or stroboscopic maps to analyze stability and resonance.
+    \item Slow‐variation (quasi‐stationary) approximations, applying sliding‐window or recursive‐least‐squares identification to treat the system as locally LTI over short intervals.
+\end{itemize}
+
+\section{System identification in the frequency domain}
+\subsection{Definition}
+System identification is the process of choosing statistically a mathematical model appropriate to describe the system under study based on measured input/output data (data-driven). 
+For system identification in the frequency domain, that we are using here, it is finding a mathematical formulation for the transfer function that describes the system given its experimental frequency response function.
+Its primary goals are:
+\begin{itemize}
+\item Structure selection—choosing a model form that can capture the system’s behavior (e.g. equivalent‐circuit, state‐space or black-box polynomial models).
+\item Parameter estimation—determining the numerical values (resistances, capacitances, transfer‐function coefficients, etc.) that best fit the data.
+\item Uncertainty quantification—assessing the confidence or variance in those estimates to support robust simulations and control design.
+\end{itemize}
+System identification has a multitude of applications from among which:
+\begin{itemize}
+    \item \emph{control} the system input in order to maintain a desired output. It is a dedicated branch of enegineering called System control and it is foundamental for industrial automation and the base for the functioning of many electronic devices. I annoverate here the importance of PID controllers;
+    \item \emph{prediction} of the system output outside the testing input values;
+    \item \emph{forecast} of the system output at future time;
+    \item \emph{understand} the system underline physics. 
+\end{itemize}
+The first big choice is between parametric and non-parametric models
+The first step is the choice of the model between three approaches:
+\begin{itemize}
+    \item white-box models, where every equation and parameter stems from first‐principles physics;
+    \item gray-box models, which embed mechanistic structure (e.g. RC networks for electrochemical cells) but tune some parameters from data;
+    \item black-box models, which use purely data‐driven forms
+\end{itemize}
+Choosing an appropriate modeling approach for an electrochemical system hinges on the balance between physical insight, computational effort and data availability.  At one extreme, white-box models—built from first-principles PDEs of mass transport, charge conservation and reaction kinetics—offer high fidelity but demand detailed material parameters, fine spatial discretization and heavy numerical simulation.  At the other, black-box techniques can fit arbitrary I/O behavior from relatively little data, yet yield little chemical or mechanistic interpretation.  Grey-box models—most commonly equivalent‐circuit representations in EIS—strike a practical compromise: each resistor, capacitor, constant-phase element or Warburg branch carries clear electrochemical meaning, while their numerical values are identified from measured impedance spectra.  PDE‐based models are used when you need predictive accuracy across wide operating ranges; employ grey-box EIS fitting for rapid characterization, diagnostics and BMS implementation; and reserve black-box methods for purely control-oriented applications where internal physical detail is secondary.
+For frequency-domain characterization the identification of a black-box model can be non parametric Compute the cross‐ and auto‐spectra of input u(t) and output y(t) (e.g. via Welch’s method) or parametric using a rational function with no physical interpretation of poles/zeros. For the estimation of a and b is used one of thesetechnqiues:  Sanathanan–Koerner, vector-fitting or maximum-likelihood algorithms.
+\subsection{Excitation signals}
+This works deals with frequency-domain characterization of electrochemical systems. Compared to the step or pulse (rectangular) excitation of the time-domain characterization there are multiple excitation types for the frequency domain. The chosen perturbation signal determines which dynamics components of the system will be excited, hence visible in the identification process, how the frequency response function can be estimated and how long the experiment takes. In practical terms, one must decide the type and frequency of the excitation and the amplitude: large enough to be distinguished from noise but small enough to keep the system in its linear regime. The types of perturbation are:
+\begin{itemize}
+    \item sine waves, that stimulate only one frequency at the time; for an identification experiment, sine waves are generated one after the other generally from high to low in EIS experiments in a process called stepped sine experiment;
+    \item swept-sine signals (or chirps) are signals in which the frequency varies continuously over time.
+    \item multi-sine waves are the superimposition of multiple sinusoidal components of different frequency (and phase), reducing experiment time;
+    \item pseudo-random binary sequences switches (randomly) between two levels producing flat spectral density with low power.
+\end{itemize}
+Sine and multi-sine excitation signals are the most used perturbation types because all the power is used to excite a specific frequency leading got higher signal to noise ration and simplicity of interpretation of amplitude and phase characteristics, but they require more complicated hardware for the generation of pure sinusoidal forms or arbitrary waveforms. For some industrial ora high scale application this is not possible and binary sequence, that require more sophisticated analysis, are instead implied.\\
+The frequency response function is estimated from the synchronous records of the input excitation u(t) and output i(t) of the system via non-parametric function of its simplest form as:
+$$
+H(\omega) = \frac{U(\omega)}{I(\omega)}=\frac{|U|}{|I|}e^{-j\pi\phi_u-\phi_i},
+$$
+where U and I are the Fourier Transform of u(t) and i(t).
+\subsection{Parameters estimation}
+In system identification, “parameter estimation” goes beyond ordinary curve-fitting by explicitly accounting for the system’s dynamical structure and the statistical properties of its disturbances. Whereas a typical fit might simply minimize the sum of squared differences between a model’s output and data (assuming independent, identically distributed errors), identification algorithms embed a specific model form—ARX, state-space, transfer function, etc.—and often include an explicit noise model (as in ARMAX or Box–Jenkins). Methods like prediction-error minimization (a weighted least-squares that accounts for colored noise), instrumental‐variable estimators (to eliminate bias when regressors correlate with disturbances), and maximum-likelihood or Bayesian approaches (to achieve statistical efficiency and uncertainty bounds) ensure that the estimated parameters are not only the “best fit” in a least-squares sense but also consistent, unbiased and accompanied by confidence measures. Regularization techniques further guard against overfitting by penalizing overly complex models. In short, system-identification parameter estimation rigorously marries the dynamic model structure with noise characterization and statistical theory—whereas normal fitting treats the model as a static curve and typically ignores these subtleties.\\
+For these reasons, typically, parameters estimation in the system identification sense estimates noise or nonlinearities together with the transfer function.\\
+When fitting the chosen model $G(\omega; \theta)$ to the data, one minimizes a weighted least-square error:
+$$
+min_{\theta} \sum_{\omega} w(\omega) | \hat{Z(\omega)}-G(\omega;\theta)|,
+$$
+where $\hat{Z(\omega)}$ is the frequency response function (the hat symbol is used to denote the experimental data). Under Gaussian‐noise assumptions this criterion is also the maximum‐likelihood estimator. An estimator is simply a rule or formula that takes your measured data—in this case the sampled input u(t) and output y(t)—and produces an estimate of some underlying quantity you care about (e.g. a transfer function H, a parameters, or a noise PSD).
+\subsection{Model selection and validation}
+As discussed in the previous section, the choice of the model order reflects on the degrees of freedom of the dynamic model. During the identification processes one must decide the model order, in other words the number of parameters of the transfer function or of the physical model. Too little parameters makes the model simple and fast to fit or ease to implement in control but it might loose the ability to represent certain dynamics. On the other hand a model with high order may fit noise instead of the features of the system, leading to the so-called over-parametrization. In both cases the model would not be able to generalize to new data. When we say order, we mean the actual order of the variables in the differential equations. Another problem in model selection is to verify that all the parameters are uniquely determined form the input-output measurement. In practical cases, an high order model might be needed but some parameters corresponding to lower orders might not be influencing the input-output relationship causing again over-parametrization. To address identifiability one examines the sensitivity matrix S, i.e. the Hessian of the cost function:
+$$
+S_{ij}=\frac{\delta y(t_i;\theta_)}{\delta \theta _j},
+$$
+where y is the model linearized around the optimal parameters $\theta _{opt}$. If non of the columns of S can be written as combination of the others (full column rank), each parameter produces a unique variation in the output and is locally structurally identifiable. Conversely, if two columns of S are nearly collinear (scalar multiple of each other), the corresponding parameters can compensate for one another and only their combination is identifiable.\\
+From S one builds the Fisher information or Hessian approximation 
+$H\approx S^TWS$
+where W contains your error‐weighting), and its eigenvalues indicate how tightly each parameter is constrained by the data. Small eigenvalues (or large diagonal entries in the inverse Hessian) correspond to flat valleys in the cost surface—parameters that the data cannot pin down.\\
+To go beyond this local, linearized picture, one often employs profile‐likelihood or profile‐cost methods: you fix one parameter at a succession of values, re‐optimize all others, and watch how the minimum cost grows. A shallow profile means the parameter is only weakly identifiable (large confidence interval), whereas a steep rise defines precise confidence bounds.
+Model selection and parameter identifiability check are performed in the same step of fitting, they are two sides of the same coin.\\
+Once a model to test is selected and fitted to the data, it must be validated. The purpose is to verify that the dynamic of the system is captured and is general (valid on unseen data). 
+At the heart of validation lies the analysis of the residuals, which are the differences between the measured outputs and the model’s predictions. In a well‐specified model, these residuals should behave like random noise—lacking any systematic trends, uncorrelated with past inputs, and exhibiting a flat spectrum when viewed in the frequency domain. Any remaining structure in the residuals—whether a repeating pattern in time, a peak in the spectrum, or significant coherence with the input signal—indicates that the model has failed to capture some aspect of the system’s behavior. Beyond residual analysis, one typically divides data into training and validation sets (or employs cross‐validation) to ensure the model generalizes to unseen conditions, and computes statistical measures such as the normalized root‐mean‐square error, R-squared, or information criteria (AIC/BIC) to compare competing models while penalizing excessive complexity. Monte Carlo or bootstrap techniques can further propagate measurement uncertainty through to parameter estimates, yielding robust confidence intervals for each model parameter.
+\subsection{Model selection criteria}
+To verify and select a model among multiple options, one needs an arbitrary evaluator based on statistical principles. This section describes some common model selection criteria to identify the most appropriate model for fitting the data avoiding over- or under-parametrization. These methods are based on the concepts of balancing the quality of the fitting with the complexity of the model. The first, also called generally "goodness of fit" reflects how close the parametrized model is to the experimental  data. Its value depends on the method use for the fitting. For least-square cost function minimization, the parameter is the sum of squared errors $\chi ^2$, the coefficient of determination or the normalized root-mean-square error. The natural step is to consider the maximum likelihood estimation, a principle that bridge between fit quality and statistical inference. The maximum likelyhood is the principle of choosing the parameter values that would make the observed data most plasible, or probable. Maximizing the likelihood of observing the data is mathematically equivalent to minimizing the $\chi ^2$. More generally, MLE adapts the goodness‐of‐fit criterion to whatever error distribution is appropriate—so whether errors are Gaussian, Laplacian or colored, the likelihood function automatically weights residuals in a way that yields statistically efficient parameter estimates. The beauty of MLE is that, under broad conditions, it yields estimates that converge to the true values as you gather more data (consistency) and that attain the smallest possible variance (efficiency) among unbiased estimators. \\
+Concretely, if one has N independent measurements {$y_1,...y_N$} and a parametric model that predicts their joint probability density $p(y,\theta)$, the likelihood is
+$$
+L(\theta)=\prod _{i=1} ^N p(y_i;\theta)
+$$
+and the log-likelihood is 
+$$
+\mathbb{l}(\theta)= \log L(\theta) =\prod _{i=1} ^N \log p(y_i;\theta).
+$$
+Finally the maximum likelihood
+$$
+\hat{\mathbb{l}} = max_{\theta} \mathbb{l}(\theta).
+$$
+The Akaike Information Criteria (AIC) was invented in 1973 from Hirotogu Akike as approximately unbiased estimator of the expected relative Kullback–Leibler divergence \footnote{In statistics, a divergence is a non‐negative measure of how one probability distribution differs from another. The most widely used example is the Kullback–Leibler (KL) divergence. Other divergence families (e.g. Jensen–Shannon, Hellinger) symmetrize or generalize this idea, but in all cases a divergence provides a principled way to quantify “distance” between probability models—central to information theory, model selection and hypothesis testing.} between the true data–generating distribution and the fitted model. THe AIC adds a penalty factor equal to two times the number of parameter k to the negative log-likelihood, hence it favor models that minimize the information loss relative to the "truth".
+$$
+AIC = -2l +2k
+$$
+The AIC is based on a much broader mathematical framework for quantifying information, uncertainty and the cost of encoding data, developed my Claude Shannon when studying the communication of words through the telegraph accounting the noise of the signal. The central quantity is the entropy of information
+$$
+H(p) = -\sum _x p(x) \log p(x),
+$$
+which measures the average “surprise” of samples drawn from a distribution p(x).\\
+The AICc is a corrected method from the AIC valid when the number of samples N is small relative to the parameters k:
+$$
+AICc = AIC + \frac{2k(k+1)}{n-k-1}
+$$
+Closely related to the AIC there is the Bayesian information criterion (BIC) or  Schwarz criterion was introduces by Gideon Schwarz in 1978 from the idea of Bayesian statistics of testing how probable is the hypothesis (in this case, a model) to be correct given the N observations. 
+$$
+BIC = -2l + k \log(n).
+$$
+The BIC ensure to estimate a few more parameters without overfitting when more data are available. The $\log n$ comes in fact from the idea of statistics that with more data points one can justify more parameters but each add "costs" approximately $\log n$.\\
+The criterion of Minimum Description Length, developed by Rissanen in 1978 is also rooted in information theory and depending on the assumptions, gives a similar expression than BIC:
+$$
+MDL \approx -l + \frac{k}{2} \log(n).
+$$
+Finally, one can use to a parametric estimator such as the cross-validation (CV) that predicts the quality of the model by repeatedly partitioning the data into “training” and “test” sets, fitting on one and evaluating on the other. It makes no asymptotic assumptions and is widely applicable to any model class. A partition is called a "fold" and the average error is:
+$$
+CV_k = \frac{1}{k}\sum_{i=1} ^k E _i,
+$$
+with $E_i$ any prediction error (e.g. mean squared error) on the fit when excluding the i-th fold. One can think of this criterion as "predictive" validation.
+AIC and BIC are usually more robust for small dataset compared to CV and faster to compute (source: Hoornweg, Victor (2018). "Chapter 9". Science: Under Submission. Hoornweg Press. ISBN 978-90-829188-0-9.)
+\subsection{Identification in non-stationary case}
+System identification for non‐stationary systems extends the classical LTI framework by explicitly accounting for parameters that drift or jump over time—as often occurs in batteries whose resistance, capacitance and diffusion coefficients change with state‐of‐charge, temperature or aging. Rather than assuming a single static model, one partitions the data into short, quasi‐stationary intervals (via sliding‐window or STFT methods) or formulates a linear‐parameter‐varying (LPV) model whose matrices A(t),B(t),C(t) depend on measurable “scheduling” variables (e.g. SoC). Recursive estimation algorithms—such as recursive least‐squares with a forgetting factor or Kalman filters—adapt parameter estimates on the fly, balancing sensitivity to genuine drift against robustness to noise. Alternatively, adaptive subspace methods re‐identify a new state‐space realization at each time step, tracking evolving modes and time constants without prescribing a rigid model order in advance. These approaches yield time‐stamped parameter trajectories that faithfully capture the system’s evolving dynamics, enabling real‐time monitoring, diagnostics and control of non‐stationary electrochemical cells.
+
+\section{Digital signal processing}
+\subsection{Digital sampling}
+In real world any quantity changes continuously in time. When performing an experiment, the scientist measures the values of those quantities with instrumentation at a specific point in time. Commonly, the measurement is carried out at constant intervals of time to get a time series. In modern times, measurement are carried out with electronic devices which contains component capable of sampling quantities and save the digitalized data into memory or sending to a personal computer. This processes is sampling and the electronic components that allow that in a device is called analog to digital converter or commonly ADC. The most important parameter to consider in sampling is the time interval or its reciprocal sampling frequency. To analyze the spectral content of a signal, the sampling frequency must be at least two folds the frequency of the highest oscillation components. This is know as Nyquist-Shannon sampling theorem. Sampling below this threshold causes higher‐frequency components to “fold” back into lower frequencies—a phenomenon known as aliasing—which corrupts the true spectral content of the signal. Alising can not only be avoided sampling at high frequency but alternativly using an analog or digital anti-alising filter befor the sampling stage. This could be important  because sampling at high frequencies require more sofisticated and expensive devices and of course the signal will occupy a lot of virtual storage space which might make long term experiment unfeasable.
+
+\subsection{Discrete Fourier Transform}
+The Fourier Transform is used for the spectral analysis of signals, that is the process of decomposing a time-domain signal into its constituent frequencies and quantifying the amplitude and often phase (or power) associated with each. One converts a signal $x(t)$ or $x[n]$ into $X(\omega)$ or $X[k]$, revealing how its energy or variance is distributed across frequency. This frequency-domain view makes it easy to identify periodic components, resonances, noise bands and characteristic time-constants that may be hidden in the raw waveform. 
+Since Joseph Fourier’s 1822 breakthrough showed that any periodic function can be expressed as a sum of sinusoids, the Fourier transform (FT) has become a cornerstone of signal analysis: mathematically, the continuous‐time FT of a signal x(t) is defined as
+$$
+F(\omega)=\int_{\infty}^{\infty} x(t) e^{-j\omega t} dt,
+$$
+and it enjoys key properties such as linearity, time‐ and frequency‐shifting, duality, and the convolution theorem (i.e. convolution in time becomes multiplication in frequency). In practice one works with the discrete Fourier transform (DFT)
+$$
+F(\omega)=\sum_{0}^{n-1} x[n] e^{-j2\pi kn/N}.
+$$
+For its properties, the Fourier Trasnform can be inverted to get back a time-dependent signal from its frequency spectra. The process is called inverse fourire trasnform and it is valid also for the discrete fourier trasnform.
+Cooley and Tukey developed an algorithm for the efficient computation of the summation called Fast Fourier Trasnform (FFT). The complexity of the problem is $O(N\log N)$ compare to the $O(N^2)$ of the direct summation, although it requires the length of the imput signal to be equal to $2^n$ with n integer number.
+In real world applications of signal processing, the spectral information changes with time. A few examples are the real-time processing of music (digital equalization), human voice (speech recognition) or images (object recognition). To analyze this signals, the approach is to perform the Fourier Trasnform on a small part of the signal at the time, with a process called windowing. The method is called short-time Fourier Trasnform (STFT) and extends the classic FT to non-stationary signals by sliding a finite window w[n] along the data and computing a local DFT on each segment. Formally, for a discrete signal x[n] and window shift R:
+$$
+X(m,k) = \sum _{n=0} ^{n-1} x[n + mR] \cdot w[n] \cdot e^{-j2\pi kn/N},
+$$
+where m indexes time frames and k frequency bins. While the short-time Fourier Trasnfomr can effectively capture the spectral contect of transient processes, the accuracy of the result depends on careful design of the calculation. First, there is a time-frequency resolution trade-off, known also as Gabor uncenrtainty principle $\Delta t \cdot \Delta f $ where $\Delta t$ is the windows lenght and $\Delta f$ is the inverse of it. Equality is reached only by a Gaussian window, which is therefore “optimal” in the sense of joint time–frequency localization. The window length N controls the balance: a short window localizes well in time (small $\Delta t$) but its Fourier transform is broad (large $\Delta f$), so fast transients are captured but spectral peaks smear, while a long window gives fine frequency discrimination (small $\Delta f$) at the expense of temporal precision (large $\Delta t$), so you resolve closely spaced frequencies but miss rapid changes. Another important aspect is the window shape and the overlap, the latter derived by the windows shift value $R$ in the STFT definition.  To produce smooth progression between following windowing, an overlap is used of 50\% or 75\%. 
+
+These concepts are essential for the discussion on the methods to estimate the non-stationary impedance given later in the text and they must be carefully taken into consideration depending on the characteristic frequency of evolution of the given signal.
+
+Here, I would like to remark that the spectral analysis does not necessary go though the calculation of the Discrete Fourier Transform. In fact, the DFT calulats amplitudes and pahses for all the N frequencies equally distributed between $-\Delta f/2$ and $\Delta f/2$. When one is intersted on analyzing only a specific set of known frequencies can calculate the Fouerir Tranform of only those frequency points. In system identifaction, as for the calculation of the impedance when a set of known frequencies are perturbed, it is known as Goertzel filter and it requires much less mathematical operation to be conducted making it ideal for application in limited hardware.
+
+\subsubsection{Spectral leakage}
+
+Spectral leakage is the effect typical in the Discrete Fourier Trasnform of "leaking" or "spilling" of spectral components into neighboring frequency bins, producing spurious components where the spectra baseline should be flat (or to noise level). Multiple causes produce spectral leakage. The most typical is due to a discrete signal x[n] that does not contain an integer number of periods of the oscillatory components. When the signal contains non-integer cycles, tapered windows shall be employed to mitigate the leakage. Although system identification in electrochemsitry for the frequency domain employs cyclic perturbation (i.e. single sine waves or multi-sines), it will be usefull in the following discussio in this text to introduce some aspect of window functions. The most known are Hanning, Hamming and Blackman  functions characterised by three main properties:
+\begin{itemize}
+    \item roll-off and characteristic frequency
+    \item passband flatness
+    \item group delay
+\end{itemize}
+The main characteristic is called roll-off which means "how fast" the amplitude of the original signal is attenuated. From the view of the frequency domain, the part of the filter that attenuates the signal are colled sidelobes. The characteristic frequency, also called cut-off, is the frequency at which the attenuation is $\sqrt{2}$ (\~= –3 dB) of the maximum value. Different windows function have steeper or smoother roll-off and this is important when realizing, for example, a low pass filter using the same function. Passband flatness is how uniform is the magnitude response across the main lobe (the passband) to avoid any distortion of the amplitude.
+It is also important, especially for the complex signals like the impedance, to evaluate also the phase shift or group delay that must be flat in the frequency region of analysis. Windows have usually a zero or very low attenuation in the middle that translates to a very well analysis of the spectral characteristics of the middle point of the signal. This is somehow translated to an "instantaneous information" even if the windows has finite length.
+Usually it is impossible to have optimal values for this parameters but a compromise has to be made.
+
+Other causes of spectral leakage derive from practical hardware limitations such or user errors in the choice on the design of the experiment such as:
+\begin{itemize}
+    \item asyncronization of ADC and DAC clock
+    \item Instability of the ADC (data acquisition) or DAC (signal generator) clock;
+    \item ADC apertuire jitter adn slew-rate;
+    \item Low resolution of the ADC compared to the oscillation amplitude might produce spurous harmonics;
+    \item aliasing due to the choice of sampling frequency or decimation/interpolation wihtou proper filtering;
+\end{itemize}
+
+\subsection{Noise}
+
+Noise, signal-to-noise ratio (SNR) and averaging are foundational in any measurement or communication system. Noise denotes random, unwanted fluctuations superimposed on the desired signal—originating from physical sources (thermal, shot), instrumentation (quantization, clock jitter) or environment (EM interference). SNR quantifies their relative power, defined as SNR = Psig/Pnoise (often in dB: 10·log10 Psig/Pnoise), and dictates how reliably one can detect or process the signal. Averaging is the primary tool for improving SNR: by repeating the same measurement or subdividing a long record into M independent segments, uncorrelated noise averages toward zero while the coherent signal adds constructively. The net SNR gain scales as $\sqrt{M}$ (a 3 dB increase per doubling of M). In the time domain this is ensemble or block averaging; in the frequency domain it appears as spectral averaging or Welch’s method, where overlapping, windowed segments are FFT’d and their periodograms averaged. Care must be taken to ensure segment independence (avoid drift or decorrelation) and choose appropriate windowing and overlap to balance variance reduction, resolution and computational cost. 
+Noise is considered an inchoherent source, that is, each noise sample has random pahse an damplitude that i uncorrelated from one time frame to the next (random). Any other physical effect (ex. electrochemical noise) and response to any perturbation is considered a coherent signal.
+The avaraging can be alternativly obtained increasing the acquisition time of the periodic signal or the length of the window. In fact narrowing the spectral bin's bandwidth reduces linearly the noise power in it (i.e. doubling the signal length, $\Delta f$ halves and so the power in each bin while the coherent signal amplitude in the bin does not change.
+or simply increasing the perturbation perturbation amplitude when possible.
+
+\subsection{Wavelets method}
+
+Wavelet analysis decomposes a signal into shifted and scaled versions of a short, zero-mean “mother” wavelet, yielding a time–scale (or time–frequency) map that can capture both slow and fast features with variable resolution. Unlike the STFT’s fixed window, wavelets automatically use wide windows at low frequencies (for fine frequency resolution) and narrow windows at high frequencies (for fine time resolution), making them ideal for detecting transients, abrupt changes or multi-scale phenomena. They are widely used in vibration analysis, denoising and feature extraction where signal characteristics evolve over time. For a system driven by a strictly fixed-frequency perturbation, the benefit of wavelets is limited—standard Fourier or narrow-band filtering already isolates the tone most efficiently—though wavelets can still reveal subtle non-stationarities or harmonic distortions around that frequency.
+
+\subsection{Filters}
+A filter in signal processing is a system that selectively modifies an input signal’s amplitude and/or phase as a function of frequency.  Fundamentally, one describes a filter by its impulse response h(t) (continuous‐time) or h[n] (discrete‐time), and equivalently by its frequency response H($\omega$) or H($e^{j\omega}$), which shows how each spectral component is scaled and shifted in phase.  Filters may be analog—operating continuously on voltages or currents—or digital—processing sampled data—and they can be linear (obeying superposition) or nonlinear (introducing harmonics).  Additional key properties include time-invariance, where the filter’s behavior does not change over time, and causality, which requires outputs to depend only on present and past inputs.  By their effect on frequency content, filters are classified as low-pass (passing frequencies below a cutoff fc), high-pass (passing frequencies above fc), band-pass (passing a band between two cutoffs), or band-stop/notch (rejecting a specific band).  In the analog domain, common design prototypes are Butterworth filters (maximally flat passband), Chebyshev filters (steep transition at the cost of ripple), and elliptic filters (sharpest transition for given ripple).  In digital implementations, infinite impulse response (IIR) filters use feedback to achieve steep responses with few coefficients, while finite impulse response (FIR) filters use only feedforward terms and can be designed for exactly linear phase—ensuring constant group delay, which is the derivative of the phase response with respect to frequency and measures how different spectral components are time-aligned.  Performance metrics include passband ripple (amplitude variation within the passband), stopband attenuation (suppression of unwanted bands), transition bandwidth (width of the roll-off region), group delay variation, and computational complexity (operations per sample).  Filters are indispensable for noise reduction, anti-aliasing before sampling, channel equalization and signal extraction, enabling precise control over signal fidelity, latency and resource utilization.
+
+\subsection{Removal of trends}
+Baseline or trend removal, often called detrending, is the process of eliminating slow-varying offsets or drifts from a signal so that its remaining fluctuations can be treated as (approximately) zero-mean and stationary.  Undesired trends can arise from sensor drift, temperature changes, power‐supply fluctuations or low‐frequency interference, and if left uncorrected they bias spectral estimates (manifesting as excessive low-frequency power or leakage) and corrupt time-domain analyses.  Common detrending techniques include subtracting the signal’s long‐term mean or a low‐order polynomial fit, applying a high‐pass filter with a cutoff below the band of interest (using a linear-phase FIR to avoid phase distortion), or employing moving-average/median filters to track and remove slow baseline wander.  More advanced methods—such as empirical mode decomposition (EMD) or wavelet-based multiscale filtering—can adaptively separate baseline components from overlapping signal features.  In all cases, one must choose parameters (filter cutoff, polynomial order, window length) so that genuine signal dynamics are preserved while the unwanted trend is effectively suppressed.
+
+In the analysis of signals trough Fourier Analysis, the removal of trends mitigate an effect called Gibbs phenomenon that is the presence of an infinite series of harmonics produce by sharp transition in the signals caused by its dynamic (drift) as well as experimental, coming from the digitization process (an artifact known as ringing).
+
+\subsection{Signal synthesis}
+
+To perform certain experiments, a scientist might be interested to perturb the system with non-constant signals like pulses, ramps, sinuses or arbitrary shapes. This requires to design a signal from mathematical functions and usually require a computer to define it. The desired waveform is generated from the instrumentation using an electronic component capable of transforming a user-defined digital waveform to a continuous analog signal. The process is called digital to analog conversion and the electronic component capable of it the digital to analog converter or simply DAC. There are several methods of implementing a digital to analog converter on hardware with different complexity and properties, the most simple is the direct digital synthesis method.
+
+\subsubsection{Direct Digital Synthesis}
+
+This methods relays on the 'look-up table' method in which the desired waveform is stored as table of pairs value-time and at constant time interval the value is read from the table and converted to analog value.
+
+\subsection{Further resources}
+
+The raccomended resource for learning about signal processing is the book "understanding figital signal processing" by R.G. Lyon and the series of pubblication from D.A. Lyon "The Discrete Fourier Trasnform".

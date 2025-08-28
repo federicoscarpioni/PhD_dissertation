@@ -1,0 +1,38 @@
+\documentclass[11pt, a4paper, twoside, openright]{book}
+\input{preable}
+\input{metadata}
+
+\begin{document}
+
+\input{customization_mainmatter}
+
+%\input{cover}
+\maketitle
+
+\frontmatter
+
+\dominitoc 
+\tableofcontents
+
+\mainmatter
+
+\input{chapters/1_introduction}
+\part{Theoretical framework}
+\input{chapters/2_electrochemsitry}
+\input{chapters/3_batteries}
+\input{chapters/4_identification_dynamic}
+\input{chapters/5_dynamic_impedance}
+
+\part{Methodologies}
+\input{chapters/6_acquisition}
+\input{chapters/7_analysis}
+
+\part{Results and discussions}
+\input{chapters/8_coin_cells}
+\input{chapters/9_silicon_carbonitrate}
+\input{chapters/10_lithium_sodium_iron_phosophate}
+\input{chapters/11_capacitors}
+
+\backmatter
+
+\end{document}

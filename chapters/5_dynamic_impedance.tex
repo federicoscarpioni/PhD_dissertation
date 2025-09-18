@@ -1,7 +1,34 @@
-\chapter{Dynamic Electrochemical Impedance spectroscopy: \\state of the art}
+\chapter[Dynamic Electrochemical Impedance spectroscopy]{Dynamic Electrochemical Impedance spectroscopy: \\state of the art}
 \minitoc
 
- [Da rifrasare] 
- Impedance is defined as the transfer function between  current input and voltage output of an electrical circuit that belong to the class of linear and time invariant system. As such the system must be stationary during the measurement, and the input-output relationship must be linear and causal, i.e. the complex-valued transfer function follows the Kramer-Kroning relationship. There are scenarios where the system is not stationary nor linear, for example because of inherent instability, while studying non-equilibrium reactions or while operating electrochemical devices for practical applications. In these setting it is still possible to obtain, both theoretically and experimentally, an "instantaneous" impedance. The idea was explored during the 70's from Creason, Smith, Bond and colleagues in a series of paper on the admittance of red-ox couples  under constant or sweeping perturbations \cite{creasonFourierTransformFaradaic1972}\cite{creasonFourierTransformFaradaic1972b}\cite{creasonFourierTransformFaradaic1973a}\cite{bondOnlineFFTFaradaic1977} using a multi-sine waveform as perturbation to excite specific frequencies in the electrochemical system and use the Short Time Fast Fourier Transform (STFFT) to compute amplitude and phase of voltage and current and obtain the impedance from their ratio. In the 90's, with the advent of faster computers, this methodology gained a new interest and development thanks to Popkirov, Darocicki, Házì and their colleagues \cite{popkirovNewImpedanceSpectrometer1992}\cite{popkirovValidationExperimentalData1993}\cite{darowickiFrequencyDispersionHarmonic1995}\cite{haziMicrocomputerbasedInstrumentationMultifrequency1997}\cite{schieweUnifiedApproachTrace1998}.
-During the first years of this century, the method was refined from both experimental \cite{darowickiInfluenceAnalyzingWindow2002}\cite{sacciDynamicElectrochemicalImpedance2009}\cite{slepskiOnlineMeasurementCell2009} and theoretical \cite{darowickiInstantaneousImpedanceSpectra2000} \cite{darowickiTheoreticalDescriptionMeasuring2000} sides from Sacci, Harringon, Slepski and colleagues and the name dynamic electrochemical impedance spectroscopy (DEIS) started to take over.
-In 2012 Breugelmans, Hubin and their colleagues extended the new contribution of Pintelon and Schoukens on the identification of non-stationary systems and the Best Linear Approximation to electrochemical systems, introducing an approach based again on the DFT of voltage and current signals followed by regression of the frequency spectra to extract, impedance, non-linearity, non-stationarities and noise; the method took the name of ORP-EIS or operando EIS \cite{breugelmansOddRandomPhase2012}. These concepts were recently covered in a comprehensive review paper\cite{hallemans2023electrochemical}. In parallel, also La Mantia and Battistel \cite{battistel2016analysis} introduced a method based on DFT and filtering for voltage and current signals to estimate the impedance at low frequency, in a range in which the standard STFFT method is biased by the drift. As multi-sine perturbation, several waveforms were used, such as pseudo-random sequences, ternary binary sequences, chirps\cite{darowickiDeterminationElectrodeImpedance2004}, sin function or pulses, as well as pseudo-log distributed multi-sine.
+\section{title}
+
+
+
+
+\section{Nomenclature}
+
+The method for identify the impedance of systems outside equilibrium, for being still in development, doesn't have a named agreed upon in the community. Let start from the single stepped sine impedance method based referred as classic, traditional, static or stationary. The immediate conterposition to static, used in the sense of a system that is not changing (i.e stationary according to system theory jargon), is to call it dynamic. This word give an immediate picture in the mind of a system that changes with time. On the other hand, even the classic experiment is dynamic in nature in the sense that the system is drifted minimally and reversibly from its thermodynamic equilibrium state. The beginning and final state remain then unperturbed and we can use the definition of stationary. The type of measurment described in this work are instead applyed on systems that change with time, i.e non-stationary systems. Therfore the inequivocal name for the method should be non-stationary EIS to highlight the superposition of the characteristic tima constant of the drift and excitation frequencies. The result of the experiment is the esitmation of a time-varying impedance. I also use here the word estimation instead of calculation to hilight the presence of many assumption. The obtained frequency response function from the experiment migth not be the real linear impedance response. That happen when the assumption are not verified in the practical system. For eaxmple the system varies to fast.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Maybe the following part is better to go in the conclusion or methods, but I had the idea just know]
+The custom set-up for the measurement of dynamic impedance is very expensive. Miniaturization via integration to reduce cost is possible but require the investment of companies or reserach centers. The investment is justified when the information obtain by the low frequency band give enough advanced understanding on the kinetics of the systems. Batteries are those systems where the low frequency band is of interest and might drive the development of this technique. The prototypation stage of this work allow a convenient acquisition of the impedance over a broad band of frequency lowering the entering barrier for electrochesmists to apprach the method. When measruing impedance will become more present in the literature, for application even behiond my immagination, will be the real word test of the potentiality of this method. As nowaday no electrochemsitry thinks of the inner mechanisms of an electrochemical workstation or even the computer that controls it or analyzez the data, the same fate shall be for the measurement of non-stationary impedance.
+While the community of system engeneers have develpooed important tools for the identifaction of time varying trasnfer function, the knowlkedge is still segregated from the electrochemistry community for its combersom language and specific formalisms. The scintific community needs a link of communication between this to words to allow a real impact on the reserach. Usually this happen when a commercial device automate the usage of the method. On the other hand no investments will be carries when the experimental electrochemsitry have no understanding or interest on the methodology. This is the ground this thesis is trying to place, surly failing in the system identification realm npot having myself the background knosledge to understand the formalisms of functional analysis.

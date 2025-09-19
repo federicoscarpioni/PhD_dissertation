@@ -66,80 +66,84 @@
 \contentsline {subsection}{Signal synthesis}{43}{subsection*.61}%
 \contentsline {subsubsection}{Direct Digital Synthesis}{43}{subsubsection*.62}%
 \contentsline {subsection}{Further resources}{43}{subsection*.63}%
-\contentsline {chapter}{\numberline {5}Dynamic Electrochemical Impedance spectroscopy}{45}{chapter.5}%
-\contentsline {section}{title}{45}{section*.64}%
+\contentsline {chapter}{\numberline {5}Non-stationary Electrochemical Impedance spectroscopy}{45}{chapter.5}%
+\contentsline {section}{Historical development}{45}{section*.64}%
+\contentsline {subsection}{Single sine impedance}{45}{subsection*.65}%
+\contentsline {subsection}{Multi-frequency excitation}{46}{subsection*.66}%
+\contentsline {section}{Nomenclature}{46}{section*.67}%
 \contentsline {part}{II\hspace {1em}Methodologies}{47}{part.2}%
 \contentsline {xpart}{Methodologies}{49}{part.2}%
 \contentsline {chapter}{\numberline {6}Acquisition of non-stationary impedance}{49}{chapter.6}%
-\contentsline {section}{Multi-frequency data acquisition}{49}{section*.65}%
-\contentsline {subsection}{Description of the set-up}{50}{subsection*.66}%
-\contentsline {section}{Automation of the acquisition for batteries}{50}{section*.67}%
-\contentsline {subsection}{Problem statement}{50}{subsection*.68}%
-\contentsline {subsection}{Software solution}{52}{subsection*.69}%
-\contentsline {subsection}{Design principle}{52}{subsection*.70}%
-\contentsline {section}{Automatic calculation of the impedance}{53}{section*.71}%
-\contentsline {section}{DEIStools: a Python application for dynamic impedance}{54}{section*.72}%
-\contentsline {subsection}{Software limits}{54}{subsection*.73}%
-\contentsline {section}{Multi-sine design}{55}{section*.74}%
-\contentsline {subsection}{Frequencies selection}{55}{subsection*.75}%
-\contentsline {subsection}{Amplitude optimization}{55}{subsection*.76}%
-\contentsline {subsection}{Phase optimization}{56}{subsection*.77}%
-\contentsline {subsection}{Multi-sine splitting}{57}{subsection*.78}%
-\contentsline {subsection}{Software}{58}{subsection*.80}%
-\contentsline {section}{Impedance estimation}{59}{section*.81}%
-\contentsline {section}{Old part}{60}{section*.82}%
-\contentsline {subsection}{Arbitrary waveform generator}{60}{subsection*.83}%
-\contentsline {section}{Multi-sine design}{61}{section*.84}%
-\contentsline {subsection}{Running the multi-sine in the waveform generator}{61}{subsection*.85}%
-\contentsline {subsection}{Digital acquisition device}{61}{subsection*.86}%
-\contentsline {section}{Connecting cells in three-electrode configuration}{63}{section*.87}%
-\contentsline {section}{Electrochemical devices}{63}{section*.88}%
-\contentsline {section}{Connecting the device and acquiring the signals: set-up version 1}{64}{section*.89}%
-\contentsline {section}{Automatic cycling with}{64}{section*.90}%
+\contentsline {section}{Multi-frequency data acquisition}{49}{section*.68}%
+\contentsline {subsection}{Description of the set-up}{50}{subsection*.69}%
+\contentsline {section}{Automation of the acquisition for batteries}{50}{section*.70}%
+\contentsline {subsection}{Problem statement}{50}{subsection*.71}%
+\contentsline {subsection}{Software solution}{52}{subsection*.72}%
+\contentsline {subsection}{Design principle}{52}{subsection*.73}%
+\contentsline {section}{Automatic calculation of the impedance}{53}{section*.74}%
+\contentsline {section}{DEIStools: a Python application for dynamic impedance}{54}{section*.75}%
+\contentsline {subsection}{Software limits}{54}{subsection*.76}%
+\contentsline {section}{Multi-sine design}{55}{section*.77}%
+\contentsline {subsection}{Frequencies selection}{55}{subsection*.78}%
+\contentsline {subsection}{Amplitude optimization}{55}{subsection*.79}%
+\contentsline {subsection}{Phase optimization}{56}{subsection*.80}%
+\contentsline {subsection}{Multi-sine splitting}{57}{subsection*.81}%
+\contentsline {subsection}{Software}{58}{subsection*.83}%
+\contentsline {section}{Impedance estimation}{59}{section*.84}%
+\contentsline {section}{Old part}{60}{section*.85}%
+\contentsline {subsection}{Arbitrary waveform generator}{60}{subsection*.86}%
+\contentsline {section}{Multi-sine design}{61}{section*.87}%
+\contentsline {subsection}{Running the multi-sine in the waveform generator}{61}{subsection*.88}%
+\contentsline {subsection}{Digital acquisition device}{61}{subsection*.89}%
+\contentsline {section}{Connecting cells in three-electrode configuration}{63}{section*.90}%
+\contentsline {section}{Electrochemical devices}{63}{section*.91}%
+\contentsline {section}{Connecting the device and acquiring the signals: set-up version 1}{64}{section*.92}%
+\contentsline {section}{Automatic cycling with}{64}{section*.93}%
 \contentsline {chapter}{\numberline {7}Analysis of impedance}{65}{chapter.7}%
-\contentsline {section}{Parametric models}{65}{section*.91}%
-\contentsline {subsection}{Physical model}{65}{subsection*.92}%
-\contentsline {section}{Simultaneous fitting}{66}{section*.93}%
-\contentsline {subsection}{Fitting error}{66}{subsection*.94}%
-\contentsline {section}{Determination of the system degrees of freedom}{67}{section*.95}%
-\contentsline {section}{Determining transfer function structure}{67}{section*.96}%
+\contentsline {section}{Parametric models}{65}{section*.94}%
+\contentsline {subsection}{Physical model}{65}{subsection*.95}%
+\contentsline {section}{Simultaneous fitting}{66}{section*.96}%
+\contentsline {subsection}{Fitting error}{66}{subsection*.97}%
+\contentsline {section}{Determination of the system degrees of freedom}{67}{section*.98}%
+\contentsline {section}{Determining transfer function structure}{67}{section*.99}%
 \contentsline {part}{III\hspace {1em}Results and discussions}{69}{part.3}%
 \contentsline {xpart}{Results and discussions}{71}{part.3}%
 \contentsline {chapter}{\numberline {8}Coin cells: characterization at the cell level}{71}{chapter.8}%
-\contentsline {section}{Method}{72}{section*.97}%
-\contentsline {subsection}{Cycling test}{72}{subsection*.98}%
-\contentsline {subsection}{Operando acquisition of stating impedance}{72}{subsection*.99}%
-\contentsline {subsection}{Real time acquisition of dynamic impedance}{72}{subsection*.100}%
-\contentsline {subsection}{Analysis of impedance data}{73}{subsection*.101}%
-\contentsline {section}{Results}{73}{section*.102}%
-\contentsline {section}{Discussion}{73}{section*.103}%
-\contentsline {subsection}{Choice of the cell}{74}{subsection*.104}%
-\contentsline {subsection}{Performance test of the cell}{75}{subsection*.105}%
-\contentsline {subsection}{Static impedance evaluation}{75}{subsection*.107}%
-\contentsline {subsection}{Time-varying impedance acquisition}{75}{subsection*.109}%
-\contentsline {subsection}{regression of rational polynomial}{79}{subsection*.114}%
-\contentsline {subsection}{Associating measurement values with battery state}{81}{subsection*.119}%
+\contentsline {section}{Method}{72}{section*.100}%
+\contentsline {subsection}{Cycling test}{72}{subsection*.101}%
+\contentsline {subsection}{Operando acquisition of stating impedance}{72}{subsection*.102}%
+\contentsline {subsection}{Real time acquisition of dynamic impedance}{72}{subsection*.103}%
+\contentsline {subsection}{Analysis of impedance data}{73}{subsection*.104}%
+\contentsline {section}{Results}{73}{section*.105}%
+\contentsline {section}{Discussion}{73}{section*.106}%
+\contentsline {subsection}{Choice of the cell}{74}{subsection*.107}%
+\contentsline {subsection}{Performance test of the cell}{75}{subsection*.108}%
+\contentsline {subsection}{Static impedance evaluation}{75}{subsection*.110}%
+\contentsline {subsection}{Time-varying impedance acquisition}{75}{subsection*.112}%
+\contentsline {subsection}{regression of rational polynomial}{79}{subsection*.117}%
+\contentsline {subsection}{Associating measurement values with battery state}{81}{subsection*.122}%
 \contentsline {chapter}{\numberline {9}Characterization at the electrode level}{83}{chapter.9}%
-\contentsline {subsection}{Cell assembling}{83}{subsection*.120}%
-\contentsline {subsection}{Time-varying impedance measurements}{84}{subsection*.121}%
+\contentsline {subsection}{Cell assembling}{83}{subsection*.123}%
+\contentsline {subsection}{Time-varying impedance measurements}{84}{subsection*.124}%
 \contentsline {chapter}{\numberline {10}Discriminating sodium storage mechanisms}{87}{chapter.10}%
-\contentsline {subsection}{Silicon carbonitride}{87}{subsection*.130}%
-\contentsline {subsection}{Storage mechanisms}{88}{subsection*.131}%
-\contentsline {subsection}{Cell housing for three electrodes and optimization}{89}{subsection*.134}%
-\contentsline {subsection}{Microscopic reference electrode of sodium}{90}{subsection*.136}%
-\contentsline {subsection}{Time-varying impedance}{91}{subsection*.138}%
-\contentsline {subsection}{Sodium electrodeposition on sodium substrate}{92}{subsection*.144}%
-\contentsline {subsection}{Time-Varying impedance during SEI formation}{92}{subsection*.150}%
+\contentsline {subsection}{Silicon carbonitride}{87}{subsection*.133}%
+\contentsline {subsection}{Storage mechanisms}{88}{subsection*.134}%
+\contentsline {subsection}{Cell housing for three electrodes and optimization}{89}{subsection*.137}%
+\contentsline {subsection}{Microscopic reference electrode of sodium}{90}{subsection*.139}%
+\contentsline {subsection}{Time-varying impedance}{91}{subsection*.141}%
+\contentsline {subsection}{Sodium electrodeposition on sodium substrate}{92}{subsection*.147}%
+\contentsline {subsection}{Time-Varying impedance during SEI formation}{92}{subsection*.153}%
 \contentsline {chapter}{\numberline {11}Studying intercalation}{99}{chapter.11}%
-\contentsline {subsection}{Materials and cell assembly}{99}{subsection*.157}%
-\contentsline {subsection}{Measurement set-up}{99}{subsection*.158}%
-\contentsline {subsection}{Physical model for intercalation}{100}{subsection*.159}%
-\contentsline {subsection}{Results and discussions}{100}{subsection*.160}%
-\contentsline {section}{Comment}{102}{section*.161}%
+\contentsline {subsection}{Materials and cell assembly}{99}{subsection*.160}%
+\contentsline {subsection}{Measurement set-up}{99}{subsection*.161}%
+\contentsline {subsection}{Physical model for intercalation}{100}{subsection*.162}%
+\contentsline {subsection}{Results and discussions}{100}{subsection*.163}%
+\contentsline {section}{Comment}{102}{section*.164}%
 \contentsline {chapter}{\numberline {12}Studying non-Faradic reaction in symmetric cell}{103}{chapter.12}%
-\contentsline {subsection}{Materials and cell assembling}{103}{subsection*.162}%
-\contentsline {subsection}{Reference electrode and position in the stack}{104}{subsection*.163}%
-\contentsline {subsection}{Physical model}{104}{subsection*.165}%
-\contentsline {subsection}{Results and discussions}{104}{subsection*.166}%
-\contentsline {subsection}{Quantitative interpretation of the impedance}{105}{subsection*.168}%
-\contentsline {subsection}{Remarks}{105}{subsection*.169}%
+\contentsline {subsection}{Materials and cell assembling}{103}{subsection*.165}%
+\contentsline {subsection}{Reference electrode and position in the stack}{104}{subsection*.166}%
+\contentsline {subsection}{Physical model}{104}{subsection*.168}%
+\contentsline {subsection}{Results and discussions}{104}{subsection*.169}%
+\contentsline {subsection}{Quantitative interpretation of the impedance}{105}{subsection*.171}%
+\contentsline {subsection}{Remarks}{105}{subsection*.172}%
+\contentsline {chapter}{\numberline {13}Conclusions}{107}{chapter.13}%

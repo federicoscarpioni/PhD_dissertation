@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.5)  18 SEP 2025 16:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.5)  25 SEP 2025 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,18 +336,291 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 (C:\Program Files\MiKTeX\tex/latex/tools\indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
+(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
+Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+
+(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count319
+)
+(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count320
+
+(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count321
+\c@listtotal=\count322
+\c@listcount=\count323
+\c@liststart=\count324
+\c@liststop=\count325
+\c@citecount=\count326
+\c@citetotal=\count327
+\c@multicitecount=\count328
+\c@multicitetotal=\count329
+\c@instcount=\count330
+\c@maxnames=\count331
+\c@minnames=\count332
+\c@maxitems=\count333
+\c@minitems=\count334
+\c@citecounter=\count335
+\c@maxcitecounter=\count336
+\c@savedcitecounter=\count337
+\c@uniquelist=\count338
+\c@uniquename=\count339
+\c@refsection=\count340
+\c@refsegment=\count341
+\c@maxextratitle=\count342
+\c@maxextratitleyear=\count343
+\c@maxextraname=\count344
+\c@maxextradate=\count345
+\c@maxextraalpha=\count346
+\c@abbrvpenalty=\count347
+\c@highnamepenalty=\count348
+\c@lownamepenalty=\count349
+\c@maxparens=\count350
+\c@parenlevel=\count351
+\blx@tempcnta=\count352
+\blx@tempcntb=\count353
+\blx@tempcntc=\count354
+\c@blx@maxsection=\count355
+\blx@maxsegment@0=\count356
+\blx@notetype=\count357
+\blx@parenlevel@text=\count358
+\blx@parenlevel@foot=\count359
+\blx@sectionciteorder@0=\count360
+\blx@sectionciteorderinternal@0=\count361
+\blx@entrysetcounter=\count362
+\blx@biblioinstance=\count363
+\labelnumberwidth=\skip57
+\labelalphawidth=\skip58
+\biblabelsep=\skip59
+\bibitemsep=\skip60
+\bibnamesep=\skip61
+\bibinitsep=\skip62
+\bibparsep=\skip63
+\bibhang=\skip64
+\blx@bcfin=\read2
+\blx@bcfout=\write3
+\blx@langwohyphens=\language79
+\c@mincomprange=\count364
+\c@maxcomprange=\count365
+\c@mincompwidth=\count366
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex\blx-dm.def
+File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'numeric.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count367
+\c@savedafterword=\count368
+\c@annotator=\count369
+\c@savedannotator=\count370
+\c@author=\count371
+\c@savedauthor=\count372
+\c@bookauthor=\count373
+\c@savedbookauthor=\count374
+\c@commentator=\count375
+\c@savedcommentator=\count376
+\c@editor=\count377
+\c@savededitor=\count378
+\c@editora=\count379
+\c@savededitora=\count380
+\c@editorb=\count381
+\c@savededitorb=\count382
+\c@editorc=\count383
+\c@savededitorc=\count384
+\c@foreword=\count385
+\c@savedforeword=\count386
+\c@holder=\count387
+\c@savedholder=\count388
+\c@introduction=\count389
+\c@savedintroduction=\count390
+\c@namea=\count391
+\c@savednamea=\count392
+\c@nameb=\count393
+\c@savednameb=\count394
+\c@namec=\count395
+\c@savednamec=\count396
+\c@translator=\count397
+\c@savedtranslator=\count398
+\c@shortauthor=\count399
+\c@savedshortauthor=\count400
+\c@shorteditor=\count401
+\c@savedshorteditor=\count402
+\c@labelname=\count403
+\c@savedlabelname=\count404
+\c@institution=\count405
+\c@savedinstitution=\count406
+\c@lista=\count407
+\c@savedlista=\count408
+\c@listb=\count409
+\c@savedlistb=\count410
+\c@listc=\count411
+\c@savedlistc=\count412
+\c@listd=\count413
+\c@savedlistd=\count414
+\c@liste=\count415
+\c@savedliste=\count416
+\c@listf=\count417
+\c@savedlistf=\count418
+\c@location=\count419
+\c@savedlocation=\count420
+\c@organization=\count421
+\c@savedorganization=\count422
+\c@origlocation=\count423
+\c@savedoriglocation=\count424
+\c@origpublisher=\count425
+\c@savedorigpublisher=\count426
+\c@publisher=\count427
+\c@savedpublisher=\count428
+\c@language=\count429
+\c@savedlanguage=\count430
+\c@origlanguage=\count431
+\c@savedoriglanguage=\count432
+\c@pageref=\count433
+\c@savedpageref=\count434
+\shorthandwidth=\skip65
+\shortjournalwidth=\skip66
+\shortserieswidth=\skip67
+\shorttitlewidth=\skip68
+\shortauthorwidth=\skip69
+\shorteditorwidth=\skip70
+\locallabelnumberwidth=\skip71
+\locallabelalphawidth=\skip72
+\localshorthandwidth=\skip73
+\localshortjournalwidth=\skip74
+\localshortserieswidth=\skip75
+\localshorttitlewidth=\skip76
+\localshortauthorwidth=\skip77
+\localshorteditorwidth=\skip78
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex\blx-compat.def
+File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
+File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+\c@textcitecount=\count435
+\c@textcitetotal=\count436
+\c@textcitemaxnames=\count437
+\c@biburlbigbreakpenalty=\count438
+\c@biburlbreakpenalty=\count439
+\c@biburlnumpenalty=\count440
+\c@biburlucpenalty=\count441
+\c@biburllcpenalty=\count442
+\biburlbigskip=\muskip18
+\biburlnumskip=\muskip19
+\biburlucskip=\muskip20
+\biburllcskip=\muskip21
+\c@smartand=\count443
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
+File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count444
+\c@bbx:relatedtotal=\count445
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
+File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count446
+\l__pdf_internal_box=\box103
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2024-01-04 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
+(C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
+Package: xparse 2023-10-10 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
+))
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
-))
-\Gm@cnth=\count319
-\Gm@cntv=\count320
-\c@Gm@tempcnt=\count321
+)
+\Gm@cnth=\count447
+\Gm@cntv=\count448
+\c@Gm@tempcnt=\count449
 \Gm@bindingoffset=\dimen189
 \Gm@wd@mp=\dimen190
 \Gm@odd@mp=\dimen191
@@ -379,25 +652,18 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks27
 \XKV@tempa@toks=\toks28
 )
-\XKV@depth=\count322
+\XKV@depth=\count450
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count323
-)
 (C:\Program Files\MiKTeX\tex/latex/base\textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/xstring\xstring.sty
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count324
-\xs_countb=\count325
+\xs_counta=\count451
+\xs_countb=\count452
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-)
-(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/carlisle\scalefnt.sty)
 (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
@@ -411,7 +677,7 @@ LaTeX Font Info:    Setting XCharter-OsF sub-encoding to TS1/0 on input line 37
 .
 LaTeX Font Info:    Changing XCharter-TOsF sub-encoding to TS1/0 on input line 
 37.
-\xch@cnt=\count326
+\xch@cnt=\count453
 
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/fontaxes\fontaxes.sty
 Package: fontaxes 2025-05-24 v2.0.1 Font selection axes (deprecated)
@@ -448,27 +714,27 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip57
-\f@nch@offset@elh=\skip58
-\f@nch@offset@erh=\skip59
-\f@nch@offset@olh=\skip60
-\f@nch@offset@orh=\skip61
-\f@nch@offset@elf=\skip62
-\f@nch@offset@erf=\skip63
-\f@nch@offset@olf=\skip64
-\f@nch@offset@orf=\skip65
-\f@nch@height=\skip66
-\f@nch@footalignment=\skip67
-\f@nch@widthL=\skip68
-\f@nch@widthC=\skip69
-\f@nch@widthR=\skip70
+\f@nch@headwidth=\skip79
+\f@nch@offset@elh=\skip80
+\f@nch@offset@erh=\skip81
+\f@nch@offset@olh=\skip82
+\f@nch@offset@orh=\skip83
+\f@nch@offset@elf=\skip84
+\f@nch@offset@erf=\skip85
+\f@nch@offset@olf=\skip86
+\f@nch@offset@orf=\skip87
+\f@nch@height=\skip88
+\f@nch@footalignment=\skip89
+\f@nch@widthL=\skip90
+\f@nch@widthC=\skip91
+\f@nch@widthR=\skip92
 \@temptokenb=\toks29
 )
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box103
-\beforetitleunit=\skip71
-\aftertitleunit=\skip72
+\ttl@box=\box104
+\beforetitleunit=\skip93
+\aftertitleunit=\skip94
 \ttl@plus=\dimen197
 \ttl@minus=\dimen198
 \ttl@toksa=\toks30
@@ -476,7 +742,7 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidthlast=\dimen256
 \titlewidthfirst=\dimen257
 )
-\fullchapwidth=\skip73
+\fullchapwidth=\skip95
 
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/minitoc\minitoc.sty
 Package: minitoc 2018/07/12 v62 Package minitoc
@@ -486,9 +752,9 @@ Package: mtcmess 2006/03/14
 )
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 62 ***.
-\tf@mtc=\write3
-\mtcindent=\skip74
-\mtcskipamount=\skip75
+\tf@mtc=\write4
+\mtcindent=\skip96
+\mtcskipamount=\skip97
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
@@ -496,13 +762,13 @@ Package minitoc Info: I0023
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
 \mtc@toks=\toks31
-\mtc@strutbox=\box104
-\mtc@hstrutbox=\box105
+\mtc@strutbox=\box105
+\mtc@hstrutbox=\box106
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
-\openout3 = `main.mtc0'.
+\openout4 = `main.mtc0'.
 
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
 
 (main.mtc0)
@@ -511,15 +777,15 @@ Package minitoc Info: I0012
 Package minitoc Info: I0031
 (minitoc)             ==> this version is configured for UNIX-like 
 (minitoc)                 (long extensions) file names.
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
-\openout3 = `main.mtc0'.
+\openout4 = `main.mtc0'.
 
-\c@mtc=\count327
-\c@minitocdepth=\count328
-\c@ptc=\count329
-\c@parttocdepth=\count330
-\ptcindent=\skip76
+\c@mtc=\count454
+\c@minitocdepth=\count455
+\c@ptc=\count456
+\c@parttocdepth=\count457
+\ptcindent=\skip98
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
@@ -530,40 +796,21 @@ File: english.mld 2006/01/13
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/minitoc\english.mld
 File: english.mld 2006/01/13
 ))
-\fullwidthlen=\skip77
+\fullwidthlen=\skip99
 
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/fullwidth\fullwidth.sty
 Package: fullwidth 2011/11/18 v0.1: fullwidth
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
-Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
-
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
-Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-))
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/zref\zref-abspage.sty
 Package: zref-abspage 2025-06-08 v2.36 Module abspage for zref (HO)
 
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/zref\zref-base.sty
 Package: zref-base 2025-06-08 v2.36 Module base for zref (HO)
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.s
 ty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+) (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/auxhook\auxhook.sty
@@ -573,24 +820,24 @@ Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count331
+\c@abspage=\count458
 Package zref Info: New property: abspage on input line 67.
 )
-\fwd@width@length=\skip78
-\fwd@skipabove@length=\skip79
-\fwd@skipbelow@length=\skip80
-\fwd@leftmargin@length=\skip81
-\fwd@rightmargin@length=\skip82
-\fwd@innertopmargin@length=\skip83
-\fwd@innerbottommargin@length=\skip84
-\fwd@splittopskip@length=\skip85
-\fwd@splitbottomskip@length=\skip86
-\fwd@outermargin@length=\skip87
-\fwd@innermargin@length=\skip88
-\fwd@footenotedistance@length=\skip89
-\c@fwd@zref@counter=\count332
+\fwd@width@length=\skip100
+\fwd@skipabove@length=\skip101
+\fwd@skipbelow@length=\skip102
+\fwd@leftmargin@length=\skip103
+\fwd@rightmargin@length=\skip104
+\fwd@innertopmargin@length=\skip105
+\fwd@innerbottommargin@length=\skip106
+\fwd@splittopskip@length=\skip107
+\fwd@splitbottomskip@length=\skip108
+\fwd@outermargin@length=\skip109
+\fwd@innermargin@length=\skip110
+\fwd@footenotedistance@length=\skip111
+\c@fwd@zref@counter=\count459
 Package zref Info: New property: fwd@pagevalue on input line 209.
-\fwd@freevspace@length=\skip90
+\fwd@freevspace@length=\skip112
 )
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/adjmulticol\adjmulticol.sty
 Package: adjmulticol 2022/05/15 v1.5 Adjusted margins for multicolumn layout
@@ -620,11 +867,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ng.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count333
+\c@section@level=\count460
 )
 \@linkdim=\dimen261
-\Hy@linkcounter=\count334
-\Hy@pagecounter=\count335
+\Hy@linkcounter=\count461
+\Hy@pagecounter=\count462
  (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -633,7 +880,7 @@ Now handling font encoding PD1 ...
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count336
+\Hy@SavedSpaceFactor=\count463
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
@@ -647,12 +894,7 @@ Package hyperref Info: Plain pages OFF on input line 4196.
 Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count337
-
-(C:\Program Files\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
+\c@Hy@tempcnt=\count464
 LaTeX Info: Redefining \url on input line 4786.
 \XeTeXLinkMargin=\dimen262
 
@@ -663,7 +905,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count338
+\Fld@menulength=\count465
 \Field@Width=\dimen263
 \Fld@charsize=\dimen264
 Package hyperref Info: Hyper figures OFF on input line 6065.
@@ -677,9 +919,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6095.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count339
-\c@Item=\count340
-\c@Hfootnote=\count341
+\Hy@abspage=\count466
+\c@Item=\count467
+\c@Hfootnote=\count468
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -691,9 +933,9 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\HyAnn@Count=\count342
-\Fld@listcount=\count343
-\c@bookmark@seq@number=\count344
+\HyAnn@Count=\count469
+\Fld@listcount=\count470
+\c@bookmark@seq@number=\count471
 
 (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck
 .sty
@@ -706,17 +948,14 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip91
+\Hy@SectionHShift=\skip113
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 166.
+Package hyperref Info: Option `colorlinks' set `true' on input line 174.
 ) (metadata.tex)
+\@quotelevel=\count472
+\@quotereset=\count473
 LaTeX Info: Redefining \oldstylenums on input line 5.
-
-(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count345
-\l__pdf_internal_box=\box106
-) (main.aux)
+ (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -740,16 +979,16 @@ LaTeX Font Info:    ... okay on input line 5.
 
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count346
+\scratchcounter=\count474
 \scratchdimen=\dimen265
 \scratchbox=\box107
-\nofMPsegments=\count347
-\nofMParguments=\count348
+\nofMPsegments=\count475
+\nofMParguments=\count476
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count349
+\MPscratchCnt=\count477
 \MPscratchDim=\dimen266
-\MPnumerator=\count350
-\makeMPintoPDFobject=\count351
+\MPnumerator=\count478
+\makeMPintoPDFobject=\count479
 \everyMPtoPDFconversion=\toks33
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -766,7 +1005,38 @@ Package caption Info: changepage package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count352
+\c@lstlisting=\count480
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                creasonFourierTransformFaradaic1972a
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                creasonFourierTransformFaradaic1973
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 5.
+Package biblatex Info: Reference segment=0 on input line 5.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -802,12 +1072,12 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count353
-\c@mv@boldtabular=\count354
+\c@mv@tabular=\count481
+\c@mv@boldtabular=\count482
 Package hyperref Info: Link coloring ON on input line 5.
 (main.out) (main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
+\@outlinefile=\write5
+\openout5 = `main.out'.
 
  (customization_mainmatter.tex)
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
@@ -844,51 +1114,55 @@ Package minitoc Info: I0024
 (minitoc)             PREPARING MINITOCS FROM main.toc on input line 15.
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc1.
-\openout3 = `main.mtc1'.
+\openout4 = `main.mtc1'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc2.
-\openout3 = `main.mtc2'.
+\openout4 = `main.mtc2'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc3.
-\openout3 = `main.mtc3'.
+\openout4 = `main.mtc3'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc4.
-\openout3 = `main.mtc4'.
+\openout4 = `main.mtc4'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc5.
-\openout3 = `main.mtc5'.
+\openout4 = `main.mtc5'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc6.
-\openout3 = `main.mtc6'.
+\openout4 = `main.mtc6'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc7.
-\openout3 = `main.mtc7'.
+\openout4 = `main.mtc7'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc8.
-\openout3 = `main.mtc8'.
+\openout4 = `main.mtc8'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc9.
-\openout3 = `main.mtc9'.
+\openout4 = `main.mtc9'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc10.
-\openout3 = `main.mtc10'.
+\openout4 = `main.mtc10'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc11.
-\openout3 = `main.mtc11'.
+\openout4 = `main.mtc11'.
 
 Package minitoc Info: I0033
 (minitoc)             Writing main.mtc12.
-\openout3 = `main.mtc12'.
+\openout4 = `main.mtc12'.
+
+Package minitoc Info: I0033
+(minitoc)             Writing main.mtc13.
+\openout4 = `main.mtc13'.
 
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 24.88pt on input line 15.
@@ -911,23 +1185,18 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 
 
 ] [2] [3]
-Overfull \hbox (1.29202pt too wide) detected at line 139
- []\T1/XCharter-TLF/m/n/10.95 100
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 140
- []\T1/XCharter-TLF/m/n/10.95 100
- []
-
-
 Overfull \hbox (1.29202pt too wide) detected at line 141
- []\T1/XCharter-TLF/m/n/10.95 102
+ []\T1/XCharter-TLF/m/n/10.95 103
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 142
+ []\T1/XCharter-TLF/m/n/10.95 103
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 143
- []\T1/XCharter-TLF/m/n/10.95 103
+ []\T1/XCharter-TLF/m/n/10.95 104
  []
 
 
@@ -937,27 +1206,42 @@ Overfull \hbox (1.29202pt too wide) detected at line 144
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 145
- []\T1/XCharter-TLF/m/n/10.95 104
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 146
- []\T1/XCharter-TLF/m/n/10.95 104
+ []\T1/XCharter-TLF/m/n/10.95 106
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 147
- []\T1/XCharter-TLF/m/n/10.95 105
+ []\T1/XCharter-TLF/m/n/10.95 107
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 148
- []\T1/XCharter-TLF/m/n/10.95 105
+ []\T1/XCharter-TLF/m/n/10.95 108
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 149
+ []\T1/XCharter-TLF/m/n/10.95 108
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 150
+ []\T1/XCharter-TLF/m/n/10.95 108
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 151
+ []\T1/XCharter-TLF/m/n/10.95 109
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 152
+ []\T1/XCharter-TLF/m/n/10.95 109
  []
 
 )
-\tf@toc=\write5
-\openout5 = `main.toc'.
+\tf@toc=\write6
+\openout6 = `main.toc'.
 
  [4] (chapters/1_introduction.tex
 Chapter 1.
@@ -995,9 +1279,9 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 20.74pt on input line 20.
  [3] [4] (chapters/2_electrochemsitry.tex
 Chapter 2.
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 10.0pt on input line 3.
@@ -1042,9 +1326,9 @@ LaTeX Font Info:    Font shape `TS1/XCharter-TLF/m/n' will be
 [11{C:/Users/fscarp/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch1_co4ru4
 .enc}]) (chapters/3_batteries.tex [12]
 Chapter 3.
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
 (main.mtc3) [13
 
@@ -1068,9 +1352,9 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 
 ]
 Chapter 4.
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
 (main.mtc4)
 Overfull \hbox (1.42804pt too wide) in paragraph at lines 7--8
@@ -1155,79 +1439,92 @@ Overfull \hbox (23.56824pt too wide) in paragraph at lines 186--187
 ns, ap-ply-ing sliding-window
  []
 
+[32] [33] [34]
+Overfull \hbox (2.19585pt too wide) in paragraph at lines 234--235
+[]\T1/XCharter-TLF/m/n/10.95 Low res-o-lu-tion of the ADC com-pared to the os-c
+il-la-tion am-pli-tude might
+ []
 
-Overfull \hbox (0.87752pt too wide) in paragraph at lines 196--197
+
+Overfull \hbox (13.65898pt too wide) in paragraph at lines 250--251
+\T1/XCharter-TLF/m/n/10.95 a short, zero-mean ^^Pmother^^Q wavelet, yield-ing a
+ time^^Uscale (or time^^Ufrequency)
+ []
+
+[35]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36]
+[37]
+Overfull \hbox (0.87752pt too wide) in paragraph at lines 280--281
 []\T1/XCharter-TLF/m/n/10.95 Parameter es-ti-ma-tion^^Vdetermining the nu-mer-i
 -cal val-ues (re-sis-tances,
  []
 
-[32]
-Overfull \hbox (0.75409pt too wide) in paragraph at lines 213--215
+
+Overfull \hbox (0.75409pt too wide) in paragraph at lines 297--299
 \T1/XCharter-TLF/m/n/10.95 car-ries clear elec-tro-chem-i-cal mean-ing, while t
 heir nu-mer-i-cal val-ues are iden-
  []
 
-
-Overfull \hbox (3.5504pt too wide) in paragraph at lines 216--217
+[38]
+Overfull \hbox (3.5504pt too wide) in paragraph at lines 300--301
 []\T1/XCharter-TLF/m/n/10.95 This works deals with frequency-domain char-ac-ter
 -i-za-tion of elec-tro-chem-
  []
 
-[33]
-Overfull \hbox (2.04459pt too wide) in paragraph at lines 230--233
+
+Overfull \hbox (2.04459pt too wide) in paragraph at lines 314--317
 \T1/XCharter-TLF/m/n/10.95 maximum-likelihood or Bayesian ap-proaches (to achie
 ve sta-tis-ti-cal ef-fi-ciency
  []
 
 
-Overfull \hbox (1.9687pt too wide) in paragraph at lines 230--233
+Overfull \hbox (1.9687pt too wide) in paragraph at lines 314--317
 \T1/XCharter-TLF/m/n/10.95 When fit-ting the cho-sen model $\OML/cmm/m/it/10.95
  G\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 !\OT1/cmr/m/n/10.95 ; \OML/cmm/m/it/1
 0.95 ^^R\OT1/cmr/m/n/10.95 )$ \T1/XCharter-TLF/m/n/10.95 to the data, one min-i
 -mizes a weighted
  []
 
-[34]
-Overfull \hbox (11.52692pt too wide) in paragraph at lines 241--250
+[39] [40]
+Overfull \hbox (11.52692pt too wide) in paragraph at lines 325--334
 \T1/XCharter-TLF/m/n/10.95 To go be-yond this lo-cal, lin-earized pic-ture, one
  of-ten em-ploys profile-likelihood
  []
 
-[35]
-LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 264.
- [36] [37] [38] [39] [40]
-Overfull \hbox (2.19585pt too wide) in paragraph at lines 338--339
-[]\T1/XCharter-TLF/m/n/10.95 Low res-o-lu-tion of the ADC com-pared to the os-c
-il-la-tion am-pli-tude might
- []
-
-
-Overfull \hbox (13.65898pt too wide) in paragraph at lines 351--352
-\T1/XCharter-TLF/m/n/10.95 a short, zero-mean ^^Pmother^^Q wavelet, yield-ing a
- time^^Uscale (or time^^Ufrequency)
- []
-
 [41]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42])
-(chapters/5_dynamic_impedance.tex [43] [44
-
-
-]
+LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
+(Font)              scaled to size 9.0pt on input line 348.
+ [42]) (chapters/5_dynamic_impedance.tex [43] [44]
 Chapter 5.
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
 (main.mtc5)
-Overfull \hbox (2.81538pt too wide) in paragraph at lines 8--12
+Overfull \hbox (2.81538pt too wide) in paragraph at lines 7--11
 \T1/XCharter-TLF/m/n/10.95 wave-form and mea-sure-ments in non-stationary con-d
 i-tions. Dur-ing the 1970s
  []
 
-[45])
+[45
+
+
+]
+
+LaTeX Warning: Citation 'creasonFourierTransformFaradaic1972a' on page 46 undef
+ined on input line 15.
+
+
+LaTeX Warning: Citation 'creasonFourierTransformFaradaic1973' on page 46 undefi
+ned on input line 15.
+
+
+Overfull \hbox (164.18184pt too wide) in paragraph at lines 15--16
+\T1/XCharter-TLF/m/n/10.95 tance in fast re-ac-tions [[]][[]]
+ []
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.42168pt, for example:
@@ -1235,21 +1532,46 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
 
-[46] [47
+[46]
+Overfull \hbox (7.70338pt too wide) in paragraph at lines 24--25
+[]\T1/XCharter-TLF/m/n/10.95 In 1996 Hazi, Bond and col-legues, ex-tended the s
+ys-tem to mod-ern hardare
+ []
 
 
-] [48] (chapters/6_acquisition.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47]
+
+LaTeX Warning: Reference `arutunowElectricalMechanicalCharacterization2015' on 
+page 48 undefined on input line 42.
+
+
+LaTeX Warning: Reference `zielinskiApplicationMultisineNanoscale2015' on page 4
+8 undefined on input line 42.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+
+[48]) [49] [50
+
+
+] [51] [52] (chapters/6_acquisition.tex
 Chapter 6.
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
 (main.mtc6)
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[49
+[53
 
 
 ]
@@ -1257,17 +1579,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
-[50]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[51]
+[55]
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
-[52]
+[56]
 Overfull \hbox (12.78146pt too wide) in paragraph at lines 35--37
 \T1/XCharter-TLF/m/n/10.95 This is the first con-tri-bu-tion of this work: mea-
 sur-ing broad-band non-stationary
@@ -1287,8 +1609,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
-[54]
+ [57]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
@@ -1304,7 +1626,7 @@ Overfull \hbox (6.08131pt too wide) in paragraph at lines 58--59
 s of iden-ti-fi-ca-tion should
  []
 
-[55]
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
@@ -1339,7 +1661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-[56]
+[60]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
@@ -1349,7 +1671,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-<figures/harmonics_supporting.png, id=1027, 722.7pt x 433.62pt>
+<figures/harmonics_supporting.png, id=1167, 722.7pt x 433.62pt>
 File: figures/harmonics_supporting.png Graphic file (type png)
 <use figures/harmonics_supporting.png>
 Package pdftex.def Info: figures/harmonics_supporting.png  used on input line 9
@@ -1362,12 +1684,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--98
 
  []
 
-[57]
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-[58 <./figures/harmonics_supporting.png>]
+[62 <./figures/harmonics_supporting.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
@@ -1378,13 +1700,13 @@ Overfull \hbox (5.56168pt too wide) in paragraph at lines 128--130
 -ware and when a workaround
  []
 
-[59]
-<figures/truform_white.jpg, id=1043, 119.12637pt x 119.12637pt>
+[63]
+<figures/truform_white.jpg, id=1184, 119.12637pt x 119.12637pt>
 File: figures/truform_white.jpg Graphic file (type jpg)
 <use figures/truform_white.jpg>
 Package pdftex.def Info: figures/truform_white.jpg  used on input line 142.
 (pdftex.def)             Requested size: 135.15015pt x 135.1511pt.
-<figures/truform_black.png, id=1044, 602.25pt x 602.25pt>
+<figures/truform_black.png, id=1185, 602.25pt x 602.25pt>
 File: figures/truform_black.png Graphic file (type png)
 <use figures/truform_black.png>
 Package pdftex.def Info: figures/truform_black.png  used on input line 142.
@@ -1405,7 +1727,7 @@ Overfull \hbox (2.2264pt too wide) in paragraph at lines 147--148
 a-tion fi-delity with 0.03%
  []
 
-[60 <./figures/truform_white.jpg> <./figures/truform_black.png>]
+[64 <./figures/truform_white.jpg> <./figures/truform_black.png>]
 Overfull \hbox (10.40775pt too wide) in paragraph at lines 151--152
 \T1/XCharter-TLF/m/n/10.95 GitHub page ([][]$\T1/cmtt/m/n/10.95 https : / / git
 hub . com / federicoscarpioni / TrueFormAWG$[][]\T1/XCharter-TLF/m/n/10.95 ). T
@@ -1419,9 +1741,9 @@ Overfull \hbox (5.21974pt too wide) in paragraph at lines 166--167
  Tech-
  []
 
-[61]
+[65]
 
-LaTeX Warning: Reference `sec:ADC' on page 62 undefined on input line 175.
+LaTeX Warning: Reference `sec:ADC' on page 66 undefined on input line 175.
 
 
 Overfull \hbox (4.73393pt too wide) in paragraph at lines 175--176
@@ -1433,9 +1755,9 @@ ter ex-pressed in bit (higher
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 
-LaTeX Warning: Reference `sec:ADC' on page 62 undefined on input line 184.
+LaTeX Warning: Reference `sec:ADC' on page 66 undefined on input line 184.
 
-[62]
+[66]
 Overfull \hbox (13.44795pt too wide) in paragraph at lines 192--194
 \T1/XCharter-TLF/m/n/10.95 ter-mi-nal. It ef-fects ei-ther chrono-amperometric 
 tech-niques be-cause the counter
@@ -1447,18 +1769,18 @@ Overfull \hbox (2.65344pt too wide) in paragraph at lines 201--203
 or meas-ring the impedance
  []
 
-[63]) (chapters/7_analysis.tex [64]
+[67]) (chapters/7_analysis.tex [68]
 Chapter 7.
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
-\openout3 = `main.mtc'.
+\openout4 = `main.mtc'.
 
 (main.mtc7)
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[65
+[69
 
 
 ]
@@ -1471,10 +1793,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-[66]) [67] [68
+[70]) [71] [72
 
 
-] [69] [70] (chapters/8_coin_cells.tex
+] [73] [74] (chapters/8_coin_cells.tex
 Chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1486,7 +1808,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[71
+[75
 
 
 ]
@@ -1502,17 +1824,17 @@ Overfull \hbox (21.02223pt too wide) in paragraph at lines 18--20
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.12604pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                Make it at least 25.42168pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.42168pt}.
 (fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
 
-[72]
+[76]
 Underfull \hbox (badness 10000) in paragraph at lines 33--37
 
  []
 
-[73]
+[77]
 Overfull \hbox (346.58972pt too wide) in paragraph at lines 69--71
 \T1/XCharter-TLF/m/n/10.95 point out some ter-mi-nol-ogy dif-fer-ences used in 
 this chap-ter, [][][][][][] 
@@ -1535,14 +1857,14 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[74]
-<figures/application4/image1.png, id=1119, 429.7656pt x 329.5512pt>
+[78]
+<figures/application4/image1.png, id=1259, 429.7656pt x 329.5512pt>
 File: figures/application4/image1.png Graphic file (type png)
 <use figures/application4/image1.png>
 Package pdftex.def Info: figures/application4/image1.png  used on input line 89
 .
 (pdftex.def)             Requested size: 284.52866pt x 218.18832pt.
-<figures/application4/image2.png, id=1120, 422.0568pt x 335.8146pt>
+<figures/application4/image2.png, id=1260, 422.0568pt x 335.8146pt>
 File: figures/application4/image2.png Graphic file (type png)
 <use figures/application4/image2.png>
 Package pdftex.def Info: figures/application4/image2.png  used on input line 98
@@ -1559,14 +1881,14 @@ Overfull \hbox (0.88393pt too wide) in paragraph at lines 105--106
 s. In this case the lim-its where
  []
 
-[75 <./figures/application4/image1.png>]
-<figures/application4/image3.png, id=1127, 422.0568pt x 316.5426pt>
+[79 <./figures/application4/image1.png>]
+<figures/application4/image3.png, id=1268, 422.0568pt x 316.5426pt>
 File: figures/application4/image3.png Graphic file (type png)
 <use figures/application4/image3.png>
 Package pdftex.def Info: figures/application4/image3.png  used on input line 11
 7.
 (pdftex.def)             Requested size: 284.52866pt x 213.40587pt.
-<figures/application4/image4.PNG, id=1128, 543.53062pt x 371.88937pt>
+<figures/application4/image4.PNG, id=1269, 543.53062pt x 371.88937pt>
 File: figures/application4/image4.PNG Graphic file (type png)
 <use figures/application4/image4.PNG>
 Package pdftex.def Info: figures/application4/image4.PNG  used on input line 12
@@ -1575,20 +1897,20 @@ Package pdftex.def Info: figures/application4/image4.PNG  used on input line 12
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.42168pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.42168pt}.
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
 (fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[76 <./figures/application4/image2.png>] [77 <./figures/application4/image3.png
+[80 <./figures/application4/image2.png>] [81 <./figures/application4/image3.png
 > <./figures/application4/image4.PNG>]
-<figures/application4/image5.PNG, id=1143, 545.03625pt x 356.0803pt>
+<figures/application4/image5.PNG, id=1284, 545.03625pt x 356.0803pt>
 File: figures/application4/image5.PNG Graphic file (type png)
 <use figures/application4/image5.PNG>
 Package pdftex.def Info: figures/application4/image5.PNG  used on input line 13
 3.
 (pdftex.def)             Requested size: 355.65947pt x 232.35683pt.
-<figures/application4/image6.PNG, id=1144, 541.27219pt x 334.24875pt>
+<figures/application4/image6.PNG, id=1285, 541.27219pt x 334.24875pt>
 File: figures/application4/image6.PNG Graphic file (type png)
 <use figures/application4/image6.PNG>
 Package pdftex.def Info: figures/application4/image6.PNG  used on input line 14
@@ -1602,7 +1924,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[78 <./figures/application4/image5.PNG>]
+[82 <./figures/application4/image5.PNG>]
 Overfull \hbox (22.04489pt too wide) in paragraph at lines 149--150
 []\T1/XCharter-TLF/m/n/10.95 colorboxBurntOrangeDespite be-gin so chal-leng-ing
  to mea-sure the impedance
@@ -1614,7 +1936,7 @@ Overfull \hbox (0.47864pt too wide) in paragraph at lines 151--152
 -ter es-ti-mat-ing the impedance
  []
 
-[79 <./figures/application4/image6.PNG>]
+[83 <./figures/application4/image6.PNG>]
 Overfull \hbox (44.78058pt too wide) in paragraph at lines 158--161
 [][][][][][]
  []
@@ -1656,7 +1978,7 @@ Overfull \hbox (8.75299pt too wide) in paragraph at lines 158--161
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figures/application4/image7.png, id=1159, 930.3558pt x 260.6538pt>
+<figures/application4/image7.png, id=1299, 930.3558pt x 260.6538pt>
 File: figures/application4/image7.png Graphic file (type png)
 <use figures/application4/image7.png>
 Package pdftex.def Info: figures/application4/image7.png  used on input line 16
@@ -1697,7 +2019,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figures/application4/image8.png, id=1160, 455.301pt x 271.7352pt>
+<figures/application4/image8.png, id=1300, 455.301pt x 271.7352pt>
 File: figures/application4/image8.png Graphic file (type png)
 <use figures/application4/image8.png>
 Package pdftex.def Info: figures/application4/image8.png  used on input line 17
@@ -1706,7 +2028,7 @@ Package pdftex.def Info: figures/application4/image8.png  used on input line 17
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application4/image9.png, id=1161, 277.035pt x 160.4394pt>
+<figures/application4/image9.png, id=1301, 277.035pt x 160.4394pt>
 File: figures/application4/image9.png Graphic file (type png)
 <use figures/application4/image9.png>
 Package pdftex.def Info: figures/application4/image9.png  used on input line 18
@@ -1726,8 +2048,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[80]
-<figures/application4/image10.png, id=1166, 886.512pt x 338.7054pt>
+[84]
+<figures/application4/image10.png, id=1306, 886.512pt x 338.7054pt>
 File: figures/application4/image10.png Graphic file (type png)
 <use figures/application4/image10.png>
 Package pdftex.def Info: figures/application4/image10.png  used on input line 1
@@ -1743,7 +2065,7 @@ Overfull \hbox (9.35925pt too wide) in paragraph at lines 195--196
 a-tion be-tween the impedance
  []
 
-[81
+[85
 
 
 
@@ -1751,34 +2073,34 @@ a-tion be-tween the impedance
  <./figures/application4/image7.png> <./figures/application4/image8.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.12604pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                Make it at least 25.42168pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.42168pt}.
 (fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
 
-[82 <./figures/application4/image9.png> <./figures/application4/image10.png>]
+[86 <./figures/application4/image9.png> <./figures/application4/image10.png>]
 Chapter 9.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 201.
 
-<figures/application5/image1.png, id=1183, 455.301pt x 230.7822pt>
+<figures/application5/image1.png, id=1324, 455.301pt x 230.7822pt>
 File: figures/application5/image1.png Graphic file (type png)
 <use figures/application5/image1.png>
 Package pdftex.def Info: figures/application5/image1.png  used on input line 20
 8.
 (pdftex.def)             Requested size: 355.65947pt x 180.28053pt.
-[83
+[87
 
 
 ]
-<figures/application5/image2.png, id=1188, 455.301pt x 218.7372pt>
+<figures/application5/image2.png, id=1329, 455.301pt x 218.7372pt>
 File: figures/application5/image2.png Graphic file (type png)
 <use figures/application5/image2.png>
 Package pdftex.def Info: figures/application5/image2.png  used on input line 21
 3.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application5/image3.png, id=1189, 455.301pt x 218.7372pt>
+<figures/application5/image3.png, id=1330, 455.301pt x 218.7372pt>
 File: figures/application5/image3.png Graphic file (type png)
 <use figures/application5/image3.png>
 Package pdftex.def Info: figures/application5/image3.png  used on input line 21
@@ -1788,7 +2110,7 @@ Package pdftex.def Info: figures/application5/image3.png  used on input line 21
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image4.png, id=1190, 455.301pt x 232.2276pt>
+<figures/application5/image4.png, id=1331, 455.301pt x 232.2276pt>
 File: figures/application5/image4.png Graphic file (type png)
 <use figures/application5/image4.png>
 Package pdftex.def Info: figures/application5/image4.png  used on input line 22
@@ -1797,7 +2119,7 @@ Package pdftex.def Info: figures/application5/image4.png  used on input line 22
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image5.png, id=1191, 455.301pt x 232.2276pt>
+<figures/application5/image5.png, id=1332, 455.301pt x 232.2276pt>
 File: figures/application5/image5.png Graphic file (type png)
 <use figures/application5/image5.png>
 Package pdftex.def Info: figures/application5/image5.png  used on input line 22
@@ -1806,7 +2128,7 @@ Package pdftex.def Info: figures/application5/image5.png  used on input line 22
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image6.png, id=1192, 455.301pt x 232.2276pt>
+<figures/application5/image6.png, id=1333, 455.301pt x 232.2276pt>
 File: figures/application5/image6.png Graphic file (type png)
 <use figures/application5/image6.png>
 Package pdftex.def Info: figures/application5/image6.png  used on input line 23
@@ -1815,13 +2137,13 @@ Package pdftex.def Info: figures/application5/image6.png  used on input line 23
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image7.png, id=1193, 436.5108pt x 319.9152pt>
+<figures/application5/image7.png, id=1334, 436.5108pt x 319.9152pt>
 File: figures/application5/image7.png Graphic file (type png)
 <use figures/application5/image7.png>
 Package pdftex.def Info: figures/application5/image7.png  used on input line 23
 7.
 (pdftex.def)             Requested size: 142.26378pt x 104.26408pt.
-<figures/application5/image8.png, id=1194, 442.7742pt x 326.6604pt>
+<figures/application5/image8.png, id=1335, 442.7742pt x 326.6604pt>
 File: figures/application5/image8.png Graphic file (type png)
 <use figures/application5/image8.png>
 Package pdftex.def Info: figures/application5/image8.png  used on input line 23
@@ -1830,7 +2152,7 @@ Package pdftex.def Info: figures/application5/image8.png  used on input line 23
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image9.png, id=1195, 437.9562pt x 326.1786pt>
+<figures/application5/image9.png, id=1336, 437.9562pt x 326.1786pt>
 File: figures/application5/image9.png Graphic file (type png)
 <use figures/application5/image9.png>
 Package pdftex.def Info: figures/application5/image9.png  used on input line 24
@@ -1839,9 +2161,9 @@ Package pdftex.def Info: figures/application5/image9.png  used on input line 24
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (chapters/9_silicon_carbonitrate.tex [84 <./figures/application5/image1.png> 
-<./figures/application5/image2.png>] [85 <./figures/application5/image3.png> <.
-/figures/application5/image4.png> <./figures/application5/image5.png>] [86 <./f
+) (chapters/9_silicon_carbonitrate.tex [88 <./figures/application5/image1.png> 
+<./figures/application5/image2.png>] [89 <./figures/application5/image3.png> <.
+/figures/application5/image4.png> <./figures/application5/image5.png>] [90 <./f
 igures/application5/image6.png> <./figures/application5/image7.png> <./figures/
 application5/image8.png> <./figures/application5/image9.png>]
 Chapter 10.
@@ -1855,7 +2177,7 @@ om the time-varying impedance
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 7.
 
-<figures/application3/image1.png, id=1226, 299.1175pt x 161.60374pt>
+<figures/application3/image1.png, id=1366, 299.1175pt x 161.60374pt>
 File: figures/application3/image1.png Graphic file (type png)
 <use figures/application3/image1.png>
 Package pdftex.def Info: figures/application3/image1.png  used on input line 12
@@ -1867,23 +2189,23 @@ Overfull \hbox (1.22226pt too wide) in paragraph at lines 9--14
 of pre-ce-ramic poly-mers which
  []
 
-[87
+[91
 
 
  <./figures/application3/image1.png (PNG copy)>]
-<figures/application3/image2.png, id=1231, 381.425pt x 313.17pt>
+<figures/application3/image2.png, id=1372, 381.425pt x 313.17pt>
 File: figures/application3/image2.png Graphic file (type png)
 <use figures/application3/image2.png>
 Package pdftex.def Info: figures/application3/image2.png  used on input line 18
 .
 (pdftex.def)             Requested size: 142.26378pt x 116.8029pt.
-<figures/application3/image3.png, id=1232, 903.375pt x 821.0675pt>
+<figures/application3/image3.png, id=1373, 903.375pt x 821.0675pt>
 File: figures/application3/image3.png Graphic file (type png)
 <use figures/application3/image3.png>
 Package pdftex.def Info: figures/application3/image3.png  used on input line 22
 .
 (pdftex.def)             Requested size: 355.65947pt x 323.25946pt.
-<figures/application3/image4.png, id=1233, 2005.4925pt x 876.27374pt>
+<figures/application3/image4.png, id=1374, 2005.4925pt x 876.27374pt>
 File: figures/application3/image4.png Graphic file (type png)
 <use figures/application3/image4.png>
 Package pdftex.def Info: figures/application3/image4.png  used on input line 26
@@ -1897,26 +2219,26 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[88 <./figures/application3/image3.png (PNG copy)> <./figures/application3/imag
-e2.png (PNG copy)>] [89 <./figures/application3/image4.png (PNG copy)>]
+[92 <./figures/application3/image3.png (PNG copy)> <./figures/application3/imag
+e2.png (PNG copy)>] [93 <./figures/application3/image4.png (PNG copy)>]
 Overfull \hbox (3.10031pt too wide) in paragraph at lines 39--40
 []\T1/XCharter-TLF/m/n/10.95 Moving from a macro-scopic to mi-criscopic refer-n
 ce elec-trode was a choice
  []
 
-<figures/application3/image5.1.jpg, id=1244, 237.88875pt x 604.2575pt>
+<figures/application3/image5.1.jpg, id=1385, 237.88875pt x 604.2575pt>
 File: figures/application3/image5.1.jpg Graphic file (type jpg)
 <use figures/application3/image5.1.jpg>
 Package pdftex.def Info: figures/application3/image5.1.jpg  used on input line 
 68.
 (pdftex.def)             Requested size: 59.75095pt x 151.76474pt.
-<figures/application3/image5.2.jpg, id=1245, 439.6425pt x 940.51375pt>
+<figures/application3/image5.2.jpg, id=1386, 439.6425pt x 940.51375pt>
 File: figures/application3/image5.2.jpg Graphic file (type jpg)
 <use figures/application3/image5.2.jpg>
 Package pdftex.def Info: figures/application3/image5.2.jpg  used on input line 
 69.
 (pdftex.def)             Requested size: 71.13188pt x 152.16435pt.
-<figures/application3/image5.3.jpg, id=1246, 963.6pt x 1284.8pt>
+<figures/application3/image5.3.jpg, id=1387, 963.6pt x 1284.8pt>
 File: figures/application3/image5.3.jpg Graphic file (type jpg)
 <use figures/application3/image5.3.jpg>
 Package pdftex.def Info: figures/application3/image5.3.jpg  used on input line 
@@ -1929,8 +2251,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[90]
-<figures/application3/image6.png, id=1252, 455.301pt x 218.7372pt>
+[94]
+<figures/application3/image6.png, id=1393, 455.301pt x 218.7372pt>
 File: figures/application3/image6.png Graphic file (type png)
 <use figures/application3/image6.png>
 Package pdftex.def Info: figures/application3/image6.png  used on input line 85
@@ -1940,7 +2262,7 @@ Package pdftex.def Info: figures/application3/image6.png  used on input line 85
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image7.png, id=1253, 455.301pt x 218.7372pt>
+<figures/application3/image7.png, id=1394, 455.301pt x 218.7372pt>
 File: figures/application3/image7.png Graphic file (type png)
 <use figures/application3/image7.png>
 Package pdftex.def Info: figures/application3/image7.png  used on input line 92
@@ -1949,7 +2271,7 @@ Package pdftex.def Info: figures/application3/image7.png  used on input line 92
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image8.png, id=1254, 455.301pt x 218.7372pt>
+<figures/application3/image8.png, id=1395, 455.301pt x 218.7372pt>
 File: figures/application3/image8.png Graphic file (type png)
 <use figures/application3/image8.png>
 Package pdftex.def Info: figures/application3/image8.png  used on input line 99
@@ -1966,7 +2288,7 @@ Package pdftex.def Info: figures/application3/image8.png  used on input line 10
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image9.png, id=1255, 455.301pt x 218.7372pt>
+<figures/application3/image9.png, id=1396, 455.301pt x 218.7372pt>
 File: figures/application3/image9.png Graphic file (type png)
 <use figures/application3/image9.png>
 Package pdftex.def Info: figures/application3/image9.png  used on input line 11
@@ -1975,7 +2297,7 @@ Package pdftex.def Info: figures/application3/image9.png  used on input line 11
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image10.png, id=1256, 455.301pt x 218.7372pt>
+<figures/application3/image10.png, id=1397, 455.301pt x 218.7372pt>
 File: figures/application3/image10.png Graphic file (type png)
 <use figures/application3/image10.png>
 Package pdftex.def Info: figures/application3/image10.png  used on input line 1
@@ -1984,7 +2306,7 @@ Package pdftex.def Info: figures/application3/image10.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image11.png, id=1257, 455.301pt x 204.765pt>
+<figures/application3/image11.png, id=1398, 455.301pt x 204.765pt>
 File: figures/application3/image11.png Graphic file (type png)
 <use figures/application3/image11.png>
 Package pdftex.def Info: figures/application3/image11.png  used on input line 1
@@ -1993,7 +2315,7 @@ Package pdftex.def Info: figures/application3/image11.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image12.png, id=1258, 455.301pt x 202.8378pt>
+<figures/application3/image12.png, id=1399, 455.301pt x 202.8378pt>
 File: figures/application3/image12.png Graphic file (type png)
 <use figures/application3/image12.png>
 Package pdftex.def Info: figures/application3/image12.png  used on input line 1
@@ -2002,7 +2324,7 @@ Package pdftex.def Info: figures/application3/image12.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image13.png, id=1259, 455.301pt x 218.7372pt>
+<figures/application3/image13.png, id=1400, 455.301pt x 218.7372pt>
 File: figures/application3/image13.png Graphic file (type png)
 <use figures/application3/image13.png>
 Package pdftex.def Info: figures/application3/image13.png  used on input line 1
@@ -2011,7 +2333,7 @@ Package pdftex.def Info: figures/application3/image13.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image14.png, id=1260, 455.301pt x 219.219pt>
+<figures/application3/image14.png, id=1401, 455.301pt x 219.219pt>
 File: figures/application3/image14.png Graphic file (type png)
 <use figures/application3/image14.png>
 Package pdftex.def Info: figures/application3/image14.png  used on input line 1
@@ -2020,7 +2342,7 @@ Package pdftex.def Info: figures/application3/image14.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image15.png, id=1261, 455.301pt x 218.7372pt>
+<figures/application3/image15.png, id=1402, 455.301pt x 218.7372pt>
 File: figures/application3/image15.png Graphic file (type png)
 <use figures/application3/image15.png>
 Package pdftex.def Info: figures/application3/image15.png  used on input line 1
@@ -2029,12 +2351,12 @@ Package pdftex.def Info: figures/application3/image15.png  used on input line 1
 
 Underfull \vbox (badness 6641) has occurred while \output is active []
 
- [91 <./figures/application3/image5.1.jpg> <./figures/application3/image5.2.jpg
+ [95 <./figures/application3/image5.1.jpg> <./figures/application3/image5.2.jpg
 > <./figures/application3/image5.3.jpg>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image16.png, id=1268, 455.301pt x 218.7372pt>
+<figures/application3/image16.png, id=1408, 455.301pt x 218.7372pt>
 File: figures/application3/image16.png Graphic file (type png)
 <use figures/application3/image16.png>
 Package pdftex.def Info: figures/application3/image16.png  used on input line 1
@@ -2043,7 +2365,7 @@ Package pdftex.def Info: figures/application3/image16.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image17.png, id=1269, 455.301pt x 218.7372pt>
+<figures/application3/image17.png, id=1409, 455.301pt x 218.7372pt>
 File: figures/application3/image17.png Graphic file (type png)
 <use figures/application3/image17.png>
 Package pdftex.def Info: figures/application3/image17.png  used on input line 1
@@ -2052,7 +2374,7 @@ Package pdftex.def Info: figures/application3/image17.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image18.png, id=1270, 455.301pt x 218.7372pt>
+<figures/application3/image18.png, id=1410, 455.301pt x 218.7372pt>
 File: figures/application3/image18.png Graphic file (type png)
 <use figures/application3/image18.png>
 Package pdftex.def Info: figures/application3/image18.png  used on input line 1
@@ -2061,7 +2383,7 @@ Package pdftex.def Info: figures/application3/image18.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image19.png, id=1271, 455.301pt x 218.7372pt>
+<figures/application3/image19.png, id=1411, 455.301pt x 218.7372pt>
 File: figures/application3/image19.png Graphic file (type png)
 <use figures/application3/image19.png>
 Package pdftex.def Info: figures/application3/image19.png  used on input line 1
@@ -2070,7 +2392,7 @@ Package pdftex.def Info: figures/application3/image19.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image20.png, id=1272, 455.301pt x 218.7372pt>
+<figures/application3/image20.png, id=1412, 455.301pt x 218.7372pt>
 File: figures/application3/image20.png Graphic file (type png)
 <use figures/application3/image20.png>
 Package pdftex.def Info: figures/application3/image20.png  used on input line 1
@@ -2082,34 +2404,34 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ) (chapters/10_lithium_sodium_iron_phosophate.tex
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.12604pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.12604pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
-
-[92 <./figures/application3/image6.png> <./figures/application3/image7.png>]
-[93 <./figures/application3/image8.png> <./figures/application3/image9.png>]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.12604pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.12604pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
-
-[94 <./figures/application3/image10.png> <./figures/application3/image11.png> <
-./figures/application3/image12.png> <./figures/application3/image13.png>]
-[95 <./figures/application3/image14.png> <./figures/application3/image15.png> <
-./figures/application3/image16.png>]
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.42168pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.42168pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
 
-[96 <./figures/application3/image17.png> <./figures/application3/image18.png> <
-./figures/application3/image19.png>] [97 <./figures/application3/image20.png>]
-[98
+[96 <./figures/application3/image6.png> <./figures/application3/image7.png>]
+[97 <./figures/application3/image8.png> <./figures/application3/image9.png>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+
+[98 <./figures/application3/image10.png> <./figures/application3/image11.png> <
+./figures/application3/image12.png> <./figures/application3/image13.png>]
+[99 <./figures/application3/image14.png> <./figures/application3/image15.png> <
+./figures/application3/image16.png>]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+
+[100 <./figures/application3/image17.png> <./figures/application3/image18.png> 
+<./figures/application3/image19.png>] [101 <./figures/application3/image20.png>
+] [102
 
 
 ]
@@ -2118,24 +2440,24 @@ Chapter 11.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 5.
 
-<figures/application2/image1.png, id=1333, 279.9258pt x 187.4202pt>
+<figures/application2/image1.png, id=1473, 279.9258pt x 187.4202pt>
 File: figures/application2/image1.png Graphic file (type png)
 <use figures/application2/image1.png>
 Package pdftex.def Info: figures/application2/image1.png  used on input line 9.
 
 (pdftex.def)             Requested size: 142.26378pt x 95.2513pt.
-<figures/application2/image2.png, id=1334, 851.18pt x 662.475pt>
+<figures/application2/image2.png, id=1474, 851.18pt x 662.475pt>
 File: figures/application2/image2.png Graphic file (type png)
 <use figures/application2/image2.png>
 Package pdftex.def Info: figures/application2/image2.png  used on input line 15
 .
 (pdftex.def)             Requested size: 142.26378pt x 110.71886pt.
 
-LaTeX Warning: Marginpar on page 99 moved.
+LaTeX Warning: Marginpar on page 103 moved.
 
-[99 <./figures/application2/image1.png> <./figures/application2/image2.png (PNG
- copy)>]
-<figures/application2/image3.png, id=1340, 993.7125pt x 648.4225pt>
+[103 <./figures/application2/image1.png> <./figures/application2/image2.png (PN
+G copy)>]
+<figures/application2/image3.png, id=1481, 993.7125pt x 648.4225pt>
 File: figures/application2/image3.png Graphic file (type png)
 <use figures/application2/image3.png>
 Package pdftex.def Info: figures/application2/image3.png  used on input line 24
@@ -2150,14 +2472,14 @@ Package fullwidth inside float
 Package fullwidth Warning: The environment is empty
 (fullwidth)                 on input line 25.
 
-[100 <./figures/application2/image3.png (PNG copy)>] [101])
-(chapters/11_capacitors.tex [102]
+[104 <./figures/application2/image3.png (PNG copy)>] [105])
+(chapters/11_capacitors.tex [106]
 Chapter 12.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
 
-<figures/image1.png, id=1353, 827.09pt x 502.87875pt>
+<figures/image1.png, id=1494, 827.09pt x 502.87875pt>
 File: figures/image1.png Graphic file (type png)
 <use figures/image1.png>
 Package pdftex.def Info: figures/image1.png  used on input line 16.
@@ -2165,16 +2487,16 @@ Package pdftex.def Info: figures/image1.png  used on input line 16.
 
 Underfull \vbox (badness 3009) has occurred while \output is active []
 
- [103
+ [107
 
 
 ]
-<figures/image2.png, id=1359, 739.76375pt x 713.66624pt>
+<figures/image2.png, id=1499, 739.76375pt x 713.66624pt>
 File: figures/image2.png Graphic file (type png)
 <use figures/image2.png>
 Package pdftex.def Info: figures/image2.png  used on input line 22.
 (pdftex.def)             Requested size: 142.26378pt x 137.24232pt.
-<figures/image3.png, id=1360, 916.42375pt x 562.1pt>
+<figures/image3.png, id=1500, 916.42375pt x 562.1pt>
 File: figures/image3.png Graphic file (type png)
 <use figures/image3.png>
 Package pdftex.def Info: figures/image3.png  used on input line 32.
@@ -2183,7 +2505,7 @@ Package pdftex.def Info: figures/image3.png  used on input line 32.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/image4.png, id=1361, 440.64626pt x 407.5225pt>
+<figures/image4.png, id=1501, 440.64626pt x 407.5225pt>
 File: figures/image4.png Graphic file (type png)
 <use figures/image4.png>
 Package pdftex.def Info: figures/image4.png  used on input line 40.
@@ -2195,36 +2517,312 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[104 <./figures/image1.png (PNG copy)> <./figures/image2.png (PNG copy)> <./fig
+[108 <./figures/image1.png (PNG copy)> <./figures/image2.png (PNG copy)> <./fig
 ures/image4.png (PNG copy)>]) (chapters/12_conclusions.tex
 Overfull \hbox (1.34863pt too wide) in paragraph at lines 56--1
 \T1/XCharter-TLF/m/n/10.95 age de-vices in three-electrode con-fig-u-ra-tion, w
 ith less at-ten-tion on the chem-
  []
 
-[105 <./figures/image3.png (PNG copy)>]
+[109 <./figures/image3.png (PNG copy)>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.42168pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.42168pt}.
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
 (fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[106]
+[110]
 Chapter 13.
-) [107
+) [111
 
 
-] [108
+] [112
 
 
-] (main.bbl)
+]
+LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/sc' will be
+(Font)              scaled to size 10.95pt on input line 39.
+
+Overfull \hbox (18.4555pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 2700, 1520-6882. \T1/XCharter-TLF/m/sc/10.95 doi\T1/
+XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ac60336a008$[][]\T
+1/XCharter-TLF/m/n/10.95 . (Vis-ited on 02/03/2022). 
+ []
+
+
+Overfull \hbox (3.40416pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Fourier Trans-form Faradaic Ad-mit-tance Mea-sure-me
+nts: Real-Time De-
+ []
+
+
+Overfull \hbox (5.43138pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 con-vo-lu-tion of Het-ero-ge-neous Charge Trans-fer 
+Ki-netic Ef-fects for Ther-
+ []
+
+
+Overfull \hbox (18.76459pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 0728. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
+F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(77 ) 80290 -[]
+ 8$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 06/13/2025). 
+ []
+
+
+Overfull \hbox (10.23242pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Sam-pler Sys-tem: Ap-pli-ca-tion to on-Line Fast Fou
+rier Trans-form Faradaic
+ []
+
+
+Overfull \hbox (12.0987pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Ad-mit-tance Mea-sure-ments''. In: \T1/XCharter-TLF/
+m/it/10.95 An-a-lyt-i-cal Chem-istry \T1/XCharter-TLF/m/n/10.95 49.12 (Oct. 197
+7),
+ []
+
+
+Overfull \hbox (27.61673pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 pp. 1797^^U1805. \T1/XCharter-TLF/m/sc/10.95 issn\T1
+/XCharter-TLF/m/n/10.95 : 0003-2700, 1520-6882. \T1/XCharter-TLF/m/sc/10.95 doi
+\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ac50020a041$[]
+[]\T1/XCharter-TLF/m/n/10.95 .
+ []
+
+
+Overfull \hbox (6.59177pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 1983), pp. 205^^U219. \T1/XCharter-TLF/m/sc/10.95 is
+sn\T1/XCharter-TLF/m/n/10.95 : 0022-0728. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XC
+harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(83 )
+ []
+
+[113
+
+
+{C:/Users/fscarp/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_yelf2i.enc
+}]
+Overfull \hbox (143.98906pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Iso-mer-iza-tion Mech-a-nism of the Rad-i-cal An-ion
+ of (.Eta.4-Cyclooctatetraene)Cyclopentadienylcobalt
+ []
+
+
+Overfull \hbox (4.7854pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 with FFT-Faradaic Ad-mit-tance Mea-sure-ments''. In:
+ \T1/XCharter-TLF/m/it/10.95 Jour-nal of the Amer-
+ []
+
+
+Overfull \hbox (18.4555pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 7863, 1520-5126. \T1/XCharter-TLF/m/sc/10.95 doi\T1/
+XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ja00345a013$[][]\T
+1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/21/2025). 
+ []
+
+
+Overfull \hbox (5.34015pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/it/10.95 nal of Elec-tro-an-a-lyt-i-cal Chem-istry and In-te
+r-fa-cial Elec-tro-chem-istry \T1/XCharter-TLF/m/n/10.95 162.1
+ []
+
+
+Overfull \hbox (2.62604pt too wide) in paragraph at lines 40--40
+[]\T1/XCharter-TLF/m/n/10.95 Ari U. Ivaska and Don-ald E. Smith. ``Ap-pli-ca-ti
+on of On-Line Fast Fourier
+ []
+
+
+Overfull \hbox (3.97543pt too wide) in paragraph at lines 40--40
+[]\T1/XCharter-TLF/m/n/10.95 Maria Grzeszczuk and Don-ald E. Smith. ``Elec-tron
+ and Hy-dro-gen Atom
+ []
+
+
+Overfull \hbox (5.34015pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/it/10.95 nal of Elec-tro-an-a-lyt-i-cal Chem-istry and In-te
+r-fa-cial Elec-tro-chem-istry \T1/XCharter-TLF/m/n/10.95 201.2
+ []
+
+
+Overfull \hbox (2.36046pt too wide) in paragraph at lines 40--40
+[]\T1/XCharter-TLF/m/n/10.95 Tetsuya Os-aka and Kat-suhiko Naoi. ``Ap-pli-ca-ti
+on of On-line Impedance
+ []
+
+[114]
+Overfull \hbox (8.94627pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Doping-Undoping Pro-cess of Poly-acety-lene by Means
+ of FFT Impedance
+ []
+
+
+Overfull \hbox (1.15105pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 TRANS-FORM) IMPEDANCE METHOD TO DOPING-UNDOPING PRO-
+
+ []
+
+
+Overfull \hbox (6.83557pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 main''. In: \T1/XCharter-TLF/m/it/10.95 Re-view of S
+ci-en-tific In-stru-ments \T1/XCharter-TLF/m/n/10.95 64.11 (Nov. 1993), pp. 311
+1^^U
+ []
+
+
+Overfull \hbox (33.879pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 3115. \T1/XCharter-TLF/m/sc/10.95 issn\T1/XCharter-T
+LF/m/n/10.95 : 0034-6748. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TLF/m/n/1
+0.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1063 / 1 . 1144316$[][]\T1/XCharter-TLF/m/n
+/10.95 . (Vis-ited on 09/22/2025). 
+ []
+
+
+Overfull \hbox (1.94006pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 dur-ing Ox-i-da-tion and Re-duc-tion of Con-duct-ing
+ Poly-mers: Sig-nif-i-cance
+ []
+
+[115]
+Overfull \hbox (8.94829pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Con-duct-ing Poly-mer Layer''. In: \T1/XCharter-TLF/
+m/it/10.95 Elec-trochim-ica Acta \T1/XCharter-TLF/m/n/10.95 40.12 (Sept. 1995),
+
+ []
+
+
+Overfull \hbox (15.25285pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Mea-sure-ments''. In: \T1/XCharter-TLF/m/it/10.95 Ap
+-plied Physics Let-ters \T1/XCharter-TLF/m/n/10.95 83.11 (Sept. 2003), pp. 2178
+^^U
+ []
+
+
+Overfull \hbox (33.879pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 2180. \T1/XCharter-TLF/m/sc/10.95 issn\T1/XCharter-T
+LF/m/n/10.95 : 0003-6951. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TLF/m/n/1
+0.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1063 / 1 . 1609657$[][]\T1/XCharter-TLF/m/n
+/10.95 . (Vis-ited on 09/22/2025). 
+ []
+
+
+Overfull \hbox (0.9334pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 1995), pp. 249^^U254. \T1/XCharter-TLF/m/sc/10.95 is
+sn\T1/XCharter-TLF/m/n/10.95 : 1572-6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XC
+harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / 0022 -[] 0728(94 )
+ []
+
+
+Overfull \hbox (15.40688pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Pas-sive Layer Crack-ing by Means of Dy-namic Elec-t
+ro-chem-i-cal Impedance
+ []
+
+
+Overfull \hbox (9.96051pt too wide) in paragraph at lines 40--40
+[]\T1/XCharter-TLF/m/n/10.95 K. Darow-icki and P. ‘lep-ski. ``In-stan-ta-neous 
+Elec-tro-chem-i-cal Impedance
+ []
+
+
+Overfull \hbox (21.15881pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 (Feb. 2004), pp. 763^^U772. \T1/XCharter-TLF/m/sc/10
+.95 issn\T1/XCharter-TLF/m/n/10.95 : 0013-4686. \T1/XCharter-TLF/m/sc/10.95 doi
+\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . electacta 
+.
+ []
+
+
+Overfull \hbox (18.76459pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
+F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(03 ) 00154 -[]
+ 2$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/22/2025). 
+ []
+
+[116]
+Overfull \hbox (17.08937pt too wide) in paragraph at lines 40--40
+[]\T1/XCharter-TLF/m/n/10.95 K. Darow-icki, A. Zielin-ski, and P. Slep-ski. ``C
+ontinuous-Frequency Method
+ []
+
+
+Overfull \hbox (12.10622pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 2481. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
+F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . elecom . 2004 . 06 . 013$
+[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/22/2025). 
+ []
+
+
+Overfull \hbox (10.78267pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 ro-sion by Means of Dy-namic Elec-tro-chem-i-cal Imp
+edance Spec-troscopy''.
+ []
+
+
+Overfull \hbox (2.91891pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 (Jan. 2005), pp. 33^^U38. \T1/XCharter-TLF/m/sc/10.9
+5 issn\T1/XCharter-TLF/m/n/10.95 : 1572-6657. \T1/XCharter-TLF/m/sc/10.95 doi\T
+1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . jelechem .
+ []
+
+
+Overfull \hbox (14.93279pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 less Steel by Gal-van-o-dy-namic Impedance Spec-tros
+copy''. In: \T1/XCharter-TLF/m/it/10.95 Elec-trochim-
+ []
+
+
+Overfull \hbox (2.21814pt too wide) in paragraph at lines 40--40
+[]\T1/XCharter-TLF/m/n/10.95 Joanna Wysocka et al. ``In-ves-ti-ga-tion of the E
+lec-tro-chem-i-cal Be-haviour
+ []
+
+
+Overfull \hbox (23.42296pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
+F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . jelechem . 2016 . 08 . 02
+8$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/23/2025). 
+ []
+
+[117]
+Overfull \hbox (4.3518pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Cor-ro-sion Crack-ing Dy-nam-ics by Dy-namic Elec-tr
+o-chem-i-cal Impedance
+ []
+
+
+Overfull \hbox (40.51282pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 (Sept. 2004), pp. 255^^U260. \T1/XCharter-TLF/m/sc/1
+0.95 issn\T1/XCharter-TLF/m/n/10.95 : 1478-422X. \T1/XCharter-TLF/m/sc/10.95 do
+i\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1179 / 147842204X284
+4$[][]\T1/XCharter-TLF/m/n/10.95 .
+ []
+
+
+Overfull \hbox (14.96484pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 tropoly-mer-iza-tion''. In: \T1/XCharter-TLF/m/it/10
+.95 Elec-trochim-ica Acta \T1/XCharter-TLF/m/n/10.95 49.27 (Oct. 2004), pp. 482
+9^^U
+ []
+
+
+Overfull \hbox (4.87738pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 namic Elec-tro-chem-i-cal Impedance Spec-troscopy Me
+a-sure-ments of Pas-
+ []
+
+
+Overfull \hbox (5.22278pt too wide) in paragraph at lines 40--40
+\T1/XCharter-TLF/m/n/10.95 Dy-namic Impedance Tech-nique''. In: \T1/XCharter-TL
+F/m/it/10.95 Car-bon \T1/XCharter-TLF/m/n/10.95 96 (Jan. 2016), pp. 1093^^U
+ []
+
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the main.maf file.
-\openout3 = `main.maf'.
+\openout4 = `main.maf'.
 
- (main.aux)
+[118] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2236,49 +2834,42 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: BC7F757328DF50E0F3A3F74A37E032B3;28222.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
 
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 67816184DEF02562C233718AD39A9408;27417
-(rerunfilecheck)             After:  FCBD45FA86BD2307504AB0F8E9B7DCA8;27408.
  ) 
 Here is how much of TeX's memory you used:
- 19922 strings out of 474486
- 322949 string characters out of 5753568
- 1946542 words of memory out of 5000000
- 41514 multiletter control sequences out of 15000+600000
- 701899 words of font info for 124 fonts, out of 8000000 for 9000
+ 27317 strings out of 474486
+ 482483 string characters out of 5753568
+ 1947542 words of memory out of 5000000
+ 48793 multiletter control sequences out of 15000+600000
+ 708909 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 81i,16n,82p,2787b,1242s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{part.4} has been referenced but does not exist, rep
-laced by a fixed one
-
- <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1
-095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ecrm1095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/e
-c/dpi600\ecrm1440.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jkn
-appen/ec/dpi600\ecrm1728.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljf
-our/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts
-/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\fscarp\AppData\Local\MiKTe
-X\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/fscarp/AppData/Roami
-ng/MiKTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><C:/Users/fscarp/AppDat
-a/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Italic.pfb><C:/Users/fsca
-rp/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/public
-/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/font
-s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (114 pages, 9314822 bytes).
+ 81i,16n,84p,2787b,1533s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
+t1095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecrm1095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecrm1440.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ecrm1728.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\fscarp\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/fscarp/AppData/Roa
+ming/MiKTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><C:/Users/fscarp/AppD
+ata/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Italic.pfb><C:/Users/fs
+carp/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
+:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (124 pages, 9401412 bytes).
 PDF statistics:
- 1785 PDF objects out of 2073 (max. 8388607)
- 308 named destinations out of 1000 (max. 500000)
- 1376 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2051 PDF objects out of 2073 (max. 8388607)
+ 373 named destinations out of 1000 (max. 500000)
+ 1408 words of extra memory for PDF output out of 10000 (max. 10000000)
 

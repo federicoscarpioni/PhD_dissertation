@@ -186,39 +186,123 @@ Special cases and analysis tools include:
     \item Slow‐variation (quasi‐stationary) approximations, applying sliding‐window or recursive‐least‐squares identification to treat the system as locally LTI over short intervals.
 \end{itemize}
 
+
+
+\section{Digital signal processing}
+\subsection{Digital sampling}
+In real world any quantity changes continuously in time. When performing an experiment, the scientist measures the values of those quantities with instrumentation at a specific point in time. Commonly, the measurement is carried out at constant intervals of time to get a time series. In modern times, measurement are carried out with electronic devices which contains component capable of sampling quantities and save the digitalized data into memory or sending to a personal computer. This processes is sampling and the electronic components that allow that in a device is called analog to digital converter or commonly ADC. The most important parameter to consider in sampling is the time interval or its reciprocal sampling frequency. To analyze the spectral content of a signal, the sampling frequency must be at least two folds the frequency of the highest oscillation components. This is know as Nyquist-Shannon sampling theorem. Sampling below this threshold causes higher‐frequency components to “fold” back into lower frequencies—a phenomenon known as aliasing—which corrupts the true spectral content of the signal. Alising can not only be avoided sampling at high frequency but alternativly using an analog or digital anti-alising filter befor the sampling stage. This could be important  because sampling at high frequencies require more sofisticated and expensive devices and of course the signal will occupy a lot of virtual storage space which might make long term experiment unfeasable.
+
+\subsection{Discrete Fourier Transform}
+The Fourier Transform is used for the spectral analysis of signals, that is the process of decomposing a time-domain signal into its constituent frequencies and quantifying the amplitude and often phase (or power) associated with each. One converts a signal $x(t)$ or $x[n]$ into $X(\omega)$ or $X[k]$, revealing how its energy or variance is distributed across frequency. This frequency-domain view makes it easy to identify periodic components, resonances, noise bands and characteristic time-constants that may be hidden in the raw waveform. 
+Since Joseph Fourier’s 1822 breakthrough showed that any periodic function can be expressed as a sum of sinusoids, the Fourier transform (FT) has become a cornerstone of signal analysis: mathematically, the continuous‐time FT of a signal x(t) is defined as
+$$
+F(\omega)=\int_{\infty}^{\infty} x(t) e^{-j\omega t} dt,
+$$
+and it enjoys key properties such as linearity, time‐ and frequency‐shifting, duality, and the convolution theorem (i.e. convolution in time becomes multiplication in frequency). In practice one works with the discrete Fourier transform (DFT)
+$$
+F(\omega)=\sum_{0}^{n-1} x[n] e^{-j2\pi kn/N}.
+$$
+For its properties, the Fourier Trasnform can be inverted to get back a time-dependent signal from its frequency spectra. The process is called inverse fourire trasnform and it is valid also for the discrete fourier trasnform.
+Cooley and Tukey developed an algorithm for the efficient computation of the summation called Fast Fourier Trasnform (FFT). The complexity of the problem is $O(N\log N)$ compare to the $O(N^2)$ of the direct summation, although it requires the length of the imput signal to be equal to $2^n$ with n integer number.
+In real world applications of signal processing, the spectral information changes with time. A few examples are the real-time processing of music (digital equalization), human voice (speech recognition) or images (object recognition). To analyze this signals, the approach is to perform the Fourier Trasnform on a small part of the signal at the time, with a process called windowing. The method is called short-time Fourier Trasnform (STFT) and extends the classic FT to non-stationary signals by sliding a finite window w[n] along the data and computing a local DFT on each segment. Formally, for a discrete signal x[n] and window shift R:
+$$
+X(m,k) = \sum _{n=0} ^{n-1} x[n + mR] \cdot w[n] \cdot e^{-j2\pi kn/N},
+$$
+where m indexes time frames and k frequency bins. While the short-time Fourier Trasnfomr can effectively capture the spectral contect of transient processes, the accuracy of the result depends on careful design of the calculation. First, there is a time-frequency resolution trade-off, known also as Gabor uncenrtainty principle $\Delta t \cdot \Delta f $ where $\Delta t$ is the windows lenght and $\Delta f$ is the inverse of it. Equality is reached only by a Gaussian window, which is therefore “optimal” in the sense of joint time–frequency localization. The window length N controls the balance: a short window localizes well in time (small $\Delta t$) but its Fourier transform is broad (large $\Delta f$), so fast transients are captured but spectral peaks smear, while a long window gives fine frequency discrimination (small $\Delta f$) at the expense of temporal precision (large $\Delta t$), so you resolve closely spaced frequencies but miss rapid changes. Another important aspect is the window shape and the overlap, the latter derived by the windows shift value $R$ in the STFT definition.  To produce smooth progression between following windowing, an overlap is used of 50\% or 75\%. 
+
+These concepts are essential for the discussion on the methods to estimate the non-stationary impedance given later in the text and they must be carefully taken into consideration depending on the characteristic frequency of evolution of the given signal.
+
+Here, I would like to remark that the spectral analysis does not necessary go though the calculation of the Discrete Fourier Transform. In fact, the DFT calulats amplitudes and pahses for all the N frequencies equally distributed between $-\Delta f/2$ and $\Delta f/2$. When one is intersted on analyzing only a specific set of known frequencies can calculate the Fouerir Tranform of only those frequency points. In system identifaction, as for the calculation of the impedance when a set of known frequencies are perturbed, it is known as Goertzel filter and it requires much less mathematical operation to be conducted making it ideal for application in limited hardware.
+
+\subsubsection{Spectral leakage}
+
+Spectral leakage is the effect typical in the Discrete Fourier Trasnform of "leaking" or "spilling" of spectral components into neighboring frequency bins, producing spurious components where the spectra baseline should be flat (or to noise level). Multiple causes produce spectral leakage. The most typical is due to a discrete signal x[n] that does not contain an integer number of periods of the oscillatory components. When the signal contains non-integer cycles, tapered windows shall be employed to mitigate the leakage. Although system identification in electrochemsitry for the frequency domain employs cyclic perturbation (i.e. single sine waves or multi-sines), it will be usefull in the following discussio in this text to introduce some aspect of window functions. The most known are Hanning, Hamming and Blackman  functions characterised by three main properties:
+\begin{itemize}
+    \item roll-off and characteristic frequency
+    \item passband flatness
+    \item group delay
+\end{itemize}
+The main characteristic is called roll-off which means "how fast" the amplitude of the original signal is attenuated. From the view of the frequency domain, the part of the filter that attenuates the signal are colled sidelobes. The characteristic frequency, also called cut-off, is the frequency at which the attenuation is $\sqrt{2}$ (\~= –3 dB) of the maximum value. Different windows function have steeper or smoother roll-off and this is important when realizing, for example, a low pass filter using the same function. Passband flatness is how uniform is the magnitude response across the main lobe (the passband) to avoid any distortion of the amplitude.
+It is also important, especially for the complex signals like the impedance, to evaluate also the phase shift or group delay that must be flat in the frequency region of analysis. Windows have usually a zero or very low attenuation in the middle that translates to a very well analysis of the spectral characteristics of the middle point of the signal. This is somehow translated to an "instantaneous information" even if the windows has finite length.
+Usually it is impossible to have optimal values for this parameters but a compromise has to be made.
+
+Other causes of spectral leakage derive from practical hardware limitations such or user errors in the choice on the design of the experiment such as:
+\begin{itemize}
+    \item asyncronization of ADC and DAC clock
+    \item Instability of the ADC (data acquisition) or DAC (signal generator) clock;
+    \item ADC apertuire jitter adn slew-rate;
+    \item Low resolution of the ADC compared to the oscillation amplitude might produce spurous harmonics;
+    \item aliasing due to the choice of sampling frequency or decimation/interpolation wihtou proper filtering;
+\end{itemize}
+
+\subsection{Noise}
+
+Noise, signal-to-noise ratio (SNR) and averaging are foundational in any measurement or communication system. Noise denotes random, unwanted fluctuations superimposed on the desired signal—originating from physical sources (thermal, shot), instrumentation (quantization, clock jitter) or environment (EM interference). SNR quantifies their relative power, defined as SNR = Psig/Pnoise (often in dB: 10·log10 Psig/Pnoise), and dictates how reliably one can detect or process the signal. Averaging is the primary tool for improving SNR: by repeating the same measurement or subdividing a long record into M independent segments, uncorrelated noise averages toward zero while the coherent signal adds constructively. The net SNR gain scales as $\sqrt{M}$ (a 3 dB increase per doubling of M). In the time domain this is ensemble or block averaging; in the frequency domain it appears as spectral averaging or Welch’s method, where overlapping, windowed segments are FFT’d and their periodograms averaged. Care must be taken to ensure segment independence (avoid drift or decorrelation) and choose appropriate windowing and overlap to balance variance reduction, resolution and computational cost. 
+Noise is considered an inchoherent source, that is, each noise sample has random pahse an damplitude that i uncorrelated from one time frame to the next (random). Any other physical effect (ex. electrochemical noise) and response to any perturbation is considered a coherent signal.
+The avaraging can be alternativly obtained increasing the acquisition time of the periodic signal or the length of the window. In fact narrowing the spectral bin's bandwidth reduces linearly the noise power in it (i.e. doubling the signal length, $\Delta f$ halves and so the power in each bin while the coherent signal amplitude in the bin does not change.
+or simply increasing the perturbation perturbation amplitude when possible.
+
+\subsection{Windowsing for spectral analysis}
+Cite Harris 1978
+
+\subsection{Wavelets method}
+
+Wavelet analysis decomposes a signal into shifted and scaled versions of a short, zero-mean “mother” wavelet, yielding a time–scale (or time–frequency) map that can capture both slow and fast features with variable resolution. Unlike the STFT’s fixed window, wavelets automatically use wide windows at low frequencies (for fine frequency resolution) and narrow windows at high frequencies (for fine time resolution), making them ideal for detecting transients, abrupt changes or multi-scale phenomena. They are widely used in vibration analysis, denoising and feature extraction where signal characteristics evolve over time. For a system driven by a strictly fixed-frequency perturbation, the benefit of wavelets is limited—standard Fourier or narrow-band filtering already isolates the tone most efficiently—though wavelets can still reveal subtle non-stationarities or harmonic distortions around that frequency.
+
+\subsection{Filters}
+A filter in signal processing is a system that selectively modifies an input signal’s amplitude and/or phase as a function of frequency.  Fundamentally, one describes a filter by its impulse response h(t) (continuous‐time) or h[n] (discrete‐time), and equivalently by its frequency response H($\omega$) or H($e^{j\omega}$), which shows how each spectral component is scaled and shifted in phase.  Filters may be analog—operating continuously on voltages or currents—or digital—processing sampled data—and they can be linear (obeying superposition) or nonlinear (introducing harmonics).  Additional key properties include time-invariance, where the filter’s behavior does not change over time, and causality, which requires outputs to depend only on present and past inputs.  By their effect on frequency content, filters are classified as low-pass (passing frequencies below a cutoff fc), high-pass (passing frequencies above fc), band-pass (passing a band between two cutoffs), or band-stop/notch (rejecting a specific band).  In the analog domain, common design prototypes are Butterworth filters (maximally flat passband), Chebyshev filters (steep transition at the cost of ripple), and elliptic filters (sharpest transition for given ripple).  In digital implementations, infinite impulse response (IIR) filters use feedback to achieve steep responses with few coefficients, while finite impulse response (FIR) filters use only feedforward terms and can be designed for exactly linear phase—ensuring constant group delay, which is the derivative of the phase response with respect to frequency and measures how different spectral components are time-aligned.  Performance metrics include passband ripple (amplitude variation within the passband), stopband attenuation (suppression of unwanted bands), transition bandwidth (width of the roll-off region), group delay variation, and computational complexity (operations per sample).  Filters are indispensable for noise reduction, anti-aliasing before sampling, channel equalization and signal extraction, enabling precise control over signal fidelity, latency and resource utilization.
+
+\subsection{Removal of trends}
+Baseline or trend removal, often called detrending, is the process of eliminating slow-varying offsets or drifts from a signal so that its remaining fluctuations can be treated as (approximately) zero-mean and stationary.  Undesired trends can arise from sensor drift, temperature changes, power‐supply fluctuations or low‐frequency interference, and if left uncorrected they bias spectral estimates (manifesting as excessive low-frequency power or leakage) and corrupt time-domain analyses.  Common detrending techniques include subtracting the signal’s long‐term mean or a low‐order polynomial fit, applying a high‐pass filter with a cutoff below the band of interest (using a linear-phase FIR to avoid phase distortion), or employing moving-average/median filters to track and remove slow baseline wander.  More advanced methods—such as empirical mode decomposition (EMD) or wavelet-based multiscale filtering—can adaptively separate baseline components from overlapping signal features.  In all cases, one must choose parameters (filter cutoff, polynomial order, window length) so that genuine signal dynamics are preserved while the unwanted trend is effectively suppressed.
+
+In the analysis of signals trough Fourier Analysis, the removal of trends mitigate an effect called Gibbs phenomenon that is the presence of an infinite series of harmonics produce by sharp transition in the signals caused by its dynamic (drift) as well as experimental, coming from the digitization process (an artifact known as ringing).
+
+\subsection{Signal synthesis}
+
+To perform certain experiments, a scientist might be interested to perturb the system with non-constant signals like pulses, ramps, sinuses or arbitrary shapes. This requires to design a signal from mathematical functions and usually require a computer to define it. The desired waveform is generated from the instrumentation using an electronic component capable of transforming a user-defined digital waveform to a continuous analog signal. The process is called digital to analog conversion and the electronic component capable of it the digital to analog converter or simply DAC. There are several methods of implementing a digital to analog converter on hardware with different complexity and properties, the most simple is the direct digital synthesis method.
+
+\subsubsection{Direct Digital Synthesis}
+
+This methods relays on the 'look-up table' method in which the desired waveform is stored as table of pairs value-time and at constant time interval the value is read from the table and converted to analog value.
+
+\subsection{Further resources}
+
+The raccomended resource for learning about signal processing is the book "understanding figital signal processing" by R.G. Lyon and the series of pubblication from D.A. Lyon "The Discrete Fourier Trasnform".
+
+
 \section{System identification in the frequency domain}
 \subsection{Definition}
 System identification is the process of choosing statistically a mathematical model appropriate to describe the system under study based on measured input/output data (data-driven). 
 For system identification in the frequency domain, that we are using here, it is finding a mathematical formulation for the transfer function that describes the system given its experimental frequency response function.
 Its primary goals are:
 \begin{itemize}
-\item Structure selection—choosing a model form that can capture the system’s behavior (e.g. equivalent‐circuit, state‐space or black-box polynomial models).
-\item Parameter estimation—determining the numerical values (resistances, capacitances, transfer‐function coefficients, etc.) that best fit the data.
-\item Uncertainty quantification—assessing the confidence or variance in those estimates to support robust simulations and control design.
+	\item Structure selection—choosing a model form that can capture the system’s behavior (e.g. equivalent‐circuit, state‐space or black-box polynomial models).
+	\item Parameter estimation—determining the numerical values (resistances, capacitances, transfer‐function coefficients, etc.) that best fit the data.
+	\item Uncertainty quantification—assessing the confidence or variance in those estimates to support robust simulations and control design.
 \end{itemize}
 System identification has a multitude of applications from among which:
 \begin{itemize}
-    \item \emph{control} the system input in order to maintain a desired output. It is a dedicated branch of enegineering called System control and it is foundamental for industrial automation and the base for the functioning of many electronic devices. I annoverate here the importance of PID controllers;
-    \item \emph{prediction} of the system output outside the testing input values;
-    \item \emph{forecast} of the system output at future time;
-    \item \emph{understand} the system underline physics. 
+	\item \emph{control} the system input in order to maintain a desired output. It is a dedicated branch of enegineering called System control and it is foundamental for industrial automation and the base for the functioning of many electronic devices. I annoverate here the importance of PID controllers;
+	\item \emph{prediction} of the system output outside the testing input values;
+	\item \emph{forecast} of the system output at future time;
+	\item \emph{understand} the system underline physics. 
 \end{itemize}
 The first big choice is between parametric and non-parametric models
 The first step is the choice of the model between three approaches:
 \begin{itemize}
-    \item white-box models, where every equation and parameter stems from first‐principles physics;
-    \item gray-box models, which embed mechanistic structure (e.g. RC networks for electrochemical cells) but tune some parameters from data;
-    \item black-box models, which use purely data‐driven forms
+	\item white-box models, where every equation and parameter stems from first‐principles physics;
+	\item gray-box models, which embed mechanistic structure (e.g. RC networks for electrochemical cells) but tune some parameters from data;
+	\item black-box models, which use purely data‐driven forms
 \end{itemize}
 Choosing an appropriate modeling approach for an electrochemical system hinges on the balance between physical insight, computational effort and data availability.  At one extreme, white-box models—built from first-principles PDEs of mass transport, charge conservation and reaction kinetics—offer high fidelity but demand detailed material parameters, fine spatial discretization and heavy numerical simulation.  At the other, black-box techniques can fit arbitrary I/O behavior from relatively little data, yet yield little chemical or mechanistic interpretation.  Grey-box models—most commonly equivalent‐circuit representations in EIS—strike a practical compromise: each resistor, capacitor, constant-phase element or Warburg branch carries clear electrochemical meaning, while their numerical values are identified from measured impedance spectra.  PDE‐based models are used when you need predictive accuracy across wide operating ranges; employ grey-box EIS fitting for rapid characterization, diagnostics and BMS implementation; and reserve black-box methods for purely control-oriented applications where internal physical detail is secondary.
 For frequency-domain characterization the identification of a black-box model can be non parametric Compute the cross‐ and auto‐spectra of input u(t) and output y(t) (e.g. via Welch’s method) or parametric using a rational function with no physical interpretation of poles/zeros. For the estimation of a and b is used one of thesetechnqiues:  Sanathanan–Koerner, vector-fitting or maximum-likelihood algorithms.
 \subsection{Excitation signals}
 This works deals with frequency-domain characterization of electrochemical systems. Compared to the step or pulse (rectangular) excitation of the time-domain characterization there are multiple excitation types for the frequency domain. The chosen perturbation signal determines which dynamics components of the system will be excited, hence visible in the identification process, how the frequency response function can be estimated and how long the experiment takes. In practical terms, one must decide the type and frequency of the excitation and the amplitude: large enough to be distinguished from noise but small enough to keep the system in its linear regime. The types of perturbation are:
 \begin{itemize}
-    \item sine waves, that stimulate only one frequency at the time; for an identification experiment, sine waves are generated one after the other generally from high to low in EIS experiments in a process called stepped sine experiment;
-    \item swept-sine signals (or chirps) are signals in which the frequency varies continuously over time.
-    \item multi-sine waves are the superimposition of multiple sinusoidal components of different frequency (and phase), reducing experiment time;
-    \item pseudo-random binary sequences switches (randomly) between two levels producing flat spectral density with low power.
+	\item sine waves, that stimulate only one frequency at the time; for an identification experiment, sine waves are generated one after the other generally from high to low in EIS experiments in a process called stepped sine experiment;
+	\item swept-sine signals (or chirps) are signals in which the frequency varies continuously over time.
+	\item multi-sine waves are the superimposition of multiple sinusoidal components of different frequency (and phase), reducing experiment time;
+	\item pseudo-random binary sequences switches (randomly) between two levels producing flat spectral density with low power.
 \end{itemize}
 Sine and multi-sine excitation signals are the most used perturbation types because all the power is used to excite a specific frequency leading got higher signal to noise ration and simplicity of interpretation of amplitude and phase characteristics, but they require more complicated hardware for the generation of pure sinusoidal forms or arbitrary waveforms. For some industrial ora high scale application this is not possible and binary sequence, that require more sophisticated analysis, are instead implied.\\
 The frequency response function is estimated from the synchronous records of the input excitation u(t) and output i(t) of the system via non-parametric function of its simplest form as:
@@ -291,81 +375,3 @@ with $E_i$ any prediction error (e.g. mean squared error) on the fit when exclud
 AIC and BIC are usually more robust for small dataset compared to CV and faster to compute (source: Hoornweg, Victor (2018). "Chapter 9". Science: Under Submission. Hoornweg Press. ISBN 978-90-829188-0-9.)
 \subsection{Identification in non-stationary case}
 System identification for non‐stationary systems extends the classical LTI framework by explicitly accounting for parameters that drift or jump over time—as often occurs in batteries whose resistance, capacitance and diffusion coefficients change with state‐of‐charge, temperature or aging. Rather than assuming a single static model, one partitions the data into short, quasi‐stationary intervals (via sliding‐window or STFT methods) or formulates a linear‐parameter‐varying (LPV) model whose matrices A(t),B(t),C(t) depend on measurable “scheduling” variables (e.g. SoC). Recursive estimation algorithms—such as recursive least‐squares with a forgetting factor or Kalman filters—adapt parameter estimates on the fly, balancing sensitivity to genuine drift against robustness to noise. Alternatively, adaptive subspace methods re‐identify a new state‐space realization at each time step, tracking evolving modes and time constants without prescribing a rigid model order in advance. These approaches yield time‐stamped parameter trajectories that faithfully capture the system’s evolving dynamics, enabling real‐time monitoring, diagnostics and control of non‐stationary electrochemical cells.
-
-\section{Digital signal processing}
-\subsection{Digital sampling}
-In real world any quantity changes continuously in time. When performing an experiment, the scientist measures the values of those quantities with instrumentation at a specific point in time. Commonly, the measurement is carried out at constant intervals of time to get a time series. In modern times, measurement are carried out with electronic devices which contains component capable of sampling quantities and save the digitalized data into memory or sending to a personal computer. This processes is sampling and the electronic components that allow that in a device is called analog to digital converter or commonly ADC. The most important parameter to consider in sampling is the time interval or its reciprocal sampling frequency. To analyze the spectral content of a signal, the sampling frequency must be at least two folds the frequency of the highest oscillation components. This is know as Nyquist-Shannon sampling theorem. Sampling below this threshold causes higher‐frequency components to “fold” back into lower frequencies—a phenomenon known as aliasing—which corrupts the true spectral content of the signal. Alising can not only be avoided sampling at high frequency but alternativly using an analog or digital anti-alising filter befor the sampling stage. This could be important  because sampling at high frequencies require more sofisticated and expensive devices and of course the signal will occupy a lot of virtual storage space which might make long term experiment unfeasable.
-
-\subsection{Discrete Fourier Transform}
-The Fourier Transform is used for the spectral analysis of signals, that is the process of decomposing a time-domain signal into its constituent frequencies and quantifying the amplitude and often phase (or power) associated with each. One converts a signal $x(t)$ or $x[n]$ into $X(\omega)$ or $X[k]$, revealing how its energy or variance is distributed across frequency. This frequency-domain view makes it easy to identify periodic components, resonances, noise bands and characteristic time-constants that may be hidden in the raw waveform. 
-Since Joseph Fourier’s 1822 breakthrough showed that any periodic function can be expressed as a sum of sinusoids, the Fourier transform (FT) has become a cornerstone of signal analysis: mathematically, the continuous‐time FT of a signal x(t) is defined as
-$$
-F(\omega)=\int_{\infty}^{\infty} x(t) e^{-j\omega t} dt,
-$$
-and it enjoys key properties such as linearity, time‐ and frequency‐shifting, duality, and the convolution theorem (i.e. convolution in time becomes multiplication in frequency). In practice one works with the discrete Fourier transform (DFT)
-$$
-F(\omega)=\sum_{0}^{n-1} x[n] e^{-j2\pi kn/N}.
-$$
-For its properties, the Fourier Trasnform can be inverted to get back a time-dependent signal from its frequency spectra. The process is called inverse fourire trasnform and it is valid also for the discrete fourier trasnform.
-Cooley and Tukey developed an algorithm for the efficient computation of the summation called Fast Fourier Trasnform (FFT). The complexity of the problem is $O(N\log N)$ compare to the $O(N^2)$ of the direct summation, although it requires the length of the imput signal to be equal to $2^n$ with n integer number.
-In real world applications of signal processing, the spectral information changes with time. A few examples are the real-time processing of music (digital equalization), human voice (speech recognition) or images (object recognition). To analyze this signals, the approach is to perform the Fourier Trasnform on a small part of the signal at the time, with a process called windowing. The method is called short-time Fourier Trasnform (STFT) and extends the classic FT to non-stationary signals by sliding a finite window w[n] along the data and computing a local DFT on each segment. Formally, for a discrete signal x[n] and window shift R:
-$$
-X(m,k) = \sum _{n=0} ^{n-1} x[n + mR] \cdot w[n] \cdot e^{-j2\pi kn/N},
-$$
-where m indexes time frames and k frequency bins. While the short-time Fourier Trasnfomr can effectively capture the spectral contect of transient processes, the accuracy of the result depends on careful design of the calculation. First, there is a time-frequency resolution trade-off, known also as Gabor uncenrtainty principle $\Delta t \cdot \Delta f $ where $\Delta t$ is the windows lenght and $\Delta f$ is the inverse of it. Equality is reached only by a Gaussian window, which is therefore “optimal” in the sense of joint time–frequency localization. The window length N controls the balance: a short window localizes well in time (small $\Delta t$) but its Fourier transform is broad (large $\Delta f$), so fast transients are captured but spectral peaks smear, while a long window gives fine frequency discrimination (small $\Delta f$) at the expense of temporal precision (large $\Delta t$), so you resolve closely spaced frequencies but miss rapid changes. Another important aspect is the window shape and the overlap, the latter derived by the windows shift value $R$ in the STFT definition.  To produce smooth progression between following windowing, an overlap is used of 50\% or 75\%. 
-
-These concepts are essential for the discussion on the methods to estimate the non-stationary impedance given later in the text and they must be carefully taken into consideration depending on the characteristic frequency of evolution of the given signal.
-
-Here, I would like to remark that the spectral analysis does not necessary go though the calculation of the Discrete Fourier Transform. In fact, the DFT calulats amplitudes and pahses for all the N frequencies equally distributed between $-\Delta f/2$ and $\Delta f/2$. When one is intersted on analyzing only a specific set of known frequencies can calculate the Fouerir Tranform of only those frequency points. In system identifaction, as for the calculation of the impedance when a set of known frequencies are perturbed, it is known as Goertzel filter and it requires much less mathematical operation to be conducted making it ideal for application in limited hardware.
-
-\subsubsection{Spectral leakage}
-
-Spectral leakage is the effect typical in the Discrete Fourier Trasnform of "leaking" or "spilling" of spectral components into neighboring frequency bins, producing spurious components where the spectra baseline should be flat (or to noise level). Multiple causes produce spectral leakage. The most typical is due to a discrete signal x[n] that does not contain an integer number of periods of the oscillatory components. When the signal contains non-integer cycles, tapered windows shall be employed to mitigate the leakage. Although system identification in electrochemsitry for the frequency domain employs cyclic perturbation (i.e. single sine waves or multi-sines), it will be usefull in the following discussio in this text to introduce some aspect of window functions. The most known are Hanning, Hamming and Blackman  functions characterised by three main properties:
-\begin{itemize}
-    \item roll-off and characteristic frequency
-    \item passband flatness
-    \item group delay
-\end{itemize}
-The main characteristic is called roll-off which means "how fast" the amplitude of the original signal is attenuated. From the view of the frequency domain, the part of the filter that attenuates the signal are colled sidelobes. The characteristic frequency, also called cut-off, is the frequency at which the attenuation is $\sqrt{2}$ (\~= –3 dB) of the maximum value. Different windows function have steeper or smoother roll-off and this is important when realizing, for example, a low pass filter using the same function. Passband flatness is how uniform is the magnitude response across the main lobe (the passband) to avoid any distortion of the amplitude.
-It is also important, especially for the complex signals like the impedance, to evaluate also the phase shift or group delay that must be flat in the frequency region of analysis. Windows have usually a zero or very low attenuation in the middle that translates to a very well analysis of the spectral characteristics of the middle point of the signal. This is somehow translated to an "instantaneous information" even if the windows has finite length.
-Usually it is impossible to have optimal values for this parameters but a compromise has to be made.
-
-Other causes of spectral leakage derive from practical hardware limitations such or user errors in the choice on the design of the experiment such as:
-\begin{itemize}
-    \item asyncronization of ADC and DAC clock
-    \item Instability of the ADC (data acquisition) or DAC (signal generator) clock;
-    \item ADC apertuire jitter adn slew-rate;
-    \item Low resolution of the ADC compared to the oscillation amplitude might produce spurous harmonics;
-    \item aliasing due to the choice of sampling frequency or decimation/interpolation wihtou proper filtering;
-\end{itemize}
-
-\subsection{Noise}
-
-Noise, signal-to-noise ratio (SNR) and averaging are foundational in any measurement or communication system. Noise denotes random, unwanted fluctuations superimposed on the desired signal—originating from physical sources (thermal, shot), instrumentation (quantization, clock jitter) or environment (EM interference). SNR quantifies their relative power, defined as SNR = Psig/Pnoise (often in dB: 10·log10 Psig/Pnoise), and dictates how reliably one can detect or process the signal. Averaging is the primary tool for improving SNR: by repeating the same measurement or subdividing a long record into M independent segments, uncorrelated noise averages toward zero while the coherent signal adds constructively. The net SNR gain scales as $\sqrt{M}$ (a 3 dB increase per doubling of M). In the time domain this is ensemble or block averaging; in the frequency domain it appears as spectral averaging or Welch’s method, where overlapping, windowed segments are FFT’d and their periodograms averaged. Care must be taken to ensure segment independence (avoid drift or decorrelation) and choose appropriate windowing and overlap to balance variance reduction, resolution and computational cost. 
-Noise is considered an inchoherent source, that is, each noise sample has random pahse an damplitude that i uncorrelated from one time frame to the next (random). Any other physical effect (ex. electrochemical noise) and response to any perturbation is considered a coherent signal.
-The avaraging can be alternativly obtained increasing the acquisition time of the periodic signal or the length of the window. In fact narrowing the spectral bin's bandwidth reduces linearly the noise power in it (i.e. doubling the signal length, $\Delta f$ halves and so the power in each bin while the coherent signal amplitude in the bin does not change.
-or simply increasing the perturbation perturbation amplitude when possible.
-
-\subsection{Wavelets method}
-
-Wavelet analysis decomposes a signal into shifted and scaled versions of a short, zero-mean “mother” wavelet, yielding a time–scale (or time–frequency) map that can capture both slow and fast features with variable resolution. Unlike the STFT’s fixed window, wavelets automatically use wide windows at low frequencies (for fine frequency resolution) and narrow windows at high frequencies (for fine time resolution), making them ideal for detecting transients, abrupt changes or multi-scale phenomena. They are widely used in vibration analysis, denoising and feature extraction where signal characteristics evolve over time. For a system driven by a strictly fixed-frequency perturbation, the benefit of wavelets is limited—standard Fourier or narrow-band filtering already isolates the tone most efficiently—though wavelets can still reveal subtle non-stationarities or harmonic distortions around that frequency.
-
-\subsection{Filters}
-A filter in signal processing is a system that selectively modifies an input signal’s amplitude and/or phase as a function of frequency.  Fundamentally, one describes a filter by its impulse response h(t) (continuous‐time) or h[n] (discrete‐time), and equivalently by its frequency response H($\omega$) or H($e^{j\omega}$), which shows how each spectral component is scaled and shifted in phase.  Filters may be analog—operating continuously on voltages or currents—or digital—processing sampled data—and they can be linear (obeying superposition) or nonlinear (introducing harmonics).  Additional key properties include time-invariance, where the filter’s behavior does not change over time, and causality, which requires outputs to depend only on present and past inputs.  By their effect on frequency content, filters are classified as low-pass (passing frequencies below a cutoff fc), high-pass (passing frequencies above fc), band-pass (passing a band between two cutoffs), or band-stop/notch (rejecting a specific band).  In the analog domain, common design prototypes are Butterworth filters (maximally flat passband), Chebyshev filters (steep transition at the cost of ripple), and elliptic filters (sharpest transition for given ripple).  In digital implementations, infinite impulse response (IIR) filters use feedback to achieve steep responses with few coefficients, while finite impulse response (FIR) filters use only feedforward terms and can be designed for exactly linear phase—ensuring constant group delay, which is the derivative of the phase response with respect to frequency and measures how different spectral components are time-aligned.  Performance metrics include passband ripple (amplitude variation within the passband), stopband attenuation (suppression of unwanted bands), transition bandwidth (width of the roll-off region), group delay variation, and computational complexity (operations per sample).  Filters are indispensable for noise reduction, anti-aliasing before sampling, channel equalization and signal extraction, enabling precise control over signal fidelity, latency and resource utilization.
-
-\subsection{Removal of trends}
-Baseline or trend removal, often called detrending, is the process of eliminating slow-varying offsets or drifts from a signal so that its remaining fluctuations can be treated as (approximately) zero-mean and stationary.  Undesired trends can arise from sensor drift, temperature changes, power‐supply fluctuations or low‐frequency interference, and if left uncorrected they bias spectral estimates (manifesting as excessive low-frequency power or leakage) and corrupt time-domain analyses.  Common detrending techniques include subtracting the signal’s long‐term mean or a low‐order polynomial fit, applying a high‐pass filter with a cutoff below the band of interest (using a linear-phase FIR to avoid phase distortion), or employing moving-average/median filters to track and remove slow baseline wander.  More advanced methods—such as empirical mode decomposition (EMD) or wavelet-based multiscale filtering—can adaptively separate baseline components from overlapping signal features.  In all cases, one must choose parameters (filter cutoff, polynomial order, window length) so that genuine signal dynamics are preserved while the unwanted trend is effectively suppressed.
-
-In the analysis of signals trough Fourier Analysis, the removal of trends mitigate an effect called Gibbs phenomenon that is the presence of an infinite series of harmonics produce by sharp transition in the signals caused by its dynamic (drift) as well as experimental, coming from the digitization process (an artifact known as ringing).
-
-\subsection{Signal synthesis}
-
-To perform certain experiments, a scientist might be interested to perturb the system with non-constant signals like pulses, ramps, sinuses or arbitrary shapes. This requires to design a signal from mathematical functions and usually require a computer to define it. The desired waveform is generated from the instrumentation using an electronic component capable of transforming a user-defined digital waveform to a continuous analog signal. The process is called digital to analog conversion and the electronic component capable of it the digital to analog converter or simply DAC. There are several methods of implementing a digital to analog converter on hardware with different complexity and properties, the most simple is the direct digital synthesis method.
-
-\subsubsection{Direct Digital Synthesis}
-
-This methods relays on the 'look-up table' method in which the desired waveform is stored as table of pairs value-time and at constant time interval the value is read from the table and converted to analog value.
-
-\subsection{Further resources}
-
-The raccomended resource for learning about signal processing is the book "understanding figital signal processing" by R.G. Lyon and the series of pubblication from D.A. Lyon "The Discrete Fourier Trasnform".

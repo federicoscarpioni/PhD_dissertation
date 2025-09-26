@@ -1,21 +1,18 @@
-[1] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'main.blg'
-[192] biber-MSWIN64:340> INFO - === 
-[236] Biber.pm:419> INFO - Reading 'main.bcf'
-[356] Biber.pm:979> INFO - Found 53 citekeys in bib section 0
-[372] Biber.pm:4419> INFO - Processing section 0
-[389] Biber.pm:4610> INFO - Looking for bibtex file 'Literature overview.bib' for section 0
-[471] bibtex.pm:1713> INFO - LaTeX decoding ...
-[976] bibtex.pm:1519> INFO - Found BibTeX data source 'Literature overview.bib'
-[1379] Biber.pm:4610> INFO - Looking for bibtex file 'other-papers.bib' for section 0
-[1453] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1464] bibtex.pm:1519> INFO - Found BibTeX data source 'other-papers.bib'
-[1550] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1551] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1551] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[1551] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1585] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[1640] bbl.pm:763> INFO - Output to main.bbl
-[1640] Biber.pm:131> WARN - I didn't find a database entry for 'creasonFourierTransformFaradaic1972a' (section 0)
-[1641] Biber.pm:131> WARN - I didn't find a database entry for 'creasonFourierTransformFaradaic1973' (section 0)
-[1641] Biber.pm:133> INFO - WARNINGS: 2
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'main.blg'
+[166] biber-MSWIN64:340> INFO - === 
+[209] Biber.pm:419> INFO - Reading 'main.bcf'
+[333] Biber.pm:979> INFO - Found 67 citekeys in bib section 0
+[349] Biber.pm:4419> INFO - Processing section 0
+[363] Biber.pm:4610> INFO - Looking for bibtex file 'Literature overview.bib' for section 0
+[438] bibtex.pm:1713> INFO - LaTeX decoding ...
+[959] bibtex.pm:1519> INFO - Found BibTeX data source 'Literature overview.bib'
+[1401] Biber.pm:4610> INFO - Looking for bibtex file 'other-papers.bib' for section 0
+[1508] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1529] bibtex.pm:1519> INFO - Found BibTeX data source 'other-papers.bib'
+[1641] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1641] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1641] Biber.pm:4239> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[1641] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1710] bbl.pm:660> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[1783] bbl.pm:763> INFO - Output to main.bbl

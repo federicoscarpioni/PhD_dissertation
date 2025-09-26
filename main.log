@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.5)  25 SEP 2025 18:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.5)  26 SEP 2025 14:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,22 +1019,7 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (main.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                creasonFourierTransformFaradaic1972a
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                creasonFourierTransformFaradaic1973
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (main.bbl)
 Package biblatex Info: Reference section=0 on input line 5.
 Package biblatex Info: Reference segment=0 on input line 5.
 
@@ -1185,57 +1170,57 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 
 
 ] [2] [3]
-Overfull \hbox (1.29202pt too wide) detected at line 141
+Overfull \hbox (1.29202pt too wide) detected at line 146
  []\T1/XCharter-TLF/m/n/10.95 103
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 142
- []\T1/XCharter-TLF/m/n/10.95 103
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 143
- []\T1/XCharter-TLF/m/n/10.95 104
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 144
- []\T1/XCharter-TLF/m/n/10.95 104
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 145
- []\T1/XCharter-TLF/m/n/10.95 106
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 147
- []\T1/XCharter-TLF/m/n/10.95 107
+ []\T1/XCharter-TLF/m/n/10.95 103
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 148
- []\T1/XCharter-TLF/m/n/10.95 108
+ []\T1/XCharter-TLF/m/n/10.95 104
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 149
- []\T1/XCharter-TLF/m/n/10.95 108
+ []\T1/XCharter-TLF/m/n/10.95 104
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 150
- []\T1/XCharter-TLF/m/n/10.95 108
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 151
- []\T1/XCharter-TLF/m/n/10.95 109
+ []\T1/XCharter-TLF/m/n/10.95 106
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 152
+ []\T1/XCharter-TLF/m/n/10.95 107
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 153
+ []\T1/XCharter-TLF/m/n/10.95 108
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 154
+ []\T1/XCharter-TLF/m/n/10.95 108
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 155
+ []\T1/XCharter-TLF/m/n/10.95 108
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 156
+ []\T1/XCharter-TLF/m/n/10.95 109
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 157
  []\T1/XCharter-TLF/m/n/10.95 109
  []
 
@@ -1257,7 +1242,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 \part
+l.21 \part
           {Theoretical framework} [1
 
 
@@ -1268,15 +1253,15 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.20 \part
+l.21 \part
           {Theoretical framework} [2
 
 
 ]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 20.
+(Font)              scaled to size 20.74pt on input line 21.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 20.
+(Font)              scaled to size 20.74pt on input line 21.
  [3] [4] (chapters/2_electrochemsitry.tex
 Chapter 2.
 \openout4 = `main.mtc'.
@@ -1496,7 +1481,7 @@ Overfull \hbox (11.52692pt too wide) in paragraph at lines 325--334
 [41]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 348.
- [42]) (chapters/5_dynamic_impedance.tex [43] [44]
+ [42] [43]) (chapters/5_dynamic_impedance.tex [44]
 Chapter 5.
 \openout4 = `main.mtc'.
 
@@ -1513,19 +1498,6 @@ i-tions. Dur-ing the 1970s
 
 ]
 
-LaTeX Warning: Citation 'creasonFourierTransformFaradaic1972a' on page 46 undef
-ined on input line 15.
-
-
-LaTeX Warning: Citation 'creasonFourierTransformFaradaic1973' on page 46 undefi
-ned on input line 15.
-
-
-Overfull \hbox (164.18184pt too wide) in paragraph at lines 15--16
-\T1/XCharter-TLF/m/n/10.95 tance in fast re-ac-tions [[]][[]]
- []
-
-
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.42168pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.42168pt}.
@@ -1539,17 +1511,9 @@ ys-tem to mod-ern hardare
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6047) has occurred while \output is active []
 
  [47]
-
-LaTeX Warning: Reference `arutunowElectricalMechanicalCharacterization2015' on 
-page 48 undefined on input line 42.
-
-
-LaTeX Warning: Reference `zielinskiApplicationMultisineNanoscale2015' on page 4
-8 undefined on input line 42.
-
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
@@ -1557,10 +1521,18 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[48]) [49] [50
+[48] [49])
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+
+[50] [51
 
 
-] [51] [52] (chapters/6_acquisition.tex
+] [52] (chapters/6_acquisition.tex
 Chapter 6.
 \openout4 = `main.mtc'.
 
@@ -1671,7 +1643,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-<figures/harmonics_supporting.png, id=1167, 722.7pt x 433.62pt>
+<figures/harmonics_supporting.png, id=1229, 722.7pt x 433.62pt>
 File: figures/harmonics_supporting.png Graphic file (type png)
 <use figures/harmonics_supporting.png>
 Package pdftex.def Info: figures/harmonics_supporting.png  used on input line 9
@@ -1701,12 +1673,12 @@ Overfull \hbox (5.56168pt too wide) in paragraph at lines 128--130
  []
 
 [63]
-<figures/truform_white.jpg, id=1184, 119.12637pt x 119.12637pt>
+<figures/truform_white.jpg, id=1246, 119.12637pt x 119.12637pt>
 File: figures/truform_white.jpg Graphic file (type jpg)
 <use figures/truform_white.jpg>
 Package pdftex.def Info: figures/truform_white.jpg  used on input line 142.
 (pdftex.def)             Requested size: 135.15015pt x 135.1511pt.
-<figures/truform_black.png, id=1185, 602.25pt x 602.25pt>
+<figures/truform_black.png, id=1247, 602.25pt x 602.25pt>
 File: figures/truform_black.png Graphic file (type png)
 <use figures/truform_black.png>
 Package pdftex.def Info: figures/truform_black.png  used on input line 142.
@@ -1858,13 +1830,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
 [78]
-<figures/application4/image1.png, id=1259, 429.7656pt x 329.5512pt>
+<figures/application4/image1.png, id=1321, 429.7656pt x 329.5512pt>
 File: figures/application4/image1.png Graphic file (type png)
 <use figures/application4/image1.png>
 Package pdftex.def Info: figures/application4/image1.png  used on input line 89
 .
 (pdftex.def)             Requested size: 284.52866pt x 218.18832pt.
-<figures/application4/image2.png, id=1260, 422.0568pt x 335.8146pt>
+<figures/application4/image2.png, id=1322, 422.0568pt x 335.8146pt>
 File: figures/application4/image2.png Graphic file (type png)
 <use figures/application4/image2.png>
 Package pdftex.def Info: figures/application4/image2.png  used on input line 98
@@ -1882,13 +1854,13 @@ s. In this case the lim-its where
  []
 
 [79 <./figures/application4/image1.png>]
-<figures/application4/image3.png, id=1268, 422.0568pt x 316.5426pt>
+<figures/application4/image3.png, id=1330, 422.0568pt x 316.5426pt>
 File: figures/application4/image3.png Graphic file (type png)
 <use figures/application4/image3.png>
 Package pdftex.def Info: figures/application4/image3.png  used on input line 11
 7.
 (pdftex.def)             Requested size: 284.52866pt x 213.40587pt.
-<figures/application4/image4.PNG, id=1269, 543.53062pt x 371.88937pt>
+<figures/application4/image4.PNG, id=1331, 543.53062pt x 371.88937pt>
 File: figures/application4/image4.PNG Graphic file (type png)
 <use figures/application4/image4.PNG>
 Package pdftex.def Info: figures/application4/image4.PNG  used on input line 12
@@ -1904,13 +1876,13 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 [80 <./figures/application4/image2.png>] [81 <./figures/application4/image3.png
 > <./figures/application4/image4.PNG>]
-<figures/application4/image5.PNG, id=1284, 545.03625pt x 356.0803pt>
+<figures/application4/image5.PNG, id=1346, 545.03625pt x 356.0803pt>
 File: figures/application4/image5.PNG Graphic file (type png)
 <use figures/application4/image5.PNG>
 Package pdftex.def Info: figures/application4/image5.PNG  used on input line 13
 3.
 (pdftex.def)             Requested size: 355.65947pt x 232.35683pt.
-<figures/application4/image6.PNG, id=1285, 541.27219pt x 334.24875pt>
+<figures/application4/image6.PNG, id=1347, 541.27219pt x 334.24875pt>
 File: figures/application4/image6.PNG Graphic file (type png)
 <use figures/application4/image6.PNG>
 Package pdftex.def Info: figures/application4/image6.PNG  used on input line 14
@@ -1978,7 +1950,7 @@ Overfull \hbox (8.75299pt too wide) in paragraph at lines 158--161
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figures/application4/image7.png, id=1299, 930.3558pt x 260.6538pt>
+<figures/application4/image7.png, id=1361, 930.3558pt x 260.6538pt>
 File: figures/application4/image7.png Graphic file (type png)
 <use figures/application4/image7.png>
 Package pdftex.def Info: figures/application4/image7.png  used on input line 16
@@ -2019,7 +1991,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figures/application4/image8.png, id=1300, 455.301pt x 271.7352pt>
+<figures/application4/image8.png, id=1362, 455.301pt x 271.7352pt>
 File: figures/application4/image8.png Graphic file (type png)
 <use figures/application4/image8.png>
 Package pdftex.def Info: figures/application4/image8.png  used on input line 17
@@ -2028,7 +2000,7 @@ Package pdftex.def Info: figures/application4/image8.png  used on input line 17
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application4/image9.png, id=1301, 277.035pt x 160.4394pt>
+<figures/application4/image9.png, id=1363, 277.035pt x 160.4394pt>
 File: figures/application4/image9.png Graphic file (type png)
 <use figures/application4/image9.png>
 Package pdftex.def Info: figures/application4/image9.png  used on input line 18
@@ -2049,7 +2021,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
 [84]
-<figures/application4/image10.png, id=1306, 886.512pt x 338.7054pt>
+<figures/application4/image10.png, id=1368, 886.512pt x 338.7054pt>
 File: figures/application4/image10.png Graphic file (type png)
 <use figures/application4/image10.png>
 Package pdftex.def Info: figures/application4/image10.png  used on input line 1
@@ -2084,7 +2056,7 @@ Chapter 9.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 201.
 
-<figures/application5/image1.png, id=1324, 455.301pt x 230.7822pt>
+<figures/application5/image1.png, id=1386, 455.301pt x 230.7822pt>
 File: figures/application5/image1.png Graphic file (type png)
 <use figures/application5/image1.png>
 Package pdftex.def Info: figures/application5/image1.png  used on input line 20
@@ -2094,13 +2066,13 @@ Package pdftex.def Info: figures/application5/image1.png  used on input line 20
 
 
 ]
-<figures/application5/image2.png, id=1329, 455.301pt x 218.7372pt>
+<figures/application5/image2.png, id=1391, 455.301pt x 218.7372pt>
 File: figures/application5/image2.png Graphic file (type png)
 <use figures/application5/image2.png>
 Package pdftex.def Info: figures/application5/image2.png  used on input line 21
 3.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application5/image3.png, id=1330, 455.301pt x 218.7372pt>
+<figures/application5/image3.png, id=1392, 455.301pt x 218.7372pt>
 File: figures/application5/image3.png Graphic file (type png)
 <use figures/application5/image3.png>
 Package pdftex.def Info: figures/application5/image3.png  used on input line 21
@@ -2110,7 +2082,7 @@ Package pdftex.def Info: figures/application5/image3.png  used on input line 21
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image4.png, id=1331, 455.301pt x 232.2276pt>
+<figures/application5/image4.png, id=1393, 455.301pt x 232.2276pt>
 File: figures/application5/image4.png Graphic file (type png)
 <use figures/application5/image4.png>
 Package pdftex.def Info: figures/application5/image4.png  used on input line 22
@@ -2119,7 +2091,7 @@ Package pdftex.def Info: figures/application5/image4.png  used on input line 22
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image5.png, id=1332, 455.301pt x 232.2276pt>
+<figures/application5/image5.png, id=1394, 455.301pt x 232.2276pt>
 File: figures/application5/image5.png Graphic file (type png)
 <use figures/application5/image5.png>
 Package pdftex.def Info: figures/application5/image5.png  used on input line 22
@@ -2128,7 +2100,7 @@ Package pdftex.def Info: figures/application5/image5.png  used on input line 22
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image6.png, id=1333, 455.301pt x 232.2276pt>
+<figures/application5/image6.png, id=1395, 455.301pt x 232.2276pt>
 File: figures/application5/image6.png Graphic file (type png)
 <use figures/application5/image6.png>
 Package pdftex.def Info: figures/application5/image6.png  used on input line 23
@@ -2137,13 +2109,13 @@ Package pdftex.def Info: figures/application5/image6.png  used on input line 23
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image7.png, id=1334, 436.5108pt x 319.9152pt>
+<figures/application5/image7.png, id=1396, 436.5108pt x 319.9152pt>
 File: figures/application5/image7.png Graphic file (type png)
 <use figures/application5/image7.png>
 Package pdftex.def Info: figures/application5/image7.png  used on input line 23
 7.
 (pdftex.def)             Requested size: 142.26378pt x 104.26408pt.
-<figures/application5/image8.png, id=1335, 442.7742pt x 326.6604pt>
+<figures/application5/image8.png, id=1397, 442.7742pt x 326.6604pt>
 File: figures/application5/image8.png Graphic file (type png)
 <use figures/application5/image8.png>
 Package pdftex.def Info: figures/application5/image8.png  used on input line 23
@@ -2152,7 +2124,7 @@ Package pdftex.def Info: figures/application5/image8.png  used on input line 23
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image9.png, id=1336, 437.9562pt x 326.1786pt>
+<figures/application5/image9.png, id=1398, 437.9562pt x 326.1786pt>
 File: figures/application5/image9.png Graphic file (type png)
 <use figures/application5/image9.png>
 Package pdftex.def Info: figures/application5/image9.png  used on input line 24
@@ -2177,7 +2149,7 @@ om the time-varying impedance
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 7.
 
-<figures/application3/image1.png, id=1366, 299.1175pt x 161.60374pt>
+<figures/application3/image1.png, id=1428, 299.1175pt x 161.60374pt>
 File: figures/application3/image1.png Graphic file (type png)
 <use figures/application3/image1.png>
 Package pdftex.def Info: figures/application3/image1.png  used on input line 12
@@ -2193,19 +2165,19 @@ of pre-ce-ramic poly-mers which
 
 
  <./figures/application3/image1.png (PNG copy)>]
-<figures/application3/image2.png, id=1372, 381.425pt x 313.17pt>
+<figures/application3/image2.png, id=1434, 381.425pt x 313.17pt>
 File: figures/application3/image2.png Graphic file (type png)
 <use figures/application3/image2.png>
 Package pdftex.def Info: figures/application3/image2.png  used on input line 18
 .
 (pdftex.def)             Requested size: 142.26378pt x 116.8029pt.
-<figures/application3/image3.png, id=1373, 903.375pt x 821.0675pt>
+<figures/application3/image3.png, id=1435, 903.375pt x 821.0675pt>
 File: figures/application3/image3.png Graphic file (type png)
 <use figures/application3/image3.png>
 Package pdftex.def Info: figures/application3/image3.png  used on input line 22
 .
 (pdftex.def)             Requested size: 355.65947pt x 323.25946pt.
-<figures/application3/image4.png, id=1374, 2005.4925pt x 876.27374pt>
+<figures/application3/image4.png, id=1436, 2005.4925pt x 876.27374pt>
 File: figures/application3/image4.png Graphic file (type png)
 <use figures/application3/image4.png>
 Package pdftex.def Info: figures/application3/image4.png  used on input line 26
@@ -2226,19 +2198,19 @@ Overfull \hbox (3.10031pt too wide) in paragraph at lines 39--40
 ce elec-trode was a choice
  []
 
-<figures/application3/image5.1.jpg, id=1385, 237.88875pt x 604.2575pt>
+<figures/application3/image5.1.jpg, id=1447, 237.88875pt x 604.2575pt>
 File: figures/application3/image5.1.jpg Graphic file (type jpg)
 <use figures/application3/image5.1.jpg>
 Package pdftex.def Info: figures/application3/image5.1.jpg  used on input line 
 68.
 (pdftex.def)             Requested size: 59.75095pt x 151.76474pt.
-<figures/application3/image5.2.jpg, id=1386, 439.6425pt x 940.51375pt>
+<figures/application3/image5.2.jpg, id=1448, 439.6425pt x 940.51375pt>
 File: figures/application3/image5.2.jpg Graphic file (type jpg)
 <use figures/application3/image5.2.jpg>
 Package pdftex.def Info: figures/application3/image5.2.jpg  used on input line 
 69.
 (pdftex.def)             Requested size: 71.13188pt x 152.16435pt.
-<figures/application3/image5.3.jpg, id=1387, 963.6pt x 1284.8pt>
+<figures/application3/image5.3.jpg, id=1449, 963.6pt x 1284.8pt>
 File: figures/application3/image5.3.jpg Graphic file (type jpg)
 <use figures/application3/image5.3.jpg>
 Package pdftex.def Info: figures/application3/image5.3.jpg  used on input line 
@@ -2252,7 +2224,7 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
 [94]
-<figures/application3/image6.png, id=1393, 455.301pt x 218.7372pt>
+<figures/application3/image6.png, id=1455, 455.301pt x 218.7372pt>
 File: figures/application3/image6.png Graphic file (type png)
 <use figures/application3/image6.png>
 Package pdftex.def Info: figures/application3/image6.png  used on input line 85
@@ -2262,7 +2234,7 @@ Package pdftex.def Info: figures/application3/image6.png  used on input line 85
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image7.png, id=1394, 455.301pt x 218.7372pt>
+<figures/application3/image7.png, id=1456, 455.301pt x 218.7372pt>
 File: figures/application3/image7.png Graphic file (type png)
 <use figures/application3/image7.png>
 Package pdftex.def Info: figures/application3/image7.png  used on input line 92
@@ -2271,7 +2243,7 @@ Package pdftex.def Info: figures/application3/image7.png  used on input line 92
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image8.png, id=1395, 455.301pt x 218.7372pt>
+<figures/application3/image8.png, id=1457, 455.301pt x 218.7372pt>
 File: figures/application3/image8.png Graphic file (type png)
 <use figures/application3/image8.png>
 Package pdftex.def Info: figures/application3/image8.png  used on input line 99
@@ -2288,7 +2260,7 @@ Package pdftex.def Info: figures/application3/image8.png  used on input line 10
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image9.png, id=1396, 455.301pt x 218.7372pt>
+<figures/application3/image9.png, id=1458, 455.301pt x 218.7372pt>
 File: figures/application3/image9.png Graphic file (type png)
 <use figures/application3/image9.png>
 Package pdftex.def Info: figures/application3/image9.png  used on input line 11
@@ -2297,7 +2269,7 @@ Package pdftex.def Info: figures/application3/image9.png  used on input line 11
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image10.png, id=1397, 455.301pt x 218.7372pt>
+<figures/application3/image10.png, id=1459, 455.301pt x 218.7372pt>
 File: figures/application3/image10.png Graphic file (type png)
 <use figures/application3/image10.png>
 Package pdftex.def Info: figures/application3/image10.png  used on input line 1
@@ -2306,7 +2278,7 @@ Package pdftex.def Info: figures/application3/image10.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image11.png, id=1398, 455.301pt x 204.765pt>
+<figures/application3/image11.png, id=1460, 455.301pt x 204.765pt>
 File: figures/application3/image11.png Graphic file (type png)
 <use figures/application3/image11.png>
 Package pdftex.def Info: figures/application3/image11.png  used on input line 1
@@ -2315,7 +2287,7 @@ Package pdftex.def Info: figures/application3/image11.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image12.png, id=1399, 455.301pt x 202.8378pt>
+<figures/application3/image12.png, id=1461, 455.301pt x 202.8378pt>
 File: figures/application3/image12.png Graphic file (type png)
 <use figures/application3/image12.png>
 Package pdftex.def Info: figures/application3/image12.png  used on input line 1
@@ -2324,7 +2296,7 @@ Package pdftex.def Info: figures/application3/image12.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image13.png, id=1400, 455.301pt x 218.7372pt>
+<figures/application3/image13.png, id=1462, 455.301pt x 218.7372pt>
 File: figures/application3/image13.png Graphic file (type png)
 <use figures/application3/image13.png>
 Package pdftex.def Info: figures/application3/image13.png  used on input line 1
@@ -2333,7 +2305,7 @@ Package pdftex.def Info: figures/application3/image13.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image14.png, id=1401, 455.301pt x 219.219pt>
+<figures/application3/image14.png, id=1463, 455.301pt x 219.219pt>
 File: figures/application3/image14.png Graphic file (type png)
 <use figures/application3/image14.png>
 Package pdftex.def Info: figures/application3/image14.png  used on input line 1
@@ -2342,7 +2314,7 @@ Package pdftex.def Info: figures/application3/image14.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image15.png, id=1402, 455.301pt x 218.7372pt>
+<figures/application3/image15.png, id=1464, 455.301pt x 218.7372pt>
 File: figures/application3/image15.png Graphic file (type png)
 <use figures/application3/image15.png>
 Package pdftex.def Info: figures/application3/image15.png  used on input line 1
@@ -2356,7 +2328,7 @@ Underfull \vbox (badness 6641) has occurred while \output is active []
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image16.png, id=1408, 455.301pt x 218.7372pt>
+<figures/application3/image16.png, id=1470, 455.301pt x 218.7372pt>
 File: figures/application3/image16.png Graphic file (type png)
 <use figures/application3/image16.png>
 Package pdftex.def Info: figures/application3/image16.png  used on input line 1
@@ -2365,7 +2337,7 @@ Package pdftex.def Info: figures/application3/image16.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image17.png, id=1409, 455.301pt x 218.7372pt>
+<figures/application3/image17.png, id=1471, 455.301pt x 218.7372pt>
 File: figures/application3/image17.png Graphic file (type png)
 <use figures/application3/image17.png>
 Package pdftex.def Info: figures/application3/image17.png  used on input line 1
@@ -2374,7 +2346,7 @@ Package pdftex.def Info: figures/application3/image17.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image18.png, id=1410, 455.301pt x 218.7372pt>
+<figures/application3/image18.png, id=1472, 455.301pt x 218.7372pt>
 File: figures/application3/image18.png Graphic file (type png)
 <use figures/application3/image18.png>
 Package pdftex.def Info: figures/application3/image18.png  used on input line 1
@@ -2383,7 +2355,7 @@ Package pdftex.def Info: figures/application3/image18.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image19.png, id=1411, 455.301pt x 218.7372pt>
+<figures/application3/image19.png, id=1473, 455.301pt x 218.7372pt>
 File: figures/application3/image19.png Graphic file (type png)
 <use figures/application3/image19.png>
 Package pdftex.def Info: figures/application3/image19.png  used on input line 1
@@ -2392,7 +2364,7 @@ Package pdftex.def Info: figures/application3/image19.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image20.png, id=1412, 455.301pt x 218.7372pt>
+<figures/application3/image20.png, id=1474, 455.301pt x 218.7372pt>
 File: figures/application3/image20.png Graphic file (type png)
 <use figures/application3/image20.png>
 Package pdftex.def Info: figures/application3/image20.png  used on input line 1
@@ -2440,13 +2412,13 @@ Chapter 11.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 5.
 
-<figures/application2/image1.png, id=1473, 279.9258pt x 187.4202pt>
+<figures/application2/image1.png, id=1535, 279.9258pt x 187.4202pt>
 File: figures/application2/image1.png Graphic file (type png)
 <use figures/application2/image1.png>
 Package pdftex.def Info: figures/application2/image1.png  used on input line 9.
 
 (pdftex.def)             Requested size: 142.26378pt x 95.2513pt.
-<figures/application2/image2.png, id=1474, 851.18pt x 662.475pt>
+<figures/application2/image2.png, id=1536, 851.18pt x 662.475pt>
 File: figures/application2/image2.png Graphic file (type png)
 <use figures/application2/image2.png>
 Package pdftex.def Info: figures/application2/image2.png  used on input line 15
@@ -2457,7 +2429,7 @@ LaTeX Warning: Marginpar on page 103 moved.
 
 [103 <./figures/application2/image1.png> <./figures/application2/image2.png (PN
 G copy)>]
-<figures/application2/image3.png, id=1481, 993.7125pt x 648.4225pt>
+<figures/application2/image3.png, id=1543, 993.7125pt x 648.4225pt>
 File: figures/application2/image3.png Graphic file (type png)
 <use figures/application2/image3.png>
 Package pdftex.def Info: figures/application2/image3.png  used on input line 24
@@ -2479,7 +2451,7 @@ Chapter 12.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
 
-<figures/image1.png, id=1494, 827.09pt x 502.87875pt>
+<figures/image1.png, id=1556, 827.09pt x 502.87875pt>
 File: figures/image1.png Graphic file (type png)
 <use figures/image1.png>
 Package pdftex.def Info: figures/image1.png  used on input line 16.
@@ -2491,12 +2463,12 @@ Underfull \vbox (badness 3009) has occurred while \output is active []
 
 
 ]
-<figures/image2.png, id=1499, 739.76375pt x 713.66624pt>
+<figures/image2.png, id=1561, 739.76375pt x 713.66624pt>
 File: figures/image2.png Graphic file (type png)
 <use figures/image2.png>
 Package pdftex.def Info: figures/image2.png  used on input line 22.
 (pdftex.def)             Requested size: 142.26378pt x 137.24232pt.
-<figures/image3.png, id=1500, 916.42375pt x 562.1pt>
+<figures/image3.png, id=1562, 916.42375pt x 562.1pt>
 File: figures/image3.png Graphic file (type png)
 <use figures/image3.png>
 Package pdftex.def Info: figures/image3.png  used on input line 32.
@@ -2505,7 +2477,7 @@ Package pdftex.def Info: figures/image3.png  used on input line 32.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/image4.png, id=1501, 440.64626pt x 407.5225pt>
+<figures/image4.png, id=1563, 440.64626pt x 407.5225pt>
 File: figures/image4.png Graphic file (type png)
 <use figures/image4.png>
 Package pdftex.def Info: figures/image4.png  used on input line 40.
@@ -2542,59 +2514,52 @@ Chapter 13.
 
 ]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 39.
+(Font)              scaled to size 10.95pt on input line 40.
 
-Overfull \hbox (18.4555pt too wide) in paragraph at lines 40--40
+Overfull \hbox (18.4555pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 2700, 1520-6882. \T1/XCharter-TLF/m/sc/10.95 doi\T1/
 XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ac60336a008$[][]\T
 1/XCharter-TLF/m/n/10.95 . (Vis-ited on 02/03/2022). 
  []
 
 
-Overfull \hbox (3.40416pt too wide) in paragraph at lines 40--40
+Overfull \hbox (3.40416pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Fourier Trans-form Faradaic Ad-mit-tance Mea-sure-me
 nts: Real-Time De-
  []
 
 
-Overfull \hbox (5.43138pt too wide) in paragraph at lines 40--40
+Overfull \hbox (5.43138pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 con-vo-lu-tion of Het-ero-ge-neous Charge Trans-fer 
 Ki-netic Ef-fects for Ther-
  []
 
 
-Overfull \hbox (18.76459pt too wide) in paragraph at lines 40--40
+Overfull \hbox (18.76459pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 0728. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
 F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(77 ) 80290 -[]
  8$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 06/13/2025). 
  []
 
 
-Overfull \hbox (10.23242pt too wide) in paragraph at lines 40--40
+Overfull \hbox (10.23242pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Sam-pler Sys-tem: Ap-pli-ca-tion to on-Line Fast Fou
 rier Trans-form Faradaic
  []
 
 
-Overfull \hbox (12.0987pt too wide) in paragraph at lines 40--40
+Overfull \hbox (12.0987pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Ad-mit-tance Mea-sure-ments''. In: \T1/XCharter-TLF/
 m/it/10.95 An-a-lyt-i-cal Chem-istry \T1/XCharter-TLF/m/n/10.95 49.12 (Oct. 197
 7),
  []
 
 
-Overfull \hbox (27.61673pt too wide) in paragraph at lines 40--40
+Overfull \hbox (27.61673pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 pp. 1797^^U1805. \T1/XCharter-TLF/m/sc/10.95 issn\T1
 /XCharter-TLF/m/n/10.95 : 0003-2700, 1520-6882. \T1/XCharter-TLF/m/sc/10.95 doi
 \T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ac50020a041$[]
 []\T1/XCharter-TLF/m/n/10.95 .
- []
-
-
-Overfull \hbox (6.59177pt too wide) in paragraph at lines 40--40
-\T1/XCharter-TLF/m/n/10.95 1983), pp. 205^^U219. \T1/XCharter-TLF/m/sc/10.95 is
-sn\T1/XCharter-TLF/m/n/10.95 : 0022-0728. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XC
-harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(83 )
  []
 
 [113
@@ -2602,103 +2567,110 @@ harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(83 )
 
 {C:/Users/fscarp/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_yelf2i.enc
 }]
-Overfull \hbox (143.98906pt too wide) in paragraph at lines 40--40
+Overfull \hbox (6.59177pt too wide) in paragraph at lines 41--41
+\T1/XCharter-TLF/m/n/10.95 1983), pp. 205^^U219. \T1/XCharter-TLF/m/sc/10.95 is
+sn\T1/XCharter-TLF/m/n/10.95 : 0022-0728. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XC
+harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(83 )
+ []
+
+
+Overfull \hbox (143.98906pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Iso-mer-iza-tion Mech-a-nism of the Rad-i-cal An-ion
  of (.Eta.4-Cyclooctatetraene)Cyclopentadienylcobalt
  []
 
 
-Overfull \hbox (4.7854pt too wide) in paragraph at lines 40--40
+Overfull \hbox (4.7854pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 with FFT-Faradaic Ad-mit-tance Mea-sure-ments''. In:
  \T1/XCharter-TLF/m/it/10.95 Jour-nal of the Amer-
  []
 
 
-Overfull \hbox (18.4555pt too wide) in paragraph at lines 40--40
+Overfull \hbox (18.4555pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 7863, 1520-5126. \T1/XCharter-TLF/m/sc/10.95 doi\T1/
 XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ja00345a013$[][]\T
 1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/21/2025). 
  []
 
 
-Overfull \hbox (5.34015pt too wide) in paragraph at lines 40--40
+Overfull \hbox (5.34015pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/it/10.95 nal of Elec-tro-an-a-lyt-i-cal Chem-istry and In-te
 r-fa-cial Elec-tro-chem-istry \T1/XCharter-TLF/m/n/10.95 162.1
  []
 
 
-Overfull \hbox (2.62604pt too wide) in paragraph at lines 40--40
+Overfull \hbox (2.62604pt too wide) in paragraph at lines 41--41
 []\T1/XCharter-TLF/m/n/10.95 Ari U. Ivaska and Don-ald E. Smith. ``Ap-pli-ca-ti
 on of On-Line Fast Fourier
  []
 
 
-Overfull \hbox (3.97543pt too wide) in paragraph at lines 40--40
+Overfull \hbox (3.97543pt too wide) in paragraph at lines 41--41
 []\T1/XCharter-TLF/m/n/10.95 Maria Grzeszczuk and Don-ald E. Smith. ``Elec-tron
  and Hy-dro-gen Atom
  []
 
 
-Overfull \hbox (5.34015pt too wide) in paragraph at lines 40--40
+Overfull \hbox (5.34015pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/it/10.95 nal of Elec-tro-an-a-lyt-i-cal Chem-istry and In-te
 r-fa-cial Elec-tro-chem-istry \T1/XCharter-TLF/m/n/10.95 201.2
  []
 
-
-Overfull \hbox (2.36046pt too wide) in paragraph at lines 40--40
+[114]
+Overfull \hbox (2.36046pt too wide) in paragraph at lines 41--41
 []\T1/XCharter-TLF/m/n/10.95 Tetsuya Os-aka and Kat-suhiko Naoi. ``Ap-pli-ca-ti
 on of On-line Impedance
  []
 
-[114]
-Overfull \hbox (8.94627pt too wide) in paragraph at lines 40--40
+
+Overfull \hbox (8.94627pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Doping-Undoping Pro-cess of Poly-acety-lene by Means
  of FFT Impedance
  []
 
 
-Overfull \hbox (1.15105pt too wide) in paragraph at lines 40--40
+Overfull \hbox (1.15105pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 TRANS-FORM) IMPEDANCE METHOD TO DOPING-UNDOPING PRO-
 
  []
 
 
-Overfull \hbox (6.83557pt too wide) in paragraph at lines 40--40
+Overfull \hbox (6.83557pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 main''. In: \T1/XCharter-TLF/m/it/10.95 Re-view of S
 ci-en-tific In-stru-ments \T1/XCharter-TLF/m/n/10.95 64.11 (Nov. 1993), pp. 311
 1^^U
  []
 
 
-Overfull \hbox (33.879pt too wide) in paragraph at lines 40--40
+Overfull \hbox (33.879pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 3115. \T1/XCharter-TLF/m/sc/10.95 issn\T1/XCharter-T
 LF/m/n/10.95 : 0034-6748. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TLF/m/n/1
 0.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1063 / 1 . 1144316$[][]\T1/XCharter-TLF/m/n
 /10.95 . (Vis-ited on 09/22/2025). 
  []
 
-
-Overfull \hbox (1.94006pt too wide) in paragraph at lines 40--40
+[115]
+Overfull \hbox (1.94006pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 dur-ing Ox-i-da-tion and Re-duc-tion of Con-duct-ing
  Poly-mers: Sig-nif-i-cance
  []
 
-[115]
-Overfull \hbox (8.94829pt too wide) in paragraph at lines 40--40
+
+Overfull \hbox (8.94829pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Con-duct-ing Poly-mer Layer''. In: \T1/XCharter-TLF/
 m/it/10.95 Elec-trochim-ica Acta \T1/XCharter-TLF/m/n/10.95 40.12 (Sept. 1995),
 
  []
 
 
-Overfull \hbox (15.25285pt too wide) in paragraph at lines 40--40
+Overfull \hbox (15.25285pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Mea-sure-ments''. In: \T1/XCharter-TLF/m/it/10.95 Ap
 -plied Physics Let-ters \T1/XCharter-TLF/m/n/10.95 83.11 (Sept. 2003), pp. 2178
 ^^U
  []
 
 
-Overfull \hbox (33.879pt too wide) in paragraph at lines 40--40
+Overfull \hbox (33.879pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 2180. \T1/XCharter-TLF/m/sc/10.95 issn\T1/XCharter-T
 LF/m/n/10.95 : 0003-6951. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TLF/m/n/1
 0.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1063 / 1 . 1609657$[][]\T1/XCharter-TLF/m/n
@@ -2706,26 +2678,26 @@ LF/m/n/10.95 : 0003-6951. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TLF/m/n/1
  []
 
 
-Overfull \hbox (0.9334pt too wide) in paragraph at lines 40--40
+Overfull \hbox (0.9334pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 1995), pp. 249^^U254. \T1/XCharter-TLF/m/sc/10.95 is
 sn\T1/XCharter-TLF/m/n/10.95 : 1572-6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XC
 harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / 0022 -[] 0728(94 )
  []
 
-
-Overfull \hbox (15.40688pt too wide) in paragraph at lines 40--40
+[116]
+Overfull \hbox (15.40688pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Pas-sive Layer Crack-ing by Means of Dy-namic Elec-t
 ro-chem-i-cal Impedance
  []
 
 
-Overfull \hbox (9.96051pt too wide) in paragraph at lines 40--40
+Overfull \hbox (9.96051pt too wide) in paragraph at lines 41--41
 []\T1/XCharter-TLF/m/n/10.95 K. Darow-icki and P. ‘lep-ski. ``In-stan-ta-neous 
 Elec-tro-chem-i-cal Impedance
  []
 
 
-Overfull \hbox (21.15881pt too wide) in paragraph at lines 40--40
+Overfull \hbox (21.15881pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 (Feb. 2004), pp. 763^^U772. \T1/XCharter-TLF/m/sc/10
 .95 issn\T1/XCharter-TLF/m/n/10.95 : 0013-4686. \T1/XCharter-TLF/m/sc/10.95 doi
 \T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . electacta 
@@ -2733,65 +2705,96 @@ Overfull \hbox (21.15881pt too wide) in paragraph at lines 40--40
  []
 
 
-Overfull \hbox (18.76459pt too wide) in paragraph at lines 40--40
+Overfull \hbox (18.76459pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
 F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(03 ) 00154 -[]
  2$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/22/2025). 
  []
 
-[116]
-Overfull \hbox (17.08937pt too wide) in paragraph at lines 40--40
+
+Overfull \hbox (17.08937pt too wide) in paragraph at lines 41--41
 []\T1/XCharter-TLF/m/n/10.95 K. Darow-icki, A. Zielin-ski, and P. Slep-ski. ``C
 ontinuous-Frequency Method
  []
 
 
-Overfull \hbox (12.10622pt too wide) in paragraph at lines 40--40
+Overfull \hbox (12.10622pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 2481. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
 F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . elecom . 2004 . 06 . 013$
 [][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/22/2025). 
  []
 
 
-Overfull \hbox (10.78267pt too wide) in paragraph at lines 40--40
+Overfull \hbox (10.78267pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 ro-sion by Means of Dy-namic Elec-tro-chem-i-cal Imp
 edance Spec-troscopy''.
  []
 
-
-Overfull \hbox (2.91891pt too wide) in paragraph at lines 40--40
+[117]
+Overfull \hbox (2.91891pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 (Jan. 2005), pp. 33^^U38. \T1/XCharter-TLF/m/sc/10.9
 5 issn\T1/XCharter-TLF/m/n/10.95 : 1572-6657. \T1/XCharter-TLF/m/sc/10.95 doi\T
 1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . jelechem .
  []
 
 
-Overfull \hbox (14.93279pt too wide) in paragraph at lines 40--40
+Overfull \hbox (14.93279pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 less Steel by Gal-van-o-dy-namic Impedance Spec-tros
 copy''. In: \T1/XCharter-TLF/m/it/10.95 Elec-trochim-
  []
 
 
-Overfull \hbox (2.21814pt too wide) in paragraph at lines 40--40
+Overfull \hbox (2.0008pt too wide) in paragraph at lines 41--41
+\T1/XCharter-TLF/m/n/10.95 namic Elec-tro-chem-i-cal Impedance Mon-i-tor-ing to
+ a Cat-aphoretic Coat-
+ []
+
+
+Overfull \hbox (18.34727pt too wide) in paragraph at lines 41--41
+\T1/XCharter-TLF/m/n/10.95 ing Pro-cess''. In: \T1/XCharter-TLF/m/it/10.95 Prog
+ress in Or-ganic Coat-ings \T1/XCharter-TLF/m/n/10.95 149 (Dec. 2020), p. 10590
+6.
+ []
+
+
+Overfull \hbox (3.57782pt too wide) in paragraph at lines 41--41
+\T1/XCharter-TLF/m/it/10.95 na-tional Jour-nal of Elec-tro-chem-i-cal Sci-ence 
+\T1/XCharter-TLF/m/n/10.95 12.7 (July 2017), pp. 6908^^U
+ []
+
+
+Overfull \hbox (0.8132pt too wide) in paragraph at lines 41--41
+[]\T1/XCharter-TLF/m/n/10.95 Anna Aru-tunow, Ma-teusz Tomasz To-biszewski, and 
+Kaz-imierz Darow-
+ []
+
+
+Overfull \hbox (9.06018pt too wide) in paragraph at lines 41--41
+\T1/XCharter-TLF/m/n/10.95 Impedance Mi-croscopy to Het-ero-ge-neous Al-loy Sur
+-face In-ves-ti-ga-tions''.
+ []
+
+
+Overfull \hbox (2.21814pt too wide) in paragraph at lines 41--41
 []\T1/XCharter-TLF/m/n/10.95 Joanna Wysocka et al. ``In-ves-ti-ga-tion of the E
 lec-tro-chem-i-cal Be-haviour
  []
 
 
-Overfull \hbox (23.42296pt too wide) in paragraph at lines 40--40
+Overfull \hbox (23.42296pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
 F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . jelechem . 2016 . 08 . 02
 8$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/23/2025). 
  []
 
-[117]
-Overfull \hbox (4.3518pt too wide) in paragraph at lines 40--40
+[118]
+Overfull \hbox (4.3518pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Cor-ro-sion Crack-ing Dy-nam-ics by Dy-namic Elec-tr
 o-chem-i-cal Impedance
  []
 
 
-Overfull \hbox (40.51282pt too wide) in paragraph at lines 40--40
+Overfull \hbox (40.51282pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 (Sept. 2004), pp. 255^^U260. \T1/XCharter-TLF/m/sc/1
 0.95 issn\T1/XCharter-TLF/m/n/10.95 : 1478-422X. \T1/XCharter-TLF/m/sc/10.95 do
 i\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1179 / 147842204X284
@@ -2799,30 +2802,56 @@ i\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1179 / 147842204X284
  []
 
 
-Overfull \hbox (14.96484pt too wide) in paragraph at lines 40--40
+Overfull \hbox (14.96484pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 tropoly-mer-iza-tion''. In: \T1/XCharter-TLF/m/it/10
 .95 Elec-trochim-ica Acta \T1/XCharter-TLF/m/n/10.95 49.27 (Oct. 2004), pp. 482
 9^^U
  []
 
 
-Overfull \hbox (4.87738pt too wide) in paragraph at lines 40--40
+Overfull \hbox (4.87738pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 namic Elec-tro-chem-i-cal Impedance Spec-troscopy Me
 a-sure-ments of Pas-
  []
 
 
-Overfull \hbox (5.22278pt too wide) in paragraph at lines 40--40
+Overfull \hbox (34.4736pt too wide) in paragraph at lines 41--41
+[]\T1/XCharter-TLF/m/n/10.95 Lukasz Bur-czyk and Kaz-imierz Darow-icki. ``Lo-ca
+l Elec-tro-chem-i-cal Impedance
+ []
+
+
+Overfull \hbox (4.65399pt too wide) in paragraph at lines 41--41
+\T1/XCharter-TLF/m/n/10.95 Spec-troscopy in Dy-namic Mode of Gal-vanic Cou-plin
+g''. In: \T1/XCharter-TLF/m/it/10.95 Elec-trochim-
+ []
+
+
+Overfull \hbox (7.56946pt too wide) in paragraph at lines 41--41
+[]\T1/XCharter-TLF/m/n/10.95 Artur Zielin-ski et al. ``Mul-ti-fre-quency Nanosc
+ale Impedance Mi-croscopy
+ []
+
+
+Overfull \hbox (5.22278pt too wide) in paragraph at lines 41--41
 \T1/XCharter-TLF/m/n/10.95 Dy-namic Impedance Tech-nique''. In: \T1/XCharter-TL
 F/m/it/10.95 Car-bon \T1/XCharter-TLF/m/n/10.95 96 (Jan. 2016), pp. 1093^^U
  []
 
+
+Overfull \hbox (11.66013pt too wide) in paragraph at lines 41--41
+\T1/XCharter-TLF/m/n/10.95 2822-6054. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XChart
+er-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 5281 / zenodo . 12568722$[][]\T
+1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/23/2025). 
+ []
+
+[119]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the main.maf file.
 \openout4 = `main.maf'.
 
-[118] (main.aux)
+ [120] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2835,19 +2864,22 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BC7F757328DF50E0F3A3F74A37E032B3;28222.
+(rerunfilecheck)             Checksum: 5F3948B51E71D048A135F7D15ACDE06F;28984.
+
+Package biblatex Warning: Please rerun LaTeX.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27317 strings out of 474486
- 482483 string characters out of 5753568
+ 27455 strings out of 474486
+ 488557 string characters out of 5753568
  1947542 words of memory out of 5000000
- 48793 multiletter control sequences out of 15000+600000
+ 48908 multiletter control sequences out of 15000+600000
  708909 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 81i,16n,84p,2787b,1533s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 81i,16n,84p,2787b,1535s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
 t1095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
 600\ecrm1095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
@@ -2867,9 +2899,9 @@ m/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
 :/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
 les/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (124 pages, 9401412 bytes).
+Output written on main.pdf (126 pages, 9427296 bytes).
 PDF statistics:
- 2051 PDF objects out of 2073 (max. 8388607)
- 373 named destinations out of 1000 (max. 500000)
- 1408 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2152 PDF objects out of 2487 (max. 8388607)
+ 396 named destinations out of 1000 (max. 500000)
+ 1448 words of extra memory for PDF output out of 10000 (max. 10000000)
 

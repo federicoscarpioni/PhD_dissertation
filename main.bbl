@@ -100,6 +100,50 @@
       \verb C:\Users\fscarp\Zotero\storage\6KCN2IQL\Glover and Smith - 1973 - Alternating current polarography in the harmonic multiplex mode. Use of digital signal conditioning.pdf
       \endverb
     \endentry
+    \entry{creasonFourierTransformFaradaic1972}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a306eded7bfef598daa0b16e70da648e}{%
+           family={Creason},
+           familyi={C\bibinitperiod},
+           given={Sam\bibnamedelima C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=b91b7811622654504067a48d869efe53}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{fullhash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{bibnamehash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{authorbibnamehash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{authornamehash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{authorfullhash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-0728}
+      \field{journaltitle}{Journal of Electroanalytical Chemistry and Interfacial Electrochemistry}
+      \field{month}{11}
+      \field{number}{1}
+      \field{title}{Fourier Transform Faradaic Admittance Measurements {{II}}. {{Ultra-rapid}}, High Precision Acquisition of the Frequency Response Profile}
+      \field{urlday}{13}
+      \field{urlmonth}{6}
+      \field{urlyear}{2025}
+      \field{volume}{40}
+      \field{year}{1972}
+      \field{urldateera}{ce}
+      \field{pages}{A1\bibrangedash A5}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1016/S0022-0728(72)80146-3
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\I8E2AJWZ\\Creason and Smith - 1972 - Fourier transform faradaic admittance measurements.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\NU5HLZW8\\S0022072872801463.html
+      \endverb
+    \endentry
     \entry{creasonFourierTransformFaradaic1973a}{article}{}
       \name{author}{2}{}{%
         {{hash=a306eded7bfef598daa0b16e70da648e}{%
@@ -119,8 +163,9 @@
       \strng{authorbibnamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authornamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authorfullhash}{d655727c3a513bcae70fa1bdc1a9476b}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0003-2700, 1520-6882}
@@ -168,8 +213,8 @@
       \strng{authorbibnamehash}{255b2788f887156f4b68f10df63badcc}
       \strng{authornamehash}{255b2788f887156f4b68f10df63badcc}
       \strng{authorfullhash}{255b2788f887156f4b68f10df63badcc}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{0003-2700, 1520-6882}
@@ -218,8 +263,8 @@
       \strng{authorbibnamehash}{8103cb6e71f07e40c7a3850ea5c46e9a}
       \strng{authornamehash}{8103cb6e71f07e40c7a3850ea5c46e9a}
       \strng{authorfullhash}{8103cb6e71f07e40c7a3850ea5c46e9a}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A measurement approach is described and data are presented which demonstrate the ability to effect a.c. cyclic voltammetric measurements with the on-line digital FFT approach to faradaic admittance data acquisition. The equipment utilized enables complete faradaic admittance spectra to be obtained at an effective spectrum acquisition rate of 10 s-1, so that the d.c. potential range encompassed by a typical cyclic wave can be encompassed with adequate resolution in the Edc dimension in {$\geq$}6 s, approximately. The instrument features dynamic, computerized measurement and compensation of the non-faradaic ohmic resistance and double-layer capacitance contributions to the acquired total cell admittance. Measurements with quasi-reversible systems yield the expected faradaic admittance and phase angle responses over a quite generous bandwidth. Applications to mercury and platinum electrodes are illustrated.}
@@ -280,8 +325,8 @@
       \strng{authorbibnamehash}{da0149b744f17d42422ca774f4b88cef}
       \strng{authornamehash}{da0149b744f17d42422ca774f4b88cef}
       \strng{authorfullhash}{31c3cf83afd09b9f75f8f0e71834e4f5}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{issn}{0003-2700, 1520-6882}
@@ -325,8 +370,8 @@
       \strng{authorbibnamehash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \strng{authornamehash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \strng{authorfullhash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{shorttitle}
       \field{abstract}{AC polarographic data are presented in which the applied dc potential scan utilizes a pulse program of the normal pulse polarographic type. AC data were obtained using the FFT faradaic admittance measurement protocol. These data indicated that the FFT-FAM procedure is applicable when the relatively short, large-amplitude pulses characterizing the normal pulse polarographic waveform are invoked as the de scan. The results also support conjecture regarding appropriate theoretical rate laws for such measurements.}
@@ -821,8 +866,8 @@
       \strng{authornamehash}{070d0e0ca11370a3ca303a759255aa69}
       \strng{authorfullhash}{070d0e0ca11370a3ca303a759255aa69}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The degradation and rejuvenation of the oxygen evolution reaction (OER) on nickel electrodes in 1 mole dm-3 KOH solution were studied by electrochemical techniques, especially by an impedence method using the first Fourier transform (FFT) which is able to measure the frequency-dispersion for the time-dependence of the reaction because of its short measuring time. The impedance behaviour for the OER was well explained by equivalent circuits for the low and the high overpotential regions, respectively. OER rejuvenation by anodization at 0.6 V was pursued by the capacitance component of the equivalent circuit for the high overpotential region. This rejuvenation by anodization was assumed to produce a transformation of oxide layers corresponding to the capacitance component and also grow poorly conductive oxide films.}
@@ -1259,8 +1304,8 @@
       \strng{authornamehash}{0ba8a588c58b9174b5eda9dc783d21b5}
       \strng{authorfullhash}{0ba8a588c58b9174b5eda9dc783d21b5}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A new technique is described for electrochemical impedance spectroscopic (EIS) investigations in the plane of a polymer layer coating an electrode without crossing the interface polymer-electrolyte. For this purpose a twin-working electrode configuration was constructed, that consists of two practically identical electrodes with a gap of a few micrometers width between them. This gap was bridged by a polymer layer of polybithiophene. Its behaviour was studied during electrochemical deposition on the twin electrode and during transition from insulating to conducting state upon oxidation. It is shown that for lower frequencies the impedance spectra obtained depend predominantly on the polymer conductivity and are not determined by the macroscopic external polymer/electrolyte interface. Contributions of capacitive ac currents that cross microscopic internal polymer-electrolyte interfaces in the deep pores of the polymer become considerable only in the higher frequency range.}
@@ -1534,6 +1579,248 @@
       \endverb
       \keyw{Chemical Kinetics,Diffusion,Electrochemistry,Impedance Spectroscopy,Spectroelectrochemistry}
     \endentry
+    \entry{waltersWeakAdsorptionAnions2001a}{article}{}
+      \name{author}{6}{}{%
+        {{hash=180f366a147a584474980b634f418952}{%
+           family={Walters},
+           familyi={W\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=2c7069a6eff16ba4f3d40ec6416e12b0}{%
+           family={Garland},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3d8ca44924e3947cdd9ba8452c560648}{%
+           family={Pettit},
+           familyi={P\bibinitperiod},
+           given={C.\bibnamedelimi M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=424c217d2314544a08a1891e99c67837}{%
+           family={Zimmerman},
+           familyi={Z\bibinitperiod},
+           given={D.\bibnamedelimi S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3cc36f63256fc8f8854d4c6a1ee220c8}{%
+           family={Marr},
+           familyi={M\bibinitperiod},
+           given={D.\bibnamedelimi R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=f6f22d4b9c5ecadcbed20a7a4d4aebcb}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7ee7a2f05c18b51847db26b5708e7afc}
+      \strng{fullhash}{b12d3065096fd593e2ffc937c9008d26}
+      \strng{bibnamehash}{7ee7a2f05c18b51847db26b5708e7afc}
+      \strng{authorbibnamehash}{7ee7a2f05c18b51847db26b5708e7afc}
+      \strng{authornamehash}{7ee7a2f05c18b51847db26b5708e7afc}
+      \strng{authorfullhash}{b12d3065096fd593e2ffc937c9008d26}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Using electrochemical impedance spectroscopy (EIS) based on the Fast Fourier Transform (FFT) method, we have investigated the adsorption properties of F-, NO3- and CH3COO- on Au in aqueous electrolytes. The results show that these anions adsorb on Au in considerably small amounts. The adsorption reactions are associated with partial charge transfer across the interface. We present a theoretical framework to analyze these data. Certain previously reported impedance features of simple adsorption reactions are found as special cases of the present analysis. By combining theory and experiment, we determine the double layer capacitance, adsorption capacitance, and the amount of partial charge transfer as functions of the applied voltage. The theoretical framework of the present work can be applied to both cases of weak and strong adsorption, and can be extended to describe coadsorption of different anions.}
+      \field{issn}{1572-6657}
+      \field{journaltitle}{Journal of Electroanalytical Chemistry}
+      \field{month}{2}
+      \field{number}{1}
+      \field{shorttitle}{Weak Adsorption of Anions on Gold}
+      \field{title}{Weak Adsorption of Anions on Gold: Measurement of Partial Charge Transfer Using {{Fast Fourier Transform}} Electrochemical Impedance Spectroscopy}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{499}
+      \field{year}{2001}
+      \field{urldateera}{ce}
+      \field{pages}{48\bibrangedash 60}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/S0022-0728(00)00468-X
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\XDGB25LW\\Walters et al. - 2001 - Weak adsorption of anions on gold measurement of partial charge transfer using Fast Fourier Transfo.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\ZHSWUCJQ\\S002207280000468X.html
+      \endverb
+      \keyw{Ac Impedance,Adsorption,Au electrode,Capacitance,Charge transfer resistance}
+    \endentry
+    \entry{garlandAnalysisExperimentalConstraints2004}{article}{}
+      \name{author}{3}{}{%
+        {{hash=2c7069a6eff16ba4f3d40ec6416e12b0}{%
+           family={Garland},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3d8ca44924e3947cdd9ba8452c560648}{%
+           family={Pettit},
+           familyi={P\bibinitperiod},
+           given={C.\bibnamedelimi M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=f6f22d4b9c5ecadcbed20a7a4d4aebcb}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{fullhash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{bibnamehash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{authorbibnamehash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{authornamehash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{authorfullhash}{881cfcb1233e3970b3014f0852b4454e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{By using the Fourier transform (FT) technique, it is possible to perform electrochemical impedance spectroscopy in real time during the occurrence of DC voltage controlled surface reactions. The data obtained in this approach, a series of Nyquist plots as functions of DC control variables, can provide a wealth of time resolved information about surface kinetics. We discuss in detail the theoretical and experimental considerations for such time resolved experiments. We focus primarily on the constraints and criteria of measurements in the context of new data acquisition electronics that became available during the last few years. We also present sample experimental results for a gold electrode.}
+      \field{issn}{0013-4686}
+      \field{journaltitle}{Electrochimica Acta}
+      \field{month}{7}
+      \field{number}{16}
+      \field{title}{Analysis of Experimental Constraints and Variables for Time Resolved Detection of {{Fourier}} Transform Electrochemical Impedance Spectra}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{49}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{pages}{2623\bibrangedash 2635}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.electacta.2003.12.051
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\J3DHRCUS\\Garland et al. - 2004 - Analysis of experimental constraints and variables for time resolved detection of Fourier transform.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\EZZ7WXAT\\S0013468604001744.html
+      \endverb
+      \keyw{Cyclic voltammetry,EIS,Fourier transform,Gold electrode,Time resolved}
+    \endentry
+    \entry{garlandKineticAnalysisElectrosorption2002a}{article}{}
+      \name{author}{5}{}{%
+        {{hash=2c7069a6eff16ba4f3d40ec6416e12b0}{%
+           family={Garland},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=63d0d9962c14d8efae1e966464beb39b}{%
+           family={Assiongbon},
+           familyi={A\bibinitperiod},
+           given={K.\bibnamedelimi A},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=3d8ca44924e3947cdd9ba8452c560648}{%
+           family={Pettit},
+           familyi={P\bibinitperiod},
+           given={C.\bibnamedelimi M},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=be6865e5345929b589d9d54210014607}{%
+           family={Emery},
+           familyi={E\bibinitperiod},
+           given={S.\bibnamedelimi B},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=f6f22d4b9c5ecadcbed20a7a4d4aebcb}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={D},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{fc0f08b1219da87ce7654e6a306bc9e4}
+      \strng{fullhash}{ce480dcf46b114de0ca8e2c591e9752f}
+      \strng{bibnamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
+      \strng{authorbibnamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
+      \strng{authornamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
+      \strng{authorfullhash}{ce480dcf46b114de0ca8e2c591e9752f}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We demonstrate a relatively simple method for studying various kinetic aspects of metal electrodeposition in the presence of coadsorbing anions on an electrode surface. This method combines cyclic voltammetry (CV) with fast Fourier transform electrochemical impedance spectroscopy (FFT-EIS), where both steady state and transient behaviors of the interface are probed simultaneously. As a model surface reaction, we use electrodeposition of Bi3+ in the presence of ClO4- adsorption from an aqueous solution onto a gold electrode. The voltage range for underpotential deposition (UPD) of Bi3+ is determined with potential step (PS) experiments. The voltage dependent UPD coverage of Bi on Au is determined by analyzing the CV data. The relevant kinetic parameters of both Bi3+ and ClO4- deposition reactions under the conditions of CV are measured with FFT-EIS, and analyzed using a complex nonlinear least square method. The differences and similarities between the electrosorption characteristics of Bi3+ and ClO4- on Au are discussed in terms of these kinetic parameters.}
+      \field{issn}{0013-4686}
+      \field{journaltitle}{Electrochimica Acta}
+      \field{month}{9}
+      \field{number}{25}
+      \field{shorttitle}{Kinetic Analysis of Electrosorption Using Fast {{Fourier}} Transform Electrochemical Impedance Spectroscopy}
+      \field{title}{Kinetic Analysis of Electrosorption Using Fast {{Fourier}} Transform Electrochemical Impedance Spectroscopy: Underpotential Deposition of {{Bi3}}+ in the Presence of Coadsorbing {{ClO4}}- on Gold}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{47}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \field{pages}{4113\bibrangedash 4124}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/S0013-4686(02)00437-1
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\26YXZ48I\\Garland et al. - 2002 - Kinetic analysis of electrosorption using fast Fourier transform electrochemical impedance spectrosc.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\4LAB6EPD\\S0013468602004371.html
+      \endverb
+      \keyw{Adsorption,Bismuth,Gold electrode,Impedance spectroscopy,Underpotential deposition}
+    \endentry
+    \entry{pettitElectrodepositionIndiumMolybdenum2002}{article}{}
+      \name{author}{6}{}{%
+        {{hash=3d8ca44924e3947cdd9ba8452c560648}{%
+           family={Pettit},
+           familyi={P\bibinitperiod},
+           given={C.\bibnamedelimi M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=2c7069a6eff16ba4f3d40ec6416e12b0}{%
+           family={Garland},
+           familyi={G\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=2c2521560d65dd035f47489303133aa6}{%
+           family={Etukudo},
+           familyi={E\bibinitperiod},
+           given={N.\bibnamedelimi R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=63d0d9962c14d8efae1e966464beb39b}{%
+           family={Assiongbon},
+           familyi={A\bibinitperiod},
+           given={K.\bibnamedelimi A.},
+           giveni={K\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=be6865e5345929b589d9d54210014607}{%
+           family={Emery},
+           familyi={E\bibinitperiod},
+           given={S.\bibnamedelimi B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=f6f22d4b9c5ecadcbed20a7a4d4aebcb}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{053f47cf11cc4b4b8378ae453d62ef72}
+      \strng{fullhash}{3c43448126941ce6a016c9a57fcecb07}
+      \strng{bibnamehash}{053f47cf11cc4b4b8378ae453d62ef72}
+      \strng{authorbibnamehash}{053f47cf11cc4b4b8378ae453d62ef72}
+      \strng{authornamehash}{053f47cf11cc4b4b8378ae453d62ef72}
+      \strng{authorfullhash}{3c43448126941ce6a016c9a57fcecb07}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work, we study kinetics of indium deposition onto a molybdenum substrate under electrochemical control. We show that mass transfer limited slow electrode position of In on Mo cannot be detected with traditional cyclic voltammetry. However, the In-deposited surface modifications of Mo are readily detected with optical second harmonic generation (SHG). By analyzing potentiostatic current transients, we show that the adsorption kinetics of In on Mo are dominated by 3D progressive nucleation. The SHG results provide further support to this conclusion. We also examine the relative roles of In-deposition and anion coadsorption under diffusion control by using fast Fourier transform electrochemical impedance spectroscopy (FFT-EIS). The results demonstrate how the process of surface modification by electrodeposition can be studied by combining SHG with FFT-EIS.}
+      \field{issn}{0169-4332}
+      \field{journaltitle}{Applied Surface Science}
+      \field{month}{12}
+      \field{number}{1}
+      \field{title}{Electrodeposition of Indium on Molybdenum Studied with Optical Second Harmonic Generation and Electrochemical Impedance Spectroscopy}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{202}
+      \field{year}{2002}
+      \field{urldateera}{ce}
+      \field{pages}{33\bibrangedash 46}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/S0169-4332(02)00798-5
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\69FZWANF\\Pettit et al. - 2002 - Electrodeposition of indium on molybdenum studied with optical second harmonic generation and electr.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\JHRAXVSE\\S0169433202007985.html
+      \endverb
+      \keyw{Electrodeposition,Impedance spectroscopy,Indium,Molybdenum,Nucleation,Second harmonic generation}
+    \endentry
     \entry{darowickiInvestigationsPassiveLayer2003}{article}{}
       \name{author}{3}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
@@ -1605,8 +1892,8 @@
       \strng{authornamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authorfullhash}{970033594cd67aa9445027d30ff5eea1}
       \field{extraname}{1}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Continuous STFT transforms of a sinusoidal perturbation signal and current have been found for the first order electrode reaction. Electrode impedance has been determined in the joint time--frequency domain. Measurements of the Cd(II) reduction reaction have been performed on a dropping mercury electrode as a function of time. A possibility of instantaneous impedance spectra generation has been presented. Time characteristics of charge transfer resistance, Warburg coefficient and double layer capacitance has been described.}
@@ -1651,8 +1938,8 @@
       \strng{authornamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authorfullhash}{970033594cd67aa9445027d30ff5eea1}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Continuous short time Fourier transformation transforms of the sinusoidal perturbation signal and current have been found for the first order electrode reaction. The electrode impedance has been determined in the joint time--frequency domain. Measurements of the Cd(II) reduction reaction have been performed on a hanging mercury electrode (HDME) as a function of potential. The possibility of instantaneous impedance spectra generation has been presented. The dependence of the charge transfer resistance, Warburg coefficient and double layer capacitance on potential has been described.}
@@ -1704,8 +1991,8 @@
       \strng{authorbibnamehash}{de046acb86414b78c6093e0066dd8446}
       \strng{authornamehash}{de046acb86414b78c6093e0066dd8446}
       \strng{authorfullhash}{de046acb86414b78c6093e0066dd8446}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{A mathematical basis of a new method of measurement of electrode impedance is presented. The method uses a non-stationary perturbation signal whose frequency varies linearly with time. The amplitude of a non-stationary sine perturbation signal is constant. The recording and analysis of both the perturbation and response signals allow the determination of continuous-frequency impedance spectra. Simultaneous time-frequency analysis of the voltage perturbation signal and current response signal was performed using the Gabor transformation.}
@@ -2061,8 +2348,8 @@
       \strng{authornamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorfullhash}{bb41ff731dc3e69379f9045bae94d0fa}
       \field{extraname}{1}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The most common method of determination of cavitation erosion resistance as well as the magnitude of erosion-corrosion synergistic interaction is based on the weight loss measurements. Nondestructive characterization of installations elements is in most cases impossible to perform. Also, such a measurement does not include local types of failure or alteration of operating conditions. There is an urge to elaborate a method for monitoring of cavitation erosion-corrosion damage. The authors used dynamic impedance technique to study change of electric parameters of various engineering alloys under synergistic interaction of cavitation erosion and corrosion in 3\% NaCl solution. Monitoring of electric parameters offers a very good resemblance to failure level identified with weight loss function and microscopic analysis. It was possible to distinguish different stages of material degradation by means of instantaneous impedance measurements. Instantaneous value of charge transfer resistance provides information about synergistic influence of mechanical erosion on corrosion.}
@@ -2116,8 +2403,8 @@
       \strng{authornamehash}{086f35c10f4ea73b0118d13357a697ef}
       \strng{authorfullhash}{cb5839dde54f4f42a1f5be7136f9904a}
       \field{extraname}{2}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper investigates the methodology for differentiation of multistep process of pitting corrosion of AISI 304 stainless steel in the environment of iron (III) chloride. Measurements were performed using Galvanodynamic Electrochemical Impedance Spectroscopy (GDEIS). Application of this methodology allowed monitoring of natural corrosion process without external current (IDC=0A) nor potential perturbation of the system. Applied sinusoidal AC current does not influence significantly registered DC potential. Analysis confirms that it is possible to distinguish all stages of pitting corrosion: passive state, metastable state, initiation of pitting, active pitting corrosion state. Characteristic potential oscillations related with pitting corrosion were detected. Research shows that GDEIS method can be with success utilized in the monitoring of pitting corrosion.}
@@ -2140,6 +2427,265 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\V3XH6FH4\\Orlikowski et al. - 2017 - Determination of pitting corrosion stage of stainless steel by galvanodynamic impedance spectroscopy.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\DJA724R9\\S0013468617319187.html
       \endverb
       \keyw{corrosion monitoring,EIS,GDEIS,pitting corrosion}
+    \endentry
+    \entry{naroznyApplicationElectrochemicalImpedance2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=c1e1afacbb1bb7ac45c40457c81a61b9}{%
+           family={Narozny},
+           familyi={N\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=03a30df3a0c7e7643685337b5f2b7f28}{%
+           family={Zakowski},
+           familyi={Z\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d348f6153a3b71b742cb341b532d86e4}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{fullhash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{bibnamehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{authorbibnamehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{authornamehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{authorfullhash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Two types of organic coated carbon steel (S235JR2 grade) electrodes were exposed to artificial seawater environment. One prepared type was defect free while the other one had an intentionally introduced {$\phi$}0.5\,cm coating defect. Both kinds of samples were polarized during the exposure to four potentials corresponding to four different cathodic protection levels. Evolution of their EIS spectra is presented in this paper. Results obtained in the experiment indicate that protective organic coating condition could be estimated and monitored in time based on EIS investigations. If a sample is defected EIS allows recognition of overprotected and unprotected sample. Distinguishing a fully protected sample from partially protected sample based on EIS was troublesome.}
+      \field{issn}{0950-0618}
+      \field{journaltitle}{Construction and Building Materials}
+      \field{month}{8}
+      \field{title}{Application of {{Electrochemical Impedance Spectroscopy}} to Evaluate Cathodically Protected Coated Steel in Seawater}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{181}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{721\bibrangedash 726}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1016/j.conbuildmat.2018.06.033
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\IUQDM6RR\\Narozny et al. - 2018 - Application of Electrochemical Impedance Spectroscopy to evaluate cathodically protected coated stee.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\6RLE9F9E\\S0950061818314375.html
+      \endverb
+      \keyw{Cathodicprotection,Electrochemical Impedance Spectroscopy,Organic coatings,Seawater,Steel}
+    \endentry
+    \entry{darowickiNovelApplicationDynamic2020a}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d348f6153a3b71b742cb341b532d86e4}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=c600258273e2632fdd065999b4050768}{%
+           family={Ślepski},
+           familyi={Ś\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+        {{hash=68b57e465d693b628ed609416ba7d2e4}{%
+           family={Szociński},
+           familyi={S\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{fullhash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{bibnamehash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{authorbibnamehash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{authornamehash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{authorfullhash}{810361b9bcc93a4a0830280e5efc24d6}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The paper presents a novel method of on-line impedance monitoring of cataphoretic coating application process. Utilization of dynamic electrochemical impedance spectroscopy (DEIS) overcame the fundamental problem connected with non-stationarity of the aforementioned coating deposition process, which eliminates classical impedance spectroscopy technique from a real-time description of cataphoresis. The paper illustrates selected examples of potentialities of DEIS regarding the characterization of the cataphoretic coating process. Acquired instantaneous impedance spectra enabled on-line insight into impedance changes upon steel substrate polarization duration, thus visualizing coating application progress. DEIS allowed estimation of the time necessary for the coating/steel substrate system to achieve a steady state after polarization switch off. The proposed approach seems to be a step towards real-time monitoring of electrophoretic coating application and offers a potential for improved process control and optimization.}
+      \field{issn}{0300-9440}
+      \field{journaltitle}{Progress in Organic Coatings}
+      \field{month}{12}
+      \field{title}{Novel Application of Dynamic Electrochemical Impedance Monitoring to a Cataphoretic Coating Process}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{149}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{105906}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.porgcoat.2020.105906
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\ZHEEVC7P\\Darowicki et al. - 2020 - Novel application of dynamic electrochemical impedance monitoring to a cataphoretic coating process.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\IH23NQFL\\S0300944020311176.html
+      \endverb
+      \keyw{Cataphoresis,Cataphoretic coating,Chemical impedance spectroscopy,Dynamic electro,Electrical properties,Polarization}
+    \endentry
+    \entry{rylInstantaneousImpedanceAnalysis2017}{article}{}
+      \name{author}{6}{}{%
+        {{hash=0effbe6d09df3e908668fc6a16b8f43c}{%
+           family={Ryl},
+           familyi={R\bibinitperiod},
+           given={Jacek},
+           giveni={J\bibinitperiod}}}%
+        {{hash=dd15f6167d1a80810f5a0fed36736e18}{%
+           family={Gawel},
+           familyi={G\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=62e43181bf7dbce7e3aa1e97e3680de5}{%
+           family={Cieslik},
+           familyi={C\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f2eb8ffa1be5ec92c3f77c2c81d789ed}{%
+           family={Gerengi},
+           familyi={G\bibinitperiod},
+           given={Husnu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3145469def6f9c3adf692bd399a6729c}{%
+           family={Lentka},
+           familyi={L\bibinitperiod},
+           given={Grzegorz},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8c9a19b8566c851f3167f08c721d8941}{%
+           family={Slepski},
+           familyi={S\bibinitperiod},
+           given={Pawel},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5c15696188a6ecdcda97cd9b8619e82}
+      \strng{fullhash}{e3cdb864fac0480fe975d66cc60e6e93}
+      \strng{bibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
+      \strng{authorbibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
+      \strng{authornamehash}{f5c15696188a6ecdcda97cd9b8619e82}
+      \strng{authorfullhash}{e3cdb864fac0480fe975d66cc60e6e93}
+      \field{extraname}{2}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The paper concerns the problem of evaluation of stationarity of carbon steel corrosion in 1M HCl. Comparison of corrosion rate with addition of corrosion inhibitor to the reference measurement is the most often used way of evaluating inhibitor efficiency. Such an approach is valid only if corrosion rate is a stationary process. Two complementary techniques were used simultaneously: volumetric analysis of evolved hydrogen and instantaneous impedance spectroscopy monitoring. Changes of the electrode surface area and chemical composition have a major impact on the dynamics of both cathodic and anodic processes. On the base obtained results, authors claim that the stationarity of the process determined most often on the base of corrosion potential is ineffective and insufficient.}
+      \field{issn}{1452-3981}
+      \field{journaltitle}{International Journal of Electrochemical Science}
+      \field{month}{7}
+      \field{number}{7}
+      \field{shorttitle}{Instantaneous {{Impedance Analysis}} of {{Non-Stationary Corrosion Process}}}
+      \field{title}{Instantaneous {{Impedance Analysis}} of {{Non-Stationary Corrosion Process}}: A {{Case Study}} of {{Carbon Steel}} in {{1M HCl}}}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{12}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{6908\bibrangedash 6919}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.20964/2017.07.15
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\Q897X8ES\\Ryl et al. - 2017 - Instantaneous Impedance Analysis of Non-Stationary Corrosion Process a Case Study of Carbon Steel i.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\AGEB6BBC\\S145239812310767X.html
+      \endverb
+      \keyw{carbon steel,corrosion,impedance monitoring,volumetric analysis}
+    \endentry
+    \entry{arutunowElectricalMechanicalCharacterization2015}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e375d91ec54c73ad9eb5f8317b828ca1}{%
+           family={Arutunow},
+           familyi={A\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9a17b69e918cf40ab6d4b368c3fec037}{%
+           family={Tobiszewski},
+           familyi={T\bibinitperiod},
+           given={Mateusz\bibnamedelima Tomasz},
+           giveni={M\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=307cfff75002e4d85f8602253eebf3ec}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={Kazimierz},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{9221653e2c0de363648692fb24379361}
+      \strng{fullhash}{9221653e2c0de363648692fb24379361}
+      \strng{bibnamehash}{9221653e2c0de363648692fb24379361}
+      \strng{authorbibnamehash}{9221653e2c0de363648692fb24379361}
+      \strng{authornamehash}{9221653e2c0de363648692fb24379361}
+      \strng{authorfullhash}{9221653e2c0de363648692fb24379361}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Dynamic impedance spectroscopy, evaluated for measuring non-stationary systems, was used in combination with scanning probe microscope. Using this approach, localized impedance measurements in the AFM contact mode could be carried out. Additionally, impedance--force curves were made at each phase of investigated materials to illustrate the relation between impedance and the force applied to a probe. Therefore, correlation of electrical and mechanical properties with particular phases of investigated two-phase alloys was made possible. The materials used in this study were spheroidal graphite cast iron and 2205 duplex stainless steel, both materials with clearly defined phases having significantly different properties.}
+      \field{issn}{0925-8388}
+      \field{journaltitle}{Journal of Alloys and Compounds}
+      \field{month}{1}
+      \field{title}{Electrical and Mechanical Characterization of Two-Phase Alloys by Means of Scanning Probe Microscopy in Dynamic Impedance Spectroscopy Mode}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{619}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{172\bibrangedash 176}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.jallcom.2014.08.214
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\W849LUQV\\Arutunow et al. - 2015 - Electrical and mechanical characterization of two-phase alloys by means of scanning probe microscopy.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\6X3RL5BK\\S0925838814020891.html
+      \endverb
+      \keyw{AFM,DIS,Impedance,Nanocontact,Nanoimpedance,SPM}
+    \endentry
+    \entry{zielinskiApplicationMultisineNanoscale2015}{article}{}
+      \name{author}{2}{}{%
+        {{hash=3ef0774cfb24c980a146d13fdc7cb077}{%
+           family={Zieliński},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d348f6153a3b71b742cb341b532d86e4}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \strng{fullhash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \strng{bibnamehash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \strng{authorbibnamehash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \strng{authornamehash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \strng{authorfullhash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In the recent years atomic force microscopy is recognized as valuable tool for investigation of surficial features of construction materials. It concerns, among other things, studies of changes caused by such phenomena as galvanic corrosion, passivation associated with the growth of oxide layers, or sensitization of austenitic steels with the formation of carbide phases. In addition, atomic force microscopy allows easy coupling with impedance technique which is especially promising because of its versatility in investigations of both conductive and dielectric materials. The authors discuss the possibility of application of such type of measurement, known as impedance microscopy. Copyright {©} 2015 John Wiley \& Sons, Ltd.}
+      \field{issn}{1096-9918}
+      \field{journaltitle}{Surface and Interface Analysis}
+      \field{langid}{english}
+      \field{number}{12}
+      \field{title}{Application of Multisine Nanoscale Impedance Microscopy to Heterogeneous Alloy Surface Investigations}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{47}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \field{pages}{1109\bibrangedash 1113}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1002/sia.5855
+      \endverb
+      \verb{file}
+      \verb C:\Users\fscarp\Zotero\storage\MN5ZSUJT\Zieliński and Darowicki - 2015 - Application of multisine nanoscale impedance microscopy to heterogeneous alloy surface investigation.pdf
+      \endverb
+      \keyw{atomic force microscopy,impedance spectroscopy,nanoscale impedance microscopy}
     \endentry
     \entry{wysockaInvestigationElectrochemicalBehaviour2016}{article}{}
       \name{author}{4}{}{%
@@ -2170,8 +2716,8 @@
       \strng{authorbibnamehash}{303f3ed2ff970f938e68788387b9fa37}
       \strng{authornamehash}{303f3ed2ff970f938e68788387b9fa37}
       \strng{authorfullhash}{8f7aafef675af4903b65823ee4366435}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The paper presents the electrochemical behaviour of aluminium alloy AA1050 in aqueous alkaline media in the pH range 14--8.5. Electrochemical study was applied in order to obtain comprehensive information on the mechanism and kinetics of the process of anodic dissolution of aluminium, supplemented by monitoring of surface topography using an electron microscope. The corrosion rate of AA1050 increases with increasing concentration of hydroxyl ions OH-. Cathodic reaction occurs in the form of two competing processes, oxygen depolarization and hydrogen evolution. During anodic polarization process up to +8V vs Ag{|}Ag2O, activation control of the electrochemical process is converted to diffusion control upon reaching the potential approx. 0V. Instantaneous impedance spectra in Nyquist projection had at least two time constants: high--frequency loop of capacitive character associated with charge transfer process during anodic dissolution and negative low-frequency capacitance loop. Dynamic processes occurring during anodic dissolution of aluminium alloy can be concluded on the base of instantaneous change of electric parameters. Dynamic Electrochemical Impedance Spectroscopy (DEIS) enables continuous impedance monitoring of non--stationary processes, such as anodic dissolution of aluminium in aqueous alkaline environments.}
@@ -2327,8 +2873,8 @@
       \strng{authorbibnamehash}{c13a6defa1d1e2d5479c03e64b59f17f}
       \strng{authornamehash}{c13a6defa1d1e2d5479c03e64b59f17f}
       \strng{authorfullhash}{c13a6defa1d1e2d5479c03e64b59f17f}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{The paper presents the analysis of the aniline electropolymerization process by a recently developed experimental technique---dynamic electrochemical impedance spectroscopy. The process of the polyaniline first redox transformation was chosen for a detailed investigation. The technique used allowed to obtain the momentary impedance spectra for the potentiodynamic electrochemical reaction. The spectra were further analysed using the proposed electrical equivalent circuit. Thus, we were able to trace the electrochemical properties of the investigated system for potentiodynamic process. Results were in agreement with the expectations and confirmed the electrochemical nature of the analysed process.}
@@ -2378,8 +2924,8 @@
       \strng{authornamehash}{5684a4b605cc36db4594a7f79afeca04}
       \strng{authorfullhash}{5684a4b605cc36db4594a7f79afeca04}
       \field{extraname}{3}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Electrochemical impedance spectroscopy allows the examination of corrosion susceptibility and resistance for different construction materials, in particular the determination of the properties of their passive films. This technique makes possible the analysis of electrochemical processes in time domain, including rapid phenomena such as changes in the properties of passive films, but it has never been used for passive layer cracking examination. In many cases, fracture of the passive film under tensile stresses leads to stress corrosion cracking. Therefore, investigations of passive layer cracking on austenitic stainless steels under tensile stresses facilitate the understanding of the mechanism of stress corrosion cracking in these common engineering materials. The effect of static tensile stresses on the passive film cracking behaviour of type 304L stainless steel immersed in 0.5~M NaCl solution at room temperature has been investigated. This paper presents the impedance spectra obtained for 304L stainless steel samples at different potential values.}
@@ -2404,6 +2950,115 @@
       \verb C:\Users\fscarp\Zotero\storage\HFLYTPGW\Darowicki et al. - 2004 - Dynamic electrochemical impedance spectroscopy measurements of passive layer cracking under static t.pdf
       \endverb
       \keyw{Austenitic stainless steels,Dynamic electrochemical impedance spectroscopy,Passive layer cracking,Stress corrosion cracking,Tensile stresses}
+    \endentry
+    \entry{burczykLocalElectrochemicalImpedance2018}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ea611f7e8e47c1d43b354a4506ba0617}{%
+           family={Burczyk},
+           familyi={B\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod}}}%
+        {{hash=307cfff75002e4d85f8602253eebf3ec}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={Kazimierz},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{c4ab972840bfb664cae1810d4d2170ca}
+      \strng{fullhash}{c4ab972840bfb664cae1810d4d2170ca}
+      \strng{bibnamehash}{c4ab972840bfb664cae1810d4d2170ca}
+      \strng{authorbibnamehash}{c4ab972840bfb664cae1810d4d2170ca}
+      \strng{authornamehash}{c4ab972840bfb664cae1810d4d2170ca}
+      \strng{authorfullhash}{c4ab972840bfb664cae1810d4d2170ca}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{A novel method that combines local electrochemical impedance spectroscopy and mapping in dynamic mode is proposed. Method was validated over two galvanic couplings, namely zinc/copper and cadmium/copper. Impedance spectrum response for all measuring points was obtained by means of simultaneous implementation of selected range of frequencies. Proposed method allows the measurement in a more time-efficient manner, at the same time providing extensive impedance characteristic. Moreover, the aspect of probe-to-sample distance was introduced. Furthermore, the inversion of the probe-to-sample distance experiment direction allows for determination of approaching procedure for local impedance measurements (with support of theoretical calculations). Proposed method was compared with standard LEIS measurement on system which undergoes rapid changes, giving results that were not obtainable with standard method. This indicates that by applying dynamic measurements, it is possible to introduce additional variable into the investigated system, what should contribute to broader application of local impedance measurements.}
+      \field{issn}{0013-4686}
+      \field{journaltitle}{Electrochimica Acta}
+      \field{month}{8}
+      \field{title}{Local Electrochemical Impedance Spectroscopy in Dynamic Mode of Galvanic Coupling}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{282}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{304\bibrangedash 310}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1016/j.electacta.2018.05.192
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\4PPPSSYX\\Burczyk and Darowicki - 2018 - Local electrochemical impedance spectroscopy in dynamic mode of galvanic coupling.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\BFGI9KWN\\S0013468618312519.html
+      \endverb
+      \keyw{Dynamic electrochemical impedance spectroscopy,Galvanic corrosion,Local electrochemical impedance mapping,Local electrochemical impedance spectroscopy}
+    \endentry
+    \entry{zielinskiMultifrequencyNanoscaleImpedance2019}{article}{}
+      \name{author}{6}{}{%
+        {{hash=2a7475714ea71fe86847011edcc91c41}{%
+           family={Zielinski},
+           familyi={Z\bibinitperiod},
+           given={Artur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=62e43181bf7dbce7e3aa1e97e3680de5}{%
+           family={Cieslik},
+           familyi={C\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod}}}%
+        {{hash=08e7593bf75539438e46f2eadee112d8}{%
+           family={Sobaszek},
+           familyi={S\bibinitperiod},
+           given={Michal},
+           giveni={M\bibinitperiod}}}%
+        {{hash=453b054c964a316bb5ff38124f207803}{%
+           family={Bogdanowicz},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=307cfff75002e4d85f8602253eebf3ec}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={Kazimierz},
+           giveni={K\bibinitperiod}}}%
+        {{hash=0effbe6d09df3e908668fc6a16b8f43c}{%
+           family={Ryl},
+           familyi={R\bibinitperiod},
+           given={Jacek},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6dc661a7d4f758f371b7934fa54fb457}
+      \strng{fullhash}{cb75bf0f96bcb304f22b975c6dc9db66}
+      \strng{bibnamehash}{6dc661a7d4f758f371b7934fa54fb457}
+      \strng{authorbibnamehash}{6dc661a7d4f758f371b7934fa54fb457}
+      \strng{authornamehash}{6dc661a7d4f758f371b7934fa54fb457}
+      \strng{authorfullhash}{cb75bf0f96bcb304f22b975c6dc9db66}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{In this paper, we describe the modification of Nanoscale Impedance Microscopy (NIM), namely, a combination of contact-mode atomic force microscopy with local impedance measurements. The postulated approach is based on the application of multifrequency voltage perturbation instead of standard frequency-by-frequency analysis, which among others offers more time-efficient and accurate determination of the resultant impedance spectra with high spatial resolution. Based on the impedance spectra analysis with an appropriate electric equivalent circuit, it was possible to map surface resistance and contact capacitance. Polycrystalline heavy boron-doped diamond (BDD) electrodes were the research object. Recent studies have shown that the exposure of such electrodes to oxidizing environment may result in the modification of termination type, and thus it is a key factor in describing the electric and electrochemical properties of BDD. We have successfully applied multifrequency NIM, which allowed us to prove that the modification of termination type is selective and occurs with different propensity on the grains having specific crystallographic orientation. Furthermore, our approach enabled the detection of even subtle submicroscopic surface heterogeneities, created as a result of various oxidation treatments and to distinguish them from the surface heterogeneity related to the local distribution of boron at the grain boundaries.}
+      \field{issn}{0304-3991}
+      \field{journaltitle}{Ultramicroscopy}
+      \field{month}{4}
+      \field{shorttitle}{Multifrequency Nanoscale Impedance Microscopy (m-{{NIM}})}
+      \field{title}{Multifrequency Nanoscale Impedance Microscopy (m-{{NIM}}): {{A}} Novel Approach towards Detection of Selective and Subtle Modifications on the Surface of Polycrystalline Boron-Doped Diamond Electrodes}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{199}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{34\bibrangedash 45}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1016/j.ultramic.2019.01.004
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\DSPUKSDL\\Zielinski et al. - 2019 - Multifrequency nanoscale impedance microscopy (m-NIM) A novel approach towards detection of selecti.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\I6EEMCQV\\S0304399118302328.html
+      \endverb
+      \keyw{Boron-doped diamond,Electrode termination,Heterogeneity,Multifrequency voltage perturbation,Nanoscale impedance microscopy}
     \endentry
     \entry{rylStudySurfaceTermination2016}{article}{}
       \name{author}{5}{}{%
@@ -2439,9 +3094,9 @@
       \strng{authorbibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authornamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorfullhash}{19f98fd18867dbe7f5bb7d5fdb6c68c0}
-      \field{extraname}{2}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{extraname}{3}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{Anodic oxidation is a popular way to modify termination bonds at boron doped diamond electrodes altering their electrochemical and physicochemical properties. Our studies, performed with dynamic electrochemical impedance spectroscopy technique, supported with X-ray photoelectron spectroscopy and ellipsometry analysis prove its utility in continuous on-line monitoring of impedance changes on the electrode surface under polarization conditions, which may be of great use for the optimization of working conditions of the process. Based on our results, it can be observed that oxidation of termination bonds is a multistep process, each stage initiated at different anodic polarization potential. The factors influencing oxidation of termination bonds are presented and discussed. It was also possible to draw a conclusion about the removal of sp2 carbon impurities from the electrode surface as a precondition to activate the oxidation process. The depth and time of polarization, boron uptake at the grain boundaries, as well as crystallographic orientation of individual grains influence the heterogeneity of the oxidation process. Its partial reversibility was observed as a result of cathodic polarization in the range of hydrogen evolution, however due to irreversible corrosion of sp2 impurities, hydrogenation is not complete. This form of hydrogenation additionally contaminates the electrode surface with sulphur.}
@@ -2463,6 +3118,57 @@
       \verb{file}
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\Q237YDS6\\Ryl et al. - 2016 - Study on surface termination of boron-doped diamond electrodes under anodic polarization in H2SO4 by.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\9P8VEDA2\\S0008622315303742.html
       \endverb
+    \endentry
+    \entry{parasinskaApplicationQuartzCrystal2024}{article}{}
+      \name{author}{3}{}{%
+        {{hash=9ddc74fcaee818323484a436744c6065}{%
+           family={Parasinska},
+           familyi={P\bibinitperiod},
+           given={Dominika},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5daaaf64eab6d1cec59cf69a9dfb8e84}{%
+           family={Kwiatkowski},
+           familyi={K\bibinitperiod},
+           given={Hubert},
+           giveni={H\bibinitperiod}}}%
+        {{hash=8c9a19b8566c851f3167f08c721d8941}{%
+           family={Slepski},
+           familyi={S\bibinitperiod},
+           given={Pawel},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{fullhash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{bibnamehash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{authorbibnamehash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{authornamehash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{authorfullhash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The study investigates the application of Dynamic Electrochemical Impedance Spectroscopy (DEIS) and Electrochemical Quartz Crystal Microbalance (EQCM) techniques to examine the corrosion inhibition of copper by Benzotriazole and Sodium Folate in a 0.1 M NaCl solution. DEIS, an advanced version of Electrochemical Impedance Spectroscopy (EIS), allows for real-time monitoring of non-stationary electrochemical systems, while EQCM enables the detection of minute mass changes during electrochemical reactions. Through 24-hour chronopotentiometric measurements, the study observed the effects of 5 mM Benzotriazole and 10 mM Sodium Folate on copper corrosion. Results indicated that Benzotriazole significantly enhances corrosion resistance by forming a protective layer on the copper surface, as evidenced by increased impedance and stable mass changes. Conversely, Sodium Folate exhibited a less effective, dynamic interaction with the copper surface. This research highlights the synergistic use of DEIS and EQCM in understanding corrosion mechanisms and inhibitor efficiency, providing insights into optimizing corrosion protection strategies. The findings suggest that while both inhibitors improve corrosion resistance, Benzotriazole demonstrates superior performance, underscoring its potential for more effective corrosion control in various industrial applications.}
+      \field{issn}{2822-6054}
+      \field{journaltitle}{Journal of Materials and Manufacturing}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{1}
+      \field{title}{Application of Quartz Crystal Microbalance and Dynamic Impedance Spectroscopy to the Study of Copper Corrosion Inhibitors}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{3}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{8\bibrangedash 16}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.5281/zenodo.12568722
+      \endverb
+      \verb{file}
+      \verb C:\Users\fscarp\Zotero\storage\D7YGKLGH\Parasinska et al. - 2024 - Application of quartz crystal microbalance and dynamic impedance spectroscopy to the study of copper.pdf
+      \endverb
+      \keyw{Benzotriazole,Copper,Corrosion inhibition,DEIS,EQCM,Sodium Folate}
     \endentry
     \entry{slepskiImpedanceMonitoringFuel2015}{article}{}
       \name{author}{4}{}{%
@@ -2493,8 +3199,8 @@
       \strng{authorbibnamehash}{2c2139f5beed424900441be68d901ffc}
       \strng{authornamehash}{2c2139f5beed424900441be68d901ffc}
       \strng{authorfullhash}{2b3ef528434e7ed15086bde3eb7396d0}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{abstract}{This paper presents an innovative, electrochemical impedance method for monitoring of electrochemical behaviour of a multi-cell, direct methanol fuel cell (DMFC) device. This method not only provides classical voltage changes at successive cells but also allows their detailed impedance behaviour to be presented. Impedance characteristics of individual cells within a fuel cell stack (depending on actual operating conditions) are obtained via numerous electrochemical tasks, including simultaneous determination of each cell's impedances, performance optimization of the fuel cell stack and effective detection of faulty cells within the stack. The above concerns in situ conditions. The effectiveness of the present method was studied here on a seven-cell, commercially made DMFC stack. In order to effectively detect faulty cells, selected experiments were carried out with insufficient amount of oxygen supplied to a cathode input (ca. 25~\% of optimal oxidant dose was used).}
@@ -2520,9 +3226,206 @@
       \endverb
       \keyw{Direct methanol fuel cell (DMFC) stack,Electrochemical impedance spectroscopy,Fuel cell diagnostics}
     \endentry
+    \entry{darowickiInfluenceDynamicLoad2019}{article}{}
+      \name{author}{7}{}{%
+        {{hash=d348f6153a3b71b742cb341b532d86e4}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=5e65308ef81d748b471e68750696d126}{%
+           family={Janicka},
+           familyi={J\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=dbd644dab1ec08160c3ea8043dc94264}{%
+           family={Mielniczek},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ebbe4a914e185f98eff23a9c3946eb3f}{%
+           family={Zielinski},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d558f8bb02fdde00fcf87eba535a292e}{%
+           family={Gawel},
+           familyi={G\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=eca6ac6d7941506761937efa041f0bce}{%
+           family={Mitzel},
+           familyi={M\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=567553398f9e7616951da31b8b5109d0}{%
+           family={Hunger},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{fullhash}{4e21e0fc95487447c2c19ecdbb1d1169}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorfullhash}{4e21e0fc95487447c2c19ecdbb1d1169}
+      \field{extraname}{1}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{To achieve optimal performance of a fuel cell, a reliable monitoring and diagnostic method is required. The currently utilized methods give limited information or they are impossible to use under dynamic working conditions. To obtain comprehensive information about the fuel cell operation we utilized novel dynamic electrochemical impedance spectroscopy. Impedance measurements in dynamic mode were performed on a hydrogen fuel cell, working under various conditions. By utilizing this new methodology, optimum parameters for cell operation were determined. An electrical equivalent circuit for cathodic processes was determined. Presence of an interlayer, between the membrane and the catalytic layer, was postulated. The instantaneous impedance spectra were analysed under the function of current load. The complete character of the impedance spectra was revealed, and the electrical equivalent circuit was validated. The presence of the interlayer was established by impedance analysis and by a profile of platinum content changes in the membrane electrode assembly. The proposed investigation methodology provides monitoring and diagnostics of fuel cell components, which gives the possibility of streamlined management of the fuel cell operation.}
+      \field{issn}{0306-2619}
+      \field{journaltitle}{Applied Energy}
+      \field{month}{10}
+      \field{title}{The Influence of Dynamic Load Changes on Temporary Impedance in Hydrogen Fuel Cells, Selection and Validation of the Electrical Equivalent Circuit}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{251}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \field{pages}{113396}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.apenergy.2019.113396
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\D4DDFTDN\\Darowicki et al. - 2019 - The influence of dynamic load changes on temporary impedance in hydrogen fuel cells, selection and v.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\MIWY8KA5\\S0306261919310700.html
+      \endverb
+      \keyw{Equivalent circuit,Fuel cell,Fuel cell diagnostics,Impedance monitoring,PEMFC}
+    \endentry
+    \entry{darowickiImpedanceHydrogenOxidation2020a}{article}{}
+      \name{author}{7}{}{%
+        {{hash=d348f6153a3b71b742cb341b532d86e4}{%
+           family={Darowicki},
+           familyi={D\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d558f8bb02fdde00fcf87eba535a292e}{%
+           family={Gawel},
+           familyi={G\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=dbd644dab1ec08160c3ea8043dc94264}{%
+           family={Mielniczek},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ebbe4a914e185f98eff23a9c3946eb3f}{%
+           family={Zielinski},
+           familyi={Z\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=5e65308ef81d748b471e68750696d126}{%
+           family={Janicka},
+           familyi={J\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=567553398f9e7616951da31b8b5109d0}{%
+           family={Hunger},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=249b94075e192a85c6356369fd784671}{%
+           family={Jorissen},
+           familyi={J\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{fullhash}{6a20de8c239970045559dee5215a9299}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorfullhash}{6a20de8c239970045559dee5215a9299}
+      \field{extraname}{2}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Evaluation of performance of a proton exchange membrane fuel cell, which isaffected by carbon monoxide that pollutes the hydrogen stream, was presented. This influence was studied for carbon monoxide concentration of 125--325~ppb, which are close to values specified in ISO 14687:2019 standard. Performed studies provided crucial information for further development of fuel cell as an energy source for automotive application. Impedance with the use of Dynamic Electrochemical Impedance Spectroscopy profile measurements were completed for chosen carbon monoxide concentration under a constant current load andanode impedance variations were determined as a function of the time exposed to carbon monoxide. A method to determine the impedance of hydrogen oxidation was proposed. It was determined how the carbon monoxide surface coverage of anodic catalyst varies as a function of time. The capacitance of the double electrical layer and the charge transfer resistance of anodic reaction are discussed to evaluate them with respect to exposure time and surface coverage. It has been shown that proposed methodology can be used as a universal tool for testing fuel cells for both research and industrial applications, with the overall aim of optimization, monitoring, and diagnostics of the fuel cell.}
+      \field{issn}{0306-2619}
+      \field{journaltitle}{Applied Energy}
+      \field{month}{12}
+      \field{title}{The Impedance of Hydrogen Oxidation Reaction in a Proton Exchange Membrane Fuel Cell in the Presence of Carbon Monoxide in Hydrogen Stream}
+      \field{urlday}{23}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{279}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{115868}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.apenergy.2020.115868
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\X7Z4W2XB\\Darowicki et al. - 2020 - The impedance of hydrogen oxidation reaction in a proton exchange membrane fuel cell in the presence.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\AF8LTW4A\\S0306261920313404.html
+      \endverb
+      \keyw{Anode,Carbon monoxide,Hydrogen oxidation reaction,Impedance monitoring,Proton exchange membranefuel cell}
+    \endentry
+    \entry{krakowiakThreeModesElectrochemical2024}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7014f1485220353ecfcab3f523a94d97}{%
+           family={Krakowiak},
+           familyi={K\bibinitperiod},
+           given={Joanna},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fbae427f36fcba82a830886c8687f895}{%
+           family={Bącalski},
+           familyi={B\bibinitperiod},
+           given={Wojciech},
+           giveni={W\bibinitperiod}}}%
+        {{hash=3145469def6f9c3adf692bd399a6729c}{%
+           family={Lentka},
+           familyi={L\bibinitperiod},
+           given={Grzegorz},
+           giveni={G\bibinitperiod}}}%
+        {{hash=57a96077d559697688c06cf61503235b}{%
+           family={Peljo},
+           familyi={P\bibinitperiod},
+           given={Pekka},
+           giveni={P\bibinitperiod}}}%
+        {{hash=7f4be597681d1785d4789d08ed95f8dc}{%
+           family={Ślepski},
+           familyi={Ś\bibinitperiod},
+           given={Pawe{ł}},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{984267d345675e1494d29fe9e34f824d}
+      \strng{fullhash}{b694462881ac1a821ab9b9e89475bf1a}
+      \strng{bibnamehash}{984267d345675e1494d29fe9e34f824d}
+      \strng{authorbibnamehash}{984267d345675e1494d29fe9e34f824d}
+      \strng{authornamehash}{984267d345675e1494d29fe9e34f824d}
+      \strng{authorfullhash}{b694462881ac1a821ab9b9e89475bf1a}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article presents an innovative approach to monitor working redox flow batteries using dynamic electrochemical impedance spectroscopy, diverging from the commonly sequential impedance methods carried out under potentiostatic or galvanostatic conditions close to the open circle voltage. The authors introduce a fresh variation of dynamic impedance measurement that leverages an amplitude-modulated multi-frequency alternating current perturbation signal. This technique leads to a reduction in measurement time, making it possible to monitor impedance in real-time under typical operational conditions. Consequently, it effectively addresses the limitations stemming from the absence of stationary conditions during impedance measurements. There is no doubt that measurement techniques enabling the study of processes during the operational life of a battery provide the most valuable insights into the properties of these systems. The potential of this proposed approach is exemplified through the examination of a full vanadium redox flow battery as a case study. Classical impedance measurements were also conducted under potentiostatic and galvanostatic conditions with sequential frequency signal change, which requires stopping the battery operation, resulting in electrode potential changes of over 200~mV compared to the working system. Spectra for all modes of measurements were compared. In the case of dynamic measurements, such significant differences in spectra during charging and discharging are not observed, which is characteristic of classical measurements. The authors deliberately and consciously refrain from analyzing the results by fitting equivalent circuits.}
+      \field{issn}{2214-9937}
+      \field{journaltitle}{Sustainable Materials and Technologies}
+      \field{month}{7}
+      \field{title}{Three Modes of Electrochemical Impedance Spectroscopy Measurements Performed on Vanadium Redox Flow Battery}
+      \field{urlday}{24}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{40}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{e00957}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1016/j.susmat.2024.e00957
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\UH6QHDDS\\Krakowiak et al. - 2024 - Three modes of electrochemical impedance spectroscopy measurements performed on vanadium redox flow.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\XJQUT7X9\\S2214993724001374.html
+      \endverb
+      \keyw{Dynamic impedance,Energy storage,Nonstationary conditions,Real time monitoring,Redox flow battery}
+    \endentry
   \enddatalist
-  \missing{creasonFourierTransformFaradaic1972a}
-  \missing{creasonFourierTransformFaradaic1973}
 \endrefsection
 \endinput
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bcf:controlfile version="3.10" bltxversion="3.19" xmlns:bcf="https://sourceforge.net/projects/biblatex">
+<bcf:controlfile version="3.11" bltxversion="3.21" xmlns:bcf="https://sourceforge.net/projects/biblatex">
   <!-- BIBER OPTIONS -->
   <bcf:options component="biber" type="global">
     <bcf:option type="singlevalued">
@@ -502,6 +502,7 @@
     <bcf:option datatype="xml">inheritance</bcf:option>
     <bcf:option datatype="xml">translit</bcf:option>
     <bcf:option datatype="xml">uniquenametemplate</bcf:option>
+    <bcf:option datatype="xml">namehashtemplate</bcf:option>
     <bcf:option datatype="xml">sortingnamekeytemplate</bcf:option>
     <bcf:option datatype="xml">sortingtemplate</bcf:option>
     <bcf:option datatype="xml">extradatespec</bcf:option>
@@ -513,6 +514,7 @@
     <bcf:option datatype="string">alphaothers</bcf:option>
     <bcf:option datatype="string">sortalphaothers</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
+    <bcf:option datatype="string">citepagerange</bcf:option>
     <bcf:option datatype="string">texencoding</bcf:option>
     <bcf:option datatype="string">bibencoding</bcf:option>
     <bcf:option datatype="string">sortingtemplatename</bcf:option>
@@ -748,9 +750,10 @@
   </bcf:optionscope>
   <bcf:optionscope type="ENTRY">
     <bcf:option datatype="string">noinherit</bcf:option>
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">presort</bcf:option>
     <bcf:option datatype="string" backendout="1">indexing</bcf:option>
@@ -827,9 +830,10 @@
     <bcf:option datatype="integer" backendout="1">minalphanames</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAMELIST">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquelist</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
@@ -843,9 +847,10 @@
     <bcf:option datatype="boolean" backendout="1">useprefix</bcf:option>
   </bcf:optionscope>
   <bcf:optionscope type="NAME">
-    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename">nametemplates</bcf:option>
+    <bcf:option datatype="string" backendin="sortingnamekeytemplatename,uniquenametemplatename,labelalphanametemplatename,namehashtemplatename">nametemplates</bcf:option>
     <bcf:option datatype="string" backendout="1">labelalphanametemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">uniquenametemplatename</bcf:option>
+    <bcf:option datatype="string" backendout="1">namehashtemplatename</bcf:option>
     <bcf:option datatype="string" backendout="1">sortingnamekeytemplatename</bcf:option>
     <bcf:option datatype="string">uniquename</bcf:option>
     <bcf:option datatype="boolean" backendout="1">familyinits</bcf:option>
@@ -1059,6 +1064,13 @@
     <bcf:namepart order="2" base="1">family</bcf:namepart>
     <bcf:namepart order="3">given</bcf:namepart>
   </bcf:uniquenametemplate>
+  <!-- NAME HASH TEMPLATES -->
+  <bcf:namehashtemplate name="global">
+    <bcf:namepart order="1" hashscope="full">family</bcf:namepart>
+    <bcf:namepart order="2" hashscope="full">given</bcf:namepart>
+    <bcf:namepart order="3" hashscope="full">prefix</bcf:namepart>
+    <bcf:namepart order="4" hashscope="full">suffix</bcf:namepart>
+  </bcf:namehashtemplate>
   <!-- SORTING NAME KEY TEMPLATES -->
   <bcf:sortingnamekeytemplate name="global" visibility="sort">
     <bcf:keypart order="1">
@@ -2399,38 +2411,73 @@
     <bcf:citekey order="35" intorder="1">waltersWeakAdsorptionAnions2001a</bcf:citekey>
     <bcf:citekey order="36" intorder="1">garlandAnalysisExperimentalConstraints2004</bcf:citekey>
     <bcf:citekey order="37" intorder="1">garlandKineticAnalysisElectrosorption2002a</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">pettitElectrodepositionIndiumMolybdenum2002</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">darowickiInvestigationsPassiveLayer2003</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">darowickiInstantaneousElectrochemicalImpedance2004a</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">darowickiDynamicElectrochemicalImpedance2003a</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">darowickiContinuousFrequencyMethodMeasurement2003</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">darowickiDeterminationElectrodeImpedance2004a</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">darowickiInvestigationsPassiveLayer2003</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">darowickiEvaluationPittingCorrosion2004a</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">darowickiTimeDependencePit2004</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">krakowiakImpedanceInvestigationPassive2005</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">krakowiakImpedanceMetastablePitting2005</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">orlikowskiInstantaneousImpedanceMonitoring2015</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">rylInstantaneousImpedanceMonitoring2016</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">orlikowskiDeterminationPittingCorrosion2017</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">naroznyApplicationElectrochemicalImpedance2018</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">darowickiNovelApplicationDynamic2020a</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">rylInstantaneousImpedanceAnalysis2017</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">arutunowElectricalMechanicalCharacterization2015</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">zielinskiApplicationMultisineNanoscale2015</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">wysockaInvestigationElectrochemicalBehaviour2016</bcf:citekey>
-    <bcf:citekey order="58" intorder="1">gawelImpedanceMonitoringCorrosion2017</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">darowickiDetectionStressCorrosion2004</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">darowickiImpedanceCharacterizationProcess2004</bcf:citekey>
-    <bcf:citekey order="61" intorder="1">darowickiDynamicElectrochemicalImpedance2004</bcf:citekey>
-    <bcf:citekey order="62" intorder="1">burczykLocalElectrochemicalImpedance2018</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">zielinskiMultifrequencyNanoscaleImpedance2019</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">rylStudySurfaceTermination2016</bcf:citekey>
-    <bcf:citekey order="65" intorder="1">parasinskaApplicationQuartzCrystal2024</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">slepskiImpedanceMonitoringFuel2015</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">darowickiInfluenceDynamicLoad2019</bcf:citekey>
-    <bcf:citekey order="68" intorder="1">darowickiImpedanceHydrogenOxidation2020a</bcf:citekey>
-    <bcf:citekey order="69" intorder="1">krakowiakThreeModesElectrochemical2024</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">assiongbonElectrooxidationMethanolGold2005</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">emeryTimeResolvedImpedance2005</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">shiElectrocatalysisHypophosphiteNickel2014</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">pettitElectrodepositionIndiumMolybdenum2002</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">assiongbonChemicalRolesPeroxidebased2004</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">gorantlaChemicalEffectsChemical2005</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">pettitRoleIodateIons2005</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">luRelativeRoles22004</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">pettitTimeResolvedStudy2004</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">gorantlaCitricAcidComplexing2005</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">assiongbonElectrooxidationMethanolGold2005</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">darowickiInvestigationsPassiveLayer2003</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">darowickiInstantaneousElectrochemicalImpedance2004a</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">darowickiDynamicElectrochemicalImpedance2003a</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">darowickiContinuousFrequencyMethodMeasurement2003</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">darowickiDeterminationElectrodeImpedance2004a</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">darowickiInvestigationsPassiveLayer2003</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">darowickiEvaluationPittingCorrosion2004a</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">darowickiTimeDependencePit2004</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">krakowiakImpedanceInvestigationPassive2005</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">krakowiakImpedanceMetastablePitting2005</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">orlikowskiInstantaneousImpedanceMonitoring2015</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">rylInstantaneousImpedanceMonitoring2016</bcf:citekey>
+    <bcf:citekey order="61" intorder="1">orlikowskiDeterminationPittingCorrosion2017</bcf:citekey>
+    <bcf:citekey order="62" intorder="1">naroznyApplicationElectrochemicalImpedance2018</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">darowickiNovelApplicationDynamic2020a</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">rylInstantaneousImpedanceAnalysis2017</bcf:citekey>
+    <bcf:citekey order="65" intorder="1">arutunowElectricalMechanicalCharacterization2015</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">zielinskiApplicationMultisineNanoscale2015</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">wysockaInvestigationElectrochemicalBehaviour2016</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">gawelImpedanceMonitoringCorrosion2017</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">darowickiDetectionStressCorrosion2004</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">darowickiImpedanceCharacterizationProcess2004</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">darowickiDynamicElectrochemicalImpedance2004</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">burczykLocalElectrochemicalImpedance2018</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">zielinskiMultifrequencyNanoscaleImpedance2019</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">rylStudySurfaceTermination2016</bcf:citekey>
+    <bcf:citekey order="75" intorder="1">parasinskaApplicationQuartzCrystal2024</bcf:citekey>
+    <bcf:citekey order="76" intorder="1">slepskiImpedanceMonitoringFuel2015</bcf:citekey>
+    <bcf:citekey order="77" intorder="1">darowickiInfluenceDynamicLoad2019</bcf:citekey>
+    <bcf:citekey order="78" intorder="1">darowickiImpedanceHydrogenOxidation2020a</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">krakowiakThreeModesElectrochemical2024</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">vangheemElectrochemicalImpedanceSpectroscopy2004a</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">vangheemElectrochemicalImpedanceSpectroscopy2006a</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">blajievImprovementImpedanceMeasurement2006</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">vangheemInstantaneousImpedanceMeasurements2004</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">vaningelgemAdvantagesOddRandom2009</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">schoukensBroadbandSteppedSine1999</bcf:citekey>
+    <bcf:citekey order="86" intorder="1">schoukensSurveyExcitationSignals1988a</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">vaningelgemApplicationMultisineImpedance2008</bcf:citekey>
+    <bcf:citekey order="88" intorder="1">breugelmansOddRandomPhase2010a</bcf:citekey>
+    <bcf:citekey order="89" intorder="1">alvarez-pampliegaCorrosionStudyAlrich2014</bcf:citekey>
+    <bcf:citekey order="90" intorder="1">jiOddRandomPhase2018</bcf:citekey>
+    <bcf:citekey order="91" intorder="1">jiElectrochemicalRamanAnalysis2020</bcf:citekey>
+    <bcf:citekey order="92" intorder="1">blajievPotentiodynamicEISInvestigation2008</bcf:citekey>
+    <bcf:citekey order="93" intorder="1">geboesInvestigationAdsorptionMechanism2015</bcf:citekey>
+    <bcf:citekey order="94" intorder="1">hauffmanMeasuringAdsorptionEthanol2012</bcf:citekey>
+    <bcf:citekey order="95" intorder="1">hauffmanDynamicSituStudy2013</bcf:citekey>
+    <bcf:citekey order="96" intorder="1">fernandezmaciaStudyElectronTransfer2014</bcf:citekey>
+    <bcf:citekey order="97" intorder="1">jorcinInvestigationSelfhealingProperties2010</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">breugelmansOddRandomPhase2010</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">woutersMonitoringInitialContact2021</bcf:citekey>
+    <bcf:citekey order="100" intorder="1">meeusenFEMModellingPredict2023</bcf:citekey>
+    <bcf:citekey order="101" intorder="1">madelatSituMonitoringLateral2023</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">fernandezmaciaORPEISStudyTime2015</bcf:citekey>
+    <bcf:citekey order="103" intorder="1">pauwelsNewMultisinebasedImpedimetric2016</bcf:citekey>
+    <bcf:citekey order="104" intorder="1">meeusenUseOddRandom2018</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
@@ -2443,12 +2490,13 @@
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
   <bcf:datalist section="0"
-                name="none/global//global/global"
+                name="none/global//global/global/global"
                 type="entry"
                 sortingtemplatename="none"
                 sortingnamekeytemplatename="global"
                 labelprefix=""
                 uniquenametemplatename="global"
-                labelalphanametemplatename="global">
+                labelalphanametemplatename="global"
+                namehashtemplatename="global">
   </bcf:datalist>
 </bcf:controlfile>

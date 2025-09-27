@@ -1,101 +1,102 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.5)  26 SEP 2025 14:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.20)  27 SEP 2025 16:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./main.tex
-(main.tex
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
-(C:\Program Files\MiKTeX\tex/latex/base\book.cls
-Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
-(C:\Program Files\MiKTeX\tex/latex/base\bk11.clo
-File: bk11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+**main.tex
+(./main.tex
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2025/01/22 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count187
-\c@chapter=\count188
-\c@section=\count189
-\c@subsection=\count190
-\c@subsubsection=\count191
-\c@paragraph=\count192
-\c@subparagraph=\count193
-\c@figure=\count194
-\c@table=\count195
-\abovecaptionskip=\skip48
-\belowcaptionskip=\skip49
-\bibindent=\dimen140
-) (preable.tex
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2023/05/13 v2.17o AMS math features
-\@mathmargin=\skip50
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(./preable.tex
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/06/16 v2.17y AMS math features
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2021/08/26 v2.01 AMS text
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
 
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
-\ex@=\dimen141
+\ex@=\dimen149
 ))
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen142
+\pmbraise@=\dimen150
 )
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count196
-LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count197
-\leftroot@=\count198
-LaTeX Info: Redefining \overline on input line 399.
-LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count199
-\DOTSCASE@=\count266
-LaTeX Info: Redefining \ldots on input line 496.
-LaTeX Info: Redefining \dots on input line 499.
-LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
-LaTeX Info: Redefining \big on input line 722.
-LaTeX Info: Redefining \Big on input line 723.
-LaTeX Info: Redefining \bigg on input line 724.
-LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen143
-LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count267
-LaTeX Info: Redefining \bmod on input line 905.
-LaTeX Info: Redefining \pmod on input line 910.
-LaTeX Info: Redefining \smash on input line 940.
-LaTeX Info: Redefining \relbar on input line 970.
-LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count268
-\dotsspace@=\muskip16
-\c@parentequation=\count269
-\dspbrk@lvl=\count270
+\inf@bad=\count284
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count285
+\leftroot@=\count286
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count287
+\DOTSCASE@=\count288
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen151
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count289
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count290
+\dotsspace@=\muskip17
+\c@parentequation=\count291
+\dspbrk@lvl=\count292
 \tag@help=\toks18
-\row@=\count271
-\column@=\count272
-\maxfields@=\count273
+\row@=\count293
+\column@=\count294
+\maxfields@=\count295
 \andhelp@=\toks19
-\eqnshift@=\dimen144
-\alignsep@=\dimen145
-\tagshift@=\dimen146
-\tagwidth@=\dimen147
-\totwidth@=\dimen148
-\lineht@=\dimen149
+\eqnshift@=\dimen152
+\alignsep@=\dimen153
+\tagshift@=\dimen154
+\tagwidth@=\dimen155
+\totwidth@=\dimen156
+\lineht@=\dimen157
 \@envbody=\toks20
-\multlinegap=\skip51
-\multlinetaggap=\skip52
+\multlinegap=\skip52
+\multlinetaggap=\skip53
 \mathdisplay@stack=\toks21
-LaTeX Info: Redefining \[ on input line 2953.
-LaTeX Info: Redefining \] on input line 2954.
+LaTeX Info: Redefining \[ on input line 2949.
+LaTeX Info: Redefining \] on input line 2950.
 )
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -103,150 +104,151 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/jknappen\mathrsfs.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
 Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
 \symrsfs=\mathgroup6
 )
-(C:\Program Files\MiKTeX\tex/latex/blindtext\blindtext.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/blindtext/blindtext.sty
 Package: blindtext 2012/01/06 V2.0 blindtext-Package
 
-(C:\Program Files\MiKTeX\tex/latex/tools\xspace.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count274
-\c@Blindtext=\count275
-\c@blind@countparstart=\count276
-\blind@countxx=\count277
-\blindtext@numBlindtext=\count278
-\blind@countyy=\count279
-\c@blindlist=\count280
-\c@blindlistlevel=\count281
-\c@blindlist@level=\count282
-\blind@listitem=\count283
-\c@blind@listcount=\count284
-\c@blind@levelcount=\count285
-\blind@mathformula=\count286
-\blind@Mathformula=\count287
-\c@blind@randomcount=\count288
-\c@blind@randommax=\count289
-\c@blind@pangramcount=\count290
-\c@blind@pangrammax=\count291
+\c@blindtext=\count296
+\c@Blindtext=\count297
+\c@blind@countparstart=\count298
+\blind@countxx=\count299
+\blindtext@numBlindtext=\count300
+\blind@countyy=\count301
+\c@blindlist=\count302
+\c@blindlistlevel=\count303
+\c@blindlist@level=\count304
+\blind@listitem=\count305
+\c@blind@listcount=\count306
+\c@blind@levelcount=\count307
+\blind@mathformula=\count308
+\blind@Mathformula=\count309
+\c@blind@randomcount=\count310
+\c@blind@randommax=\count311
+\c@blind@pangramcount=\count312
+\c@blind@pangrammax=\count313
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 107.
+Package graphics Info: Driver file: pdftex.def on input line 106.
 
-(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen150
-\Gin@req@width=\dimen151
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
 )
-(C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
 
-(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(C:\Program Files\MiKTeX\tex/latex/graphics\dvipsnam.def
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen152
-\captionmargin=\dimen153
-\caption@leftmargin=\dimen154
-\caption@rightmargin=\dimen155
-\caption@width=\dimen156
-\caption@indent=\dimen157
-\caption@parindent=\dimen158
-\caption@hangindent=\dimen159
+\caption@tempdima=\dimen160
+\captionmargin=\dimen161
+\caption@leftmargin=\dimen162
+\caption@rightmargin=\dimen163
+\caption@width=\dimen164
+\caption@indent=\dimen165
+\caption@parindent=\dimen166
+\caption@hangindent=\dimen167
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count292
-\c@continuedfloat=\count293
+\c@caption@flags=\count314
+\c@continuedfloat=\count315
 )
-(C:\Program Files\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count294
-\lst@gtempboxa=\box53
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count316
+\lst@gtempboxa=\box55
 \lst@token=\toks23
-\lst@length=\count295
-\lst@currlwidth=\dimen160
-\lst@column=\count296
-\lst@pos=\count297
-\lst@lostspace=\dimen161
-\lst@width=\dimen162
-\lst@newlines=\count298
-\lst@lineno=\count299
-\lst@maxwidth=\dimen163
+\lst@length=\count317
+\lst@currlwidth=\dimen168
+\lst@column=\count318
+\lst@pos=\count319
+\lst@lostspace=\dimen169
+\lst@width=\dimen170
+\lst@newlines=\count320
+\lst@lineno=\count321
+\lst@maxwidth=\dimen171
 
-(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-\c@lstnumber=\count300
-\lst@skipnumbers=\count301
-\lst@framebox=\box54
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2024/09/23 1.10c (Carsten Heinz)
 )
-(C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg
-File: listings.cfg 2023/02/27 1.9 listings configuration
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2024/09/23 1.10c (Carsten Heinz)
+\c@lstnumber=\count322
+\lst@skipnumbers=\count323
+\lst@framebox=\box56
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2024/09/23 1.10c listings configuration
 ))
-Package: listings 2023/02/27 1.9 (Carsten Heinz)
+Package: listings 2024/09/23 1.10c (Carsten Heinz)
 
-(C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
-Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
-\c@tracingmulticols=\count302
-\mult@box=\box55
-\multicol@leftmargin=\dimen164
-\c@unbalance=\count303
-\c@collectmore=\count304
-\doublecol@number=\count305
-\multicoltolerance=\count306
-\multicolpretolerance=\count307
-\full@width=\dimen165
-\page@free=\dimen166
-\premulticols=\dimen167
-\postmulticols=\dimen168
-\multicolsep=\skip53
-\multicolbaselineskip=\skip54
-\partial@page=\box56
-\last@line=\box57
-\mc@boxedresult=\box58
-\maxbalancingoverflow=\dimen169
-\mult@rightbox=\box59
-\mult@grightbox=\box60
-\mult@firstbox=\box61
-\mult@gfirstbox=\box62
-\@tempa=\box63
-\@tempa=\box64
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2025/05/25 v2.0a multicolumn formatting (FMi)
+\c@tracingmulticols=\count324
+\mult@box=\box57
+\multicol@leftmargin=\dimen172
+\c@unbalance=\count325
+\c@collectmore=\count326
+\doublecol@number=\count327
+\multicoltolerance=\count328
+\multicolpretolerance=\count329
+\full@width=\dimen173
+\page@free=\dimen174
+\premulticols=\dimen175
+\postmulticols=\dimen176
+\multicolsep=\skip54
+\multicolbaselineskip=\skip55
+\partial@page=\box58
+\last@line=\box59
+\mc@boxedresult=\box60
+\maxbalancingoverflow=\dimen177
+\mult@rightbox=\box61
+\mult@grightbox=\box62
+\mult@firstbox=\box63
+\mult@gfirstbox=\box64
 \@tempa=\box65
 \@tempa=\box66
 \@tempa=\box67
@@ -281,297 +283,300 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \@tempa=\box96
 \@tempa=\box97
 \@tempa=\box98
-\c@minrows=\count308
-\c@columnbadness=\count309
-\c@finalcolumnbadness=\count310
-\last@try=\dimen170
-\multicolovershoot=\dimen171
-\multicolundershoot=\dimen172
-\mult@nat@firstbox=\box99
-\colbreak@box=\box100
-\mc@col@check@num=\count311
+\@tempa=\box99
+\@tempa=\box100
+\c@minrows=\count330
+\c@columnbadness=\count331
+\c@finalcolumnbadness=\count332
+\last@try=\dimen178
+\multicolovershoot=\dimen179
+\multicolundershoot=\dimen180
+\mult@nat@firstbox=\box101
+\colbreak@box=\box102
+\mc@col@check@num=\count333
+\g__mc_curr_col_int=\count334
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/makecell\makecell.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 
-(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
-Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen173
-\ar@mcellbox=\box101
-\extrarowheight=\dimen174
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/array.sty
+Package: array 2025/06/08 v2.6j Tabular extension package (FMi)
+\col@sep=\dimen181
+\ar@mcellbox=\box103
+\extrarowheight=\dimen182
 \NC@list=\toks24
-\extratabsurround=\skip55
-\backup@length=\skip56
-\ar@cellbox=\box102
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box104
 )
-\rotheadsize=\dimen175
-\c@nlinenum=\count312
+\rotheadsize=\dimen183
+\c@nlinenum=\count335
 \TeXr@lab=\toks25
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen176
-\lightrulewidth=\dimen177
-\cmidrulewidth=\dimen178
-\belowrulesep=\dimen179
-\belowbottomsep=\dimen180
-\aboverulesep=\dimen181
-\abovetopsep=\dimen182
-\cmidrulesep=\dimen183
-\cmidrulekern=\dimen184
-\defaultaddspace=\dimen185
-\@cmidla=\count313
-\@cmidlb=\count314
-\@aboverulesep=\dimen186
-\@belowrulesep=\dimen187
-\@thisruleclass=\count315
-\@lastruleclass=\count316
-\@thisrulewidth=\dimen188
+\heavyrulewidth=\dimen184
+\lightrulewidth=\dimen185
+\cmidrulewidth=\dimen186
+\belowrulesep=\dimen187
+\belowbottomsep=\dimen188
+\aboverulesep=\dimen189
+\abovetopsep=\dimen190
+\cmidrulesep=\dimen191
+\cmidrulekern=\dimen192
+\defaultaddspace=\dimen193
+\@cmidla=\count336
+\@cmidlb=\count337
+\@aboverulesep=\dimen194
+\@belowrulesep=\dimen195
+\@thisruleclass=\count338
+\@lastruleclass=\count339
+\@thisrulewidth=\dimen196
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/changepage\changepage.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count317
-\cp@tempcnt=\count318
+\c@cp@cntr=\count340
+\cp@tempcnt=\count341
 )
-(C:\Program Files\MiKTeX\tex/latex/tools\indentfirst.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
-(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
-Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
-(C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarerr.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count319
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count342
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count320
+\lrq@indent=\count343
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
-(C:\Program Files\MiKTeX\tex/latex/url\url.sty
-\Urlmuskip=\muskip17
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count321
-\c@listtotal=\count322
-\c@listcount=\count323
-\c@liststart=\count324
-\c@liststop=\count325
-\c@citecount=\count326
-\c@citetotal=\count327
-\c@multicitecount=\count328
-\c@multicitetotal=\count329
-\c@instcount=\count330
-\c@maxnames=\count331
-\c@minnames=\count332
-\c@maxitems=\count333
-\c@minitems=\count334
-\c@citecounter=\count335
-\c@maxcitecounter=\count336
-\c@savedcitecounter=\count337
-\c@uniquelist=\count338
-\c@uniquename=\count339
-\c@refsection=\count340
-\c@refsegment=\count341
-\c@maxextratitle=\count342
-\c@maxextratitleyear=\count343
-\c@maxextraname=\count344
-\c@maxextradate=\count345
-\c@maxextraalpha=\count346
-\c@abbrvpenalty=\count347
-\c@highnamepenalty=\count348
-\c@lownamepenalty=\count349
-\c@maxparens=\count350
-\c@parenlevel=\count351
-\blx@tempcnta=\count352
-\blx@tempcntb=\count353
-\blx@tempcntc=\count354
-\c@blx@maxsection=\count355
-\blx@maxsegment@0=\count356
-\blx@notetype=\count357
-\blx@parenlevel@text=\count358
-\blx@parenlevel@foot=\count359
-\blx@sectionciteorder@0=\count360
-\blx@sectionciteorderinternal@0=\count361
-\blx@entrysetcounter=\count362
-\blx@biblioinstance=\count363
-\labelnumberwidth=\skip57
-\labelalphawidth=\skip58
-\biblabelsep=\skip59
-\bibitemsep=\skip60
-\bibnamesep=\skip61
-\bibinitsep=\skip62
-\bibparsep=\skip63
-\bibhang=\skip64
+\c@tabx@nest=\count344
+\c@listtotal=\count345
+\c@listcount=\count346
+\c@liststart=\count347
+\c@liststop=\count348
+\c@citecount=\count349
+\c@citetotal=\count350
+\c@multicitecount=\count351
+\c@multicitetotal=\count352
+\c@instcount=\count353
+\c@maxnames=\count354
+\c@minnames=\count355
+\c@maxitems=\count356
+\c@minitems=\count357
+\c@citecounter=\count358
+\c@maxcitecounter=\count359
+\c@savedcitecounter=\count360
+\c@uniquelist=\count361
+\c@uniquename=\count362
+\c@refsection=\count363
+\c@refsegment=\count364
+\c@maxextratitle=\count365
+\c@maxextratitleyear=\count366
+\c@maxextraname=\count367
+\c@maxextradate=\count368
+\c@maxextraalpha=\count369
+\c@abbrvpenalty=\count370
+\c@highnamepenalty=\count371
+\c@lownamepenalty=\count372
+\c@maxparens=\count373
+\c@parenlevel=\count374
+\blx@tempcnta=\count375
+\blx@tempcntb=\count376
+\blx@tempcntc=\count377
+\c@blx@maxsection=\count378
+\blx@maxsegment@0=\count379
+\blx@notetype=\count380
+\blx@parenlevel@text=\count381
+\blx@parenlevel@foot=\count382
+\blx@sectionciteorder@0=\count383
+\blx@sectionciteorderinternal@0=\count384
+\blx@entrysetcounter=\count385
+\blx@biblioinstance=\count386
+\labelnumberwidth=\skip58
+\labelalphawidth=\skip59
+\biblabelsep=\skip60
+\bibitemsep=\skip61
+\bibnamesep=\skip62
+\bibinitsep=\skip63
+\bibparsep=\skip64
+\bibhang=\skip65
 \blx@bcfin=\read2
 \blx@bcfout=\write3
-\blx@langwohyphens=\language79
-\c@mincomprange=\count364
-\c@maxcomprange=\count365
-\c@mincompwidth=\count366
+\blx@langwohyphens=\language23
+\c@mincomprange=\count387
+\c@maxcomprange=\count388
+\c@mincompwidth=\count389
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex\blx-dm.def
-File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count367
-\c@savedafterword=\count368
-\c@annotator=\count369
-\c@savedannotator=\count370
-\c@author=\count371
-\c@savedauthor=\count372
-\c@bookauthor=\count373
-\c@savedbookauthor=\count374
-\c@commentator=\count375
-\c@savedcommentator=\count376
-\c@editor=\count377
-\c@savededitor=\count378
-\c@editora=\count379
-\c@savededitora=\count380
-\c@editorb=\count381
-\c@savededitorb=\count382
-\c@editorc=\count383
-\c@savededitorc=\count384
-\c@foreword=\count385
-\c@savedforeword=\count386
-\c@holder=\count387
-\c@savedholder=\count388
-\c@introduction=\count389
-\c@savedintroduction=\count390
-\c@namea=\count391
-\c@savednamea=\count392
-\c@nameb=\count393
-\c@savednameb=\count394
-\c@namec=\count395
-\c@savednamec=\count396
-\c@translator=\count397
-\c@savedtranslator=\count398
-\c@shortauthor=\count399
-\c@savedshortauthor=\count400
-\c@shorteditor=\count401
-\c@savedshorteditor=\count402
-\c@labelname=\count403
-\c@savedlabelname=\count404
-\c@institution=\count405
-\c@savedinstitution=\count406
-\c@lista=\count407
-\c@savedlista=\count408
-\c@listb=\count409
-\c@savedlistb=\count410
-\c@listc=\count411
-\c@savedlistc=\count412
-\c@listd=\count413
-\c@savedlistd=\count414
-\c@liste=\count415
-\c@savedliste=\count416
-\c@listf=\count417
-\c@savedlistf=\count418
-\c@location=\count419
-\c@savedlocation=\count420
-\c@organization=\count421
-\c@savedorganization=\count422
-\c@origlocation=\count423
-\c@savedoriglocation=\count424
-\c@origpublisher=\count425
-\c@savedorigpublisher=\count426
-\c@publisher=\count427
-\c@savedpublisher=\count428
-\c@language=\count429
-\c@savedlanguage=\count430
-\c@origlanguage=\count431
-\c@savedoriglanguage=\count432
-\c@pageref=\count433
-\c@savedpageref=\count434
-\shorthandwidth=\skip65
-\shortjournalwidth=\skip66
-\shortserieswidth=\skip67
-\shorttitlewidth=\skip68
-\shortauthorwidth=\skip69
-\shorteditorwidth=\skip70
-\locallabelnumberwidth=\skip71
-\locallabelalphawidth=\skip72
-\localshorthandwidth=\skip73
-\localshortjournalwidth=\skip74
-\localshortserieswidth=\skip75
-\localshorttitlewidth=\skip76
-\localshortauthorwidth=\skip77
-\localshorteditorwidth=\skip78
+\c@afterword=\count390
+\c@savedafterword=\count391
+\c@annotator=\count392
+\c@savedannotator=\count393
+\c@author=\count394
+\c@savedauthor=\count395
+\c@bookauthor=\count396
+\c@savedbookauthor=\count397
+\c@commentator=\count398
+\c@savedcommentator=\count399
+\c@editor=\count400
+\c@savededitor=\count401
+\c@editora=\count402
+\c@savededitora=\count403
+\c@editorb=\count404
+\c@savededitorb=\count405
+\c@editorc=\count406
+\c@savededitorc=\count407
+\c@foreword=\count408
+\c@savedforeword=\count409
+\c@holder=\count410
+\c@savedholder=\count411
+\c@introduction=\count412
+\c@savedintroduction=\count413
+\c@namea=\count414
+\c@savednamea=\count415
+\c@nameb=\count416
+\c@savednameb=\count417
+\c@namec=\count418
+\c@savednamec=\count419
+\c@translator=\count420
+\c@savedtranslator=\count421
+\c@shortauthor=\count422
+\c@savedshortauthor=\count423
+\c@shorteditor=\count424
+\c@savedshorteditor=\count425
+\c@labelname=\count426
+\c@savedlabelname=\count427
+\c@institution=\count428
+\c@savedinstitution=\count429
+\c@lista=\count430
+\c@savedlista=\count431
+\c@listb=\count432
+\c@savedlistb=\count433
+\c@listc=\count434
+\c@savedlistc=\count435
+\c@listd=\count436
+\c@savedlistd=\count437
+\c@liste=\count438
+\c@savedliste=\count439
+\c@listf=\count440
+\c@savedlistf=\count441
+\c@location=\count442
+\c@savedlocation=\count443
+\c@organization=\count444
+\c@savedorganization=\count445
+\c@origlocation=\count446
+\c@savedoriglocation=\count447
+\c@origpublisher=\count448
+\c@savedorigpublisher=\count449
+\c@publisher=\count450
+\c@savedpublisher=\count451
+\c@language=\count452
+\c@savedlanguage=\count453
+\c@origlanguage=\count454
+\c@savedoriglanguage=\count455
+\c@pageref=\count456
+\c@savedpageref=\count457
+\shorthandwidth=\skip66
+\shortjournalwidth=\skip67
+\shortserieswidth=\skip68
+\shorttitlewidth=\skip69
+\shortauthorwidth=\skip70
+\shorteditorwidth=\skip71
+\locallabelnumberwidth=\skip72
+\locallabelalphawidth=\skip73
+\localshorthandwidth=\skip74
+\localshortjournalwidth=\skip75
+\localshortserieswidth=\skip76
+\localshorttitlewidth=\skip77
+\localshortauthorwidth=\skip78
+\localshorteditorwidth=\skip79
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex\blx-compat.def
-File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
-File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count435
-\c@textcitetotal=\count436
-\c@textcitemaxnames=\count437
-\c@biburlbigbreakpenalty=\count438
-\c@biburlbreakpenalty=\count439
-\c@biburlnumpenalty=\count440
-\c@biburlucpenalty=\count441
-\c@biburllcpenalty=\count442
-\biburlbigskip=\muskip18
-\biburlnumskip=\muskip19
-\biburlucskip=\muskip20
-\biburllcskip=\muskip21
-\c@smartand=\count443
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
+\c@textcitecount=\count458
+\c@textcitetotal=\count459
+\c@textcitemaxnames=\count460
+\c@biburlbigbreakpenalty=\count461
+\c@biburlbreakpenalty=\count462
+\c@biburlnumpenalty=\count463
+\c@biburlucpenalty=\count464
+\c@biburllcpenalty=\count465
+\biburlbigskip=\muskip19
+\biburlnumskip=\muskip20
+\biburlucskip=\muskip21
+\biburllcskip=\muskip22
+\c@smartand=\count466
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
-File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+File: numeric.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
-File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count444
-\c@bbx:relatedtotal=\count445
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count467
+\c@bbx:relatedtotal=\count468
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
-File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+File: numeric.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -587,51 +592,49 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.cfg
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
 
-(C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2024-01-04 L3 programming layer (loader) 
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2025-09-02 L3 programming layer (loader) 
 
-(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count446
-\l__pdf_internal_box=\box103
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3backend/l3backend-pdftex.d
+ef
+File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count469
 ))
 Package biblatex Info: ... and expl3
-(biblatex)             2024-01-04 L3 programming layer (loader) 
+(biblatex)             2025-09-02 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
-(C:\Program Files\MiKTeX\tex/latex/l3packages/xparse\xparse.sty
-Package: xparse 2023-10-10 L3 Experimental document command parser
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
 )
-Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-))
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
+Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
+)) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count447
-\Gm@cntv=\count448
-\c@Gm@tempcnt=\count449
-\Gm@bindingoffset=\dimen189
-\Gm@wd@mp=\dimen190
-\Gm@odd@mp=\dimen191
-\Gm@even@mp=\dimen192
-\Gm@layoutwidth=\dimen193
-\Gm@layoutheight=\dimen194
-\Gm@layouthoffset=\dimen195
-\Gm@layoutvoffset=\dimen196
+\Gm@cnth=\count470
+\Gm@cntv=\count471
+\c@Gm@tempcnt=\count472
+\Gm@bindingoffset=\dimen197
+\Gm@wd@mp=\dimen198
+\Gm@odd@mp=\dimen199
+\Gm@even@mp=\dimen256
+\Gm@layoutwidth=\dimen257
+\Gm@layoutheight=\dimen258
+\Gm@layouthoffset=\dimen259
+\Gm@layoutvoffset=\dimen260
 \Gm@dimlist=\toks26
-
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg))
+)
 
 Package geometry Warning: Over-specification in `h'-direction.
     `width' (540.60236pt) is ignored.
@@ -640,34 +643,35 @@ Package geometry Warning: Over-specification in `h'-direction.
 Package geometry Warning: Over-specification in `v'-direction.
     `height' (731.23582pt) is ignored.
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/xcharter\XCharter.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xcharter/XCharter.sty
 Package: XCharter 2023/07/21 v1.25
 
 `XCharter' v1.25, 2023/07/21 Text macros for XCharter, an extension of Charter 
-(msharpe) (C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+(msharpe)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
-(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex
-(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks27
 \XKV@tempa@toks=\toks28
 )
-\XKV@depth=\count450
+\XKV@depth=\count473
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(C:\Program Files\MiKTeX\tex/latex/base\textcomp.sty
-Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/xstring\xstring.sty
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/xstring\xstring.tex
-\xs_counta=\count451
-\xs_countb=\count452
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count474
+\xs_countb=\count475
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/carlisle\scalefnt.sty)
-(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 )
 LaTeX Font Info:    Setting XCharter-LF sub-encoding to TS1/0 on input line 37.
 
@@ -677,12 +681,12 @@ LaTeX Font Info:    Setting XCharter-OsF sub-encoding to TS1/0 on input line 37
 .
 LaTeX Font Info:    Changing XCharter-TOsF sub-encoding to TS1/0 on input line 
 37.
-\xch@cnt=\count453
+\xch@cnt=\count476
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/fontaxes\fontaxes.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2025-05-24 v2.0.1 Font selection axes (deprecated)
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/fontaxes\fontaxes-v1.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/fontaxes/fontaxes-v1.sty
 Package: fontaxes 2020/07/21 v1.0e Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
 LaTeX Info: Redefining \itshape on input line 31.
@@ -699,62 +703,61 @@ LaTeX Info: Redefining \textsu on input line 737.
 LaTeX Info: Redefining \textde on input line 740.
 LaTeX Info: Redefining \textinf on input line 742.
 )
-(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2024/12/21 v2.1c Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+XCharter-TLF on inpu
-t line 112.
+t line 116.
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/xcharter\t1xcharter-tlf.fd
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xcharter/T1XCharter-TLF.fd
 File: T1XCharter-TLF.fd 2017/06/25 (autoinst) Font definitions for T1/XCharter-
 TLF.
 )
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 112.
-)
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+(Font)              scaled to size 10.95pt on input line 116.
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip79
-\f@nch@offset@elh=\skip80
-\f@nch@offset@erh=\skip81
-\f@nch@offset@olh=\skip82
-\f@nch@offset@orh=\skip83
-\f@nch@offset@elf=\skip84
-\f@nch@offset@erf=\skip85
-\f@nch@offset@olf=\skip86
-\f@nch@offset@orf=\skip87
-\f@nch@height=\skip88
-\f@nch@footalignment=\skip89
-\f@nch@widthL=\skip90
-\f@nch@widthC=\skip91
-\f@nch@widthR=\skip92
+\f@nch@headwidth=\skip80
+\f@nch@offset@elh=\skip81
+\f@nch@offset@erh=\skip82
+\f@nch@offset@olh=\skip83
+\f@nch@offset@orh=\skip84
+\f@nch@offset@elf=\skip85
+\f@nch@offset@erf=\skip86
+\f@nch@offset@olf=\skip87
+\f@nch@offset@orf=\skip88
+\f@nch@height=\skip89
+\f@nch@footalignment=\skip90
+\f@nch@widthL=\skip91
+\f@nch@widthC=\skip92
+\f@nch@widthR=\skip93
 \@temptokenb=\toks29
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/titlesec\titlesec.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box104
-\beforetitleunit=\skip93
-\aftertitleunit=\skip94
-\ttl@plus=\dimen197
-\ttl@minus=\dimen198
+\ttl@box=\box105
+\beforetitleunit=\skip94
+\aftertitleunit=\skip95
+\ttl@plus=\dimen261
+\ttl@minus=\dimen262
 \ttl@toksa=\toks30
-\titlewidth=\dimen199
-\titlewidthlast=\dimen256
-\titlewidthfirst=\dimen257
+\titlewidth=\dimen263
+\titlewidthlast=\dimen264
+\titlewidthfirst=\dimen265
 )
-\fullchapwidth=\skip95
+\fullchapwidth=\skip96
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/minitoc\minitoc.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/minitoc/minitoc.sty
 Package: minitoc 2018/07/12 v62 Package minitoc
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/minitoc\mtcmess.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/minitoc/mtcmess.sty
 Package: mtcmess 2006/03/14
 )
 Package minitoc Info: I0001
 (minitoc)             *** minitoc package, version 62 ***.
 \tf@mtc=\write4
-\mtcindent=\skip96
-\mtcskipamount=\skip97
+\mtcindent=\skip97
+\mtcskipamount=\skip98
 Package minitoc Info: I0005
 (minitoc)             compatible with hyperref.
 Package minitoc Info: I0023
@@ -762,8 +765,8 @@ Package minitoc Info: I0023
 Package minitoc Info: I0003
 (minitoc)             chapter level macros available.
 \mtc@toks=\toks31
-\mtc@strutbox=\box105
-\mtc@hstrutbox=\box106
+\mtc@strutbox=\box106
+\mtc@hstrutbox=\box107
 Package minitoc Info: I0002
 (minitoc)             Autoconfiguration of extensions.
 \openout4 = `main.mtc0'.
@@ -771,7 +774,7 @@ Package minitoc Info: I0002
 \openout4 = `main.mtc'.
 
 
-(main.mtc0)
+(./main.mtc0)
 Package minitoc Info: I0012
 (minitoc)             Long extensions (Unix-like) will be used.
 Package minitoc Info: I0031
@@ -781,181 +784,170 @@ Package minitoc Info: I0031
 
 \openout4 = `main.mtc0'.
 
-\c@mtc=\count454
-\c@minitocdepth=\count455
-\c@ptc=\count456
-\c@parttocdepth=\count457
-\ptcindent=\skip98
+\c@mtc=\count477
+\c@minitocdepth=\count478
+\c@ptc=\count479
+\c@parttocdepth=\count480
+\ptcindent=\skip99
 Package minitoc Info: I0010
 (minitoc)             The english language is selected.
 (minitoc)              on input line 4910.
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/minitoc\english.mld
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/minitoc/english.mld
 File: english.mld 2006/01/13
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/minitoc\english.mld
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/minitoc/english.mld
 File: english.mld 2006/01/13
 ))
-\fullwidthlen=\skip99
+\fullwidthlen=\skip100
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/fullwidth\fullwidth.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/fullwidth/fullwidth.sty
 Package: fullwidth 2011/11/18 v0.1: fullwidth
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/zref\zref-abspage.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/zref/zref-abspage.sty
 Package: zref-abspage 2025-06-08 v2.36 Module abspage for zref (HO)
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/zref\zref-base.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/zref/zref-base.sty
 Package: zref-base 2025-06-08 v2.36 Module base for zref (HO)
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.s
-ty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.
+sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-) (C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/etexcmds\etexcmds.sty
+) (/usr/local/texlive/2025basic/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/auxhook\auxhook.sty
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 Package zref Info: New property list: main on input line 767.
 Package zref Info: New property: default on input line 768.
 Package zref Info: New property: page on input line 769.
 )
-\c@abspage=\count458
+\c@abspage=\count481
 Package zref Info: New property: abspage on input line 67.
 )
-\fwd@width@length=\skip100
-\fwd@skipabove@length=\skip101
-\fwd@skipbelow@length=\skip102
-\fwd@leftmargin@length=\skip103
-\fwd@rightmargin@length=\skip104
-\fwd@innertopmargin@length=\skip105
-\fwd@innerbottommargin@length=\skip106
-\fwd@splittopskip@length=\skip107
-\fwd@splitbottomskip@length=\skip108
-\fwd@outermargin@length=\skip109
-\fwd@innermargin@length=\skip110
-\fwd@footenotedistance@length=\skip111
-\c@fwd@zref@counter=\count459
+\fwd@width@length=\skip101
+\fwd@skipabove@length=\skip102
+\fwd@skipbelow@length=\skip103
+\fwd@leftmargin@length=\skip104
+\fwd@rightmargin@length=\skip105
+\fwd@innertopmargin@length=\skip106
+\fwd@innerbottommargin@length=\skip107
+\fwd@splittopskip@length=\skip108
+\fwd@splitbottomskip@length=\skip109
+\fwd@outermargin@length=\skip110
+\fwd@innermargin@length=\skip111
+\fwd@footenotedistance@length=\skip112
+\c@fwd@zref@counter=\count482
 Package zref Info: New property: fwd@pagevalue on input line 209.
-\fwd@freevspace@length=\skip112
+\fwd@freevspace@length=\skip113
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/adjmulticol\adjmulticol.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/adjmulticol/adjmulticol.sty
 Package: adjmulticol 2022/05/15 v1.5 Adjusted margins for multicolumn layout
-\adjmc@inner=\dimen258
-\adjmc@outer=\dimen259
-\adjmc@saved@leftmargin=\dimen260
-)
-(C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+\adjmc@inner=\dimen266
+\adjmc@outer=\dimen267
+\adjmc@saved@leftmargin=\dimen268
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescape.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/letltxmacro\letltxmacro.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\gettitlestri
-ng.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/gettitlestring/gettitlestr
+ing.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count460
+\c@section@level=\count483
 )
-\@linkdim=\dimen261
-\Hy@linkcounter=\count461
-\Hy@pagecounter=\count462
- (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen269
+\Hy@linkcounter=\count484
+\Hy@pagecounter=\count485
+
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count463
+\Hy@SavedSpaceFactor=\count486
 
-(C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4181.
-Package hyperref Info: Link nesting OFF on input line 4186.
-Package hyperref Info: Hyper index ON on input line 4189.
-Package hyperref Info: Plain pages OFF on input line 4196.
-Package hyperref Info: Backreferencing OFF on input line 4201.
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4448.
-\c@Hy@tempcnt=\count464
-LaTeX Info: Redefining \url on input line 4786.
-\XeTeXLinkMargin=\dimen262
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count487
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen270
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count465
-\Field@Width=\dimen263
-\Fld@charsize=\dimen264
-Package hyperref Info: Hyper figures OFF on input line 6065.
-Package hyperref Info: Link nesting OFF on input line 6070.
-Package hyperref Info: Hyper index ON on input line 6073.
-Package hyperref Info: backreferencing OFF on input line 6080.
-Package hyperref Info: Link coloring OFF on input line 6085.
-Package hyperref Info: Link coloring with OCG OFF on input line 6090.
-Package hyperref Info: PDF/A mode OFF on input line 6095.
-(C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty
-Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
-package with kernel methods
-)
-\Hy@abspage=\count466
-\c@Item=\count467
-\c@Hfootnote=\count468
+\Fld@menulength=\count488
+\Field@Width=\dimen271
+\Fld@charsize=\dimen272
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count489
+\c@Item=\count490
+\c@Hfootnote=\count491
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\HyAnn@Count=\count492
+\Fld@listcount=\count493
+\c@bookmark@seq@number=\count494
 
-(C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/rerunfilecheck/rerunfilechec
+k.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
 
-(C:\Program Files\MiKTeX\tex/latex/base\atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
-kage
-with kernel methods
-)
-\HyAnn@Count=\count469
-\Fld@listcount=\count470
-\c@bookmark@seq@number=\count471
-
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck
-.sty
-Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
-
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecounter
-.sty
+(/usr/local/texlive/2025basic/texmf-dist/tex/generic/uniquecounter/uniquecounte
+r.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-85.
+84.
 )
-\Hy@SectionHShift=\skip113
+\Hy@SectionHShift=\skip114
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 174.
-) (metadata.tex)
-\@quotelevel=\count472
-\@quotereset=\count473
+) (./metadata.tex)
+\@quotelevel=\count495
+\@quotereset=\count496
 LaTeX Info: Redefining \oldstylenums on input line 5.
- (main.aux)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -977,40 +969,42 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 
-(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+(/usr/local/texlive/2025basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count474
-\scratchdimen=\dimen265
-\scratchbox=\box107
-\nofMPsegments=\count475
-\nofMParguments=\count476
+\scratchcounter=\count497
+\scratchdimen=\dimen273
+\scratchbox=\box108
+\nofMPsegments=\count498
+\nofMParguments=\count499
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count477
-\MPscratchDim=\dimen266
-\MPnumerator=\count478
-\makeMPintoPDFobject=\count479
+\MPscratchCnt=\count500
+\MPscratchDim=\dimen274
+\MPnumerator=\count501
+\makeMPintoPDFobject=\count502
 \everyMPtoPDFconversion=\toks33
-) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+)
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.s
+ty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: changepage package is loaded.
-\caption@adjustwidth@hsize=\dimen267
-\caption@adjustwidth@linewidth=\dimen268
+\caption@adjustwidth@hsize=\dimen275
+\caption@adjustwidth@linewidth=\dimen276
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count480
+\c@lstlisting=\count503
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
-
-(C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\english.lbx
-File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1018,8 +1012,26 @@ Package biblatex Info: Automatic encoding selection.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
+
+Package biblatex Warning: File 'main.bbl' is wrong format version - expected 3.
+3.
+
 Package biblatex Info: ... file 'main.bbl' found.
- (main.bbl)
+(./main.bbl
+
+! LaTeX Error: Unicode character Ì€ (U+0300)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.758            family={HÃ¡zÄ±Ì€
+                                 },
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+)
 Package biblatex Info: Reference section=0 on input line 5.
 Package biblatex Info: Reference segment=0 on input line 5.
 
@@ -1057,41 +1069,1394 @@ Package biblatex Info: Reference segment=0 on input line 5.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count481
-\c@mv@boldtabular=\count482
+\c@mv@tabular=\count504
+\c@mv@boldtabular=\count505
 Package hyperref Info: Link coloring ON on input line 5.
-(main.out) (main.out)
+(./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
- (customization_mainmatter.tex)
+
+Overfull \hbox (7.93831pt too wide) in paragraph at lines 23--6
+[]\T1/XCharter-TLF/m/n/10.95 author2hash=946e34af7eaf4e2f956e51c1f17ea0d6family
+=Kojima, fam-
+ []
+
+
+Overfull \hbox (109.38243pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 i-lyi=K., given=Hiroyuki, giveni=H.hash=41d7a293fe60
+1bc012a4aff2b383ac79family=Fujiwara,
+ []
+
+
+Overfull \hbox (186.84476pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=F., given=Shizuo, giveni=S.               
+    au-thor2hash=75b369664d9f864b07e37d1fd9b4e226family=Glover,
+ []
+
+
+Overfull \hbox (138.79161pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=Donald E., giveni=D. E.hash=b91b
+7811622654504067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (23.39404pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor2hash=a306eded7bfef598daa0b16e70da648efamily=Cre
+ason, fam-i-lyi=C.,
+ []
+
+
+Overfull \hbox (66.61116pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=Sam C., giveni=S. C.hash=b91b7811622654504067a
+48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (23.39404pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor2hash=a306eded7bfef598daa0b16e70da648efamily=Cre
+ason, fam-i-lyi=C.,
+ []
+
+
+Overfull \hbox (66.61116pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=Sam C., giveni=S. C.hash=b91b7811622654504067a
+48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (24.64223pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor3hash=889d4fb1748fe65d3a1e136053a86bd1family=Sch
+wall, fam-i-lyi=S.,
+ []
+
+
+Overfull \hbox (67.62955pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=Richard J., giveni=R. J.hash=09b391fb3f7edd728
+749b86b464ecf2ffamily=Bond,
+ []
+
+
+Overfull \hbox (131.55373pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Alan M., giveni=A. M.hash=b91b78
+11622654504067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (7.85597pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor3hash=09b391fb3f7edd728749b86b464ecf2ffamily=Bon
+d, fam-i-lyi=B.,
+ []
+
+
+Overfull \hbox (81.19655pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=Alan M., giveni=A. M.hash=889d4fb1748fe65d3a1e
+136053a86bd1family=Schwall,
+ []
+
+
+Overfull \hbox (134.77298pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Richard J., giveni=R. J.hash=b91
+b7811622654504067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (24.92693pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor5hash=19dd1d15432801ba1f41d1ae435570f0family=Sch
+wall, fam-i-lyi=S.,
+ []
+
+
+Overfull \hbox (41.11964pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=R. J., giveni=R. J.hash=10b9c2e9417efc3fdf8111
+1e637584d6family=Bond,
+ []
+
+
+Overfull \hbox (107.44197pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=A. M., giveni=A. M.hash=6da995a8
+8e6814ffece3ee02dc77907bfamily=Loyd,
+ []
+
+
+Overfull \hbox (109.85086pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=L., given=R. J., giveni=R. J.hash=0aa353b3
+6e7da6bd020a97626f151c53family=Larsen,
+ []
+
+
+Overfull \hbox (105.53662pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=L., given=J. G., giveni=J. G.hash=92bb20b2
+e16893ce7c32a909bf9e098dfamily=Smith,
+ []
+
+
+Overfull \hbox (200.33104pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=D. E., giveni=D. E.             
+                au-thor2hash=2b235adff58e9930fe8a72e8c2c5aa09family=Hayes,
+ []
+
+
+Overfull \hbox (130.52438pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=H., given=John W., giveni=J. W.hash=b91b78
+11622654504067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (11.41473pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor2hash=224cfa83d8ddd399a317b2192d9e5297family=Grz
+eszczuk, fam-
+ []
+
+
+Overfull \hbox (93.30785pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 i-lyi=G., given=Maria, giveni=M.hash=b91b78116226545
+04067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (11.41473pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor3hash=224cfa83d8ddd399a317b2192d9e5297family=Grz
+eszczuk, fam-
+ []
+
+
+Overfull \hbox (93.30785pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 i-lyi=G., given=Maria, giveni=M.hash=b91b78116226545
+04067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (140.62027pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Donald E., giveni=D. E.hash=80d8
+49c6758b30b58b6e7a8e638a9608family=Geiger,
+ []
+
+
+Overfull \hbox (11.41473pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor2hash=224cfa83d8ddd399a317b2192d9e5297family=Grz
+eszczuk, fam-
+ []
+
+
+Overfull \hbox (93.30785pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 i-lyi=G., given=Maria, giveni=M.hash=b91b78116226545
+04067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (14.80913pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor2hash=a13883ec00b731508b4808db8029a8affamily=Iva
+ska, fam-i-lyi=I.,
+ []
+
+
+Overfull \hbox (62.19829pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=Ari U., giveni=A. U.hash=b91b7811622654504067a
+48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (11.41473pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor2hash=224cfa83d8ddd399a317b2192d9e5297family=Grz
+eszczuk, fam-
+ []
+
+
+Overfull \hbox (93.30785pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 i-lyi=G., given=Maria, giveni=M.hash=b91b78116226545
+04067a48d869efe53family=Smith,
+ []
+
+
+Overfull \hbox (110.1684pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 i-lyi=E., given=Sten O., giveni=S. O.hash=c0a9f3d0e8
+fa131e2bbca7e2db693e81family=Wasberg,
+ []
+
+
+Overfull \hbox (119.90544pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=W., given=Mikael, giveni=M.hash=bbbcd2eb3d
+6e51cb42c6af08dfcda7c3family=Bobacka,
+ []
+
+
+Overfull \hbox (101.71738pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Johan, giveni=J.hash=0a05ddb542f
+dfa36fb3c9e37a12d0404family=Ivaska,
+ []
+
+
+Overfull \hbox (170.47357pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=I., given=Ari, giveni=A.                  
+       au-thor6hash=e7093b519dab7893d194c1ef0c0e946dfamily=Házì,
+ []
+
+
+Overfull \hbox (91.5778pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=H., given=Jeno, giveni=J.hash=3cb9896aac1a
+75c5641eae7c7dda1c9cfamily=Elton,
+ []
+
+
+Overfull \hbox (163.85622pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=E., given=Darrell M., giveni=D. M.hash=172
+8e0d2e785daed53a2a40c81af3713family=Czerwinski,
+ []
+
+
+Overfull \hbox (167.09735pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=C., given=W. Alexan-der, giveni=W. A.hash=
+f213267800d38013ddddf7b308d0e496family=Schiewe,
+ []
+
+
+Overfull \hbox (87.19775pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Jörg, giveni=J.hash=5fd6e4bac3ff
+a5ca1f759914fbf1f493family=Vicente-
+ []
+
+
+Overfull \hbox (169.09941pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 Beckett, fam-i-lyi=V., given=Victoria A., giveni=V. 
+A.hash=09b391fb3f7edd728749b86b464ecf2ffamily=Bond,
+ []
+
+
+Overfull \hbox (65.16641pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 lyi=S., given=Jörg, giveni=J.hash=bd72fd54c0c7ad2b93
+6a4be3a6d9b4c4family=Ház^^Y,
+ []
+
+
+Overfull \hbox (91.20547pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=H., given=Jenö, giveni=J.hash=5fd6e4bac3ff
+a5ca1f759914fbf1f493family=Vicente-
+ []
+
+
+Overfull \hbox (169.09941pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 Beckett, fam-i-lyi=V., given=Victoria A., giveni=V. 
+A.hash=09b391fb3f7edd728749b86b464ecf2ffamily=Bond,
+ []
+
+
+Overfull \hbox (9.91458pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor2hash=a5ea91cbef76906b9c01c02678cf147ffamily=Osa
+ka, fam-i-lyi=O.,
+ []
+
+
+Overfull \hbox (49.8163pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=Tetsuya, giveni=T.hash=029300ced2898c37d80aadb
+8f4ad7316family=Naoi,
+ []
+
+
+Overfull \hbox (210.8349pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=N., given=Katsuhiko, giveni=K.            
+               au-thor2hash=a5ea91cbef76906b9c01c02678cf147ffamily=Osaka,
+ []
+
+
+Overfull \hbox (123.02611pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=Tetsuya, giveni=T.hash=66ae0e3c9
+48e0bc152bbdb2867e84b20family=Yatsuda,
+ []
+
+
+Overfull \hbox (180.96867pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Y., given=Yuji, giveni=Y.                 
+           au-thor2hash=a5ea91cbef76906b9c01c02678cf147ffamily=Osaka,
+ []
+
+
+Overfull \hbox (103.05336pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=Tetsuya, giveni=T.hash=fecc3b75a
+07bf762ded23b0dbe4493abfamily=Kitai,
+ []
+
+
+Overfull \hbox (199.56169pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=Takashi, giveni=T.              
+              au-thor2hash=a5ea91cbef76906b9c01c02678cf147ffamily=Osaka,
+ []
+
+
+Overfull \hbox (103.05336pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=Tetsuya, giveni=T.hash=fecc3b75a
+07bf762ded23b0dbe4493abfamily=Kitai,
+ []
+
+
+Overfull \hbox (207.06241pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=Takashi, giveni=T.              
+              au-thor2hash=b58aeb00a2193de56bd0817107d6ff53family=Osaka,
+ []
+
+
+Overfull \hbox (95.83728pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=T., giveni=T.hash=e2e543aab47480
+c7ad31ea1dad0a62a8family=Yatsuda,
+ []
+
+
+Overfull \hbox (163.42778pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Y., given=Y., giveni=Y.                   
+   au-thor2hash=b7eb0475d14765c2c6092972f2f6e275family=Tsuru,
+ []
+
+
+Overfull \hbox (128.45721pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=T., given=Tooru, giveni=T.hash=d1274222dd9
+27d441130420f763fd475family=Haruyama,
+ []
+
+
+Overfull \hbox (189.00192pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=H., given=Shiro, giveni=S.                
+   au-thor2hash=b9cce85fe7d9f68317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (117.15445pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=f2f7f2ac
+09dd78514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (216.07181pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+               au-thor2hash=b9cce85fe7d9f68317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (117.15445pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=f2f7f2ac
+09dd78514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (218.10286pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+                au-thor2hash=b9cce85fe7d9f68317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (117.15445pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=f2f7f2ac
+09dd78514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (218.10286pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+                au-thor2hash=b9cce85fe7d9f68317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (117.15445pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=f2f7f2ac
+09dd78514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (218.10286pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+                au-thor2hash=b9cce85fe7d9f68317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (124.63336pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=a1811cd8
+10b8e7f4e5bdf3ce1e5dce37family=Barsoukov,
+ []
+
+
+Overfull \hbox (193.07365pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=E., giveni=E.                   
+          au-thor3hash=b9cce85fe7d9f68317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (124.63336pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=a1811cd8
+10b8e7f4e5bdf3ce1e5dce37family=Barsoukov,
+ []
+
+
+Overfull \hbox (94.85179pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=E., giveni=E.hash=f2f7f2ac09dd78
+514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (218.10286pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+                au-thor3hash=b9cce85fe7d9f68317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (124.63336pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=a1811cd8
+10b8e7f4e5bdf3ce1e5dce37family=Barsoukov,
+ []
+
+
+Overfull \hbox (94.85179pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=E., giveni=E.hash=f2f7f2ac09dd78
+514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (207.25143pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+                author3hash=02656a12cfeeb53525a79d625e08acf9family=Garcia-
+ []
+
+
+Overfull \hbox (168.41206pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 Belmonte, fam-i-lyi=G., given=Germà, giveni=G.hash=7
+1ef0a615f608dcc5db6939513ea40aefamily=Bisquert,
+ []
+
+
+Overfull \hbox (106.73259pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Juan, giveni=J.hash=735df04828be
+d59c2735fe231ccdcdebfamily=Popkirov,
+ []
+
+
+Overfull \hbox (24.87224pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 thor3hash=b9cce85fe7d9f68317613cb55687a0d1family=Pop
+kirov, fam-i-lyi=P.,
+ []
+
+
+Overfull \hbox (75.29453pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 given=G. S., giveni=G. S.hash=1093e766c81fc09993e52d
+6a1d9a0abcfamily=Burmeister,
+ []
+
+
+Overfull \hbox (101.2028pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=M., giveni=M.hash=f2f7f2ac09dd78
+514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (221.01021pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+               au-thor3hash=927fa2dde91db1408e54fe3e8196e365family=Baltrunas,
+ []
+
+
+Overfull \hbox (99.07849pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=G., giveni=G.hash=b9cce85fe7d9f6
+8317613cb55687a0d1family=Popkirov,
+ []
+
+
+Overfull \hbox (117.15445pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G. S., giveni=G. S.hash=f2f7f2ac
+09dd78514b6a1a33a6befc28family=Schindler,
+ []
+
+
+Overfull \hbox (212.23402pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R. N., giveni=R. N.             
+              au-thor3hash=b28e2f9d5c422a2d458f9a2dd48842cefamily=Walczyk,
+ []
+
+
+Overfull \hbox (106.96251pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=W., given=K.r., giveni=K.hash=ef3dc92edd29
+b07fbb78001e39eedd4efamily=Popkirov,
+ []
+
+
+Overfull \hbox (111.43002pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=G.s., giveni=G.hash=1062c5b72b22
+98a3695245effba1d315family=Schindler,
+ []
+
+
+Overfull \hbox (198.98122pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=R.n., giveni=R.                 
+           au-thor6hash=180f366a147a584474980b634f418952family=Walters,
+ []
+
+
+Overfull \hbox (118.2605pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=W., given=M. J., giveni=M. J.hash=2c7069a6
+eff16ba4f3d40ec6416e12b0family=Garland,
+ []
+
+
+Overfull \hbox (105.19713pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=J. E., giveni=J. E.hash=3d8ca449
+24e3947cdd9ba8452c560648family=Pettit,
+ []
+
+
+Overfull \hbox (149.22707pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=C. M., giveni=C. M.hash=424c217d
+2314544a08a1891e99c67837family=Zimmerman,
+ []
+
+
+Overfull \hbox (96.28378pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Z., given=D. S., giveni=D. S.hash=3cc36f63
+256fc8f8854d4c6a1ee220c8family=Marr,
+ []
+
+
+Overfull \hbox (98.3425pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=M., given=D. R., giveni=D. R.hash=f6f22d4b
+9c5ecadcbed20a7a4d4aebcbfamily=Roy,
+ []
+
+
+Overfull \hbox (189.77768pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=D., giveni=D.                   
+          au-thor3hash=2c7069a6eff16ba4f3d40ec6416e12b0family=Garland,
+ []
+
+
+Overfull \hbox (105.19713pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=J. E., giveni=J. E.hash=3d8ca449
+24e3947cdd9ba8452c560648family=Pettit,
+ []
+
+
+Overfull \hbox (98.10167pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=C. M., giveni=C. M.hash=f6f22d4b
+9c5ecadcbed20a7a4d4aebcbfamily=Roy,
+ []
+
+
+Overfull \hbox (187.74663pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=D., giveni=D.                   
+         au-thor5hash=2c7069a6eff16ba4f3d40ec6416e12b0family=Garland,
+ []
+
+
+Overfull \hbox (128.97461pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=J. E, giveni=J. E.hash=63d0d9962
+c14d8efae1e966464beb39bfamily=Assiongbon,
+ []
+
+
+Overfull \hbox (107.85208pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=A., given=K. A, giveni=K. A.hash=3d8ca4492
+4e3947cdd9ba8452c560648family=Pettit,
+ []
+
+
+Overfull \hbox (120.41173pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=C. M, giveni=C. M.hash=be6865e53
+45929b589d9d54210014607family=Emery,
+ []
+
+
+Overfull \hbox (87.43039pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=E., given=S. B, giveni=S. B.hash=f6f22d4b9
+c5ecadcbed20a7a4d4aebcbfamily=Roy,
+ []
+
+
+Overfull \hbox (181.86588pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=D, giveni=D.                    
+         au-thor6hash=3d8ca44924e3947cdd9ba8452c560648family=Pettit,
+ []
+
+
+Overfull \hbox (119.66211pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=C. M., giveni=C. M.hash=2c7069a6
+eff16ba4f3d40ec6416e12b0family=Garland,
+ []
+
+
+Overfull \hbox (121.09647pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=J. E., giveni=J. E.hash=2c252156
+0d65dd035f47489303133aa6family=Etukudo,
+ []
+
+
+Overfull \hbox (138.66026pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=E., given=N. R., giveni=N. R.hash=63d0d996
+2c14d8efae1e966464beb39bfamily=Assiongbon,
+ []
+
+
+Overfull \hbox (120.05627pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=A., given=K. A., giveni=K. A.hash=be6865e5
+345929b589d9d54210014607family=Emery,
+ []
+
+
+Overfull \hbox (90.67749pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=E., given=S. B., giveni=S. B.hash=f6f22d4b
+9c5ecadcbed20a7a4d4aebcbfamily=Roy,
+ []
+
+
+Overfull \hbox (204.99281pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=D., giveni=D.                   
+         au-thor3hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (108.00269pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=547c2b5a5540ec
+75bfef9348b7129303family=Orlikowski,
+ []
+
+
+Overfull \hbox (101.54219pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=J., giveni=J.hash=a5950c2ed776bd
+748b9d19780faf5295family=Arutunow,
+ []
+
+
+Overfull \hbox (206.35597pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=A., given=A., giveni=A.                   
+          au-thor2hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (96.28616pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=c600258273e263
+2fdd065999b4050768family=‘lepski,
+ []
+
+
+Overfull \hbox (201.7898pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=‘., given=P., giveni=P.                   
+          au-thor2hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (93.03906pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K, giveni=K.hash=c600258273e2632
+fdd065999b4050768family=‘lepski,
+ []
+
+
+Overfull \hbox (199.4844pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=‘., given=P, giveni=P.                    
+         au-thor3hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (90.46089pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=ebbe4a914e185f
+98eff23a9c3946eb3ffamily=Zielinski,
+ []
+
+
+Overfull \hbox (94.3809pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Z., given=A., giveni=A.hash=5751d8c26f4e80
+a32b2d547070e0d483family=Slepski,
+ []
+
+
+Overfull \hbox (186.54216pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=P., giveni=P.                   
+         au-thor2hash=307cfff75002e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (130.82246pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.hash=7f4be59
+7681d1785d4789d08ed95f8dcfamily=‘lepski,
+ []
+
+
+Overfull \hbox (221.18222pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=‘., given=Paweª, giveni=P.                
+             au-thor3hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (98.88643pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K, giveni=K.hash=cc95921de425300
+f53880cf6e077f29ffamily=Krakowiak,
+ []
+
+
+Overfull \hbox (90.65195pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=S, giveni=S.hash=c600258273e2632
+fdd065999b4050768family=‘lepski,
+ []
+
+
+Overfull \hbox (199.4844pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=‘., given=P, giveni=P.                    
+         au-thor3hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (98.88643pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K, giveni=K.hash=cc95921de425300
+f53880cf6e077f29ffamily=Krakowiak,
+ []
+
+
+Overfull \hbox (89.30513pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=S, giveni=S.hash=5751d8c26f4e80a
+32b2d547070e0d483family=Slepski,
+ []
+
+
+Overfull \hbox (189.54747pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=P, giveni=P.                    
+        au-thor3hash=cc95921de425300f53880cf6e077f29ffamily=Krakowiak,
+ []
+
+
+Overfull \hbox (106.49156pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=S., giveni=S.hash=d348f6153a3b71
+b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (94.93935pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=5751d8c26f4e80
+a32b2d547070e0d483family=Slepski,
+ []
+
+
+Overfull \hbox (191.85286pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=P., giveni=P.                   
+         au-thor3hash=cc95921de425300f53880cf6e077f29ffamily=Krakowiak,
+ []
+
+
+Overfull \hbox (106.49156pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=S., giveni=S.hash=d348f6153a3b71
+b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (96.28616pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=c600258273e263
+2fdd065999b4050768family=‘lepski,
+ []
+
+
+Overfull \hbox (203.04375pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=‘., given=P., giveni=P.                   
+         au-thor5hash=89a390eaee003e8412c097b734578b21family=Orlikowski,
+ []
+
+
+Overfull \hbox (85.87285pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=Juliusz, giveni=J.hash=0effbe6d0
+9df3e908668fc6a16b8f43cfamily=Ryl,
+ []
+
+
+Overfull \hbox (107.89326pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=Jacek, giveni=J.hash=68e9e4f7b5b
+e08fea36f53f8e5d3b1b1family=Jarzynka,
+ []
+
+
+Overfull \hbox (143.6668pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=J., given=Magdalena, giveni=M.hash=3ff95e4
+b7a07f4c01274fd23d2a0054ffamily=Krakowiak,
+ []
+
+
+Overfull \hbox (115.90862pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=Stefan, giveni=S.hash=307cfff750
+02e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (195.23119pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.            
+               au-thor4hash=0effbe6d09df3e908668fc6a16b8f43cfamily=Ryl,
+ []
+
+
+Overfull \hbox (112.55789pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=Jacek, giveni=J.hash=d03b7fa360f
+c9d871284167b8f7a3982family=Wysocka,
+ []
+
+
+Overfull \hbox (115.15298pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=W., given=Joanna, giveni=J.hash=8c9a19b856
+6c851f3167f08c721d8941family=Slepski,
+ []
+
+
+Overfull \hbox (111.38628pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Pawel, giveni=P.hash=307cfff7500
+2e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (240.0766pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.            
+                au-thor4hash=547c2b5a5540ec75bfef9348b7129303family=Orlikowski,
+
+ []
+
+
+Overfull \hbox (105.84554pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=J., giveni=J.hash=af9627fcb8d275
+d6d3d98c48fdbb908efamily=Jazdzewska,
+ []
+
+
+Overfull \hbox (84.04411pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=J., given=A., giveni=A.hash=9f9a2d361975f4
+0315717f5a3f490659family=Mazur,
+ []
+
+
+Overfull \hbox (112.41556pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=M., given=R., giveni=R.hash=d348f6153a3b71
+b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (189.00589pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.                   
+         au-thor3hash=c1e1afacbb1bb7ac45c40457c81a61b9family=Narozny,
+ []
+
+
+Overfull \hbox (106.20691pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=N., given=M., giveni=M.hash=03a30df3a0c7e7
+643685337b5f2b7f28family=Zakowski,
+ []
+
+
+Overfull \hbox (108.28741pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Z., given=K., giveni=K.hash=d348f6153a3b71
+b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (201.9763pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.                   
+        au-thor3hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (96.28616pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=c600258273e263
+2fdd065999b4050768family=‘lepski,
+ []
+
+
+Overfull \hbox (104.45488pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=‘., given=P., giveni=P.hash=68b57e465d693b
+628ed609416ba7d2e4family=Szoci«ski,
+ []
+
+
+Overfull \hbox (161.50523pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=M., giveni=M.                   
+        au-thor6hash=0effbe6d09df3e908668fc6a16b8f43cfamily=Ryl,
+ []
+
+
+Overfull \hbox (100.35962pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=Jacek, giveni=J.hash=dd15f6167d1
+a80810f5a0fed36736e18family=Gawel,
+ []
+
+
+Overfull \hbox (111.03595pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=Lukasz, giveni=L.hash=62e43181bf
+7dbce7e3aa1e97e3680de5family=Cieslik,
+ []
+
+
+Overfull \hbox (118.79953pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=C., given=Mateusz, giveni=M.hash=f2eb8ffa1
+be5ec92c3f77c2c81d789edfamily=Gerengi,
+ []
+
+
+Overfull \hbox (110.44456pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=Husnu, giveni=H.hash=3145469def6
+f9c3adf692bd399a6729cfamily=Lentka,
+ []
+
+
+Overfull \hbox (124.06631pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=L., given=Grzegorz, giveni=G.hash=8c9a19b8
+566c851f3167f08c721d8941family=Slepski,
+ []
+
+
+Overfull \hbox (218.23106pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Pawel, giveni=P.                
+              au-thor3hash=e375d91ec54c73ad9eb5f8317b828ca1family=Arutunow,
+ []
+
+
+Overfull \hbox (127.77838pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=A., given=Anna, giveni=A.hash=9a17b69e918c
+f40ab6d4b368c3fec037family=Tobiszewski,
+ []
+
+
+Overfull \hbox (176.7115pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=T., given=Mateusz Tomasz, giveni=M. T.hash
+=307cfff75002e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (224.40192pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.            
+               au-thor2hash=3ef0774cfb24c980a146d13fdc7cb077family=Zieli«ski,
+ []
+
+
+Overfull \hbox (108.9006pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Z., given=A., giveni=A.hash=d348f6153a3b71
+b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (193.58295pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.                   
+         au-thor4hash=d03b7fa360fc9d871284167b8f7a3982family=Wysocka,
+ []
+
+
+Overfull \hbox (125.48982pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=W., given=Joanna, giveni=J.hash=3ff95e4b7a
+07f4c01274fd23d2a0054ffamily=Krakowiak,
+ []
+
+
+Overfull \hbox (84.27411pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=Stefan, giveni=S.hash=0effbe6d09
+df3e908668fc6a16b8f43cfamily=Ryl,
+ []
+
+
+Overfull \hbox (110.34608pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=Jacek, giveni=J.hash=307cfff7500
+2e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (211.60138pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.            
+               au-thor5hash=d558f8bb02fdde00fcf87eba535a292efamily=Gawel,
+ []
+
+
+Overfull \hbox (96.34102pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=L., giveni=L.hash=8fd1e96bc62dfb
+83976f0e59a616d31efamily=Nieuzyla,
+ []
+
+
+Overfull \hbox (85.78517pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=N., given=L., giveni=L.hash=58adf095112ff2
+7697abbbfd9c9909a7family=Nawrat,
+ []
+
+
+Overfull \hbox (111.21104pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=N., given=G., giveni=G.hash=d348f6153a3b71
+b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (94.93935pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=5751d8c26f4e80
+a32b2d547070e0d483family=Slepski,
+ []
+
+
+Overfull \hbox (197.14732pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=P., giveni=P.                   
+        au-thor3hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (108.00269pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=547c2b5a5540ec
+75bfef9348b7129303family=Orlikowski,
+ []
+
+
+Overfull \hbox (101.54219pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=J., giveni=J.hash=a5950c2ed776bd
+748b9d19780faf5295family=Arutunow,
+ []
+
+
+Overfull \hbox (208.38702pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=A., given=A., giveni=A.                   
+           au-thor2hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (86.65024pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=8fa21f657ebff5
+2dfc5708563b75e800family=Kawula,
+ []
+
+
+Overfull \hbox (185.64432pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=J., giveni=J.                   
+         au-thor3hash=307cfff75002e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (150.26965pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.hash=89a390e
+aee003e8412c097b734578b21family=Orlikowski,
+ []
+
+
+Overfull \hbox (125.74173pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=O., given=Juliusz, giveni=J.hash=e375d91ec
+54c73ad9eb5f8317b828ca1family=Arutunow,
+ []
+
+
+Overfull \hbox (211.60635pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=A., given=Anna, giveni=A.                 
+             au-thor2hash=ea611f7e8e47c1d43b354a4506ba0617family=Burczyk,
+ []
+
+
+Overfull \hbox (117.83588pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Lukasz, giveni=L.hash=307cfff750
+02e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (228.02635pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.            
+               au-thor6hash=2a7475714ea71fe86847011edcc91c41family=Zielinski,
+ []
+
+
+Overfull \hbox (103.64468pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Z., given=Artur, giveni=A.hash=62e43181bf7
+dbce7e3aa1e97e3680de5family=Cieslik,
+ []
+
+
+Overfull \hbox (134.42506pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=C., given=Mateusz, giveni=M.hash=08e7593bf
+75539438e46f2eadee112d8family=Sobaszek,
+ []
+
+
+Overfull \hbox (143.1302pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Michal, giveni=M.hash=453b054c96
+4a316bb5ff38124f207803family=Bogdanowicz,
+ []
+
+
+Overfull \hbox (118.44905pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Robert, giveni=R.hash=307cfff750
+02e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (102.71393pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.hash=0effbe6
+d09df3e908668fc6a16b8f43cfamily=Ryl,
+ []
+
+
+Overfull \hbox (173.25989pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=Jacek, giveni=J.                
+            au-thor5hash=0effbe6d09df3e908668fc6a16b8f43cfamily=Ryl,
+ []
+
+
+Overfull \hbox (111.13446pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=R., given=Jacek, giveni=J.hash=ea611f7e8e4
+7c1d43b354a4506ba0617family=Burczyk,
+ []
+
+
+Overfull \hbox (140.97307pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Lukasz, giveni=L.hash=453b054c96
+4a316bb5ff38124f207803family=Bogdanowicz,
+ []
+
+
+Overfull \hbox (123.6174pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Robert, giveni=R.hash=08e7593bf7
+5539438e46f2eadee112d8family=Sobaszek,
+ []
+
+
+Overfull \hbox (119.99301pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Michal, giveni=M.hash=307cfff750
+02e4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (238.7354pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.            
+               au-thor3hash=9ddc74fcaee818323484a436744c6065family=Parasinska,
+ []
+
+
+Overfull \hbox (147.14891pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=Dominika, giveni=D.hash=5daaaf64
+eab6d1cec59cf69a9dfb8e84family=Kwiatkowski,
+ []
+
+
+Overfull \hbox (115.37201pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=Hubert, giveni=H.hash=8c9a19b856
+6c851f3167f08c721d8941family=Slepski,
+ []
+
+
+Overfull \hbox (202.3263pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Pawel, giveni=P.                
+             au-thor4hash=8c9a19b8566c851f3167f08c721d8941family=Slepski,
+ []
+
+
+Overfull \hbox (108.65965pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=S., given=Pawel, giveni=P.hash=d0682f1f9c4
+13b2553c76b112427481efamily=Janicka,
+ []
+
+
+Overfull \hbox (103.53519pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=J., given=Ewa, giveni=E.hash=307cfff75002e
+4d85f8602253eebf3ecfamily=Darowicki,
+ []
+
+
+Overfull \hbox (152.41588pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=Kazimierz, giveni=K.hash=086e6e6
+4fb29cde798e96d8da1a1780dfamily=Pierozynski,
+ []
+
+
+Overfull \hbox (239.78621pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=Boguslaw, giveni=B.             
+                au-thor7hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (97.93965pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=5e65308ef81d74
+8b471e68750696d126family=Janicka,
+ []
+
+
+Overfull \hbox (107.70714pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=J., given=E., giveni=E.hash=dbd644dab1ec08
+160c3ea8043dc94264family=Mielniczek,
+ []
+
+
+Overfull \hbox (98.23543pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=M., given=M., giveni=M.hash=ebbe4a914e185f
+98eff23a9c3946eb3ffamily=Zielinski,
+ []
+
+
+Overfull \hbox (81.00008pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Z., given=A., giveni=A.hash=d558f8bb02fdde
+00fcf87eba535a292efamily=Gawel,
+ []
+
+
+Overfull \hbox (83.09157pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=L., giveni=L.hash=eca6ac6d794150
+6761937efa041f0bcefamily=Mitzel,
+ []
+
+
+Overfull \hbox (96.17673pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=M., given=J., giveni=J.hash=567553398f9e76
+16951da31b8b5109d0family=Hunger,
+ []
+
+
+Overfull \hbox (199.3755pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=H., given=J., giveni=J.                   
+         au-thor7hash=d348f6153a3b71b742cb341b532d86e4family=Darowicki,
+ []
+
+
+Overfull \hbox (81.55852pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=D., given=K., giveni=K.hash=d558f8bb02fdde
+00fcf87eba535a292efamily=Gawel,
+ []
+
+
+Overfull \hbox (109.9519pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=G., given=L., giveni=L.hash=dbd644dab1ec08
+160c3ea8043dc94264family=Mielniczek,
+ []
+
+
+Overfull \hbox (98.23543pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=M., given=M., giveni=M.hash=ebbe4a914e185f
+98eff23a9c3946eb3ffamily=Zielinski,
+ []
+
+
+Overfull \hbox (97.38121pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=Z., given=A., giveni=A.hash=5e65308ef81d74
+8b471e68750696d126family=Janicka,
+ []
+
+
+Overfull \hbox (95.18027pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=J., given=E., giveni=E.hash=567553398f9e76
+16951da31b8b5109d0family=Hunger,
+ []
+
+
+Overfull \hbox (95.69489pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=H., given=J., giveni=J.hash=249b94075e192a
+85c6356369fd784671family=Jorissen,
+ []
+
+
+Overfull \hbox (194.55756pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=J., given=L., giveni=L.                   
+         au-thor5hash=7014f1485220353ecfcab3f523a94d97family=Krakowiak,
+ []
+
+
+Overfull \hbox (112.56883pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=K., given=Joanna, giveni=J.hash=fbae427f36
+fcba82a830886c8687f895family=B¡calski,
+ []
+
+
+Overfull \hbox (122.61003pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=B., given=Wojciech, giveni=W.hash=3145469d
+ef6f9c3adf692bd399a6729cfamily=Lentka,
+ []
+
+
+Overfull \hbox (117.68248pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=L., given=Grzegorz, giveni=G.hash=57a96077
+d559697688c06cf61503235bfamily=Peljo,
+ []
+
+
+Overfull \hbox (108.0027pt too wide) in paragraph at lines 23--6
+\T1/XCharter-TLF/m/n/10.95 fam-i-lyi=P., given=Pekka, giveni=P.hash=7f4be597681
+d1785d4789d08ed95f8dcfamily=‘lepski,
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/
+usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/xcharter/xch_rydp4l.enc}
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4] (./customization_mainmatter.tex)
+
+[5]
+
+[6
+
+
+]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 17.28pt on input line 11.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 11.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
 
-
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+ (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
 
 
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 11
 .
 
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/jknappen\ursfs.fd
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
 
 
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.11 
+      [1]
 
-{C:/Users/fscarp/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/fsc
-arp/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_rydp4l.enc}] [2
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.12 \frontmatter
+                  [2
 
 
 ]
@@ -1161,56 +2526,43 @@ LaTeX Font Info:    No file T1ppl .fd. on input line 15.
 LaTeX Font Warning: Font shape `T1/ppl /b/n' undefined
 (Font)              using `T1/cmr/m/n' instead on input line 15.
 
-(main.toc
+(./main.toc
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 10.95pt on input line 1.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 2.
- [1
 
 
-] [2] [3]
-Overfull \hbox (1.29202pt too wide) detected at line 146
- []\T1/XCharter-TLF/m/n/10.95 103
- []
+[1
 
 
-Overfull \hbox (1.29202pt too wide) detected at line 147
- []\T1/XCharter-TLF/m/n/10.95 103
- []
+{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.e
+nc}]
 
+[2]
 
-Overfull \hbox (1.29202pt too wide) detected at line 148
- []\T1/XCharter-TLF/m/n/10.95 104
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 149
- []\T1/XCharter-TLF/m/n/10.95 104
- []
-
-
+[3]
 Overfull \hbox (1.29202pt too wide) detected at line 150
- []\T1/XCharter-TLF/m/n/10.95 106
+ []\T1/XCharter-TLF/m/n/10.95 105
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 151
+ []\T1/XCharter-TLF/m/n/10.95 105
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 152
- []\T1/XCharter-TLF/m/n/10.95 107
+ []\T1/XCharter-TLF/m/n/10.95 106
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 153
- []\T1/XCharter-TLF/m/n/10.95 108
+ []\T1/XCharter-TLF/m/n/10.95 106
  []
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 154
- []\T1/XCharter-TLF/m/n/10.95 108
- []
-
-
-Overfull \hbox (1.29202pt too wide) detected at line 155
  []\T1/XCharter-TLF/m/n/10.95 108
  []
 
@@ -1221,23 +2573,47 @@ Overfull \hbox (1.29202pt too wide) detected at line 156
 
 
 Overfull \hbox (1.29202pt too wide) detected at line 157
- []\T1/XCharter-TLF/m/n/10.95 109
+ []\T1/XCharter-TLF/m/n/10.95 110
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 158
+ []\T1/XCharter-TLF/m/n/10.95 110
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 159
+ []\T1/XCharter-TLF/m/n/10.95 110
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 160
+ []\T1/XCharter-TLF/m/n/10.95 111
+ []
+
+
+Overfull \hbox (1.29202pt too wide) detected at line 161
+ []\T1/XCharter-TLF/m/n/10.95 111
  []
 
 )
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [4] (chapters/1_introduction.tex
+
+
+[4] (./chapters/1_introduction.tex
 Chapter 1.
 LaTeX Font Info:    Trying to load font information for T1+pbk on input line 1.
 
-LaTeX Font Info:    No file T1pbk.fd. on input line 1.
-
-LaTeX Font Warning: Font shape `T1/pbk/b/n' undefined
-(Font)              using `T1/cmr/m/n' instead on input line 1.
-
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/t1pbk.fd
+File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
 )
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <24.88> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 1.
+)
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1248,7 +2624,9 @@ l.21 \part
 
 
 
-]
+{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/base/8r.enc}]
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1262,7 +2640,23 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 20.74pt on input line 21.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 20.74pt on input line 21.
- [3] [4] (chapters/2_electrochemsitry.tex
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.21 \part{Theoretical framework}
+                                  [3]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.21 \part{Theoretical framework}
+                                  [4] (./chapters/2_electrochemsitry.tex
 Chapter 2.
 \openout4 = `main.mtc'.
 
@@ -1277,23 +2671,47 @@ LaTeX Font Info:    No file T1pbk .fd. on input line 3.
 LaTeX Font Warning: Font shape `T1/pbk /m/n' undefined
 (Font)              using `T1/cmr/m/n' instead on input line 3.
 
-(main.mtc2)
+(./main.mtc2)
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 17.28pt on input line 4.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 14.4pt on input line 13.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/b/n' will be
 (Font)              scaled to size 14.4pt on input line 13.
- [5
 
 
-] [6] [7] [8]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.17 
+      [5
+
+
+]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.35 
+      [6]
+
+[7]
+
+[8]
 Overfull \hbox (3.419pt too wide) in paragraph at lines 81--84
 []\T1/XCharter-TLF/m/n/10.95 This chap-ter de-scribed the founda-men-tals prin-
 ci-ples be-hind elec-tro-chem-
  []
 
-[9] [10]
+
+
+[9]
+
+[10]
 Overfull \hbox (1.9727pt too wide) in paragraph at lines 102--104
 \T1/XCharter-TLF/m/n/10.95 al-ter-nat-ing cur-rent is ap-pliead, the same re-la
 -tion-ship holds so the impedance
@@ -1301,30 +2719,47 @@ Overfull \hbox (1.9727pt too wide) in paragraph at lines 102--104
 
 LaTeX Font Info:    Trying to load font information for TS1+XCharter-TLF on inp
 ut line 109.
-(C:\Users\fscarp\AppData\Roaming\MiKTeX\tex/latex/xcharter\ts1xcharter-tlf.fd
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xcharter/TS1XCharter-TLF.fd
 File: TS1XCharter-TLF.fd 2020/05/25 (msharpe) Font definitions for TS1/XCharter
 -TLF.
 )
 LaTeX Font Info:    Font shape `TS1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 10.95pt on input line 109.
 
-[11{C:/Users/fscarp/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch1_co4ru4
-.enc}]) (chapters/3_batteries.tex [12]
+
+[11{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/xcharter/xch1_co4ru
+4.enc}]) (./chapters/3_batteries.tex
+
+[12]
 Chapter 3.
 \openout4 = `main.mtc'.
 
 \openout4 = `main.mtc'.
 
-(main.mtc3) [13
+(./main.mtc3)
+
+[13
 
 
-] [14] [15] [16] [17]
+]
+
+[14]
+
+[15]
+
+[16]
+
+[17]
 Underfull \vbox (badness 2635) has occurred while \output is active []
 
- [18]
+
+
+[18]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+
+
+[19]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/it' will be
 (Font)              scaled to size 10.95pt on input line 129.
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
@@ -1332,7 +2767,12 @@ LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 129.
 
-[20]) (chapters/4_identification_dynamic.tex [21] [22
+
+[20]) (./chapters/4_identification_dynamic.tex
+
+[21]
+
+[22
 
 
 ]
@@ -1341,11 +2781,13 @@ Chapter 4.
 
 \openout4 = `main.mtc'.
 
-(main.mtc4)
+(./main.mtc4)
 Overfull \hbox (1.42804pt too wide) in paragraph at lines 7--8
 \T1/XCharter-TLF/m/n/10.95 lin-ear-ity. Causal-ity means that the sys-tem can-n
 ot ^^Pan-tic-i-pate^^Q the fu-ture^^Vits
  []
+
+
 
 [23]
 Overfull \hbox (5.53271pt too wide) in paragraph at lines 10--11
@@ -1359,7 +2801,15 @@ Overfull \hbox (2.94797pt too wide) in paragraph at lines 10--11
 Lumped-parameter mod-
  []
 
-[24] [25] [26] [27]
+
+
+[24]
+
+[25]
+
+[26]
+
+[27]
 Overfull \hbox (6.37808pt too wide) in paragraph at lines 96--97
 []\T1/XCharter-TLF/m/n/10.95 Frequency-domain: si-nu-soids (one at a time) or b
 road-band sig-nals (chirps,
@@ -1377,6 +2827,8 @@ Overfull \hbox (4.73573pt too wide) in paragraph at lines 126--127
 sion fil-ter or con-troller
  []
 
+
+
 [28]
 
 LaTeX Warning: Command \textendash invalid in math mode on input line 138.
@@ -1385,6 +2837,8 @@ LaTeX Warning: Command \textendash invalid in math mode on input line 138.
 Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
+
+
 
 [29]
 Underfull \hbox (badness 10000) in paragraph at lines 153--154
@@ -1395,6 +2849,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
 Underfull \hbox (badness 10000) in paragraph at lines 154--155
 
  []
+
+
 
 [30]
 
@@ -1412,6 +2868,8 @@ Overfull \hbox (4.79102pt too wide) in paragraph at lines 174--176
 les never change^^Va time-
  []
 
+
+
 [31]
 Overfull \hbox (15.49188pt too wide) in paragraph at lines 184--185
 []\T1/XCharter-TLF/m/n/10.95 Linear-Parameter-Varying (LPV) mod-els, where A,B,
@@ -1424,7 +2882,13 @@ Overfull \hbox (23.56824pt too wide) in paragraph at lines 186--187
 ns, ap-ply-ing sliding-window
  []
 
-[32] [33] [34]
+
+
+[32]
+
+[33]
+
+[34]
 Overfull \hbox (2.19585pt too wide) in paragraph at lines 234--235
 []\T1/XCharter-TLF/m/n/10.95 Low res-o-lu-tion of the ADC com-pared to the os-c
 il-la-tion am-pli-tude might
@@ -1436,10 +2900,15 @@ Overfull \hbox (13.65898pt too wide) in paragraph at lines 250--251
  time^^Uscale (or time^^Ufrequency)
  []
 
+
+
 [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36]
+
+
+[36]
+
 [37]
 Overfull \hbox (0.87752pt too wide) in paragraph at lines 280--281
 []\T1/XCharter-TLF/m/n/10.95 Parameter es-ti-ma-tion^^Vdetermining the nu-mer-i
@@ -1451,6 +2920,8 @@ Overfull \hbox (0.75409pt too wide) in paragraph at lines 297--299
 \T1/XCharter-TLF/m/n/10.95 car-ries clear elec-tro-chem-i-cal mean-ing, while t
 heir nu-mer-i-cal val-ues are iden-
  []
+
+
 
 [38]
 Overfull \hbox (3.5504pt too wide) in paragraph at lines 300--301
@@ -1472,31 +2943,150 @@ Overfull \hbox (1.9687pt too wide) in paragraph at lines 314--317
 -mizes a weighted
  []
 
-[39] [40]
+
+
+[39]
+
+[40]
 Overfull \hbox (11.52692pt too wide) in paragraph at lines 325--334
 \T1/XCharter-TLF/m/n/10.95 To go be-yond this lo-cal, lin-earized pic-ture, one
  of-ten em-ploys profile-likelihood
  []
 
+
+
 [41]
 LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/n' will be
 (Font)              scaled to size 9.0pt on input line 348.
- [42] [43]) (chapters/5_dynamic_impedance.tex [44]
+
+
+[42]
+
+[43]) (./chapters/5_dynamic_impedance.tex
+
+[44]
 Chapter 5.
 \openout4 = `main.mtc'.
 
 \openout4 = `main.mtc'.
 
-(main.mtc5)
+(./main.mtc5)
 Overfull \hbox (2.81538pt too wide) in paragraph at lines 7--11
 \T1/XCharter-TLF/m/n/10.95 wave-form and mea-sure-ments in non-stationary con-d
 i-tions. Dur-ing the 1970s
  []
 
+
+
 [45
 
 
 ]
+
+LaTeX Warning: Citation 'kojima1971fourier' on page 46 undefined on input line 
+15.
+
+
+LaTeX Warning: Citation 'gloverAlternatingCurrentPolarography1973' on page 46 u
+ndefined on input line 15.
+
+
+LaTeX Warning: Citation 'creasonFourierTransformFaradaic1972' on page 46 undefi
+ned on input line 15.
+
+
+LaTeX Warning: Citation 'creasonFourierTransformFaradaic1973a' on page 46 undef
+ined on input line 15.
+
+
+Overfull \hbox (107.21568pt too wide) in paragraph at lines 15--16
+\T1/XCharter-TLF/m/n/10.95 [[]] and later Glover and Smith [[]]
+ []
+
+
+Overfull \hbox (155.23352pt too wide) in paragraph at lines 15--16
+\T1/XCharter-TLF/m/n/10.95 method for the es-ti-ma-tion of faradaic ad-mit-tanc
+e in fast re-ac-tions [[]]
+ []
+
+
+Overfull \hbox (161.61081pt too wide) in paragraph at lines 15--16
+\T1/XCharter-TLF/m/n/10.95 and per-formed a screen-ing of pos-si-ble multif-req
+uency ex-i-ta-tions [[]]. 
+ []
+
+
+LaTeX Warning: Citation 'schwallOnlineFastFourier1977' on page 46 undefined on 
+input line 21.
+
+
+LaTeX Warning: Citation 'bondOnlineFFTFaradaic1977' on page 46 undefined on inp
+ut line 21.
+
+
+LaTeX Warning: Citation 'schwallOnlineFastFourier1977' on page 46 undefined on 
+input line 21.
+
+
+LaTeX Warning: Citation 'schwallHighSpeedSynchronous1977' on page 46 undefined 
+on input line 21.
+
+
+LaTeX Warning: Citation 'hayesACPolarographyUsing1980' on page 46 undefined on 
+input line 22.
+
+
+LaTeX Warning: Citation 'grzeszczukMeasurementsMarcusTheory1983' on page 46 und
+efined on input line 22.
+
+
+LaTeX Warning: Citation 'grzeszczukStructuralConsequencesElectron1983' on page 
+46 undefined on input line 22.
+
+
+LaTeX Warning: Citation 'grzeszczukElectrochemicalInvestigationsTetraphenylethy
+lene1984' on page 46 undefined on input line 22.
+
+
+LaTeX Warning: Citation 'ivaskaApplicationOnlineFast1985' on page 46 undefined 
+on input line 22.
+
+
+LaTeX Warning: Citation 'grzeszczukElectronHydrogenAtom1986' on page 46 undefin
+ed on input line 22.
+
+
+LaTeX Warning: Citation 'engblomExperiencesOnLineFourier1990' on page 46 undefi
+ned on input line 22.
+
+
+Overfull \hbox (6.00897pt too wide) in paragraph at lines 21--23
+[]\T1/XCharter-TLF/m/n/10.95 Bond, Schwall and Smith in 1977 [[]] com-
+ []
+
+
+Overfull \hbox (1.98547pt too wide) in paragraph at lines 21--23
+\T1/XCharter-TLF/m/n/10.95 on the op-ti-miza-tion of the im-ple-men-ta-tion on 
+the mi-cro-com-puter arhitecutre
+ []
+
+
+Overfull \hbox (166.82417pt too wide) in paragraph at lines 21--23
+\T1/XCharter-TLF/m/n/10.95 tion of elec-tron trans-fer [[]] [[]]
+ []
+
+
+Overfull \hbox (244.31508pt too wide) in paragraph at lines 21--23
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (35.1485pt too wide) in paragraph at lines 21--23
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]].
+ []
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.42168pt, for example:
@@ -1505,15 +3095,258 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
 
 [46]
+
+LaTeX Warning: Citation 'haziMicrocomputerbasedInstrumentationMultifrequency199
+7' on page 47 undefined on input line 24.
+
+
+LaTeX Warning: Citation 'schieweUnifiedApproachTrace1998' on page 47 undefined 
+on input line 24.
+
+
 Overfull \hbox (7.70338pt too wide) in paragraph at lines 24--25
 []\T1/XCharter-TLF/m/n/10.95 In 1996 Hazi, Bond and col-legues, ex-tended the s
 ys-tem to mod-ern hardare
  []
 
 
+Overfull \hbox (167.248pt too wide) in paragraph at lines 24--25
+\T1/XCharter-TLF/m/n/10.95 50Hz-50kHz dur-ing stair-case voltam-me-try [[]]
+ []
+
+
+LaTeX Warning: Citation 'osakaApplicationOnlineImpedance1982' on page 47 undefi
+ned on input line 26.
+
+
+LaTeX Warning: Citation 'osakaStudyTimedependenceOxygen1984' on page 47 undefin
+ed on input line 26.
+
+
+LaTeX Warning: Citation 'osakaElectrochemicalStudyAnion1984' on page 47 undefin
+ed on input line 26.
+
+
+LaTeX Warning: Citation 'osakaStudyChargeDischargeCharacteristics1984' on page 
+47 undefined on input line 26.
+
+
+LaTeX Warning: Citation 'osakaApplicationConductive985' on page 47 undefined on
+ input line 26.
+
+
+Overfull \hbox (6.76956pt too wide) in paragraph at lines 26--27
+[]\T1/XCharter-TLF/m/n/10.95 In 1982 T. Os-aka and L. Naoi [[]]
+ []
+
+
+Overfull \hbox (128.69357pt too wide) in paragraph at lines 26--27
+\T1/XCharter-TLF/m/n/10.95 the ad-mit-tance), that they used to study ox-i-gen 
+evo-lu-tion [[]]
+ []
+
+
+Overfull \hbox (2.30081pt too wide) in paragraph at lines 26--27
+\T1/XCharter-TLF/m/n/10.95 and pro-cesses in doped poly-mers [[]]
+ []
+
+
+Overfull \hbox (71.52103pt too wide) in paragraph at lines 26--27
+\T1/XCharter-TLF/m/n/10.95 [[]][[]]. 
+ []
+
+
+LaTeX Warning: Citation '1986296' on page 47 undefined on input line 28.
+
+
 Underfull \vbox (badness 6047) has occurred while \output is active []
 
- [47]
+
+
+[47]
+
+LaTeX Warning: Citation 'popkirovOptimizationPerturbationSignal1993a' on page 4
+8 undefined on input line 34.
+
+
+LaTeX Warning: Citation 'popkirovValidationExperimentalData1993a' on page 48 un
+defined on input line 34.
+
+
+LaTeX Warning: Citation 'popkirovEffectSampleNonlinearity1995a' on page 48 unde
+fined on input line 34.
+
+
+LaTeX Warning: Citation 'popkirovInSituTimeResolved1993' on page 48 undefined o
+n input line 35.
+
+
+LaTeX Warning: Citation 'popkirovInsituImpedanceMeasurements1995' on page 48 un
+defined on input line 35.
+
+
+LaTeX Warning: Citation 'popkirovElectrochemicalImpedanceSpectroscopy1995' on p
+age 48 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'popkirovInvestigationConductingPolymer1997' on page 48
+ undefined on input line 35.
+
+
+LaTeX Warning: Citation 'garcia-belmonteDeterminationElectronicConductivity2003
+a' on page 48 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'popkirovElectrodePotentialRedistribution1995' on page 
+48 undefined on input line 35.
+
+
+LaTeX Warning: Citation 'baltrunasTimeEvolutionActive1997' on page 48 undefined
+ on input line 35.
+
+
+LaTeX Warning: Citation 'walczykInvestigationRedoxCouple1995' on page 48 undefi
+ned on input line 35.
+
+
+Overfull \hbox (129.37096pt too wide) in paragraph at lines 34--38
+\T1/XCharter-TLF/m/n/10.95 the mea-sure-ment for the in-ter-fer-ence of non-lin
+earities [[]]
+ []
+
+
+Overfull \hbox (106.16788pt too wide) in paragraph at lines 34--38
+\T1/XCharter-TLF/m/n/10.95 and Schindler ap-plied the method for elec-tropolime
+r-iza-tion [[]],
+ []
+
+
+Overfull \hbox (166.36325pt too wide) in paragraph at lines 34--38
+\T1/XCharter-TLF/m/n/10.95 the char-ac-ter-i-za-tion of re-dox pro-cess in con-
+duc-tive poly-mers [[]]
+ []
+
+
+Overfull \hbox (172.81165pt too wide) in paragraph at lines 34--38
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (4.5087pt too wide) in paragraph at lines 34--38
+\T1/XCharter-TLF/m/n/10.95 [[]], sil-ver dis-
+ []
+
+
+Overfull \hbox (116.82764pt too wide) in paragraph at lines 34--38
+\T1/XCharter-TLF/m/n/10.95 so-lu-tion [[]] [[]]
+ []
+
+
+LaTeX Warning: Citation 'waltersWeakAdsorptionAnions2001a' on page 48 undefined
+ on input line 41.
+
+
+LaTeX Warning: Citation 'garlandAnalysisExperimentalConstraints2004' on page 48
+ undefined on input line 41.
+
+
+LaTeX Warning: Citation 'garlandKineticAnalysisElectrosorption2002a' on page 48
+ undefined on input line 41.
+
+
+LaTeX Warning: Citation 'assiongbonElectrooxidationMethanolGold2005' on page 48
+ undefined on input line 41.
+
+
+LaTeX Warning: Citation 'emeryTimeResolvedImpedance2005' on page 48 undefined o
+n input line 41.
+
+
+LaTeX Warning: Citation 'shiElectrocatalysisHypophosphiteNickel2014' on page 48
+ undefined on input line 41.
+
+
+LaTeX Warning: Citation 'pettitElectrodepositionIndiumMolybdenum2002' on page 4
+8 undefined on input line 42.
+
+
+LaTeX Warning: Citation 'assiongbonChemicalRolesPeroxidebased2004' on page 48 u
+ndefined on input line 42.
+
+
+LaTeX Warning: Citation 'gorantlaChemicalEffectsChemical2005' on page 48 undefi
+ned on input line 42.
+
+
+LaTeX Warning: Citation 'pettitRoleIodateIons2005' on page 48 undefined on inpu
+t line 42.
+
+
+LaTeX Warning: Citation 'luRelativeRoles22004' on page 48 undefined on input li
+ne 42.
+
+
+LaTeX Warning: Citation 'pettitTimeResolvedStudy2004' on page 48 undefined on i
+nput line 42.
+
+
+LaTeX Warning: Citation 'gorantlaCitricAcidComplexing2005' on page 48 undefined
+ on input line 42.
+
+
+LaTeX Warning: Citation 'assiongbonElectrooxidationMethanolGold2005' on page 48
+ undefined on input line 42.
+
+
+Overfull \hbox (11.93236pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 via Lab View in a per-sonal com-puter [[]].
+ []
+
+
+Overfull \hbox (1.8814pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 ta-tion of such tehc-nique [[]].
+ []
+
+
+Overfull \hbox (69.52083pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 ad-sorb-tion of ions, de-po-si-tion of bis-muth [[]]
+
+ []
+
+
+Overfull \hbox (217.92484pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 and in-dium with fo-cus on coad-sorb-tion, elec-troo
+x-i-da-tion of methanol [[]],
+ []
+
+
+Overfull \hbox (64.20763pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 re-dox cou-ple ki-net-ics with fo-cus on coad-sorb-t
+ion [[]]
+ []
+
+
+Overfull \hbox (36.37712pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 and chem-i-cal re-duc-tion of Nickel [[]].
+ []
+
+
+Overfull \hbox (83.65918pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 ing in-dium de-po-si-tion on molyb-de-num [[]].
+ []
+
+
+Overfull \hbox (13.93668pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]], cop-
+ []
+
+
+Overfull \hbox (132.46754pt too wide) in paragraph at lines 41--43
+\T1/XCharter-TLF/m/n/10.95 per [[]] [[]] [[]]
+ []
+
+
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
@@ -1521,7 +3354,396 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[48] [49])
+[48]
+
+LaTeX Warning: Citation 'darowickiInvestigationsPassiveLayer2003' on page 49 un
+defined on input line 44.
+
+
+LaTeX Warning: Citation 'darowickiInstantaneousElectrochemicalImpedance2004a' o
+n page 49 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'darowickiDynamicElectrochemicalImpedance2003a' on page
+ 49 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'darowickiContinuousFrequencyMethodMeasurement2003' on 
+page 49 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'darowickiDeterminationElectrodeImpedance2004a' on page
+ 49 undefined on input line 44.
+
+
+LaTeX Warning: Citation 'darowickiInvestigationsPassiveLayer2003' on page 49 un
+defined on input line 44.
+
+
+LaTeX Warning: Citation 'darowickiEvaluationPittingCorrosion2004a' on page 49 u
+ndefined on input line 45.
+
+
+LaTeX Warning: Citation 'darowickiTimeDependencePit2004' on page 49 undefined o
+n input line 45.
+
+
+LaTeX Warning: Citation 'krakowiakImpedanceInvestigationPassive2005' on page 49
+ undefined on input line 45.
+
+
+LaTeX Warning: Citation 'krakowiakImpedanceMetastablePitting2005' on page 49 un
+defined on input line 45.
+
+
+LaTeX Warning: Citation 'orlikowskiInstantaneousImpedanceMonitoring2015' on pag
+e 49 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'rylInstantaneousImpedanceMonitoring2016' on page 49 un
+defined on input line 45.
+
+
+LaTeX Warning: Citation 'orlikowskiDeterminationPittingCorrosion2017' on page 4
+9 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'naroznyApplicationElectrochemicalImpedance2018' on pag
+e 49 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'darowickiNovelApplicationDynamic2020a' on page 49 unde
+fined on input line 45.
+
+
+LaTeX Warning: Citation 'rylInstantaneousImpedanceAnalysis2017' on page 49 unde
+fined on input line 45.
+
+
+LaTeX Warning: Citation 'arutunowElectricalMechanicalCharacterization2015' on p
+age 49 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'zielinskiApplicationMultisineNanoscale2015' on page 49
+ undefined on input line 45.
+
+
+LaTeX Warning: Citation 'wysockaInvestigationElectrochemicalBehaviour2016' on p
+age 49 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'gawelImpedanceMonitoringCorrosion2017' on page 49 unde
+fined on input line 45.
+
+
+LaTeX Warning: Citation 'darowickiDetectionStressCorrosion2004' on page 49 unde
+fined on input line 45.
+
+
+LaTeX Warning: Citation 'darowickiImpedanceCharacterizationProcess2004' on page
+ 49 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'darowickiDynamicElectrochemicalImpedance2004' on page 
+49 undefined on input line 45.
+
+
+LaTeX Warning: Citation 'burczykLocalElectrochemicalImpedance2018' on page 49 u
+ndefined on input line 45.
+
+
+LaTeX Warning: Citation 'zielinskiMultifrequencyNanoscaleImpedance2019' on page
+ 49 undefined on input line 46.
+
+
+LaTeX Warning: Citation 'rylStudySurfaceTermination2016' on page 49 undefined o
+n input line 46.
+
+
+LaTeX Warning: Citation 'parasinskaApplicationQuartzCrystal2024' on page 49 und
+efined on input line 46.
+
+
+LaTeX Warning: Citation 'slepskiImpedanceMonitoringFuel2015' on page 49 undefin
+ed on input line 47.
+
+
+LaTeX Warning: Citation 'darowickiInfluenceDynamicLoad2019' on page 49 undefine
+d on input line 47.
+
+
+LaTeX Warning: Citation 'darowickiImpedanceHydrogenOxidation2020a' on page 49 u
+ndefined on input line 47.
+
+
+LaTeX Warning: Citation 'krakowiakThreeModesElectrochemical2024' on page 49 und
+efined on input line 47.
+
+
+Overfull \hbox (140.66031pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 ways com-mer-cially avail-able de-vice con-trolled b
+y com-puter [[]]
+ []
+
+
+Overfull \hbox (20.87418pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]]. The impedance
+ []
+
+
+Overfull \hbox (186.3578pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 po-nen-tail chirp per-tur-ba-tions (in the range 132
+0^^U144 Hz) [[]]
+ []
+
+
+Overfull \hbox (215.50568pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (22.821pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 and later with mul-ti-sine ex-i-ta-tion [[]].
+ []
+
+
+Overfull \hbox (34.21992pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 ro-sion eval-u-a-tion on stain-less steel [[]]
+ []
+
+
+Overfull \hbox (75.7949pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (149.29109pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (122.72647pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (136.35922pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (213.87297pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] and metal al-loys [[]]
+ []
+
+
+Overfull \hbox (152.72948pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+Overfull \hbox (16.21812pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 cor-ro-sion lay-ers on stain-less steel [[]],
+ []
+
+
+Overfull \hbox (95.54752pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 char-ac-ter-i-za-tion of con-duc-tive poly-mers [[]]
+
+ []
+
+
+Overfull \hbox (1.55556pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]], mon-i-tor-ing the ad-
+ []
+
+
+Overfull \hbox (184.65614pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 he-sion of or-ganic coat-ing to stain-less steel and
+ gal-vanic cou-pling [[]].
+ []
+
+
+Overfull \hbox (160.24983pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 study of sur-face ter-mi-na-tions of boron-doped di-
+a-mond [[]]
+ []
+
+
+Overfull \hbox (90.0091pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 the tech-niques to Fuel cell un-der dif-fer-ent op-e
+r-a-tion [[]]
+ []
+
+
+Overfull \hbox (92.57031pt too wide) in paragraph at lines 44--48
+\T1/XCharter-TLF/m/n/10.95 [[]] [[]]
+ []
+
+
+LaTeX Warning: Citation 'vangheemElectrochemicalImpedanceSpectroscopy2004a' on 
+page 49 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'vangheemElectrochemicalImpedanceSpectroscopy2006a' on 
+page 49 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'blajievImprovementImpedanceMeasurement2006' on page 49
+ undefined on input line 50.
+
+
+LaTeX Warning: Citation 'vangheemInstantaneousImpedanceMeasurements2004' on pag
+e 49 undefined on input line 50.
+
+
+LaTeX Warning: Citation 'vaningelgemAdvantagesOddRandom2009' on page 49 undefin
+ed on input line 50.
+
+
+LaTeX Warning: Citation 'schoukensBroadbandSteppedSine1999' on page 49 undefine
+d on input line 52.
+
+
+LaTeX Warning: Citation 'schoukensSurveyExcitationSignals1988a' on page 49 unde
+fined on input line 52.
+
+
+LaTeX Warning: Citation 'vaningelgemApplicationMultisineImpedance2008' on page 
+49 undefined on input line 53.
+
+
+LaTeX Warning: Citation 'breugelmansOddRandomPhase2010a' on page 49 undefined o
+n input line 53.
+
+
+LaTeX Warning: Citation 'alvarez-pampliegaCorrosionStudyAlrich2014' on page 49 
+undefined on input line 53.
+
+
+LaTeX Warning: Citation 'jiOddRandomPhase2018' on page 49 undefined on input li
+ne 53.
+
+
+LaTeX Warning: Citation 'jiElectrochemicalRamanAnalysis2020' on page 49 undefin
+ed on input line 53.
+
+
+LaTeX Warning: Citation 'blajievPotentiodynamicEISInvestigation2008' on page 49
+ undefined on input line 53.
+
+
+LaTeX Warning: Citation 'geboesInvestigationAdsorptionMechanism2015' on page 49
+ undefined on input line 53.
+
+
+LaTeX Warning: Citation 'hauffmanMeasuringAdsorptionEthanol2012' on page 49 und
+efined on input line 53.
+
+
+LaTeX Warning: Citation 'hauffmanDynamicSituStudy2013' on page 49 undefined on 
+input line 53.
+
+
+LaTeX Warning: Citation 'fernandezmaciaStudyElectronTransfer2014' on page 49 un
+defined on input line 53.
+
+
+LaTeX Warning: Citation 'jorcinInvestigationSelfhealingProperties2010' on page 
+49 undefined on input line 53.
+
+
+LaTeX Warning: Citation 'breugelmansOddRandomPhase2010' on page 49 undefined on
+ input line 53.
+
+
+LaTeX Warning: Citation 'woutersMonitoringInitialContact2021' on page 49 undefi
+ned on input line 53.
+
+
+LaTeX Warning: Citation 'meeusenFEMModellingPredict2023' on page 49 undefined o
+n input line 53.
+
+
+LaTeX Warning: Citation 'madelatSituMonitoringLateral2023' on page 49 undefined
+ on input line 53.
+
+
+LaTeX Warning: Citation 'fernandezmaciaORPEISStudyTime2015' on page 49 undefine
+d on input line 53.
+
+
+LaTeX Warning: Citation 'pauwelsNewMultisinebasedImpedimetric2016' on page 49 u
+ndefined on input line 53.
+
+
+LaTeX Warning: Citation 'meeusenUseOddRandom2018' on page 49 undefined on input
+ line 53.
+
+
+Overfull \hbox (370.88474pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 com-po-nents down to 0.01Hz [[]][[]]
+ []
+
+
+Overfull \hbox (3.03224pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 [[]]. It is in-ter-est-ing how
+ []
+
+
+Overfull \hbox (43.08623pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 date the ex-per-i-ment in [[]].
+ []
+
+
+Overfull \hbox (23.90294pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 and mea-sure-ment time. Pre-vi-ously [[]]
+ []
+
+
+Overfull \hbox (39.95067pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 this day: cor-ro-sion of copper[[]],
+ []
+
+
+Overfull \hbox (216.60281pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 al-lu-minum and stain-les steel [[]] [[]]
+ []
+
+
+Overfull \hbox (39.66203pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 ad-sorb-tion of molecules on met-als [[]]
+ []
+
+
+Overfull \hbox (181.98337pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 [[]] and ox-ides [[]],
+ []
+
+
+Overfull \hbox (184.19197pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 self-assembling mono-lay-ers [[]][[]],
+ []
+
+
+Overfull \hbox (367.77931pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 poly-meric coat-ings [[]][[]][[]]
+ []
+
+
+Overfull \hbox (24.06392pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 [[]][[]],
+ []
+
+
+Overfull \hbox (20.16786pt too wide) in paragraph at lines 50--54
+\T1/XCharter-TLF/m/n/10.95 fer-ri/-fer-ro-cyanide re-ac-tion on gold [[]],
+ []
+
+
+
+[49]
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
@@ -1529,21 +3751,31 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[50] [51
+[50])
+
+[51]
+
+[52
 
 
-] [52] (chapters/6_acquisition.tex
+]
+
+[53]
+
+[54] (./chapters/6_acquisition.tex
 Chapter 6.
 \openout4 = `main.mtc'.
 
 \openout4 = `main.mtc'.
 
-(main.mtc6)
+(./main.mtc6)
 Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[53
+
+
+[55
 
 
 ]
@@ -1551,17 +3783,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
-[54]
+
+
+[56]
 Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-[55]
+
+
+[57]
 Underfull \hbox (badness 10000) in paragraph at lines 31--34
 
  []
 
-[56]
+
+
+[58]
 Overfull \hbox (12.78146pt too wide) in paragraph at lines 35--37
 \T1/XCharter-TLF/m/n/10.95 This is the first con-tri-bu-tion of this work: mea-
 sur-ing broad-band non-stationary
@@ -1581,8 +3819,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
-[58]
+
+
+[59]
+
+[60]
 Underfull \hbox (badness 10000) in paragraph at lines 48--50
 
  []
@@ -1598,7 +3839,9 @@ Overfull \hbox (6.08131pt too wide) in paragraph at lines 58--59
 s of iden-ti-fi-ca-tion should
  []
 
-[59]
+
+
+[61]
 Underfull \hbox (badness 10000) in paragraph at lines 61--63
 
  []
@@ -1633,7 +3876,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 82--83
 
  []
 
-[60]
+
+
+[62]
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
@@ -1643,7 +3888,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-<figures/harmonics_supporting.png, id=1229, 722.7pt x 433.62pt>
+<figures/harmonics_supporting.png, id=1153, 722.7pt x 433.62pt>
 File: figures/harmonics_supporting.png Graphic file (type png)
 <use figures/harmonics_supporting.png>
 Package pdftex.def Info: figures/harmonics_supporting.png  used on input line 9
@@ -1656,12 +3901,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--98
 
  []
 
-[61]
+
+
+[63]
 Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
-[62 <./figures/harmonics_supporting.png>]
+
+
+[64 <./figures/harmonics_supporting.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
@@ -1672,13 +3921,15 @@ Overfull \hbox (5.56168pt too wide) in paragraph at lines 128--130
 -ware and when a workaround
  []
 
-[63]
-<figures/truform_white.jpg, id=1246, 119.12637pt x 119.12637pt>
+
+
+[65]
+<figures/truform_white.jpg, id=1169, 119.12637pt x 119.12637pt>
 File: figures/truform_white.jpg Graphic file (type jpg)
 <use figures/truform_white.jpg>
 Package pdftex.def Info: figures/truform_white.jpg  used on input line 142.
 (pdftex.def)             Requested size: 135.15015pt x 135.1511pt.
-<figures/truform_black.png, id=1247, 602.25pt x 602.25pt>
+<figures/truform_black.png, id=1170, 602.25pt x 602.25pt>
 File: figures/truform_black.png Graphic file (type png)
 <use figures/truform_black.png>
 Package pdftex.def Info: figures/truform_black.png  used on input line 142.
@@ -1689,17 +3940,15 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 142.
 See the caption package documentation for explanation.
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-47.
-(C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
+
 Overfull \hbox (2.2264pt too wide) in paragraph at lines 147--148
 []\T1/XCharter-TLF/m/n/10.95 imrpoved sig-nal in-tegrity thanks to high gen-er-
 a-tion fi-delity with 0.03%
  []
 
-[64 <./figures/truform_white.jpg> <./figures/truform_black.png>]
+
+
+[66 <./figures/truform_white.jpg> <./figures/truform_black.png>]
 Overfull \hbox (10.40775pt too wide) in paragraph at lines 151--152
 \T1/XCharter-TLF/m/n/10.95 GitHub page ([][]$\T1/cmtt/m/n/10.95 https : / / git
 hub . com / federicoscarpioni / TrueFormAWG$[][]\T1/XCharter-TLF/m/n/10.95 ). T
@@ -1713,9 +3962,11 @@ Overfull \hbox (5.21974pt too wide) in paragraph at lines 166--167
  Tech-
  []
 
-[65]
 
-LaTeX Warning: Reference `sec:ADC' on page 66 undefined on input line 175.
+
+[67]
+
+LaTeX Warning: Reference `sec:ADC' on page 68 undefined on input line 175.
 
 
 Overfull \hbox (4.73393pt too wide) in paragraph at lines 175--176
@@ -1723,13 +3974,15 @@ Overfull \hbox (4.73393pt too wide) in paragraph at lines 175--176
 ter ex-pressed in bit (higher
  []
 
-(C:\Program Files\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
 )
 
-LaTeX Warning: Reference `sec:ADC' on page 66 undefined on input line 184.
+LaTeX Warning: Reference `sec:ADC' on page 68 undefined on input line 184.
 
-[66]
+
+
+[68]
 Overfull \hbox (13.44795pt too wide) in paragraph at lines 192--194
 \T1/XCharter-TLF/m/n/10.95 ter-mi-nal. It ef-fects ei-ther chrono-amperometric 
 tech-niques be-cause the counter
@@ -1741,18 +3994,24 @@ Overfull \hbox (2.65344pt too wide) in paragraph at lines 201--203
 or meas-ring the impedance
  []
 
-[67]) (chapters/7_analysis.tex [68]
+
+
+[69]) (./chapters/7_analysis.tex
+
+[70]
 Chapter 7.
 \openout4 = `main.mtc'.
 
 \openout4 = `main.mtc'.
 
-(main.mtc7)
+(./main.mtc7)
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[69
+
+
+[71
 
 
 ]
@@ -1765,10 +4024,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--19
 
  []
 
-[70]) [71] [72
 
 
-] [73] [74] (chapters/8_coin_cells.tex
+[72])
+
+[73]
+
+[74
+
+
+]
+
+[75]
+
+[76] (./chapters/8_coin_cells.tex
 Chapter 8.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
@@ -1780,7 +4049,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[75
+
+
+[77
 
 
 ]
@@ -1795,18 +4066,22 @@ Overfull \hbox (21.02223pt too wide) in paragraph at lines 18--20
  []
 
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.42168pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.42168pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
 
-[76]
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+
+[78]
 Underfull \hbox (badness 10000) in paragraph at lines 33--37
 
  []
 
-[77]
+
+
+[79]
 Overfull \hbox (346.58972pt too wide) in paragraph at lines 69--71
 \T1/XCharter-TLF/m/n/10.95 point out some ter-mi-nol-ogy dif-fer-ences used in 
 this chap-ter, [][][][][][] 
@@ -1823,20 +4098,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.12604pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[78]
-<figures/application4/image1.png, id=1321, 429.7656pt x 329.5512pt>
+[80]
+<figures/application4/image1.png, id=1246, 429.7656pt x 329.5512pt>
 File: figures/application4/image1.png Graphic file (type png)
 <use figures/application4/image1.png>
 Package pdftex.def Info: figures/application4/image1.png  used on input line 89
 .
 (pdftex.def)             Requested size: 284.52866pt x 218.18832pt.
-<figures/application4/image2.png, id=1322, 422.0568pt x 335.8146pt>
+<figures/application4/image2.png, id=1247, 422.0568pt x 335.8146pt>
 File: figures/application4/image2.png Graphic file (type png)
 <use figures/application4/image2.png>
 Package pdftex.def Info: figures/application4/image2.png  used on input line 98
@@ -1853,14 +4129,16 @@ Overfull \hbox (0.88393pt too wide) in paragraph at lines 105--106
 s. In this case the lim-its where
  []
 
-[79 <./figures/application4/image1.png>]
-<figures/application4/image3.png, id=1330, 422.0568pt x 316.5426pt>
+
+
+[81 <./figures/application4/image1.png>]
+<figures/application4/image3.png, id=1254, 422.0568pt x 316.5426pt>
 File: figures/application4/image3.png Graphic file (type png)
 <use figures/application4/image3.png>
 Package pdftex.def Info: figures/application4/image3.png  used on input line 11
 7.
 (pdftex.def)             Requested size: 284.52866pt x 213.40587pt.
-<figures/application4/image4.PNG, id=1331, 543.53062pt x 371.88937pt>
+<figures/application4/image4.PNG, id=1255, 543.53062pt x 371.88937pt>
 File: figures/application4/image4.PNG Graphic file (type png)
 <use figures/application4/image4.PNG>
 Package pdftex.def Info: figures/application4/image4.PNG  used on input line 12
@@ -1868,21 +4146,23 @@ Package pdftex.def Info: figures/application4/image4.PNG  used on input line 12
 (pdftex.def)             Requested size: 355.65947pt x 243.35382pt.
 
 
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.12604pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[80 <./figures/application4/image2.png>] [81 <./figures/application4/image3.png
-> <./figures/application4/image4.PNG>]
-<figures/application4/image5.PNG, id=1346, 545.03625pt x 356.0803pt>
+[82 <./figures/application4/image2.png>]
+
+[83 <./figures/application4/image3.png> <./figures/application4/image4.PNG>]
+<figures/application4/image5.PNG, id=1270, 545.03625pt x 356.0803pt>
 File: figures/application4/image5.PNG Graphic file (type png)
 <use figures/application4/image5.PNG>
 Package pdftex.def Info: figures/application4/image5.PNG  used on input line 13
 3.
 (pdftex.def)             Requested size: 355.65947pt x 232.35683pt.
-<figures/application4/image6.PNG, id=1347, 541.27219pt x 334.24875pt>
+<figures/application4/image6.PNG, id=1271, 541.27219pt x 334.24875pt>
 File: figures/application4/image6.PNG Graphic file (type png)
 <use figures/application4/image6.PNG>
 Package pdftex.def Info: figures/application4/image6.PNG  used on input line 14
@@ -1890,13 +4170,14 @@ Package pdftex.def Info: figures/application4/image6.PNG  used on input line 14
 (pdftex.def)             Requested size: 355.65947pt x 219.6358pt.
 
 
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.12604pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[82 <./figures/application4/image5.PNG>]
+[84 <./figures/application4/image5.PNG>]
 Overfull \hbox (22.04489pt too wide) in paragraph at lines 149--150
 []\T1/XCharter-TLF/m/n/10.95 colorboxBurntOrangeDespite be-gin so chal-leng-ing
  to mea-sure the impedance
@@ -1908,7 +4189,9 @@ Overfull \hbox (0.47864pt too wide) in paragraph at lines 151--152
 -ter es-ti-mat-ing the impedance
  []
 
-[83 <./figures/application4/image6.PNG>]
+
+
+[85 <./figures/application4/image6.PNG>]
 Overfull \hbox (44.78058pt too wide) in paragraph at lines 158--161
 [][][][][][]
  []
@@ -1950,7 +4233,7 @@ Overfull \hbox (8.75299pt too wide) in paragraph at lines 158--161
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figures/application4/image7.png, id=1361, 930.3558pt x 260.6538pt>
+<figures/application4/image7.png, id=1286, 930.3558pt x 260.6538pt>
 File: figures/application4/image7.png Graphic file (type png)
 <use figures/application4/image7.png>
 Package pdftex.def Info: figures/application4/image7.png  used on input line 16
@@ -1991,7 +4274,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<figures/application4/image8.png, id=1362, 455.301pt x 271.7352pt>
+<figures/application4/image8.png, id=1287, 455.301pt x 271.7352pt>
 File: figures/application4/image8.png Graphic file (type png)
 <use figures/application4/image8.png>
 Package pdftex.def Info: figures/application4/image8.png  used on input line 17
@@ -2000,7 +4283,7 @@ Package pdftex.def Info: figures/application4/image8.png  used on input line 17
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application4/image9.png, id=1363, 277.035pt x 160.4394pt>
+<figures/application4/image9.png, id=1288, 277.035pt x 160.4394pt>
 File: figures/application4/image9.png Graphic file (type png)
 <use figures/application4/image9.png>
 Package pdftex.def Info: figures/application4/image9.png  used on input line 18
@@ -2014,14 +4297,15 @@ Underfull \vbox (badness 1783) has occurred while \output is active []
 
 
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.12604pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.12604pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[84]
-<figures/application4/image10.png, id=1368, 886.512pt x 338.7054pt>
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.42168pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.42168pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
+
+[86]
+<figures/application4/image10.png, id=1293, 886.512pt x 338.7054pt>
 File: figures/application4/image10.png Graphic file (type png)
 <use figures/application4/image10.png>
 Package pdftex.def Info: figures/application4/image10.png  used on input line 1
@@ -2037,42 +4321,47 @@ Overfull \hbox (9.35925pt too wide) in paragraph at lines 195--196
 a-tion be-tween the impedance
  []
 
-[85
+
+
+[87
 
 
 
 
  <./figures/application4/image7.png> <./figures/application4/image8.png>]
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.42168pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.42168pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
 
-[86 <./figures/application4/image9.png> <./figures/application4/image10.png>]
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+
+[88 <./figures/application4/image9.png> <./figures/application4/image10.png>]
 Chapter 9.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 201.
 
-<figures/application5/image1.png, id=1386, 455.301pt x 230.7822pt>
+<figures/application5/image1.png, id=1310, 455.301pt x 230.7822pt>
 File: figures/application5/image1.png Graphic file (type png)
 <use figures/application5/image1.png>
 Package pdftex.def Info: figures/application5/image1.png  used on input line 20
 8.
 (pdftex.def)             Requested size: 355.65947pt x 180.28053pt.
-[87
+
+
+[89
 
 
 ]
-<figures/application5/image2.png, id=1391, 455.301pt x 218.7372pt>
+<figures/application5/image2.png, id=1315, 455.301pt x 218.7372pt>
 File: figures/application5/image2.png Graphic file (type png)
 <use figures/application5/image2.png>
 Package pdftex.def Info: figures/application5/image2.png  used on input line 21
 3.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application5/image3.png, id=1392, 455.301pt x 218.7372pt>
+<figures/application5/image3.png, id=1316, 455.301pt x 218.7372pt>
 File: figures/application5/image3.png Graphic file (type png)
 <use figures/application5/image3.png>
 Package pdftex.def Info: figures/application5/image3.png  used on input line 21
@@ -2082,7 +4371,7 @@ Package pdftex.def Info: figures/application5/image3.png  used on input line 21
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image4.png, id=1393, 455.301pt x 232.2276pt>
+<figures/application5/image4.png, id=1317, 455.301pt x 232.2276pt>
 File: figures/application5/image4.png Graphic file (type png)
 <use figures/application5/image4.png>
 Package pdftex.def Info: figures/application5/image4.png  used on input line 22
@@ -2091,7 +4380,7 @@ Package pdftex.def Info: figures/application5/image4.png  used on input line 22
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image5.png, id=1394, 455.301pt x 232.2276pt>
+<figures/application5/image5.png, id=1318, 455.301pt x 232.2276pt>
 File: figures/application5/image5.png Graphic file (type png)
 <use figures/application5/image5.png>
 Package pdftex.def Info: figures/application5/image5.png  used on input line 22
@@ -2100,7 +4389,7 @@ Package pdftex.def Info: figures/application5/image5.png  used on input line 22
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image6.png, id=1395, 455.301pt x 232.2276pt>
+<figures/application5/image6.png, id=1319, 455.301pt x 232.2276pt>
 File: figures/application5/image6.png Graphic file (type png)
 <use figures/application5/image6.png>
 Package pdftex.def Info: figures/application5/image6.png  used on input line 23
@@ -2109,13 +4398,13 @@ Package pdftex.def Info: figures/application5/image6.png  used on input line 23
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image7.png, id=1396, 436.5108pt x 319.9152pt>
+<figures/application5/image7.png, id=1320, 436.5108pt x 319.9152pt>
 File: figures/application5/image7.png Graphic file (type png)
 <use figures/application5/image7.png>
 Package pdftex.def Info: figures/application5/image7.png  used on input line 23
 7.
 (pdftex.def)             Requested size: 142.26378pt x 104.26408pt.
-<figures/application5/image8.png, id=1397, 442.7742pt x 326.6604pt>
+<figures/application5/image8.png, id=1321, 442.7742pt x 326.6604pt>
 File: figures/application5/image8.png Graphic file (type png)
 <use figures/application5/image8.png>
 Package pdftex.def Info: figures/application5/image8.png  used on input line 23
@@ -2124,7 +4413,7 @@ Package pdftex.def Info: figures/application5/image8.png  used on input line 23
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application5/image9.png, id=1398, 437.9562pt x 326.1786pt>
+<figures/application5/image9.png, id=1322, 437.9562pt x 326.1786pt>
 File: figures/application5/image9.png Graphic file (type png)
 <use figures/application5/image9.png>
 Package pdftex.def Info: figures/application5/image9.png  used on input line 24
@@ -2133,11 +4422,15 @@ Package pdftex.def Info: figures/application5/image9.png  used on input line 24
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (chapters/9_silicon_carbonitrate.tex [88 <./figures/application5/image1.png> 
-<./figures/application5/image2.png>] [89 <./figures/application5/image3.png> <.
-/figures/application5/image4.png> <./figures/application5/image5.png>] [90 <./f
-igures/application5/image6.png> <./figures/application5/image7.png> <./figures/
-application5/image8.png> <./figures/application5/image9.png>]
+) (./chapters/9_silicon_carbonitrate.tex
+
+[90 <./figures/application5/image1.png> <./figures/application5/image2.png>]
+
+[91 <./figures/application5/image3.png> <./figures/application5/image4.png> <./
+figures/application5/image5.png>]
+
+[92 <./figures/application5/image6.png> <./figures/application5/image7.png> <./
+figures/application5/image8.png> <./figures/application5/image9.png>]
 Chapter 10.
 
 Overfull \hbox (15.82419pt too wide) in paragraph at lines 3--4
@@ -2149,7 +4442,7 @@ om the time-varying impedance
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 7.
 
-<figures/application3/image1.png, id=1428, 299.1175pt x 161.60374pt>
+<figures/application3/image1.png, id=1353, 299.1175pt x 161.60374pt>
 File: figures/application3/image1.png Graphic file (type png)
 <use figures/application3/image1.png>
 Package pdftex.def Info: figures/application3/image1.png  used on input line 12
@@ -2161,23 +4454,25 @@ Overfull \hbox (1.22226pt too wide) in paragraph at lines 9--14
 of pre-ce-ramic poly-mers which
  []
 
-[91
+
+
+[93
 
 
  <./figures/application3/image1.png (PNG copy)>]
-<figures/application3/image2.png, id=1434, 381.425pt x 313.17pt>
+<figures/application3/image2.png, id=1358, 381.425pt x 313.17pt>
 File: figures/application3/image2.png Graphic file (type png)
 <use figures/application3/image2.png>
 Package pdftex.def Info: figures/application3/image2.png  used on input line 18
 .
 (pdftex.def)             Requested size: 142.26378pt x 116.8029pt.
-<figures/application3/image3.png, id=1435, 903.375pt x 821.0675pt>
+<figures/application3/image3.png, id=1359, 903.375pt x 821.0675pt>
 File: figures/application3/image3.png Graphic file (type png)
 <use figures/application3/image3.png>
 Package pdftex.def Info: figures/application3/image3.png  used on input line 22
 .
 (pdftex.def)             Requested size: 355.65947pt x 323.25946pt.
-<figures/application3/image4.png, id=1436, 2005.4925pt x 876.27374pt>
+<figures/application3/image4.png, id=1360, 2005.4925pt x 876.27374pt>
 File: figures/application3/image4.png Graphic file (type png)
 <use figures/application3/image4.png>
 Package pdftex.def Info: figures/application3/image4.png  used on input line 26
@@ -2185,46 +4480,51 @@ Package pdftex.def Info: figures/application3/image4.png  used on input line 26
 (pdftex.def)             Requested size: 355.65947pt x 155.39594pt.
 
 
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.12604pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[92 <./figures/application3/image3.png (PNG copy)> <./figures/application3/imag
-e2.png (PNG copy)>] [93 <./figures/application3/image4.png (PNG copy)>]
+[94 <./figures/application3/image3.png (PNG copy)> <./figures/application3/imag
+e2.png (PNG copy)>]
+
+[95 <./figures/application3/image4.png (PNG copy)>]
 Overfull \hbox (3.10031pt too wide) in paragraph at lines 39--40
 []\T1/XCharter-TLF/m/n/10.95 Moving from a macro-scopic to mi-criscopic refer-n
 ce elec-trode was a choice
  []
 
-<figures/application3/image5.1.jpg, id=1447, 237.88875pt x 604.2575pt>
+<figures/application3/image5.1.jpg, id=1371, 237.88875pt x 604.2575pt>
 File: figures/application3/image5.1.jpg Graphic file (type jpg)
 <use figures/application3/image5.1.jpg>
 Package pdftex.def Info: figures/application3/image5.1.jpg  used on input line 
 68.
 (pdftex.def)             Requested size: 59.75095pt x 151.76474pt.
-<figures/application3/image5.2.jpg, id=1448, 439.6425pt x 940.51375pt>
+<figures/application3/image5.2.jpg, id=1372, 439.6425pt x 940.51375pt>
 File: figures/application3/image5.2.jpg Graphic file (type jpg)
 <use figures/application3/image5.2.jpg>
 Package pdftex.def Info: figures/application3/image5.2.jpg  used on input line 
 69.
 (pdftex.def)             Requested size: 71.13188pt x 152.16435pt.
-<figures/application3/image5.3.jpg, id=1449, 963.6pt x 1284.8pt>
+<figures/application3/image5.3.jpg, id=1373, 963.6pt x 1284.8pt>
 File: figures/application3/image5.3.jpg Graphic file (type jpg)
 <use figures/application3/image5.3.jpg>
 Package pdftex.def Info: figures/application3/image5.3.jpg  used on input line 
 70.
 (pdftex.def)             Requested size: 113.81102pt x 151.73839pt.
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.12604pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.12604pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[94]
-<figures/application3/image6.png, id=1455, 455.301pt x 218.7372pt>
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.42168pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.42168pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
+
+[96]
+<figures/application3/image6.png, id=1380, 455.301pt x 218.7372pt>
 File: figures/application3/image6.png Graphic file (type png)
 <use figures/application3/image6.png>
 Package pdftex.def Info: figures/application3/image6.png  used on input line 85
@@ -2234,7 +4534,7 @@ Package pdftex.def Info: figures/application3/image6.png  used on input line 85
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image7.png, id=1456, 455.301pt x 218.7372pt>
+<figures/application3/image7.png, id=1381, 455.301pt x 218.7372pt>
 File: figures/application3/image7.png Graphic file (type png)
 <use figures/application3/image7.png>
 Package pdftex.def Info: figures/application3/image7.png  used on input line 92
@@ -2243,7 +4543,7 @@ Package pdftex.def Info: figures/application3/image7.png  used on input line 92
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image8.png, id=1457, 455.301pt x 218.7372pt>
+<figures/application3/image8.png, id=1382, 455.301pt x 218.7372pt>
 File: figures/application3/image8.png Graphic file (type png)
 <use figures/application3/image8.png>
 Package pdftex.def Info: figures/application3/image8.png  used on input line 99
@@ -2260,7 +4560,7 @@ Package pdftex.def Info: figures/application3/image8.png  used on input line 10
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image9.png, id=1458, 455.301pt x 218.7372pt>
+<figures/application3/image9.png, id=1383, 455.301pt x 218.7372pt>
 File: figures/application3/image9.png Graphic file (type png)
 <use figures/application3/image9.png>
 Package pdftex.def Info: figures/application3/image9.png  used on input line 11
@@ -2269,7 +4569,7 @@ Package pdftex.def Info: figures/application3/image9.png  used on input line 11
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image10.png, id=1459, 455.301pt x 218.7372pt>
+<figures/application3/image10.png, id=1384, 455.301pt x 218.7372pt>
 File: figures/application3/image10.png Graphic file (type png)
 <use figures/application3/image10.png>
 Package pdftex.def Info: figures/application3/image10.png  used on input line 1
@@ -2278,7 +4578,7 @@ Package pdftex.def Info: figures/application3/image10.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image11.png, id=1460, 455.301pt x 204.765pt>
+<figures/application3/image11.png, id=1385, 455.301pt x 204.765pt>
 File: figures/application3/image11.png Graphic file (type png)
 <use figures/application3/image11.png>
 Package pdftex.def Info: figures/application3/image11.png  used on input line 1
@@ -2287,7 +4587,7 @@ Package pdftex.def Info: figures/application3/image11.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image12.png, id=1461, 455.301pt x 202.8378pt>
+<figures/application3/image12.png, id=1386, 455.301pt x 202.8378pt>
 File: figures/application3/image12.png Graphic file (type png)
 <use figures/application3/image12.png>
 Package pdftex.def Info: figures/application3/image12.png  used on input line 1
@@ -2296,7 +4596,7 @@ Package pdftex.def Info: figures/application3/image12.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image13.png, id=1462, 455.301pt x 218.7372pt>
+<figures/application3/image13.png, id=1387, 455.301pt x 218.7372pt>
 File: figures/application3/image13.png Graphic file (type png)
 <use figures/application3/image13.png>
 Package pdftex.def Info: figures/application3/image13.png  used on input line 1
@@ -2305,7 +4605,7 @@ Package pdftex.def Info: figures/application3/image13.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image14.png, id=1463, 455.301pt x 219.219pt>
+<figures/application3/image14.png, id=1388, 455.301pt x 219.219pt>
 File: figures/application3/image14.png Graphic file (type png)
 <use figures/application3/image14.png>
 Package pdftex.def Info: figures/application3/image14.png  used on input line 1
@@ -2314,7 +4614,7 @@ Package pdftex.def Info: figures/application3/image14.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image15.png, id=1464, 455.301pt x 218.7372pt>
+<figures/application3/image15.png, id=1389, 455.301pt x 218.7372pt>
 File: figures/application3/image15.png Graphic file (type png)
 <use figures/application3/image15.png>
 Package pdftex.def Info: figures/application3/image15.png  used on input line 1
@@ -2323,12 +4623,14 @@ Package pdftex.def Info: figures/application3/image15.png  used on input line 1
 
 Underfull \vbox (badness 6641) has occurred while \output is active []
 
- [95 <./figures/application3/image5.1.jpg> <./figures/application3/image5.2.jpg
-> <./figures/application3/image5.3.jpg>]
+
+
+[97 <./figures/application3/image5.1.jpg> <./figures/application3/image5.2.jpg>
+ <./figures/application3/image5.3.jpg>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image16.png, id=1470, 455.301pt x 218.7372pt>
+<figures/application3/image16.png, id=1396, 455.301pt x 218.7372pt>
 File: figures/application3/image16.png Graphic file (type png)
 <use figures/application3/image16.png>
 Package pdftex.def Info: figures/application3/image16.png  used on input line 1
@@ -2337,7 +4639,7 @@ Package pdftex.def Info: figures/application3/image16.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image17.png, id=1471, 455.301pt x 218.7372pt>
+<figures/application3/image17.png, id=1397, 455.301pt x 218.7372pt>
 File: figures/application3/image17.png Graphic file (type png)
 <use figures/application3/image17.png>
 Package pdftex.def Info: figures/application3/image17.png  used on input line 1
@@ -2346,7 +4648,7 @@ Package pdftex.def Info: figures/application3/image17.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image18.png, id=1472, 455.301pt x 218.7372pt>
+<figures/application3/image18.png, id=1398, 455.301pt x 218.7372pt>
 File: figures/application3/image18.png Graphic file (type png)
 <use figures/application3/image18.png>
 Package pdftex.def Info: figures/application3/image18.png  used on input line 1
@@ -2355,7 +4657,7 @@ Package pdftex.def Info: figures/application3/image18.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image19.png, id=1473, 455.301pt x 218.7372pt>
+<figures/application3/image19.png, id=1399, 455.301pt x 218.7372pt>
 File: figures/application3/image19.png Graphic file (type png)
 <use figures/application3/image19.png>
 Package pdftex.def Info: figures/application3/image19.png  used on input line 1
@@ -2364,7 +4666,7 @@ Package pdftex.def Info: figures/application3/image19.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/application3/image20.png, id=1474, 455.301pt x 218.7372pt>
+<figures/application3/image20.png, id=1400, 455.301pt x 218.7372pt>
 File: figures/application3/image20.png Graphic file (type png)
 <use figures/application3/image20.png>
 Package pdftex.def Info: figures/application3/image20.png  used on input line 1
@@ -2373,16 +4675,8 @@ Package pdftex.def Info: figures/application3/image20.png  used on input line 1
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) (chapters/10_lithium_sodium_iron_phosophate.tex
+) (./chapters/10_lithium_sodium_iron_phosophate.tex
 
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 25.42168pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.42168pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-11.42168pt}.
-
-[96 <./figures/application3/image6.png> <./figures/application3/image7.png>]
-[97 <./figures/application3/image8.png> <./figures/application3/image9.png>]
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
@@ -2390,10 +4684,10 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[98 <./figures/application3/image10.png> <./figures/application3/image11.png> <
-./figures/application3/image12.png> <./figures/application3/image13.png>]
-[99 <./figures/application3/image14.png> <./figures/application3/image15.png> <
-./figures/application3/image16.png>]
+[98 <./figures/application3/image6.png> <./figures/application3/image7.png>]
+
+[99 <./figures/application3/image8.png> <./figures/application3/image9.png>]
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
@@ -2401,9 +4695,25 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[100 <./figures/application3/image17.png> <./figures/application3/image18.png> 
-<./figures/application3/image19.png>] [101 <./figures/application3/image20.png>
-] [102
+[100 <./figures/application3/image10.png> <./figures/application3/image11.png> 
+<./figures/application3/image12.png> <./figures/application3/image13.png>]
+
+[101 <./figures/application3/image14.png> <./figures/application3/image15.png> 
+<./figures/application3/image16.png>]
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 25.12604pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.12604pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
+
+[102 <./figures/application3/image17.png> <./figures/application3/image18.png> 
+<./figures/application3/image19.png>]
+
+[103 <./figures/application3/image20.png>]
+
+[104
 
 
 ]
@@ -2412,24 +4722,26 @@ Chapter 11.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 5.
 
-<figures/application2/image1.png, id=1535, 279.9258pt x 187.4202pt>
+<figures/application2/image1.png, id=1461, 279.9258pt x 187.4202pt>
 File: figures/application2/image1.png Graphic file (type png)
 <use figures/application2/image1.png>
 Package pdftex.def Info: figures/application2/image1.png  used on input line 9.
 
 (pdftex.def)             Requested size: 142.26378pt x 95.2513pt.
-<figures/application2/image2.png, id=1536, 851.18pt x 662.475pt>
+<figures/application2/image2.png, id=1462, 851.18pt x 662.475pt>
 File: figures/application2/image2.png Graphic file (type png)
 <use figures/application2/image2.png>
 Package pdftex.def Info: figures/application2/image2.png  used on input line 15
 .
 (pdftex.def)             Requested size: 142.26378pt x 110.71886pt.
 
-LaTeX Warning: Marginpar on page 103 moved.
+LaTeX Warning: Marginpar on page 105 moved.
 
-[103 <./figures/application2/image1.png> <./figures/application2/image2.png (PN
+
+
+[105 <./figures/application2/image1.png> <./figures/application2/image2.png (PN
 G copy)>]
-<figures/application2/image3.png, id=1543, 993.7125pt x 648.4225pt>
+<figures/application2/image3.png, id=1468, 993.7125pt x 648.4225pt>
 File: figures/application2/image3.png Graphic file (type png)
 <use figures/application2/image3.png>
 Package pdftex.def Info: figures/application2/image3.png  used on input line 24
@@ -2444,31 +4756,38 @@ Package fullwidth inside float
 Package fullwidth Warning: The environment is empty
 (fullwidth)                 on input line 25.
 
-[104 <./figures/application2/image3.png (PNG copy)>] [105])
-(chapters/11_capacitors.tex [106]
+
+
+[106 <./figures/application2/image3.png (PNG copy)>]
+
+[107]) (./chapters/11_capacitors.tex
+
+[108]
 Chapter 12.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
 
-<figures/image1.png, id=1556, 827.09pt x 502.87875pt>
+<figures/image1.png, id=1481, 827.09pt x 502.87875pt>
 File: figures/image1.png Graphic file (type png)
 <use figures/image1.png>
 Package pdftex.def Info: figures/image1.png  used on input line 16.
 (pdftex.def)             Requested size: 142.26378pt x 86.49345pt.
 
-Underfull \vbox (badness 3009) has occurred while \output is active []
+Underfull \vbox (badness 1472) has occurred while \output is active []
 
- [107
+
+
+[109
 
 
 ]
-<figures/image2.png, id=1561, 739.76375pt x 713.66624pt>
+<figures/image2.png, id=1487, 739.76375pt x 713.66624pt>
 File: figures/image2.png Graphic file (type png)
 <use figures/image2.png>
 Package pdftex.def Info: figures/image2.png  used on input line 22.
 (pdftex.def)             Requested size: 142.26378pt x 137.24232pt.
-<figures/image3.png, id=1562, 916.42375pt x 562.1pt>
+<figures/image3.png, id=1488, 916.42375pt x 562.1pt>
 File: figures/image3.png Graphic file (type png)
 <use figures/image3.png>
 Package pdftex.def Info: figures/image3.png  used on input line 32.
@@ -2477,26 +4796,31 @@ Package pdftex.def Info: figures/image3.png  used on input line 32.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figures/image4.png, id=1563, 440.64626pt x 407.5225pt>
+<figures/image4.png, id=1489, 440.64626pt x 407.5225pt>
 File: figures/image4.png Graphic file (type png)
 <use figures/image4.png>
 Package pdftex.def Info: figures/image4.png  used on input line 40.
 (pdftex.def)             Requested size: 142.26378pt x 131.56645pt.
 
+
+
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
 (fancyhdr)                \setlength{\headheight}{25.12604pt}.
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[108 <./figures/image1.png (PNG copy)> <./figures/image2.png (PNG copy)> <./fig
-ures/image4.png (PNG copy)>]) (chapters/12_conclusions.tex
+[110 <./figures/image1.png (PNG copy)> <./figures/image2.png (PNG copy)> <./fig
+ures/image4.png (PNG copy)>]) (./chapters/12_conclusions.tex
 Overfull \hbox (1.34863pt too wide) in paragraph at lines 56--1
 \T1/XCharter-TLF/m/n/10.95 age de-vices in three-electrode con-fig-u-ra-tion, w
 ith less at-ten-tion on the chem-
  []
 
-[109 <./figures/image3.png (PNG copy)>]
+
+
+[111 <./figures/image3.png (PNG copy)>]
+
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 25.12604pt, for example:
@@ -2504,357 +4828,31 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-11.12604pt}.
 
-[110]
+[112]
 Chapter 13.
-) [111
-
-
-] [112
-
-
-]
-LaTeX Font Info:    Font shape `T1/XCharter-TLF/m/sc' will be
-(Font)              scaled to size 10.95pt on input line 40.
-
-Overfull \hbox (18.4555pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 2700, 1520-6882. \T1/XCharter-TLF/m/sc/10.95 doi\T1/
-XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ac60336a008$[][]\T
-1/XCharter-TLF/m/n/10.95 . (Vis-ited on 02/03/2022). 
- []
-
-
-Overfull \hbox (3.40416pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Fourier Trans-form Faradaic Ad-mit-tance Mea-sure-me
-nts: Real-Time De-
- []
-
-
-Overfull \hbox (5.43138pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 con-vo-lu-tion of Het-ero-ge-neous Charge Trans-fer 
-Ki-netic Ef-fects for Ther-
- []
-
-
-Overfull \hbox (18.76459pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 0728. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
-F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(77 ) 80290 -[]
- 8$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 06/13/2025). 
- []
-
-
-Overfull \hbox (10.23242pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Sam-pler Sys-tem: Ap-pli-ca-tion to on-Line Fast Fou
-rier Trans-form Faradaic
- []
-
-
-Overfull \hbox (12.0987pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Ad-mit-tance Mea-sure-ments''. In: \T1/XCharter-TLF/
-m/it/10.95 An-a-lyt-i-cal Chem-istry \T1/XCharter-TLF/m/n/10.95 49.12 (Oct. 197
-7),
- []
-
-
-Overfull \hbox (27.61673pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 pp. 1797^^U1805. \T1/XCharter-TLF/m/sc/10.95 issn\T1
-/XCharter-TLF/m/n/10.95 : 0003-2700, 1520-6882. \T1/XCharter-TLF/m/sc/10.95 doi
-\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ac50020a041$[]
-[]\T1/XCharter-TLF/m/n/10.95 .
- []
+)
 
 [113
 
 
-{C:/Users/fscarp/AppData/Roaming/MiKTeX/fonts/enc/dvips/xcharter/xch_yelf2i.enc
-}]
-Overfull \hbox (6.59177pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 1983), pp. 205^^U219. \T1/XCharter-TLF/m/sc/10.95 is
-sn\T1/XCharter-TLF/m/n/10.95 : 0022-0728. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XC
-harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(83 )
- []
+]
 
+[114
 
-Overfull \hbox (143.98906pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Iso-mer-iza-tion Mech-a-nism of the Rad-i-cal An-ion
- of (.Eta.4-Cyclooctatetraene)Cyclopentadienylcobalt
- []
 
+]
 
-Overfull \hbox (4.7854pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 with FFT-Faradaic Ad-mit-tance Mea-sure-ments''. In:
- \T1/XCharter-TLF/m/it/10.95 Jour-nal of the Amer-
- []
+LaTeX Warning: Empty bibliography on input line 40.
 
-
-Overfull \hbox (18.4555pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 7863, 1520-5126. \T1/XCharter-TLF/m/sc/10.95 doi\T1/
-XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1021 / ja00345a013$[][]\T
-1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/21/2025). 
- []
-
-
-Overfull \hbox (5.34015pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/it/10.95 nal of Elec-tro-an-a-lyt-i-cal Chem-istry and In-te
-r-fa-cial Elec-tro-chem-istry \T1/XCharter-TLF/m/n/10.95 162.1
- []
-
-
-Overfull \hbox (2.62604pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 Ari U. Ivaska and Don-ald E. Smith. ``Ap-pli-ca-ti
-on of On-Line Fast Fourier
- []
-
-
-Overfull \hbox (3.97543pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 Maria Grzeszczuk and Don-ald E. Smith. ``Elec-tron
- and Hy-dro-gen Atom
- []
-
-
-Overfull \hbox (5.34015pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/it/10.95 nal of Elec-tro-an-a-lyt-i-cal Chem-istry and In-te
-r-fa-cial Elec-tro-chem-istry \T1/XCharter-TLF/m/n/10.95 201.2
- []
-
-[114]
-Overfull \hbox (2.36046pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 Tetsuya Os-aka and Kat-suhiko Naoi. ``Ap-pli-ca-ti
-on of On-line Impedance
- []
-
-
-Overfull \hbox (8.94627pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Doping-Undoping Pro-cess of Poly-acety-lene by Means
- of FFT Impedance
- []
-
-
-Overfull \hbox (1.15105pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 TRANS-FORM) IMPEDANCE METHOD TO DOPING-UNDOPING PRO-
-
- []
-
-
-Overfull \hbox (6.83557pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 main''. In: \T1/XCharter-TLF/m/it/10.95 Re-view of S
-ci-en-tific In-stru-ments \T1/XCharter-TLF/m/n/10.95 64.11 (Nov. 1993), pp. 311
-1^^U
- []
-
-
-Overfull \hbox (33.879pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 3115. \T1/XCharter-TLF/m/sc/10.95 issn\T1/XCharter-T
-LF/m/n/10.95 : 0034-6748. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TLF/m/n/1
-0.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1063 / 1 . 1144316$[][]\T1/XCharter-TLF/m/n
-/10.95 . (Vis-ited on 09/22/2025). 
- []
-
-[115]
-Overfull \hbox (1.94006pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 dur-ing Ox-i-da-tion and Re-duc-tion of Con-duct-ing
- Poly-mers: Sig-nif-i-cance
- []
-
-
-Overfull \hbox (8.94829pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Con-duct-ing Poly-mer Layer''. In: \T1/XCharter-TLF/
-m/it/10.95 Elec-trochim-ica Acta \T1/XCharter-TLF/m/n/10.95 40.12 (Sept. 1995),
-
- []
-
-
-Overfull \hbox (15.25285pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Mea-sure-ments''. In: \T1/XCharter-TLF/m/it/10.95 Ap
--plied Physics Let-ters \T1/XCharter-TLF/m/n/10.95 83.11 (Sept. 2003), pp. 2178
-^^U
- []
-
-
-Overfull \hbox (33.879pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 2180. \T1/XCharter-TLF/m/sc/10.95 issn\T1/XCharter-T
-LF/m/n/10.95 : 0003-6951. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TLF/m/n/1
-0.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1063 / 1 . 1609657$[][]\T1/XCharter-TLF/m/n
-/10.95 . (Vis-ited on 09/22/2025). 
- []
-
-
-Overfull \hbox (0.9334pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 1995), pp. 249^^U254. \T1/XCharter-TLF/m/sc/10.95 is
-sn\T1/XCharter-TLF/m/n/10.95 : 1572-6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XC
-harter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / 0022 -[] 0728(94 )
- []
-
-[116]
-Overfull \hbox (15.40688pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Pas-sive Layer Crack-ing by Means of Dy-namic Elec-t
-ro-chem-i-cal Impedance
- []
-
-
-Overfull \hbox (9.96051pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 K. Darow-icki and P. ‘lep-ski. ``In-stan-ta-neous 
-Elec-tro-chem-i-cal Impedance
- []
-
-
-Overfull \hbox (21.15881pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 (Feb. 2004), pp. 763^^U772. \T1/XCharter-TLF/m/sc/10
-.95 issn\T1/XCharter-TLF/m/n/10.95 : 0013-4686. \T1/XCharter-TLF/m/sc/10.95 doi
-\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . electacta 
-.
- []
-
-
-Overfull \hbox (18.76459pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
-F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / S0022 -[] 0728(03 ) 00154 -[]
- 2$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/22/2025). 
- []
-
-
-Overfull \hbox (17.08937pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 K. Darow-icki, A. Zielin-ski, and P. Slep-ski. ``C
-ontinuous-Frequency Method
- []
-
-
-Overfull \hbox (12.10622pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 2481. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
-F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . elecom . 2004 . 06 . 013$
-[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/22/2025). 
- []
-
-
-Overfull \hbox (10.78267pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 ro-sion by Means of Dy-namic Elec-tro-chem-i-cal Imp
-edance Spec-troscopy''.
- []
-
-[117]
-Overfull \hbox (2.91891pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 (Jan. 2005), pp. 33^^U38. \T1/XCharter-TLF/m/sc/10.9
-5 issn\T1/XCharter-TLF/m/n/10.95 : 1572-6657. \T1/XCharter-TLF/m/sc/10.95 doi\T
-1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . jelechem .
- []
-
-
-Overfull \hbox (14.93279pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 less Steel by Gal-van-o-dy-namic Impedance Spec-tros
-copy''. In: \T1/XCharter-TLF/m/it/10.95 Elec-trochim-
- []
-
-
-Overfull \hbox (2.0008pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 namic Elec-tro-chem-i-cal Impedance Mon-i-tor-ing to
- a Cat-aphoretic Coat-
- []
-
-
-Overfull \hbox (18.34727pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 ing Pro-cess''. In: \T1/XCharter-TLF/m/it/10.95 Prog
-ress in Or-ganic Coat-ings \T1/XCharter-TLF/m/n/10.95 149 (Dec. 2020), p. 10590
-6.
- []
-
-
-Overfull \hbox (3.57782pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/it/10.95 na-tional Jour-nal of Elec-tro-chem-i-cal Sci-ence 
-\T1/XCharter-TLF/m/n/10.95 12.7 (July 2017), pp. 6908^^U
- []
-
-
-Overfull \hbox (0.8132pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 Anna Aru-tunow, Ma-teusz Tomasz To-biszewski, and 
-Kaz-imierz Darow-
- []
-
-
-Overfull \hbox (9.06018pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Impedance Mi-croscopy to Het-ero-ge-neous Al-loy Sur
--face In-ves-ti-ga-tions''.
- []
-
-
-Overfull \hbox (2.21814pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 Joanna Wysocka et al. ``In-ves-ti-ga-tion of the E
-lec-tro-chem-i-cal Be-haviour
- []
-
-
-Overfull \hbox (23.42296pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 6657. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XCharter-TL
-F/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1016 / j . jelechem . 2016 . 08 . 02
-8$[][]\T1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/23/2025). 
- []
-
-[118]
-Overfull \hbox (4.3518pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Cor-ro-sion Crack-ing Dy-nam-ics by Dy-namic Elec-tr
-o-chem-i-cal Impedance
- []
-
-
-Overfull \hbox (40.51282pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 (Sept. 2004), pp. 255^^U260. \T1/XCharter-TLF/m/sc/1
-0.95 issn\T1/XCharter-TLF/m/n/10.95 : 1478-422X. \T1/XCharter-TLF/m/sc/10.95 do
-i\T1/XCharter-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 1179 / 147842204X284
-4$[][]\T1/XCharter-TLF/m/n/10.95 .
- []
-
-
-Overfull \hbox (14.96484pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 tropoly-mer-iza-tion''. In: \T1/XCharter-TLF/m/it/10
-.95 Elec-trochim-ica Acta \T1/XCharter-TLF/m/n/10.95 49.27 (Oct. 2004), pp. 482
-9^^U
- []
-
-
-Overfull \hbox (4.87738pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 namic Elec-tro-chem-i-cal Impedance Spec-troscopy Me
-a-sure-ments of Pas-
- []
-
-
-Overfull \hbox (34.4736pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 Lukasz Bur-czyk and Kaz-imierz Darow-icki. ``Lo-ca
-l Elec-tro-chem-i-cal Impedance
- []
-
-
-Overfull \hbox (4.65399pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Spec-troscopy in Dy-namic Mode of Gal-vanic Cou-plin
-g''. In: \T1/XCharter-TLF/m/it/10.95 Elec-trochim-
- []
-
-
-Overfull \hbox (7.56946pt too wide) in paragraph at lines 41--41
-[]\T1/XCharter-TLF/m/n/10.95 Artur Zielin-ski et al. ``Mul-ti-fre-quency Nanosc
-ale Impedance Mi-croscopy
- []
-
-
-Overfull \hbox (5.22278pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 Dy-namic Impedance Tech-nique''. In: \T1/XCharter-TL
-F/m/it/10.95 Car-bon \T1/XCharter-TLF/m/n/10.95 96 (Jan. 2016), pp. 1093^^U
- []
-
-
-Overfull \hbox (11.66013pt too wide) in paragraph at lines 41--41
-\T1/XCharter-TLF/m/n/10.95 2822-6054. \T1/XCharter-TLF/m/sc/10.95 doi\T1/XChart
-er-TLF/m/n/10.95 : [][]$\T1/cmtt/m/n/10.95 10 . 5281 / zenodo . 12568722$[][]\T
-1/XCharter-TLF/m/n/10.95 . (Vis-ited on 09/23/2025). 
- []
-
-[119]
 Package minitoc Info: I0009
 (minitoc)             Listing minitoc auxiliary files. 
 (minitoc)             Creating the main.maf file.
 \openout4 = `main.maf'.
 
- [120] (main.aux)
+(./main.aux)
  ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2024-01-04>
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-09-02>
  ***********
 
 
@@ -2864,44 +4862,50 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 5F3948B51E71D048A135F7D15ACDE06F;28984.
+(rerunfilecheck)             Checksum: 3F26376DEFD29BF048C0C874B0682F62;29817.
 
-Package biblatex Warning: Please rerun LaTeX.
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
 
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27455 strings out of 474486
- 488557 string characters out of 5753568
- 1947542 words of memory out of 5000000
- 48908 multiletter control sequences out of 15000+600000
- 708909 words of font info for 126 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 81i,16n,84p,2787b,1535s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ect
-t1095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
-600\ecrm1095.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
-/ec/dpi600\ecrm1440.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/ljfour/j
-knappen/ec/dpi600\ecrm1728.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fonts/pk/l
-jfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\fscarp\AppData\Local\MiKTeX\fon
-ts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\fscarp\AppData\Local\MiK
-TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk><C:/Users/fscarp/AppData/Roa
-ming/MiKTeX/fonts/type1/public/xcharter/XCharter-Bold.pfb><C:/Users/fscarp/AppD
-ata/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Italic.pfb><C:/Users/fs
-carp/AppData/Roaming/MiKTeX/fonts/type1/public/xcharter/XCharter-Roman.pfb><C:/
-Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
-s/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
-:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fi
-les/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (126 pages, 9427296 bytes).
+ 27543 strings out of 469269
+ 481587 string characters out of 5467112
+ 1416352 words of memory out of 5000000
+ 55217 multiletter control sequences out of 15000+600000
+ 772159 words of font info for 130 fonts, out of 8000000 for 9000
+ 319 hyphenation exceptions out of 8191
+ 81i,16n,82p,2785b,1230s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/xcharter/XCharter
+-Bold.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/xcharter/
+XCharter-Italic.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public
+/xcharter/XCharter-Roman.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025basic/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025bas
+ic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025
+basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
+live/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/
+texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/loc
+al/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/
+local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></u
+sr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
+</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm2488.p
+fb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sftt109
+5.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/bookman/ubkd8a.p
+fb>
+Output written on main.pdf (126 pages, 9243968 bytes).
 PDF statistics:
- 2152 PDF objects out of 2487 (max. 8388607)
- 396 named destinations out of 1000 (max. 500000)
- 1448 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1679 PDF objects out of 1728 (max. 8388607)
+ 1407 compressed objects within 15 object streams
+ 326 named destinations out of 1000 (max. 500000)
+ 1480 words of extra memory for PDF output out of 10000 (max. 10000000)
 

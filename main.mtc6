@@ -1,25 +1,25 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-frequency data acquisition}{\reset@font\mtcSfont 53}{section*.77}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Description of the set-up}{\reset@font\mtcSSfont 54}{subsection*.78}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automation of the acquisition for batteries}{\reset@font\mtcSfont 54}{section*.79}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Problem statement}{\reset@font\mtcSSfont 54}{subsection*.80}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software solution}{\reset@font\mtcSSfont 56}{subsection*.81}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Design principle}{\reset@font\mtcSSfont 56}{subsection*.82}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automatic calculation of the impedance}{\reset@font\mtcSfont 57}{section*.83}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode DEIStools: a Python application for dynamic impedance}{\reset@font\mtcSfont 58}{section*.84}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software limits}{\reset@font\mtcSSfont 58}{subsection*.85}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-sine design}{\reset@font\mtcSfont 59}{section*.86}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Frequencies selection}{\reset@font\mtcSSfont 59}{subsection*.87}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Amplitude optimization}{\reset@font\mtcSSfont 59}{subsection*.88}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Phase optimization}{\reset@font\mtcSSfont 60}{subsection*.89}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Multi-sine splitting}{\reset@font\mtcSSfont 61}{subsection*.90}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software}{\reset@font\mtcSSfont 62}{subsection*.92}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Impedance estimation}{\reset@font\mtcSfont 63}{section*.93}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Old part}{\reset@font\mtcSfont 64}{section*.94}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Arbitrary waveform generator}{\reset@font\mtcSSfont 64}{subsection*.95}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-sine design}{\reset@font\mtcSfont 65}{section*.96}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Running the multi-sine in the waveform generator}{\reset@font\mtcSSfont 65}{subsection*.97}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Digital acquisition device}{\reset@font\mtcSSfont 65}{subsection*.98}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Connecting cells in three-electrode configuration}{\reset@font\mtcSfont 67}{section*.99}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Electrochemical devices}{\reset@font\mtcSfont 67}{section*.100}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Connecting the device and acquiring the signals: set-up version 1}{\reset@font\mtcSfont 68}{section*.101}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automatic cycling with}{\reset@font\mtcSfont 68}{section*.102}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-frequency data acquisition}{\reset@font\mtcSfont 55}{section*.81}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Description of the set-up}{\reset@font\mtcSSfont 56}{subsection*.82}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automation of the acquisition for batteries}{\reset@font\mtcSfont 56}{section*.83}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Problem statement}{\reset@font\mtcSSfont 56}{subsection*.84}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software solution}{\reset@font\mtcSSfont 58}{subsection*.85}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Design principle}{\reset@font\mtcSSfont 58}{subsection*.86}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automatic calculation of the impedance}{\reset@font\mtcSfont 59}{section*.87}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode DEIStools: a Python application for dynamic impedance}{\reset@font\mtcSfont 60}{section*.88}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software limits}{\reset@font\mtcSSfont 60}{subsection*.89}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-sine design}{\reset@font\mtcSfont 61}{section*.90}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Frequencies selection}{\reset@font\mtcSSfont 61}{subsection*.91}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Amplitude optimization}{\reset@font\mtcSSfont 61}{subsection*.92}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Phase optimization}{\reset@font\mtcSSfont 62}{subsection*.93}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Multi-sine splitting}{\reset@font\mtcSSfont 63}{subsection*.94}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software}{\reset@font\mtcSSfont 64}{subsection*.96}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Impedance estimation}{\reset@font\mtcSfont 65}{section*.97}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Old part}{\reset@font\mtcSfont 66}{section*.98}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Arbitrary waveform generator}{\reset@font\mtcSSfont 66}{subsection*.99}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-sine design}{\reset@font\mtcSfont 67}{section*.100}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Running the multi-sine in the waveform generator}{\reset@font\mtcSSfont 67}{subsection*.101}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Digital acquisition device}{\reset@font\mtcSSfont 67}{subsection*.102}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Connecting cells in three-electrode configuration}{\reset@font\mtcSfont 69}{section*.103}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Electrochemical devices}{\reset@font\mtcSfont 69}{section*.104}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Connecting the device and acquiring the signals: set-up version 1}{\reset@font\mtcSfont 70}{section*.105}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automatic cycling with}{\reset@font\mtcSfont 70}{section*.106}}

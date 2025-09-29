@@ -60,7 +60,7 @@ in 2018 H. Zappen D. U. Sauer and collegues from RWTH Aachen Univeristy in Germa
 In 2020 T. Pajkossy and G. Mészáros proposed a set-up in which the potentiostat is custom build in order to analogically seperate the drift and oscillations. The input controll is still made by the superposition of a main drift, sweeping voltage, and small multi-frequency excitation with odd prime frequencies in the band 18.3 Hz - 17.8 kHz \cite{pajkossyConnectionCVsImpedance2020}. The four outputs are recorded with analog to digital converter. The researchers did also an extendive theoretical evaluation of the coupling of cyclic voltammetry and impedance for the estimation of charge transfer resistance for quasi-reversible redox systems \cite{pajkossyDynamicElectrochemicalImpedance2019}  \cite{pajkossyVoltammetryCoupledImpedance2020} \cite{pajkossyDynamicElectrochemicalImpedance2021}. 
 
 \subsection{Non-stationary impedance}
-The methods discussed so far in the section works for systems that can be approximated stationary for the period of the excitation. It is limiting the acquisition of impedance for slow systems or using high frequencies (usually above 1Hz). 
+The methods discussed so far in the section works for systems that can be approximated stationary for the period of the excitation. It is limiting the acquisition of impedance for fast systems or using high frequencies (usually above 1Hz). 
 From 2012 T. Bruegelmans, J. Latier and their colleagues in Brussels extended the theory of system identification for non-stationary systems to the estimation of electrochemical impedance \cite{breugelmansOddRandomPhase2012}  for system that are effected by a strong drift and being still able to estimate the impedance to frequency as low as 0.3 Hz. 
 Later, the method has been further extended with the identifiation of non-linearities \cite{hallemansNonparametricIdentificationLinear2020} \cite{hallemansDetectionClassificationQuantification2021} and generalized for any non-statoinary systems \cite{hallemansBestLinearTimeVarying2021}. In Halleman 2022 they also introduce a new method for detrending the signal before calculate the best linear time-varying approximation.
 From 2018 on, the group applied the method for the identification of the transfer function of many highly non-stationary systems performing galvanostatic techniques: electrograining \cite{woutersUseInstantaneousImpedance2018}, human respiration \cite{battistelHarmonicAnalysisSeparation2021},  metal electrodeposition \cite{colletOperandoORPEISStudy2021} \cite{dabirihavighOperandoOddRandom2022}, the conversion of zinc to zirconia \cite{dabirihavighOperandoOddRandom2023} and to study fast charging \cite{hallemansOperandoElectrochemicalImpedance2022}and SEI formation in Li-ion batteries \cite{dabirihavighOperandoORPEISMonitoring2025}.
@@ -70,10 +70,10 @@ The group hilighted how the calculation of the time-resolved impedance with thei
 The method was used to study the redox active species \cite{kosterDynamicImpedanceSpectroscopy2017} [Mugisa 2024], disolution of p-type silicon \cite{kosterMeasurementAnalysisDynamic2018}, the intercalation of cations in Nickel Hexacyanoferrate \cite{erinmwingbovoDynamicImpedanceSpectroscopy2019}, lithium manganese oxide \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020} [Erinwingbovo 2023] and lithium titanium phosphate \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a} and for the adsorbtion of ion on porous carbon electrodes. (The latter two are part of the discussion of this thesis).
 The group also fronted the problem of fitting the great ammount of data from time-resolved impedance measurements \cite{battistelAnalysisNonstationaryImpedance2016} \cite{chukwuDynamicImpedanceSpectroscopy2023}. In 2025 the group published a work using piece-wise linearization approach from dynamic system theory to model the non-stationary impedance of an electrochemical system and validate the results of the Dynamic Multi-Frequency Analysis with bassband frequency filtering. Fruthermore the difference between stationary and non-stationary impedance is addressed. Is it correct ???
 
-\subsection{Honorable mentions}
+\subsection{Honorable mention}
 
 Another important reserach to be mentioned is the work of Stoynov on the mathematical determination of the instantanous impedance from data sets of impedance subjected to non-stationariteis. He first tintroduced in 1985 the four-dimentional analysis for non-stationary systems [Stoynov 1985-1992]] and then in 1992 he introduce the rotating fourir transform [Stoynov 1992].
-In this work, I address only the methods based on dynamic system identification with multi-frequency escitations so these two approaches, while theroetically interestng, will be not further discuss.
+In this work, I address only the methods based on dynamic system identification with multi-frequency escitations so these two approaches, while theroetically interestng, will be not further discuss. 
 
 
 \section{Nomenclature}
@@ -95,17 +95,6 @@ NSEIS nonstationary electrochemical impedance spectroscopy
 
 
 \section{Data validation}
-
-
-\section{Scope of this work}
-
-
-To make it open source multisine preparation, acquisition, visualization and analysis.
-
-Collect both the high and low part (boardband).
-
-Guess the degrees of freedom from the estimation of the trasnfer function (rational polinomial) using regolarized complex non linear fit of the spectra.
-
 
 
 

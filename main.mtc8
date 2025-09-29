@@ -1,13 +1,6 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Method}{\reset@font\mtcSfont 78}{section*.113}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Cycling test}{\reset@font\mtcSSfont 78}{subsection*.114}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Operando acquisition of stating impedance}{\reset@font\mtcSSfont 78}{subsection*.115}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Real time acquisition of dynamic impedance}{\reset@font\mtcSSfont 78}{subsection*.116}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Analysis of impedance data}{\reset@font\mtcSSfont 79}{subsection*.117}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Results}{\reset@font\mtcSfont 79}{section*.118}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Discussion}{\reset@font\mtcSfont 79}{section*.119}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Choice of the cell}{\reset@font\mtcSSfont 80}{subsection*.120}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Performance test of the cell}{\reset@font\mtcSSfont 81}{subsection*.121}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Static impedance evaluation}{\reset@font\mtcSSfont 81}{subsection*.123}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Time-varying impedance acquisition}{\reset@font\mtcSSfont 81}{subsection*.125}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode regression of rational polynomial}{\reset@font\mtcSSfont 85}{subsection*.130}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Associating measurement values with battery state}{\reset@font\mtcSSfont 87}{subsection*.135}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Parametric models}{\reset@font\mtcSfont 73}{section*.105}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Physical model}{\reset@font\mtcSSfont 73}{subsection*.106}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Simultaneous fitting}{\reset@font\mtcSfont 74}{section*.107}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Fitting error}{\reset@font\mtcSSfont 74}{subsection*.108}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Determination of the system degrees of freedom}{\reset@font\mtcSfont 75}{section*.109}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Determining transfer function structure}{\reset@font\mtcSfont 75}{section*.110}}

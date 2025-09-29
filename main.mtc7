@@ -1,6 +1,25 @@
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Parametric models}{\reset@font\mtcSfont 71}{section*.107}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Physical model}{\reset@font\mtcSSfont 71}{subsection*.108}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Simultaneous fitting}{\reset@font\mtcSfont 72}{section*.109}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Fitting error}{\reset@font\mtcSSfont 72}{subsection*.110}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Determination of the system degrees of freedom}{\reset@font\mtcSfont 73}{section*.111}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Determining transfer function structure}{\reset@font\mtcSfont 73}{section*.112}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-frequency data acquisition}{\reset@font\mtcSfont 57}{section*.79}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Description of the set-up}{\reset@font\mtcSSfont 58}{subsection*.80}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automation of the acquisition for batteries}{\reset@font\mtcSfont 58}{section*.81}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Problem statement}{\reset@font\mtcSSfont 58}{subsection*.82}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software solution}{\reset@font\mtcSSfont 60}{subsection*.83}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Design principle}{\reset@font\mtcSSfont 60}{subsection*.84}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automatic calculation of the impedance}{\reset@font\mtcSfont 61}{section*.85}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode DEIStools: a Python application for dynamic impedance}{\reset@font\mtcSfont 62}{section*.86}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software limits}{\reset@font\mtcSSfont 62}{subsection*.87}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-sine design}{\reset@font\mtcSfont 63}{section*.88}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Frequencies selection}{\reset@font\mtcSSfont 63}{subsection*.89}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Amplitude optimization}{\reset@font\mtcSSfont 63}{subsection*.90}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Phase optimization}{\reset@font\mtcSSfont 64}{subsection*.91}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Multi-sine splitting}{\reset@font\mtcSSfont 65}{subsection*.92}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Software}{\reset@font\mtcSSfont 66}{subsection*.94}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Impedance estimation}{\reset@font\mtcSfont 67}{section*.95}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Old part}{\reset@font\mtcSfont 68}{section*.96}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Arbitrary waveform generator}{\reset@font\mtcSSfont 68}{subsection*.97}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Multi-sine design}{\reset@font\mtcSfont 69}{section*.98}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Running the multi-sine in the waveform generator}{\reset@font\mtcSSfont 69}{subsection*.99}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode Digital acquisition device}{\reset@font\mtcSSfont 69}{subsection*.100}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Connecting cells in three-electrode configuration}{\reset@font\mtcSfont 71}{section*.101}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Electrochemical devices}{\reset@font\mtcSfont 71}{section*.102}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Connecting the device and acquiring the signals: set-up version 1}{\reset@font\mtcSfont 72}{section*.103}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode Automatic cycling with}{\reset@font\mtcSfont 72}{section*.104}}

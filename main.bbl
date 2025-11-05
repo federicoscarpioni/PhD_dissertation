@@ -780,7 +780,7 @@
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{A microcomputer-based form of Fourier transform instrumentation, which yields potential and frequency-dependent current, admittance and impedance data with excellent signal-to-background ratio over a wide frequency range, is shown to provide state-of-the-art performance in both analytical and kinetic applications of voltammetry. The limit of detection of 5{\texttimes}10-8 to 10-7 M found for the determination of cadmium and lead at a hanging mercury drop electrode, when applying a multi-frequency excitation signal, is equivalent to that reported with single-frequency or time-domain ac, pulse and square-wave polarographs. The highly effective discrimination against the charging current, which is required for trace analysis, can be achieved only by correction of the real part of the admittance data for the uncompensated solution resistance (a parameter readily obtained from impedance analysis of the data). Furthermore, excellent agreement with literature data is achieved when calculating the physico-chemical parameters associated with the cadmium(II) reduction process in different media. The ability to use the same instrument to undertake analytical determinations and characterise the electrode kinetics represents an ideal method for confirming the fidelity of a voltammetric analysis.}
+      \field{abstract}{A microcomputer-based form of Fourier transform instrumentation, which yields potential and frequency-dependent current, admittance and impedance data with excellent signal-to-background ratio over a wide frequency range, is shown to provide state-of-the-art performance in both analytical and kinetic applications of voltammetry. The limit of detection of 5\texttimes 10-8 to 10-7 M found for the determination of cadmium and lead at a hanging mercury drop electrode, when applying a multi-frequency excitation signal, is equivalent to that reported with single-frequency or time-domain ac, pulse and square-wave polarographs. The highly effective discrimination against the charging current, which is required for trace analysis, can be achieved only by correction of the real part of the admittance data for the uncompensated solution resistance (a parameter readily obtained from impedance analysis of the data). Furthermore, excellent agreement with literature data is achieved when calculating the physico-chemical parameters associated with the cadmium(II) reduction process in different media. The ability to use the same instrument to undertake analytical determinations and characterise the electrode kinetics represents an ideal method for confirming the fidelity of a voltammetric analysis.}
       \field{issn}{1572-6657}
       \field{journaltitle}{Journal of Electroanalytical Chemistry}
       \field{month}{7}
@@ -1409,7 +1409,7 @@
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{This letter presents in situ electronic conductivity measurements of polybithiophene films using a twin working electrode in an electrochemical configuration. A twin electrode is made of two metallic stripes which are separated by a few micrometers by an insulating gap. As the polymer doping level depends on the bias potential maintained between counter- and working electrodes, changes of electronic density of many orders of magnitude (from 1016 up to 1020\,cm-3 in the potential window investigated) can be achieved using this experimental technique. A simple impedance model based on electronic (polaronic) diffusion between absorbing contacts accounts for the measured impedance spectra. The dependence of low-frequency conductivity {$\sigma$}dc with bias potential E at low doping levels follows the relationship ln{$\mkern1mu\sigma$}dc{$\propto$}E/2kBT, which allows one to regard it as a double contribution, simultaneously electronic and ionic, to the thermodynamics of doping. It has also been possible to calculate the electronic chemical diffusion coefficient from the diffusion characteristic frequency {$\omega$}d, which results within the range of De{$\sim$}4--1{\texttimes}10-3\,cm2{$\mkern1mu$}s-1.}
+      \field{abstract}{This letter presents in situ electronic conductivity measurements of polybithiophene films using a twin working electrode in an electrochemical configuration. A twin electrode is made of two metallic stripes which are separated by a few micrometers by an insulating gap. As the polymer doping level depends on the bias potential maintained between counter- and working electrodes, changes of electronic density of many orders of magnitude (from 1016 up to 1020\,cm-3 in the potential window investigated) can be achieved using this experimental technique. A simple impedance model based on electronic (polaronic) diffusion between absorbing contacts accounts for the measured impedance spectra. The dependence of low-frequency conductivity {$\sigma$}dc with bias potential E at low doping levels follows the relationship ln{$\mkern1mu\sigma$}dc{$\propto$}E/2kBT, which allows one to regard it as a double contribution, simultaneously electronic and ionic, to the thermodynamics of doping. It has also been possible to calculate the electronic chemical diffusion coefficient from the diffusion characteristic frequency {$\omega$}d, which results within the range of De{$\sim$}4--1\texttimes 10-3\,cm2{$\mkern1mu$}s-1.}
       \field{issn}{0003-6951}
       \field{journaltitle}{Applied Physics Letters}
       \field{month}{9}
@@ -3174,7 +3174,7 @@
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{In the recent years atomic force microscopy is recognized as valuable tool for investigation of surficial features of construction materials. It concerns, among other things, studies of changes caused by such phenomena as galvanic corrosion, passivation associated with the growth of oxide layers, or sensitization of austenitic steels with the formation of carbide phases. In addition, atomic force microscopy allows easy coupling with impedance technique which is especially promising because of its versatility in investigations of both conductive and dielectric materials. The authors discuss the possibility of application of such type of measurement, known as impedance microscopy. Copyright {©} 2015 John Wiley \& Sons, Ltd.}
+      \field{abstract}{In the recent years atomic force microscopy is recognized as valuable tool for investigation of surficial features of construction materials. It concerns, among other things, studies of changes caused by such phenomena as galvanic corrosion, passivation associated with the growth of oxide layers, or sensitization of austenitic steels with the formation of carbide phases. In addition, atomic force microscopy allows easy coupling with impedance technique which is especially promising because of its versatility in investigations of both conductive and dielectric materials. The authors discuss the possibility of application of such type of measurement, known as impedance microscopy. Copyright ©{} 2015 John Wiley \& Sons, Ltd.}
       \field{issn}{1096-9918}
       \field{journaltitle}{Surface and Interface Analysis}
       \field{langid}{english}
@@ -3229,7 +3229,7 @@
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The paper presents the electrochemical behaviour of aluminium alloy AA1050 in aqueous alkaline media in the pH range 14--8.5. Electrochemical study was applied in order to obtain comprehensive information on the mechanism and kinetics of the process of anodic dissolution of aluminium, supplemented by monitoring of surface topography using an electron microscope. The corrosion rate of AA1050 increases with increasing concentration of hydroxyl ions OH-. Cathodic reaction occurs in the form of two competing processes, oxygen depolarization and hydrogen evolution. During anodic polarization process up to +8V vs Ag{|}Ag2O, activation control of the electrochemical process is converted to diffusion control upon reaching the potential approx. 0V. Instantaneous impedance spectra in Nyquist projection had at least two time constants: high--frequency loop of capacitive character associated with charge transfer process during anodic dissolution and negative low-frequency capacitance loop. Dynamic processes occurring during anodic dissolution of aluminium alloy can be concluded on the base of instantaneous change of electric parameters. Dynamic Electrochemical Impedance Spectroscopy (DEIS) enables continuous impedance monitoring of non--stationary processes, such as anodic dissolution of aluminium in aqueous alkaline environments.}
+      \field{abstract}{The paper presents the electrochemical behaviour of aluminium alloy AA1050 in aqueous alkaline media in the pH range 14--8.5. Electrochemical study was applied in order to obtain comprehensive information on the mechanism and kinetics of the process of anodic dissolution of aluminium, supplemented by monitoring of surface topography using an electron microscope. The corrosion rate of AA1050 increases with increasing concentration of hydroxyl ions OH-. Cathodic reaction occurs in the form of two competing processes, oxygen depolarization and hydrogen evolution. During anodic polarization process up to +8V vs Ag|Ag2O, activation control of the electrochemical process is converted to diffusion control upon reaching the potential approx. 0V. Instantaneous impedance spectra in Nyquist projection had at least two time constants: high--frequency loop of capacitive character associated with charge transfer process during anodic dissolution and negative low-frequency capacitance loop. Dynamic processes occurring during anodic dissolution of aluminium alloy can be concluded on the base of instantaneous change of electric parameters. Dynamic Electrochemical Impedance Spectroscopy (DEIS) enables continuous impedance monitoring of non--stationary processes, such as anodic dissolution of aluminium in aqueous alkaline environments.}
       \field{issn}{1572-6657}
       \field{journaltitle}{Journal of Electroanalytical Chemistry}
       \field{month}{10}
@@ -6804,6 +6804,9 @@
       \verb{doi}
       \verb 10.1016/j.corsci.2023.111469
       \endverb
+      \verb{file}
+      \verb C:\Users\fscarp\Zotero\storage\9RYLG62M\Dabiri Havigh et al. - 2023 - Operando odd random phase electrochemical impedance spectroscopy (ORP-EIS) for in-situ monitoring of.pdf
+      \endverb
       \keyw{Additives,Aminosilane,Conversion treatment,Operando ORP-EIS,Zinc}
     \endentry
     \entry{hallemansOperandoElectrochemicalImpedance2022}{article}{}
@@ -6888,9 +6891,9 @@
            familyi={M\bibinitperiod},
            given={Kristof},
            giveni={K\bibinitperiod}}}%
-        {{hash=3bd5d86f25cab0f62292f8e2b704d1c4}{%
-           family={{de la Fuente}},
-           familyi={d\bibinitperiod},
+        {{hash=482ed5d48706433187346d447e61cf4a}{%
+           family={De\bibnamedelima La\bibnamedelima Fuente},
+           familyi={D\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim F\bibinitperiod},
            given={Beatriz},
            giveni={B\bibinitperiod}}}%
         {{hash=c6afb2291dff8a0d5b8139fe7c5ed876}{%
@@ -6919,26 +6922,25 @@
            given={Annick},
            giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {American Chemical Society}%
-      }
       \strng{namehash}{32b91946067eea280ae2d73e3bf8f81e}
-      \strng{fullhash}{eb82bdd5118fe50fef14cae6aa9a4ebd}
+      \strng{fullhash}{bd069924a32be6e91ffe1661f6879551}
       \strng{bibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authorbibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authornamehash}{32b91946067eea280ae2d73e3bf8f81e}
-      \strng{authorfullhash}{eb82bdd5118fe50fef14cae6aa9a4ebd}
+      \strng{authorfullhash}{bd069924a32be6e91ffe1661f6879551}
       \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{abstract}{The solid electrolyte interphase (SEI) can significantly improve the low Coulombic Efficiency and poor cycling performance of anode-free Li metal batteries (AFLMBs). However, the sensitive nature of the SEI layer, its restricted environment, and the complex working conditions of the battery system complicate its investigation under operational conditions. We apply operando odd random phase electrochemical impedance spectroscopy (ORP-EIS) to monitor the formation of the SEI layer for AFLMBs. Operando ORP-EIS is measured for the Cu substrate during cathodic polarization from the open-circuit voltage to -0.4 V vs Li/Li+ in 1 M LiPF6 in EC/DMC (1:1 v/v), providing qualitative information regarding the reaction resistances during SEI formation. To further study the properties of the SEI layer and support the operando ORP-EIS findings, we employ surface analysis techniques, including field-emission gun scanning electron microscopy (FE-SEM), X-ray photoelectron spectroscopy (XPS), and time-of-flight secondary ion mass spectroscopy (ToF-SIMS). We observe that the formation of different compounds on the anode (negative electrode) as a function of applied charging potential influences the SEI properties. This nondestructive operando ORP-EIS technique provides an opportunity to obtain realistic information about the SEI layer and measure charge transfer resistance of occurring reactions. This technique facilitates the development of AFLMBs.}
+      \field{abstract}{The solid electrolyte interphase (SEI) can significantly improve the low Coulombic Efficiency and poor cycling performance of anode-free Li metal batteries (AFLMBs). However, the sensitive nature of the SEI layer, its restricted environment, and the complex working conditions of the battery system complicate its investigation under operational conditions. We apply operando odd random phase electrochemical impedance spectroscopy (ORPEIS) to monitor the formation of the SEI layer for AFLMBs. Operando ORP-EIS is measured for the Cu substrate during cathodic polarization from the open-circuit voltage to -0.4 V vs Li/ Li+ in 1 M LiPF6 in EC/DMC (1:1 v/v), providing qualitative information regarding the reaction resistances during SEI formation. To further study the properties of the SEI layer and support the operando ORP-EIS findings, we employ surface analysis techniques, including field-emission gun scanning electron microscopy (FE-SEM), X-ray photoelectron spectroscopy (XPS), and time-of-flight secondary ion mass spectroscopy (ToF-SIMS). We observe that the formation of different compounds on the anode (negative electrode) as a function of applied charging potential influences the SEI properties. This nondestructive operando ORP-EIS technique provides an opportunity to obtain realistic information about the SEI layer and measure charge transfer resistance of occurring reactions. This technique facilitates the development of AFLMBs.}
+      \field{issn}{2574-0962, 2574-0962}
       \field{journaltitle}{ACS Applied Energy Materials}
+      \field{langid}{english}
       \field{month}{9}
       \field{number}{17}
       \field{title}{Operando {{ORP-EIS}} for {{Monitoring SEI Formation}} of {{Anode-Free Li Metal Batteries}}}
-      \field{urlday}{23}
+      \field{urlday}{27}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
       \field{volume}{8}
@@ -6948,6 +6950,9 @@
       \range{pages}{12}
       \verb{doi}
       \verb 10.1021/acsaem.5c02142
+      \endverb
+      \verb{file}
+      \verb C:\Users\fscarp\Zotero\storage\U9WJ7JCD\Dabiri Havigh et al. - 2025 - Operando ORP-EIS for Monitoring SEI Formation of Anode-Free Li Metal Batteries.pdf
       \endverb
     \endentry
     \entry{kosterDynamicImpedanceSpectroscopy2017}{article}{}

@@ -10,6 +10,8 @@
 \usepackage{booktabs} % Rulers in tabels
 \usepackage{changepage}
 \usepackage{indentfirst}
+\usepackage{svg}
+\usepackage{float}
 
 % Manage bibliography
 \usepackage[
@@ -44,22 +46,22 @@ marginparwidth = 50mm
 \usepackage[T1]{fontenc}
 
 % Create custom command for settimang fonts
-\newcommand{\helvetfont}{\fontfamily{phv}\selectfont}
+% \newcommand{\helvetfont}{\fontfamily{phv}\selectfont}
 
-\newcommand{\bookfont}{\fontfamily{pbk }\selectfont}
+% \newcommand{\bookfont}{\fontfamily{pbk }\selectfont}
 
-\newcommand{\palafont}{\fontfamily{ppl }\selectfont}
+% \newcommand{\palafont}{\fontfamily{ppl }\selectfont}
 
 % Custommize headers and footers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhead{} % clear all header fields
-%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-%\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
-\fancyhead[LEH]{\thepage \qquad \leftmark}
-\fancyhead[ROH]{\rightmark \qquad \thepage }
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhead{} % clear all header fields
+% %\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+% %\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+% \fancyhead[LEH]{\thepage \qquad \leftmark}
+% \fancyhead[ROH]{\rightmark \qquad \thepage }
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
 
 % Remove numbers from empty pages
 \let\origdoublepage\cleardoublepage
@@ -68,66 +70,54 @@ marginparwidth = 50mm
 
 
 % Format the titles style
-\setcounter{secnumdepth}{0}
-\usepackage{titlesec}
+\setcounter{secnumdepth}{2}
+% \usepackage{titlesec}
 
-\newlength\fullchapwidth
-\setlength\fullchapwidth{%
-  \dimexpr\textwidth+\marginparsep+\marginparwidth\relax
-}
+% \newlength\fullchapwidth
+% \setlength\fullchapwidth{%
+%   \dimexpr\textwidth+\marginparsep+\marginparwidth\relax
+% }
 
-\titleformat{\chapter}[display]
-  {\filleft\Huge\bfseries\palafont}
-  {\fontfamily{pbk}\selectfont\scalebox{4}{\color{lightgray}\ \thechapter}
-  }
-  {0pt}
-  {}
-
-% Works only for the number
 % \titleformat{\chapter}[display]
-%   {\Huge\bfseries\palafont}                             % overall font
-%   {                                                       % label (your grey number)
-%     \makebox[\fullchapwidth][\ifodd\value{page}r\else l\fi]{%
-%       \fontfamily{pbk}\selectfont
-%       \scalebox{4}{\color{lightgray}\thechapter}%
-%     }%
+%   {\filleft\Huge\bfseries\palafont}
+%   {\fontfamily{pbk}\selectfont\scalebox{4}{\color{lightgray}\ \thechapter}
 %   }
-%   {1ex}
+%   {0pt}
 %   {}
 
 
-\titleformat{\section}[display]
-  {\LARGE\bfseries\palafont}
-  {\fontfamily{pbk}\selectfont\scalebox{1}{\color{lightgray}\thesection}\quad}
-  {0pt}
-  {}
+% \titleformat{\section}[display]
+%   {\LARGE\bfseries\palafont}
+%   {\fontfamily{pbk}\selectfont\scalebox{1}{\color{lightgray}\thesection}\quad}
+%   {0pt}
+%   {}
 
-\titleformat{\subsection}[block]
-  {\Large\bfseries\palafont}
-  {\fontfamily{pbk}\selectfont\scalebox{0.8}{\color{lightgray}\thesubsection}\quad}
-  {0pt}
-  {}
+% \titleformat{\subsection}[block]
+%   {\Large\bfseries\palafont}
+%   {\fontfamily{pbk}\selectfont\scalebox{0.8}{\color{lightgray}\thesubsection}\quad}
+%   {0pt}
+%   {}
 
-\titleformat{\subsubsection}[block]
-  {\normalsize\bfseries\palafont}
-  {\fontfamily{qag}\selectfont\scalebox{0.8}}
-  {0pt}
-  {}
+% \titleformat{\subsubsection}[block]
+%   {\normalsize\bfseries\palafont}
+%   {\fontfamily{qag}\selectfont\scalebox{0.8}}
+%   {0pt}
+%   {}
 
 % Format tables of content
 
 % Main ToC
 %\usepackage{titletoc}
-
+ 
 
 % Mini ToC for each chapter
-\usepackage[nohints,tight]{minitoc} 
-\setcounter{minitocdepth}{1}
-\renewcommand{\mtifont}{\large\bookfont}
-\renewcommand{\mtcfont}{\small\bookfont}
-\renewcommand{\mtcSfont}{\small\bookfont}
-\renewcommand{\mtcSSfont}{\small\bookfont}
-\renewcommand{\mtcSSSfont}{\small\bookfont}
+% \usepackage[nohints,tight]{minitoc} 
+% \setcounter{minitocdepth}{1}
+% \renewcommand{\mtifont}{\large\bookfont}
+% \renewcommand{\mtcfont}{\small\bookfont}
+% \renewcommand{\mtcSfont}{\small\bookfont}
+% \renewcommand{\mtcSSfont}{\small\bookfont}
+% \renewcommand{\mtcSSSfont}{\small\bookfont}
 
 
 % Create custom environment for whill width content

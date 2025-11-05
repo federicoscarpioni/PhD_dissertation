@@ -1,5 +1,5 @@
 \chapter{Acquisition of non-stationary impedance}
-\minitoc
+% \minitoc
 
 \section{Multi-frequency data acquisition}
 The estimation of the impedance require the sampling of input and output signals from the system when an excitation signal is applied. For electrochemical systems, one uses an electrochemical workstation that contain all the hardware necessary to impose a desired voltage or current to the cell. In this work we exploit the possibility of an electrochemical workstation to recieve external signals and output the analog signals of voltage and current. This features is available for different brands, in my work I used a BioLogic device. This possibility has two advantages: generate an excitation signal of arbotrary complexity provided by dedicated high-end generator, and acquire the cell signals at very high frequency with dedicated device. This possibilities are not avalable using the softwar eprovided by the manifacturers. Usually no arbitrary signals can be used or they are very limited in the number of points and generation frequency, and secondly the maximum sampling frequency is low (5kHz at best). Fruthermore data can not be used for online caluclation using computation languages like Python. On the other hand the use of commercial electrochemical workstation lifts us from the work to develop custom electronic control suitable for high frequency and small currents. \\
@@ -31,7 +31,7 @@ The work around for both the questions seems to be an automatic system that can,
 The automation of the instruments compatible with multi-threading uses the design pattern of the worker object. A worker object execute operation inside a \emph{while True} block on a dedicated thread, and terminates with a pause of 1 second of less (with the sleep command) during which the main thread is allowed to execute the code of another worker object. The multi-threading standard library of Python is capable of automatically manage all the objects without user indication in the code (compare to the other library like asyncio). \\
 Worker object has a propriety with the name \emph{running} that can be used from other object to check their status. This idea is at the base of all the library used to syncronize the electrochemical workstation, waveform generator and scope. It is important to notice that given the modularity of the apporach, it is possible to use different hardware to perform the experiment in the same manner, given the interface is similar (i.e. it has the same name of the methods that return the same objects).\\
 Multi-threaded objects can share memory in the form of memory buffer to avoid the well known problem of concurrency. Since all the mathematical operation in the Python code uses the library Numpy and its array type for storing the data it made sense to me to have a circular buffer with the type of Numpy array to work with. Unfortunately the only existing implementation on public repositories (NpCircularBuffer) was not updated to the current version of Numpy, therefore I made and published my own simple implementation of a one-dimensional circular buffer with the name npbuffer and used it across the library needed for this project.\\
-\section{Automatic calculation of the impedance}
+\section{Automatic calculation of the impedance} \label{On-line computation}
 The automation of the acquisition allow to record signals for battery cycling and mixed techniques but still has on other limitation regarding the data size. When considering the impedance of a battery, the desired frequency range might differ depending on the chemistry. In some cases 100Hz could be the maximum needed frequency for bigger batteries in pouch format, but when going to smaller sizes and laboratory scales it is generally needed to probe until higher frequency, up to 1MHz where the inductance of the connections cell to instrument became the predominant response (here I am not including solid state electrolytes that might need frequencies up to 7 MHz). For the application presented later, I determined an highest frequency of excitation of 100kHz (maintaining the lowest to 10mHz) that requires a sampling frequency of 500kHz or 1MHz (both worked in my tests using the following method, although according to the Nyquist limit 250kHz is enough). Such an high sampling rate would store very big data in the hard drive that soon will require expansion after weeks of measurement and experiment repetiotion. Furthermore the highest frequency would be repeated for a huge amount of times while we are actually interested of sampling long times to identify the lowest frequency. The upper part of the frequency band can be considered in a quasi-stationary condition and therefor doesn't require mathematical techniques to decouple with the main drift. The method used here follow this idea: calculating the impedance of the upper part of the frequency band (ex. above 10Hz) using the FFT-EIS method, apply a low-pass filter to remove these same frequencies and decimate the signal to a much lower rate (ex. 50Hz) to be stored for later estimation of the time-varying impedance (ex. with DMFA). Finally, the total spectra is reconstructed concatenating the impedance estimated with the two methods.\\
 This is the first contribution of this work: measuring broad-band non-stationary impedance continuously during the cycling of the battery.
 \section{DEIStools: a Python application for dynamic impedance}
@@ -105,104 +105,3 @@ To streamline the design of multisines I created a Python library also for it, w
 In the experimental works presented in this thesis, we estimated the impedance using the methods of the sliding short-time Fourier transform and dynamic multifrequency analysis; the first only during the online signal processing. The STFFT method has not much tuning. The only user parameters are the length of the window and the windowing function type. The length is dictated by the resolution that one wants to achieve, so on the lowest frequency component of the excitation. The windowing function instead alters the input and output signals time series to put more or less importance to the central part of the signal rather than the borders (makes the impedance confined in time at the price of spectral power) to obtain the instantaneous impedance at the middle points. For the experiment presented here, I assumed that being the drift of the system much slower than the perturbation, the impedance would not vary much and no windowing function is necessary. For the Dynamic Multi-Frequency Analysis, one needs to chose a filter function with care. Here we used the symmetric Fermi-Dirac delta with bandwidth of 0.01 Hz and an order of 8. A previous publication of the group showed the effect of these two parameters on the final result. The most important is the bandwidth because it reflects on the number of spectra estimated and their separation in time. Battistel and al. showed in XX the shape of the filter function when trasnformed to the time domain and it is similar to a sinc function for its main lobe and small oscillation asintothycally to zero. The dynamic multifrequency analysis performes a multiplication in the frequency domain  of the filter with the fourier spectra of the signal around one frequency, that correspond to a convolution of the time domain. Hence the time-domain transformed filter as a function shifted in time by a quantity equal to the reciprocal of the bandwidth. The windows should not be shorter than the period of the multisine and furthermore one should put care in the oscillating lobes that could bias the impedance estimation, as shown in Chukwu.\\
 
 In both methods, one can strongly reduce the zero-frequency skirt in the Fourier space and the Gibbs effect  by removing the baseline for current and voltage signals. I chose to use just a simple baseline removing because other classical methods did not work for me. Typically one can use sliding window averaging, spline or polynomial fitting or gaussian process regression to name the main one. In my experience non of these methods could effectively decouple the trend and the first few frequencies of the multisine that are overlapping. A complete Python library can be used to test these and more trend removal techniques, it is called Wotan. Hellemans and al. developed a method for de-trending signals with low frequency containing multi-sine but there is no available Python implementation to try out and the functional analysis used in the official is above my mathematical skills to implementing it myself.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Old part}
-The estimation of the time-varying impedance require the system to be perturbed with a multi-sine waveform and record input and output synchronously. Most commercial potentiostats-galvanostats do not have the implementation for user-defined arbitrary waveform on the computer user interface to be transferred on the instrument hardware and when a workaround is possible (i.e. ...) the number of points of the multi-sine and the maximum frequency are limited. Usually the buffer memory for the digital-to-analog converter of FPGA boards is a value between 12 kSa and 32 kSa according to my experience browsing manufacturers catalogs, which translates to a multi-sine of ??? decades. Furthermore the maximum frequency of sampling, which defines the maximum recordable tone according to the Nyquist-Shannon theorem, is quite limited due to the difficulty of transferring  big amount of data from the instrument to the computer. The maximum sampling frequency for a premium device might be in the order of 50 kHz. For most electrochemical systems the impedance is informative over 5 or more decades and to frequency up to 1MHz. On the other hand, commercial potentiostats-galvanostats have high precision electronics, with tested circuit boards that allow very small and high current and voltage ranges. The approach used in this work is to integrate a commercial arbitrary waveform generator and a high performance signal acquisition device to a potentiostat/galvanostat exploiting its input and output ports and avoiding the need of designing a high power circuit from scratch. In a nutshell, the set-up we used is composed of an arbitrary waveform generator which applies a custom waveform that define the experiment on the potentiostat though an auxiliary imput. The signal from the cell is recorded on the computer by the digital acquisition device though the auxiliary current and voltage ouput of the potentiostat which sends directly the anaolg signal of the cell. The data are later processed on the computer using custom software.
-In the following the parts of the set-up will be better explained, as well as the connection between the devices.
-
-\subsection{Arbitrary waveform generator}
-As arbitrary waveform generators we have chosen the TrueForm 33500B series because of its elevate digital-to-analog converter memory buffer. Two models has been used, the 33520B and 33522B which differs only in the value of buffer memory, the first of 16MSa and the second of 64MSa, both per channel. The other important characteristic of these devices are
-\marginpar{
-\centering
-\includegraphics[width = 0.95\marginparwidth]{figures/truform_white.jpg}
-%\captionof{figure}{Arbitrary waveform generator Keysight Trueform 33520B}
-Model 33520B
-\includegraphics[width = 0.95\marginparwidth]{figures/truform_black.png}
-Model 33522B
-\captionof{figure}{Keysight Trueform arbitrary waveform generator units from the series 33500.}
-\label{fig:awg photo}
-}
-\begin{itemize}
-    \item high frequency generation capability of 20MHz, much higher then the electrochemical upper response limit (usully below 1MHz),
-    \item two distinct channels with own memory and the possibility to store multiple waveforms,
-    \item possibility to sum the waveform in the two channels (and output the total on channel 1),
-    \item imrpoved signal integrity thanks to high generation fidelity with 0.03\% of harmonic distortion, a jitter as low as 1 ps and proprietary \emph{Trueform} generation technology compared to the Direct Digital Synthesis method; all contributes to reduce any source of intermodulation in the multisine. \\ (more on that \url{https://www.youtube.com/watch?v=HLPoSiorh30})
-\end{itemize}
-Further details are reported in the witepapers supplied by the company Keysight though their website.
-
-The user can set the parameters using the convenient front panel of the device, as shown in Figure \ref{fig:awg photo} or sending commands via USB or Ethernet connection. The instrument can communicate with a computer through SCIPI (Standard Commands for Programmable Instruments) language. I developed a small but convenient Python module to communicate with the instrument using the PyVISA package, Python implementation of VISA (Virtual Instrument Software Architecture). The module is available on my GitHub page (\url{https://github.com/federicoscarpioni/TrueFormAWG}). The manufacturer also provides a collection of stand-alone software for the control of the instruments, the design of  waveforms and automation of electrical tests, that I did not used for this work. An exception is the software Keysight connect to verify the connection with the instrument through USB or Ethernet sub-network and get their addresses for establishing the connection with the dedicated Python library mentioned before.
-
-\section{Multi-sine design}
-
-\subsection{Running the multi-sine in the waveform generator}
-The waveform can be transferred via USB drive accessing the front panel or via SCIPI communication.
-
-
-\subsection{Digital acquisition device}
-
-The acquisition stage of the set-up must satisfy two requirements:
-\begin{itemize}
-    \item Sampling at frequency of the order of MHz,
-    \item Sample very long signals of hundreds of thousands of points.
-\end{itemize}
-Many solutions are available on the market to easily achieve these goals. They mainly fold into two categories base on their connection: USB or PCI. For this work we chose to use a USB device which satisfies all the requirements while being relatively inexpensive. USB devices are practical and portable and it is possible to connect many of them on the same computer. The devices chosen are from the PicoScope digital computer oscilloscope from Pico Technology. The devices can interface with a computer through the proprietary software PicoScope Software or the feature-rich software development kit available in multiple programming languages directly from the manufacturer GitHub page (\url{https://github.com/picotech}). Pico Technologies sells different series of devices with different capabilities. In this work we used 
-\begin{itemize}
-    \item PicoScope 4824A (4000A series) with 8 channles and a resolution of 12bit,
-    \item PicoScope 4262 (4000 series) with 2 channles and a resolution of 16bit,
-    \item PicoScope 5442D (5000 seires) with 4 channels and a resolution of 16-15-14 or lower bit depending on the number of channels active.
-\end{itemize}
-For the concerns of this work, the main differences between the devicea are
-\begin{itemize}
-    \item the number of channels,
-    \item the resolution of the analog-to-digital converter expressed in bit (higher number is better, as discussed in \ref{sec:ADC})
-    \item the maximum sampling frequency (which is always fare above the needs in electrochemistry),
-    \item the cutting frequency of an internal filter low-pass filter.
-\end{itemize}
-The peculiar characteristics of these devices is the \emph{streaming mode} for transferring continuous acquisition of signals without loss even when the signal is longer than the device memory (other modes are available such as block mode and ???). 
-The software development kit (SDK) from the manifacturer provides an interface to the USB drivers to conveniently include the streaming of data into the user program. The streaming mode works as follow: the user defines in their program a memory segment and a function to execute some actions on the data which are bidden to the software and when some new data is ready, the USB drive automatically writes the new numbers in the memory segment and calls the function (which is commonly referred to as callback function). In the callback the data in the memory segment should be processed, saved or evaluated in some way because will be overwritten in the next call anyway.
-The routine runs in a infinite \lstinline[language=Python]{while} loop.
-A common approach, and also the suggestion from the manual, is to have another memory segment in the user program, let's call it \emph{signal storage} for clarity despite being save on the RAM volatile memory and not in the permanent disk, large as much as the signal to sample where to copy the new data at each execution of the callback. The manual from the manufacturer gives a lot of information on the streaming mode and how to set it up. Code examples are also available for each supported programming language.
-
-The data streamed are the numbers coming from the digitization step and they need to be converted before using them. The conversion factor depends on the resolution of the devices used (see \ref{sec:ADC}).
-
-The most streighforward to handle the streaming data is to keep in memory all the data coming from the devices and then save the data to storage. This is the approach used also for this work at the beginning. The limitation is the actual RAM memory installed in the computer in use. A standard office computer with 16 GB of RAM might be sufficient to store the complete voltage and current signals for short measurements. The duration of such experiment would depend on the aquisition frequency. The ammount of points that can be usually stored in 16GB is 900.000.000 per channel which correspond to ?? GB . The memory occupied by the operating system and other application has to be taken into account. For example, when acquiring at 5MHz with the PicoScope the acquisition lasts 180 seconds while at 5KHz 50 hours. The first case should apply for studying electrode reactions during voltage sweep technique as for the study of hydrogen evolution on catalysts while the second for the study of battery degradation in galvanostatic mode. 50 hours is still a short time when compared to Li-ion batteries that it in the order of month. To measure the impedance for such long time one might decide to periodically store data into the computer hard-drive freeing up the memory or acquiring the signals not for every cycle. This ideas will be further development in a later paragraph.
-
-
-
-
-\section{Connecting cells in three-electrode configuration}
-Collecting the time-varying impedance of both positive and negative electrode of a three-electrode cells together requires some considerations. The potentiostats/galvanostats have usually only two auxiliary analog outputs: voltage versus reference and current. Furthermore, in any technique, the device controls the voltage difference between working and reference terminal. It effects either chrono-amperometric techniques because the counter as traditional for electrochemistry is only there to complete the circuit and chrono-potentiometric were despite the controlled counter being the same in the entire cell, it is not always possible to control the full cell voltage as it is not output in analog signal. Biologic devices are capable of changing the voltage control from working electrode vs reference to working vs counter through the hardware configuration section of the software EC-Lab. Unfortunatly this is not implemented in the EC-Lab SDK version ?? and one must come up with alternative, creative solutions. The easiest workaround is to employ two channels of the potentiostat, both in two electrode configuration with on to controll the techniques between working and counter electrode and the other between working and reference electrode to record the voltage drop in the half cell in OCV technique. 
-Using just one channel of the instrument in three-electrode configuration and measure the voltage between working and counter (the full cell volage) with the digital aquisition device doesn't allow the controll of the full cell voltage, which is crucial for batteries, and connecting the instrument in two electrode configuraion connecting working and counter and recoridng the voltage drop between working and reference is not a good practice because the imput impedace of the PicoScope is just of 10 MOhm, one order of magniuted less than a potentiostat, that would cause a big bias current flowing on the referenece drifting it out of the quasi-thermodynamic equilibrium that would have instead.
-
-\section{Electrochemical devices}
-For these work we decided to use BioLogic potentiostats/galvanostats from the Premium class which can work easily with external connection using the EC-Lab software (from version ??? or EC-Lab express all versions). The devices used for this work are:
-\begin{itemize}
-    \item SP-300 two channels,
-    \item VSP-3 six channels,
-\end{itemize}
-fully equiped with Frequency Response Analyzer for measring the impedance up to 1MHz. The voltage range span between -12 and 12V, the total current across the channels is of 500mA, many current ranges are availabel and the analog to digital converter resolution is of 16 bit. These devices are configured with the EC-Lab and EC-Lab Express software. A software Development Kit for EC-Lab is also available in different programming languages albeit not officially supported by the manufacturer.
-In addition, for less demanding circumstance, a BioLogic battery cycler ??? was used
-
-
-
-\section{Connecting the device and acquiring the signals: set-up version 1}
-In the previous section, it was discussed how it is possible to generate and acquire multi-frequency signals. Now it is time to dig into the combination of these device for create a set-up suitable for the measurement of impedance in non-stationary conditions. The central point of such set-up is the potentiostat/galvanostat that provides all the electronics and implementation of electrochemical techniques. Some of the commercial devices have the ability to receive and record external signals or output directly the analog signals for voltage and current though coaxial connector. 
-
-\section{Automatic cycling with}

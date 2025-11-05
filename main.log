@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.18)  5 NOV 2025 23:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.10.18)  5 NOV 2025 23:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -590,16 +590,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layouthoffset=\dimen259
 \Gm@layoutvoffset=\dimen260
 \Gm@dimlist=\toks30
-)
-
-Package geometry Warning: Over-specification in `h'-direction.
-    `width' (540.60236pt) is ignored.
-
-
-Package geometry Warning: Over-specification in `v'-direction.
-    `height' (731.23582pt) is ignored.
-
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/xcharter/XCharter.sty
+) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/xcharter/XCharter.sty
 Package: XCharter 2023/07/21 v1.25
  `XCharter' v1.25, 2023/07/21 Text macros for XCharter, an extension of Charter (msharpe) (/usr/local/texlive/2025basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
@@ -1461,15 +1452,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [81 <./figures/results_coin/PanCoin2025_009_DEIS_first_cycle.png> <./figures/results_coin/eiS_dynamic_variability.png>]
-
-LaTeX Warning: Reference `fig:eis_dyanmic_variability_variability' on page 82 undefined on input line 154.
-
-<figures/results_coin/eiS_static_variability.png, id=1419, 899.5206pt x 174.8934pt>
+<figures/results_coin/eiS_static_variability.png, id=1420, 899.5206pt x 174.8934pt>
 File: figures/results_coin/eiS_static_variability.png Graphic file (type png)
 <use figures/results_coin/eiS_static_variability.png>
 Package pdftex.def Info: figures/results_coin/eiS_static_variability.png  used on input line 158.
 (pdftex.def)             Requested size: 355.65947pt x 69.15018pt.
-<figures/results_coin/eiS_static_vs_dynamic_soc.png, id=1420, 899.5206pt x 174.8934pt>
+<figures/results_coin/eiS_static_vs_dynamic_soc.png, id=1421, 899.5206pt x 174.8934pt>
 File: figures/results_coin/eiS_static_vs_dynamic_soc.png Graphic file (type png)
 <use figures/results_coin/eiS_static_vs_dynamic_soc.png>
 Package pdftex.def Info: figures/results_coin/eiS_static_vs_dynamic_soc.png  used on input line 167.
@@ -1488,12 +1476,12 @@ Underfull \vbox (badness 1939) has occurred while \output is active []
 
 ]
 Chapter 10.
-<figures/application2/image1.png, id=1438, 279.9258pt x 187.4202pt>
+<figures/application2/image1.png, id=1439, 279.9258pt x 187.4202pt>
 File: figures/application2/image1.png Graphic file (type png)
 <use figures/application2/image1.png>
 Package pdftex.def Info: figures/application2/image1.png  used on input line 10.
 (pdftex.def)             Requested size: 142.26378pt x 95.2513pt.
-<figures/application2/image2.png, id=1439, 851.18pt x 662.475pt>
+<figures/application2/image2.png, id=1440, 851.18pt x 662.475pt>
 File: figures/application2/image2.png Graphic file (type png)
 <use figures/application2/image2.png>
 Package pdftex.def Info: figures/application2/image2.png  used on input line 17.
@@ -1504,7 +1492,7 @@ LaTeX Warning: Marginpar on page 85 moved.
 
 
 [85 <./figures/application2/image1.png> <./figures/application2/image2.png (PNG copy)>]
-<figures/application2/image3.png, id=1446, 993.7125pt x 648.4225pt>
+<figures/application2/image3.png, id=1447, 993.7125pt x 648.4225pt>
 File: figures/application2/image3.png Graphic file (type png)
 <use figures/application2/image3.png>
 Package pdftex.def Info: figures/application2/image3.png  used on input line 28.
@@ -1520,7 +1508,7 @@ Package pdftex.def Info: figures/application2/image3.png  used on input line 28.
 
 ]
 Chapter 11.
-<figures/image1.png, id=1461, 827.09pt x 502.87875pt>
+<figures/image1.png, id=1462, 827.09pt x 502.87875pt>
 File: figures/image1.png Graphic file (type png)
 <use figures/image1.png>
 Package pdftex.def Info: figures/image1.png  used on input line 16.
@@ -1531,12 +1519,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [89]
-<figures/image2.png, id=1466, 739.76375pt x 713.66624pt>
+<figures/image2.png, id=1467, 739.76375pt x 713.66624pt>
 File: figures/image2.png Graphic file (type png)
 <use figures/image2.png>
 Package pdftex.def Info: figures/image2.png  used on input line 22.
 (pdftex.def)             Requested size: 142.26378pt x 137.24232pt.
-<figures/image3.png, id=1467, 916.42375pt x 562.1pt>
+<figures/image3.png, id=1468, 916.42375pt x 562.1pt>
 File: figures/image3.png Graphic file (type png)
 <use figures/image3.png>
 Package pdftex.def Info: figures/image3.png  used on input line 33.
@@ -1552,7 +1540,7 @@ Overfull \hbox (19.59662pt too wide) has occurred while \output is active
  []
 
 [90 <./figures/image1.png (PNG copy)> <./figures/image2.png (PNG copy)>]
-<figures/image4.png, id=1473, 440.64626pt x 407.5225pt>
+<figures/image4.png, id=1474, 440.64626pt x 407.5225pt>
 File: figures/image4.png Graphic file (type png)
 <use figures/image4.png>
 Package pdftex.def Info: figures/image4.png  used on input line 42.
@@ -1586,7 +1574,7 @@ Overfull \hbox (1.22226pt too wide) in paragraph at lines 9--10
 \T1/XCharter-TLF/m/n/10.95 ma-te-rial which are ob-tained from the py-roli-sis of pre-ce-ramic poly-mers which
  []
 
-<figures/application3/image1.png, id=1484, 299.1175pt x 161.60374pt>
+<figures/application3/image1.png, id=1485, 299.1175pt x 161.60374pt>
 File: figures/application3/image1.png Graphic file (type png)
 <use figures/application3/image1.png>
 Package pdftex.def Info: figures/application3/image1.png  used on input line 13.
@@ -1597,12 +1585,12 @@ Package pdftex.def Info: figures/application3/image1.png  used on input line 13.
 
 
  <./figures/application3/image1.png (PNG copy)>]
-<figures/application3/image2.png, id=1489, 381.425pt x 313.17pt>
+<figures/application3/image2.png, id=1490, 381.425pt x 313.17pt>
 File: figures/application3/image2.png Graphic file (type png)
 <use figures/application3/image2.png>
 Package pdftex.def Info: figures/application3/image2.png  used on input line 21.
 (pdftex.def)             Requested size: 142.26378pt x 116.8029pt.
-<figures/application3/image3.png, id=1490, 903.375pt x 821.0675pt>
+<figures/application3/image3.png, id=1491, 903.375pt x 821.0675pt>
 File: figures/application3/image3.png Graphic file (type png)
 <use figures/application3/image3.png>
 Package pdftex.def Info: figures/application3/image3.png  used on input line 27.
@@ -1610,7 +1598,7 @@ Package pdftex.def Info: figures/application3/image3.png  used on input line 27.
 
 
 [94 <./figures/application3/image2.png (PNG copy)> <./figures/application3/image3.png (PNG copy)>]
-<figures/application3/image4.png, id=1496, 2005.4925pt x 876.27374pt>
+<figures/application3/image4.png, id=1497, 2005.4925pt x 876.27374pt>
 File: figures/application3/image4.png Graphic file (type png)
 <use figures/application3/image4.png>
 Package pdftex.def Info: figures/application3/image4.png  used on input line 33.
@@ -1625,17 +1613,17 @@ Overfull \hbox (3.10031pt too wide) in paragraph at lines 47--48
 
 
 [96]
-<figures/application3/image5.1.jpg, id=1507, 237.88875pt x 604.2575pt>
+<figures/application3/image5.1.jpg, id=1508, 237.88875pt x 604.2575pt>
 File: figures/application3/image5.1.jpg Graphic file (type jpg)
 <use figures/application3/image5.1.jpg>
 Package pdftex.def Info: figures/application3/image5.1.jpg  used on input line 76.
 (pdftex.def)             Requested size: 59.75095pt x 151.76474pt.
-<figures/application3/image5.2.jpg, id=1508, 439.6425pt x 940.51375pt>
+<figures/application3/image5.2.jpg, id=1509, 439.6425pt x 940.51375pt>
 File: figures/application3/image5.2.jpg Graphic file (type jpg)
 <use figures/application3/image5.2.jpg>
 Package pdftex.def Info: figures/application3/image5.2.jpg  used on input line 77.
 (pdftex.def)             Requested size: 71.13188pt x 152.16435pt.
-<figures/application3/image5.3.jpg, id=1509, 963.6pt x 1284.8pt>
+<figures/application3/image5.3.jpg, id=1510, 963.6pt x 1284.8pt>
 File: figures/application3/image5.3.jpg Graphic file (type jpg)
 <use figures/application3/image5.3.jpg>
 Package pdftex.def Info: figures/application3/image5.3.jpg  used on input line 78.
@@ -1643,17 +1631,17 @@ Package pdftex.def Info: figures/application3/image5.3.jpg  used on input line 7
 
 
 [97 <./figures/application3/image5.1.jpg> <./figures/application3/image5.2.jpg> <./figures/application3/image5.3.jpg>]
-<figures/application3/image6.png, id=1516, 455.301pt x 218.7372pt>
+<figures/application3/image6.png, id=1517, 455.301pt x 218.7372pt>
 File: figures/application3/image6.png Graphic file (type png)
 <use figures/application3/image6.png>
 Package pdftex.def Info: figures/application3/image6.png  used on input line 93.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image7.png, id=1517, 455.301pt x 218.7372pt>
+<figures/application3/image7.png, id=1518, 455.301pt x 218.7372pt>
 File: figures/application3/image7.png Graphic file (type png)
 <use figures/application3/image7.png>
 Package pdftex.def Info: figures/application3/image7.png  used on input line 100.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image8.png, id=1518, 455.301pt x 218.7372pt>
+<figures/application3/image8.png, id=1519, 455.301pt x 218.7372pt>
 File: figures/application3/image8.png Graphic file (type png)
 <use figures/application3/image8.png>
 Package pdftex.def Info: figures/application3/image8.png  used on input line 107.
@@ -1668,17 +1656,17 @@ Underfull \vbox (badness 1173) has occurred while \output is active []
 
 
 [98 <./figures/application3/image6.png> <./figures/application3/image7.png> <./figures/application3/image8.png>]
-<figures/application3/image9.png, id=1529, 455.301pt x 218.7372pt>
+<figures/application3/image9.png, id=1530, 455.301pt x 218.7372pt>
 File: figures/application3/image9.png Graphic file (type png)
 <use figures/application3/image9.png>
 Package pdftex.def Info: figures/application3/image9.png  used on input line 121.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image10.png, id=1530, 455.301pt x 218.7372pt>
+<figures/application3/image10.png, id=1531, 455.301pt x 218.7372pt>
 File: figures/application3/image10.png Graphic file (type png)
 <use figures/application3/image10.png>
 Package pdftex.def Info: figures/application3/image10.png  used on input line 130.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image11.png, id=1531, 455.301pt x 204.765pt>
+<figures/application3/image11.png, id=1532, 455.301pt x 204.765pt>
 File: figures/application3/image11.png Graphic file (type png)
 <use figures/application3/image11.png>
 Package pdftex.def Info: figures/application3/image11.png  used on input line 136.
@@ -1689,17 +1677,17 @@ Underfull \vbox (badness 7595) has occurred while \output is active []
 
 
 [99 <./figures/application3/image9.png> <./figures/application3/image10.png>]
-<figures/application3/image12.png, id=1541, 455.301pt x 202.8378pt>
+<figures/application3/image12.png, id=1542, 455.301pt x 202.8378pt>
 File: figures/application3/image12.png Graphic file (type png)
 <use figures/application3/image12.png>
 Package pdftex.def Info: figures/application3/image12.png  used on input line 141.
 (pdftex.def)             Requested size: 355.65947pt x 158.45116pt.
-<figures/application3/image13.png, id=1542, 455.301pt x 218.7372pt>
+<figures/application3/image13.png, id=1543, 455.301pt x 218.7372pt>
 File: figures/application3/image13.png Graphic file (type png)
 <use figures/application3/image13.png>
 Package pdftex.def Info: figures/application3/image13.png  used on input line 146.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image14.png, id=1543, 455.301pt x 219.219pt>
+<figures/application3/image14.png, id=1544, 455.301pt x 219.219pt>
 File: figures/application3/image14.png Graphic file (type png)
 <use figures/application3/image14.png>
 Package pdftex.def Info: figures/application3/image14.png  used on input line 151.
@@ -1710,17 +1698,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [100 <./figures/application3/image11.png> <./figures/application3/image12.png> <./figures/application3/image13.png>]
-<figures/application3/image15.png, id=1554, 455.301pt x 218.7372pt>
+<figures/application3/image15.png, id=1555, 455.301pt x 218.7372pt>
 File: figures/application3/image15.png Graphic file (type png)
 <use figures/application3/image15.png>
 Package pdftex.def Info: figures/application3/image15.png  used on input line 158.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image16.png, id=1555, 455.301pt x 218.7372pt>
+<figures/application3/image16.png, id=1556, 455.301pt x 218.7372pt>
 File: figures/application3/image16.png Graphic file (type png)
 <use figures/application3/image16.png>
 Package pdftex.def Info: figures/application3/image16.png  used on input line 165.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image17.png, id=1556, 455.301pt x 218.7372pt>
+<figures/application3/image17.png, id=1557, 455.301pt x 218.7372pt>
 File: figures/application3/image17.png Graphic file (type png)
 <use figures/application3/image17.png>
 Package pdftex.def Info: figures/application3/image17.png  used on input line 172.
@@ -1731,17 +1719,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [101 <./figures/application3/image14.png> <./figures/application3/image15.png> <./figures/application3/image16.png>]
-<figures/application3/image18.png, id=1567, 455.301pt x 218.7372pt>
+<figures/application3/image18.png, id=1568, 455.301pt x 218.7372pt>
 File: figures/application3/image18.png Graphic file (type png)
 <use figures/application3/image18.png>
 Package pdftex.def Info: figures/application3/image18.png  used on input line 179.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image19.png, id=1568, 455.301pt x 218.7372pt>
+<figures/application3/image19.png, id=1569, 455.301pt x 218.7372pt>
 File: figures/application3/image19.png Graphic file (type png)
 <use figures/application3/image19.png>
 Package pdftex.def Info: figures/application3/image19.png  used on input line 186.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application3/image20.png, id=1569, 455.301pt x 218.7372pt>
+<figures/application3/image20.png, id=1570, 455.301pt x 218.7372pt>
 File: figures/application3/image20.png Graphic file (type png)
 <use figures/application3/image20.png>
 Package pdftex.def Info: figures/application3/image20.png  used on input line 193.
@@ -1760,7 +1748,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 13.
-<figures/application5/image1.png, id=1591, 455.301pt x 230.7822pt>
+<figures/application5/image1.png, id=1592, 455.301pt x 230.7822pt>
 File: figures/application5/image1.png Graphic file (type png)
 <use figures/application5/image1.png>
 Package pdftex.def Info: figures/application5/image1.png  used on input line 12.
@@ -1771,17 +1759,17 @@ Underfull \vbox (badness 1297) has occurred while \output is active []
 
 
 [105]
-<figures/application5/image2.png, id=1596, 455.301pt x 218.7372pt>
+<figures/application5/image2.png, id=1597, 455.301pt x 218.7372pt>
 File: figures/application5/image2.png Graphic file (type png)
 <use figures/application5/image2.png>
 Package pdftex.def Info: figures/application5/image2.png  used on input line 17.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application5/image3.png, id=1597, 455.301pt x 218.7372pt>
+<figures/application5/image3.png, id=1598, 455.301pt x 218.7372pt>
 File: figures/application5/image3.png Graphic file (type png)
 <use figures/application5/image3.png>
 Package pdftex.def Info: figures/application5/image3.png  used on input line 22.
 (pdftex.def)             Requested size: 355.65947pt x 170.8713pt.
-<figures/application5/image4.png, id=1598, 455.301pt x 232.2276pt>
+<figures/application5/image4.png, id=1599, 455.301pt x 232.2276pt>
 File: figures/application5/image4.png Graphic file (type png)
 <use figures/application5/image4.png>
 Package pdftex.def Info: figures/application5/image4.png  used on input line 27.
@@ -1792,17 +1780,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [106 <./figures/application5/image1.png> <./figures/application5/image2.png> <./figures/application5/image3.png>]
-<figures/application5/image5.png, id=1609, 455.301pt x 232.2276pt>
+<figures/application5/image5.png, id=1611, 455.301pt x 232.2276pt>
 File: figures/application5/image5.png Graphic file (type png)
 <use figures/application5/image5.png>
 Package pdftex.def Info: figures/application5/image5.png  used on input line 32.
 (pdftex.def)             Requested size: 355.65947pt x 181.40964pt.
-<figures/application5/image6.png, id=1610, 455.301pt x 232.2276pt>
+<figures/application5/image6.png, id=1612, 455.301pt x 232.2276pt>
 File: figures/application5/image6.png Graphic file (type png)
 <use figures/application5/image6.png>
 Package pdftex.def Info: figures/application5/image6.png  used on input line 37.
 (pdftex.def)             Requested size: 355.65947pt x 181.40964pt.
-<figures/application5/image7.png, id=1611, 436.5108pt x 319.9152pt>
+<figures/application5/image7.png, id=1613, 436.5108pt x 319.9152pt>
 File: figures/application5/image7.png Graphic file (type png)
 <use figures/application5/image7.png>
 Package pdftex.def Info: figures/application5/image7.png  used on input line 41.
@@ -1813,12 +1801,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 [107 <./figures/application5/image4.png> <./figures/application5/image5.png> <./figures/application5/image6.png>]
-<figures/application5/image8.png, id=1623, 442.7742pt x 326.6604pt>
+<figures/application5/image8.png, id=1624, 442.7742pt x 326.6604pt>
 File: figures/application5/image8.png Graphic file (type png)
 <use figures/application5/image8.png>
 Package pdftex.def Info: figures/application5/image8.png  used on input line 45.
 (pdftex.def)             Requested size: 142.26378pt x 104.95714pt.
-<figures/application5/image9.png, id=1624, 437.9562pt x 326.1786pt>
+<figures/application5/image9.png, id=1625, 437.9562pt x 326.1786pt>
 File: figures/application5/image9.png Graphic file (type png)
 <use figures/application5/image9.png>
 Package pdftex.def Info: figures/application5/image9.png  used on input line 50.
@@ -1839,122 +1827,122 @@ Chapter 14.
 
 ]
 Appendix A.
-<figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png, id=1644, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png, id=1645, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png  used on input line 7.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png, id=1645, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png, id=1646, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png  used on input line 12.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png, id=1646, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png, id=1647, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png  used on input line 18.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png, id=1647, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png, id=1648, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png  used on input line 23.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png, id=1648, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png, id=1649, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png  used on input line 29.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png, id=1649, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png, id=1650, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png  used on input line 34.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png, id=1650, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png, id=1651, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png  used on input line 40.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png, id=1651, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png, id=1652, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png  used on input line 45.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png, id=1652, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png, id=1653, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png  used on input line 51.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png, id=1653, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png, id=1654, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png  used on input line 56.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png, id=1654, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png, id=1655, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png  used on input line 62.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png, id=1655, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png, id=1656, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png  used on input line 67.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png, id=1656, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png, id=1657, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png  used on input line 73.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png, id=1657, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png, id=1658, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png  used on input line 78.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png, id=1658, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png, id=1659, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png  used on input line 84.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png, id=1659, 731.3724pt x 468.3096pt>
+<figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png, id=1660, 731.3724pt x 468.3096pt>
 File: figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png  used on input line 89.
 (pdftex.def)             Requested size: 355.65947pt x 227.73727pt.
-<figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png, id=1660, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png, id=1661, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png  used on input line 95.
 (pdftex.def)             Requested size: 355.65947pt x 127.45789pt.
-<figures/appendix_coin/PanCoin2025_011_DEIS_first_cycle.png, id=1661, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_011_DEIS_first_cycle.png, id=1662, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_011_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_011_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_011_DEIS_first_cycle.png  used on input line 100.
 (pdftex.def)             Requested size: 355.65947pt x 127.45789pt.
-<figures/appendix_coin/PanCoin2025_012_DEIS_first_cycle.png, id=1662, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_012_DEIS_first_cycle.png, id=1663, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_012_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_012_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_012_DEIS_first_cycle.png  used on input line 105.
 (pdftex.def)             Requested size: 355.65947pt x 127.45789pt.
-<figures/appendix_coin/PanCoin2025_013_DEIS_first_cycle.png, id=1663, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_013_DEIS_first_cycle.png, id=1664, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_013_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_013_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_013_DEIS_first_cycle.png  used on input line 110.
 (pdftex.def)             Requested size: 355.65947pt x 127.45789pt.
-<figures/appendix_coin/PanCoin2025_014_DEIS_first_cycle.png, id=1664, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_014_DEIS_first_cycle.png, id=1665, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_014_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_014_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_014_DEIS_first_cycle.png  used on input line 115.
 (pdftex.def)             Requested size: 355.65947pt x 127.45789pt.
-<figures/appendix_coin/PanCoin2025_015_DEIS_first_cycle.png, id=1665, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_015_DEIS_first_cycle.png, id=1666, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_015_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_015_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_015_DEIS_first_cycle.png  used on input line 120.
 (pdftex.def)             Requested size: 355.65947pt x 127.45789pt.
-<figures/appendix_coin/PanCoin2025_016_DEIS_first_cycle.png, id=1666, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_016_DEIS_first_cycle.png, id=1667, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_016_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_016_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_016_DEIS_first_cycle.png  used on input line 125.
 (pdftex.def)             Requested size: 355.65947pt x 127.45789pt.
-<figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png, id=1667, 731.3724pt x 262.0992pt>
+<figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png, id=1668, 731.3724pt x 262.0992pt>
 File: figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png Graphic file (type png)
 <use figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png>
 Package pdftex.def Info: figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png  used on input line 130.
@@ -2447,10 +2435,6 @@ Overfull \hbox (12.3671pt too wide) in paragraph at lines 45--45
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-09-02>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E1665C1D27CFBD75706A9FF7CE7DDB85;27345.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -2458,18 +2442,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25239 strings out of 469220
- 482878 string characters out of 5462267
- 1388414 words of memory out of 5000000
- 52835 multiletter control sequences out of 15000+600000
+ 25238 strings out of 469220
+ 482837 string characters out of 5462267
+ 1388365 words of memory out of 5000000
+ 52834 multiletter control sequences out of 15000+600000
  774042 words of font info for 120 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  81i,16n,82p,2854b,1538s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/xcharter/XCharter-Bold.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/xcharter/XCharter-Italic.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/xcharter/XCharter-Roman.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/xcharter/XCharter-Slanted.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (143 pages, 12798428 bytes).
+Output written on main.pdf (143 pages, 12798207 bytes).
 PDF statistics:
- 2194 PDF objects out of 2487 (max. 8388607)
- 1865 compressed objects within 19 object streams
+ 2195 PDF objects out of 2487 (max. 8388607)
+ 1866 compressed objects within 19 object streams
  496 named destinations out of 1000 (max. 500000)
  1507 words of extra memory for PDF output out of 10000 (max. 10000000)
 

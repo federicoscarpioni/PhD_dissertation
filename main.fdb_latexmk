@@ -1,13 +1,13 @@
 # Fdb version 4
-["biber main"] 1762381033.65922 "main.bcf" "main.bbl" "main" 1762381456.83272 0
+["biber main"] 1762381033.65922 "main.bcf" "main.bbl" "main" 1762381586.2143 0
   "Literature overview.bib" 1762380931.32237 382979 9cba390aa3c1c24af347faa3234c8806 ""
-  "main.bcf" 1762381456.68891 120656 33702f42f5ed19d49296fd18d32e6ad0 "pdflatex"
+  "main.bcf" 1762381586.07322 120656 33702f42f5ed19d49296fd18d32e6ad0 "pdflatex"
   "other-papers.bib" 1758962940.1641 1456 78cce493aafc7d393c2da581b38f79ce ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1762381449.70597 "/Users/federico/Documents/1.Projects/250920_thesisPhD/PhD_dissertation/main.tex" "main.pdf" "main" 1762381456.83303 0
+["pdflatex"] 1762381579.12154 "/Users/federico/Documents/1.Projects/250920_thesisPhD/PhD_dissertation/main.tex" "main.pdf" "main" 1762381586.21455 0
   "/Users/federico/Documents/1.Projects/250920_thesisPhD/PhD_dissertation/main.tex" 1762377478.39468 878 8e344f9f57b0b9e319b2ca1fa4c79292 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/xcharter/xch1_co4ru4.enc" 1718825833 4020 e63ebbdab76ac8c53e3407b6e8ca6cbf ""
@@ -195,7 +195,7 @@
   "chapters/6_scope.tex" 1760979641.27713 322 8d694b1d426b4e2f2d05b5fb68d1552c ""
   "chapters/7_acquisition.tex" 1762381375.13148 31396 e5ac70334700843b9491d798de1ecc6f ""
   "chapters/8_analysis.tex" 1762377478.33484 6689 0a4e92d5d2b7396cdd1a55ed541642e6 ""
-  "chapters/9_coin_cells.tex" 1762381442.36097 13326 0afd353467b667f417a1e733c63055c0 ""
+  "chapters/9_coin_cells.tex" 1762381578.94137 13314 d30c026fb37c94fd97a7c98d95844a0a ""
   "chapters/Appendixes.tex" 1762377478.33515 4098 0a7305edbdbef689bcac39111d3c83e7 ""
   "customization_mainmatter.tex" 1758381360.36585 282 5649e21e8eca4bd0d76829ddad4f0066 ""
   "figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png" 1762377478.3358 245171 96066421f5166149bae63f3a7fac13da ""
@@ -272,14 +272,14 @@
   "figures/results_coin/eiS_static_variability.png" 1762377478.35644 44155 672f724c72b41bfe5f263596f0e942dd ""
   "figures/results_coin/eiS_static_vs_dynamic_soc.png" 1762377478.35674 37107 264c047de07aec16a91684ab612a13ad ""
   "figures/results_coin/raw_data_multifrequency.png" 1762377478.35684 24161 c158714ff46cab29eac425edd8ff783d ""
-  "main.aux" 1762381456.63547 59535 703e34e24bd4c4261592bd15c4819431 "pdflatex"
+  "main.aux" 1762381586.02011 59535 703e34e24bd4c4261592bd15c4819431 "pdflatex"
   "main.bbl" 1762381035.71571 436757 1566efba52d2b02578c76eb1f4452d66 "biber main"
-  "main.out" 1762381456.68663 27345 e1665c1d27cfbd75706a9ff7ce7ddb85 "pdflatex"
-  "main.run.xml" 1762381456.68943 2350 57a3ba84ecd3626f4e727022f4695156 "pdflatex"
+  "main.out" 1762381586.07106 27345 e1665c1d27cfbd75706a9ff7ce7ddb85 "pdflatex"
+  "main.run.xml" 1762381586.07429 2350 57a3ba84ecd3626f4e727022f4695156 "pdflatex"
   "main.tex" 1762377478.39468 878 8e344f9f57b0b9e319b2ca1fa4c79292 ""
-  "main.toc" 1762381456.68948 13271 0871b1d33015bf7e2aced72b0cdae8ff "pdflatex"
+  "main.toc" 1762381586.07434 13271 0871b1d33015bf7e2aced72b0cdae8ff "pdflatex"
   "metadata.tex" 1758381360.4444 165 4a3dbe48b24bd5d3e422b73cf2ec8fb5 ""
-  "preable.tex" 1762381027.21073 4046 2cba28a73362e94a45449323a0e4a3b3 ""
+  "preable.tex" 1762381578.82627 4047 08ce624eaadca175010091db15167179 ""
   (generated)
   "main.aux"
   "main.bcf"

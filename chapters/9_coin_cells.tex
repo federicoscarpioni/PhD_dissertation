@@ -1,4 +1,5 @@
 \chapter{Coin cells: characterization at the cell level}
+
 \section{Introduction}
 % From the impedance response of the battery and given an appropriate model, one an infer the internal workings of the system for control and prediction. Classical impedance spectroscopy is widely employed to estimate the state of charge (SoC) of individual cells or modules, and to indirectly extract information such as internal temperature or detect the occurrence of side reactions, such as lithium plating. More broadly, the internal resistance of the cell is strongly associated with its state of health (SoH). <- maybe this chould go in the introduction or method section and instead here go directly to the point of the experiment! The reader is already aware of the reasons.\\
 
@@ -9,7 +10,9 @@ I acquired a set of identical commercial coin cells and tested them with dynamic
 Furthermore I prove that the presence of a multisine perturbation, continously apply during the dynamic impedance spectroscopy test,  doesn't effect the aging of the cells.
 
 \section{Experimental set-up}
+
 \subsection{Cell choice}
+
 For this research, I acquired a set of identical Panasonic ML2020 coin cell batteries containing manganese dioxide (MnO2) as positive electrode and lithium-aluminum alloy as negative electrode. The lithium content is approximately 0.02g. These cells utilize an electrolyte solution composed of 1,2-dimethoxyethane and ethylene glycol dimethyl ether (EGDME) combined with an unspecified lithium salt compound.
 
 According to manufacturer specifications, these batteries have a nominal capacity of 45mAh and are designed to operate within a voltage window of 1-3V, with a recommended charging current of 100$\mu$A. 
@@ -22,15 +25,22 @@ The limitations are actually favorable for rapidly iterate optimizatio of the se
 I conducted the measurements of this chapter using a setup configured for broadband multi-sine waves: two channels of the generator apply two waveforms for a total of 7 decades of perturbation, and the computer processes the streamed data from the scope in real time as described in section \ref{On-line computation}. Three of the six channels of the BioLogic SP300 electrochemical workstation measure simultaneously, exploiting the multi-threading capability of the software \emph{DEIStools}. The connection of the insturments and the software is the one described in the Methods chapter. The dynamic impedance spetrscopy experiment contains a total of 9 cells.
 
 THe mutli-sine waveform excitation contains 49 frequencies components in the range 10mHz - 100kHz, generated at 250 kSa/s. The total waveform is splitted in two parts as described in section XXX as a workaround for the memory limitation of one channel of the generator. The amplitude of the multi-sine components is empiracal. Firstly I measured a complete cycle of the battery with dynamic impedance spectroscopy using a equal amplitudes on a test cell (not part of the dataset), and then I used the avarage of the module of such impednace and used it to calculate the amplitudes for the input in order to obtain an output with equal magnitude for each frequencies. In mathematical therms, being $|Z_{test}(\omega)|_{avg}$ the avarege of the impedance module, the desired output voltage is unitary for all frequencies, enche the current amplitude follows Ohm's law as:
+
 $$
 i(\omega_k) = \frac{1}{|Z_{test}(\omega_k)|_{avg}}.
 $$
+
 The output of the waveform generator is a voltage and it is converted to current by the electrochemical workstation during the chronoamperometry technique using the active measurement resistor ($R_m$). For this experiments I choose always the same current range of 10 mA for the sequence that translates to a measurement resistor of 100 Ohms. Hence for the galvanostatic step the actual peak-to-peak voltage of the generated waveform is 
+
 $$
 V(\omega_k) = R_m \times i(\omega_k).
 $$
+
 For the potentiostatic step instead the amplitude of the multisine is 
+
+$$
 V(\omega_k) = |Z_{test}(\omega_k)|_{avg}.
+$$
 
 The electrochemical workstation applies a constant current - constant voltage sequence with higher voltage limit of 3V in charge, and same value for the constant voltage step with a limit on the minium current of 1 mA. The lower voltage limit for discharge was 1V. The current applied was 4.5 mA equivalent to a c-rate of C/10. Becasue of the presence of the multisine, the limits are checked during the online computation algorithm as avarage value of the block of data (as described in section XXX). The cell are connected as new and the measurements run for 30 cycles continously until the cell reaches the end of life. 
 
@@ -40,7 +50,7 @@ The voltage and current signals are sampled with a two-channel PicoScope 4000 se
 
 After the experiment the automated software returns the impedance of the high frequencies 10Hz-100kHz computed online with the short-time FFT method and the voltage and current signals form the cells at the reduced sampling rate of 50 Sa/s. The signals contains the lowest 21 frequencies components from 10mHz to around 8 Hz.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/raw_data_multifrequency.png}
   \caption{Voltage and current signals at 50 Sa/s after teh online computation step.}
@@ -48,13 +58,13 @@ After the experiment the automated software returns the impedance of the high fr
 
 The impedance of the lower frequency band and the drift are estimated with the DMFA using a filter bandwidth of 0.01 Hz that leads to a time resolution of 100s, equal to one period of multisine and the signal block used in the online computation. The total impedance spectra is the concatenation of the parts computed with short-time FFT and DMFA.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/dmfa_drifts_result.png}
   \caption{Drift reconstructed with the DMFA}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/dmfa_impedance_result.png}
   \caption{Impedance of charge and discharge estimated with DMFA. One spectra every 10 is splotted and the first 2 plots are discarded.}
@@ -141,7 +151,7 @@ For this experiment the cells are small and cycled with slow c-rate. To peak to 
 
 [FARE LA FIGURA IN CUI SI VEDE IL POTENZIALE INTERROTTO a tratti]
 
-The static impedace measured at different state of charges also returns good consistency. Figure \ref{eis_staitc_variability} report the data from three cells at the same states of charge of Figure \ref{fig:eis_dyanmic_variability_variability}
+The static impedace measured at different state of charges also returns good consistency. Figure \ref{fig:eis_staitc_variability} report the data from three cells at the same states of charge of Figure \ref{fig:eis_dyanmic_variability_variability}
 
 \begin{figure} [H]
   \centering

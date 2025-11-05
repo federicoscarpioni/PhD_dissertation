@@ -62,12 +62,12 @@
 \contentsline {subsection}{\numberline {4.2.9}Further resources}{37}{subsection.4.2.9}%
 \contentsline {section}{\numberline {4.3}System identification in the frequency domain}{37}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Definition}{37}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Excitation signals}{38}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}Excitation signals}{39}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}Parameters estimation}{39}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Model selection and validation}{40}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Model selection criteria}{41}{subsection.4.3.5}%
 \contentsline {subsection}{\numberline {4.3.6}Identification in non-stationary case}{43}{subsection.4.3.6}%
-\contentsline {section}{\numberline {4.4}Mathematical optimization}{43}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Mathematical optimization}{44}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Non-stationary Electrochemical Impedance spectroscopy}{45}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Historical development}{45}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Single sine impedance}{45}{subsection.5.1.1}%
@@ -90,7 +90,7 @@
 \contentsline {subsection}{\numberline {7.2.1}Problem statement}{58}{subsection.7.2.1}%
 \contentsline {subsection}{\numberline {7.2.2}Software solution}{59}{subsection.7.2.2}%
 \contentsline {subsection}{\numberline {7.2.3}Design principle}{60}{subsection.7.2.3}%
-\contentsline {section}{\numberline {7.3}Automatic calculation of the impedance}{61}{section.7.3}%
+\contentsline {section}{\numberline {7.3}Automatic calculation of the impedance}{60}{section.7.3}%
 \contentsline {section}{\numberline {7.4}DEIStools: a Python application for dynamic impedance}{61}{section.7.4}%
 \contentsline {subsection}{\numberline {7.4.1}Software limits}{62}{subsection.7.4.1}%
 \contentsline {section}{\numberline {7.5}Multi-sine design}{62}{section.7.5}%
@@ -113,36 +113,36 @@
 \contentsline {section}{\numberline {9.2}Experimental set-up}{75}{section.9.2}%
 \contentsline {subsection}{\numberline {9.2.1}Cell choice}{75}{subsection.9.2.1}%
 \contentsline {subsection}{\numberline {9.2.2}Dynamic impedance spectoscopy measurement}{76}{subsection.9.2.2}%
-\contentsline {subsection}{\numberline {9.2.3}Classic electrochemical test}{77}{subsection.9.2.3}%
-\contentsline {section}{\numberline {9.3}Results}{77}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Impedance at different battery states}{77}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.2.3}Classic electrochemical test}{78}{subsection.9.2.3}%
+\contentsline {section}{\numberline {9.3}Results}{79}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Impedance at different battery states}{79}{subsection.9.3.1}%
 \contentsline {subsection}{\numberline {9.3.2}The effect of the multisine on the aging}{81}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Non-stationary vs stationary measurements}{81}{subsection.9.3.3}%
-\contentsline {subsection}{\numberline {9.3.4}Implications for Cell Characterization}{82}{subsection.9.3.4}%
-\contentsline {section}{\numberline {9.4}Summary}{82}{section.9.4}%
-\contentsline {chapter}{\numberline {10}Studying intercalation}{83}{chapter.10}%
-\contentsline {subsection}{\numberline {10.0.1}Materials and cell assembly}{83}{subsection.10.0.1}%
-\contentsline {subsection}{\numberline {10.0.2}Measurement set-up}{83}{subsection.10.0.2}%
-\contentsline {subsection}{\numberline {10.0.3}Physical model for intercalation}{84}{subsection.10.0.3}%
-\contentsline {subsection}{\numberline {10.0.4}Results and discussions}{84}{subsection.10.0.4}%
-\contentsline {section}{\numberline {10.1}Comment}{85}{section.10.1}%
-\contentsline {chapter}{\numberline {11}Studying non-Faradic reaction in symmetric cell}{87}{chapter.11}%
-\contentsline {subsection}{\numberline {11.0.1}Materials and cell assembling}{87}{subsection.11.0.1}%
-\contentsline {subsection}{\numberline {11.0.2}Reference electrode and position in the stack}{88}{subsection.11.0.2}%
-\contentsline {subsection}{\numberline {11.0.3}Physical model}{88}{subsection.11.0.3}%
-\contentsline {subsection}{\numberline {11.0.4}Results and discussions}{88}{subsection.11.0.4}%
-\contentsline {subsection}{\numberline {11.0.5}Quantitative interpretation of the impedance}{89}{subsection.11.0.5}%
-\contentsline {subsection}{\numberline {11.0.6}Remarks}{89}{subsection.11.0.6}%
-\contentsline {chapter}{\numberline {12}Discriminating sodium storage mechanisms}{91}{chapter.12}%
-\contentsline {subsection}{\numberline {12.0.1}Silicon carbonitride}{91}{subsection.12.0.1}%
-\contentsline {subsection}{\numberline {12.0.2}Storage mechanisms}{92}{subsection.12.0.2}%
-\contentsline {subsection}{\numberline {12.0.3}Cell housing for three electrodes and optimization}{93}{subsection.12.0.3}%
-\contentsline {subsection}{\numberline {12.0.4}Microscopic reference electrode of sodium}{94}{subsection.12.0.4}%
-\contentsline {subsection}{\numberline {12.0.5}Time-varying impedance}{95}{subsection.12.0.5}%
-\contentsline {subsection}{\numberline {12.0.6}Sodium electrodeposition on sodium substrate}{95}{subsection.12.0.6}%
-\contentsline {subsection}{\numberline {12.0.7}Time-Varying impedance during SEI formation}{95}{subsection.12.0.7}%
-\contentsline {chapter}{\numberline {13}Characterization at the electrode level}{101}{chapter.13}%
-\contentsline {subsection}{\numberline {13.0.1}Cell assembling}{101}{subsection.13.0.1}%
-\contentsline {subsection}{\numberline {13.0.2}Time-varying impedance measurements}{102}{subsection.13.0.2}%
-\contentsline {chapter}{\numberline {14}Conclusions}{105}{chapter.14}%
-\contentsline {chapter}{\numberline {A}Auxiliary data of coin cells}{107}{appendix.A}%
+\contentsline {subsection}{\numberline {9.3.3}Non-stationary vs stationary measurements}{82}{subsection.9.3.3}%
+\contentsline {subsection}{\numberline {9.3.4}Implications for Cell Characterization}{83}{subsection.9.3.4}%
+\contentsline {section}{\numberline {9.4}Summary}{83}{section.9.4}%
+\contentsline {chapter}{\numberline {10}Studying intercalation}{85}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Materials and cell assembly}{85}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Measurement set-up}{85}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Physical model for intercalation}{86}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Results and discussions}{86}{section.10.4}%
+\contentsline {section}{\numberline {10.5}Comment}{87}{section.10.5}%
+\contentsline {chapter}{\numberline {11}Studying non-Faradic reaction in symmetric cell}{89}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Materials and cell assembling}{89}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Reference electrode and position in the stack}{90}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Physical model}{90}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Results and discussions}{90}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Quantitative interpretation of the impedance}{92}{section.11.5}%
+\contentsline {section}{\numberline {11.6}Remarks}{92}{section.11.6}%
+\contentsline {chapter}{\numberline {12}Discriminating sodium storage mechanisms}{93}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Silicon carbonitride}{93}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Storage mechanisms}{94}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Cell housing for three electrodes and optimization}{95}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Microscopic reference electrode of sodium}{96}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Time-varying impedance}{97}{section.12.5}%
+\contentsline {section}{\numberline {12.6}Sodium electrodeposition on sodium substrate}{99}{section.12.6}%
+\contentsline {section}{\numberline {12.7}Time-Varying impedance during SEI formation}{101}{section.12.7}%
+\contentsline {chapter}{\numberline {13}Characterization at the electrode level}{105}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Cell assembling}{105}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Time-varying impedance measurements}{106}{section.13.2}%
+\contentsline {chapter}{\numberline {14}Conclusions}{109}{chapter.14}%
+\contentsline {chapter}{\numberline {A}Auxiliary data of coin cells}{111}{appendix.A}%

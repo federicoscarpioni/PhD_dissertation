@@ -1,4 +1,41 @@
 \chapter{Conclusions}
 
-The custom set-up for the measurement of dynamic impedance is very expensive. Miniaturization via integration to reduce cost is possible but require the investment of companies or reserach centers. The investment is justified when the information obtain by the low frequency band give enough advanced understanding on the kinetics of the systems. Batteries are those systems where the low frequency band is of interest and might drive the development of this technique. The prototypation stage of this work allow a convenient acquisition of the impedance over a broad band of frequency lowering the entering barrier for electrochesmists to apprach the method. When measruing impedance will become more present in the literature, for application even behiond my immagination, will be the real word test of the potentiality of this method. As nowaday no electrochemsitry thinks of the inner mechanisms of an electrochemical workstation or even the computer that controls it or analyzez the data, the same fate shall be for the measurement of non-stationary impedance.
-While the community of system engeneers have develpooed important tools for the identifaction of time varying trasnfer function, the knowlkedge is still segregated from the electrochemistry community for its combersom language and specific formalisms. The scintific community needs a link of communication between this to words to allow a real impact on the reserach. Usually this happen when a commercial device automate the usage of the method. On the other hand no investments will be carries when the experimental electrochemsitry have no understanding or interest on the methodology. This is the ground this thesis is trying to place, surly failing in the system identification realm npot having myself the background knosledge to understand the formalisms of functional analysis.
+%I developed a complete open-source metodology and demostrated its aplicability across multiple systems, revealing system-specific challenges for the future. 
+
+% Intro with summary
+This work prsents a complete metodology for the acquisition of impedance spectra in non-stationary electrochemical systems. I extended the the applicability of an existing set-up, made of commercial devices easily avalable, developing and open-source program for automation and online data processing. I also developed libraries for the preparation of multi-sine excitation, impedance estimation, result visulization and data analysis. I demonstrated the method in the study of materials and devices for electrical energy storage, mainly batteries, of different chemistries, and electrochemical capacitors. 
+
+% Features of the set-up
+The application is capable of measuring multi-frequency signals of multiple channels and of arbitrary length. The automation surpasses the volatile memory limit of the computer and allows the composition of experiment in sequences of techniques leaving full flecility to the user to use together potetiostatic and galvanostatic techniques. 
+
+Furthrmore the full acses on the data acquisition method granted the possibilty of performing calculation on the signals sampled on the electrochemical cells. In this work is shown how the impedance can be estimated online for the high frequency band and a sequent undersampling reduces the data saved in the disk of the acquiring computer. 
+
+This technical step was foundamental to  unlock the impedance estimation in a braod frequency band (10mHz - 100 kHz) without the requirment of storing extensive ammount of data. A typical lithium-ion battey cell responde in that range of frequency and its lifetime is of many weeks or month. The undersampling reduces the stored data ammount of fifty thousand times to solely 50 samples per second against the original 250,000 samples per second. A study of the cell aging through impedance is only now possible.
+
+% Insights of this work
+The type of electrochemial systems involved in this work are of two types: batteries in two-electrode cell configuration and three-electrode lab cells. The results show that impedace acquired in operando conditions gives valuable and different insight on kinetics for each system.
+
+% Summary for the full cell measurement
+The impedace of batteries in coin cells was clearly correlated with the state of charge and the state of health. Measures of impedance 
+of MnO2 and Li/Al alloy 
+
+
+impedance in two electrode is black box
+
+demonstrate a method reduces significantly the acquisition time increasing the ammount of spectra obtained. That is ideal for data-drive methods; statistical or NN.
+
+multisine doesn't age
+
+at slow c-rate the impedance shape is comparable with the equilibrium impedance at stationarity.
+
+the results are reproducible among cells of the same batch and hilights production differences from the beginning.
+
+
+% Summary for the early measurement with physical fitting
+
+% Summary of the preliminary measurements on anodes 
+
+
+\section{Challenges and future work}
+
+Implement impedance in BMS for online parametrization

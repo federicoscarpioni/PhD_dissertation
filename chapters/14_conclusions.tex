@@ -3,35 +3,30 @@
 %I developed a complete open-source metodology and demostrated its aplicability across multiple systems, revealing system-specific challenges for the future. 
 
 % Intro with summary
-This work prsents a complete metodology for the acquisition of impedance spectra in non-stationary electrochemical systems. I extended the the applicability of an existing set-up, made of commercial devices easily avalable, developing and open-source program for automation and online data processing. I also developed libraries for the preparation of multi-sine excitation, impedance estimation, result visulization and data analysis. I demonstrated the method in the study of materials and devices for electrical energy storage, mainly batteries, of different chemistries, and electrochemical capacitors. 
+This work prsents a complete metodology for the acquisition of impedance spectra in non-stationary electrochemical systems. I extended the the applicability of an existing set-up, made of commercial devices easily avalable, developing and open source program for automation and online data processing. I also developed libraries for the preparation of multi-sine excitation, impedance estimation, result visulization and data analysis. I demonstrated the method in the study of materials and devices for electrical energy storage, mainly batteries, of different chemistries, and electrochemical capacitors. 
 
 % Features of the set-up
 The application is capable of measuring multi-frequency signals of multiple channels and of arbitrary length. The automation surpasses the volatile memory limit of the computer and allows the composition of experiment in sequences of techniques leaving full flecility to the user to use together potetiostatic and galvanostatic techniques. 
 
 Furthrmore the full acses on the data acquisition method granted the possibilty of performing calculation on the signals sampled on the electrochemical cells. In this work is shown how the impedance can be estimated online for the high frequency band and a sequent undersampling reduces the data saved in the disk of the acquiring computer. 
 
-This technical step was foundamental to  unlock the impedance estimation in a braod frequency band (10mHz - 100 kHz) without the requirment of storing extensive ammount of data. A typical lithium-ion battey cell responde in that range of frequency and its lifetime is of many weeks or month. The undersampling reduces the stored data ammount of fifty thousand times to solely 50 samples per second against the original 250,000 samples per second. A study of the cell aging through impedance is only now possible.
+This technical step was foundamental to  unlock the impedance estimation in a braod frequency band (10 mHz - 100 kHz) without the requirment of storing extensive ammount of data. A typical lithium-ion battey cell responde in that range of frequency and its lifetime is of many weeks or month. The undersampling reduces the stored data ammount of fifty thousand times to solely 50 samples per second against the original 250,000 samples per second. A study of the cell aging through impedance is only now possible.
 
 % Insights of this work
 The type of electrochemial systems involved in this work are of two types: batteries in two-electrode cell configuration and three-electrode lab cells. The results show that impedace acquired in operando conditions gives valuable and different insight on kinetics for each system.
 
 % Summary for the full cell measurement
-The impedace of batteries in coin cells was clearly correlated with the state of charge and the state of health. Measures of impedance 
-of MnO2 and Li/Al alloy 
+The impedance data for aging battery cells show a clear correlation with the state of charge and the state of health. For this coin cell I applied the advanced set-up with multi-channel acutomation and online computation to estimate the impedance in the broad band. Compared to the acquisition of the equilibrium impedance during interrupted cycling the acquisition overhead time of 20 hours was nulled while the ammount of spectra was 25-30 times more. With the proposed set-up 3 cells in parallel could be measured and a dataset of 9 cells was acquired with around 1000 spectra per cell across 30 cycles (freshed to aged).
 
+Such ammount of data is ideal for data-driven identification of battery dynamics though balck box model fitting or Neural Network training.
 
-impedance in two electrode is black box
+The data shows that the presence of multi-sine perturbation doesn't affect the aging of the cells and that the results of non-stationary impedance are reproducible across cells of the same type within the discrepancies of the production quality. In fact, the impedance highlights this differences from the very first cycles.
 
-demonstrate a method reduces significantly the acquisition time increasing the ammount of spectra obtained. That is ideal for data-drive methods; statistical or NN.
-
-multisine doesn't age
-
-at slow c-rate the impedance shape is comparable with the equilibrium impedance at stationarity.
-
-the results are reproducible among cells of the same batch and hilights production differences from the beginning.
-
+At the slow c-rate of C/10 the impedance in stationary and non-stationary condition are comparable in shape and bagnitued with all the benefits listed above.
 
 % Summary for the early measurement with physical fitting
+
+While developing the method from the literature stage to fully automated, we pe
 
 % Summary of the preliminary measurements on anodes 
 

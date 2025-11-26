@@ -31,6 +31,7 @@ highlighting the pros/cons and giving even a forcast of the future development a
 [While integrated circuit advances have significantly modified these fundamental trade-offs, core differences persist in modern implementations. Contemporary digital signal processors and FPGAs have dramatically improved FFT accuracy and noise handling, narrowing the performance gap that once strongly favored FRA systems, while reducing cost differentials between approaches. Modern instruments increasingly employ hybrid strategies, automatically selecting optimal measurement methods based on specific requirements - leveraging FRA-type approaches for high-precision single-frequency measurements and FFT-type methods for broadband analysis and rapid transient monitoring. However, the basic relationship between measurement time and accuracy per frequency point continues to favor methodical approaches for precision work, while simultaneous multi-frequency analysis remains advantageous for speed-critical applications. Today's impedance analyzers often embody the authors' vision of intelligent, software-defined instruments that synthesize both approaches rather than forcing users to choose between competing methodologies, though the fundamental trade-offs between systematic precision and simultaneous analysis speed remain relevant considerations in modern electrochemical research.]
 
 \subsection{The first time-resolved impedance spectrometer}
+\label{sec:fft-eis}
 The modern set-up for FFT based impedance estimation was presented by G.S. Popkirov and R.N Schindler in 1992 made of the combination of home made potentiostat, a dedicated waveform generator and an acquisition device (called in the text "transient recorder").The potentiostat has two types of amplifier to work in the frequency range 100kHz-100Hz or 0.76Hz-0.76mHz. The autor tested firrent types of perturbations: rectangular pulse, randomly spread rectangular pulse, pseudorandom noise, serial sequence of sinusoids, consequent sinusoidal with decreasing frequency, and a waveform of summed 42 sinusoidal of spread frequencies across the range. The latter gave the best signal to noise ratio on the desired frequency and large band. The authors also discuss the optimization of phases and amplitude of the sinusodial components of a multi-frequency waveform \cite{popkirovOptimizationPerturbationSignal1993a} and the validation of the measurement for the interference of non-linearities \cite{popkirovValidationExperimentalData1993a} \cite{popkirovEffectSampleNonlinearity1995a}.
 Throught the 90s Popkirov and Schindler applied the method for electropolimerization \cite{popkirovInSituTimeResolved1993}, the characterization of redox process in conductive polymers \cite{popkirovInsituImpedanceMeasurements1995} \cite{popkirovElectrochemicalImpedanceSpectroscopy1995} \cite{popkirovInvestigationConductingPolymer1997} \cite{garcia-belmonteDeterminationElectronicConductivity2003a}, silver dissolution \cite{popkirovElectrodePotentialRedistribution1995} \cite{baltrunasTimeEvolutionActive1997} and Benzophenone/Benzophenone anion radical couple in different solutions \cite{walczykInvestigationRedoxCouple1995}.
 They used both sweeping voltage and galavnostatic techniques with a multi-sine that covers four and half decades from 1 Hz to 31 kHz.
@@ -88,18 +89,5 @@ Galvanodynamic? How can one also specificy the type of drift in the name of the 
 
 NSEIS nonstationary electrochemical impedance spectroscopy
 
-\section{Multisine optimization}
-
 
 \section{Embedded specttrometers}
-
-
-\section{Data validation}
-
-
-
-
-
-
-
-

@@ -1,0 +1,17 @@
+% Fonts
+\usepackage[extralight]{CrimsonPro}
+\usepackage[T1]{fontenc}
+%% The font package uses mweights.sty which has som issues with the
+%% \normalfont command. The following two lines fixes this issue.
+\let\oldnormalfont\normalfont
+\def\normalfont{\oldnormalfont\mdseries}
+
+% Set page layout geometry
+\geometry{paperwidth=176mm,paperheight=250mm,left=14.66mm,top=13.88mm,textwidth=102.66mm,marginparsep=7.33mm,marginparwidth=36.66mm,textheight=38\baselineskip,includehead}
+
+
+% Tighten up space between displays (e.g., a figure or table) and make symmetric
+\setlength\abovedisplayskip{6pt plus 2pt minus 4pt}
+\setlength\belowdisplayskip{6pt plus 2pt minus 4pt}
+
+% To implement full-width display environments

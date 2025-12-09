@@ -47,6 +47,10 @@ In systems where insertion of a classical reference electrode is not feasible, s
 
 Accurate knowledge of the electrode potential is essential not only for thermodynamic characterisation but also for interpreting electrochemical impedance spectra. Because impedance measurements rely on small perturbations applied around a defined operating point, an uncertainty in the underlying equilibrium potential directly affects the meaning and reproducibility of the resulting dynamic response.
 
+\subsection{Reference electrodes}
+
+\subsubsection{Size}
+
 
 \section{Kinetics}
 
@@ -68,9 +72,9 @@ At high overpotentials, one of the two exponential terms dominating the kinetic 
 \end{equation}
 where $a$ and $b$ are the Tafel constants and $b$ is often expressed as $2.303RT/(\alpha n F)$. The Tafel behaviour reflects a regime in which the reaction rate is controlled solely by charge-transfer kinetics and not by diffusion. Deviations from linearity at low overpotentials indicate the onset of mixed kinetic-diffusion control.
 
-\subsection{The Butler--Volmer equation}
+\subsection{The Butler-Volmer equation}
 
-A complete description of activation-controlled charge transfer is given by the Butler--Volmer equation,
+A complete description of activation-controlled charge transfer is given by the Butler-Volmer equation,
 \begin{equation}
     i = i_0 \left[ \exp\!\left( \frac{\alpha_a F \eta}{RT} \right) - \exp\!\left( -\frac{\alpha_c F \eta}{RT} \right) \right],
     \label{eq:BV}
@@ -79,7 +83,7 @@ where $i_0$ is the exchange current density and $\alpha_a$ and $\alpha_c$ are th
 
 \subsection{Linearisation and charge-transfer resistance}
 
-Electrochemical impedance spectroscopy relies on applying a small perturbation $\delta \eta$ around a well-defined operating point. In this limit, the nonlinear Butler--Volmer expression may be linearised. Expanding Eq.~\eqref{eq:BV} to first order about $\eta = 0$ yields
+Electrochemical impedance spectroscopy relies on applying a small perturbation $\delta \eta$ around a well-defined operating point. In this limit, the nonlinear Butler-Volmer expression may be linearised. Expanding Eq.~\eqref{eq:BV} to first order about $\eta = 0$ yields
 \begin{equation}
     i \approx \left( \frac{\partial i}{\partial \eta} \right)_{\eta=0} \eta = \frac{nF i_0}{RT}\,\eta.
 \end{equation}

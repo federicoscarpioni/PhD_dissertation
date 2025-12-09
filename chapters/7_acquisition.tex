@@ -9,6 +9,7 @@ This works gives a complete chain for the measurementes of dynamic ipedance spec
     \item estimation of istantanous impedance from multi-frequency voltage and current signals
     \item analysis of the impedance data for characterization of cells and surface processes
 \end{itemize}
+This chapter deals with the firs two points \dots
 
 % Introduction and motivation
 
@@ -71,7 +72,26 @@ Obtaining high-quality non-stationary impedance, however, requires careful desig
 The frequencies f must be chosen in a way that one period of the whole multi-sine contains integer numbers of oscillation to ovoid spectral leakage. The period is then defined by one oscillation of the sinus with lowest frequency $T=\frac{1}{f_{min}}$.  Every other frequency i-th must satisfy the condition $f_i=k\times f_{min}$, where k is an integer. In this work we generate the desired frequencies from an harmonic series of integer to insure the above condition and the possibility to re-use the sequence for multi-sine with different $f_{min}$. With the term harmonic sequence I refer to $h_i =\frac{f_i}{f_{min}}$; such that it always starts from 1. The sequence is generated as a logarithmic distribution with a number of point per decade between six and ten; I generally obtain good densities with 8 ponints per decade. Lower values gives spares spectra while high values give a denser one. Denser spectra are more beneficial for the data regression having more points to cast in the cost function, but the power of the signal increases. Eight points seems to me the sweet spots, according to my experience.
 
 \subsection{Amplitude optimization}
+\label{sec:amplitude optim}
 When the amplitudes are all the same, it is said to have a "flat" multi-sine. To question is: how to decide the amplitudes?  It can be achieved via analytical formulas or experimental extrapolation. The first case was used in Battistel and Hellemans, with opposite results, making the amplitudes drop logarithmically with the increase of the frequency.  In my work, I measured the non-stationary impedance for many different chemistry and geometries obtaining quite different results in sense of the module of the impedance. Hence, I prefer the approach of choosing the amplitudes based on previous experiment. One can just measure a classic stepped-sine impedance with any electrochemical workstation and use its module to calculate the desired input amplitude. Alternatively, and more effective for energy storage systems, is to measure the non-stationary impedance firs using a flat multi-sine and then extract from the, often noisy, data the average value and use again its module.
+% Moved from the other chapter
+Firstly I measured a complete cycle of the battery with dynamic impedance spectroscopy using a equal amplitudes on a test cell (not part of the dataset), and then I used the avarage of the module of such impednace and used it to calculate the amplitudes for the input in order to obtain an output with equal magnitude for each frequencies. In mathematical therms, being $|Z_{test}(\omega)|_{avg}$ the avarege of the impedance module, the desired output voltage is unitary for all frequencies, enche the current amplitude follows Ohm's law as:
+
+$$
+i(\omega_k) = \frac{1}{|Z_{test}(\omega_k)|_{avg}}.
+$$
+
+The output of the waveform generator is a voltage and it is converted to current by the electrochemical workstation during the chronoamperometry technique using the active measurement resistor ($R_m$). For this experiments I choose always the same current range of 10 mA for the sequence that translates to a measurement resistor of 100 Ohms. Hence for the galvanostatic step the actual peak-to-peak voltage of the generated waveform is 
+
+$$
+V(\omega_k) = R_m \times i(\omega_k).
+$$
+
+For the potentiostatic step instead the amplitude of the multisine is 
+
+$$
+V(\omega_k) = |Z_{test}(\omega_k)|_{avg}.
+$$
 
 \subsection{Phase optimization}
 The process of identification should be carried out with small amplitude excitation around the operating point point. Multi-sine waveforms can often time have large peak to peak total amplitude after optimizing the relative amplitudes derives by the superimposition of multiple sinusoidal component at the value of their peak. In most cases though, it can be reduced acting on the phase of each sinusoidal component in the total multisine. The quantity one is interested to reduce is the \textit{crest factor} (CF) defined as
@@ -93,7 +113,7 @@ Multiple approaches has been proposed in the field and their characteristic is a
 To streamline the design of multisines I created a Python library also for it, with the name Multisine. It provides the object Multisine that generates multisine, optionally optimize phases for minimal crest factor though iterative randomization and provides tools for visual spectral analysis. It is available as open source software at XXX.github
 
 \subsection{AWG memory limitations and splitting strategy}
-
+\label{sec:multisine split}
 Benchtop Waveform generators consist of electronic circuits made around a digital-to-analog converter (DAC). An integrated modern DAC chip has a buffer memory in which the waveform values are written and during the generation such memory is read in loop.  Commercial devices have a buffer memory consisting of 12 to 32 kSa that is quite small for the excitations used in batteries that might span 6-7 decades (at least for the laboratory scale). A practical solution (used for example for the playback of audio files in any electronic device) is called direct digital synthesis (DDS) that creates a direct communication between a DAC and a micro-controller with sufficient memory. This option require to be proficient in the programming and setting of micro-controller, specifically synchronizing the parts to the same clock. In our laboratory we use instead a dedicated bench-top Arbitrary Waveform Generator (AWG) with two channels each with 64MSa; a huge upgrade to conventional integrated DACs. This amount of memory allow multi-sine waveforms containing at least 6 decades. It is, in fact, the standard device use in the set-ups for dynamic impedance available in the laboratory.  Indeed, most of the experiments described later use one channel of the generator for the multi-sine perturbation. 
 
 To study batteries, though, my desire was to have seven or more decades in the multi-sine and being able to switch between two waveforms optimized specifically for a chronopotentiometry and a chronoamperometry. The solution I came up with is to divide a multi-sine waveform into two waveforms and use the ability of the generator to sum the signals of the two channels ( "dual channel mode") at output.  The two separate waves are much 'shorter' in  'lenth of samples' and allow to fit two types of multisines in the memory of the device. Let's consider a seven-decade multisine waveform from 10mHz to 100kHz, generated at 1MHz (the higher the frequency, the lower is the leakage that will be brought into the FFT of the signal. Using 10 times the value of the maxium frequency is giving us good results; some advice even to use 100 times. It might be also depending on the method the device uses for generation. Keysight devices have a proprietary 'TrueForm' technology to reduce jitter that might help with limiting the spectral leakage in the final signal).  Generating it in one waveform correspond to 100 MSa (obtained as $period \times f_{gen}$). Deviding (or splitting) the wave at the middle frequency of 100Hz creates two waves: one from 10mHz to, around, 100Hz (the frequency before in the list) generated at 1000Hz of length 100kSa and a second one from exactly 100Hz to 100kHz generated a 1mHz that, chosing a period of 1s, leads to a waveform of 100kSa. The two will take up only 200kSa of the generator memory to produce the same excitation.
@@ -159,7 +179,7 @@ When a multisine is applyed on top of the drift, it is difficult to determine wh
 
 
 \section{Data and metadata saving}
-Write something here.
+FAIR data are essential for makeing the diffusion of DEIS possible.
 
 \section{The computation of impedance for non-stationary systems}
 %Under which conditions the system can be approximated as locally LTI
@@ -181,6 +201,9 @@ This is the first contribution of this work: measuring broad-band non-stationary
 In the experimental works presented in this thesis, we estimated the impedance using the methods of the sliding short-time Fourier transform and dynamic multifrequency analysis; the first only during the online signal processing. The STFFT method has not much tuning. The only user parameters are the length of the window and the windowing function type. The length is dictated by the resolution that one wants to achieve, so on the lowest frequency component of the excitation. The windowing function instead alters the input and output signals time series to put more or less importance to the central part of the signal rather than the borders (makes the impedance confined in time at the price of spectral power) to obtain the instantaneous impedance at the middle points. For the experiment presented here, I assumed that being the drift of the system much slower than the perturbation, the impedance would not vary much and no windowing function is necessary. For the Dynamic Multi-Frequency Analysis, one needs to chose a filter function with care. Here we used the symmetric Fermi-Dirac delta with bandwidth of 0.01 Hz and an order of 8. A previous publication of the group showed the effect of these two parameters on the final result. The most important is the bandwidth because it reflects on the number of spectra estimated and their separation in time. Battistel and al. showed in XX the shape of the filter function when trasnformed to the time domain and it is similar to a sinc function for its main lobe and small oscillation asintothycally to zero. The dynamic multifrequency analysis performes a multiplication in the frequency domain  of the filter with the fourier spectra of the signal around one frequency, that correspond to a convolution of the time domain. Hence the time-domain transformed filter as a function shifted in time by a quantity equal to the reciprocal of the bandwidth. The windows should not be shorter than the period of the multisine and furthermore one should put care in the oscillating lobes that could bias the impedance estimation, as shown in Chukwu.
 
 In both methods, one can strongly reduce the zero-frequency skirt in the Fourier space and the Gibbs effect  by removing the baseline for current and voltage signals. I chose to use just a simple baseline removing because other classical methods did not work for me. Typically one can use sliding window averaging, spline or polynomial fitting or gaussian process regression to name the main one. In my experience non of these methods could effectively decouple the trend and the first few frequencies of the multisine that are overlapping. A complete Python library can be used to test these and more trend removal techniques, it is called Wotan. Hellemans and al. developed a method for de-trending signals with low frequency containing multi-sine but there is no available Python implementation to try out and the functional analysis used in the official is above my mathematical skills to implementing it myself.
+
+\section{Consideration on the drift}
+% Why using quasi cyclic voltammetry.
 
 \section{Limitations and future improvements}
 % Expensive hardware, could be streamlined

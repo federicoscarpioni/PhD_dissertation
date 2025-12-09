@@ -1,5 +1,27 @@
 \appendix
 
+\chapter{building auxiliary connectors}
+\label{ap:aux cable}
+
+Each channel of BioLogic workstation (not valid for battery cyclers) has a 9-pin port adibits for input and output for the connection of external devices. The manual provides all the details on the pins positioning such that one can build their own cable. As material we gathered a 9-pin connector, BNC connector and coaxial cable. As instrumentation was needed only a solder with tin soldering wire and sharp scissors to cut and unsking the cable.\\
+I needed to access the pins X, Y and Z, as in figure XX. I then used 3 cables, soldering the core to the proper pin and the shell together to the ground. Finally I connected the other end of the cable to the BNC connecter and close the encapsulation of the 9-pin connector after testing all the terminal points with a multimeter. Figure XX shows the soldering on the 9-pin connector.
+
+\chapter{Multisine crest factor minimization}
+\label{ch:crest factor}
+The first to deal with the problem was Schroeder in 1990 whom proposed the analytical formula that carries his name:
+
+$$
+\varphi_m = \varphi _0 - 2 \pi \sum _{n=0} ^{m-1} (m-n) \frac{|a_m|^2}{\sum_{k=0}^{M-1}|a_k|^2}. 
+$$
+
+Since it is fast to calculate, it is often used as both  reference value and initial parameters for a following iterative optimization. Newman and Ojarand took the work forward with analytical formulas but without significant advantages.
+
+As an alternative, randomization of the phases offers an equal or better crest factor but the computational time increases significantly with the number of frequencies.
+
+Iterative algorithms achieve much better results. They belong to two families. One is based on the "clipping" method of the DFT peaks of the multi sine until the crest factor reaches a constant value. The other consist in a mathematical optimization using metaheuristic approaches that perform better than derivative methods for such big parameters space (ex simulated annealing and genetic algorithm).
+
+Recently Kallel et al. proposed a mixed method, though it gives better results than the analytical formula for small multisine of 3-4 decades.
+
 \chapter{Auxiliary data of coin cells}
 
 \begin{figure}
@@ -129,4 +151,54 @@
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png}
   \caption{svg image}
+\end{figure}
+
+\chapter{Validation of LTP data}
+\label{app:validation LTP}
+
+\begin{figure}
+  \centering
+  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_galvanostatic.png}
+  \caption{Fitting of rational polynomial of order 6 on galvanostatic DEIS data.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_galvanostatic_residues.png}
+  \caption{Residues of the fitting of rational polynomial of order 6 on galvanostatic DEIS data.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_cv.png}
+  \caption{Fitting of rational polynomial of order 5 on cyclic voltammetry DEIS data.}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_cv.png}
+  \caption{Residues of the fitting of rational polynomial of order 5 on cyclic voltammetry DEIS data.}
+\end{figure}
+
+\chapter{Ultrasonic wire soldering on metallica tab}
+\label{app:ultrasonic wire soldering}
+
+Parameters:
+Nachimpuls 0.3s
+Haltzeit 0.3s
+Höhe 0.56mm
+Ws 90J
+T.P. 4 PSI
+W.P. 2PSI
+Oscillation 15um
+
+
+\begin{figure}
+  \includegraphics[width=0.3\textwidth]{figures/anodes/good_soldering.jpg}
+  \includegraphics[width=0.3\textwidth]{figures/anodes/bad_soldering.jpg}
+  \includegraphics[width=0.3\textwidth]{figures/anodes/broken_soldering.jpg}
+\end{figure}
+
+\begin{figure}
+  \includegraphics[width=0.5\textwidth]{figures/anodes/microreference_on_tab.jpg}
 \end{figure}

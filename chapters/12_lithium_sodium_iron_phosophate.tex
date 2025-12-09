@@ -1,36 +1,311 @@
-\chapter{Studying intercalation}
+\chapter{Studying Intercalation Dynamics via Non-Stationary Impedance}
+\label{chap:LTP}
 
-The project discussed in this section deals with the characterization of the processes at a single electrode. The most efficient method for storing energy is through ion intercalation between atomic layers of an inorganic material. Here we used Lithium titanium phosphate as active material as negative electrode for aqueous sodium-ion batteries.  As for the previous project, the material was produced by Dr. Nicolò Pianta in the research framework of next generation sodium-ion batteries in the group of Profesor Riccardo Ruffo in the University of Milano Bicocca. The non-stationary impedance of the electrode was estimated during constant current and voltage-sweep drifts. The difference between the two is analyzed as well as a physical interpretation. The results of this project led to the publication to a peer-reviewed article [???].
+The previous chapter demonstrate the aplicability of dynamic impedance spectroscopy for characterize the aging of battery as black-boc systems, but the method is not limited to full cell and the rest of the thesis will show how the methodology unlocks new way of characterizing active materials and single electrode as white-box systems.
+The project discussed in this section deals with the characterization of the processes for lithium sodium titanium phospate as negative electrode for acqueous Sodium-ion batteries. The material was produced by Dr. Nicolò Pianta in the research framework of next generation sodium-ion batteries in the group of Profesor Riccardo Ruffo in the University of Milano Bicocca. The non-stationary impedance of the electrode was estimated during constant current and voltage-sweep drifts. The difference between the two is analyzed as well as a physical interpretation. The results of this project led to the publication to a peer-reviewed article [Scarpioni et al. (ChemElectroChem 2023)].
 
 \section{Materials and cell assembly}
-The project discussed in this section deals with the characterization of the processes at a single electrode. The most efficient method for storing energy is through ion intercalation between atomic layers of an inorganic material. Here we used Lithium titanium phosphate as active material as negative electrode for aqueous sodium-ion batteries.  As for the previous project, the material was produced by Dr. Nicolò Pianta in the research framework of next generation sodium-ion batteries in the group of Profesor Riccardo Ruffo in the University of Milano Bicocca. The non-stationary impedance of the electrode was estimated during constant current and voltage-sweep drifts. The difference between the two is analyzed as well as a physical interpretation. The results of this project led to the publication to a peer-reviewed article [???].
+
+\subsection{Active material}
+
+% LIthium titaniumphosphate
+% carbon containing
+% particle saize, surface area measurements
+% Synthesis route (brief)
+% Why using it for Na-ion intercalation (NASICON structure, fast Na diffusion and widepotential window in water-in-salt)
+
+Carbon-coated LiTi$_2$(PO$_4$)$_3$ (LTP) was synthesized with a one-pot route as reported in \cite{Scarpioni2023}. Briefly, a gel was prepared by dissolving ammonium dihydrogen phosphate and titanium butoxide in ethanol together with lithium acetate and glucose as lithium and carbon sources. After evaporation of the solvent, the powder was calcined at 800$^\circ$C in inert atmosphere. The carbon coating is needed to enhance the electrode's electronic conductivity. LTP has a NASICON-type framework, providing fast ion diffusion and excellent stability in aqueous electrolytes. Its potential window is suitable for negative electrode operation in water-in-salt systems because it remains safely above the hydrogen evolution reaction.
+
+\subsection{Electrolyte}
+% Describe the composition of water-in-salt and why using it
+
+We used a so-called water-in-salt electrolyte based on sodium acetate (7~mol\,kg$^{-1}$) mixed with potassium acetate (20~mol\,kg$^{-1}$) in water. This high concentration extends water's electrochemical stability window by reducing solvent activity. Such superconcentrated electrolytes show relatively high ionic conductivity (around 20\,mS\,cm$^{-1}$ at room temperature) and suppress side reactions typical of more dilute aqueous solutions.
+
+\subsection{Electrode preparation}
+% Loading, binder, carbon, substrate
+% Geometry
+
+A slurry of carbon-coated LTP (80\,wt\%), carbon black (10\,wt\%) and PVDF binder (10\,wt\%) was prepared in N-methyl-2-pyrrolidone. This slurry was dip-coated onto a carbon cloth substrate to form the working electrode with a loading of about 6\,mg\,cm$^{-2}$. After drying, the electrode was cut into 1x4cm strips with 1x1 cm of exposed active material.
+
+\subsection{Three-electrode flooded cell}
+% Reference electrode (Ag/AgCl) and placement
+% Counter electrode
+% Schematic of the cell (figure)
+
+All measurements were performed in a three-electrode glass cell. A Pt mesh was used as counter electrode, while a Ag/AgCl electrode served as reference and placed behind the counter electrode. A schematic representation is shown in Figure~\ref{fig:3elecsetup}. 
 
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/application2/image1.png}
+    \label{fig:3elecsetup}
 }
 
-\section{Measurement set-up}
-For this project we used the set-up Version 1 (see page ???) connecting the cell with the potentiostat as a three electrode measurement. In fact, in this case we where only interested in the impedance of one electrode. The connections of cells and devices are reported in figure???.
+\section{DEIS measurement setup}
+% How the potentiostat is wired to the 3-electrode cell
+
+The setup for dynamic impedance measurements consisted of a SP-300 potentiostat, a Keysight TrueForm 33522B arbitrary waveform generator, and a PicoTech Piscoscope 4000a as voltage and current signal recorder. 
+Since this work is priorior the one reported in previous chapter, the automation was not yet implemented and the waveform is loaded via USB in the waveform generator as a CSV file (in \emph{.arb} format). The signal length was limited to the 16GB of RAM of the laboratory computer so only two cycles with DEIS could be recorded.
 
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/application2/image2.png}
 }
 
-We used the same multi-sine of the previous project (see page ???) with a frequency band between 100mHz and 10kHz, sine components amplitude extracted from an EIS experiment and phases selected randomly to minimize the crest factor (the design of multi-sine perturbation is described in ???). The difference here, is the choice of the drift. We superimposed the multi-sine to a cyclic-voltammetry experiment and a galvanostatic experiment. For the former technique we used a scan rate of 0.8 mV/s that correspond of a period of about two hours for a direct comparison of the latter technique in which we used a current of 138mA/g equivalent to a 1C current rate. The multi-frequency current and voltage signals were sampled at a frequency of 50kHz and store in the storage of the computer. The total amount of points was ??? which contains an integer number of multisine periods.
+\subsection{Multi-sine excitation}
+% Frequenies: 0.1 Hz - 10 kHz
+% Number of points per decade
+% Phase randomization
+% Amplitude selection procedure
+% Duration of one multisine period
+
+We generated a multi-sine waveform witt frequencies from 0.1\,Hz to 10\,kHz with 8 points per decade, using only non-intermodulating integer multiple of the foundamental, which also defines the period of 10s. The sinus components amplitudes were initially estimated from a preliminary EIS measure to ensure high signal-to-noise ratio without disturbing the main drift. The phases of individual sine components were randomized to minimize the crest factor. 
+
+\subsection{Applied drift}
+% Galvanostatic (CC): 138 mA/g (1C), continuous drift
+% Cyclic voltammetry (CV): 0.8 mV/s
+% Justify why these two drifts probe different physics:
+% CC → concentration gradient development
+% CV → potential-controlled interface dynamics
+% Different “instantaneous” operating points in the i-V plane
+
+We superimposed the multi-sine onto either a galvanostatic or a cyclic-voltammetry drift. The galvanostatic measurement was performed at 138\,mA\,g$^{-1}$ (about 1C) so that the voltage swept across the intercalation region in approximately two hours. In the CV experiment, we applied a 0.8\,mV\,s$^{-1}$ scan rate over a similar time span, ensuring a fair comparison with the continuous drift from the constant current test. Both strategies place the electrode at different instantaneous operational points in the $i$--$V$ space: galvanostatic mode highlights concentration gradient formation and depletion, while CV is governed by potential-driven interface processes. The multi-frequency voltage and current signals were sampled at 50\,kHz. 
+%Because each experiment lasted about two hours, the total amount of recorded points was on the order of $3.6\times 10^8$, including an integer multiple of multisine periods.
+
+\subsection{Impedance estimation}
+% DMFA
+% Bandwidth 0.1 Hz
+% Choice of n = 8
+% Block size
+% Removal of DC trends
+
+The impedance was estimated off-line using the Dynamic Multi-Frequency Analysis with the symmetric Fermi-Dirac filter of bandwidth 0.1\,Hz and with order $n=8$. Hence, the time resolution of the impedance is of 10s. The DMFA was applied on the entire signal of two consecutive cycles after subtracting the straight line between first and last point.
 
 \section{Physical model for intercalation}
-The electrode under study in this project is mode of an active material for ion intercalation and presents a macroscopic porosity. To model it impedance we selected an intercalation model and applied to the Levi’s theory of porous electrodes. The intercalation
 
-\section{Results and discussions}
-We estimated the impedance from the multi-frequency voltage and current signals through a Dynamic Multi-Frequency Analysis. We set a bandwidth of 0.1 Hz of the symmetric Fermi-Dirac filter with an n value of 8. A first qualitative analysis of the result of the experiment gives already quite a hint on the previous of intercalation systems. The time-varying impedance during galvanostatic and voltammetry experiments is reported in figure???.
+% Take it from the paper
+
+In order to interpret the dynamic spectra, we used a physically-based porous electrode model derived from a simplified transmission-line approach. It accounts for ionic transport in the electrolyte-filled pores, electron conduction in the active material, and Faradaic intercalation kinetics. The overall impedance is represented as:
+
+\begin{equation*}
+Z_T = R_s + \frac{R_p}{k l} \coth(k l),
+\end{equation*}
+
+where $R_s$ is the uncompensated solution resistance, $R_p$ combines pore-solution and solid-particle resistances, and $kl$ embeds the finite diffusion or charge-transfer response of the porous electrode. This approach has been discussed in \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a} and references therein.
 
 \begin{figure}[H]
-    \includegraphics[width=\linewidth]{figures/application2/image3.png}
+    \includegraphics[width=\textwidth]{figures/LTP/ltp_circuit_new.png}
+    \label{fig:LTP circuit}
+    \caption{Equivalent circuit of the physical model used to fit DEIS spectra.}
 \end{figure}
 
-It is firstly interesting to se how different they look. The impedance remains of a similar shape
+The interface processes are described by the following simplified unit (Figure \ref{fig:LTP circuit simplified}) in the transmission line where the Warburg element rapresenting the charge trasnfer has been substituteby a capacitor. This semplification produces better fit with lower ammount of paramters.
 
-The second curious observation is the asymmetry when inverting the current sign. This characteristics was not observed in the previous project where the double-layer capacitor was tested. It suggests an asymmetry in intercalating and deintercalating ions and the energy necessary to adsorb or desorb them. Continue with the argumentation
+\begin{figure}[h!]
+    \includegraphics[width=0.8\textwidth]{figures/LTP/EC_collins_simplified.jpg}
+    \label{fig:LTP circuit simplified}
+    \caption{Equivalent circuit of the physical model developed for the intercalation processes of MnO2 in \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020}}
+\end{figure}
 
-\section{Comment}
-The previous two sections describe two measurement on distinct energy storage devices with the scope of demonstrating the utility of non-stationary impedance for the study of such category of devices and justify the further development. In fact, the technical aspect for the estimation of the impedance are non-trivial. Multi-sine design, signal generation, signal sampling, cell geometry and reference electrode chemistry and placement are too be all carefully considered at the same time. There is a need to understand the physics of the system to deduct the parameter for the measurement. Knowledge of the electronics of potentiostat is fundamental as well as numerical computation and automation via software (i.e. coding). The observation from the results of this two projects were very promising. The following development is the measurement of non-stationary impedance of batteries and its use for the identification of aging. This is the reason why no in-depth study of the electrochemsitry of porous activate carbon and carbon-coated lithim titanium phosphate was continued.  Nevertheless I hope that this preliminary work might inspire scientist interested in mechanistic understanding of such system of replicate our methodology.
+
+\section{Results and discussions}
+
+\subsection{Time-resolved impedance under CC drift}
+% Qualitative comment
+During the galvanostatic experiment, the electrode crosses the entire intercalation window at a continuous current. 
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{figures/LTP/V(t)_CC.png}
+    \label{fig: LTP galvanostati result}
+    \caption{}
+\end{figure}
+
+The results are reported in  Figure \ref{fig: LTP galvanostati result}. The impedance shows a relatively stable shape despite the change in state of charge although a stronger variation is visibile when the system changes phases (orange and blue spectra in the figure), so before and after the voltage plateau.
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{figures/LTP/results_deis_galavanostatic.png}
+    \label{}
+    \caption{}
+\end{figure}
+
+% Comment on asymmetry
+A notable observation is the contrast in impedance measured during ion insertion vs.\ removal. The larger adsorption resistance and depressed semicircle during oxidation suggest that the energy barrier for desolvation/adsorption differs from that of release and re-solvation. Although both processes occur over a similar potential region, the system appears kinetically more hindered upon oxidation. This asymmetry underscores the advantage of dynamic impedance in detecting differences that equilibrium EIS might obscure.
+Interestingly, an asymmetry in shape emerges when switching from intercalation (negative current) to deintercalation (positive current). The semicircle in oxidation look more depressed at the beginning, to then recover the same shape of the reduction. The time-dependent resistance associated with ion adsorption onto the electrode surface changes more significantly upon oxidation. This hints at non-symmetric free energies of ion insertion vs.\ extraction, consistent with earlier reports of asymmetry in alkali-ion adsorption processes.
+
+\subsection{Model fitting}
+In order to extract quantitative information about the electrode processes, we fitted the dynamic impedance spectra with a porous-electrode-based model, adapted from Ref.~\cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}. The approach is grounded in the simplified transmission line concept for intercalation electrodes, which includes terms for ohmic resistance, interfacial kinetics, and finite-length diffusion or pseudocapacitive behavior.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{figures/LTP/model parameters together with letters.png}
+    \label{}
+    \caption{}
+\end{figure}
+
+We carried out the fitting using the library pymultipleis that fits all the spectra in one go considering the problem as a multidamnsial as number of specra x number of parameters.
+
+\subsection{Time-resolved impedance under CV drift}
+
+In the cyclic voltammetry experiment, the potential scans at 0.8\,mV\,s$^{-1}$, and the electrode can momentarily reach kinetic regimes strongly influenced by concentration polarization. This manifests in the DEIS data as a pronounced rise in impedance, especially around the lower plateau, where transport limitations are accentuated. The real-time spectra show more noticeable distortions in the low-frequency region, tied to the voltage-driven layer-by-layer intercalation behavior.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{figures/LTP/I(V)_CV.png}
+    \label{}
+    \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{figures/LTP/results_deis_cv.png}
+    \label{}
+    \caption{}
+\end{figure}
+
+\subsection{Direct comparison}
+% why impedance look different depending on the system?
+
+Comparing the CC and CV results highlights how different drifts can emphasize different kinetic contributions. Under galvanostatic conditions, the electrode must sustain the set current, so the impedance shape largely reflects the electrode's instantaneous ability to supply or accept ions. Under sweep-voltage (CV) conditions, the potential is the control variable, and mass-transport or pseudo-capacitive features can dominate as the electrode passes through distinct depletion/accumulation states.
+
+
+% \begin{figure}[H]
+%     \includegraphics[width=\linewidth]{figures/application2/image3.png}
+%     \caption{Time evolution of the impedance under galvanostatic (left) and sweep-voltage (right) drifts at selected frequencies. The difference in shapes reflects how ion diffusion and charge transfer are differently stressed by each type of drift.}
+% \end{figure}
+
+
+\section{Impedance validation}
+To ensure that the time-resolved impedance data satisfy the linear time-invariant (LTI) assumption, we fitted the spectra with Padé approximants (general rational polynomials of order $n$). In particular, polynomial orders ranging from 3 to 8 were tested on the galvanostatic (CC) dataset, and from 3 to 9 for the sweep-voltage (CV) dataset, aiming to find the best compromise between goodness of fit and model simplicity. The Akaike Information Criterion (AIC) was calculated for each polynomial order, and its minimum value identified the optimal complexity level. As reported in Figure~S1, orders 3 and 4 underfit several sections of the spectra, whereas orders 7 and 8 add marginal improvements but introduce unnecessary parameters. The AIC ultimately indicated order 6 to be optimal for the CC data and order 8 for the CV data.
+
+Once each spectrum was fitted with its respective Padé polynomial, a Kramers-Kronig (KK) transform was performed to verify the internal consistency of the impedance data. Figure~S2 illustrates the KK reconstruction (Lin-KK method) for the CC spectra using an order-6 polynomial, while Figure~S3 provides the percentage error between the experimental and KK-transformed data. Similarly, Figures~S4 and S5 show the KK validation and errors for the CV dataset with an order-8 polynomial fit. In all cases, the KK transform reproduces the impedance data within an error of less than 0.4\% of the impedance magnitude. The only notable exception was the spectrum at index 45 in Figure~S4, where a slightly larger deviation was observed, yet it remained within a practically acceptable range. The result of the fitting and residuals are reported in the Appendix \ref{app:validation LTP}.
+
+This validation confirms that the measured DEIS spectra meet the requirements of causality, stability, and linearity to a high degree of confidence, justifying subsequent physical-model fitting under the LTI assumption.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{figures/LTP/AIC_CC_and_CV.png}
+    \label{fig:validation AIC}
+    \caption{}
+\end{figure}
+
+\section{Summary and perspective}
+% These experiments demonstrate the mechanistic power of DEIS
+% The aim was not full materials characterization but method validation
+% Intercalation electrodes act as a clean system to validate the methodology’s ability to resolve:
+% -diffusion
+% -charge-transfer
+% -drift-induced nonstationarity
+% -directional asymmetry
+% This justifies the next step: applying DEIS to full batteries to study degradation and SOH
+
+These experiments demonstrate that non-stationary impedance spectroscopy can separate different reaction steps for an intercalation material under realistic battery operating conditions. 
+By comparing galvanostatic and voltage-sweep measurements, we showed that the electrode time-resolved impedance reveals differences in diffusion, interfacial kinetics, and their directional asymmetry. 
+
+While the primary goal here was to validate DEIS rather than to fully characterize LTP, the phycal model fitting reveald physical values on charge transfer, adsorbtion and transport processes and gave us a hint to formulate an hypotesis on asymmetry in solvation and de-solvation processes that would have been not accessable via direct current methods only. 
+
+The limitation of this study was the short measurment time limited by the computer RAM and also the physical model not fully sufficient to explain the system dynamics. Furthermore characterization at the material level must be carried out with infomraiton from multiple techniques, not only electrochemical, to draw the full picture of the property.
+
+
+% Starts old text
+
+% % Content of the introduction:
+% % The coin-cell chapter validated DEIS conceptually.
+% % But those batteries were a full system: composite cathode + composite anode + SEI + separator + electrolyte.
+% % To understand how DEIS responds to a single electrochemical process, we need to test it on a single intercalation electrode in a controlled three-electrode flooded cell.
+% % Intercalation electrodes have well-defined, modelled physics (solid-state diffusion, charge transfer, mixed control), which makes them ideal to test the ability of DEIS to:
+% % resolve diffusion regimes
+% % distinguish CC vs CV drifts
+% % detect asymmetries between insertion and extraction
+% % compare with porous electrode theory
+% % ----> without it, the reader cannot understand the scientific purpose
+
+% The project discussed in this section deals with the characterization of the processes at a single electrode. The most efficient method for storing energy is through ion intercalation between atomic layers of an inorganic material. Here we used Lithium titanium phosphate as active material as negative electrode for aqueous sodium-ion batteries.  As for the previous project, the material was produced by Dr. Nicolò Pianta in the research framework of next generation sodium-ion batteries in the group of Profesor Riccardo Ruffo in the University of Milano Bicocca. The non-stationary impedance of the electrode was estimated during constant current and voltage-sweep drifts. The difference between the two is analyzed as well as a physical interpretation. The results of this project led to the publication to a peer-reviewed article [???].
+
+% \section{Materials and cell assembly}
+
+% \subsection{Active material}
+
+% % LIthium titaniumphosphate
+% % carbon containing
+% % particle saize, surface area measurements
+% % Synthesis route (brief)
+% % Why using it for Na-ion intercalation (NASICON structure, fast Na diffusion and widepotential window in water-in-salt)
+
+% \subsection{Electrolyte}
+% % Describe the composition of water-in-salt and why using it
+
+% \subsection{Electrode preparation}
+% % Loading, vinder, carbon, substrate
+% % Geometry
+
+% \subsection{Three-electrode flooded cell}
+% % Reference electrode (Ag/AgCl) and placement
+% % Counter electrode
+% % Schematic of the cell (figure)
+% \marginpar{
+%     \includegraphics[width=\marginparwidth]{figures/application2/image1.png}
+% }
+
+% \section{DIES measurement setup}
+% % How the potentiostat is wired to the 3-electrode cell
+
+% \marginpar{
+%     \includegraphics[width=\marginparwidth]{figures/application2/image2.png}
+% }
+
+% \subsection{Multi-sine excitation}
+% % Frequenies: 0.1 Hz - 10 kHz
+% % Number of points per decade
+% % Phase randomization
+% % Amplitude selection procedure
+% % Duration of one multisine period
+% We used the same multi-sine of the previous project (see page ???) with a frequency band between 100mHz and 10kHz, sine components amplitude extracted from an EIS experiment and phases selected randomly to minimize the crest factor (the design of multi-sine perturbation is described in ???). The difference here, is the choice of the drift. 
+
+% \subsection{Applied drift}
+% % Galvanostatic (CC): 138 mA/g (1C), continuous drift
+% % Cyclic voltammetry (CV): 0.8 mV/s
+% % Justify why these two drifts probe different physics:
+% % CC → concentration gradient development
+% % CV → potential-controlled interface dynamics
+% % Different “instantaneous” operating points in the i-V plane
+% We superimposed the multi-sine to a cyclic-voltammetry experiment and a galvanostatic experiment. For the former technique we used a scan rate of 0.8 mV/s that correspond of a period of about two hours for a direct comparison of the latter technique in which we used a current of 138mA/g equivalent to a 1C current rate. The multi-frequency current and voltage signals were sampled at a frequency of 50kHz and store in the storage of the computer. The total amount of points was ??? which contains an integer number of multisine periods.
+
+% \subsection{Impedance estimation}
+% % DMFA
+% % Bandwidth 0.1 Hz
+% % Choice of n = 8
+% % Block size
+% % Removal of DC trends
+
+% \section{Physical model for intercalation}
+
+% % Take it from the paper
+
+% \section{Results and discussions}
+
+% \subsection{Time-resolved impedance under CC drift}
+
+% \subsection{Time-resolved impedance under CV drift}
+
+% \subsection{Direct comparison}
+% % why impedance look different depending on the system?
+
+% \subsection{Observed asymmetry}
+
+
+% % Old part. Redistribute in precious sections or delete
+
+% We estimated the impedance from the multi-frequency voltage and current signals through a Dynamic Multi-Frequency Analysis. We set a bandwidth of 0.1 Hz of the symmetric Fermi-Dirac filter with an n value of 8. A first qualitative analysis of the result of the experiment gives already quite a hint on the previous of intercalation systems. The time-varying impedance during galvanostatic and voltammetry experiments is reported in figure???.
+
+% \begin{figure}[H]
+%     \includegraphics[width=\linewidth]{figures/application2/image3.png}
+% \end{figure}
+
+% It is firstly interesting to se how different they look. The impedance remains of a similar shape
+
+% The second curious observation is the asymmetry when inverting the current sign. This characteristics was not observed in the previous project where the double-layer capacitor was tested. It suggests an asymmetry in intercalating and deintercalating ions and the energy necessary to adsorb or desorb them. Continue with the argumentation
+
+% \section{Summary and perspective}
+% % These experiments demonstrate the mechanistic power of DEIS
+% % The aim was not full materials characterization but method validation
+% % Intercalation electrodes act as a clean system to validate the methodology’s ability to resolve:
+% % -diffusion
+% % -charge-transfer
+% % -drift-induced nonstationarity
+% % -directional asymmetry
+% % This justifies the next step: applying DEIS to full batteries to study degradation and SOH
+
+% The previous two sections describe two measurement on distinct energy storage devices with the scope of demonstrating the utility of non-stationary impedance for the study of such category of devices and justify the further development. In fact, the technical aspect for the estimation of the impedance are non-trivial. Multi-sine design, signal generation, signal sampling, cell geometry and reference electrode chemistry and placement are too be all carefully considered at the same time. There is a need to understand the physics of the system to deduct the parameter for the measurement. Knowledge of the electronics of potentiostat is fundamental as well as numerical computation and automation via software (i.e. coding). The observation from the results of this two projects were very promising. The following development is the measurement of non-stationary impedance of batteries and its use for the identification of aging. This is the reason why no in-depth study of the electrochemsitry of porous activate carbon and carbon-coated lithim titanium phosphate was continued.  Nevertheless I hope that this preliminary work might inspire scientist interested in mechanistic understanding of such system of replicate our methodology.

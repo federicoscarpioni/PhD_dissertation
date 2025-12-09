@@ -18,7 +18,12 @@
 % Manage bibliography
 \usepackage[
 backend=biber,
-style = numeric,
+style = numeric-comp,
+maxnames = 2,
+doi=false,
+isbn=false,
+url = false,
+eprint = false,
 sorting=none
 ]{biblatex}
 \addbibresource{Literature overview.bib}
@@ -55,6 +60,18 @@ marginparwidth = 50mm
 % \newcommand{\palafont}{\fontfamily{ppl }\selectfont}
 
 % Custommize headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\addtolength{\headwidth}{\marginparwidth}%{.5cm}
+\addtolength{\headwidth}{.5cm}
+\renewcommand{\chaptermark}[1]{\markboth{Chapter \thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\fancyhf{}
+\fancyhead[RO]{\rightmark}
+\fancyhead[LE]{\leftmark}
+\fancyfoot[RO,LE]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
 % \usepackage{fancyhdr}
 % \pagestyle{fancy}
 % \fancyhead{} % clear all header fields

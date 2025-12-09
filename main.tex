@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper, twoside, openright]{book}
+\documentclass[11pt, a4paper, twoside, openright]{book} 
 \input{preable}
 \input{metadata}
 
@@ -13,6 +13,7 @@
 
 % \dominitoc 
 \tableofcontents
+\setcounter{tocdepth}{1}
 
 \mainmatter
 
@@ -23,18 +24,20 @@
 \input{chapters/3_batteries}
 \input{chapters/4_identification_dynamic}
 \input{chapters/5_dynamic_impedance}
-\input{chapters/6_scope}
 
 \part{Methodologies}
 \input{chapters/7_acquisition}
+\input{chapters/estimation}
 \input{chapters/8_analysis}
 
 \part{Results and discussions}
 \input{chapters/9_coin_cells}
 \input{chapters/12_lithium_sodium_iron_phosophate}
 \input{chapters/13_capacitors}
-\input{chapters/11_silicon_carbonitrate}
-\input{chapters/10_graphite_electrode}
+\input{chapters/anodes_preliminary.tex}
+% \input{chapters/10_graphite_electrode}
+% \input{chapters/11_silicon_carbonitrate}
+
 \input{chapters/14_conclusions}
 
 \input{chapters/Appendixes.tex}

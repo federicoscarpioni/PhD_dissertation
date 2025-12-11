@@ -231,13 +231,20 @@ For all the measurement the time-varying impedance is estimated totally off-line
 % Comment the reduction of impedance temporary.
 % Comment the asymmetry between charge and dischare
 % Comment the increase of impedance with the current density
+Before performing the DEIS experiment, I perormed formation and 1C cyclation with limitation on maximum charge equal to the nominal capacity.
+
+The result of dynamic impedance at C/5 are shown in \ref{fig:graphite_C5}.
 \begin{figure}[H]
     \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_reduction_C5.png}
     \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_oxidation_C5.png}
-    \caption{Full cycle of galvanostatic C/5 with DEIS}
+    \caption{Full cycle of galvanostatic C/5 with DEIS. Removed first spectra and 10mHz frequency point.}
     \label{fig:graphite_C5}
 \end{figure}
-
+From a qualitative evaluation we observe that the diffusional tail change in proximity of phase changes (the colours help to identify the match between the voltage and the impedance) as observed also for Lithium Titianium Phosphate. 
+This behaviour is present in both fro cathodic and anodic currents, signaling a processes intrinsic of the graphite electrode. 
+I suspect that is the change in volume during intercalation that affects the tortuosity of lithium ion in the porous electrode.
+Though, for cathodic currents, towards the end of the intercalation a sudden change of the impedance magnetude appears where the system become "faster" in the sense of characteristic time constant.
+Figure \ref{fig:graphite_C5} shows an enlargment of the dataset in the region where this phenomena occours and the left side is the plot of the ipedance at its lower value to appreciate the shape. Unfortuanlty, when the impedance get smaller fot the same amplitude of the escitation the response gets a lower signal to noise ration which afects the precision of the impedance estimation.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.4\textwidth]{figures/anodes/graphite_feature_zoom.png}
@@ -245,21 +252,35 @@ For all the measurement the time-varying impedance is estimated totally off-line
     \caption{Zoom in at the feature at C/5}
     \label{fig:graphite_feature_zoom}
 \end{figure}
+It is interesting to notice an increase of the voltage in corrispondance of the reduction of surface impedance.
+Smaller overvoltage is in accordance with the lower charge transfer. 
+If we add the fact that the processes doesn't appear with anodic currents, I suspect that it could be connect with lithium electrodeposition in local area where the electrode potential, being not uniform thought the electrode surface and thickness, is negative.
 
+When performing the DEIS experiment at 1C current density, reported in Figure \ref{fig:graphite_1C} the sudden process is not observed, but also the characeristics plateau of the electrode potential are not distinguiscible and the diffusional tail of the impedance doesn't seem affected. 
 \begin{figure}[H]
     \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_reduction_1C.png}
     \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_oxidation_1C.png}
     \caption{Full cycle of galvanostatic 1C with DEIS}
     \label{fig:graphite_1C}
 \end{figure}
+At high current rates, the overvoltage is so high that the third intercalation plateau is not reached and around 70\% of the nominal capacity is stored.
+This explains the missing processes compared to the case at C/5. 
 
-
+The measurement of impedance in non-stationary conditions highlights also the importance of the c-rate, hence the concentration profile at the interface, in the process kinetics. Figure \ref{fig:graphite impedance comparison} shows comparison of the impedance at 50\% state of charge for different c-rates and both directions of the current.
 \begin{figure}[H]
     \includegraphics[width = 0.3\textwidth]{figures/anodes/image7.png}
     \includegraphics[width = 0.3\textwidth]{figures/anodes/image8.png}
     \includegraphics[width = 0.3\textwidth]{figures/anodes/image9.png}
+    \caption{Comparison of impedances at different states. From left to right: impedance at}
+    \label{fig:graphite impedance comparison}
 \end{figure}
+The asimmetry of impedance for cathodic and anodic currents is observed here as in for the LTP electrode, but here there is also the information on the effect of the current density which produces an increase of the high frequency resistance and charge transfer semicircle. The increase become greater when jumping from 1C to 2C current rates.
+This could also be due to skin effect [cite King et al. 2025 J. Electrochemical Soc.].
+At high current density 2C the impedance is very noisy because of the high non-linearity introduced by the excitation. 
+Trying to reduce the amplitude of the excitation doesn't help much beacuse then a low sigal to nose ratio impares the precision anyway. 
+This is especially critical for the low frequency that are strongly superimposed to the drift at high c-rate cycles.
 
+Unfortunalty the failed reproduction of the reference electrode made impossible to verify this behaviour for different electrode hystory or full cells with NCM cathods (despite dozens of attempts).
 
 \subsection{Results of SiCN(O)}
 % Show results for the two cell both in formation and second cycle
@@ -268,34 +289,53 @@ For all the measurement the time-varying impedance is estimated totally off-line
 % Comment that the there is the problem of fixed amplitude and decrease in impedance that ruins the quality
 % Comment that we see the same temporal reduction of impedance toward the end of the half-cycle.
 
+The experiments of this electrodes were performed from fresh so the first cycle of DEIS galvanostatic cycling shows also the SEI formation process, as reported in Figure \ref{fig:SiCN cell 36 first cycle}
 \begin{figure}[H]
     \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_1.png}
     \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_2.png}
     \caption{Full first cycle of galvanostatic C10 SiCN with DEIS}
     \label{fig:SiCN cell 36 first cycle}
 \end{figure}
-
+During the formation step, between 1V and 0.5V the impedance is big and then shrinks. The effect of the formation is clear looking at the impednace for anodic chrono-potentiometry.
+A look at the sequent cycle conferm the separaton between formation impedance and electrode impedance and shows that the real capacity is less than half the nominal capacity, used also to calculate the current applied in the experiment.
 \begin{figure}[H]
     \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_3.png}
     \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_4.png}
     \caption{Full second cycle of galvanostatic C10 SiCN with DEIS}
     \label{fig:SiCN cell 36 second cycle}
 \end{figure}
-
+Looking at Figure \ref{fig:SiCN cell 36 second cycle} one sees again the sudden decrese of the impedance as seen above for graphite.
+Figure \ref{fig:SiCN_feature_zoom} shows an enlargment of that part of the dataset.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.4\textwidth]{figures/anodes/SiCN_feature_zoom.png}
     \includegraphics[width = 0.3\textwidth]{figures/anodes/SiCN_single_impedance_feature.png}
-    \caption{Zoom in at the feature at C/5}
+    \caption{Zoom in at the feature for SiCN}
     \label{fig:SiCN_feature_zoom}
 \end{figure}
+The behaviour is analogous for the case of graphite, but no 
+The right plot in Figure \ref{fig:SiCN_feature_zoom} shows the same shape seen before for the graphite (Figure \ref{fig:graphite_feature_zoom}), making me thinking that this is more than a coincidence. 
+In this case, it would be metallic Sodium to deposit in the pores of Silicon Carbonitrate and could support the theory. 
+Contrary to the other case, here we do not see an increase of electro potential associated with the rduction in impedance.
 
+In any case sodium is certainly plating on the surface of the electrode as identified in post mortem inspection (Figure \ref{fig:SiCN post mortem}).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.4\textwidth]{figures/anodes/SiCN_post_mortem.jpg}
+    \caption{Photo of a SiCN electrode with clear sign of metallic Sodium electrodeposite}
+    \label{fig:SiCN post mortem}
+\end{figure}
+
+Unfortunatly repeating the experiment led to different results as shown in Figure \ref{fig:SiCN cell 39 first cycle}.
 \begin{figure}[H]
     \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_1.png}
     \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_2.png}
     \caption{Full first cycle of galvanostatic C10 SiCN with DEIS repetition}
     \label{fig:SiCN cell 39 first cycle}
 \end{figure}
+The formation of SEI is still rapresented in the impedance shape for the same voltage window as before, but then the impedance at high frequencies shows a bigger semicircle. 
+On consecutive cicle though, the sudden reduction of the impedance is not observed.
+This can be to differences on the porosity of the electrode itself because of the manifacturing process.
 
 \begin{figure}[H]
     \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_3.png}
@@ -311,43 +351,77 @@ For all the measurement the time-varying impedance is estimated totally off-line
     \label{fig:SiCN cell 39 third cycle}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = 0.4\textwidth]{figures/anodes/SiCN_post_mortem.jpg}
-    \caption{Photo of a SiCN electrode with clear sign of metallic Sodium electrodeposite}
-    \label{fig:SiCN post mortem}
-\end{figure}
+In both cells, for cathodic carrents I se characteristics shapes of the impedance that jump after certain votlages. 
+This could help identify the different storage mechanisms.
+
+To clarify what happens in the high frequency band I should use the automated set-up with online partial impedance calculation that I havn't competed at the time of this experiments.
+Furthermore, new experiments require reporducible Silicon Carbonitrate electrodes.
 
 \subsection{Results of Sodium}
 % Show impedance and various cycles
 % Comment that the shape of the impedance changes with the state of the surface, that could be of geometrical orgin (roughness) or for the presence or formation of the SEI.
 
+I performed this experiment to verify how the impedance behave when depositing sodium on existing sodium.
+The question was if we could see again that sudden decrease in impedance or other features.
+
+The cell undergone one hour of electrodeposition with the same current 120uA of the C/10 C-rate for the Silicon Carbonitrate during which the SEI is formed.
+Then I left the cell in rest for a few days before performing the  plating and stripping cycles.
+The result of the first is shown in figure \ref{fig:Na electrodeposition DEIS}.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.8\textwidth]{figures/anodes/sodium_pouch_1.png}
     \caption{Reduction}
-    \label{fig:SiCN post mortem}
+    \label{fig:Na electrodeposition DEIS}
 \end{figure}
+Immediatly the impedance shows a positive immaginary part. 
+A curl that goes back to smaller real resistance values with the increase of impedance.
+The overpotential reduces from -120mV to =10mV signaling and increase of surface during deposition. 
+This curl to positive immaginry part is observed when the electroreduced species undergoes an intermediate slow step in moving to a nucleation state.
+In this Sodium reduction, it seems that the intermadiate step is the limiting reaction step and it might be caused by the presence of the SEI layer, to the rugosisty or the surface or its dendritic structure. 
+There is no much reserach in this topic published in the literature.
+The measurement was performed for one hour, but in the plot of Dynamic Impednace result only 40 minutes are presented becaus of an error in the data recording (at the time of this measurments I was still prototyping the setup).
 
+When performing the stripping, the impedance looses soon the curly feature moving to a more typycal semicircle.
+The reaction is not limited by mass transport since the Warburg diffusion tail is not present.
+The persistance of the curl at begging of the step even with anodic current suggests that it is not connected to the type of reaction (reduction of Sodium) but rather the surface morfology.
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.8\textwidth]{figures/anodes/sodium_pouch_2.png}
     \caption{Oxidation}
-    \label{fig:SiCN post mortem}
+    \label{fig:Na stripping DEIS}
 \end{figure}
-
+The important fact is that the positive impedance curl was observed also in another cell of identical costruction meaning the processes is reproducible altough it depends on the story of the electrode. 
+In fect after stripping and the change of surface structure or SEI thickness, the curl is no more present while the overvoltage stays constant around 50mV as reported in Figure \ref{fig:Na second electrodeposition DEIS}
 \begin{figure}[H]
     \centering
     \includegraphics[width = 0.8\textwidth]{figures/anodes/sodium_pouch_3.png}
     \caption{Reduction again}
-    \label{fig:SiCN post mortem}
+    \label{fig:Na second electrodeposition DEIS}
 \end{figure}
+
+To fully understand the system, it is will be important also here to extend the highest frequency to fully see the behaviour.
+Furthermore experiment at different current density would clarify the physics of the system and I would also calculate the deposition efficiency to draw batter conclusion. 
+All of these are possible with the latest version of the software I developed, so I envision this as future research project.
+
+I also noticed that the last frequency points have the same impedance value (plus noise) so I could have removed at least one decade of frequency point, if not two. 
+I wander if this experiment could be possible with a classic single frequency measurement using the Frequency Respone Analyzer. 
+
+\section{Majour problematics of this work}
+Data is partial and some cycles or electrode hystory are missing due to the sevelopment process of the software in parallel to these (secondary) projects.
+I didn't have the time to increse my expertese in fabricating micro-refernece electrodes or find other routs to prepare them, leading to absense of reproducibile results to confirm the supposition of deposition. 
+Impedance is very sensitive to electrode surface so the electrode must be identical or a wide number of experiment is needed to widrow sounding conlsusions.
+The sealing of the pouch cell could also be problematic, introducing air that drives side-reaction. 
+In fact, I found later an open pouch bag for the failing of the sealing.
+Furthermore, this types of microrefrence electrode are still too thick.
+In fact they are af the same thickness of the electodes themselves (50um for the smaller wire). 
+This probably introduce deformation of the planarity of the electrode even when using the flexbile glass fiber separators and this is particluarly important for small area alectrode like the ones used here.
+Alternative electrodes could be based on intercalation materials like lithium Iron Posphate as often reported in the literature [cite papres] and usng metallic grid as support could avoid the deformation.
 
 \section{Summary and perspectives}
 % What worked
 This chapter shows that DEIS reveals mechnistic information of the storage mechanisms for battery negative electrode active materials: graphite for the intercalation of Lithium and SiCN(O) for the intercalation of Sodium. THe istantanous impedance shows in both cases the presence of electrochemical processes such as SEI formation, phase change (as alredy pointed out in chapter \ref{chap:capacitor}) and a peculiar temporary reduction of impedance. This phenomenon is observed in both graphite and SiCN(O) and I speculate being overpotential metal deposition.
 % What didn't work (reproducibility, amplitude change during cycling)
-I didn't have the time to increse my expertese in fabricating micro-refernece electrodes or find other routs to prepare them, leading to absense of reproducibile results to confirm the supposition of deposition. 
+
 % What should be imporoved? (Geometry, RE production, pouch geometry, ecc.)
 The contact between microscopic wires and metallic current collector tabs must be improved using other soldering methods (conducitve silver glue or microscopic soldering).
 % why the results are still valuable (do not oversell):

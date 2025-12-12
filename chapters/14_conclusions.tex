@@ -68,4 +68,99 @@ These experiments identified that while dynamic impedance can detect electrochem
 
 % Better trend removal
 
+\section{Future Work and Outlook}
+
+The results presented in this thesis demonstrate that Dynamic Electrochemical Impedance Spectroscopy has significant potential for elucidating fast interfacial processes and non-stationary kinetics in alkali-ion battery electrodes. At the same time, the exploratory nature of the work revealed several methodological limitations whose resolution opens clear avenues for future research. The most promising directions are outlined below.
+
+\subsection{Improved reference electrode concepts}
+
+A priority for future work is the development of reliable, non-intrusive reference electrodes compatible with thin-layer pouch cells. Several alternatives merit systematic investigation:
+
+\begin{itemize}
+    \item ultra-thin metallic wires ($<10\,\mu$m) to reduce mechanical deformation and current-field perturbations;
+    \item mesh or grid electrodes that minimise indentation while preserving ionic access;
+    \item intercalation-based references (e.g.\ LiFePO\textsubscript{4}, Na$_x$MPO$_4$) offering more stable potentials and reduced sensitivity to local current density;
+    \item vapor-deposited thin-film references integrated directly onto the separator or current collector.
+\end{itemize}
+
+A rigorous benchmarking campaign comparing these geometries under identical DEIS conditions would establish best practices for three-electrode pouch-cell measurements.
+
+\subsection{High-frequency, online impedance extraction}
+
+The latest version of the automated DEIS platform—including real-time tracking of the high-frequency resistance—should be fully integrated into future experiments. This enhancement would allow:
+
+\begin{itemize}
+    \item accurate detection of the instantaneous ohmic resistance, even at high C-rates;
+    \item clearer discrimination between cell artefacts and physicochemical features;
+    \item early identification of reference-electrode drift or contact issues during long experiments.
+\end{itemize}
+
+Extending the measurable frequency range above 100\,kHz would also improve sensitivity to nucleation phenomena and interfacial film growth.
+
+\subsection{Reproducible SiCN(O) electrodes and controlled microstructure}
+
+The mechanistic interpretation of sodium storage in SiCN(O) was hindered by microstructural variability. Future work should focus on:
+
+\begin{itemize}
+    \item standardising the synthesis and electrode formulation (binder content, mixing energy, porosity control);
+    \item characterising porosity and carbon-domain connectivity via nitrogen adsorption, small-angle scattering, or tomography;
+    \item performing DEIS on statistically significant electrode sets to separate intrinsic behaviour from fabrication variability.
+\end{itemize}
+
+Such studies would enable a more definitive assessment of reversible metal plating in SiCN(O) and its impedance signature.
+
+\subsection{Mechanistic identification via combined DEIS and operando characterisation}
+
+Several impedance features observed here—such as the transient drop in impedance during reduction and the positive imaginary part during sodium deposition—call for complementary operando diagnostics. Future work should pair DEIS with:
+
+\begin{itemize}
+    \item operando NMR or Raman spectroscopy to identify chemical states during plating or desolvation;
+    \item high-speed optical imaging to correlate impedance signatures with nucleation morphology;
+    \item X-ray or neutron scattering to probe ion confinement and pore filling in disordered carbons.
+\end{itemize}
+
+Coupling time-resolved impedance with structural or spectroscopic data would provide definitive mechanistic assignments.
+
+\subsection{Quantification of plating and stripping efficiency}
+
+Future experiments should incorporate galvanostatic efficiency measurements to directly correlate impedance features with metal-deposition efficiency. Systematic variation of current density, cut-off potentials, and cycling protocols would clarify:
+
+\begin{itemize}
+    \item the onset conditions for reversible versus irreversible plating,
+    \item the relationship between nucleation overpotential and impedance signatures,
+    \item the impact of SEI growth on subsequent impedance evolution.
+\end{itemize}
+
+This would strengthen the link between dynamic impedance features and practical battery degradation mechanisms.
+
+\subsection{Towards model-based interpretation of non-stationary impedance}
+
+With improved data quality and reproducibility, future work should move toward quantitative, model-driven analysis. Promising directions include:
+
+\begin{itemize}
+    \item physics-based parametric models capturing plating nucleation, SEI growth, and pore filling;
+    \item time-varying equivalent-circuit models linked to diffusion-reaction PDEs;
+    \item system-identification frameworks that estimate kinetic parameters as continuous functions of state of charge.
+\end{itemize}
+
+Such tools would enable the extraction of mechanistically meaningful parameters directly from DEIS data and deepen the connection between non-stationary impedance and electrode health.
+
+\subsection{Implications for battery-health diagnostics}
+
+The exploratory results on graphite, SiCN(O), and sodium systems already suggest that DEIS is sensitive to early indicators of plating, concentration polarisation, and surface evolution. After addressing the experimental limitations identified in this thesis, future work may extend these findings to:
+
+\begin{itemize}
+    \item fast-charging protocols for commercial electrodes;
+    \item in situ monitoring of SEI evolution during accelerated aging;
+    \item detection of early plating events in high-power operation;
+    \item integration of DEIS-based indicators into real-time battery-management algorithms.
+\end{itemize}
+
+Ultimately, this line of research aims to establish DEIS as a high-information, real-time diagnostic tool capable of identifying degradation pathways before they become irreversible.
+
+\subsection{Overall outlook}
+
+With improvements in cell design, reference-electrode architecture, operando diagnostics, and modelling, the DEIS methodology developed in this thesis can evolve into a powerful platform for studying dynamic electrochemical processes at high temporal and spectral resolution. The preliminary observations reported here—although limited by practical constraints—already reveal distinctive mechanistic fingerprints that justify deeper investigation. The next steps will consolidate DEIS as both a research-grade and potentially application-grade tool for understanding and predicting battery degradation phenomena.
+
+
 \section{Closing remarks}

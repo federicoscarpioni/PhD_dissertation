@@ -180,8 +180,168 @@ Recently Kallel et al. proposed a mixed method, though it gives better results t
   \caption{Residues of the fitting of rational polynomial of order 5 on cyclic voltammetry DEIS data.}
 \end{figure}
 
-\chapter{Ultrasonic wire soldering on metallica tab}
-\label{app:ultrasonic wire soldering}
+\appendix
+\chapter{Background on Silicon Carbonitride as Negative Electrode Material}
+\label{app:SiCNO_background}
+
+Silicon carbonitride (SiCN(O)) belongs to the class of polymer-derived ceramics obtained through the pyrolysis of preceramic polymers, typically polysilazanes or polysiloxanes, under inert atmosphere at temperatures in the range of 800-1200\,$^\circ$C. 
+During pyrolysis, the organic precursor decomposes into an amorphous ceramic network composed of Si-N, Si-C, and, to a lesser extent, Si-O bonding environments, while simultaneously forming a carbon-rich phase with mixed sp$^2$/sp$^3$ character. 
+The relative proportion of ceramic matrix and carbon domains, as well as the pore-size distribution, strongly depends on the precursor chemistry and on the thermal protocol used for crosslinking and pyrolysis. 
+This synthetic route provides a higher level of structural control compared with hard carbons, which derive from the pyrolysis of organic precursors but lack the tunability offered by polymer-derived ceramics.
+
+The resulting microstructure consists of a dual-phase material in which a turbostratic carbon phase percolates through a mechanically rigid amorphous ceramic backbone.
+The carbon domains facilitate electronic conduction and provide high-surface-area adsorption sites for alkali ions, whereas the ceramic network ensures chemical and mechanical stability. 
+The incorporation of nitrogen into the ceramic framework is particularly relevant for sodium storage, because Si-N bonding increases the affinity of the material for sodium atoms and reduces their binding energy relative to pure carbon surfaces. 
+This, together with the presence of micropores and defective carbon environments, makes SiCN(O) a promising candidate for sodium-ion battery anodes.
+
+The storage of sodium in SiCN(O) is generally attributed to a combination of three partially overlapping mechanisms. 
+At relatively high potentials, adsorption of Na\textsuperscript{+} ions on defective carbon sites dominates, leading to a sloping voltage profile analogous to that of hard carbon. 
+At intermediate potentials, ion insertion into micropores contributes significantly to the capacity, reflecting the accessible pore network created during pyrolysis. 
+At lower potentials, and especially when cycling below 0\,V vs.\ Na/Na\textsuperscript{+}, several studies report an additional reversible capacity that has been interpreted as the partial deposition of metallic sodium inside confined pores. 
+This hypothesis is supported by solid-state NMR, post-mortem microscopy, and cycling experiments showing that the additional low-potential capacity disappears when the microporosity is reduced during synthesis. 
+Nonetheless, the precise nature of the low-potential storage mode remains debated, and may include quasi-metallic clusters, subnanometric Na aggregates, or deep insertion into defective carbon environments. 
+Because the material is fully amorphous, these mechanisms are expected to coexist and evolve dynamically.
+
+Characterizing SiCN(O) is challenging because the relevant electrochemical processes span a broad range of time scales and are strongly coupled to the material's heterogeneous microstructure.
+Adsorption, pore filling, SEI formation, and possible metal deposition all occur in partially overlapping voltage windows, and the distribution of pore sizes affects both ion transport and interfacial kinetics. 
+The SEI itself forms on chemically distinct surfaces (carbonaceous domains and ceramic phases), leading to spatially non-uniform interphase compositions and potentially time-dependent changes during cycling. 
+As a result, traditional techniques such as galvanostatic cycling or ex situ surface analysis often provide incomplete or ambiguous information.
+
+In this context, Dynamic Electrochemical Impedance Spectroscopy (DEIS) is particularly well suited for studying SiCN(O). 
+Because DEIS resolves the instantaneous impedance along a non-stationary potential trajectory, it can reveal transient kinetic events that are difficult to detect with steady-state techniques.
+Sudden changes in characteristic time constants, transitions between adsorption- and insertion-dominated regimes, or the onset of fast transport pathways associated with quasi-metallic phases become visible as local impedance features that coincide with specific points of the voltage profile. 
+Moreover, DEIS can track the evolution of SEI resistance during the first cycles, distinguish formation-related impedance from intrinsic electrode impedance, and allow a direct comparison between different synthesis batches or porosity levels without relying exclusively on capacity values. 
+In the context of this thesis, DEIS was used to investigate whether such characteristic signatures could be associated with the hypothesized sodium storage mechanisms in SiCN(O), and in particular whether reversible sodium deposition within confined pores manifests as a measurable, transient reduction of the impedance.
+
+The purpose of this appendix is not to provide a complete review of SiCN(O) electrochemistry, but rather to supply the structural and mechanistic background necessary to interpret the DEIS measurements presented in Chapter~\ref{chap:graphite}. 
+Readers interested in a comprehensive treatment of the synthesis, structure, and electrochemical behaviour of polymer-derived ceramics are referred to the foundational literature (Reinold et al.\ 2013; Sic et al.\ 2022; Cheng et al.\ 2021; Chen et al.\ 2022).
+
+\chapter{Fabrication and Characterization of Microscopic Reference Electrodes}
+\label{app:microRE}
+
+\section{Design considerations}
+
+The goal of the microscopic reference electrode (micro-RE) is to provide a stable potential probe inside a compact cell without perturbing the electric field or contributing significant impedance artefacts.  
+This requires minimizing the exposed electrode surface, ensuring robust insulation along the wire length, and achieving uniform metal electrodeposition on the active tip.  
+Because the reference electrode must be inserted within the separator stack of a pouch cell, flexibility and resistance to mechanical deformation are also essential.
+
+For lithium systems, the most straightforward approach is to electrodeposit Li onto an insulated copper wire.  
+For sodium systems, Na can be electrodeposited on Cu, although Na does not alloy with noble metals such as Au or Al; this limits the use of stable alloy-type references commonly used in lithium-ion research.
+
+\section{Insulated wire fabrication}
+
+Three types of wire substrates were tested:
+\begin{itemize}
+    \item manually insulated copper wire (diameter $\sim$130\,$\mu$m);
+    \item polymer-coated 50\,$\mu$m Cu wire (Goodfellow);
+    \item polymer-coated 50\,$\mu$m Au wire (Goodfellow).
+\end{itemize}
+
+The manually insulated wires were prepared by sandwiching the copper wire between two thermoplastic sealing strips typically used for pouch-cell fabrication.  
+The polymer was heat-fused using an ultrasonic sealer.  
+Excess polymer was removed with a scalpel to expose a circular cross-section at the tip.  
+Achieving a symmetric circular opening required practice; non-perpendicular cuts resulted in elliptical exposed areas and increased electrode surface.
+
+Commercial 50\,$\mu$m wires provided reproducible insulation thickness but posed mechanical challenges: they were too thin for crocodile clips, prone to breaking during sealing, and difficult to integrate into current collectors.  
+Attempts to solder these wires to metallic tabs using ultrasonic welding were unsuccessful, as excessive pressure broke the wire, while insufficient pressure resulted in incomplete bonding.
+
+An alternative approach, sealing both the current collector tab and the wire tip with thermoplastic strips, ensured electrical contact and mechanical stability but compromised the integrity of the exposed area, leading to partial copper exposure during use.
+
+\section{Electrodeposition procedures}
+
+For Li micro-REs, electrodeposition was performed in a two-electrode configuration using a 12\,mm Li metal disk as counter electrode.  
+A two-step protocol was adopted: 10\,min of potentiostatic deposition at \mbox{$-100$\,mV}, followed by 3\,h of galvanostatic deposition at \mbox{$-50$\,\textmu A}.  
+Afterward, the electrode was left at open-circuit potential.  
+Electrodes fabricated by this method remained stable for several months, as verified by OCV tests.
+
+Sodium deposition followed analogous protocols.  
+However, Na deposition in organic electrolytes competes with electrolyte reduction, and the formation of a heterogeneous SEI layer frequently destabilized the deposited Na.  
+In several cases, the Na film dissolved partially over time, causing the reference potential to drift back toward that of bare copper.
+
+For Au-wire substrates, alloy formation with Na was not achieved, despite attempts to reproduce literature procedures involving extremely low cathodic currents (tens of picoamperes).  
+This difficulty is attributed to the presence of exposed regions on the metallic current collector tab.
+
+\section{Electrochemical stability and failure modes}
+
+Several failure modes were observed during extended cycling:
+
+\begin{itemize}
+    \item drift of the reference potential due to partial dissolution of deposited metal;
+    \item micro-shorting or leakage currents caused by incomplete insulation;
+    \item mechanical deformation of the wire during pouch-cell sealing, especially for 50\,$\mu$m substrates;
+    \item artefacts in impedance spectra caused by protrusion of the wire tip into the separator or deformation of the electrode stack;
+    \item sensitivity of the Na micro-RE to electrolyte purity and water contamination.
+\end{itemize}
+
+These issues limit reproducibility and currently prevent quantitative comparison across cells.  
+Nonetheless, in many cases the micro-REs remained sufficiently stable over the duration of a DEIS measurement to enable meaningful qualitative analysis.
+
+\section{Implications for future work}
+
+The results indicate that while micro-reference electrodes are feasible for operando DEIS in pouch cells, achieving reproducibility requires improvements in wire insulation, mechanical protection, and electrodeposition quality.  
+Potential strategies include the use of metallic meshes as mechanically stable supports, the adoption of laser-cut insulating sleeves, or the exploration of alloy-type reference systems when compatible with the chemistry under study.
+
+\section{Old text to be redistributed here}
+\subsection{Micro-reference electrodes}
+% Fabrication
+% Types of substrates
+% Expected stability
+% Issues (geometry, metal dissolution)
+
+Microscopic reference electrode introduced in pouch cells are made out of an insulated metallic wire with the section esposed. 
+This concept is the closest realization of a punctual electrode. 
+\marginpar{
+    \includegraphics[width=\marginparwidth]{figures/anodes/copper_wire_microscope.jpg}
+}
+The goal is to being able to probe the local potential in only one point where the field lines are equipotential.
+In this work I used three types of insulated wires:
+\begin{itemize}
+    \item circa 130$\mu$m copper manually insulated with termosetting polymer strips.
+    \item 50$\mu$m diameter polymer insulated Copper from Goodfellow;
+    \item 50$\mu$m diameter polymer insulated Gold from Goodfellow;
+\end{itemize}
+I want to explain better the last electrode support. 
+I took a copper wire from a woven desoldering cloth and used the polymeric thermosetting strips used for sealing pouch cells to cover the wire.
+Figure \ref{fig:microref_wires} shows the components used to assemble the wire and the comparison with the commercial one.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=2cm]{figures/application3/image5.1.jpg}
+    \includegraphics[width=2.5cm]{figures/anodes/unwoven_copper_wires.jpg}
+    \includegraphics[width=2cm]{figures/application3/image5.2.jpg}
+    \includegraphics[width=4cm]{figures/anodes/copper_130um_insulated.jpg}
+    \caption{From left to right: step for the preparation of insulated copper wire.}
+    \label{fig:microref_wires}
+\end{figure}
+\marginpar{
+    \includegraphics[width=\marginparwidth]{figures/anodes/gold_wire_microscope_better.jpg}
+}
+The commercial 50$\mu$m is to thin to clamp to potentiostat crocodile clamps and also prone to brake when sealed though the pouch cell foils. 
+The solution (cite paper) is to scrap the insulation of the wire at one end and solder it to a peace of metal to act as current collector. 
+In the paper they use the machine to solder the contact in micro-electronics which I didn't have at disposal. 
+Instead I tried with the ultrasonic woldering with poor reproducibility even with the best setting I could find. 
+Too much pressure cause the wire to brake while too little didn't solder the metals.
+Reports on the attempt with this methods are found in Appendix \ref{app:ultrasonic wire soldering}
+Finally I tried to put current collector and exposed wire in contect and sealed them togather with the thermosetting polymer strips.
+\marginpar{
+    \includegraphics[width=\marginparwidth]{figures/anodes/pealed_gold_wire.jpg}
+}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/anodes/preparation_hadesive_bonding.jpg}
+    \includegraphics[width=0.25\textwidth]{figures/anodes/insulated_tab_hadesive_bonding.jpg}
+\end{figure}
+Although this provided electrical contact and I could performe electrodeposition of lithium with multiple techniques (CP, CA, CV), the deposited lithium was dissolving back into solution. I know this because the voltage drifts from the lithium potential to the original value of copper in a few hours (30-90). My hypotesys is that some of the current collector remain esposed and the electrodeposition happeoccours on its surface with a very low current density, not enough to form stable gems.
+Furthermore the electrodeposition in organic electrolytes is cuncurrent with the degradation of the electrolyte.
+
+The insulation of the wire was done putting the wire between to strips of polymeric strip longitudinal to the heating strip of an ultrasonic sealer for coffee bags. The Excess polymer were removed with a scalpel and a section of the wire exposed like shown in Figure XX. It takes a bit of practice to cut the section parallel to the axis and get aproximatly a circular section. Without checking on the optical microscope, one might end up with elliptical section resulted from non perpendicular cut and hence a much higher surface area.
+
+For the electrodeposition the wire was connected to the working pole of a potentiostat using a disk of metallic lithium as counter (12 mm diameter) in a two-electrode configuration. The procedure was conducted with a two steps technique, first 10 minutes of potentiostatic set at -100mV and then 3 hours in galvanostatic with -50uA of current. It followed an open circuit technique. The reference electrode produced with such techniques were stable under parasitic  current of the potentiostat for 6 months.
+
+Gold produces an alloy with lithium. Alloys have better defined potential compared to metallic phase and there are less problem with the SEI formation. Stable reference electrodes were reported in the literature produced by alloying at cathodic anodic current of 50pA for 1 hour. 
+I could not replicate the same the processes with my electrodes, probably becuase of the ineffective insulation of the nickel tabs.
+
+\section{Ultrasonic wire soldering on metallica tab}
+\label{sec:ultrasonic wire soldering}
 
 Parameters:
 Nachimpuls 0.3s

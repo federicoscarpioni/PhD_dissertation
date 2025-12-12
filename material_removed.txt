@@ -407,3 +407,100 @@ The estimation of the impedance require the sampling of input and output signals
 
 
 % From the impedance response of the battery and given an appropriate model, one an infer the internal workings of the system for control and prediction. Classical impedance spectroscopy is widely employed to estimate the state of charge (SoC) of individual cells or modules, and to indirectly extract information such as internal temperature or detect the occurrence of side reactions, such as lithium plating. More broadly, the internal resistance of the cell is strongly associated with its state of health (SoH). <- maybe this chould go in the introduction or method section and instead here go directly to the point of the experiment! The reader is already aware of the reasons.\\
+
+\section{Motivation and reserach question}
+% Introduction
+%     - motivation
+%     - why negative electrodes
+        % Three cells types:
+        % - graphite/Li
+        % - SiCN/Na
+        % - Na/Na
+%     - why SEI/plating matter
+%     - Why DEIS is the best technique to see this processes in-situ
+%     - justification for micro-reference electrodes
+%     - note on poor reproducibility but scientific relevance
+Chapter \ref{chap:coins} shows that dynamic impedance measurements give a connection to the state of charge and state of health of commercial li-ion batteries. 
+Chapters \ref{chap:LTP} and \ref{chap:capacitor} showed that three-electrode cells can separate the impedance of the single electodes and a physical model can be used to extract the parameters. 
+For me the natural step was to measure the imedance in three electrode battery cells. 
+I wanted to use the poch cell format beacuase it is quite customizable and it is the laboratory scale standard beacause of the flexibility of bigger electrode areas and multilayer (compared with the coin cells). 
+Separating the processes during the design and testing of a bettery could be an important tool to understand which electrode is limiting the performance and make educated guesses on the mechanisms. 
+In particular my scientific question was about the possibility of identifying aging mechanisms during device operation. Lithium or sodium plating on the negative electrode is an important cause of degradation during fast charging. 
+Another aspect of cell aging is the increase of cell resistance due to SEI thicknering. 
+Hence I decided that focusing on the negative electrode was more interesting and easier to build half-cells rather than full cell bacause of no need of another electrode to preapare and to balance. 
+Assembling half-cell is also usefull to check the stability of the reference electrode since they are meade of the same metal.
+
+Using a reference electrode in compact systems has a lot more geometrical restarins than in flooded cells and, as shown in chapter \ref{chap:LTP} a wrong positioning could leed to artifacts in the mipedance. 
+For this reason I choose to use micro-reference electrode and place them in between of the cell stack.
+Unfortunalty the reproducibility of my method was low and I could not replicate my results. 
+Despite that, the result show some interseting behaviour that it is worth discussing and continoue to study in the future.
+
+% What is the reserach question? See if impedance can spot mechanisms changes?
+
+% Disclamer
+Beacuse these experiments were exploratory, each electrode type is discussed indipendelty and the discussion focused on qualitative trends. 
+
+I will describe the work obtain from measurments on three cells:
+\begin{itemize}
+    \item Graphite/Lithium with electrodeposited Lithium on insulated Copper wire as reference electrode;
+    \item SiCN(O)/Sodium with electrodeposited Sodium on insulated Copper wire as reference electrode (with a repetation);
+    \item Sodium/sodium with electrodeposited Sodium on insulated Copper wire as reference electrode.
+\end{itemize}
+
+\section{Active materials}
+
+\subsection{Graphite}
+% Description of its chemistry and what I want to see with DEIS
+% Which degradation machanisms are associated with the processes at the negative electrode and why.
+% Mention the experiments performed in pouch cells.
+Graphite is the most used negative electrode active materils in lithium0ion batteries. 
+
+\subsection{SiCN(O)}
+% Description of its chemistry and what I want to see with DEIS
+Silicon carbonitride belongs to the catagory of polymer derived ceramic material which are obtained from the pyrolisis of preceramic polymers which are characterizxed by the heterogenous covalent bond of silicon, borono, carbon, nitrogen and oxigen giving to the final material excelnt chemical, termal and mechanical properties among them hardnes. The pirolysis procedure gives a high controll on the structure and morfology of the final product allowing to increase the porosity. The strucutre of silicon carbonitride is reported in the figure. The preceramic polymers precursor can be even manifacured as complex three-dimensinal strucuture by assitive techniques and pyrolized in a second step.
+
+\marginpar{
+\includegraphics[width=\marginparwidth]{figures/application3/image1.png}
+}
+
+The precence of both carbon-carbon and silicon-nitrogen bond give to the material the proprerties of electronic conductivity, hardness and has a lower bindig energy of the physisorbtion process for the Na cation compare to carbon (ref Sodiophilicity/potassiophilicity chemistry in odium/potassium metal anodes, Xian Chen 2020). This material is in comparison with hard carbon, also obtained by pyrolisis of carbonacious precursors in inert atmosphere, which exhibits good mechanical properties and electrical conduction. This class of material exibits low density and and high microporosity make them excelent candidates for the storage of cation. Hard carbons are widelly used as negative electrodes in lithium and sodium ion batteries while the silicon carbonitride was demonstrated to give comparable capacity (ref Carbon-rich SiCN ceramics as high capacity/high stability anode material for lithium-ion batteries, Reinold et al. 2013 and Sic et al. SiCN Ceramics as Electrode Materials for Sodium/Sodium Ion Cells - Insights from 23Na In-Situ Solid-State NMR 2022). The reserach is still ongoing on the micro scale strucutring, dopoing and funzionalization fo these materials to increase the storage capacity (ref Enhancing the performance of hard carbon for sodium-ion batteries by coating with silicon nitride/oxycarbide nanoparticles, Hang Cheng et al 2021, Understanding of the sodium storage mechanism in hard carbon anodes, Chen et al. 2022)
+
+Silicon carbonitride, for the presence of Si-N bonding should a particularly good binding energy with atomic sodium, favorating the electrodeposition in the pore of the material. Marco Melzi et al demonstrated an increase of capacity when allowing the lower voltage limit to negative values, i.e. allowing electroceposition of Na to happen with high efficiency. Reducing the micro-porosity during the synthesis step removes the gain in performance. The goal of the project here describe was to find evidences of metal plating through the impedance during reduction and help infering the mechanism.
+
+
+\subsubsection{Speculations on storage mechanisms}
+
+\marginpar{
+    \includegraphics[width=\marginparwidth]{figures/application3/image2.png}
+}
+
+Multiple mechanisms are responsible for the storage of cation in the micro-porosity of the materials. Figure XX shows the different in the material potential vs Li during reduction of the electrodes. It is clear the absents of plateau which are associated with a phase change of a crystalline ordered structure, absent for the case of disordered carbon.
+The most accredited storage mechanisms are adsorbtion, insertion and metal electrodeposition, as schematized in the Figure.
+
+\begin{figure}[H]
+    \includegraphics[width = \linewidth]{figures/application3/image3.png}
+\end{figure}
+
+It is still an open question which of this processes contribute the most and at which potential, and important information to design materials with higher capacity. Multiple theories are taken into account to far as reported in Figure.
+
+\begin{figure}[H]
+    \includegraphics[width = \textwidth]{figures/application3/image4.png}
+\end{figure}
+
+Study such characteristics can only be done in operando condition with in situ tehcniques. Reserached used different mothodology for the identification of the position of the cation in the strucutre such as Nuclear Magnetic Resonance and Raman Spectroscopy. 
+
+The scope of the measurements presented here is to veify if DEIS is capable of identify the Sodium storage mechanisms among the proposed models and support the claim about reversible metal deposition in the pores of the microstructured SiCN(O), deduced initially from the high efficiency of galvanostatic cycling.
+
+\section{Conclusion for preliminary studies on anodes}
+
+% What worked
+This chapter shows that DEIS reveals mechnistic information of the storage mechanisms for battery negative electrode active materials: graphite for the intercalation of Lithium and SiCN(O) for the intercalation of Sodium. THe istantanous impedance shows in both cases the presence of electrochemical processes such as SEI formation, phase change (as alredy pointed out in chapter \ref{chap:capacitor}) and a peculiar temporary reduction of impedance. This phenomenon is observed in both graphite and SiCN(O) and I speculate being overpotential metal deposition.
+% What didn't work (reproducibility, amplitude change during cycling)
+
+% What should be imporoved? (Geometry, RE production, pouch geometry, ecc.)
+The contact between microscopic wires and metallic current collector tabs must be improved using other soldering methods (conducitve silver glue or microscopic soldering).
+% why the results are still valuable (do not oversell):
+The result remain still valuable in the sense that they lead to the possiblity of identify processes in-situ during the operation of the device that would not have been possible with static impedance. Dynamic processes like SEI formation can be trakced with this method or processes induced by the operating conditions such as metal deposition can be istantanously identified.
+% -early impedance signatures of plating or SEI
+% -demonstration of DEIS feasibility in 3-electrode pouch cells
+% -lessons for future studies

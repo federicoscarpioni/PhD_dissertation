@@ -2,49 +2,54 @@
 % \minitoc
 \label{ch:acquisition}
 
-This work gives a complete chain for the measurementes of dynamic ipedance spectroscopy:
-\begin{itemize}
-    \item design and generation of the excitation signal
-    \item acquisition of multi-frequency signals with automated set-up
-    \item estimation of istantanous impedance from multi-frequency voltage and current signals
-    \item analysis of the impedance data for characterization of cells and surface processes
-\end{itemize}
-This chapter deals with the firs two points \dots
-
 % Introduction and motivation
+This work gives a complete pipeline for the measurementes of Dynamic Ipedance Spectroscopy devided as:
+\begin{itemize}
+    \item design and generation of multi-sine excitation signals;
+    \item acquisition of multi-frequency signals with automated set-up;
+    \item estimation of istantanous impedance from multi-frequency voltage and current signals;
+    \item on-line estimation of the high frequency band of the impedance;
+    \item analysis of the impedance data with physical or non-physical models.
+\end{itemize}
+On a practical level I consider an experiment having three distincts but connected steps:
+\begin{center}
+    Acquisition $\rightarrow$ Estimation $\rightarrow$ Analysis,
+\end{center}
+therfore I devided this part of the thesis in three chapters beginning from the first one discussing the preparation and excecution of experiments with my contribution from the software side. 
+Once multi-frequency voltage and current signlas of an electrochemical cells are acquired, the estimation can take place. This is the topic of next chapter (\ref{chap:estimation}).
+With the broadband impedance collected, one shall procede with the analysis through model fitting, subject of \ref{chap:analysis}.
 
 % Limitation of classical EIS
-Electrochemical impedance measurement is traditionally performed under the assumption of stationarity. Its validity vanishes whenever the internal state of the system evolves on comparable or shorter timescales; as occurs during battery charge and discharge, SEI formation, lithiation-induced expansion, or any experiment where the current is not zero for long enough to reach equilibrium.
+% Electrochemical impedance measurement is traditionally performed under the assumption of stationarity. Its validity vanishes whenever the internal state of the system evolves on comparable or shorter timescales; as occurs during battery charge and discharge, SEI formation, lithiation-induced expansion, or any experiment where the current is not zero for long enough to reach equilibrium.
 
 % Need for broadband, time-resolved measurements
-While impedance has been measured in electrochemical storage devices, it was either limited to frequency higher of 1Hz or multisine spanning only 3-4 decades. A full broadband spectra for batteires requires to experiment to be interrupted and waiting for the stationarity condition, which adds overheading time to the battery test making impedance impractical to use in operando conditions.
+% While impedance has been measured in electrochemical storage devices, it was either limited to frequency higher of 1Hz or multisine spanning only 3-4 decades. A full broadband spectra for batteires requires to experiment to be interrupted and waiting for the stationarity condition, which adds overheading time to the battery test making impedance impractical to use in operando conditions.
 
 % Overview of the methodology
-This chapter describes the practical methodology and instrumental chain developed to acquire \emph{non-stationary} impedance, i.e. the time-resolved evolution of impedance over several decades of frequency while the system is drifting due to the imposed load. The goal is to obtain continuous impedance spectra over seven orders of magnitude in frequency without interrupting the charge/discharge process.
+% This chapter describes the practical methodology and instrumental chain developed to acquire \emph{non-stationary} impedance, i.e. the time-resolved evolution of impedance over several decades of frequency while the system is drifting due to the imposed load. The goal is to obtain continuous impedance spectra over seven orders of magnitude in frequency without interrupting the charge/discharge process.
 
-The principle of the set-up follows the classical design from the literature. A multisine of small amplitude is superimposed to a high-amplitude drift and applied to the cell though a potentiostat. The voltage and current analog signals are sampled at high frequency by a dedicated acquisition device and streamed to a computer. Impedance is estimated from the fouerire trasnform of voltage and current at the frequencies components $\omega_i$ of the multisine excitation. 
+% The principle of the set-up follows the classical design from the literature. A multisine of small amplitude is superimposed to a high-amplitude drift and applied to the cell though a potentiostat. The voltage and current analog signals are sampled at high frequency by a dedicated acquisition device and streamed to a computer. Impedance is estimated from the fouerire trasnform of voltage and current at the frequencies components $\omega_i$ of the multisine excitation. 
 
-The novelty of this work is a methodology that combines the ST-FFT and DMFA to compute the istantanous time-resolved impedance. The first method is used online for the high frequency band and it is followed by a strong downsample, while the secon is applied off-line. The result of the two methods is concatenated to obtain to complete bradband time-resolved spectra.
+% The novelty of this work is a methodology that combines the ST-FFT and DMFA to compute the istantanous time-resolved impedance. The first method is used online for the high frequency band and it is followed by a strong downsample, while the secon is applied off-line. The result of the two methods is concatenated to obtain to complete bradband time-resolved spectra.
 
-The methodology combines:
-\begin{itemize}
-    \item frequency-optimized multisine excitation,
-    \item synchronized high-frequency digitization,
-    \item real-time spectral estimation and segmentation,
-    \item hardware-aware design (memory limits, ADC resolution, synchrony, jitter),
-    \item and a Python-based automation framework (called DEIStools) for coordinating potentiostat, waveform generator and oscilloscope.
-\end{itemize}
+% The methodology combines:
+% \begin{itemize}
+%     \item frequency-optimized multisine excitation,
+%     \item synchronized high-frequency digitization,
+%     \item real-time spectral estimation and segmentation,
+%     \item hardware-aware design (memory limits, ADC resolution, synchrony, jitter),
+%     \item and a Python-based automation framework (called DEIStools) for coordinating potentiostat, waveform generator and oscilloscope.
+% \end{itemize}
 
-The chapter is organized as follows: 
-\begin{itemize}
-    \item [\textbf{Section~\ref{sec:hardware}}] describes the experimental hardware chain;
-    \item [\textbf{Section~\ref{sec:multisine}}] details the generation, splitting and  optimization of multisine waveforms; 
-    \item [\textbf{Section~\ref{sec:sampling}}] addresses sampling, synchronization and spectral leakage;  
-    \item [\textbf{Section~\ref{sec:automation}}] summarizes the automation architecture;  
-    \item [\textbf{Section~\ref{sec:designrules}}] provides practical guidelines and limitations.
-\end{itemize} 
+% The chapter is organized as follows: 
+% \begin{itemize}
+%     \item \textbf{Section~\ref{sec:hardware}} describes the experimental setup made of indipendent devices;
+%     \item \textbf{Section~\ref{sec:multisine}} details the generation, splitting and  optimization of multisine waveforms; 
+%     \item \textbf{Section~\ref{sec:sampling}} addresses sampling, synchronization and spectral leakage;  
+%     \item \textbf{Section~\ref{sec:automation}} summarizes the automation architecture;  
+%     \item \textbf{Section~\ref{sec:designrules}} provides practical guidelines and limitations.
+% \end{itemize} 
 
-The method for estimating the impedance from multi-frequency data will be the topic of next chapter.
 
 \section{Hardware}
 \label{sec:hardware}
@@ -53,17 +58,43 @@ The method for estimating the impedance from multi-frequency data will be the to
 % AWG
 % Oscilloscope / ADC
 % Cabling and isolation
-The instrumental set-up used in our labs follows the same design introduced  in section \ref{sec:fft-eis} with a potentiostat interfaced with a dedicated waveform generator, for the excitation, and a dedicate acquisition device for high-frequency sampling and streaming to a computer. 
-The multisine excatation is generated as analog voltage signal and injected into the potentiostat where it is superimposed on the main drift. 
-It is converted to current though the measurement resistor when the tehnique applied by the potentiostat is galvanostatic.
+The instrumental set-up used in our labs follows the same design introduced  in section \ref{sec:fft-eis} with a potentiostat interfaced with a dedicated waveform generator, for the excitation signal, and a dedicate acquisition device for high-frequency sampling and streaming to a computer. 
+The multisine excatation is generated as analog voltage signal and injected into the potentiostat where it is superimposed on the main drift.
+The extranal signal is applied before the \emph{memeasurement resistor}, so for current controlled experiments the current flowing though the circuit is calculated from the external applied voltage and the resitor with Ohm's law.
+Not all commercial potentiostat have the capabilites to acsept external signals.
+In this work I used some from the brand BioLogic which provides an (unsupported) library for controlling the instrument though open source programming languages.
+This aspect was crucial for the automation of the Dynamic Impedance.
 
-For this work we assembled multiple set-ups using BioLogic potentiostats, Keysight waveform generators and PicoTech Picoscope acquisition devices. 
-The components are connected together using the auxiliary input-output port of the potentiostat: the waveform generator to the input and the scope recieves the voltage and current signals for the synchronous sampling. 
-The series and the model might vary experiment by experiment, therefore I will report the exact devices in the next part of the thesis where the results of discussion of multiple application of DEIS are reported. 
-The brand, though, remain the same as well as the operating principles and they can be all used with the software solution developed here. 
-BioLogic potentiostats have for each channel an auxiliary 9-pin port for the input and output of analog signals. 
-For the purpose of this project I was interested in only three: Input (Auciliary In2), voltage monitor and current monitor. The company supplies adapters for the 9-pin to BNC connectors but for me was more practical to build them myself with my requirments. 
+As arbitrary waveform generators we use dedicated dueal-channel benchtop devices from Keysight.
+The peculiar features are:
+\begin{itemize}
+    \item a big memory of 64MSa per channel of the digital to analog converter;
+    \item capability to sum and synchronize the output of the two channels into one signal;
+    \item jitter-free analog conversion that preserve the original signal reducing spectra leakage.
+\end{itemize}
+These device can be controlled with computer using the \emph{VISA} communication framework and \emph{SCIPI} langauge, both supported in Python with dedicated libraries.
+
+The cell signals were sampled with USB acquisition devices from PicoTech that allow the capture of long continous signal via streaming capability at high samplig rates (up to 20MSa, though for electrochesmitr 1-3MSa is enough).
+The manifacturer provides a software development kit with support of multiple languages for the user to manage the data source and integrate in existing code as done here.
+
+BioLogic potentiostats channels have an auxiliary 9 pin port for the input and output of analog signals. 
+For the purpose of this project I was interested in only three:
+\begin{itemize}
+    \item Auxiliary In for the injection of teh exitatino signal;
+    \item voltage monitor to record the analog signal with a dedicated external device;
+    \item current monitor.
+\end{itemize}
+The manifacturer supplies adapters for the 9-pin to BNC connectors but for me was more practical to build them myself with longer and indipendent cables. 
 A reference for the contruction is available in the Appendix \ref{ap:aux cable}.
+
+Figure \ref{fig:setup} shows a photography of one of the laboratory set-up used in this work (results of Chapter \ref{chap:coins}). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/acquisition/setup.jpg}
+    \caption{Photo of the laboratory setup for a 6-channel potentiostat of which 4 channles are configures fot the Dynamic Impednace experiment though the auxiliary port and external devices.}
+    \label{fig:setup}
+\end{figure}
 
 \section{Multi-sine design}
 \label{sec:multisine}
@@ -117,6 +148,24 @@ For the potentiostatic step instead the amplitude of the multisine is
 $$
 V(\omega_k) = |Z_{test}(\omega_k)|_{avg}.
 $$
+
+% The multisine, its design will be throughly eplained in a later chapter, is not just characterized by the frquency content but also its absolute and the relative amplitude of the sinusoidal components. 
+% The absolute amplitude is important for making the experiment itself, in the sense that for a chronoamperometry experiment the amplitude in volt of the excitation is the exact value applied on the cell. 
+% For a chronopotentiometry experiment instead, the signal in volt prodiced by the generator is converted to current passing though the measurement resistor. 
+% It is clear that the amplitude of the excitation must be changed when the running technique is a chronoamperometry or a chronopotentiometry. 
+% In addition, the relative amplitudes of the single sinusoidal components must be optimized (instead of being all equal) to the system. 
+
+% The method I prefer to use is to measure the impedance once experimentally and deduce its module to decide the relative amplitude of each sinusodial component such that the output has a certain amplitude for a good signal to noise ratio. 
+% In other words, if one follows the formula
+
+% $$
+% V_{output}(\omega _i) = |Z_{exp}(\omega _i)| \times I_{input}(\omega _i)
+% $$
+
+% can deduce the necessary current to obtain a certain oscillation in volt for each sinusodial component for the system under study. 
+% It is foundamental to note that the relative amplitude for a chronoamperometry experiment would be the rexiprocal of the one for a chronopotentiometry techinque to maintain the same signal to noise ratio. 
+% For this reason one should generate two different multisine with the two series of relative amplitude and then generate them during the correct technique using a suitable total multisine amplitude to perturb the system enough. 
+% It is indeed an art that require trail and error and a lot of time spent on looking at the peaks of the Discrete Fourier Transform for input and otuput.
 
 \subsection{Phase optimization}
 The process of identification should be carried out with small amplitude excitation around the operating point point. 
@@ -176,9 +225,9 @@ Regarding the period of the second wave, one might think of using 0.01 second to
 One must now consider that the frequencies of the two waves must follow the same rules described before to avoid intermodulation and such, being made from a sequence of harmonics. 
 Logarithmic sequences chosen for intermodulation tend to be sparser on the low frequency part and denser later. 
 If for both waveform one generates the frequencies start from the harmonic of 1, the measured impedance spectra would have a sparser points distribution in the decade from 100Hz and 1kHz where the  high band multi-sine waveform starts. 
-To get a uniform distibution of points, I generated the frequencies starting from 1 Hz and discarded the points until 100Hz (not included), since they are already presnet in the low band waveform. 
+To get a uniform distibution of points, I generated the frequencies starting from 1 Hz and discarded the points until 10Hz (not included), since they are already presnet in the low band waveform. 
 Then, the period of the waveform must be of 1Hz otherwise there will be spectral leakage in the final excitation (note that the frequencies are all integer multiples of 1Hz). 
-The sum of the two smaller waveforms generated with this method have the exact distribution of a signle-gnerated wave. 
+The sum of the two shorter waveforms generated with this method have the exact distribution of a signle-gnerated wave. 
 Figure \ref{fig:splitting_design} shows the density of points when restarting the multisine from 100Hz, from 10 Hz and discarding the first decade and 1 Hz and discarding the first two decades.
 
 \begin{figure}[H]
@@ -194,45 +243,32 @@ The automatic switch of the multisine during electrochemical experiments as desc
 
 \section{Automation of the acquisition for batteries}
 
-The potentiostat is used only for the electric control of the cell while not applying any perturbation while the waveform generator provides the multi-frequency excitation as well as the quasi-cyclic voltammetry pattern. 
-The arbitrary waveforms are loaded manually to the device via a .arb file transferred via USB drive from the computer. How the .arb file is build?
-This approach was the one I used for the first two applications (topic of the third and final part of the thesis) of the dynamic impedance for energy storage, also published as peer-review articles.
-
-For the goal of the thesis of acquiring the dynamic impedance during the CCCV cycling of a battery the previously described approach is not enough. 
-Two problems arise: the first is the huge amount of data streamed from the device to the computer to be saved into the RAM, limited to a few GB, and secondly the need to change the waveform for the excitation  during constant current (chronopotentiometry) or constant voltage (chronoamperometry) steps. 
-To overcome this problem and automation routine is needed, but before going into it I shall unpack the two issues one at the time. 
-Recarding the managment of the streamed signals the problem is to sample for a long time, in the scale of weeks or months, while acquiring at high frequency. 
-Let's say that one choses a moderate sampling frequency of 50kHz while sampling a system escited with a miximum frequency of 10kHz, it means 50kSa per second are stored, equivalent to 355 MSa per hour that we can translate to about 4.3 GB per channel per hour. 
-Even using systems with huge memory, only a few hours of acquisition would be possible, not weeks. 
-The alternative is to store into the hard drive the sampled signlas before the RAM is filled up and without loss. 
-One can decide a fixed ammount of points for the storage or execute the saving at the end of a technique (chronopotentiometry or chronoamperometry). 
-Before commenting which of the two approaches are more suitable for the project, I must discuss the second of the issues mentioned above. 
-The multisine, its design will be throughly eplained in a later chapter, is not just characterized by the frquency content but also its absolute and the relative amplitude of the sinusoidal components. 
-The absolute amplitude is important for making the experiment itself, in the sense that for a chronoamperometry experiment the amplitude in volt of the excitation is the exact value applied on the cell. 
-For a chronopotentiometry experiment instead, the signal in volt prodiced by the generator is converted to current passing though the measurement resistor. 
-It is clear that the amplitude of the excitation must be changed when the running technique is a chronoamperometry or a chronopotentiometry. 
-In addition, the relative amplitudes of the single sinusoidal components must be optimized (instead of being all equal) to the system. 
-The method I prefer to use is to measure the impedance once experimentally and deduce its module to decide the relative amplitude of each sinusodial component such that the output has a certain amplitude for a good signal to noise ratio. 
-In other words, if one follows the formula
-
-$$
-V_{output}(\omega _i) = |Z_{exp}(\omega _i)| \times I_{input}(\omega _i)
-$$
-
-can deduce the necessary current to obtain a certain oscillation in volt for each sinusodial component for the system under study. 
-It is foundamental to note that the relative amplitude for a chronoamperometry experiment would be the rexiprocal of the one for a chronopotentiometry techinque to maintain the same signal to noise ratio. 
-For this reason one should generate two different multisine with the two series of relative amplitude and then generate them during the correct technique using a suitable total multisine amplitude to perturb the system enough. 
-It is indeed an art that require trail and error and a lot of time spent on looking at the peaks of the Discrete Fourier Transform for input and otuput.
-
-
-
-
-
-
-
-
+\subsection{Problem statement}
+Before I joined the ESECS group, the acquisition of multi-frequency cells signals was performed setting the three instruments manually and indipendelty, and streaming with a simple MATLAB script calling the PicoTech SDK.
+This approach binds the maximum signals length to the computer RAM because saving directly to disk is not possible for the slow speed of writing into mechanical hard drives compared to the high streaming frequency.
+Although it works for short measurment like the characterization of material provided in Chapters \ref{chap:LTP} and \ref{chap:capacitor}, my final goal was the monitoring of battery aging upon many cycles, therfore I needed to develop an alternative strategy: at the end of each half-cycle (or electrochemical technique) the signals from the RAM is stored to disk and the acquisition continue on the RAM.
+This approach works until the signals of one half-cycle fit the memory, a constrain eliminated with the on-line computation that is the discussed in next Chapter.
+To save the signals to disk at the right time, a computer program must follow the excecution of the technique on the potentiostat with a control loop, execute the saving to disk, and immediatly restart the data streaming without loosing samples.
+This coordination coordination and the practical implementation is the subject of the rest of the chapter.
 
 \subsection{Software solution}
+
+
+A control loop must mointor the technique identifier and loop number returned by quering the potentiatiostat.
+Using the BioLogic EC-Lab or EC-Lab Express doesn't allow to automate this process even using the output triggers.
+BioLogic provides a simple Software Development Kit to communicate with the potentiostats that I expanded into a more sofisticated object-oriented Python library capable of communicating indipendently with each channel through a "Channel" object.
+
+
+
+
+
+
+
+
+
+
+
+
 
 The work around for both the questions seems to be an automatic system that can, during the execution of the experiment, changed the excitation in the waveform generator remotely accordignly to the technique in execution and save the signals from the scope when a technique is finished. 
 This simple idea hides the main technical complication of this work: having a computer program that workd with the generator and scope, and also monitors the execution of the sequence of techniques that forms an CCCV experiment.
@@ -288,33 +324,13 @@ The other is performed by the PicoCalculator object that uses the value of the z
 
 
 \section{Data and metadata saving}
-FAIR data are essential for makeing the diffusion of DEIS possible.
-
-% \section{The computation of impedance for non-stationary systems}
-% %Under which conditions the system can be approximated as locally LTI
-% %Over what window the drift is negligible
-% %Why the multisine period must be shorter than the drift timescale
-
-% \section{Online processing and data reduction} 
-% \label{On-line computation}
-% % This is central and should be highlighted earlier.
-% % Add a conceptual figure
-% The automation of the acquisition allow to record signals for battery cycling and mixed techniques but still has on other limitation regarding the data size. When considering the impedance of a battery, the desired frequency range might differ depending on the chemistry. In some cases 100Hz could be the maximum needed frequency for bigger batteries in pouch format, but when going to smaller sizes and laboratory scales it is generally needed to probe until higher frequency, up to 1MHz where the inductance of the connections cell to instrument became the predominant response (here I am not including solid state electrolytes that might need frequencies up to 7 MHz). For the application presented later, I determined an highest frequency of excitation of 100kHz (maintaining the lowest to 10mHz) that requires a sampling frequency of 500kHz or 1MHz (both worked in my tests using the following method, although according to the Nyquist limit 250kHz is enough). Such an high sampling rate would store very big data in the hard drive that soon will require expansion after weeks of measurement and experiment repetiotion. Furthermore the highest frequency would be repeated for a huge amount of times while we are actually interested of sampling long times to identify the lowest frequency. The upper part of the frequency band can be considered in a quasi-stationary condition and therefor doesn't require mathematical techniques to decouple with the main drift. The method used here follow this idea: calculating the impedance of the upper part of the frequency band (ex. above 10Hz) using the FFT-EIS method, apply a low-pass filter to remove these same frequencies and decimate the signal to a much lower rate (ex. 50Hz) to be stored for later estimation of the time-varying impedance (ex. with DMFA). Finally, the total spectra is reconstructed concatenating the impedance estimated with the two methods.
-
-% This is the first contribution of this work: measuring broad-band non-stationary impedance continuously during the cycling of the battery.
 
 
-% \section{Impedance estimation}
-% % Good technical detail, but DMFA theory is misplaced.
-% % Move DMFA theory to the identification chapter, keep practical aspects here.
-% In the experimental works presented in this thesis, we estimated the impedance using the methods of the sliding short-time Fourier transform and dynamic multifrequency analysis; the first only during the online signal processing. The STFFT method has not much tuning. The only user parameters are the length of the window and the windowing function type. The length is dictated by the resolution that one wants to achieve, so on the lowest frequency component of the excitation. The windowing function instead alters the input and output signals time series to put more or less importance to the central part of the signal rather than the borders (makes the impedance confined in time at the price of spectral power) to obtain the instantaneous impedance at the middle points. For the experiment presented here, I assumed that being the drift of the system much slower than the perturbation, the impedance would not vary much and no windowing function is necessary. For the Dynamic Multi-Frequency Analysis, one needs to chose a filter function with care. Here we used the symmetric Fermi-Dirac delta with bandwidth of 0.01 Hz and an order of 8. A previous publication of the group showed the effect of these two parameters on the final result. The most important is the bandwidth because it reflects on the number of spectra estimated and their separation in time. Battistel and al. showed in XX the shape of the filter function when trasnformed to the time domain and it is similar to a sinc function for its main lobe and small oscillation asintothycally to zero. The dynamic multifrequency analysis performes a multiplication in the frequency domain  of the filter with the fourier spectra of the signal around one frequency, that correspond to a convolution of the time domain. Hence the time-domain transformed filter as a function shifted in time by a quantity equal to the reciprocal of the bandwidth. The windows should not be shorter than the period of the multisine and furthermore one should put care in the oscillating lobes that could bias the impedance estimation, as shown in Chukwu.
 
-% In both methods, one can strongly reduce the zero-frequency skirt in the Fourier space and the Gibbs effect  by removing the baseline for current and voltage signals. I chose to use just a simple baseline removing because other classical methods did not work for me. Typically one can use sliding window averaging, spline or polynomial fitting or gaussian process regression to name the main one. In my experience non of these methods could effectively decouple the trend and the first few frequencies of the multisine that are overlapping. A complete Python library can be used to test these and more trend removal techniques, it is called Wotan. Hellemans and al. developed a method for de-trending signals with low frequency containing multi-sine but there is no available Python implementation to try out and the functional analysis used in the official is above my mathematical skills to implementing it myself.
 
-% \section{Consideration on the drift}
-% % Why using quasi cyclic voltammetry.
 
-\section{Limitations and future improvements}
+
+\section{Summary and limitations}
 % Expensive hardware, could be streamlined
 % Clock synchronization of generator and sampler
 % Better optimization of the multisine

@@ -1,6 +1,7 @@
 \chapter{Impedance estimation}
 \label{chap:estimation}
 
+\section{Introduction to the combined method}
 The previous chapter shows how I deisgnied, applied and recorded multi-frequency electrochemical signals of drifting systems.
 In this chapter I will elucidate the methods I used for the estimation of instantanous impedance from the multi-frequency signals.
 Of the three methods described in the introduction, namely ST-FFT \pageref{sec:fft-eis}, DMFA \pageref{sec:dmfa} and fitting the BLTVA \pageref{sec:BLTVA}, I used in this work only the first two because of the ease of implementation with basic signal processing concepts and well enstablished use in the literature.
@@ -12,6 +13,13 @@ With the full control on the data stream and the multi-threded excecution, it is
 This chapter describes how impedance is estmiated off-line with the DMFA and the downsaides of the method. 
 Then I will described the signal workflow to estimate part of the impedance on-line.
 The mixed method was used for the long-term broad-band characterization of li-ion commerical batteries discussed in Chapter \ref{chap:coins}, while the rest of the applications used only the off-line DMFA method (Chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}) because they where perfomred alongside the develoment of the setup.
+
+\section{Temporary stationarity of the system}
+% Here goes the explanation and the figure I had in mind
+This method is valid because of the assumption that there is a superimposition only of the lowest frequencies with the drift wile the high frequencies are not influenced.
+In other words, for the high frequency band the system is considered stationary. 
+The critical frequency that separates the frequency bands depends on the drift rate and the kinetics of the system.
+One can look at the Fourier Spectrum of a signal to deduce the treshold for which the system doesn't respond anymore.
 
 \section{Off-line estimation with DMFA}
 %Under which conditions the system can be approximated as locally LTI
@@ -29,7 +37,7 @@ The latter shapes the amplitude of the side-bands of the filter.
 \section{On-line processing and data reduction}
 \label{On-line computation}
 
-\subsection{Limitation of the DMFA}
+\subsection{Motivation}
 Using the method of DMFA (but also fitting a BLTVA) requires storing the complete signals from beginning to end of the experiment.
 When the sample rate of the acquisition is high or the experiment is long, the ammount of disk-space occupied by the signals become significant.
 The sample rate is determined by the maximum frequencies of the excitation wave (at least twice according to the Nyquist Theorem) while the experiment time depend on the desired characterization of the system; charaterization of redox couple via cyclic voltammetry might last a few minutes while characterizing the intercalation in layered material takes hours, and the phenomena of battery aging appears in weeks.
@@ -49,13 +57,6 @@ The solution is to use the FFT of a short window and estimate the impedance for 
 For example, in chapter \ref{chap:coins} I show Li-ion batteries cycle at C/10 with the FFT applied on a window of 100s where only the impedance for the frequencies componets above 10Hz is estimated.
 Such components oscillates a full period 1,000 to 100,000,000 times during the 100s window hence their frequency analysis shows sharp and defined peaks beacase everaging over so many periods and the system can be considered statinoary.
 Saving this information for hours is redundant, therfore I developed a strategy to calculate part of the impedance on-line, low-pass filtering the signals and decimate them for a later off-line analysis with DMFA.
-
-\subsection{Temporary stationarity of the system}
-% Here goes the explanation and the figure I had in mind
-This method is valid because of the assumption that there is a superimposition only of the lowest frequencies with the drift wile the high frequencies are not influenced.
-In other words, for the high frequency band the system is considered stationary. 
-The critical frequency that separates the frequency bands depends on the drift rate and the kinetics of the system.
-One can look at the Fourier Spectrum of a signal to deduce the treshold for which the system doesn't respond anymore.
 
 \subsection{Strategy of the on-line processing}
 
@@ -84,7 +85,14 @@ The strategy is summarized in Figure \ref{fig:online processing scheme}.
     \label{fig:online processing scheme}
 \end{figure}
 
-\section{Data exploration}
+\subsection{Validation against DMFA}
+To validate the impedanceobtained with combined STFFT and DMFA method I applied it together with pure DMFA on all frequencies components for the same dataset.
+[Put the figure]
+[Caluclate the difference in absolute Ohms between the two points]
+The data are acquire over the ?discharge? of a coin cell at C/10, and a frequency range from 1kHz to 10mHz. 
+The same cells are used in the measurments discussed in Chapter \ref{chap:coins}.
+
+\section{Data visualization}
 A Dynamic Impedance experiment might return dozens to thousend of istantanous spectra depending on the temporal resolution and acquisitino length. 
 This is why the analysis, subject of the next chapter, is even more relevant.
 

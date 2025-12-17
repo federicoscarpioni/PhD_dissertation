@@ -1,0 +1,72 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.7">
+  <diagram name="Page-1" id="Jvonru7kJl-BDODq8wWV">
+    <mxGraphModel dx="739" dy="407" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zofE3i31Eoj7dINC7p5g-8" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;fontSize=10;" target="zofE3i31Eoj7dINC7p5g-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" value="Measure with direct current method" vertex="1">
+          <mxGeometry height="50" width="100" x="40" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-9" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;" target="zofE3i31Eoj7dINC7p5g-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" value="Measure classic EIS" vertex="1">
+          <mxGeometry height="40" width="110" x="40" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-7" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;fontSize=10;" target="zofE3i31Eoj7dINC7p5g-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" value="Prepare mutlisine" vertex="1">
+          <mxGeometry height="40" width="90" x="190" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-11" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=10;" target="zofE3i31Eoj7dINC7p5g-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" value="Choose parameters for the multi-sine method and automation software" vertex="1">
+          <mxGeometry height="55" width="131" x="319" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-14" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="zofE3i31Eoj7dINC7p5g-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="525" y="190" />
+              <mxPoint x="80" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" value="Run experiment" vertex="1">
+          <mxGeometry height="25" width="90" x="480" y="87" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-16" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="zofE3i31Eoj7dINC7p5g-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-18" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="zofE3i31Eoj7dINC7p5g-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Load data&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="40" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Visualize&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="180" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-21" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="zofE3i31Eoj7dINC7p5g-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-22" edge="1" parent="1" source="zofE3i31Eoj7dINC7p5g-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="zofE3i31Eoj7dINC7p5g-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Fit model&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="80" x="180" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" value="Visualize parameters" vertex="1">
+          <mxGeometry height="35" width="110" x="319" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="zofE3i31Eoj7dINC7p5g-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" value="Find correlation between parameters and battery state" vertex="1">
+          <mxGeometry height="50" width="111" x="319" y="250" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

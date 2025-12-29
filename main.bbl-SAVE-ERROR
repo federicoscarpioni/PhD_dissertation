@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.2 $
+% $ biblatex bbl format version 3.3 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{none/global//global/global}
-    \entry{kojima1971fourier}{article}{}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{kojima1971fourier}{article}{}{}
       \name{author}{2}{}{%
         {{hash=946e34af7eaf4e2f956e51c1f17ea0d6}{%
            family={Kojima},
@@ -37,10 +37,12 @@
       }
       \strng{namehash}{0f6a0a27ff43c809b08abc9b2388aa42}
       \strng{fullhash}{0f6a0a27ff43c809b08abc9b2388aa42}
+      \strng{fullhashraw}{0f6a0a27ff43c809b08abc9b2388aa42}
       \strng{bibnamehash}{0f6a0a27ff43c809b08abc9b2388aa42}
       \strng{authorbibnamehash}{0f6a0a27ff43c809b08abc9b2388aa42}
       \strng{authornamehash}{0f6a0a27ff43c809b08abc9b2388aa42}
       \strng{authorfullhash}{0f6a0a27ff43c809b08abc9b2388aa42}
+      \strng{authorfullhashraw}{0f6a0a27ff43c809b08abc9b2388aa42}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -53,7 +55,7 @@
       \field{pages}{2158\bibrangedash 2162}
       \range{pages}{5}
     \endentry
-    \entry{gloverAlternatingCurrentPolarography1973}{article}{}
+    \entry{gloverAlternatingCurrentPolarography1973}{article}{}{}
       \name{author}{2}{}{%
         {{hash=75b369664d9f864b07e37d1fd9b4e226}{%
            family={Glover},
@@ -71,10 +73,12 @@
       }
       \strng{namehash}{3e6748b5fc22508dd6ccaa1762ae0efd}
       \strng{fullhash}{3e6748b5fc22508dd6ccaa1762ae0efd}
+      \strng{fullhashraw}{3e6748b5fc22508dd6ccaa1762ae0efd}
       \strng{bibnamehash}{3e6748b5fc22508dd6ccaa1762ae0efd}
       \strng{authorbibnamehash}{3e6748b5fc22508dd6ccaa1762ae0efd}
       \strng{authornamehash}{3e6748b5fc22508dd6ccaa1762ae0efd}
       \strng{authorfullhash}{3e6748b5fc22508dd6ccaa1762ae0efd}
+      \strng{authorfullhashraw}{3e6748b5fc22508dd6ccaa1762ae0efd}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -100,7 +104,7 @@
       \verb C:\Users\fscarp\Zotero\storage\6KCN2IQL\Glover and Smith - 1973 - Alternating current polarography in the harmonic multiplex mode. Use of digital signal conditioning.pdf
       \endverb
     \endentry
-    \entry{creasonFourierTransformFaradaic1972}{article}{}
+    \entry{creasonFourierTransformFaradaic1972}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a306eded7bfef598daa0b16e70da648e}{%
            family={Creason},
@@ -115,10 +119,12 @@
       }
       \strng{namehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{fullhash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{fullhashraw}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{bibnamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authorbibnamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authornamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authorfullhash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{authorfullhashraw}{d655727c3a513bcae70fa1bdc1a9476b}
       \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
@@ -144,7 +150,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\I8E2AJWZ\\Creason and Smith - 1972 - Fourier transform faradaic admittance measurements.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\NU5HLZW8\\S0022072872801463.html
       \endverb
     \endentry
-    \entry{creasonFourierTransformFaradaic1973a}{article}{}
+    \entry{creasonFourierTransformFaradaic1973a}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a306eded7bfef598daa0b16e70da648e}{%
            family={Creason},
@@ -159,10 +165,12 @@
       }
       \strng{namehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{fullhash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{fullhashraw}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{bibnamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authorbibnamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authornamehash}{d655727c3a513bcae70fa1bdc1a9476b}
       \strng{authorfullhash}{d655727c3a513bcae70fa1bdc1a9476b}
+      \strng{authorfullhashraw}{d655727c3a513bcae70fa1bdc1a9476b}
       \field{extraname}{2}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
@@ -189,7 +197,7 @@
       \verb C:\Users\fscarp\Zotero\storage\DCBRC9JQ\Creason and Smith - 1973 - Fourier transform faradaic admittance measurements.pdf
       \endverb
     \endentry
-    \entry{schwallOnlineFastFourier1977}{article}{}
+    \entry{schwallOnlineFastFourier1977}{article}{}{}
       \name{author}{3}{}{%
         {{hash=889d4fb1748fe65d3a1e136053a86bd1}{%
            family={Schwall},
@@ -207,12 +215,15 @@
            given={Donald\bibnamedelima E.},
            giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
-      \strng{namehash}{255b2788f887156f4b68f10df63badcc}
+      \strng{namehash}{09fcade4514ad70f2c49a7768011ed3f}
       \strng{fullhash}{255b2788f887156f4b68f10df63badcc}
-      \strng{bibnamehash}{255b2788f887156f4b68f10df63badcc}
-      \strng{authorbibnamehash}{255b2788f887156f4b68f10df63badcc}
-      \strng{authornamehash}{255b2788f887156f4b68f10df63badcc}
+      \strng{fullhashraw}{255b2788f887156f4b68f10df63badcc}
+      \strng{bibnamehash}{09fcade4514ad70f2c49a7768011ed3f}
+      \strng{authorbibnamehash}{09fcade4514ad70f2c49a7768011ed3f}
+      \strng{authornamehash}{09fcade4514ad70f2c49a7768011ed3f}
       \strng{authorfullhash}{255b2788f887156f4b68f10df63badcc}
+      \strng{authorfullhashraw}{255b2788f887156f4b68f10df63badcc}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -239,7 +250,7 @@
       \verb C:\Users\fscarp\Zotero\storage\LD4SVANV\Schwall et al. - 1977 - On-line fast Fourier transform faradaic admittance.pdf
       \endverb
     \endentry
-    \entry{bondOnlineFFTFaradaic1977}{article}{}
+    \entry{bondOnlineFFTFaradaic1977}{article}{}{}
       \name{author}{3}{}{%
         {{hash=09b391fb3f7edd728749b86b464ecf2f}{%
            family={Bond},
@@ -257,12 +268,14 @@
            given={Donald\bibnamedelima E.},
            giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
-      \strng{namehash}{8103cb6e71f07e40c7a3850ea5c46e9a}
+      \strng{namehash}{99f4165d9c63593cb37543fb5ac2297e}
       \strng{fullhash}{8103cb6e71f07e40c7a3850ea5c46e9a}
-      \strng{bibnamehash}{8103cb6e71f07e40c7a3850ea5c46e9a}
-      \strng{authorbibnamehash}{8103cb6e71f07e40c7a3850ea5c46e9a}
-      \strng{authornamehash}{8103cb6e71f07e40c7a3850ea5c46e9a}
+      \strng{fullhashraw}{8103cb6e71f07e40c7a3850ea5c46e9a}
+      \strng{bibnamehash}{99f4165d9c63593cb37543fb5ac2297e}
+      \strng{authorbibnamehash}{99f4165d9c63593cb37543fb5ac2297e}
+      \strng{authornamehash}{99f4165d9c63593cb37543fb5ac2297e}
       \strng{authorfullhash}{8103cb6e71f07e40c7a3850ea5c46e9a}
+      \strng{authorfullhashraw}{8103cb6e71f07e40c7a3850ea5c46e9a}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -288,7 +301,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\L6WTL5LE\\Bond et al. - 1977 - On-line FFT faradaic admittance measurements appli.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\Y33NZXQ3\\S0022072877802908.html
       \endverb
     \endentry
-    \entry{schwallHighSpeedSynchronous1977}{article}{}
+    \entry{schwallHighSpeedSynchronous1977}{article}{}{}
       \name{author}{5}{}{%
         {{hash=19dd1d15432801ba1f41d1ae435570f0}{%
            family={Schwall},
@@ -321,10 +334,13 @@
       }
       \strng{namehash}{da0149b744f17d42422ca774f4b88cef}
       \strng{fullhash}{31c3cf83afd09b9f75f8f0e71834e4f5}
+      \strng{fullhashraw}{31c3cf83afd09b9f75f8f0e71834e4f5}
       \strng{bibnamehash}{da0149b744f17d42422ca774f4b88cef}
       \strng{authorbibnamehash}{da0149b744f17d42422ca774f4b88cef}
       \strng{authornamehash}{da0149b744f17d42422ca774f4b88cef}
       \strng{authorfullhash}{31c3cf83afd09b9f75f8f0e71834e4f5}
+      \strng{authorfullhashraw}{31c3cf83afd09b9f75f8f0e71834e4f5}
+      \field{extraname}{2}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -351,7 +367,7 @@
       \verb C:\Users\fscarp\Zotero\storage\RJ7BN5PS\Schwall et al. - 1977 - High speed synchronous data generation and sampler system application to on-line fast Fourier tran.pdf
       \endverb
     \endentry
-    \entry{hayesACPolarographyUsing1980}{article}{}
+    \entry{hayesACPolarographyUsing1980}{article}{}{}
       \name{author}{2}{}{%
         {{hash=2b235adff58e9930fe8a72e8c2c5aa09}{%
            family={Hayes},
@@ -366,10 +382,12 @@
       }
       \strng{namehash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \strng{fullhash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
+      \strng{fullhashraw}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \strng{bibnamehash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \strng{authorbibnamehash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \strng{authornamehash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \strng{authorfullhash}{3b483ee7d6c4a75218933cd8a8ce0bb7}
+      \strng{authorfullhashraw}{3b483ee7d6c4a75218933cd8a8ce0bb7}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -396,7 +414,7 @@
       \verb C:\Users\fscarp\Zotero\storage\3RVM3WVK\S0022072880804530.html
       \endverb
     \endentry
-    \entry{grzeszczukMeasurementsMarcusTheory1983}{article}{}
+    \entry{grzeszczukMeasurementsMarcusTheory1983}{article}{}{}
       \name{author}{2}{}{%
         {{hash=224cfa83d8ddd399a317b2192d9e5297}{%
            family={Grzeszczuk},
@@ -411,10 +429,12 @@
       }
       \strng{namehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{fullhash}{3dd2bcfe27c91949c81fa6e8d293ee57}
+      \strng{fullhashraw}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{bibnamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authorbibnamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authornamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authorfullhash}{3dd2bcfe27c91949c81fa6e8d293ee57}
+      \strng{authorfullhashraw}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -441,7 +461,7 @@
       \verb C:\Users\fscarp\Zotero\storage\BCE6LZES\S0022072883803519.html
       \endverb
     \endentry
-    \entry{grzeszczukStructuralConsequencesElectron1983}{article}{}
+    \entry{grzeszczukStructuralConsequencesElectron1983}{article}{}{}
       \name{author}{3}{}{%
         {{hash=224cfa83d8ddd399a317b2192d9e5297}{%
            family={Grzeszczuk},
@@ -462,12 +482,14 @@
       \list{publisher}{1}{%
         {American Chemical Society (ACS)}%
       }
-      \strng{namehash}{ca004f0d87a1daa08cd54e2e99076f7c}
+      \strng{namehash}{03091335ad49a613c0d7eda9465e5c43}
       \strng{fullhash}{ca004f0d87a1daa08cd54e2e99076f7c}
-      \strng{bibnamehash}{ca004f0d87a1daa08cd54e2e99076f7c}
-      \strng{authorbibnamehash}{ca004f0d87a1daa08cd54e2e99076f7c}
-      \strng{authornamehash}{ca004f0d87a1daa08cd54e2e99076f7c}
+      \strng{fullhashraw}{ca004f0d87a1daa08cd54e2e99076f7c}
+      \strng{bibnamehash}{03091335ad49a613c0d7eda9465e5c43}
+      \strng{authorbibnamehash}{03091335ad49a613c0d7eda9465e5c43}
+      \strng{authornamehash}{03091335ad49a613c0d7eda9465e5c43}
       \strng{authorfullhash}{ca004f0d87a1daa08cd54e2e99076f7c}
+      \strng{authorfullhashraw}{ca004f0d87a1daa08cd54e2e99076f7c}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -493,7 +515,7 @@
       \verb C:\Users\fscarp\Zotero\storage\5ZEHBFNK\Grzeszczuk et al. - 1983 - Structural consequences of electron transfer reactions. 8. Elucidation of isomerization mechanism of.pdf
       \endverb
     \endentry
-    \entry{grzeszczukElectrochemicalInvestigationsTetraphenylethylene1984}{article}{}
+    \entry{grzeszczukElectrochemicalInvestigationsTetraphenylethylene1984}{article}{}{}
       \name{author}{2}{}{%
         {{hash=224cfa83d8ddd399a317b2192d9e5297}{%
            family={Grzeszczuk},
@@ -508,10 +530,12 @@
       }
       \strng{namehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{fullhash}{3dd2bcfe27c91949c81fa6e8d293ee57}
+      \strng{fullhashraw}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{bibnamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authorbibnamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authornamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authorfullhash}{3dd2bcfe27c91949c81fa6e8d293ee57}
+      \strng{authorfullhashraw}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -538,7 +562,7 @@
       \verb C:\Users\fscarp\Zotero\storage\M55JQGB7\S0022072884801643.html
       \endverb
     \endentry
-    \entry{ivaskaApplicationOnlineFast1985}{article}{}
+    \entry{ivaskaApplicationOnlineFast1985}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a13883ec00b731508b4808db8029a8af}{%
            family={Ivaska},
@@ -556,10 +580,12 @@
       }
       \strng{namehash}{29b693cc8cf85e998fb735de5239d84a}
       \strng{fullhash}{29b693cc8cf85e998fb735de5239d84a}
+      \strng{fullhashraw}{29b693cc8cf85e998fb735de5239d84a}
       \strng{bibnamehash}{29b693cc8cf85e998fb735de5239d84a}
       \strng{authorbibnamehash}{29b693cc8cf85e998fb735de5239d84a}
       \strng{authornamehash}{29b693cc8cf85e998fb735de5239d84a}
       \strng{authorfullhash}{29b693cc8cf85e998fb735de5239d84a}
+      \strng{authorfullhashraw}{29b693cc8cf85e998fb735de5239d84a}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -585,7 +611,7 @@
       \verb C:\Users\fscarp\Zotero\storage\EADS36CP\Ivaska and Smith - 1985 - Application of on-line fast Fourier transform faradaic admittance measurements to deconvolution of h.pdf
       \endverb
     \endentry
-    \entry{grzeszczukElectronHydrogenAtom1986}{article}{}
+    \entry{grzeszczukElectronHydrogenAtom1986}{article}{}{}
       \name{author}{2}{}{%
         {{hash=224cfa83d8ddd399a317b2192d9e5297}{%
            family={Grzeszczuk},
@@ -600,10 +626,12 @@
       }
       \strng{namehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{fullhash}{3dd2bcfe27c91949c81fa6e8d293ee57}
+      \strng{fullhashraw}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{bibnamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authorbibnamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authornamehash}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \strng{authorfullhash}{3dd2bcfe27c91949c81fa6e8d293ee57}
+      \strng{authorfullhashraw}{3dd2bcfe27c91949c81fa6e8d293ee57}
       \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -630,7 +658,7 @@
       \verb C:\Users\fscarp\Zotero\storage\EYSG3IFF\0022072886800572.html
       \endverb
     \endentry
-    \entry{engblomExperiencesOnLineFourier1990}{incollection}{}
+    \entry{engblomExperiencesOnLineFourier1990}{incollection}{}{}
       \name{author}{4}{}{%
         {{hash=5e3287ad7bb2d526266072ac6eb812bf}{%
            family={Engblom},
@@ -658,10 +686,12 @@
       }
       \strng{namehash}{1a754d40791812e0f93e8ba4958c3848}
       \strng{fullhash}{59a22e80d4aaa8cd88969c04387386d9}
+      \strng{fullhashraw}{59a22e80d4aaa8cd88969c04387386d9}
       \strng{bibnamehash}{1a754d40791812e0f93e8ba4958c3848}
       \strng{authorbibnamehash}{1a754d40791812e0f93e8ba4958c3848}
       \strng{authornamehash}{1a754d40791812e0f93e8ba4958c3848}
       \strng{authorfullhash}{59a22e80d4aaa8cd88969c04387386d9}
+      \strng{authorfullhashraw}{59a22e80d4aaa8cd88969c04387386d9}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -682,7 +712,7 @@
       \verb 10.1007/978-1-4899-3704-9_4
       \endverb
     \endentry
-    \entry{haziMicrocomputerbasedInstrumentationMultifrequency1997}{article}{}
+    \entry{haziMicrocomputerbasedInstrumentationMultifrequency1997}{article}{}{}
       \name{author}{6}{}{%
         {{hash=e7093b519dab7893d194c1ef0c0e946d}{%
            family={Házì},
@@ -717,10 +747,12 @@
       }
       \strng{namehash}{e6e2119e643d41688d336b4d145fb123}
       \strng{fullhash}{47afb387cebbd4925dbd5e4c9eb0f09b}
+      \strng{fullhashraw}{47afb387cebbd4925dbd5e4c9eb0f09b}
       \strng{bibnamehash}{e6e2119e643d41688d336b4d145fb123}
       \strng{authorbibnamehash}{e6e2119e643d41688d336b4d145fb123}
       \strng{authornamehash}{e6e2119e643d41688d336b4d145fb123}
       \strng{authorfullhash}{47afb387cebbd4925dbd5e4c9eb0f09b}
+      \strng{authorfullhashraw}{47afb387cebbd4925dbd5e4c9eb0f09b}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -747,7 +779,7 @@
       \endverb
       \keyw{Fourier transform a.c. voltammetry,Microcomputer-based instrumentation}
     \endentry
-    \entry{schieweUnifiedApproachTrace1998}{article}{}
+    \entry{schieweUnifiedApproachTrace1998}{article}{}{}
       \name{author}{4}{}{%
         {{hash=f213267800d38013ddddf7b308d0e496}{%
            family={Schiewe},
@@ -772,10 +804,12 @@
       }
       \strng{namehash}{897f6c73146d150eb829126d6d6409db}
       \strng{fullhash}{2fd796f5730d3168627ce415b8b65029}
+      \strng{fullhashraw}{2fd796f5730d3168627ce415b8b65029}
       \strng{bibnamehash}{897f6c73146d150eb829126d6d6409db}
       \strng{authorbibnamehash}{897f6c73146d150eb829126d6d6409db}
       \strng{authornamehash}{897f6c73146d150eb829126d6d6409db}
       \strng{authorfullhash}{2fd796f5730d3168627ce415b8b65029}
+      \strng{authorfullhashraw}{2fd796f5730d3168627ce415b8b65029}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -802,7 +836,7 @@
       \endverb
       \keyw{Analysis,Fourier transform ac voltammetry,Impedance analysis,Limit of detection,Signal-to-background ratio,Signal-to-noise ratio}
     \endentry
-    \entry{osakaApplicationOnlineImpedance1982}{article}{}
+    \entry{osakaApplicationOnlineImpedance1982}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a5ea91cbef76906b9c01c02678cf147f}{%
            family={Osaka},
@@ -817,10 +851,12 @@
       }
       \strng{namehash}{f548577cc2b76916228168adc98bd4f9}
       \strng{fullhash}{f548577cc2b76916228168adc98bd4f9}
+      \strng{fullhashraw}{f548577cc2b76916228168adc98bd4f9}
       \strng{bibnamehash}{f548577cc2b76916228168adc98bd4f9}
       \strng{authorbibnamehash}{f548577cc2b76916228168adc98bd4f9}
       \strng{authornamehash}{f548577cc2b76916228168adc98bd4f9}
       \strng{authorfullhash}{f548577cc2b76916228168adc98bd4f9}
+      \strng{authorfullhashraw}{f548577cc2b76916228168adc98bd4f9}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -846,7 +882,7 @@
       \verb C:\Users\fscarp\Zotero\storage\22G4QRNK\bcsj.55.html
       \endverb
     \endentry
-    \entry{osakaStudyTimedependenceOxygen1984}{article}{}
+    \entry{osakaStudyTimedependenceOxygen1984}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a5ea91cbef76906b9c01c02678cf147f}{%
            family={Osaka},
@@ -861,10 +897,12 @@
       }
       \strng{namehash}{070d0e0ca11370a3ca303a759255aa69}
       \strng{fullhash}{070d0e0ca11370a3ca303a759255aa69}
+      \strng{fullhashraw}{070d0e0ca11370a3ca303a759255aa69}
       \strng{bibnamehash}{070d0e0ca11370a3ca303a759255aa69}
       \strng{authorbibnamehash}{070d0e0ca11370a3ca303a759255aa69}
       \strng{authornamehash}{070d0e0ca11370a3ca303a759255aa69}
       \strng{authorfullhash}{070d0e0ca11370a3ca303a759255aa69}
+      \strng{authorfullhashraw}{070d0e0ca11370a3ca303a759255aa69}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -891,7 +929,7 @@
       \verb C:\Users\fscarp\Zotero\storage\ABUH7826\0013468684871273.html
       \endverb
     \endentry
-    \entry{osakaElectrochemicalStudyAnion1984}{article}{}
+    \entry{osakaElectrochemicalStudyAnion1984}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a5ea91cbef76906b9c01c02678cf147f}{%
            family={Osaka},
@@ -906,10 +944,12 @@
       }
       \strng{namehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{fullhash}{9a4d35e7cd211a8f5e361dffae91c159}
+      \strng{fullhashraw}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{bibnamehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{authorbibnamehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{authornamehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{authorfullhash}{9a4d35e7cd211a8f5e361dffae91c159}
+      \strng{authorfullhashraw}{9a4d35e7cd211a8f5e361dffae91c159}
       \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -936,7 +976,7 @@
       \verb C:\Users\fscarp\Zotero\storage\C7JXGP5P\bcsj.57.html
       \endverb
     \endentry
-    \entry{osakaStudyChargeDischargeCharacteristics1984}{article}{}
+    \entry{osakaStudyChargeDischargeCharacteristics1984}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a5ea91cbef76906b9c01c02678cf147f}{%
            family={Osaka},
@@ -951,10 +991,12 @@
       }
       \strng{namehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{fullhash}{9a4d35e7cd211a8f5e361dffae91c159}
+      \strng{fullhashraw}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{bibnamehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{authorbibnamehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{authornamehash}{9a4d35e7cd211a8f5e361dffae91c159}
       \strng{authorfullhash}{9a4d35e7cd211a8f5e361dffae91c159}
+      \strng{authorfullhashraw}{9a4d35e7cd211a8f5e361dffae91c159}
       \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -981,7 +1023,7 @@
       \verb C:\Users\fscarp\Zotero\storage\KHDSL2QN\bcsj.57.html
       \endverb
     \endentry
-    \entry{osakaApplicationConductive985}{article}{}
+    \entry{osakaApplicationConductive985}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b58aeb00a2193de56bd0817107d6ff53}{%
            family={Osaka},
@@ -999,10 +1041,12 @@
       }
       \strng{namehash}{877f43f2d02349e3a4d77d1bd23040f9}
       \strng{fullhash}{877f43f2d02349e3a4d77d1bd23040f9}
+      \strng{fullhashraw}{877f43f2d02349e3a4d77d1bd23040f9}
       \strng{bibnamehash}{877f43f2d02349e3a4d77d1bd23040f9}
       \strng{authorbibnamehash}{877f43f2d02349e3a4d77d1bd23040f9}
       \strng{authornamehash}{877f43f2d02349e3a4d77d1bd23040f9}
       \strng{authorfullhash}{877f43f2d02349e3a4d77d1bd23040f9}
+      \strng{authorfullhashraw}{877f43f2d02349e3a4d77d1bd23040f9}
       \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -1018,7 +1062,7 @@
       \field{pages}{217\bibrangedash 223}
       \range{pages}{7}
     \endentry
-    \entry{1986296}{article}{}
+    \entry{1986296}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b7eb0475d14765c2c6092972f2f6e275}{%
            family={Tsuru},
@@ -1033,10 +1077,12 @@
       }
       \strng{namehash}{dd7a3b4cb781d786168d8032b25cd6fd}
       \strng{fullhash}{dd7a3b4cb781d786168d8032b25cd6fd}
+      \strng{fullhashraw}{dd7a3b4cb781d786168d8032b25cd6fd}
       \strng{bibnamehash}{dd7a3b4cb781d786168d8032b25cd6fd}
       \strng{authorbibnamehash}{dd7a3b4cb781d786168d8032b25cd6fd}
       \strng{authornamehash}{dd7a3b4cb781d786168d8032b25cd6fd}
       \strng{authorfullhash}{dd7a3b4cb781d786168d8032b25cd6fd}
+      \strng{authorfullhashraw}{dd7a3b4cb781d786168d8032b25cd6fd}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -1052,7 +1098,7 @@
       \verb 10.3323/jcorr1974.35.5_296
       \endverb
     \endentry
-    \entry{popkirovOptimizationPerturbationSignal1993a}{article}{}
+    \entry{popkirovOptimizationPerturbationSignal1993a}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1067,10 +1113,12 @@
       }
       \strng{namehash}{882802ae8ee244d2cbe5746736947697}
       \strng{fullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{fullhashraw}{882802ae8ee244d2cbe5746736947697}
       \strng{bibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorbibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authornamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorfullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{authorfullhashraw}{882802ae8ee244d2cbe5746736947697}
       \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -1097,7 +1145,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\ICASJTJZ\\Popkirov and Schindler - 1993 - Optimization of the perturbation signal for electrochemical impedance spectroscopy in the time domai.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\2EY95BV7\\1.html
       \endverb
     \endentry
-    \entry{popkirovValidationExperimentalData1993a}{article}{}
+    \entry{popkirovValidationExperimentalData1993a}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1112,10 +1160,12 @@
       }
       \strng{namehash}{882802ae8ee244d2cbe5746736947697}
       \strng{fullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{fullhashraw}{882802ae8ee244d2cbe5746736947697}
       \strng{bibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorbibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authornamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorfullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{authorfullhashraw}{882802ae8ee244d2cbe5746736947697}
       \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -1143,7 +1193,7 @@
       \endverb
       \keyw{coated electrodes,FFT,impedance spectroscopy,linearity,stability}
     \endentry
-    \entry{popkirovEffectSampleNonlinearity1995a}{article}{}
+    \entry{popkirovEffectSampleNonlinearity1995a}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1158,10 +1208,12 @@
       }
       \strng{namehash}{882802ae8ee244d2cbe5746736947697}
       \strng{fullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{fullhashraw}{882802ae8ee244d2cbe5746736947697}
       \strng{bibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorbibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authornamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorfullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{authorfullhashraw}{882802ae8ee244d2cbe5746736947697}
       \field{extraname}{3}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -1189,7 +1241,7 @@
       \endverb
       \keyw{electrochemical impedance,FFT,FRA,nonlinearity}
     \endentry
-    \entry{popkirovInSituTimeResolved1993}{article}{}
+    \entry{popkirovInSituTimeResolved1993}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1204,10 +1256,12 @@
       }
       \strng{namehash}{882802ae8ee244d2cbe5746736947697}
       \strng{fullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{fullhashraw}{882802ae8ee244d2cbe5746736947697}
       \strng{bibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorbibnamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authornamehash}{882802ae8ee244d2cbe5746736947697}
       \strng{authorfullhash}{882802ae8ee244d2cbe5746736947697}
+      \strng{authorfullhashraw}{882802ae8ee244d2cbe5746736947697}
       \field{extraname}{4}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -1233,7 +1287,7 @@
       \endverb
       \keyw{Electrochemistry,Interfaces,Materials Properties,Polymers}
     \endentry
-    \entry{popkirovInsituImpedanceMeasurements1995}{article}{}
+    \entry{popkirovInsituImpedanceMeasurements1995}{article}{}{}
       \name{author}{2}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1248,10 +1302,12 @@
       }
       \strng{namehash}{5be33cd93836015833b9ab830da3f02e}
       \strng{fullhash}{5be33cd93836015833b9ab830da3f02e}
+      \strng{fullhashraw}{5be33cd93836015833b9ab830da3f02e}
       \strng{bibnamehash}{5be33cd93836015833b9ab830da3f02e}
       \strng{authorbibnamehash}{5be33cd93836015833b9ab830da3f02e}
       \strng{authornamehash}{5be33cd93836015833b9ab830da3f02e}
       \strng{authorfullhash}{5be33cd93836015833b9ab830da3f02e}
+      \strng{authorfullhashraw}{5be33cd93836015833b9ab830da3f02e}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -1279,7 +1335,7 @@
       \endverb
       \keyw{Capacitive currents,Conducting polymers,Electrochemical impedance spectroscopy,Mathematical model,Oxidation,Reduction}
     \endentry
-    \entry{popkirovElectrochemicalImpedanceSpectroscopy1995}{article}{}
+    \entry{popkirovElectrochemicalImpedanceSpectroscopy1995}{article}{}{}
       \name{author}{3}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1297,12 +1353,14 @@
            given={R.\bibnamedelimi N.},
            giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
       }
-      \strng{namehash}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{namehash}{3d0b0cb38ff956980326f6cb78e769f0}
       \strng{fullhash}{0ba8a588c58b9174b5eda9dc783d21b5}
-      \strng{bibnamehash}{0ba8a588c58b9174b5eda9dc783d21b5}
-      \strng{authorbibnamehash}{0ba8a588c58b9174b5eda9dc783d21b5}
-      \strng{authornamehash}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{fullhashraw}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{bibnamehash}{3d0b0cb38ff956980326f6cb78e769f0}
+      \strng{authorbibnamehash}{3d0b0cb38ff956980326f6cb78e769f0}
+      \strng{authornamehash}{3d0b0cb38ff956980326f6cb78e769f0}
       \strng{authorfullhash}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{authorfullhashraw}{0ba8a588c58b9174b5eda9dc783d21b5}
       \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
@@ -1330,7 +1388,7 @@
       \endverb
       \keyw{conducting polymers,electrochemical impedance,impedance spectroscopy,polybithiophene,twin working electrode}
     \endentry
-    \entry{popkirovInvestigationConductingPolymer1997}{article}{}
+    \entry{popkirovInvestigationConductingPolymer1997}{article}{}{}
       \name{author}{3}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1348,12 +1406,14 @@
            given={R.\bibnamedelimi N.},
            giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
       }
-      \strng{namehash}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{namehash}{3d0b0cb38ff956980326f6cb78e769f0}
       \strng{fullhash}{0ba8a588c58b9174b5eda9dc783d21b5}
-      \strng{bibnamehash}{0ba8a588c58b9174b5eda9dc783d21b5}
-      \strng{authorbibnamehash}{0ba8a588c58b9174b5eda9dc783d21b5}
-      \strng{authornamehash}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{fullhashraw}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{bibnamehash}{3d0b0cb38ff956980326f6cb78e769f0}
+      \strng{authorbibnamehash}{3d0b0cb38ff956980326f6cb78e769f0}
+      \strng{authornamehash}{3d0b0cb38ff956980326f6cb78e769f0}
       \strng{authorfullhash}{0ba8a588c58b9174b5eda9dc783d21b5}
+      \strng{authorfullhashraw}{0ba8a588c58b9174b5eda9dc783d21b5}
       \field{extraname}{2}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
@@ -1381,7 +1441,7 @@
       \endverb
       \keyw{Conducting polymers,Galvanostatic control,Impedance spectroscopy,Polybithiophene,Polymerization}
     \endentry
-    \entry{garcia-belmonteDeterminationElectronicConductivity2003a}{article}{}
+    \entry{garcia-belmonteDeterminationElectronicConductivity2003a}{article}{}{}
       \name{author}{3}{}{%
         {{hash=02656a12cfeeb53525a79d625e08acf9}{%
            family={{Garcia-Belmonte}},
@@ -1399,12 +1459,14 @@
            given={George\bibnamedelima S.},
            giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
       }
-      \strng{namehash}{c6cee795a277b9c788753196fe84cb49}
+      \strng{namehash}{3ed4df63063172431fd95737d3d4e7fc}
       \strng{fullhash}{c6cee795a277b9c788753196fe84cb49}
-      \strng{bibnamehash}{c6cee795a277b9c788753196fe84cb49}
-      \strng{authorbibnamehash}{c6cee795a277b9c788753196fe84cb49}
-      \strng{authornamehash}{c6cee795a277b9c788753196fe84cb49}
+      \strng{fullhashraw}{c6cee795a277b9c788753196fe84cb49}
+      \strng{bibnamehash}{3ed4df63063172431fd95737d3d4e7fc}
+      \strng{authorbibnamehash}{3ed4df63063172431fd95737d3d4e7fc}
+      \strng{authornamehash}{3ed4df63063172431fd95737d3d4e7fc}
       \strng{authorfullhash}{c6cee795a277b9c788753196fe84cb49}
+      \strng{authorfullhashraw}{c6cee795a277b9c788753196fe84cb49}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1430,7 +1492,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\E5LY5WCC\\Garcia-Belmonte et al. - 2003 - Determination of the electronic conductivity of polybithiophene films at different doping levels usi.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\ZH7NXRU5\\1.html
       \endverb
     \endentry
-    \entry{popkirovElectrodePotentialRedistribution1995}{article}{}
+    \entry{popkirovElectrodePotentialRedistribution1995}{article}{}{}
       \name{author}{3}{}{%
         {{hash=b9cce85fe7d9f68317613cb55687a0d1}{%
            family={Popkirov},
@@ -1448,12 +1510,15 @@
            given={R.\bibnamedelimi N.},
            giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
       }
-      \strng{namehash}{f35f729dba26dc89dbf7e4d6a57b07f0}
+      \strng{namehash}{3d0b0cb38ff956980326f6cb78e769f0}
       \strng{fullhash}{f35f729dba26dc89dbf7e4d6a57b07f0}
-      \strng{bibnamehash}{f35f729dba26dc89dbf7e4d6a57b07f0}
-      \strng{authorbibnamehash}{f35f729dba26dc89dbf7e4d6a57b07f0}
-      \strng{authornamehash}{f35f729dba26dc89dbf7e4d6a57b07f0}
+      \strng{fullhashraw}{f35f729dba26dc89dbf7e4d6a57b07f0}
+      \strng{bibnamehash}{3d0b0cb38ff956980326f6cb78e769f0}
+      \strng{authorbibnamehash}{3d0b0cb38ff956980326f6cb78e769f0}
+      \strng{authornamehash}{3d0b0cb38ff956980326f6cb78e769f0}
       \strng{authorfullhash}{f35f729dba26dc89dbf7e4d6a57b07f0}
+      \strng{authorfullhashraw}{f35f729dba26dc89dbf7e4d6a57b07f0}
+      \field{extraname}{3}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1480,7 +1545,7 @@
       \endverb
       \keyw{Electro-oxidation,Potential redistribution,Silver electrodes}
     \endentry
-    \entry{baltrunasTimeEvolutionActive1997}{article}{}
+    \entry{baltrunasTimeEvolutionActive1997}{article}{}{}
       \name{author}{3}{}{%
         {{hash=927fa2dde91db1408e54fe3e8196e365}{%
            family={Baltrunas},
@@ -1498,12 +1563,14 @@
            given={R.\bibnamedelimi N.},
            giveni={R\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
       }
-      \strng{namehash}{43a3334847c50561dafdcc0483f804cc}
+      \strng{namehash}{09808b961dc6667857e4d7bca4beb13b}
       \strng{fullhash}{43a3334847c50561dafdcc0483f804cc}
-      \strng{bibnamehash}{43a3334847c50561dafdcc0483f804cc}
-      \strng{authorbibnamehash}{43a3334847c50561dafdcc0483f804cc}
-      \strng{authornamehash}{43a3334847c50561dafdcc0483f804cc}
+      \strng{fullhashraw}{43a3334847c50561dafdcc0483f804cc}
+      \strng{bibnamehash}{09808b961dc6667857e4d7bca4beb13b}
+      \strng{authorbibnamehash}{09808b961dc6667857e4d7bca4beb13b}
+      \strng{authornamehash}{09808b961dc6667857e4d7bca4beb13b}
       \strng{authorfullhash}{43a3334847c50561dafdcc0483f804cc}
+      \strng{authorfullhashraw}{43a3334847c50561dafdcc0483f804cc}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1529,7 +1596,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\RTCZ6CEF\\Baltrunas et al. - 1997 - Time evolution of the active silver electrode area after immersion in cyanide containing solutions.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\YLVVHUSS\\S002207289700301X.html
       \endverb
     \endentry
-    \entry{walczykInvestigationRedoxCouple1995}{article}{}
+    \entry{walczykInvestigationRedoxCouple1995}{article}{}{}
       \name{author}{3}{}{%
         {{hash=b28e2f9d5c422a2d458f9a2dd48842ce}{%
            family={Walczyk},
@@ -1547,12 +1614,14 @@
            given={R.n.},
            giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{781ca958033a9b96f8ff05610dc3d9d3}
+      \strng{namehash}{6422bf220e9ecb5438d7d81e91b2389e}
       \strng{fullhash}{781ca958033a9b96f8ff05610dc3d9d3}
-      \strng{bibnamehash}{781ca958033a9b96f8ff05610dc3d9d3}
-      \strng{authorbibnamehash}{781ca958033a9b96f8ff05610dc3d9d3}
-      \strng{authornamehash}{781ca958033a9b96f8ff05610dc3d9d3}
+      \strng{fullhashraw}{781ca958033a9b96f8ff05610dc3d9d3}
+      \strng{bibnamehash}{6422bf220e9ecb5438d7d81e91b2389e}
+      \strng{authorbibnamehash}{6422bf220e9ecb5438d7d81e91b2389e}
+      \strng{authornamehash}{6422bf220e9ecb5438d7d81e91b2389e}
       \strng{authorfullhash}{781ca958033a9b96f8ff05610dc3d9d3}
+      \strng{authorfullhashraw}{781ca958033a9b96f8ff05610dc3d9d3}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1579,7 +1648,7 @@
       \endverb
       \keyw{Chemical Kinetics,Diffusion,Electrochemistry,Impedance Spectroscopy,Spectroelectrochemistry}
     \endentry
-    \entry{waltersWeakAdsorptionAnions2001a}{article}{}
+    \entry{waltersWeakAdsorptionAnions2001a}{article}{}{}
       \name{author}{6}{}{%
         {{hash=180f366a147a584474980b634f418952}{%
            family={Walters},
@@ -1614,10 +1683,12 @@
       }
       \strng{namehash}{7ee7a2f05c18b51847db26b5708e7afc}
       \strng{fullhash}{b12d3065096fd593e2ffc937c9008d26}
+      \strng{fullhashraw}{b12d3065096fd593e2ffc937c9008d26}
       \strng{bibnamehash}{7ee7a2f05c18b51847db26b5708e7afc}
       \strng{authorbibnamehash}{7ee7a2f05c18b51847db26b5708e7afc}
       \strng{authornamehash}{7ee7a2f05c18b51847db26b5708e7afc}
       \strng{authorfullhash}{b12d3065096fd593e2ffc937c9008d26}
+      \strng{authorfullhashraw}{b12d3065096fd593e2ffc937c9008d26}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1645,7 +1716,7 @@
       \endverb
       \keyw{Ac Impedance,Adsorption,Au electrode,Capacitance,Charge transfer resistance}
     \endentry
-    \entry{garlandAnalysisExperimentalConstraints2004}{article}{}
+    \entry{garlandAnalysisExperimentalConstraints2004}{article}{}{}
       \name{author}{3}{}{%
         {{hash=2c7069a6eff16ba4f3d40ec6416e12b0}{%
            family={Garland},
@@ -1663,12 +1734,15 @@
            given={D.},
            giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{namehash}{fc0f08b1219da87ce7654e6a306bc9e4}
       \strng{fullhash}{881cfcb1233e3970b3014f0852b4454e}
-      \strng{bibnamehash}{881cfcb1233e3970b3014f0852b4454e}
-      \strng{authorbibnamehash}{881cfcb1233e3970b3014f0852b4454e}
-      \strng{authornamehash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{fullhashraw}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{bibnamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
+      \strng{authorbibnamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
+      \strng{authornamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
       \strng{authorfullhash}{881cfcb1233e3970b3014f0852b4454e}
+      \strng{authorfullhashraw}{881cfcb1233e3970b3014f0852b4454e}
+      \field{extraname}{1}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1695,7 +1769,7 @@
       \endverb
       \keyw{Cyclic voltammetry,EIS,Fourier transform,Gold electrode,Time resolved}
     \endentry
-    \entry{garlandKineticAnalysisElectrosorption2002a}{article}{}
+    \entry{garlandKineticAnalysisElectrosorption2002a}{article}{}{}
       \name{author}{5}{}{%
         {{hash=2c7069a6eff16ba4f3d40ec6416e12b0}{%
            family={Garland},
@@ -1725,10 +1799,13 @@
       }
       \strng{namehash}{fc0f08b1219da87ce7654e6a306bc9e4}
       \strng{fullhash}{ce480dcf46b114de0ca8e2c591e9752f}
+      \strng{fullhashraw}{ce480dcf46b114de0ca8e2c591e9752f}
       \strng{bibnamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
       \strng{authorbibnamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
       \strng{authornamehash}{fc0f08b1219da87ce7654e6a306bc9e4}
       \strng{authorfullhash}{ce480dcf46b114de0ca8e2c591e9752f}
+      \strng{authorfullhashraw}{ce480dcf46b114de0ca8e2c591e9752f}
+      \field{extraname}{2}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1756,7 +1833,7 @@
       \endverb
       \keyw{Adsorption,Bismuth,Gold electrode,Impedance spectroscopy,Underpotential deposition}
     \endentry
-    \entry{assiongbonElectrooxidationMethanolGold2005}{article}{}
+    \entry{assiongbonElectrooxidationMethanolGold2005}{article}{}{}
       \name{author}{2}{}{%
         {{hash=63d0d9962c14d8efae1e966464beb39b}{%
            family={Assiongbon},
@@ -1771,10 +1848,12 @@
       }
       \strng{namehash}{6133b9ca23e102411dcd262f9c3ba224}
       \strng{fullhash}{6133b9ca23e102411dcd262f9c3ba224}
+      \strng{fullhashraw}{6133b9ca23e102411dcd262f9c3ba224}
       \strng{bibnamehash}{6133b9ca23e102411dcd262f9c3ba224}
       \strng{authorbibnamehash}{6133b9ca23e102411dcd262f9c3ba224}
       \strng{authornamehash}{6133b9ca23e102411dcd262f9c3ba224}
       \strng{authorfullhash}{6133b9ca23e102411dcd262f9c3ba224}
+      \strng{authorfullhashraw}{6133b9ca23e102411dcd262f9c3ba224}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1802,7 +1881,7 @@
       \endverb
       \keyw{Cyclic voltammetry,Direct methanol fuel cell,Electro-catalysis,Impedance spectroscopy,Surface plasmon resonance}
     \endentry
-    \entry{emeryTimeResolvedImpedance2005}{article}{}
+    \entry{emeryTimeResolvedImpedance2005}{article}{}{}
       \name{author}{3}{}{%
         {{hash=f6a1b0254420d20bfd5a2ed72e377181}{%
            family={Emery},
@@ -1820,12 +1899,14 @@
            given={Dipankar},
            giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{5c175ef83a51ab1f1c528d938043d14c}
+      \strng{namehash}{86c59f43666288958ca05bfd6538755a}
       \strng{fullhash}{5c175ef83a51ab1f1c528d938043d14c}
-      \strng{bibnamehash}{5c175ef83a51ab1f1c528d938043d14c}
-      \strng{authorbibnamehash}{5c175ef83a51ab1f1c528d938043d14c}
-      \strng{authornamehash}{5c175ef83a51ab1f1c528d938043d14c}
+      \strng{fullhashraw}{5c175ef83a51ab1f1c528d938043d14c}
+      \strng{bibnamehash}{86c59f43666288958ca05bfd6538755a}
+      \strng{authorbibnamehash}{86c59f43666288958ca05bfd6538755a}
+      \strng{authornamehash}{86c59f43666288958ca05bfd6538755a}
       \strng{authorfullhash}{5c175ef83a51ab1f1c528d938043d14c}
+      \strng{authorfullhashraw}{5c175ef83a51ab1f1c528d938043d14c}
       \field{sortinit}{3}
       \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
@@ -1853,7 +1934,7 @@
       \endverb
       \keyw{Cyclic voltammetry,Fourier transform,Impedance spectroscopy,Redox reaction,Time resolved}
     \endentry
-    \entry{shiElectrocatalysisHypophosphiteNickel2014}{article}{}
+    \entry{shiElectrocatalysisHypophosphiteNickel2014}{article}{}{}
       \name{author}{5}{}{%
         {{hash=05f7e0c820360d2ead95928afd606a67}{%
            family={Shi},
@@ -1886,10 +1967,12 @@
       }
       \strng{namehash}{fdd076180b2797740ded45f644f0d2e4}
       \strng{fullhash}{03f0018eadea4d378437d9cfe9dc3073}
+      \strng{fullhashraw}{03f0018eadea4d378437d9cfe9dc3073}
       \strng{bibnamehash}{fdd076180b2797740ded45f644f0d2e4}
       \strng{authorbibnamehash}{fdd076180b2797740ded45f644f0d2e4}
       \strng{authornamehash}{fdd076180b2797740ded45f644f0d2e4}
       \strng{authorfullhash}{03f0018eadea4d378437d9cfe9dc3073}
+      \strng{authorfullhashraw}{03f0018eadea4d378437d9cfe9dc3073}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -1916,7 +1999,7 @@
       \verb C:\Users\fscarp\Zotero\storage\PHIM6VYY\Shi et al. - 2014 - Electrocatalysis of Hypophosphite on Nickel Investigated Using Time Resolved Fourier Transform Elect.pdf
       \endverb
     \endentry
-    \entry{pettitElectrodepositionIndiumMolybdenum2002}{article}{}
+    \entry{pettitElectrodepositionIndiumMolybdenum2002}{article}{}{}
       \name{author}{6}{}{%
         {{hash=3d8ca44924e3947cdd9ba8452c560648}{%
            family={Pettit},
@@ -1951,10 +2034,12 @@
       }
       \strng{namehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{fullhash}{3c43448126941ce6a016c9a57fcecb07}
+      \strng{fullhashraw}{3c43448126941ce6a016c9a57fcecb07}
       \strng{bibnamehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{authorbibnamehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{authornamehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{authorfullhash}{3c43448126941ce6a016c9a57fcecb07}
+      \strng{authorfullhashraw}{3c43448126941ce6a016c9a57fcecb07}
       \field{extraname}{1}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
@@ -1982,7 +2067,7 @@
       \endverb
       \keyw{Electrodeposition,Impedance spectroscopy,Indium,Molybdenum,Nucleation,Second harmonic generation}
     \endentry
-    \entry{assiongbonChemicalRolesPeroxidebased2004}{article}{}
+    \entry{assiongbonChemicalRolesPeroxidebased2004}{article}{}{}
       \name{author}{5}{}{%
         {{hash=63d0d9962c14d8efae1e966464beb39b}{%
            family={Assiongbon},
@@ -2012,10 +2097,12 @@
       }
       \strng{namehash}{adac9201fb0a4d8759793ef2289b73ac}
       \strng{fullhash}{61a2fcbfcd4a1e02f3a632efbc1c0d96}
+      \strng{fullhashraw}{61a2fcbfcd4a1e02f3a632efbc1c0d96}
       \strng{bibnamehash}{adac9201fb0a4d8759793ef2289b73ac}
       \strng{authorbibnamehash}{adac9201fb0a4d8759793ef2289b73ac}
       \strng{authornamehash}{adac9201fb0a4d8759793ef2289b73ac}
       \strng{authorfullhash}{61a2fcbfcd4a1e02f3a632efbc1c0d96}
+      \strng{authorfullhashraw}{61a2fcbfcd4a1e02f3a632efbc1c0d96}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -2043,7 +2130,7 @@
       \endverb
       \keyw{Catalysis,Chemical-mechanical polishing,Hydrogen peroxide,Impedance spectroscopy,Tantalum}
     \endentry
-    \entry{gorantlaChemicalEffectsChemical2005}{article}{}
+    \entry{gorantlaChemicalEffectsChemical2005}{article}{}{}
       \name{author}{5}{}{%
         {{hash=a0a34a54687264174e8281d43624d549}{%
            family={Gorantla},
@@ -2073,10 +2160,12 @@
       }
       \strng{namehash}{98a194755586804543cfe5f552527ad4}
       \strng{fullhash}{cc6890869832a9183577fbac2b0fc084}
+      \strng{fullhashraw}{cc6890869832a9183577fbac2b0fc084}
       \strng{bibnamehash}{98a194755586804543cfe5f552527ad4}
       \strng{authorbibnamehash}{98a194755586804543cfe5f552527ad4}
       \strng{authornamehash}{98a194755586804543cfe5f552527ad4}
       \strng{authorfullhash}{cc6890869832a9183577fbac2b0fc084}
+      \strng{authorfullhashraw}{cc6890869832a9183577fbac2b0fc084}
       \field{extraname}{1}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
@@ -2105,7 +2194,7 @@
       \endverb
       \keyw{CMP,Electronic materials,Impedance spectroscopy,Surfaces,Tantalum,Tantalum nitride}
     \endentry
-    \entry{pettitRoleIodateIons2005}{article}{}
+    \entry{pettitRoleIodateIons2005}{article}{}{}
       \name{author}{2}{}{%
         {{hash=3d8ca44924e3947cdd9ba8452c560648}{%
            family={Pettit},
@@ -2120,10 +2209,12 @@
       }
       \strng{namehash}{cbcf33d843a23c50ddc15b75ec93d644}
       \strng{fullhash}{cbcf33d843a23c50ddc15b75ec93d644}
+      \strng{fullhashraw}{cbcf33d843a23c50ddc15b75ec93d644}
       \strng{bibnamehash}{cbcf33d843a23c50ddc15b75ec93d644}
       \strng{authorbibnamehash}{cbcf33d843a23c50ddc15b75ec93d644}
       \strng{authornamehash}{cbcf33d843a23c50ddc15b75ec93d644}
       \strng{authorfullhash}{cbcf33d843a23c50ddc15b75ec93d644}
+      \strng{authorfullhashraw}{cbcf33d843a23c50ddc15b75ec93d644}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -2150,7 +2241,7 @@
       \endverb
       \keyw{CMP,ECMP,EIS,Electronic materials,Iodate,Tantalum}
     \endentry
-    \entry{luRelativeRoles22004}{article}{}
+    \entry{luRelativeRoles22004}{article}{}{}
       \name{author}{5}{}{%
         {{hash=642f8aecd69ae5ee926bceabfd45a56d}{%
            family={Lu},
@@ -2183,10 +2274,12 @@
       }
       \strng{namehash}{22d28ee2158de88764a3e4d042289e1d}
       \strng{fullhash}{22f050b2d7d31a231a91f9b5f4570d99}
+      \strng{fullhashraw}{22f050b2d7d31a231a91f9b5f4570d99}
       \strng{bibnamehash}{22d28ee2158de88764a3e4d042289e1d}
       \strng{authorbibnamehash}{22d28ee2158de88764a3e4d042289e1d}
       \strng{authornamehash}{22d28ee2158de88764a3e4d042289e1d}
       \strng{authorfullhash}{22f050b2d7d31a231a91f9b5f4570d99}
+      \strng{authorfullhashraw}{22f050b2d7d31a231a91f9b5f4570d99}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
@@ -2213,7 +2306,7 @@
       \verb C:\Users\fscarp\Zotero\storage\R3D9HWGE\Lu et al. - 2004 - Relative Roles of H 2 O 2 and Glycine in CMP of Copper Studied with Impedance Spectroscopy.pdf
       \endverb
     \endentry
-    \entry{pettitTimeResolvedStudy2004}{article}{}
+    \entry{pettitTimeResolvedStudy2004}{article}{}{}
       \name{author}{4}{}{%
         {{hash=3d8ca44924e3947cdd9ba8452c560648}{%
            family={Pettit},
@@ -2238,10 +2331,12 @@
       }
       \strng{namehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{fullhash}{bf0e3c8a2ee1ee98527838c7e739c4dc}
+      \strng{fullhashraw}{bf0e3c8a2ee1ee98527838c7e739c4dc}
       \strng{bibnamehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{authorbibnamehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{authornamehash}{053f47cf11cc4b4b8378ae453d62ef72}
       \strng{authorfullhash}{bf0e3c8a2ee1ee98527838c7e739c4dc}
+      \strng{authorfullhashraw}{bf0e3c8a2ee1ee98527838c7e739c4dc}
       \field{extraname}{2}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
@@ -2270,7 +2365,7 @@
       \endverb
       \keyw{Cyclic voltammetry,EIS sensor,Fourier transform,Gold electrode,Time resolved measurement}
     \endentry
-    \entry{gorantlaCitricAcidComplexing2005}{article}{}
+    \entry{gorantlaCitricAcidComplexing2005}{article}{}{}
       \name{author}{4}{}{%
         {{hash=a0a34a54687264174e8281d43624d549}{%
            family={Gorantla},
@@ -2298,10 +2393,12 @@
       }
       \strng{namehash}{98a194755586804543cfe5f552527ad4}
       \strng{fullhash}{cdfae99061e0de1d002df3d88db9af8b}
+      \strng{fullhashraw}{cdfae99061e0de1d002df3d88db9af8b}
       \strng{bibnamehash}{98a194755586804543cfe5f552527ad4}
       \strng{authorbibnamehash}{98a194755586804543cfe5f552527ad4}
       \strng{authornamehash}{98a194755586804543cfe5f552527ad4}
       \strng{authorfullhash}{cdfae99061e0de1d002df3d88db9af8b}
+      \strng{authorfullhashraw}{cdfae99061e0de1d002df3d88db9af8b}
       \field{extraname}{2}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
@@ -2330,7 +2427,7 @@
       \verb C:\Users\fscarp\Zotero\storage\PJSBTDV8\Gorantla et al. - 2005 - Citric Acid as a Complexing Agent in CMP of Copper Investigation of Surface Reactions Using Impedan.pdf
       \endverb
     \endentry
-    \entry{darowickiInvestigationsPassiveLayer2003}{article}{}
+    \entry{darowickiInvestigationsPassiveLayer2003}{article}{}{}
       \name{author}{3}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -2348,12 +2445,14 @@
            given={A.},
            giveni={A\bibinitperiod}}}%
       }
-      \strng{namehash}{7b58199fe21afa33701e982e14e39073}
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{7b58199fe21afa33701e982e14e39073}
-      \strng{bibnamehash}{7b58199fe21afa33701e982e14e39073}
-      \strng{authorbibnamehash}{7b58199fe21afa33701e982e14e39073}
-      \strng{authornamehash}{7b58199fe21afa33701e982e14e39073}
+      \strng{fullhashraw}{7b58199fe21afa33701e982e14e39073}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{7b58199fe21afa33701e982e14e39073}
+      \strng{authorfullhashraw}{7b58199fe21afa33701e982e14e39073}
       \field{extraname}{1}
       \field{sortinit}{4}
       \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
@@ -2381,7 +2480,7 @@
       \endverb
       \keyw{304L stainless steel,EIS,Stress corrosion cracking,Tensile stresses}
     \endentry
-    \entry{darowickiInstantaneousElectrochemicalImpedance2004a}{article}{}
+    \entry{darowickiInstantaneousElectrochemicalImpedance2004a}{article}{}{}
       \name{author}{2}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -2396,10 +2495,12 @@
       }
       \strng{namehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{fullhash}{970033594cd67aa9445027d30ff5eea1}
+      \strng{fullhashraw}{970033594cd67aa9445027d30ff5eea1}
       \strng{bibnamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authorbibnamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authornamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authorfullhash}{970033594cd67aa9445027d30ff5eea1}
+      \strng{authorfullhashraw}{970033594cd67aa9445027d30ff5eea1}
       \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
@@ -2427,7 +2528,7 @@
       \endverb
       \keyw{Dropping mercury electrode,EIS,Electrode reactions,Instantaneous impedance spectra,Short-time Fourier transformation}
     \endentry
-    \entry{darowickiDynamicElectrochemicalImpedance2003a}{article}{}
+    \entry{darowickiDynamicElectrochemicalImpedance2003a}{article}{}{}
       \name{author}{2}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -2442,10 +2543,12 @@
       }
       \strng{namehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{fullhash}{970033594cd67aa9445027d30ff5eea1}
+      \strng{fullhashraw}{970033594cd67aa9445027d30ff5eea1}
       \strng{bibnamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authorbibnamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authornamehash}{970033594cd67aa9445027d30ff5eea1}
       \strng{authorfullhash}{970033594cd67aa9445027d30ff5eea1}
+      \strng{authorfullhashraw}{970033594cd67aa9445027d30ff5eea1}
       \field{extraname}{2}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
@@ -2473,7 +2576,7 @@
       \endverb
       \keyw{Cadmium reduction,Chirp signal,EIS,HDME,Non-stationary,STFT}
     \endentry
-    \entry{darowickiContinuousFrequencyMethodMeasurement2003}{article}{}
+    \entry{darowickiContinuousFrequencyMethodMeasurement2003}{article}{}{}
       \name{author}{3}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -2494,12 +2597,15 @@
       \list{publisher}{1}{%
         {Taylor \& Francis}%
       }
-      \strng{namehash}{de046acb86414b78c6093e0066dd8446}
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{de046acb86414b78c6093e0066dd8446}
-      \strng{bibnamehash}{de046acb86414b78c6093e0066dd8446}
-      \strng{authorbibnamehash}{de046acb86414b78c6093e0066dd8446}
-      \strng{authornamehash}{de046acb86414b78c6093e0066dd8446}
+      \strng{fullhashraw}{de046acb86414b78c6093e0066dd8446}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{de046acb86414b78c6093e0066dd8446}
+      \strng{authorfullhashraw}{de046acb86414b78c6093e0066dd8446}
+      \field{extraname}{2}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -2523,7 +2629,7 @@
       \endverb
       \keyw{Chirp signal,Electrochemical impedance spectroscopy,Gabor transformation}
     \endentry
-    \entry{darowickiDeterminationElectrodeImpedance2004a}{article}{}
+    \entry{darowickiDeterminationElectrodeImpedance2004a}{article}{}{}
       \name{author}{2}{}{%
         {{hash=307cfff75002e4d85f8602253eebf3ec}{%
            family={Darowicki},
@@ -2538,10 +2644,12 @@
       }
       \strng{namehash}{9c0d696054399d80f368df8f4c834823}
       \strng{fullhash}{9c0d696054399d80f368df8f4c834823}
+      \strng{fullhashraw}{9c0d696054399d80f368df8f4c834823}
       \strng{bibnamehash}{9c0d696054399d80f368df8f4c834823}
       \strng{authorbibnamehash}{9c0d696054399d80f368df8f4c834823}
       \strng{authornamehash}{9c0d696054399d80f368df8f4c834823}
       \strng{authorfullhash}{9c0d696054399d80f368df8f4c834823}
+      \strng{authorfullhashraw}{9c0d696054399d80f368df8f4c834823}
       \field{extraname}{3}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
@@ -2569,7 +2677,7 @@
       \endverb
       \keyw{Chirp signal,Electrochemical impedance spectroscopy,Short time Fourier transformation}
     \endentry
-    \entry{darowickiEvaluationPittingCorrosion2004a}{article}{}
+    \entry{darowickiEvaluationPittingCorrosion2004a}{article}{}{}
       \name{author}{3}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -2587,12 +2695,15 @@
            given={P},
            giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{2b329b3c442d729a645a31a2043ad256}
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{2b329b3c442d729a645a31a2043ad256}
-      \strng{bibnamehash}{2b329b3c442d729a645a31a2043ad256}
-      \strng{authorbibnamehash}{2b329b3c442d729a645a31a2043ad256}
-      \strng{authornamehash}{2b329b3c442d729a645a31a2043ad256}
+      \strng{fullhashraw}{2b329b3c442d729a645a31a2043ad256}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{2b329b3c442d729a645a31a2043ad256}
+      \strng{authorfullhashraw}{2b329b3c442d729a645a31a2043ad256}
+      \field{extraname}{3}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -2620,7 +2731,7 @@
       \endverb
       \keyw{Electrochemical impedance spectroscopy,Pitting corrosion}
     \endentry
-    \entry{darowickiTimeDependencePit2004}{article}{}
+    \entry{darowickiTimeDependencePit2004}{article}{}{}
       \name{author}{3}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -2638,12 +2749,15 @@
            given={P},
            giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{84ebd0d588c6e41be9d18126f4f40ed3}
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{84ebd0d588c6e41be9d18126f4f40ed3}
-      \strng{bibnamehash}{84ebd0d588c6e41be9d18126f4f40ed3}
-      \strng{authorbibnamehash}{84ebd0d588c6e41be9d18126f4f40ed3}
-      \strng{authornamehash}{84ebd0d588c6e41be9d18126f4f40ed3}
+      \strng{fullhashraw}{84ebd0d588c6e41be9d18126f4f40ed3}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{84ebd0d588c6e41be9d18126f4f40ed3}
+      \strng{authorfullhashraw}{84ebd0d588c6e41be9d18126f4f40ed3}
+      \field{extraname}{4}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -2670,7 +2784,7 @@
       \endverb
       \keyw{Dynamic impedance spectroscopy,Pitting corrosion,Stainless steel}
     \endentry
-    \entry{krakowiakImpedanceInvestigationPassive2005}{article}{}
+    \entry{krakowiakImpedanceInvestigationPassive2005}{article}{}{}
       \name{author}{3}{}{%
         {{hash=cc95921de425300f53880cf6e077f29f}{%
            family={Krakowiak},
@@ -2688,12 +2802,15 @@
            given={P.},
            giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{6bdf551754c9e5957b4d18c9518ce770}
+      \strng{namehash}{1237796744b6a8b789e0e325c0921e43}
       \strng{fullhash}{6bdf551754c9e5957b4d18c9518ce770}
-      \strng{bibnamehash}{6bdf551754c9e5957b4d18c9518ce770}
-      \strng{authorbibnamehash}{6bdf551754c9e5957b4d18c9518ce770}
-      \strng{authornamehash}{6bdf551754c9e5957b4d18c9518ce770}
+      \strng{fullhashraw}{6bdf551754c9e5957b4d18c9518ce770}
+      \strng{bibnamehash}{1237796744b6a8b789e0e325c0921e43}
+      \strng{authorbibnamehash}{1237796744b6a8b789e0e325c0921e43}
+      \strng{authornamehash}{1237796744b6a8b789e0e325c0921e43}
       \strng{authorfullhash}{6bdf551754c9e5957b4d18c9518ce770}
+      \strng{authorfullhashraw}{6bdf551754c9e5957b4d18c9518ce770}
+      \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -2720,7 +2837,7 @@
       \endverb
       \keyw{Dynamic EIS,Pitting corrosion,Stainless steels}
     \endentry
-    \entry{krakowiakImpedanceMetastablePitting2005}{article}{}
+    \entry{krakowiakImpedanceMetastablePitting2005}{article}{}{}
       \name{author}{3}{}{%
         {{hash=cc95921de425300f53880cf6e077f29f}{%
            family={Krakowiak},
@@ -2738,12 +2855,15 @@
            given={P.},
            giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{84d9e0a6dd6a3bcfa249f85d37022e4d}
+      \strng{namehash}{1237796744b6a8b789e0e325c0921e43}
       \strng{fullhash}{84d9e0a6dd6a3bcfa249f85d37022e4d}
-      \strng{bibnamehash}{84d9e0a6dd6a3bcfa249f85d37022e4d}
-      \strng{authorbibnamehash}{84d9e0a6dd6a3bcfa249f85d37022e4d}
-      \strng{authornamehash}{84d9e0a6dd6a3bcfa249f85d37022e4d}
+      \strng{fullhashraw}{84d9e0a6dd6a3bcfa249f85d37022e4d}
+      \strng{bibnamehash}{1237796744b6a8b789e0e325c0921e43}
+      \strng{authorbibnamehash}{1237796744b6a8b789e0e325c0921e43}
+      \strng{authornamehash}{1237796744b6a8b789e0e325c0921e43}
       \strng{authorfullhash}{84d9e0a6dd6a3bcfa249f85d37022e4d}
+      \strng{authorfullhashraw}{84d9e0a6dd6a3bcfa249f85d37022e4d}
+      \field{extraname}{2}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
@@ -2770,7 +2890,7 @@
       \endverb
       \keyw{Dynamic electrochemical impedance spectroscopy,Metastable pitting corrosion,Pitting corrosion,Stainless steels}
     \endentry
-    \entry{orlikowskiInstantaneousImpedanceMonitoring2015}{article}{}
+    \entry{orlikowskiInstantaneousImpedanceMonitoring2015}{article}{}{}
       \name{author}{5}{}{%
         {{hash=89a390eaee003e8412c097b734578b21}{%
            family={Orlikowski},
@@ -2800,10 +2920,12 @@
       }
       \strng{namehash}{0a76e2a0f7dfae50f2c79100514090a6}
       \strng{fullhash}{e5546e9f1dee6d87d49cff940e31a28f}
+      \strng{fullhashraw}{e5546e9f1dee6d87d49cff940e31a28f}
       \strng{bibnamehash}{0a76e2a0f7dfae50f2c79100514090a6}
       \strng{authorbibnamehash}{0a76e2a0f7dfae50f2c79100514090a6}
       \strng{authornamehash}{0a76e2a0f7dfae50f2c79100514090a6}
       \strng{authorfullhash}{e5546e9f1dee6d87d49cff940e31a28f}
+      \strng{authorfullhashraw}{e5546e9f1dee6d87d49cff940e31a28f}
       \field{extraname}{1}
       \field{sortinit}{5}
       \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
@@ -2827,7 +2949,7 @@
       \verb 10.5006/1546
       \endverb
     \endentry
-    \entry{rylInstantaneousImpedanceMonitoring2016}{article}{}
+    \entry{rylInstantaneousImpedanceMonitoring2016}{article}{}{}
       \name{author}{4}{}{%
         {{hash=0effbe6d09df3e908668fc6a16b8f43c}{%
            family={Ryl},
@@ -2852,10 +2974,12 @@
       }
       \strng{namehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{fullhash}{bb41ff731dc3e69379f9045bae94d0fa}
+      \strng{fullhashraw}{bb41ff731dc3e69379f9045bae94d0fa}
       \strng{bibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorbibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authornamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorfullhash}{bb41ff731dc3e69379f9045bae94d0fa}
+      \strng{authorfullhashraw}{bb41ff731dc3e69379f9045bae94d0fa}
       \field{extraname}{1}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
@@ -2882,7 +3006,7 @@
       \endverb
       \keyw{cavitation erosion-corrosion,corrosion monitoring,Dynamic Electrochemical Impedance Spectroscopy}
     \endentry
-    \entry{orlikowskiDeterminationPittingCorrosion2017}{article}{}
+    \entry{orlikowskiDeterminationPittingCorrosion2017}{article}{}{}
       \name{author}{4}{}{%
         {{hash=547c2b5a5540ec75bfef9348b7129303}{%
            family={Orlikowski},
@@ -2907,10 +3031,12 @@
       }
       \strng{namehash}{086f35c10f4ea73b0118d13357a697ef}
       \strng{fullhash}{cb5839dde54f4f42a1f5be7136f9904a}
+      \strng{fullhashraw}{cb5839dde54f4f42a1f5be7136f9904a}
       \strng{bibnamehash}{086f35c10f4ea73b0118d13357a697ef}
       \strng{authorbibnamehash}{086f35c10f4ea73b0118d13357a697ef}
       \strng{authornamehash}{086f35c10f4ea73b0118d13357a697ef}
       \strng{authorfullhash}{cb5839dde54f4f42a1f5be7136f9904a}
+      \strng{authorfullhashraw}{cb5839dde54f4f42a1f5be7136f9904a}
       \field{extraname}{2}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
@@ -2937,7 +3063,7 @@
       \endverb
       \keyw{corrosion monitoring,EIS,GDEIS,pitting corrosion}
     \endentry
-    \entry{naroznyApplicationElectrochemicalImpedance2018}{article}{}
+    \entry{naroznyApplicationElectrochemicalImpedance2018}{article}{}{}
       \name{author}{3}{}{%
         {{hash=c1e1afacbb1bb7ac45c40457c81a61b9}{%
            family={Narozny},
@@ -2955,12 +3081,14 @@
            given={K.},
            giveni={K\bibinitperiod}}}%
       }
-      \strng{namehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{namehash}{6bce1ed776fa825cd086df803c0d6916}
       \strng{fullhash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
-      \strng{bibnamehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
-      \strng{authorbibnamehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
-      \strng{authornamehash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{fullhashraw}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{bibnamehash}{6bce1ed776fa825cd086df803c0d6916}
+      \strng{authorbibnamehash}{6bce1ed776fa825cd086df803c0d6916}
+      \strng{authornamehash}{6bce1ed776fa825cd086df803c0d6916}
       \strng{authorfullhash}{201bbb6f6ebb68b8ca3551ecc965b1c8}
+      \strng{authorfullhashraw}{201bbb6f6ebb68b8ca3551ecc965b1c8}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -2986,7 +3114,7 @@
       \endverb
       \keyw{Cathodicprotection,Electrochemical Impedance Spectroscopy,Organic coatings,Seawater,Steel}
     \endentry
-    \entry{darowickiNovelApplicationDynamic2020a}{article}{}
+    \entry{darowickiNovelApplicationDynamic2020a}{article}{}{}
       \name{author}{3}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -3004,12 +3132,15 @@
            given={M.},
            giveni={M\bibinitperiod}}}%
       }
-      \strng{namehash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{810361b9bcc93a4a0830280e5efc24d6}
-      \strng{bibnamehash}{810361b9bcc93a4a0830280e5efc24d6}
-      \strng{authorbibnamehash}{810361b9bcc93a4a0830280e5efc24d6}
-      \strng{authornamehash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{fullhashraw}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{810361b9bcc93a4a0830280e5efc24d6}
+      \strng{authorfullhashraw}{810361b9bcc93a4a0830280e5efc24d6}
+      \field{extraname}{5}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -3035,7 +3166,7 @@
       \endverb
       \keyw{Cataphoresis,Cataphoretic coating,Chemical impedance spectroscopy,Dynamic electro,Electrical properties,Polarization}
     \endentry
-    \entry{rylInstantaneousImpedanceAnalysis2017}{article}{}
+    \entry{rylInstantaneousImpedanceAnalysis2017}{article}{}{}
       \name{author}{6}{}{%
         {{hash=0effbe6d09df3e908668fc6a16b8f43c}{%
            family={Ryl},
@@ -3070,10 +3201,12 @@
       }
       \strng{namehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{fullhash}{e3cdb864fac0480fe975d66cc60e6e93}
+      \strng{fullhashraw}{e3cdb864fac0480fe975d66cc60e6e93}
       \strng{bibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorbibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authornamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorfullhash}{e3cdb864fac0480fe975d66cc60e6e93}
+      \strng{authorfullhashraw}{e3cdb864fac0480fe975d66cc60e6e93}
       \field{extraname}{2}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
@@ -3102,7 +3235,7 @@
       \endverb
       \keyw{carbon steel,corrosion,impedance monitoring,volumetric analysis}
     \endentry
-    \entry{arutunowElectricalMechanicalCharacterization2015}{article}{}
+    \entry{arutunowElectricalMechanicalCharacterization2015}{article}{}{}
       \name{author}{3}{}{%
         {{hash=e375d91ec54c73ad9eb5f8317b828ca1}{%
            family={Arutunow},
@@ -3120,12 +3253,14 @@
            given={Kazimierz},
            giveni={K\bibinitperiod}}}%
       }
-      \strng{namehash}{9221653e2c0de363648692fb24379361}
+      \strng{namehash}{1241fe2c3be242e44ec34baf88dd838e}
       \strng{fullhash}{9221653e2c0de363648692fb24379361}
-      \strng{bibnamehash}{9221653e2c0de363648692fb24379361}
-      \strng{authorbibnamehash}{9221653e2c0de363648692fb24379361}
-      \strng{authornamehash}{9221653e2c0de363648692fb24379361}
+      \strng{fullhashraw}{9221653e2c0de363648692fb24379361}
+      \strng{bibnamehash}{1241fe2c3be242e44ec34baf88dd838e}
+      \strng{authorbibnamehash}{1241fe2c3be242e44ec34baf88dd838e}
+      \strng{authornamehash}{1241fe2c3be242e44ec34baf88dd838e}
       \strng{authorfullhash}{9221653e2c0de363648692fb24379361}
+      \strng{authorfullhashraw}{9221653e2c0de363648692fb24379361}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -3151,7 +3286,7 @@
       \endverb
       \keyw{AFM,DIS,Impedance,Nanocontact,Nanoimpedance,SPM}
     \endentry
-    \entry{zielinskiApplicationMultisineNanoscale2015}{article}{}
+    \entry{zielinskiApplicationMultisineNanoscale2015}{article}{}{}
       \name{author}{2}{}{%
         {{hash=3ef0774cfb24c980a146d13fdc7cb077}{%
            family={Zieliński},
@@ -3166,10 +3301,12 @@
       }
       \strng{namehash}{de9ba2aa6f0c932fdda9bed82bb65900}
       \strng{fullhash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \strng{fullhashraw}{de9ba2aa6f0c932fdda9bed82bb65900}
       \strng{bibnamehash}{de9ba2aa6f0c932fdda9bed82bb65900}
       \strng{authorbibnamehash}{de9ba2aa6f0c932fdda9bed82bb65900}
       \strng{authornamehash}{de9ba2aa6f0c932fdda9bed82bb65900}
       \strng{authorfullhash}{de9ba2aa6f0c932fdda9bed82bb65900}
+      \strng{authorfullhashraw}{de9ba2aa6f0c932fdda9bed82bb65900}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -3196,7 +3333,7 @@
       \endverb
       \keyw{atomic force microscopy,impedance spectroscopy,nanoscale impedance microscopy}
     \endentry
-    \entry{wysockaInvestigationElectrochemicalBehaviour2016}{article}{}
+    \entry{wysockaInvestigationElectrochemicalBehaviour2016}{article}{}{}
       \name{author}{4}{}{%
         {{hash=d03b7fa360fc9d871284167b8f7a3982}{%
            family={Wysocka},
@@ -3221,10 +3358,12 @@
       }
       \strng{namehash}{303f3ed2ff970f938e68788387b9fa37}
       \strng{fullhash}{8f7aafef675af4903b65823ee4366435}
+      \strng{fullhashraw}{8f7aafef675af4903b65823ee4366435}
       \strng{bibnamehash}{303f3ed2ff970f938e68788387b9fa37}
       \strng{authorbibnamehash}{303f3ed2ff970f938e68788387b9fa37}
       \strng{authornamehash}{303f3ed2ff970f938e68788387b9fa37}
       \strng{authorfullhash}{8f7aafef675af4903b65823ee4366435}
+      \strng{authorfullhashraw}{8f7aafef675af4903b65823ee4366435}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -3250,7 +3389,7 @@
       \endverb
       \keyw{Alkaline corrosion,Aluminium alloy,Anodic dissolution,Corrosion monitoring,DEIS}
     \endentry
-    \entry{gawelImpedanceMonitoringCorrosion2017}{article}{}
+    \entry{gawelImpedanceMonitoringCorrosion2017}{article}{}{}
       \name{author}{5}{}{%
         {{hash=d558f8bb02fdde00fcf87eba535a292e}{%
            family={Gawel},
@@ -3280,10 +3419,12 @@
       }
       \strng{namehash}{60825580d06792f34400e9f94d97c7d6}
       \strng{fullhash}{b3ce23b7f5f2a03790a7b64658eeb101}
+      \strng{fullhashraw}{b3ce23b7f5f2a03790a7b64658eeb101}
       \strng{bibnamehash}{60825580d06792f34400e9f94d97c7d6}
       \strng{authorbibnamehash}{60825580d06792f34400e9f94d97c7d6}
       \strng{authornamehash}{60825580d06792f34400e9f94d97c7d6}
       \strng{authorfullhash}{b3ce23b7f5f2a03790a7b64658eeb101}
+      \strng{authorfullhashraw}{b3ce23b7f5f2a03790a7b64658eeb101}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -3309,7 +3450,7 @@
       \endverb
       \keyw{Biodegradable materials,Corrosion,Electrochemical impedance spectroscopy,Galvanostatic mode,Magnesium,Plasma electrolytic oxidation}
     \endentry
-    \entry{darowickiDetectionStressCorrosion2004}{article}{}
+    \entry{darowickiDetectionStressCorrosion2004}{article}{}{}
       \name{author}{3}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -3330,13 +3471,15 @@
       \list{publisher}{1}{%
         {SAGE Publications}%
       }
-      \strng{namehash}{7b58199fe21afa33701e982e14e39073}
+      \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{7b58199fe21afa33701e982e14e39073}
-      \strng{bibnamehash}{7b58199fe21afa33701e982e14e39073}
-      \strng{authorbibnamehash}{7b58199fe21afa33701e982e14e39073}
-      \strng{authornamehash}{7b58199fe21afa33701e982e14e39073}
+      \strng{fullhashraw}{7b58199fe21afa33701e982e14e39073}
+      \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
+      \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{7b58199fe21afa33701e982e14e39073}
-      \field{extraname}{2}
+      \strng{authorfullhashraw}{7b58199fe21afa33701e982e14e39073}
+      \field{extraname}{6}
       \field{sortinit}{6}
       \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
@@ -3363,7 +3506,7 @@
       \verb C:\Users\fscarp\Zotero\storage\T2BHGE5G\Darowicki et al. - 2004 - Detection of stress corrosion cracking dynamics by dynamic electrochemical impedance spectroscopy.pdf
       \endverb
     \endentry
-    \entry{darowickiImpedanceCharacterizationProcess2004}{article}{}
+    \entry{darowickiImpedanceCharacterizationProcess2004}{article}{}{}
       \name{author}{2}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -3378,10 +3521,12 @@
       }
       \strng{namehash}{c13a6defa1d1e2d5479c03e64b59f17f}
       \strng{fullhash}{c13a6defa1d1e2d5479c03e64b59f17f}
+      \strng{fullhashraw}{c13a6defa1d1e2d5479c03e64b59f17f}
       \strng{bibnamehash}{c13a6defa1d1e2d5479c03e64b59f17f}
       \strng{authorbibnamehash}{c13a6defa1d1e2d5479c03e64b59f17f}
       \strng{authornamehash}{c13a6defa1d1e2d5479c03e64b59f17f}
       \strng{authorfullhash}{c13a6defa1d1e2d5479c03e64b59f17f}
+      \strng{authorfullhashraw}{c13a6defa1d1e2d5479c03e64b59f17f}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3408,7 +3553,7 @@
       \endverb
       \keyw{Conducting polymer,Dynamic electrochemical impedance spectroscopy,Electropolymerization,Polyaniline,Short time Fourier transform}
     \endentry
-    \entry{darowickiDynamicElectrochemicalImpedance2004}{article}{}
+    \entry{darowickiDynamicElectrochemicalImpedance2004}{article}{}{}
       \name{author}{3}{}{%
         {{hash=307cfff75002e4d85f8602253eebf3ec}{%
            family={Darowicki},
@@ -3426,13 +3571,15 @@
            given={Anna},
            giveni={A\bibinitperiod}}}%
       }
-      \strng{namehash}{5684a4b605cc36db4594a7f79afeca04}
+      \strng{namehash}{5e1694693b80008f11398bf69cc6ba3e}
       \strng{fullhash}{5684a4b605cc36db4594a7f79afeca04}
-      \strng{bibnamehash}{5684a4b605cc36db4594a7f79afeca04}
-      \strng{authorbibnamehash}{5684a4b605cc36db4594a7f79afeca04}
-      \strng{authornamehash}{5684a4b605cc36db4594a7f79afeca04}
+      \strng{fullhashraw}{5684a4b605cc36db4594a7f79afeca04}
+      \strng{bibnamehash}{5e1694693b80008f11398bf69cc6ba3e}
+      \strng{authorbibnamehash}{5e1694693b80008f11398bf69cc6ba3e}
+      \strng{authornamehash}{5e1694693b80008f11398bf69cc6ba3e}
       \strng{authorfullhash}{5684a4b605cc36db4594a7f79afeca04}
-      \field{extraname}{3}
+      \strng{authorfullhashraw}{5684a4b605cc36db4594a7f79afeca04}
+      \field{extraname}{7}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3460,7 +3607,7 @@
       \endverb
       \keyw{Austenitic stainless steels,Dynamic electrochemical impedance spectroscopy,Passive layer cracking,Stress corrosion cracking,Tensile stresses}
     \endentry
-    \entry{burczykLocalElectrochemicalImpedance2018}{article}{}
+    \entry{burczykLocalElectrochemicalImpedance2018}{article}{}{}
       \name{author}{2}{}{%
         {{hash=ea611f7e8e47c1d43b354a4506ba0617}{%
            family={Burczyk},
@@ -3475,10 +3622,12 @@
       }
       \strng{namehash}{c4ab972840bfb664cae1810d4d2170ca}
       \strng{fullhash}{c4ab972840bfb664cae1810d4d2170ca}
+      \strng{fullhashraw}{c4ab972840bfb664cae1810d4d2170ca}
       \strng{bibnamehash}{c4ab972840bfb664cae1810d4d2170ca}
       \strng{authorbibnamehash}{c4ab972840bfb664cae1810d4d2170ca}
       \strng{authornamehash}{c4ab972840bfb664cae1810d4d2170ca}
       \strng{authorfullhash}{c4ab972840bfb664cae1810d4d2170ca}
+      \strng{authorfullhashraw}{c4ab972840bfb664cae1810d4d2170ca}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3504,7 +3653,7 @@
       \endverb
       \keyw{Dynamic electrochemical impedance spectroscopy,Galvanic corrosion,Local electrochemical impedance mapping,Local electrochemical impedance spectroscopy}
     \endentry
-    \entry{zielinskiMultifrequencyNanoscaleImpedance2019}{article}{}
+    \entry{zielinskiMultifrequencyNanoscaleImpedance2019}{article}{}{}
       \name{author}{6}{}{%
         {{hash=2a7475714ea71fe86847011edcc91c41}{%
            family={Zielinski},
@@ -3539,10 +3688,12 @@
       }
       \strng{namehash}{6dc661a7d4f758f371b7934fa54fb457}
       \strng{fullhash}{cb75bf0f96bcb304f22b975c6dc9db66}
+      \strng{fullhashraw}{cb75bf0f96bcb304f22b975c6dc9db66}
       \strng{bibnamehash}{6dc661a7d4f758f371b7934fa54fb457}
       \strng{authorbibnamehash}{6dc661a7d4f758f371b7934fa54fb457}
       \strng{authornamehash}{6dc661a7d4f758f371b7934fa54fb457}
       \strng{authorfullhash}{cb75bf0f96bcb304f22b975c6dc9db66}
+      \strng{authorfullhashraw}{cb75bf0f96bcb304f22b975c6dc9db66}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3569,7 +3720,7 @@
       \endverb
       \keyw{Boron-doped diamond,Electrode termination,Heterogeneity,Multifrequency voltage perturbation,Nanoscale impedance microscopy}
     \endentry
-    \entry{rylStudySurfaceTermination2016}{article}{}
+    \entry{rylStudySurfaceTermination2016}{article}{}{}
       \name{author}{5}{}{%
         {{hash=0effbe6d09df3e908668fc6a16b8f43c}{%
            family={Ryl},
@@ -3599,10 +3750,12 @@
       }
       \strng{namehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{fullhash}{19f98fd18867dbe7f5bb7d5fdb6c68c0}
+      \strng{fullhashraw}{19f98fd18867dbe7f5bb7d5fdb6c68c0}
       \strng{bibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorbibnamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authornamehash}{f5c15696188a6ecdcda97cd9b8619e82}
       \strng{authorfullhash}{19f98fd18867dbe7f5bb7d5fdb6c68c0}
+      \strng{authorfullhashraw}{19f98fd18867dbe7f5bb7d5fdb6c68c0}
       \field{extraname}{3}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
@@ -3628,7 +3781,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\Q237YDS6\\Ryl et al. - 2016 - Study on surface termination of boron-doped diamond electrodes under anodic polarization in H2SO4 by.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\9P8VEDA2\\S0008622315303742.html
       \endverb
     \endentry
-    \entry{parasinskaApplicationQuartzCrystal2024}{article}{}
+    \entry{parasinskaApplicationQuartzCrystal2024}{article}{}{}
       \name{author}{3}{}{%
         {{hash=9ddc74fcaee818323484a436744c6065}{%
            family={Parasinska},
@@ -3646,12 +3799,14 @@
            given={Pawel},
            giveni={P\bibinitperiod}}}%
       }
-      \strng{namehash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{namehash}{9d01c58c12a112ada05dd5bec3096c0e}
       \strng{fullhash}{0b8a9a95a272a2336a7c9de1c104dabb}
-      \strng{bibnamehash}{0b8a9a95a272a2336a7c9de1c104dabb}
-      \strng{authorbibnamehash}{0b8a9a95a272a2336a7c9de1c104dabb}
-      \strng{authornamehash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{fullhashraw}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{bibnamehash}{9d01c58c12a112ada05dd5bec3096c0e}
+      \strng{authorbibnamehash}{9d01c58c12a112ada05dd5bec3096c0e}
+      \strng{authornamehash}{9d01c58c12a112ada05dd5bec3096c0e}
       \strng{authorfullhash}{0b8a9a95a272a2336a7c9de1c104dabb}
+      \strng{authorfullhashraw}{0b8a9a95a272a2336a7c9de1c104dabb}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3679,7 +3834,7 @@
       \endverb
       \keyw{Benzotriazole,Copper,Corrosion inhibition,DEIS,EQCM,Sodium Folate}
     \endentry
-    \entry{slepskiImpedanceMonitoringFuel2015}{article}{}
+    \entry{slepskiImpedanceMonitoringFuel2015}{article}{}{}
       \name{author}{4}{}{%
         {{hash=8c9a19b8566c851f3167f08c721d8941}{%
            family={Slepski},
@@ -3704,10 +3859,12 @@
       }
       \strng{namehash}{2c2139f5beed424900441be68d901ffc}
       \strng{fullhash}{2b3ef528434e7ed15086bde3eb7396d0}
+      \strng{fullhashraw}{2b3ef528434e7ed15086bde3eb7396d0}
       \strng{bibnamehash}{2c2139f5beed424900441be68d901ffc}
       \strng{authorbibnamehash}{2c2139f5beed424900441be68d901ffc}
       \strng{authornamehash}{2c2139f5beed424900441be68d901ffc}
       \strng{authorfullhash}{2b3ef528434e7ed15086bde3eb7396d0}
+      \strng{authorfullhashraw}{2b3ef528434e7ed15086bde3eb7396d0}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3735,7 +3892,7 @@
       \endverb
       \keyw{Direct methanol fuel cell (DMFC) stack,Electrochemical impedance spectroscopy,Fuel cell diagnostics}
     \endentry
-    \entry{darowickiInfluenceDynamicLoad2019}{article}{}
+    \entry{darowickiInfluenceDynamicLoad2019}{article}{}{}
       \name{author}{7}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -3775,11 +3932,13 @@
       }
       \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{4e21e0fc95487447c2c19ecdbb1d1169}
+      \strng{fullhashraw}{4e21e0fc95487447c2c19ecdbb1d1169}
       \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{4e21e0fc95487447c2c19ecdbb1d1169}
-      \field{extraname}{1}
+      \strng{authorfullhashraw}{4e21e0fc95487447c2c19ecdbb1d1169}
+      \field{extraname}{8}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3805,7 +3964,7 @@
       \endverb
       \keyw{Equivalent circuit,Fuel cell,Fuel cell diagnostics,Impedance monitoring,PEMFC}
     \endentry
-    \entry{darowickiImpedanceHydrogenOxidation2020a}{article}{}
+    \entry{darowickiImpedanceHydrogenOxidation2020a}{article}{}{}
       \name{author}{7}{}{%
         {{hash=d348f6153a3b71b742cb341b532d86e4}{%
            family={Darowicki},
@@ -3845,11 +4004,13 @@
       }
       \strng{namehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{fullhash}{6a20de8c239970045559dee5215a9299}
+      \strng{fullhashraw}{6a20de8c239970045559dee5215a9299}
       \strng{bibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorbibnamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authornamehash}{fb06b2620d69a14711e988f3488c1a7c}
       \strng{authorfullhash}{6a20de8c239970045559dee5215a9299}
-      \field{extraname}{2}
+      \strng{authorfullhashraw}{6a20de8c239970045559dee5215a9299}
+      \field{extraname}{9}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3875,7 +4036,7 @@
       \endverb
       \keyw{Anode,Carbon monoxide,Hydrogen oxidation reaction,Impedance monitoring,Proton exchange membranefuel cell}
     \endentry
-    \entry{krakowiakThreeModesElectrochemical2024}{article}{}
+    \entry{krakowiakThreeModesElectrochemical2024}{article}{}{}
       \name{author}{5}{}{%
         {{hash=7014f1485220353ecfcab3f523a94d97}{%
            family={Krakowiak},
@@ -3905,10 +4066,13 @@
       }
       \strng{namehash}{984267d345675e1494d29fe9e34f824d}
       \strng{fullhash}{b694462881ac1a821ab9b9e89475bf1a}
+      \strng{fullhashraw}{b694462881ac1a821ab9b9e89475bf1a}
       \strng{bibnamehash}{984267d345675e1494d29fe9e34f824d}
       \strng{authorbibnamehash}{984267d345675e1494d29fe9e34f824d}
       \strng{authornamehash}{984267d345675e1494d29fe9e34f824d}
       \strng{authorfullhash}{b694462881ac1a821ab9b9e89475bf1a}
+      \strng{authorfullhashraw}{b694462881ac1a821ab9b9e89475bf1a}
+      \field{extraname}{3}
       \field{sortinit}{7}
       \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
@@ -3934,7 +4098,7 @@
       \endverb
       \keyw{Dynamic impedance,Energy storage,Nonstationary conditions,Real time monitoring,Redox flow battery}
     \endentry
-    \entry{vangheemElectrochemicalImpedanceSpectroscopy2004a}{article}{}
+    \entry{vangheemElectrochemicalImpedanceSpectroscopy2004a}{article}{}{}
       \name{author}{7}{}{%
         {{hash=be77afa2524538bef7ff0d84c5d2ba35}{%
            family={Van\bibnamedelima Gheem},
@@ -3974,10 +4138,12 @@
       }
       \strng{namehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{fullhash}{0899a87f9db671b5c6ca8cfec5cb6936}
+      \strng{fullhashraw}{0899a87f9db671b5c6ca8cfec5cb6936}
       \strng{bibnamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authorbibnamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authornamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authorfullhash}{0899a87f9db671b5c6ca8cfec5cb6936}
+      \strng{authorfullhashraw}{0899a87f9db671b5c6ca8cfec5cb6936}
       \field{extraname}{1}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -4006,7 +4172,7 @@
       \endverb
       \keyw{Aluminium,Broadband periodic random excitation signal,Corrosion,Electrochemical impedance,Non-linear distortions}
     \endentry
-    \entry{vangheemElectrochemicalImpedanceSpectroscopy2006a}{article}{}
+    \entry{vangheemElectrochemicalImpedanceSpectroscopy2006a}{article}{}{}
       \name{author}{7}{}{%
         {{hash=be77afa2524538bef7ff0d84c5d2ba35}{%
            family={Van\bibnamedelima Gheem},
@@ -4046,10 +4212,12 @@
       }
       \strng{namehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{fullhash}{123c88ab891af0df99ce5aa890fd25a5}
+      \strng{fullhashraw}{123c88ab891af0df99ce5aa890fd25a5}
       \strng{bibnamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authorbibnamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authornamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authorfullhash}{123c88ab891af0df99ce5aa890fd25a5}
+      \strng{authorfullhashraw}{123c88ab891af0df99ce5aa890fd25a5}
       \field{extraname}{2}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -4079,7 +4247,7 @@
       \endverb
       \keyw{Aluminium,Corrosion,Electrochemical impedance,Non-linear distortions,Non-stationary behaviour}
     \endentry
-    \entry{blajievImprovementImpedanceMeasurement2006}{article}{}
+    \entry{blajievImprovementImpedanceMeasurement2006}{article}{}{}
       \name{author}{4}{}{%
         {{hash=aea66bb3cc6979b364a38a18f3d1753c}{%
            family={Blajiev},
@@ -4104,10 +4272,12 @@
       }
       \strng{namehash}{8e59da0fc623bd6ec934456ae518ad48}
       \strng{fullhash}{813c90a8c4ea49ad29ed225427acdedd}
+      \strng{fullhashraw}{813c90a8c4ea49ad29ed225427acdedd}
       \strng{bibnamehash}{8e59da0fc623bd6ec934456ae518ad48}
       \strng{authorbibnamehash}{8e59da0fc623bd6ec934456ae518ad48}
       \strng{authornamehash}{8e59da0fc623bd6ec934456ae518ad48}
       \strng{authorfullhash}{813c90a8c4ea49ad29ed225427acdedd}
+      \strng{authorfullhashraw}{813c90a8c4ea49ad29ed225427acdedd}
       \field{extraname}{1}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -4136,7 +4306,7 @@
       \endverb
       \keyw{Adsorption,Broadband excitation,Copper,EIS,Noise quantification}
     \endentry
-    \entry{vangheemInstantaneousImpedanceMeasurements2004}{article}{}
+    \entry{vangheemInstantaneousImpedanceMeasurements2004}{article}{}{}
       \name{author}{7}{}{%
         {{hash=be77afa2524538bef7ff0d84c5d2ba35}{%
            family={Van\bibnamedelima Gheem},
@@ -4176,10 +4346,12 @@
       }
       \strng{namehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{fullhash}{03637fa2a832267c16524079d23d4cba}
+      \strng{fullhashraw}{03637fa2a832267c16524079d23d4cba}
       \strng{bibnamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authorbibnamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authornamehash}{b6613d295aaf72b00a30e20c98c5561d}
       \strng{authorfullhash}{03637fa2a832267c16524079d23d4cba}
+      \strng{authorfullhashraw}{03637fa2a832267c16524079d23d4cba}
       \field{extraname}{3}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -4208,7 +4380,7 @@
       \endverb
       \keyw{Aluminum,Electrochemical impedance,Instantaneous behaviour,Periodic excitation signal,Pitting corrosion}
     \endentry
-    \entry{vaningelgemAdvantagesOddRandom2009}{article}{}
+    \entry{vaningelgemAdvantagesOddRandom2009}{article}{}{}
       \name{author}{5}{}{%
         {{hash=d8563dad569127e321dda91a232cf223}{%
            family={Van\bibnamedelima Ingelgem},
@@ -4238,10 +4410,12 @@
       }
       \strng{namehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{fullhash}{7079c027f209c2c6e32986f9545f728b}
+      \strng{fullhashraw}{7079c027f209c2c6e32986f9545f728b}
       \strng{bibnamehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{authorbibnamehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{authornamehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{authorfullhash}{7079c027f209c2c6e32986f9545f728b}
+      \strng{authorfullhashraw}{7079c027f209c2c6e32986f9545f728b}
       \field{extraname}{1}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -4269,7 +4443,7 @@
       \verb C:\Users\fscarp\Zotero\storage\8EFXZV2F\Van Ingelgem et al. - 2009 - Advantages of Odd Random Phase Multisine Electroch.pdf
       \endverb
     \endentry
-    \entry{schoukensBroadbandSteppedSine1999}{inproceedings}{}
+    \entry{schoukensBroadbandSteppedSine1999}{inproceedings}{}{}
       \name{author}{3}{}{%
         {{hash=0dbb79ef915184927d01c0bcfa772d30}{%
            family={Schoukens},
@@ -4287,12 +4461,15 @@
            given={Y.},
            giveni={Y\bibinitperiod}}}%
       }
-      \strng{namehash}{e115682d1e2d234d269dd6edd0219ba0}
+      \strng{namehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
       \strng{fullhash}{e115682d1e2d234d269dd6edd0219ba0}
-      \strng{bibnamehash}{e115682d1e2d234d269dd6edd0219ba0}
-      \strng{authorbibnamehash}{e115682d1e2d234d269dd6edd0219ba0}
-      \strng{authornamehash}{e115682d1e2d234d269dd6edd0219ba0}
+      \strng{fullhashraw}{e115682d1e2d234d269dd6edd0219ba0}
+      \strng{bibnamehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
+      \strng{authorbibnamehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
+      \strng{authornamehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
       \strng{authorfullhash}{e115682d1e2d234d269dd6edd0219ba0}
+      \strng{authorfullhashraw}{e115682d1e2d234d269dd6edd0219ba0}
+      \field{extraname}{1}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -4318,7 +4495,7 @@
       \endverb
       \keyw{Digital signal processing,Discrete Fourier transforms,Filters,Frequency measurement,Noise level,Noise measurement,Signal processing algorithms,Signal to noise ratio,Time measurement,Transfer functions}
     \endentry
-    \entry{schoukensSurveyExcitationSignals1988a}{article}{}
+    \entry{schoukensSurveyExcitationSignals1988a}{article}{}{}
       \name{author}{4}{}{%
         {{hash=0dbb79ef915184927d01c0bcfa772d30}{%
            family={Schoukens},
@@ -4343,10 +4520,13 @@
       }
       \strng{namehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
       \strng{fullhash}{25544f19cf68260f220f441a0379316e}
+      \strng{fullhashraw}{25544f19cf68260f220f441a0379316e}
       \strng{bibnamehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
       \strng{authorbibnamehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
       \strng{authornamehash}{2c7424c1b17459ab48d0afa9aedbc1aa}
       \strng{authorfullhash}{25544f19cf68260f220f441a0379316e}
+      \strng{authorfullhashraw}{25544f19cf68260f220f441a0379316e}
+      \field{extraname}{2}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -4373,7 +4553,7 @@
       \endverb
       \keyw{Discrete Fourier transforms,Fast Fourier transforms,Frequency conversion,Frequency measurement,Loss measurement,Pollution measurement,Signal analysis,Signal processing,Time measurement,Working environment noise}
     \endentry
-    \entry{vaningelgemApplicationMultisineImpedance2008}{article}{}
+    \entry{vaningelgemApplicationMultisineImpedance2008}{article}{}{}
       \name{author}{4}{}{%
         {{hash=d8563dad569127e321dda91a232cf223}{%
            family={Van\bibnamedelima Ingelgem},
@@ -4398,10 +4578,12 @@
       }
       \strng{namehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{fullhash}{b5f5c256f238e37abec227461dae6c5f}
+      \strng{fullhashraw}{b5f5c256f238e37abec227461dae6c5f}
       \strng{bibnamehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{authorbibnamehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{authornamehash}{d01bb073593bfdb3d6d8fdd06096946d}
       \strng{authorfullhash}{b5f5c256f238e37abec227461dae6c5f}
+      \strng{authorfullhashraw}{b5f5c256f238e37abec227461dae6c5f}
       \field{extraname}{2}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -4430,7 +4612,7 @@
       \endverb
       \keyw{Copper corrosion,Electrochemical impedance spectroscopy,FE-AES,FE-SEM,Local attack,Multisine}
     \endentry
-    \entry{breugelmansOddRandomPhase2010a}{article}{}
+    \entry{breugelmansOddRandomPhase2010a}{article}{}{}
       \name{author}{8}{}{%
         {{hash=410fe5273f6e31f12caaa2f0b1db1cf6}{%
            family={Breugelmans},
@@ -4475,10 +4657,12 @@
       }
       \strng{namehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{fullhash}{4584ccafbc486869e802eb8f40edd62f}
+      \strng{fullhashraw}{4584ccafbc486869e802eb8f40edd62f}
       \strng{bibnamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authorbibnamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authornamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authorfullhash}{4584ccafbc486869e802eb8f40edd62f}
+      \strng{authorfullhashraw}{4584ccafbc486869e802eb8f40edd62f}
       \field{extraname}{1}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
@@ -4506,7 +4690,7 @@
       \endverb
       \keyw{Corrosion,Electrochemical impedance,Non-linear behavior,Non-stationary behavior,Odd random phase multisine,Rapid-screening test}
     \endentry
-    \entry{alvarez-pampliegaCorrosionStudyAlrich2014}{article}{}
+    \entry{alvarez-pampliegaCorrosionStudyAlrich2014}{article}{}{}
       \name{author}{9}{}{%
         {{hash=3d4912aeb0653db7719b06306c3ce850}{%
            family={{Alvarez-Pampliega}},
@@ -4556,10 +4740,12 @@
       }
       \strng{namehash}{8b6cd1a1a072c4d3c78a3d12ffcea09f}
       \strng{fullhash}{2e4c4e4c7534e1c9d3e3dd8575604242}
+      \strng{fullhashraw}{2e4c4e4c7534e1c9d3e3dd8575604242}
       \strng{bibnamehash}{8b6cd1a1a072c4d3c78a3d12ffcea09f}
       \strng{authorbibnamehash}{8b6cd1a1a072c4d3c78a3d12ffcea09f}
       \strng{authornamehash}{8b6cd1a1a072c4d3c78a3d12ffcea09f}
       \strng{authorfullhash}{2e4c4e4c7534e1c9d3e3dd8575604242}
+      \strng{authorfullhashraw}{2e4c4e4c7534e1c9d3e3dd8575604242}
       \field{sortinit}{8}
       \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
@@ -4586,7 +4772,7 @@
       \endverb
       \keyw{Al-rich metal-coated steel,Corrosion,Data modeling,Odd random phase multisine,Statistical evaluation}
     \endentry
-    \entry{jiOddRandomPhase2018}{article}{}
+    \entry{jiOddRandomPhase2018}{article}{}{}
       \name{author}{5}{}{%
         {{hash=60e717f84a7d738f0c70950d091459f8}{%
            family={Ji},
@@ -4619,10 +4805,12 @@
       }
       \strng{namehash}{4623e037124fb12e93258fb91c478891}
       \strng{fullhash}{fcf8956d542873dec16f684e3ce02e1e}
+      \strng{fullhashraw}{fcf8956d542873dec16f684e3ce02e1e}
       \strng{bibnamehash}{4623e037124fb12e93258fb91c478891}
       \strng{authorbibnamehash}{4623e037124fb12e93258fb91c478891}
       \strng{authornamehash}{4623e037124fb12e93258fb91c478891}
       \strng{authorfullhash}{fcf8956d542873dec16f684e3ce02e1e}
+      \strng{authorfullhashraw}{fcf8956d542873dec16f684e3ce02e1e}
       \field{extraname}{1}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -4650,7 +4838,7 @@
       \verb C:\Users\fscarp\Zotero\storage\AWTUU3NT\Ji et al. - 2018 - Odd Random Phase Electrochemical Impedance Spectroscopy to Study the Corrosion Behavior of Hot Dip Z.pdf
       \endverb
     \endentry
-    \entry{jiElectrochemicalRamanAnalysis2020}{article}{}
+    \entry{jiElectrochemicalRamanAnalysis2020}{article}{}{}
       \name{author}{5}{}{%
         {{hash=60e717f84a7d738f0c70950d091459f8}{%
            family={Ji},
@@ -4683,10 +4871,12 @@
       }
       \strng{namehash}{4623e037124fb12e93258fb91c478891}
       \strng{fullhash}{42d68e666422de20613fb945ddb3f4c5}
+      \strng{fullhashraw}{42d68e666422de20613fb945ddb3f4c5}
       \strng{bibnamehash}{4623e037124fb12e93258fb91c478891}
       \strng{authorbibnamehash}{4623e037124fb12e93258fb91c478891}
       \strng{authornamehash}{4623e037124fb12e93258fb91c478891}
       \strng{authorfullhash}{42d68e666422de20613fb945ddb3f4c5}
+      \strng{authorfullhashraw}{42d68e666422de20613fb945ddb3f4c5}
       \field{extraname}{2}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -4714,7 +4904,7 @@
       \verb C:\Users\fscarp\Zotero\storage\KXBJX7FF\Ji et al. - 2020 - Electrochemical and Raman analysis of the corrosion products formed over hot dip galvanised steel wi.pdf
       \endverb
     \endentry
-    \entry{blajievPotentiodynamicEISInvestigation2008}{article}{}
+    \entry{blajievPotentiodynamicEISInvestigation2008}{article}{}{}
       \name{author}{5}{}{%
         {{hash=0abdfaefae319f0551cdf403445eb270}{%
            family={Blajiev},
@@ -4744,10 +4934,12 @@
       }
       \strng{namehash}{9d825f80bace1b7552f423399cd2cb9c}
       \strng{fullhash}{86b081289de72d8845a885118c6db8c0}
+      \strng{fullhashraw}{86b081289de72d8845a885118c6db8c0}
       \strng{bibnamehash}{9d825f80bace1b7552f423399cd2cb9c}
       \strng{authorbibnamehash}{9d825f80bace1b7552f423399cd2cb9c}
       \strng{authornamehash}{9d825f80bace1b7552f423399cd2cb9c}
       \strng{authorfullhash}{86b081289de72d8845a885118c6db8c0}
+      \strng{authorfullhashraw}{86b081289de72d8845a885118c6db8c0}
       \field{extraname}{2}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -4776,7 +4968,7 @@
       \endverb
       \keyw{2-Methyl-5-mercapto-134-thiadiazole,Adsorption,Copper,Electrochemical impedance,Potentiodynamic EIS,Quantum-chemical descriptors}
     \endentry
-    \entry{geboesInvestigationAdsorptionMechanism2015}{article}{}
+    \entry{geboesInvestigationAdsorptionMechanism2015}{article}{}{}
       \name{author}{4}{}{%
         {{hash=34f1d1f2d9f546d0c86e203a16c7db3a}{%
            family={Geboes},
@@ -4801,10 +4993,12 @@
       }
       \strng{namehash}{1fdd408a981bf7dbb9d8cb3bbc7d833f}
       \strng{fullhash}{283640e5ec4759dcb7ba750d5210dcd0}
+      \strng{fullhashraw}{283640e5ec4759dcb7ba750d5210dcd0}
       \strng{bibnamehash}{1fdd408a981bf7dbb9d8cb3bbc7d833f}
       \strng{authorbibnamehash}{1fdd408a981bf7dbb9d8cb3bbc7d833f}
       \strng{authornamehash}{1fdd408a981bf7dbb9d8cb3bbc7d833f}
       \strng{authorfullhash}{283640e5ec4759dcb7ba750d5210dcd0}
+      \strng{authorfullhashraw}{283640e5ec4759dcb7ba750d5210dcd0}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -4830,7 +5024,7 @@
       \endverb
       \keyw{Adsorption mechanism,Heterocycles,In-situ SERS,Mercaptothiadiazole,Potentiodynamic ORP-EIS}
     \endentry
-    \entry{hauffmanMeasuringAdsorptionEthanol2012}{article}{}
+    \entry{hauffmanMeasuringAdsorptionEthanol2012}{article}{}{}
       \name{author}{6}{}{%
         {{hash=11bc0d8ce9416c108609b24f3196fa87}{%
            family={Hauffman},
@@ -4865,10 +5059,12 @@
       }
       \strng{namehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{fullhash}{b508f7225197b1d7c0bde276fb230073}
+      \strng{fullhashraw}{b508f7225197b1d7c0bde276fb230073}
       \strng{bibnamehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{authorbibnamehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{authornamehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{authorfullhash}{b508f7225197b1d7c0bde276fb230073}
+      \strng{authorfullhashraw}{b508f7225197b1d7c0bde276fb230073}
       \field{extraname}{1}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -4895,7 +5091,7 @@
       \endverb
       \keyw{Ethanol,In-situ,ORP EIS,SAM}
     \endentry
-    \entry{hauffmanDynamicSituStudy2013}{article}{}
+    \entry{hauffmanDynamicSituStudy2013}{article}{}{}
       \name{author}{6}{}{%
         {{hash=11bc0d8ce9416c108609b24f3196fa87}{%
            family={Hauffman},
@@ -4930,10 +5126,12 @@
       }
       \strng{namehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{fullhash}{9609706e46390d6dff0e9de392c6ce33}
+      \strng{fullhashraw}{9609706e46390d6dff0e9de392c6ce33}
       \strng{bibnamehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{authorbibnamehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{authornamehash}{4db8eb2c9d97fa85fd5df6dac504f61b}
       \strng{authorfullhash}{9609706e46390d6dff0e9de392c6ce33}
+      \strng{authorfullhashraw}{9609706e46390d6dff0e9de392c6ce33}
       \field{extraname}{2}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -4960,7 +5158,7 @@
       \endverb
       \keyw{Ethanol,In situ,ORP EIS,SAM}
     \endentry
-    \entry{fernandezmaciaStudyElectronTransfer2014}{article}{}
+    \entry{fernandezmaciaStudyElectronTransfer2014}{article}{}{}
       \name{author}{6}{}{%
         {{hash=594f6bdf3beb48496d92371e1c7758c1}{%
            family={Fernández\bibnamedelima Macía},
@@ -4995,10 +5193,13 @@
       }
       \strng{namehash}{9902de592d7a21274f43ea1c3c7da3ca}
       \strng{fullhash}{043952395de06cc9d92147f1d7813338}
+      \strng{fullhashraw}{043952395de06cc9d92147f1d7813338}
       \strng{bibnamehash}{9902de592d7a21274f43ea1c3c7da3ca}
       \strng{authorbibnamehash}{9902de592d7a21274f43ea1c3c7da3ca}
       \strng{authornamehash}{9902de592d7a21274f43ea1c3c7da3ca}
       \strng{authorfullhash}{043952395de06cc9d92147f1d7813338}
+      \strng{authorfullhashraw}{043952395de06cc9d92147f1d7813338}
+      \field{extraname}{1}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -5025,7 +5226,7 @@
       \endverb
       \keyw{2-mercaptobenzimidazole-5-sulfonate,Aromatic thiol,Electron transfer,Odd random phase electrochemical impedance spectroscopy,Polycrystalline gold,Self-assembled monolayer,X-ray photoelectron spectroscopy}
     \endentry
-    \entry{jorcinInvestigationSelfhealingProperties2010}{article}{}
+    \entry{jorcinInvestigationSelfhealingProperties2010}{article}{}{}
       \name{author}{9}{}{%
         {{hash=c54baf314c449838011539d2129c877b}{%
            family={Jorcin},
@@ -5075,10 +5276,12 @@
       }
       \strng{namehash}{7aefada305b5bb63ccfee726bc3b466c}
       \strng{fullhash}{c1fc36a7ea583ee6d31276f225ff8084}
+      \strng{fullhashraw}{c1fc36a7ea583ee6d31276f225ff8084}
       \strng{bibnamehash}{7aefada305b5bb63ccfee726bc3b466c}
       \strng{authorbibnamehash}{7aefada305b5bb63ccfee726bc3b466c}
       \strng{authornamehash}{7aefada305b5bb63ccfee726bc3b466c}
       \strng{authorfullhash}{c1fc36a7ea583ee6d31276f225ff8084}
+      \strng{authorfullhashraw}{c1fc36a7ea583ee6d31276f225ff8084}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
@@ -5106,7 +5309,7 @@
       \endverb
       \keyw{EIS,Electrical equivalent circuit,Odd random phase multisine,Organic coating,Self-healing}
     \endentry
-    \entry{breugelmansOddRandomPhase2010}{article}{}
+    \entry{breugelmansOddRandomPhase2010}{article}{}{}
       \name{author}{7}{}{%
         {{hash=410fe5273f6e31f12caaa2f0b1db1cf6}{%
            family={Breugelmans},
@@ -5146,10 +5349,12 @@
       }
       \strng{namehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{fullhash}{650340f7f8a0b848216a471dcad76e0a}
+      \strng{fullhashraw}{650340f7f8a0b848216a471dcad76e0a}
       \strng{bibnamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authorbibnamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authornamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authorfullhash}{650340f7f8a0b848216a471dcad76e0a}
+      \strng{authorfullhashraw}{650340f7f8a0b848216a471dcad76e0a}
       \field{extraname}{2}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -5177,7 +5382,7 @@
       \verb C:\Users\fscarp\Zotero\storage\J2IEFC8L\Breugelmans et al. - 2010 - Odd random phase multisine EIS for organic coating.pdf
       \endverb
     \endentry
-    \entry{woutersMonitoringInitialContact2021}{article}{}
+    \entry{woutersMonitoringInitialContact2021}{article}{}{}
       \name{author}{8}{}{%
         {{hash=c6afb2291dff8a0d5b8139fe7c5ed876}{%
            family={Wouters},
@@ -5222,10 +5427,12 @@
       }
       \strng{namehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{fullhash}{29b2b6c8688390c0803ddc52409c6068}
+      \strng{fullhashraw}{29b2b6c8688390c0803ddc52409c6068}
       \strng{bibnamehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{authorbibnamehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{authornamehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{authorfullhash}{29b2b6c8688390c0803ddc52409c6068}
+      \strng{authorfullhashraw}{29b2b6c8688390c0803ddc52409c6068}
       \field{extraname}{1}
       \field{sortinit}{9}
       \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
@@ -5252,7 +5459,7 @@
       \endverb
       \keyw{Instantaneous impedance,Mass transport,Organic coatings,ORP-EIS,Water uptake}
     \endentry
-    \entry{meeusenFEMModellingPredict2023}{article}{}
+    \entry{meeusenFEMModellingPredict2023}{article}{}{}
       \name{author}{10}{}{%
         {{hash=0faf19b9628bf33cc26599d643594315}{%
            family={Meeusen},
@@ -5307,10 +5514,12 @@
       }
       \strng{namehash}{707bc9cf938594d08994fcb05358c095}
       \strng{fullhash}{a70ed8d4ccfe88ce2eef600c64527d3c}
+      \strng{fullhashraw}{a70ed8d4ccfe88ce2eef600c64527d3c}
       \strng{bibnamehash}{707bc9cf938594d08994fcb05358c095}
       \strng{authorbibnamehash}{707bc9cf938594d08994fcb05358c095}
       \strng{authornamehash}{707bc9cf938594d08994fcb05358c095}
       \strng{authorfullhash}{a70ed8d4ccfe88ce2eef600c64527d3c}
+      \strng{authorfullhashraw}{a70ed8d4ccfe88ce2eef600c64527d3c}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -5338,7 +5547,7 @@
       \endverb
       \keyw{Coatings,Comsol Multiphysics,FEM,Impedance,Water transport}
     \endentry
-    \entry{madelatSituMonitoringLateral2023}{article}{}
+    \entry{madelatSituMonitoringLateral2023}{article}{}{}
       \name{author}{7}{}{%
         {{hash=83809668d8e9c9fddf737a4c3beab3f5}{%
            family={Madelat},
@@ -5378,10 +5587,12 @@
       }
       \strng{namehash}{94a3b392e35dcf5f106affe4e640097e}
       \strng{fullhash}{63594b02adc0e11caaea9c116f7950fa}
+      \strng{fullhashraw}{63594b02adc0e11caaea9c116f7950fa}
       \strng{bibnamehash}{94a3b392e35dcf5f106affe4e640097e}
       \strng{authorbibnamehash}{94a3b392e35dcf5f106affe4e640097e}
       \strng{authornamehash}{94a3b392e35dcf5f106affe4e640097e}
       \strng{authorfullhash}{63594b02adc0e11caaea9c116f7950fa}
+      \strng{authorfullhashraw}{63594b02adc0e11caaea9c116f7950fa}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5407,7 +5618,7 @@
       \endverb
       \keyw{Dual ORP-EIS,Instantaneous impedance,Lateral water diffusion,Organic coating,Water uptake}
     \endentry
-    \entry{fernandezmaciaORPEISStudyTime2015}{article}{}
+    \entry{fernandezmaciaORPEISStudyTime2015}{article}{}{}
       \name{author}{3}{}{%
         {{hash=594f6bdf3beb48496d92371e1c7758c1}{%
            family={Fernández\bibnamedelima Macía},
@@ -5425,12 +5636,15 @@
            given={A.},
            giveni={A\bibinitperiod}}}%
       }
-      \strng{namehash}{dbe1cff0266001dd62cad4f40e563ed7}
+      \strng{namehash}{9902de592d7a21274f43ea1c3c7da3ca}
       \strng{fullhash}{dbe1cff0266001dd62cad4f40e563ed7}
-      \strng{bibnamehash}{dbe1cff0266001dd62cad4f40e563ed7}
-      \strng{authorbibnamehash}{dbe1cff0266001dd62cad4f40e563ed7}
-      \strng{authornamehash}{dbe1cff0266001dd62cad4f40e563ed7}
+      \strng{fullhashraw}{dbe1cff0266001dd62cad4f40e563ed7}
+      \strng{bibnamehash}{9902de592d7a21274f43ea1c3c7da3ca}
+      \strng{authorbibnamehash}{9902de592d7a21274f43ea1c3c7da3ca}
+      \strng{authornamehash}{9902de592d7a21274f43ea1c3c7da3ca}
       \strng{authorfullhash}{dbe1cff0266001dd62cad4f40e563ed7}
+      \strng{authorfullhashraw}{dbe1cff0266001dd62cad4f40e563ed7}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5440,7 +5654,7 @@
       \field{journaltitle}{Journal of Electroanalytical Chemistry}
       \field{month}{1}
       \field{series}{Special Issue in Honor of {{Bernard Tribollet}}}
-      \field{title}{{{ORP-EIS}} to Study the Time Evolution of the [{{Fe}}({{CN}})6]3-/[{{Fe}}({{CN}})6]4-{$<$}math{$><$}mrow Is="true"{$><$}msup Is="true"{$><$}mrow Is="true"{$><$}mo Stretchy="false" Is="true"{$>$}[{$<$}/Mo{$><$}mtext Is="true"{$>$}{{Fe}}{$<$}/Mtext{$><$}msub Is="true"{$><$}mrow Is="true"{$><$}mo Stretchy="false" Is="true"{$>$}({$<$}/Mo{$><$}mtext Is="true"{$>$}{{CN}}{$<$}/Mtext{$><$}mo Stretchy="false" Is="true"{$>$}){$<$}/Mo{$><$}/Mrow{$><$}mrow Is="true"{$><$}mn Is="true"{$>$}6{$<$}/Mn{$><$}/Mrow{$><$}/Msub{$><$}mo Stretchy="false" Is="true"{$>$}]{$<$}/Mo{$><$}/Mrow{$><$}mrow Is="true"{$><$}mn Is="true"{$>$}3{$<$}/Mn{$><$}mo Is="true"{$>$}-{$<$}/Mo{$><$}/Mrow{$><$}/Msup{$><$}mo Is="true"{$>$}/{$<$}/Mo{$><$}msup Is="true"{$><$}mrow Is="true"{$><$}mo Stretchy="false" Is="true"{$>$}[{$<$}/Mo{$><$}mtext Is="true"{$>$}{{Fe}}{$<$}/Mtext{$><$}msub Is="true"{$><$}mrow Is="true"{$><$}mo Stretchy="false" Is="true"{$>$}({$<$}/Mo{$><$}mtext Is="true"{$>$}{{CN}}{$<$}/Mtext{$><$}mo Stretchy="false" Is="true"{$>$}){$<$}/Mo{$><$}/Mrow{$><$}mrow Is="true"{$><$}mn Is="true"{$>$}6{$<$}/Mn{$><$}/Mrow{$><$}/Msub{$><$}mo Stretchy="false" Is="true"{$>$}]{$<$}/Mo{$><$}/Mrow{$><$}mrow Is="true"{$><$}mn Is="true"{$>$}4{$<$}/Mn{$><$}mo Is="true"{$>$}-{$<$}/Mo{$><$}/Mrow{$><$}/Msup{$><$}/Mrow{$><$}/Math{$>$} Reaction Due to Adsorption at the Electrochemical Interface}
+      \field{title}{{ORP-EIS} to Study the Time Evolution of the [Fe(CN)6]3-/[Fe(CN)6]4- Reaction Due to Adsorption at the Electrochemical Interface}
       \field{urlday}{23}
       \field{urlmonth}{9}
       \field{urlyear}{2025}
@@ -5457,7 +5671,7 @@
       \endverb
       \keyw{Electron transfer,Ferri/ferrocyanide,Odd random phase electrochemical impedance spectroscopy,Rotating disk electrode,Time-variance,X-ray photoelectron spectroscopy}
     \endentry
-    \entry{pauwelsNewMultisinebasedImpedimetric2016}{article}{}
+    \entry{pauwelsNewMultisinebasedImpedimetric2016}{article}{}{}
       \name{author}{6}{}{%
         {{hash=17ca61ccf65453025ffa579cd71917ee}{%
            family={Pauwels},
@@ -5492,10 +5706,12 @@
       }
       \strng{namehash}{623e165c4e723ebe6fca092137fd3772}
       \strng{fullhash}{02ea9b83156c79db4809542b988301c4}
+      \strng{fullhashraw}{02ea9b83156c79db4809542b988301c4}
       \strng{bibnamehash}{623e165c4e723ebe6fca092137fd3772}
       \strng{authorbibnamehash}{623e165c4e723ebe6fca092137fd3772}
       \strng{authornamehash}{623e165c4e723ebe6fca092137fd3772}
       \strng{authorfullhash}{02ea9b83156c79db4809542b988301c4}
+      \strng{authorfullhashraw}{02ea9b83156c79db4809542b988301c4}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5521,7 +5737,7 @@
       \endverb
       \keyw{Aptamer,Biosensor,Multisine impedance spectroscopy}
     \endentry
-    \entry{meeusenUseOddRandom2018}{article}{}
+    \entry{meeusenUseOddRandom2018}{article}{}{}
       \name{author}{6}{}{%
         {{hash=0faf19b9628bf33cc26599d643594315}{%
            family={Meeusen},
@@ -5556,10 +5772,12 @@
       }
       \strng{namehash}{707bc9cf938594d08994fcb05358c095}
       \strng{fullhash}{789eba4952035f68cb832869107b769e}
+      \strng{fullhashraw}{789eba4952035f68cb832869107b769e}
       \strng{bibnamehash}{707bc9cf938594d08994fcb05358c095}
       \strng{authorbibnamehash}{707bc9cf938594d08994fcb05358c095}
       \strng{authornamehash}{707bc9cf938594d08994fcb05358c095}
       \strng{authorfullhash}{789eba4952035f68cb832869107b769e}
+      \strng{authorfullhashraw}{789eba4952035f68cb832869107b769e}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -5586,7 +5804,7 @@
       \endverb
       \keyw{Corrosion,EIS modelling,Inhibitor,Odd random phase EIS,Reliability}
     \endentry
-    \entry{sacciDynamicImpedanceFormic2009}{article}{}
+    \entry{sacciDynamicImpedanceFormic2009}{article}{}{}
       \name{author}{2}{}{%
         {{hash=f083d6558734026d9b4e169e7f33fd9b}{%
            family={Sacci},
@@ -5604,10 +5822,12 @@
       }
       \strng{namehash}{a4ff9c138d141710f6f84352028ca4f4}
       \strng{fullhash}{a4ff9c138d141710f6f84352028ca4f4}
+      \strng{fullhashraw}{a4ff9c138d141710f6f84352028ca4f4}
       \strng{bibnamehash}{a4ff9c138d141710f6f84352028ca4f4}
       \strng{authorbibnamehash}{a4ff9c138d141710f6f84352028ca4f4}
       \strng{authornamehash}{a4ff9c138d141710f6f84352028ca4f4}
       \strng{authorfullhash}{a4ff9c138d141710f6f84352028ca4f4}
+      \strng{authorfullhashraw}{a4ff9c138d141710f6f84352028ca4f4}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5634,7 +5854,7 @@
       \verb C:\Users\fscarp\Zotero\storage\IAJZPQGA\Sacci and Harrington - 2009 - Dynamic Impedance of Formic Acid Electrooxidation on Polycrystalline Palladium.pdf
       \endverb
     \endentry
-    \entry{holmUnderstandingReactionMechanisms2018}{article}{}
+    \entry{holmUnderstandingReactionMechanisms2018}{article}{}{}
       \name{author}{2}{}{%
         {{hash=ee9b767edb304a2ebcf795347bbad612}{%
            family={Holm},
@@ -5652,10 +5872,12 @@
       }
       \strng{namehash}{bc330835e6442421a4bb100f6bc874a8}
       \strng{fullhash}{bc330835e6442421a4bb100f6bc874a8}
+      \strng{fullhashraw}{bc330835e6442421a4bb100f6bc874a8}
       \strng{bibnamehash}{bc330835e6442421a4bb100f6bc874a8}
       \strng{authorbibnamehash}{bc330835e6442421a4bb100f6bc874a8}
       \strng{authornamehash}{bc330835e6442421a4bb100f6bc874a8}
       \strng{authorfullhash}{bc330835e6442421a4bb100f6bc874a8}
+      \strng{authorfullhashraw}{bc330835e6442421a4bb100f6bc874a8}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5683,7 +5905,7 @@
       \verb C:\Users\fscarp\Zotero\storage\WFHULEEI\Holm and Harrington - 2018 - Understanding Reaction Mechanisms Using Dynamic El.pdf
       \endverb
     \endentry
-    \entry{holmDynamicElectrochemicalImpedance2019}{article}{}
+    \entry{holmDynamicElectrochemicalImpedance2019}{article}{}{}
       \name{author}{5}{}{%
         {{hash=ee9b767edb304a2ebcf795347bbad612}{%
            family={Holm},
@@ -5713,10 +5935,12 @@
       }
       \strng{namehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{fullhash}{d456a38dcb8900b6eab23aeb59847208}
+      \strng{fullhashraw}{d456a38dcb8900b6eab23aeb59847208}
       \strng{bibnamehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{authorbibnamehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{authornamehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{authorfullhash}{d456a38dcb8900b6eab23aeb59847208}
+      \strng{authorfullhashraw}{d456a38dcb8900b6eab23aeb59847208}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -5743,7 +5967,7 @@
       \endverb
       \keyw{Electrochemical impedance spectroscopy,Methanol oxidation,Reaction mechanism,Temperature}
     \endentry
-    \entry{holmUnderstandingReactionMechanisms2019}{article}{}
+    \entry{holmUnderstandingReactionMechanisms2019}{article}{}{}
       \name{author}{4}{}{%
         {{hash=ee9b767edb304a2ebcf795347bbad612}{%
            family={Holm},
@@ -5768,10 +5992,12 @@
       }
       \strng{namehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{fullhash}{f01083ae56c33c1ce28a87b004a6e0ef}
+      \strng{fullhashraw}{f01083ae56c33c1ce28a87b004a6e0ef}
       \strng{bibnamehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{authorbibnamehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{authornamehash}{07631c9c1b02efa31bcec87a9a14540c}
       \strng{authorfullhash}{f01083ae56c33c1ce28a87b004a6e0ef}
+      \strng{authorfullhashraw}{f01083ae56c33c1ce28a87b004a6e0ef}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -5799,7 +6025,7 @@
       \endverb
       \keyw{Dynamic electrochemical impedance spectroscopy,Methanol oxidation,Reaction mechanism,Temperature}
     \endentry
-    \entry{sacciDynamicElectrochemicalImpedance2014}{article}{}
+    \entry{sacciDynamicElectrochemicalImpedance2014}{article}{}{}
       \name{author}{3}{}{%
         {{hash=f083d6558734026d9b4e169e7f33fd9b}{%
            family={Sacci},
@@ -5817,12 +6043,15 @@
            given={David\bibnamedelima A.},
            giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
       }
-      \strng{namehash}{3d71f86a1f60d523be82849c8172f162}
+      \strng{namehash}{4dcfcb79cc31f8f598c2913592ecca80}
       \strng{fullhash}{3d71f86a1f60d523be82849c8172f162}
-      \strng{bibnamehash}{3d71f86a1f60d523be82849c8172f162}
-      \strng{authorbibnamehash}{3d71f86a1f60d523be82849c8172f162}
-      \strng{authornamehash}{3d71f86a1f60d523be82849c8172f162}
+      \strng{fullhashraw}{3d71f86a1f60d523be82849c8172f162}
+      \strng{bibnamehash}{4dcfcb79cc31f8f598c2913592ecca80}
+      \strng{authorbibnamehash}{4dcfcb79cc31f8f598c2913592ecca80}
+      \strng{authornamehash}{4dcfcb79cc31f8f598c2913592ecca80}
       \strng{authorfullhash}{3d71f86a1f60d523be82849c8172f162}
+      \strng{authorfullhashraw}{3d71f86a1f60d523be82849c8172f162}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5849,7 +6078,7 @@
       \endverb
       \keyw{Dynamic,EIS,FFT,Impedance}
     \endentry
-    \entry{sacciDisentanglingMemristiveMemcapacitive2022}{article}{}
+    \entry{sacciDisentanglingMemristiveMemcapacitive2022}{article}{}{}
       \name{author}{7}{}{%
         {{hash=f083d6558734026d9b4e169e7f33fd9b}{%
            family={Sacci},
@@ -5889,10 +6118,13 @@
       }
       \strng{namehash}{4dcfcb79cc31f8f598c2913592ecca80}
       \strng{fullhash}{a87e971d24f47069c48f67614efc5a66}
+      \strng{fullhashraw}{a87e971d24f47069c48f67614efc5a66}
       \strng{bibnamehash}{4dcfcb79cc31f8f598c2913592ecca80}
       \strng{authorbibnamehash}{4dcfcb79cc31f8f598c2913592ecca80}
       \strng{authornamehash}{4dcfcb79cc31f8f598c2913592ecca80}
       \strng{authorfullhash}{a87e971d24f47069c48f67614efc5a66}
+      \strng{authorfullhashraw}{a87e971d24f47069c48f67614efc5a66}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5919,7 +6151,7 @@
       \endverb
       \keyw{droplet interface bilayer,dynamic impedance spectroscopy,lipid bilayer,memcapacitor,memristor,nonlinear elements}
     \endentry
-    \entry{zappenApplicationTimeResolvedMultiSine2018}{article}{}
+    \entry{zappenApplicationTimeResolvedMultiSine2018}{article}{}{}
       \name{author}{3}{}{%
         {{hash=c1cc7bf8f662c0c9d5331a23867ad2c9}{%
            family={Zappen},
@@ -5937,12 +6169,15 @@
            given={Dirk},
            giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{5321e6852e4f3a7500777c921ad5e0d3}
+      \strng{namehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
       \strng{fullhash}{5321e6852e4f3a7500777c921ad5e0d3}
-      \strng{bibnamehash}{5321e6852e4f3a7500777c921ad5e0d3}
-      \strng{authorbibnamehash}{5321e6852e4f3a7500777c921ad5e0d3}
-      \strng{authornamehash}{5321e6852e4f3a7500777c921ad5e0d3}
+      \strng{fullhashraw}{5321e6852e4f3a7500777c921ad5e0d3}
+      \strng{bibnamehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
+      \strng{authorbibnamehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
+      \strng{authornamehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
       \strng{authorfullhash}{5321e6852e4f3a7500777c921ad5e0d3}
+      \strng{authorfullhashraw}{5321e6852e4f3a7500777c921ad5e0d3}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -5969,7 +6204,7 @@
       \verb C:\Users\fscarp\Zotero\storage\LTBR3UPG\Zappen et al. - 2018 - Application of Time-Resolved Multi-Sine Impedance .pdf
       \endverb
     \endentry
-    \entry{zappenInOperandoImpedanceSpectroscopy2020a}{article}{}
+    \entry{zappenInOperandoImpedanceSpectroscopy2020a}{article}{}{}
       \name{author}{4}{}{%
         {{hash=c1cc7bf8f662c0c9d5331a23867ad2c9}{%
            family={Zappen},
@@ -5997,10 +6232,13 @@
       }
       \strng{namehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
       \strng{fullhash}{0c6262a60f4530eaf171514c2847cc1d}
+      \strng{fullhashraw}{0c6262a60f4530eaf171514c2847cc1d}
       \strng{bibnamehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
       \strng{authorbibnamehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
       \strng{authornamehash}{518bbd59ea885b0fcedf78f0cd4a2c32}
       \strng{authorfullhash}{0c6262a60f4530eaf171514c2847cc1d}
+      \strng{authorfullhashraw}{0c6262a60f4530eaf171514c2847cc1d}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6028,7 +6266,7 @@
       \endverb
       \keyw{abuse test,characterization,degradation,diagnostics,EIS,electrochemical impedance spectroscopy,gas evolution,gassing,high temperature,lithium-ion batteries,safety,strain,ultrasonics,ultrasound}
     \endentry
-    \entry{pajkossyConnectionCVsImpedance2020}{article}{}
+    \entry{pajkossyConnectionCVsImpedance2020}{article}{}{}
       \name{author}{2}{}{%
         {{hash=a34b5fc06e2e8c78e4c6ccf01b3903fa}{%
            family={Pajkossy},
@@ -6043,10 +6281,12 @@
       }
       \strng{namehash}{4fc82ef3875d7efa032a77f1e1368016}
       \strng{fullhash}{4fc82ef3875d7efa032a77f1e1368016}
+      \strng{fullhashraw}{4fc82ef3875d7efa032a77f1e1368016}
       \strng{bibnamehash}{4fc82ef3875d7efa032a77f1e1368016}
       \strng{authorbibnamehash}{4fc82ef3875d7efa032a77f1e1368016}
       \strng{authornamehash}{4fc82ef3875d7efa032a77f1e1368016}
       \strng{authorfullhash}{4fc82ef3875d7efa032a77f1e1368016}
+      \strng{authorfullhashraw}{4fc82ef3875d7efa032a77f1e1368016}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6073,7 +6313,7 @@
       \verb C:\Users\fscarp\Zotero\storage\EKKRHRFQ\Pajkossy and Mészáros - 2020 - Connection of CVs and impedance spectra of reversi.pdf
       \endverb
     \endentry
-    \entry{pajkossyDynamicElectrochemicalImpedance2019}{article}{}
+    \entry{pajkossyDynamicElectrochemicalImpedance2019}{article}{}{}
       \name{author}{1}{}{%
         {{hash=a34b5fc06e2e8c78e4c6ccf01b3903fa}{%
            family={Pajkossy},
@@ -6083,10 +6323,12 @@
       }
       \strng{namehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{fullhash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
+      \strng{fullhashraw}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{bibnamehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{authorbibnamehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{authornamehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{authorfullhash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
+      \strng{authorfullhashraw}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -6113,7 +6355,7 @@
       \endverb
       \keyw{Charge transfer,Diffusion,Kinetics,Redox system,Semiintegration}
     \endentry
-    \entry{pajkossyVoltammetryCoupledImpedance2020}{article}{}
+    \entry{pajkossyVoltammetryCoupledImpedance2020}{article}{}{}
       \name{author}{1}{}{%
         {{hash=a34b5fc06e2e8c78e4c6ccf01b3903fa}{%
            family={Pajkossy},
@@ -6123,10 +6365,12 @@
       }
       \strng{namehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{fullhash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
+      \strng{fullhashraw}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{bibnamehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{authorbibnamehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{authornamehash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \strng{authorfullhash}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
+      \strng{authorfullhashraw}{a34b5fc06e2e8c78e4c6ccf01b3903fa}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -6154,7 +6398,7 @@
       \verb C:\Users\fscarp\Zotero\storage\ITZV3AEM\Pajkossy - 2020 - Voltammetry coupled with impedance spectroscopy.pdf
       \endverb
     \endentry
-    \entry{pajkossyDynamicElectrochemicalImpedance2021}{article}{}
+    \entry{pajkossyDynamicElectrochemicalImpedance2021}{article}{}{}
       \name{author}{3}{}{%
         {{hash=a34b5fc06e2e8c78e4c6ccf01b3903fa}{%
            family={Pajkossy},
@@ -6172,12 +6416,14 @@
            given={Gábor},
            giveni={G\bibinitperiod}}}%
       }
-      \strng{namehash}{3ad5272f092738f8162d19cc8ebbfbaa}
+      \strng{namehash}{f9adb68f03ba7b2ef629ab547c56ad6e}
       \strng{fullhash}{3ad5272f092738f8162d19cc8ebbfbaa}
-      \strng{bibnamehash}{3ad5272f092738f8162d19cc8ebbfbaa}
-      \strng{authorbibnamehash}{3ad5272f092738f8162d19cc8ebbfbaa}
-      \strng{authornamehash}{3ad5272f092738f8162d19cc8ebbfbaa}
+      \strng{fullhashraw}{3ad5272f092738f8162d19cc8ebbfbaa}
+      \strng{bibnamehash}{f9adb68f03ba7b2ef629ab547c56ad6e}
+      \strng{authorbibnamehash}{f9adb68f03ba7b2ef629ab547c56ad6e}
+      \strng{authornamehash}{f9adb68f03ba7b2ef629ab547c56ad6e}
       \strng{authorfullhash}{3ad5272f092738f8162d19cc8ebbfbaa}
+      \strng{authorfullhashraw}{3ad5272f092738f8162d19cc8ebbfbaa}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6204,7 +6450,7 @@
       \endverb
       \keyw{Charge transfer,Diffusion,Impedance,Interface,Voltammetry}
     \endentry
-    \entry{breugelmansOddRandomPhase2012}{article}{}
+    \entry{breugelmansOddRandomPhase2012}{article}{}{}
       \name{author}{6}{}{%
         {{hash=410fe5273f6e31f12caaa2f0b1db1cf6}{%
            family={Breugelmans},
@@ -6239,10 +6485,12 @@
       }
       \strng{namehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{fullhash}{f145db9e8d733cabde18630830fffb5c}
+      \strng{fullhashraw}{f145db9e8d733cabde18630830fffb5c}
       \strng{bibnamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authorbibnamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authornamehash}{fcd2171fcf7466c803f2eb5250cb4872}
       \strng{authorfullhash}{f145db9e8d733cabde18630830fffb5c}
+      \strng{authorfullhashraw}{f145db9e8d733cabde18630830fffb5c}
       \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -6270,7 +6518,7 @@
       \endverb
       \keyw{Instantaneous impedance,Non-stationary behaviour,Odd random phase multisine electrochemical impedance spectroscopy (ORP-EIS)}
     \endentry
-    \entry{hallemansNonparametricIdentificationLinear2020}{article}{}
+    \entry{hallemansNonparametricIdentificationLinear2020}{article}{}{}
       \name{author}{3}{}{%
         {{hash=71112b45685c507eb97b9ad5db0d410b}{%
            family={Hallemans},
@@ -6288,12 +6536,15 @@
            given={R.},
            giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{23dfa8930b6787dd8b4d415d91a616ba}
+      \strng{namehash}{91861abcba7bd49625e14c2ec82481ee}
       \strng{fullhash}{23dfa8930b6787dd8b4d415d91a616ba}
-      \strng{bibnamehash}{23dfa8930b6787dd8b4d415d91a616ba}
-      \strng{authorbibnamehash}{23dfa8930b6787dd8b4d415d91a616ba}
-      \strng{authornamehash}{23dfa8930b6787dd8b4d415d91a616ba}
+      \strng{fullhashraw}{23dfa8930b6787dd8b4d415d91a616ba}
+      \strng{bibnamehash}{91861abcba7bd49625e14c2ec82481ee}
+      \strng{authorbibnamehash}{91861abcba7bd49625e14c2ec82481ee}
+      \strng{authornamehash}{91861abcba7bd49625e14c2ec82481ee}
       \strng{authorfullhash}{23dfa8930b6787dd8b4d415d91a616ba}
+      \strng{authorfullhashraw}{23dfa8930b6787dd8b4d415d91a616ba}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6321,7 +6572,7 @@
       \endverb
       \keyw{Gaussian processes,Identification,Linear time-varying systems,Machine learning}
     \endentry
-    \entry{hallemansDetectionClassificationQuantification2021}{article}{}
+    \entry{hallemansDetectionClassificationQuantification2021}{article}{}{}
       \name{author}{8}{}{%
         {{hash=f0411eb940c424ac869082deb2ffaf87}{%
            family={Hallemans},
@@ -6366,11 +6617,13 @@
       }
       \strng{namehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{fullhash}{c22ca0665f6198be6173885f2b54ab05}
+      \strng{fullhashraw}{c22ca0665f6198be6173885f2b54ab05}
       \strng{bibnamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authorbibnamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authornamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authorfullhash}{c22ca0665f6198be6173885f2b54ab05}
-      \field{extraname}{1}
+      \strng{authorfullhashraw}{c22ca0665f6198be6173885f2b54ab05}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6395,7 +6648,7 @@
       \endverb
       \keyw{Distortion measurement,Even and odd nonlinear distortions,Harmonic analysis,Market research,Nonlinear distortion,nonlinear systems,nonparametric estimation,odd random phase multisine,Time-frequency analysis,time-varying frequency response function (TV-FRF),time-varying systems,Time-varying systems,trend}
     \endentry
-    \entry{hallemansBestLinearTimeVarying2021}{article}{}
+    \entry{hallemansBestLinearTimeVarying2021}{article}{}{}
       \name{author}{9}{}{%
         {{hash=f0411eb940c424ac869082deb2ffaf87}{%
            family={Hallemans},
@@ -6445,11 +6698,13 @@
       }
       \strng{namehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{fullhash}{bc8766858498be81dbf204cca437a8a9}
+      \strng{fullhashraw}{bc8766858498be81dbf204cca437a8a9}
       \strng{bibnamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authorbibnamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authornamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authorfullhash}{bc8766858498be81dbf204cca437a8a9}
-      \field{extraname}{2}
+      \strng{authorfullhashraw}{bc8766858498be81dbf204cca437a8a9}
+      \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6474,7 +6729,7 @@
       \endverb
       \keyw{Distortion measurement,Even and odd nonlinear distortions,Frequency measurement,Harmonic analysis,Noise measurement,Nonlinear distortion,nonlinear systems,nonparametric estimation,odd random phase multisine,time-varying frequency response function,time-varying systems,Time-varying systems,Transfer functions,trend}
     \endentry
-    \entry{woutersUseInstantaneousImpedance2018}{article}{}
+    \entry{woutersUseInstantaneousImpedance2018}{article}{}{}
       \name{author}{4}{}{%
         {{hash=c6afb2291dff8a0d5b8139fe7c5ed876}{%
            family={Wouters},
@@ -6499,10 +6754,12 @@
       }
       \strng{namehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{fullhash}{108aadedf61a309c4f44f6cf86e13d58}
+      \strng{fullhashraw}{108aadedf61a309c4f44f6cf86e13d58}
       \strng{bibnamehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{authorbibnamehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{authornamehash}{64d60e8f03d631f7317bd22e481465fa}
       \strng{authorfullhash}{108aadedf61a309c4f44f6cf86e13d58}
+      \strng{authorfullhashraw}{108aadedf61a309c4f44f6cf86e13d58}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -6529,7 +6786,7 @@
       \endverb
       \keyw{AC electrograining,Aluminium,Instantaneous impedance,ORP-EIS,Smut layer}
     \endentry
-    \entry{battistelHarmonicAnalysisSeparation2021}{article}{}
+    \entry{battistelHarmonicAnalysisSeparation2021}{article}{}{}
       \name{author}{6}{}{%
         {{hash=64a4a22c961554212fd6797a12c9c05e}{%
            family={Battistel},
@@ -6564,10 +6821,13 @@
       }
       \strng{namehash}{91aeb103234efc9de4f396108df3c2b5}
       \strng{fullhash}{61099c7ff5c4eed45ea7623a90a28b99}
+      \strng{fullhashraw}{61099c7ff5c4eed45ea7623a90a28b99}
       \strng{bibnamehash}{91aeb103234efc9de4f396108df3c2b5}
       \strng{authorbibnamehash}{91aeb103234efc9de4f396108df3c2b5}
       \strng{authornamehash}{91aeb103234efc9de4f396108df3c2b5}
       \strng{authorfullhash}{61099c7ff5c4eed45ea7623a90a28b99}
+      \strng{authorfullhashraw}{61099c7ff5c4eed45ea7623a90a28b99}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6595,7 +6855,7 @@
       \endverb
       \keyw{Electrical impedance tomography,harmonic analysis,perfusion separation,respiration}
     \endentry
-    \entry{colletOperandoORPEISStudy2021}{article}{}
+    \entry{colletOperandoORPEISStudy2021}{article}{}{}
       \name{author}{7}{}{%
         {{hash=09a2b11e35cc9611a244abe565a8bbb8}{%
            family={Collet},
@@ -6635,10 +6895,12 @@
       }
       \strng{namehash}{68b6d76fed11921f0d589d30f4e05877}
       \strng{fullhash}{51dcf30f8c0b5239c972f1274ef42d53}
+      \strng{fullhashraw}{51dcf30f8c0b5239c972f1274ef42d53}
       \strng{bibnamehash}{68b6d76fed11921f0d589d30f4e05877}
       \strng{authorbibnamehash}{68b6d76fed11921f0d589d30f4e05877}
       \strng{authornamehash}{68b6d76fed11921f0d589d30f4e05877}
       \strng{authorfullhash}{51dcf30f8c0b5239c972f1274ef42d53}
+      \strng{authorfullhashraw}{51dcf30f8c0b5239c972f1274ef42d53}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6664,7 +6926,7 @@
       \endverb
       \keyw{Additives,Copper reduction,Electrorefining,Operando ORP-EIS,Time-varying impedance}
     \endentry
-    \entry{dabirihavighOperandoOddRandom2022}{article}{}
+    \entry{dabirihavighOperandoOddRandom2022}{article}{}{}
       \name{author}{7}{}{%
         {{hash=2f7d9c78623e6cc409e55b5b7c75a761}{%
            family={Dabiri\bibnamedelima Havigh},
@@ -6704,10 +6966,12 @@
       }
       \strng{namehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{fullhash}{381a728551539048a756f1dafd8e3311}
+      \strng{fullhashraw}{381a728551539048a756f1dafd8e3311}
       \strng{bibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authorbibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authornamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authorfullhash}{381a728551539048a756f1dafd8e3311}
+      \strng{authorfullhashraw}{381a728551539048a756f1dafd8e3311}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -6734,7 +6998,7 @@
       \endverb
       \keyw{Aluminum alloy,Anodizing,Operando ORP-EIS,Time-varying impedance}
     \endentry
-    \entry{dabirihavighOperandoOddRandom2023}{article}{}
+    \entry{dabirihavighOperandoOddRandom2023}{article}{}{}
       \name{author}{8}{}{%
         {{hash=2f7d9c78623e6cc409e55b5b7c75a761}{%
            family={Dabiri\bibnamedelima Havigh},
@@ -6779,10 +7043,12 @@
       }
       \strng{namehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{fullhash}{f45b66b968b3991068df2d01ecc58705}
+      \strng{fullhashraw}{f45b66b968b3991068df2d01ecc58705}
       \strng{bibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authorbibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authornamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authorfullhash}{f45b66b968b3991068df2d01ecc58705}
+      \strng{authorfullhashraw}{f45b66b968b3991068df2d01ecc58705}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -6809,7 +7075,7 @@
       \endverb
       \keyw{Additives,Aminosilane,Conversion treatment,Operando ORP-EIS,Zinc}
     \endentry
-    \entry{hallemansOperandoElectrochemicalImpedance2022}{article}{}
+    \entry{hallemansOperandoElectrochemicalImpedance2022}{article}{}{}
       \name{author}{7}{}{%
         {{hash=f0411eb940c424ac869082deb2ffaf87}{%
            family={Hallemans},
@@ -6849,11 +7115,13 @@
       }
       \strng{namehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{fullhash}{748efb91d365c288ede9e9cea9ff7221}
+      \strng{fullhashraw}{748efb91d365c288ede9e9cea9ff7221}
       \strng{bibnamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authorbibnamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authornamehash}{aceeff42d16497b6c9a7db028a3aa93c}
       \strng{authorfullhash}{748efb91d365c288ede9e9cea9ff7221}
-      \field{extraname}{3}
+      \strng{authorfullhashraw}{748efb91d365c288ede9e9cea9ff7221}
+      \field{extraname}{4}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -6879,7 +7147,7 @@
       \endverb
       \keyw{Commercial cells,Data-driven modelling,Dynamic EIS,ECM,Li-ion batteries,Nonlinear behaviour}
     \endentry
-    \entry{dabirihavighOperandoORPEISMonitoring2025}{article}{}
+    \entry{dabirihavighOperandoORPEISMonitoring2025}{article}{}{}
       \name{author}{8}{}{%
         {{hash=2f7d9c78623e6cc409e55b5b7c75a761}{%
            family={Dabiri\bibnamedelima Havigh},
@@ -6924,10 +7192,12 @@
       }
       \strng{namehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{fullhash}{bd069924a32be6e91ffe1661f6879551}
+      \strng{fullhashraw}{bd069924a32be6e91ffe1661f6879551}
       \strng{bibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authorbibnamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authornamehash}{32b91946067eea280ae2d73e3bf8f81e}
       \strng{authorfullhash}{bd069924a32be6e91ffe1661f6879551}
+      \strng{authorfullhashraw}{bd069924a32be6e91ffe1661f6879551}
       \field{extraname}{3}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -6955,7 +7225,7 @@
       \verb C:\Users\fscarp\Zotero\storage\U9WJ7JCD\Dabiri Havigh et al. - 2025 - Operando ORP-EIS for Monitoring SEI Formation of Anode-Free Li Metal Batteries.pdf
       \endverb
     \endentry
-    \entry{kosterDynamicImpedanceSpectroscopy2017}{article}{}
+    \entry{kosterDynamicImpedanceSpectroscopy2017}{article}{}{}
       \name{author}{4}{}{%
         {{hash=1126531bcb7c36acf3b1b50093ae0b29}{%
            family={Koster},
@@ -6980,10 +7250,12 @@
       }
       \strng{namehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{fullhash}{112bfabd74423727e0f905f552b10964}
+      \strng{fullhashraw}{112bfabd74423727e0f905f552b10964}
       \strng{bibnamehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{authorbibnamehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{authornamehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{authorfullhash}{112bfabd74423727e0f905f552b10964}
+      \strng{authorfullhashraw}{112bfabd74423727e0f905f552b10964}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -7010,7 +7282,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\EQU3NBQW\\Koster et al. - 2017 - Dynamic impedance spectroscopy using dynamic multi.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\HN8DA29R\\Supporting_information.docx
       \endverb
     \endentry
-    \entry{battistelPhysicalDefinitionDynamic2019}{article}{}
+    \entry{battistelPhysicalDefinitionDynamic2019}{article}{}{}
       \name{author}{2}{}{%
         {{hash=64a4a22c961554212fd6797a12c9c05e}{%
            family={Battistel},
@@ -7025,10 +7297,12 @@
       }
       \strng{namehash}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
       \strng{fullhash}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
+      \strng{fullhashraw}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
       \strng{bibnamehash}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
       \strng{authorbibnamehash}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
       \strng{authornamehash}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
       \strng{authorfullhash}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
+      \strng{authorfullhashraw}{219ae81b9c73b3cb2c6c89ca9aa82d7f}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7055,7 +7329,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\FHBMS6PT\\Supporting_info.docx;C\:\\Users\\fscarp\\Zotero\\storage\\I7HCWK3P\\Battistel and La Mantia - 2019 - On the physical definition of dynamic impedance H.pdf
       \endverb
     \endentry
-    \entry{kosterMeasurementAnalysisDynamic2018}{article}{}
+    \entry{kosterMeasurementAnalysisDynamic2018}{article}{}{}
       \name{author}{6}{}{%
         {{hash=1126531bcb7c36acf3b1b50093ae0b29}{%
            family={Koster},
@@ -7090,10 +7364,12 @@
       }
       \strng{namehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{fullhash}{106b422c99f654b6b9678030b30b96bc}
+      \strng{fullhashraw}{106b422c99f654b6b9678030b30b96bc}
       \strng{bibnamehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{authorbibnamehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{authornamehash}{5cf80a6f3c354cf2b0fbedb626b87ae7}
       \strng{authorfullhash}{106b422c99f654b6b9678030b30b96bc}
+      \strng{authorfullhashraw}{106b422c99f654b6b9678030b30b96bc}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -7120,7 +7396,7 @@
       \verb C:\Users\fscarp\Zotero\storage\F8KKCU3A\Koster et al. - 2018 - Measurement and Analysis of Dynamic Impedance Spec.pdf
       \endverb
     \endentry
-    \entry{erinmwingbovoDynamicImpedanceSpectroscopy2019}{article}{}
+    \entry{erinmwingbovoDynamicImpedanceSpectroscopy2019}{article}{}{}
       \name{author}{4}{}{%
         {{hash=d0210bae61b73e7682ff21da6ba32d81}{%
            family={Erinmwingbovo},
@@ -7145,10 +7421,12 @@
       }
       \strng{namehash}{165fcd1db2a30cd8ab01c8e548549a34}
       \strng{fullhash}{77a32ea548b335900aa4d7533dc947e0}
+      \strng{fullhashraw}{77a32ea548b335900aa4d7533dc947e0}
       \strng{bibnamehash}{165fcd1db2a30cd8ab01c8e548549a34}
       \strng{authorbibnamehash}{165fcd1db2a30cd8ab01c8e548549a34}
       \strng{authornamehash}{165fcd1db2a30cd8ab01c8e548549a34}
       \strng{authorfullhash}{77a32ea548b335900aa4d7533dc947e0}
+      \strng{authorfullhashraw}{77a32ea548b335900aa4d7533dc947e0}
       \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -7175,7 +7453,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\2WS4DM6I\\Erinmwingbovo et al. - 2019 - Dynamic Impedance Spectroscopy of Nickel Hexacyano.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\39I6JSXX\\supporting info.pdf
       \endverb
     \endentry
-    \entry{erinmwingbovoDynamicImpedanceSpectroscopy2020}{article}{}
+    \entry{erinmwingbovoDynamicImpedanceSpectroscopy2020}{article}{}{}
       \name{author}{7}{}{%
         {{hash=6ef17bf12ce1c58a07d81afccf2f35c9}{%
            family={Erinmwingbovo},
@@ -7215,10 +7493,12 @@
       }
       \strng{namehash}{3e859bdcd8802bc38743493865f7ab99}
       \strng{fullhash}{7128c4506f25dc001179ddc582df7558}
+      \strng{fullhashraw}{7128c4506f25dc001179ddc582df7558}
       \strng{bibnamehash}{3e859bdcd8802bc38743493865f7ab99}
       \strng{authorbibnamehash}{3e859bdcd8802bc38743493865f7ab99}
       \strng{authornamehash}{3e859bdcd8802bc38743493865f7ab99}
       \strng{authorfullhash}{7128c4506f25dc001179ddc582df7558}
+      \strng{authorfullhashraw}{7128c4506f25dc001179ddc582df7558}
       \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
@@ -7245,7 +7525,7 @@
       \verb C:\Users\fscarp\Zotero\storage\6TG7UFUC\Erinmwingbovo et al. - 2020 - Dynamic impedance spectroscopy of LiMn2O4 thin fil.pdf
       \endverb
     \endentry
-    \entry{scarpioniElectrochemicalImpedanceSpectroscopy2023a}{article}{}
+    \entry{scarpioniElectrochemicalImpedanceSpectroscopy2023a}{article}{}{}
       \name{author}{6}{}{%
         {{hash=a7591e36fe356181c38372b507414d92}{%
            family={Scarpioni},
@@ -7280,10 +7560,12 @@
       }
       \strng{namehash}{e1bf6539bc4370b0e1593784c2879ab6}
       \strng{fullhash}{df5cf26eaf40d3e902728d0e5d45c5cc}
+      \strng{fullhashraw}{df5cf26eaf40d3e902728d0e5d45c5cc}
       \strng{bibnamehash}{e1bf6539bc4370b0e1593784c2879ab6}
       \strng{authorbibnamehash}{e1bf6539bc4370b0e1593784c2879ab6}
       \strng{authornamehash}{e1bf6539bc4370b0e1593784c2879ab6}
       \strng{authorfullhash}{df5cf26eaf40d3e902728d0e5d45c5cc}
+      \strng{authorfullhashraw}{df5cf26eaf40d3e902728d0e5d45c5cc}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7311,7 +7593,7 @@
       \endverb
       \keyw{aqueous electrolyte,dynamic electrochemical impedance spectroscopy,equivalent circuit model,lithium titanium phosphate,sodium-ion battery}
     \endentry
-    \entry{battistelAnalysisNonstationaryImpedance2016}{article}{}
+    \entry{battistelAnalysisNonstationaryImpedance2016}{article}{}{}
       \name{author}{3}{}{%
         {{hash=64a4a22c961554212fd6797a12c9c05e}{%
            family={Battistel},
@@ -7329,12 +7611,15 @@
            given={Fabio},
            giveni={F\bibinitperiod}}}%
       }
-      \strng{namehash}{ccd33436b1891cd3ecee3a9c30abae8b}
+      \strng{namehash}{91aeb103234efc9de4f396108df3c2b5}
       \strng{fullhash}{ccd33436b1891cd3ecee3a9c30abae8b}
-      \strng{bibnamehash}{ccd33436b1891cd3ecee3a9c30abae8b}
-      \strng{authorbibnamehash}{ccd33436b1891cd3ecee3a9c30abae8b}
-      \strng{authornamehash}{ccd33436b1891cd3ecee3a9c30abae8b}
+      \strng{fullhashraw}{ccd33436b1891cd3ecee3a9c30abae8b}
+      \strng{bibnamehash}{91aeb103234efc9de4f396108df3c2b5}
+      \strng{authorbibnamehash}{91aeb103234efc9de4f396108df3c2b5}
+      \strng{authornamehash}{91aeb103234efc9de4f396108df3c2b5}
       \strng{authorfullhash}{ccd33436b1891cd3ecee3a9c30abae8b}
+      \strng{authorfullhashraw}{ccd33436b1891cd3ecee3a9c30abae8b}
+      \field{extraname}{2}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7360,7 +7645,7 @@
       \verb C\:\\Users\\fscarp\\Zotero\\storage\\H9ZBWL73\\Battistel et al. - 2016 - On the Analysis of Non-stationary Impedance Spectr.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\N97ZDHX8\\Supporting_info.pdf
       \endverb
     \endentry
-    \entry{chukwuDynamicImpedanceSpectroscopy2023}{inproceedings}{}
+    \entry{chukwuDynamicImpedanceSpectroscopy2023}{inproceedings}{}{}
       \name{author}{4}{}{%
         {{hash=eab3a072e110974198558617d01f86fe}{%
            family={Chukwu},
@@ -7385,10 +7670,13 @@
       }
       \strng{namehash}{727f18400b03707d7d4aebb2c87bba5e}
       \strng{fullhash}{b2963ee91c8063a93638ce5877d37f6f}
+      \strng{fullhashraw}{b2963ee91c8063a93638ce5877d37f6f}
       \strng{bibnamehash}{727f18400b03707d7d4aebb2c87bba5e}
       \strng{authorbibnamehash}{727f18400b03707d7d4aebb2c87bba5e}
       \strng{authornamehash}{727f18400b03707d7d4aebb2c87bba5e}
       \strng{authorfullhash}{b2963ee91c8063a93638ce5877d37f6f}
+      \strng{authorfullhashraw}{b2963ee91c8063a93638ce5877d37f6f}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -7413,7 +7701,128 @@
       \endverb
       \keyw{Adaptation models,Analytical models,cubic splines,Data models,dynamic impedance spectroscopy,fitting,Fitting,multivariate,Parametric statistics,Sensitivity,Spectroscopy}
     \endentry
+    \entry{chukwuStatisticalAnalysisMeasurement2022}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=eab3a072e110974198558617d01f86fe}{%
+           family={Chukwu},
+           familyi={C\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=fd8cf3630b6e9dfbf429b4db5509e351}{%
+           family={Mugisa},
+           familyi={M\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ddf5a3775d567e9bcffbb26affc28812}{%
+           family={Brogioli},
+           familyi={B\bibinitperiod},
+           given={Doriano},
+           giveni={D\bibinitperiod}}}%
+        {{hash=17066ca1535ff4f1aef189849611771f}{%
+           family={Mantia},
+           familyi={M\bibinitperiod},
+           given={Fabio\bibnamedelima La},
+           giveni={F\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{727f18400b03707d7d4aebb2c87bba5e}
+      \strng{fullhash}{9ac73e48b8deee15ba0a10f27a7ab58e}
+      \strng{fullhashraw}{9ac73e48b8deee15ba0a10f27a7ab58e}
+      \strng{bibnamehash}{727f18400b03707d7d4aebb2c87bba5e}
+      \strng{authorbibnamehash}{727f18400b03707d7d4aebb2c87bba5e}
+      \strng{authornamehash}{727f18400b03707d7d4aebb2c87bba5e}
+      \strng{authorfullhash}{9ac73e48b8deee15ba0a10f27a7ab58e}
+      \strng{authorfullhashraw}{9ac73e48b8deee15ba0a10f27a7ab58e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2196-0216, 2196-0216}
+      \field{journaltitle}{ChemElectroChem}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{14}
+      \field{title}{Statistical {{Analysis}} of the {{Measurement Noise}} in {{Dynamic Impedance Spectra}}}
+      \field{urlday}{15}
+      \field{urlmonth}{7}
+      \field{urlyear}{2022}
+      \field{volume}{9}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1002/celc.202200109
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\Y2JUIXAX\\Chukwu et al. - 2022 - Statistical Analysis of the Measurement Noise in D.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\Z4YG5MDJ\\supporting_info.pdf
+      \endverb
+    \endentry
+    \entry{piantaEvaluationKineticParameters2023a}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=328c1a00254238353740caf37ac9912d}{%
+           family={Pianta},
+           familyi={P\bibinitperiod},
+           given={Nicolò},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a7591e36fe356181c38372b507414d92}{%
+           family={Scarpioni},
+           familyi={S\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+        {{hash=eab3a072e110974198558617d01f86fe}{%
+           family={Chukwu},
+           familyi={C\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cd53e6a334e53840e0d8ebd1bdc6a19c}{%
+           family={La\bibnamedelima Mantia},
+           familyi={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Fabio},
+           giveni={F\bibinitperiod}}}%
+        {{hash=15fed800993e9d114f76a1f9c14dbefb}{%
+           family={Ruffo},
+           familyi={R\bibinitperiod},
+           given={Riccardo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7cbf5f45051618ab339f4c1b5059475}
+      \strng{fullhash}{5d266d35a0a352bb46e4119146eca15a}
+      \strng{fullhashraw}{5d266d35a0a352bb46e4119146eca15a}
+      \strng{bibnamehash}{a7cbf5f45051618ab339f4c1b5059475}
+      \strng{authorbibnamehash}{a7cbf5f45051618ab339f4c1b5059475}
+      \strng{authornamehash}{a7cbf5f45051618ab339f4c1b5059475}
+      \strng{authorfullhash}{5d266d35a0a352bb46e4119146eca15a}
+      \strng{authorfullhashraw}{5d266d35a0a352bb46e4119146eca15a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Dynamic Electrochemical Impedance Spectroscopy is a valuable tool to investigate kinetic parameters of non-Faradic processes in symmetric Electrochemical Double Layer Capacitors. Compared to classic Electrochemical Impedance Spectroscopy, the dynamic technique measures the impedance under non-equilibrium condition removing the stationarity requirement and, at the same time, giving the frequency-dependent information of a dynamic process in presence of overpotential. Despite not being a new technique, there is an inherent complexity in the signal sampling and data manipulation to obtain the impedance spectra down to low frequencies (the interesting band for energy storage devices impedance). Few methods to compute the impedance from sampled signals are reported in the literature and under development. For this work the Dynamic Multi-Frequency Analysis algorithm was used to compute the impedance and reconstruct the cyclic voltammetry profile as well. The time-dependency of the kinetic parameters, namely capacitances of double layer and adsorption phenomenon, were extracted from equivalent circuit model regression and the adsorption time constants with a graphical analysis of the impedance spectra dataset during a full charge/discharge cycle. The values of the adsorption capacitance from the model regression are, on average, compatible with the values computed with a common formula showing the reliability of the model regression. The use of a three-electrode compact cell allowed the characterization of both active electrodes independently during operation showing a strong potential dependence on the active material properties. Furthermore, the impedance showed the presence of a side reaction (likely oxygen evolution) connected to the increase of adsorption and double layer capacitances localized on the positive electrode in a clearer way than what was possible to observe from the voltametric profile.}
+      \field{issn}{0013-4686}
+      \field{journaltitle}{Electrochimica Acta}
+      \field{month}{1}
+      \field{title}{Evaluation of Kinetic Parameters of Non-Faradic Processes in Carbon-Based Electrodes Using Multisine Dynamic Electrochemical Impedance Spectroscopy}
+      \field{urlday}{24}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{437}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{141462}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.electacta.2022.141462
+      \endverb
+      \verb{file}
+      \verb C\:\\Users\\fscarp\\Zotero\\storage\\U5IJJ2B5\\Pianta et al. - 2023 - Evaluation of kinetic parameters of non-faradic processes in carbon-based electrodes using multisine.pdf;C\:\\Users\\fscarp\\Zotero\\storage\\VDZRS68U\\S001346862201619X.html
+      \endverb
+      \keyw{Dynamic impedance spectroscopy,Dynamic multi-frequency analysis,Electrochemical double-layer capacitors,Equivalent circuit modelling,Three-electrode cell}
+    \endentry
   \enddatalist
+  \missing{Janes2007}
+  \missing{Koster2017}
+  \missing{Pasta2012}
+  \missing{Tribbia2020}
+  \missing{ppiantaEvaluationKineticParameters2023aTribbia2020}
 \endrefsection
 \endinput
 

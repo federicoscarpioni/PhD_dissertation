@@ -2,9 +2,6 @@
 % \minitoc
 \label{ch:acquisition}
 
-\chapter{Acquisition of Non-stationary Impedance}
-\label{ch:acquisition}
-
 \section{Introduction and Experimental Workflow}
 \label{sec:intro-workflow}
 
@@ -618,7 +615,7 @@ In my approach, I implemented two options for avarage limits.
 One is included in the DEISchannel object and computes the average over a user-selected number of points from the sampling of the workstation (Note: not the scope, so the signal is likely to contain strong aliasing). 
 The other is performed by the PicoCalculator object that uses the value of the zero-frequency bin in the DFT already calculated for the processing of the data, sparing any further computation. In both cases, the user can specify as many software limits as desired.
 
-\section{Summary and limitations}
+% \section{Summary and limitations}
 % Expensive hardware, could be streamlined
 % Clock synchronization of generator and sampler
 % Better optimization of the multisine

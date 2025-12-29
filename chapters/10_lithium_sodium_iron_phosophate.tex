@@ -14,7 +14,7 @@ The project discussed in this section deals with the characterization of the pro
 % Synthesis route (brief)
 % Why using it for Na-ion intercalation (NASICON structure, fast Na diffusion and widepotential window in water-in-salt)
 
-Carbon-coated LiTi$_2$(PO$_4$)$_3$ (LTP) was synthesized with a one-pot route as reported in \cite{Scarpioni2023}. Briefly, a gel was prepared by dissolving ammonium dihydrogen phosphate and titanium butoxide in ethanol together with lithium acetate and glucose as lithium and carbon sources. After evaporation of the solvent, the powder was calcined at 800$^\circ$C in inert atmosphere. The carbon coating is needed to enhance the electrode's electronic conductivity. LTP has a NASICON-type framework, providing fast ion diffusion and excellent stability in aqueous electrolytes. Its potential window is suitable for negative electrode operation in water-in-salt systems because it remains safely above the hydrogen evolution reaction.
+Carbon-coated LiTi$_2$(PO$_4$)$_3$ (LTP) was synthesized with a one-pot route as reported in \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}. Briefly, a gel was prepared by dissolving ammonium dihydrogen phosphate and titanium butoxide in ethanol together with lithium acetate and glucose as lithium and carbon sources. After evaporation of the solvent, the powder was calcined at 800$^\circ$C in inert atmosphere. The carbon coating is needed to enhance the electrode's electronic conductivity. LTP has a NASICON-type framework, providing fast ion diffusion and excellent stability in aqueous electrolytes. Its potential window is suitable for negative electrode operation in water-in-salt systems because it remains safely above the hydrogen evolution reaction.
 
 \subsection{Electrolyte}
 % Describe the composition of water-in-salt and why using it
@@ -78,33 +78,6 @@ We superimposed the multi-sine onto either a galvanostatic or a cyclic-voltammet
 
 The impedance was estimated off-line using the Dynamic Multi-Frequency Analysis with the symmetric Fermi-Dirac filter of bandwidth 0.1\,Hz and with order $n=8$. Hence, the time resolution of the impedance is of 10s. The DMFA was applied on the entire signal of two consecutive cycles after subtracting the straight line between first and last point.
 
-\section{Physical model for intercalation}
-
-% Take it from the paper
-
-In order to interpret the dynamic spectra, we used a physically-based porous electrode model derived from a simplified transmission-line approach. It accounts for ionic transport in the electrolyte-filled pores, electron conduction in the active material, and Faradaic intercalation kinetics. The overall impedance is represented as:
-
-\begin{equation*}
-Z_T = R_s + \frac{R_p}{k l} \coth(k l),
-\end{equation*}
-
-where $R_s$ is the uncompensated solution resistance, $R_p$ combines pore-solution and solid-particle resistances, and $kl$ embeds the finite diffusion or charge-transfer response of the porous electrode. This approach has been discussed in \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a} and references therein.
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{figures/LTP/ltp_circuit_new.png}
-    \label{fig:LTP circuit}
-    \caption{Equivalent circuit of the physical model used to fit DEIS spectra.}
-\end{figure}
-
-The interface processes are described by the following simplified unit (Figure \ref{fig:LTP circuit simplified}) in the transmission line where the Warburg element rapresenting the charge trasnfer has been substituteby a capacitor. This semplification produces better fit with lower ammount of paramters.
-
-\begin{figure}[h!]
-    \includegraphics[width=0.8\textwidth]{figures/LTP/EC_collins_simplified.jpg}
-    \label{fig:LTP circuit simplified}
-    \caption{Equivalent circuit of the physical model developed for the intercalation processes of MnO2 in \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020}}
-\end{figure}
-
-
 \section{Results and discussions}
 
 \subsection{Time-resolved impedance under CC drift}
@@ -113,8 +86,8 @@ During the galvanostatic experiment, the electrode crosses the entire intercalat
 
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{figures/LTP/V(t)_CC.png}
+    \caption{Potential time-series of LTP negative electrode during cyclic voltammetry.}
     \label{fig: LTP galvanostati result}
-    \caption{}
 \end{figure}
 
 The results are reported in  Figure \ref{fig: LTP galvanostati result}. The impedance shows a relatively stable shape despite the change in state of charge although a stronger variation is visibile when the system changes phases (orange and blue spectra in the figure), so before and after the voltage plateau.

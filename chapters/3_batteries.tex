@@ -31,28 +31,16 @@ Because each electrode hosts a composition-dependent chemical potential for the 
 \end{equation}
 where $G_{\mathrm{mix}}$ accounts for non-ideal interactions. The OCV profile thus reflects phase transitions, entropy terms and the mixing thermodynamics within the active materials.
 
-\subsection{Gibbs free energy and electrical work}
+% \subsection{Gibbs free energy and electrical work}
 
-The electrical work delivered during discharge is related to the Gibbs free energy of reaction:
-\begin{equation}
-    \Delta G = -n F U_{\mathrm{OCV}}.
-\end{equation}
-For a battery cycled between states of charge with stoichiometries $x_1$ and $x_2$, the theoretical energy is
-\begin{equation}
-    E_{\mathrm{th}} = n F \int_{x_1}^{x_2} U_{\mathrm{OCV}}(x)\, dx.
-\end{equation}
-
-\subsection{Transport inside electrodes}
-
-In intercalation materials, the rate capability is governed by solid-state diffusion of the guest ions. The diffusion equation for concentration $c(x,t)$ inside a spherical particle of radius $R$ is
-\begin{equation}
-    \frac{\partial c}{\partial t} = D_s \left( \frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial c}{\partial r}\right)\right),
-\end{equation}
-with $D_s$ the solid diffusion coefficient. A characteristic diffusion time is
-\begin{equation}
-    \tau_D = \frac{R^2}{D_s}.
-\end{equation}
-This time constant critically affects high-rate performance and appears later in impedance spectra as finite-length diffusion elements.
+% The electrical work delivered during discharge is related to the Gibbs free energy of reaction:
+% \begin{equation}
+%     \Delta G = -n F U_{\mathrm{OCV}}.
+% \end{equation}
+% For a battery cycled between states of charge with stoichiometries $x_1$ and $x_2$, the theoretical energy is
+% \begin{equation}
+%     E_{\mathrm{th}} = n F \int_{x_1}^{x_2} U_{\mathrm{OCV}}(x)\, dx.
+% \end{equation}
 
 \section{Performance metrics}
 
@@ -88,7 +76,41 @@ A C-rate is defined as the charge or discharge current normalized by the nominal
 \end{equation}
 A 1C current charges or discharges the battery in 1 hour, while C/10 corresponds to 10 hours.
 
-\section{Electrode materials}
+\section{Storage mechanisms}
+\subsection{Intercalation}
+
+Intercalation is a primary storage mechanism in rechargeable batteries. Guest ions (Li$^+$, Na$^+$, K$^+$, Mg$^{2+}$, etc.) reversibly insert into the crystal lattice of host materials without fundamentally disrupting the host structure. The process is topotactic, meaning the crystal symmetry and connectivity are preserved during insertion and extraction cycles.
+
+In layered oxides such as NMC, ions occupy octahedral sites between transition-metal oxide layers. The intercalation reaction can be written as
+\begin{equation}
+    \mathrm{M}_x \mathrm{A}_y + (1-x)\mathrm{M}^{n+} + (1-x)ne^- \rightleftharpoons \mathrm{MA}_y,
+\end{equation}
+where M denotes the intercalated metal ion, A is the host framework, and stoichiometry $x$ varies with state of charge. The layered structure provides two-dimensional ion diffusion pathways, enabling rapid ion transport.
+
+In olivine phosphates like LiFePO$_4$, ions occupy sites within one-dimensional channels running through the crystal. The two-phase behavior (coexistence of intercalated and deintercalated domains) arises from the crystal structure and electrostatic interactions, producing the characteristic flat voltage plateau.
+
+The intercalation voltage $U(x)$ is determined by the electrochemical potential difference between the two electrodes and depends sensitively on composition. This composition dependence allows OCV profiling to infer state of charge, making intercalation materials ideal for battery management.
+
+\subsection{Alloying}
+
+Alloying mechanisms store metal ions through formation of intermetallic phases rather than lattice insertion. Silicon, for instance, forms a series of phases with lithium:
+\begin{equation}
+    \mathrm{Si} + \beta \mathrm{Li}^+ + \beta e^- \rightleftharpoons \mathrm{Li}_\beta \mathrm{Si},
+\end{equation}
+where $\beta$ can range up to 4.4, giving a theoretical specific capacity of 4200~mAh~g$^{-1}$, nearly ten times that of graphite.
+
+However, the dramatic volume expansion accompanying alloying ($\sim 300\%$ for silicon) induces mechanical stress, particle fragmentation and rapid electrode degradation. Modern high-capacity anodes employ silicon-graphite composites and carbon coatings to mitigate pulverization and maintain electrical contact across cycling.
+
+\subsection{Conversion}
+
+Conversion reactions involve reduction of a metal oxide or fluoride to metallic form, coupled with oxide/fluoride ion migration. These reactions typically exhibit multiple voltage plateaus corresponding to sequential reduction steps and offer very high theoretical capacities. However, conversion materials suffer from large voltage hysteresis, low coulombic efficiency and rapid capacity fade due to electrolyte decomposition and material restructuring during cycling. Consequently, they remain largely in research phase and are not employed in commercial cells.
+
+\subsection{Metallic electrodes}
+
+Metallic electrodes store energy through electroplating and stripping of the metal itself. Lithium metal anodes offer the highest specific capacity (3861~mAh~g$^{-1}$) and lowest potential, enabling very high energy density cells. Sodium and other alkali metals provide similar benefits for their respective battery chemistries. However, metallic deposition is prone to dendritic growth, which increases surface area and accelerates electrolyte decomposition, reducing cycle life and raising safety concerns. Metallic cathodes (e.g., sulfur, oxygen) pair with metal anodes in advanced chemistries like Li-S and Li-air, but face severe degradation and efficiency challenges. Solid-state electrolytes and protective coatings aim to stabilize metallic electrode operation.
+Intercalation is the primary storage mechanism in commercial lithium-ion batteries. Guest lithium ions reversibly insert into the crystal lattice of host materials without fundamentally disrupting the host structure. The process is topotactic, meaning the crystal symmetry and connectivity are preserved during lithiation and delithiation cycles.
+
+\section{State of the art of intercalation materials}
 
 \subsection{Positive electrodes}
 
@@ -117,6 +139,18 @@ Si can alloy with Li up to Li$_{15}$Si$_4$, giving enormous theoretical capacity
 
 \paragraph{Lithium metal.}  
 Lithium metal has the highest specific capacity and lowest potential but is prone to dendritic deposition, limiting its use with liquid electrolytes. Solid-state electrolytes aim to stabilize its operation.
+
+\subsection{Electrode porosity}
+
+In intercalation materials, the rate capability is governed by solid-state diffusion of the guest ions. The diffusion equation for concentration $c(x,t)$ inside a spherical particle of radius $R$ is
+\begin{equation}
+    \frac{\partial c}{\partial t} = D_s \left( \frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial c}{\partial r}\right)\right),
+\end{equation}
+with $D_s$ the solid diffusion coefficient. A characteristic diffusion time is
+\begin{equation}
+    \tau_D = \frac{R^2}{D_s}.
+\end{equation}
+This time constant critically affects high-rate performance and appears later in impedance spectra as finite-length diffusion elements.
 
 \section{Electrolytes}
 
@@ -208,53 +242,8 @@ EIS characterizes the response of the cell to small-signal perturbations in freq
 \end{equation}
 appears for semi-infinite diffusion, while finite-length diffusion yields a transmission-line-type behavior. EIS is central to this thesis and will be discussed extensively in Chapter~X.
 
-\section{Fast charging}
-
-Fast charging is desirable in electric mobility but presents severe constraints for battery safety and longevity. Charging at high C-rate leads to large concentration gradients through the electrode thickness and increases the anode overpotential. If the anode potential approaches 0~V vs Li/Li$^+$, lithium plating becomes thermodynamically possible. The diffusion-limited overpotential during high-rate lithiation can be approximated by
-\begin{equation}
-    \eta_{\mathrm{diff}} \approx \frac{RT}{F} \left( \frac{I}{I_{\mathrm{lim}} - I} \right),
-\end{equation}
-where $I_{\mathrm{lim}}$ is the limiting current associated with mass transport. Because $I_{\mathrm{lim}} \propto D_s$ and $D_s$ decreases at low temperature or in highly lithiated graphite, the risk of plating increases in cold or high-SOC conditions. Consequently, practical fast charging is performed in the SOC window 20–80~\%, often with sophisticated dynamic current profiles optimized to avoid plating.
-
-Materials research for fast charging focuses on graphite with high-rate morphology, silicon-graphite blends, transition-metal oxides with optimized particle architecture, and advanced electrolytes/additives to stabilize the SEI.
-
 \section{Nomenclature}
 
 Positive and negative electrodes are the IUPAC-recommended terms for battery operation regardless of current direction. In spontaneous discharge (Galvanic cell), the positive electrode is the cathode and undergoes reduction, while the negative electrode acts as the anode. During charging (electrolytic cell), the current direction reverses, but the electrode names positive and negative are retained to avoid confusion. Though, in the battery literature and specific language, scientist tend to use the term cathod and anode to indicate the postive and negative electrode. In an electrolytic cell, the role of anode and cathod are reversed. Probably this convention is of historical reason from the material science of primary batteries that are not recharged.
 
 The common term \textit{capacity} strictly refers to the total amount of charge, measured in Ah in teh battery community or Coulombs according to the International System of Measures. It must not be confused with capacitance of a capacitor electrical elemetn. Throughout this thesis, the IUPAC convention will be followed.
-
-\section{Battery management systems (BMS)}
-
-The battery management system (BMS) is the supervisory electronic unit responsible for monitoring, controlling and protecting a battery pack during operation. A battery pack is a connection of batteries in series or parallel combined to obtain a certain power output. The BMS plays a critical role in ensuring safety, maximizing performance, extending lifetime and providing accurate estimates of internal states that cannot be measured directly.
-
-\subsection{Core functions of a BMS}
-
-The principal functions of a BMS include:
-\begin{itemize}
-    \item \textbf{Voltage measurement and protection:} maintaining all cells within their safe operating voltage window.
-    \item \textbf{Current monitoring and control:} enforcing charge/discharge current limits to avoid thermal runaway or lithium plating.
-    \item \textbf{Temperature monitoring:} collecting data from multiple sensors and controlling the thermal management system.
-    \item \textbf{State estimation:} estimating state of charge (SOC), state of health (SOH), state of power (SOP) and internal resistance.
-    \item \textbf{Cell balancing:} equalizing charge among cells to avoid imbalance and premature degradation.
-    \item \textbf{Communication:} interfacing with vehicle control units or stationary system controllers.
-\end{itemize}
-
-\subsection{State estimation}
-
-SOC estimation typically combines coulomb counting, OCV lookup tables and equivalent-circuit models. SOH estimation often relies on capacity fade tracking or increases in resistance. However, these traditional methods face challenges under dynamic load profiles or aging-related drift.
-
-Model-based estimation methods integrate electrochemical models or pseudo-two-dimensional (P2D) models to increase accuracy. Kalman filters, particle filters and machine-learning methods are widely used in modern BMS implementations.
-
-\subsection{Impedance-based diagnostics}
-
-Electrochemical impedance contains rich information on reaction kinetics, SEI resistance, charge-transfer processes, concentration gradients and diffusion limitations. Therefore, impedance is a powerful tool for BMS diagnostics.
-
-However, conventional frequency-sweep EIS is too slow for embedded systems. Modern research explores:
-\begin{itemize}
-    \item on-board fast EIS using multisine or perturb-and-observe techniques,
-    \item online impedance tracking during dynamic driving cycles,
-    \item data-driven impedance models to estimate SOC and SOH.
-\end{itemize}
-
-This thesis contributes to this direction by developing instrumentation for continuous impedance measurement using multisine excitation under galvanostatic cycling. The goal is to extract time-varying parametric transfer functions for predictive SOH estimation. The long-term perspective is to integrate such impedance-based diagnostics into a ``smart BMS'' capable of adaptive control and health prediction at cell level.

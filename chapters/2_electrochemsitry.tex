@@ -148,25 +148,30 @@ where $i_{\mathrm{act}}$ is the activation current given by Eq.~\eqref{eq:BV} an
     i_{\mathrm{diff}} = i_{\mathrm{lim}} \left(1 - \frac{c_s}{c_{\infty}}\right).
 \end{equation}
 In steady-state diffusion-limited conditions, $i \to i_{\mathrm{lim}}$ regardless of how large $\eta$ becomes. 
-In transient techniques such as impedance spectroscopy, mass transfer contributes a frequency-dependent impedance, commonly represented by the Warburg element. 
-The onset of mass-transfer limitation therefore marks the transition from purely kinetic behaviour to mixed kinetic-diffusion behaviour, with characteristic signatures in the impedance spectrum.
 
 \section{Double-layer structure and interfacial capacitance}
 
-At the interface between an electronic conductor and an ionic solution, a separation of charge naturally develops. Electrons in the electrode and ions in the electrolyte arrange themselves such that the electrochemical potentials of all species are equal across the interface. The resulting region, known as the electrical double layer, stores charge electrostatically and therefore contributes a capacitive component to the interfacial impedance.
+At the interface between an electronic conductor and an ionic solution, it develops a separation of charge. 
+Electrons in the electrode and ions in the electrolyte arrange themselves such that the electrochemical potentials of all species are equal across the interface. 
+The resulting region, known as the electrical double layer, stores charge electrostatically and therefore contributes a capacitive component to the interfacial impedance.
 
-The double layer is commonly described as consisting of a compact region adjacent to the electrode surface and a diffuse region that extends into the electrolyte. In the compact layer, often referred to as the Helmholtz layer, specifically adsorbed ions and oriented solvent molecules form a thin dielectric layer of thickness on the order of molecular dimensions. Its capacitance per unit area can be approximated by that of a parallel-plate capacitor,
+The double layer is commonly described as consisting of a compact region adjacent to the electrode surface and a diffuse region that extends into the electrolyte. 
+In the compact layer, often referred to as the Helmholtz layer, specifically adsorbed ions and oriented solvent molecules form a thin dielectric layer of thickness on the order of molecular dimensions (Ångstrom). 
+Its capacitance per unit area can be approximated by that of a parallel-plate capacitor,
 \begin{equation}
     C_{\mathrm{H}} \approx \frac{\varepsilon_{\mathrm{H}} \varepsilon_0}{d_{\mathrm{H}}},
 \end{equation}
 where $\varepsilon_{\mathrm{H}}$ is the effective dielectric constant of the compact layer and $d_{\mathrm{H}}$ its thickness.
 
-Beyond the compact layer, ions distribute according to the balance of electrostatic and entropic forces. Assuming a symmetric $z:z$ electrolyte and a planar interface, the ion concentrations follow Boltzmann statistics, which combined with Poisson's equation lead to the Gouy--Chapman description of the diffuse region. The surface charge density $\sigma$ associated with a potential drop $\psi_0$ across the diffuse layer is then
+Beyond the compact layer, ions distribute according to the balance of electrostatic and entropic forces.
+Assuming a symmetric $z:z$ electrolyte and a planar interface, the ion concentrations follow Boltzmann statistics, which combined with Poisson's equation lead to the Gouy--Chapman description of the diffuse region. 
+The surface charge density $\sigma$ associated with a potential drop $\psi_0$ across the diffuse layer is then
 \begin{equation}
     \sigma = \sqrt{8 \varepsilon \varepsilon_0 R T c_\infty} \;
     \sinh\!\left( \frac{z F \psi_0}{2 R T} \right),
 \end{equation}
-where $\varepsilon$ is the permittivity of the electrolyte, $c_\infty$ the bulk ion concentration and $z$ the ionic charge number. The corresponding differential capacitance is obtained by differentiation with respect to $\psi_0$,
+where $\varepsilon$ is the permittivity of the electrolyte, $c_\infty$ the bulk ion concentration and $z$ the ionic charge number. 
+The corresponding differential capacitance is obtained by differentiation with respect to $\psi_0$,
 \begin{equation}
     C_{\mathrm{GC}}(\psi_0) = \frac{d\sigma}{d\psi_0}
     = \frac{\varepsilon \varepsilon_0}{\lambda_D}
@@ -177,74 +182,61 @@ with $\lambda_D$ the Debye length,
     \lambda_D = \sqrt{\frac{\varepsilon \varepsilon_0 R T}{2 z^2 F^2 c_\infty}}.
 \end{equation}
 
-The Stern model combines these two contributions. Since the compact and diffuse layers are arranged in series, the total differential double-layer capacitance is
+The Stern model combines these two contributions. 
+Since the compact and diffuse layers are arranged in series, the total differential double-layer capacitance is
 \begin{equation}
     \frac{1}{C_{\mathrm{dl}}} = \frac{1}{C_{\mathrm{H}}} + \frac{1}{C_{\mathrm{GC}}(\psi_0)}.
 \end{equation}
-For highly concentrated electrolytes, as typically found in batteries, the Debye length becomes very small and the diffuse-layer capacitance grows correspondingly large, making the compact layer the dominant contributor to $C_{\mathrm{dl}}$. Conversely, in dilute electrolytes the diffuse layer significantly affects the interfacial response, and the potential dependence of $C_{\mathrm{GC}}$ can lead to pronounced nonlinearity.
+For highly concentrated electrolytes, as typically found in batteries, the Debye length becomes very small and the diffuse-layer capacitance grows correspondingly large, making the compact layer the dominant contributor to $C_{\mathrm{dl}}$. cite(https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00867)
+Conversely, in dilute electrolytes the diffuse layer significantly affects the interfacial response, and the potential dependence of $C_{\mathrm{GC}}$ can lead to pronounced nonlinearity.
 
-% Generated from Sonnet
 \section{Electrochemical methods}
 
-Electrochemical methods are broadly classified into direct current (DC) and alternating current (AC) techniques. This distinction highlights a crucial difference: DC methods typically probe macro-kinetic \footnote{overall, measured reaction rate that accounts for all physical steps (charge transfer, diffusion, ohmic losses) at the scale of the entire electrode} and thermodynamic parameters under large perturbations, while AC methods resolve specific interfacial mechanisms under small-signal control.
+Electrochemical methods are broadly classified into direct current (DC) and alternating current (AC) techniques. 
+This distinction highlights a crucial difference: DC methods typically probe macro-kinetic \footnote{overall, measured reaction rate that accounts for all physical steps (charge transfer, diffusion, ohmic losses) at the scale of the entire electrode} and thermodynamic parameters under large perturbations, while AC methods resolve specific interfacial mechanisms under small-signal control (perturbative).
 
 \subsection{DC Methods: Macro-Kinetics and Device Performance}
+
 Direct current (DC) methods involve applying a constant or time-varying potential or current to the cell.
 
-\subsubsection{Cyclic Voltammetry (CV)}
-Historically, Cyclic Voltammetry (CV)—a potential sweeping method—has been fundamental in electroanalytical chemistry, mapping the thermodynamic potential window of redox species and characterizing chemical reversibility. In battery science, it is used to identify phase transitions and the potentials at which side reactions occur.
+Historically, Cyclic Voltammetry (CV) has been fundamental in electroanalytical chemistry, probing the thermodynamic potential window of redox species and characterizing chemical reversibility. 
 
-\subsubsection{Potentiostatic and Galvanostatic Methods}
-Potentiostatic methods apply a constant potential (voltage). This approach fixes the **thermodynamic driving force** (the overpotential, $\eta$) and allows the resulting current response to be solely governed by the rate-limiting kinetic and transport processes. This is ideal for studying reaction mechanisms where the interfacial potential needs to be tightly controlled. In contrast, Galvanostatic methods apply a constant current (load). This is the standard method for simulating battery operation, yielding data for device-relevant metrics such as capacity, energy density, and cycle life, rather than isolated fundamental kinetic parameters.
+An alternative appraoch to voltage controled technique is the potentiostatic method in which the electrode potential is kept constant. 
+This approach fixes the \emph{thermodynamic driving force} (the overpotential, $\eta$) and allows the resulting current response to be solely governed by the rate-limiting kinetic and transport processes.
+It is use for example in the electrolyzers or fuel cells.
+The current output varies depending on the interface electrochemistry so the methods are also called chrono-amperometry. 
+This is ideal for studying reaction mechanisms where the interfacial potential needs to be tightly controlled. 
+
+In contrast, Galvanostatic methods apply a constant current to the cell. 
+This is the standard method for simulating battery operation, yielding data for device-relevant metrics such as capacity, energy density, and cycle life, rather than isolated fundamental kinetic parameters.
 
 \subsection{AC Methods: Small-Signal Dynamic Analysis}
-The inability of DC methods to separate fundamental interfacial contributions (such as ohmic resistance, charge-transfer resistance, and double-layer capacitance) necessitated the development of alternating current (AC) techniques.
 
-% \subsubsection{Historical Development and the Electrified Double Layer}
-% The use of AC signals originated from the need to resolve the **Electrified Double Layer (EDL)**. Early work, dating back to Kohlrausch, showed that by using high-frequency AC signals, the large interfacial capacitance could be "short-circuited," allowing the isolation of the **pure ohmic resistance** of the electrolyte. Crucially, the frequency-dependent measurements of capacitance provided direct experimental evidence for the EDL, demonstrating that AC techniques are unique in their ability to resolve fundamental physical elements based on their distinct **time constants** ($\tau = RC$).
+The use of AC signals originated from the need to resolve the electrified double-layer. 
+Early work, dating back to Kohlrausch, showed that by using high-frequency AC signals, the large interfacial capacitance could be "short-circuited," allowing the isolation of the pure ohmic resistance of the electrolyte. 
+Crucially, the frequency-dependent measurements of capacitance provided direct experimental evidence for the EDL, demonstrating that AC techniques are unique in their ability to resolve fundamental physical elements based on their distinct \emph{time constants} ($\tau = RC$).
 
 \subsubsection{Electrochemical Impedance Spectroscopy (EIS)}
-Electrochemical Impedance Spectroscopy (EIS) employs a small-amplitude, sinusoidal perturbation (typically $\pm 5-10 \text{ mV}$) applied over a wide range of frequencies. This small-signal approach ensures that the electrode remains in the **linear kinetic regime** and is only minimally perturbed from its DC operating point, which is itself defined by the cell's thermodynamics (SOC). This is the essential condition for applying the principles of linear circuit theory. Therefore, EIS does not discard thermodynamics; rather, it quantifies the **dynamic (kinetic and transport) response** of the system \emph{around} a defined thermodynamic state. The primary advantage is the ability to separate and quantify phenomena occurring at vastly different time scales (e.g., charge-transfer kinetics in milliseconds vs. solid-state diffusion in seconds).
 
-\subsection{Three-Electrode Cell Configurations}
-Accurate measurement of the overpotential generated by current flow is essential for interpreting both DC and AC data. While a simple two-electrode setup measures the potential difference across the entire cell, a three-electrode configuration is required to isolate the potential of the specific Working Electrode (WE) under study. 
-This setup includes the WE, a Counter (Auxiliary) Electrode (CE) to carry the faradaic current, and a high-impedance Reference Electrode (RE) which measures the potential difference between the WE and the RE while drawing negligible current. The physical placement of the RE is critical. If positioned poorly, the measurement will include a significant potential drop due to the ohmic resistance of the electrolyte between the WE and RE, known as the $IR$ drop. This drop is a major source of error and must be minimized by placing the RE as close as possible to the WE (but away from current lines) or corrected using high-frequency EIS measurements. The common use of pseudo-reference electrodes in non-aqueous battery cells also necessitates careful characterization and quantification of potential drift.
-
-% Genearted from GPT
-% \section{Electrochemical methods}
-
-% Electrochemical techniques probe the relationship between electrical variables (voltage, current) and the underlying interfacial processes occurring at electrodes. These methods are broadly divided into direct-current (DC) and alternating-current (AC) techniques. DC methods involve applying a constant or time-varying potential or current and monitoring the system's response. Potentiostatic and galvanostatic steps, current or voltage ramps, and cyclic voltammetry belong to this category. These methods yield information on reaction thermodynamics, steady-state kinetics, and mass-transport limitations, but they do not explicitly resolve the characteristic time scales of the underlying processes.
-
-% AC methods, in contrast, rely on imposing a small sinusoidal perturbation around a defined operating point and analysing the resulting frequency-dependent response. Because different physical processes relax at different characteristic rates, frequency-domain techniques provide a powerful means of separating and quantifying contributions from charge transfer, double-layer charging, adsorption, and mass transport.
-
-% \subsection{Three-electrode configuration}
-
-% Accurate measurement of electrode potentials during electrochemical experiments requires separating the current-carrying path from the potential-sensing path. This is achieved using a three-electrode configuration, consisting of a working electrode (WE), a counter electrode (CE), and a reference electrode (RE). The working electrode is the site of interest where activation, mass transport, and interfacial charging occur. The counter electrode completes the electrical circuit and supports the current imposed by the potentiostat or galvanostat. The reference electrode provides a stable, well-defined potential against which the working electrode potential is measured.
-
-% To ensure that the RE remains at equilibrium, the potentiostat draws negligible current from it. Any current passing through the RE would drive parasitic reactions and shift its potential. The placement of the RE in the electrolyte is therefore critical: it should be close enough to the WE to minimize ohmic drop in the measured potential, yet positioned such that it does not reside in regions of high ionic flux, which would distort its potential. The uncompensated resistance between WE and RE, commonly referred to as the $iR$ drop, can affect both DC and AC measurements; modern instrumentation typically compensates for it either electronically or numerically, but careful cell design remains essential.
-
-% While three-electrode cells are indispensable for fundamental electrochemical studies, many practical systems—such as full batteries—do not permit insertion of a classical reference electrode. In such cases, pseudo-reference electrodes or floating reference measurements can be employed, at the cost of reduced accuracy in the measured interfacial potential.
-
-% From Sonnet
-% \section{Electrochemical impedance spectroscopy}
-
-% EIS measures the small-signal frequency response around a defined operating point (potential or current). Under a local linear time-invariant approximation in a short window,
-% \begin{equation}
-%     Z(j\omega) = \frac{V(j\omega)}{I(j\omega)}.
-%     \label{eq:Zdef}
-% \end{equation}
-% Small-signal conditions (typically 5-10\,mV potentiostatic or a small fraction of DC current galvanostatic) help maintain linearity; verify with amplitude sweeps or harmonic checks.
-Electrochemical impedance spectroscopy (EIS) probes the linear response of an electrochemical system to a small sinusoidal perturbation in potential or current. If the perturbation is sufficiently small, the system behaves linearly around its operating point, and the ratio of the complex voltage and current amplitudes defines the impedance,
+Electrochemical Impedance Spectroscopy (EIS) is a non-destructive technique that employs a small-amplitude sinusoidal perturbation (typically $\pm 5-10 \text{ mV}$) applied over a wide range of frequencies. 
+The impedance is the frequency dependent function:
 \begin{equation}
     Z(\omega) = \frac{\tilde{E}(\omega)}{\tilde{I}(\omega)},
 \end{equation}
-where $\omega$ is the angular frequency. By varying the frequency over several decades, EIS resolves processes occurring on disparate time scales, from double-layer charging at high frequency to diffusion and slow interfacial transformations at low frequency.
+where $\omega$ is the angular frequency.
+The tilde over $\tilde{E}$ and $\tilde{I}$ is the phasor rapresentation prosposed by Orazem and Tribollet.
+Varying the frequency of the sinusoidal wave, the impedance of different processes of the interfaces is obtained; hence the name spectroscopy.
+The primary advantage of impedance spectroscopy is the ability to separate and quantify phenomena occurring at vastly different time scales without alterning the system state.
 
-In the simplest interfacial model, the impedance of an electrode under activation control consists of a charge-transfer resistance $R_{\mathrm{ct}}$ in parallel with the double-layer capacitance $C_{\mathrm{dl}}$. At high frequencies, the capacitive branch dominates and the impedance becomes primarily imaginary; at low frequencies, the capacitive reactance becomes large and the impedance approaches $R_{\mathrm{ct}}$. Deviations from ideal capacitive behaviour, commonly observed in rough or porous electrodes, are often captured using a constant-phase element to represent distributed interfacial properties.
+In the simplest interfacial model, the impedance of an electrode under activation control consists of a charge-transfer resistance $R_{\mathrm{ct}}$ in parallel with the double-layer capacitance $C_{\mathrm{dl}}$. 
+At high frequencies, the capacitive branch dominates and the impedance becomes primarily imaginary.
+At low frequencies, the capacitive reactance becomes large and the impedance approaches $R_{\mathrm{ct}}$. 
+Deviations from ideal capacitive behaviour, commonly observed in rough or porous electrodes, are often captured using a constant-phase element to represent distributed interfacial properties.
+The representation of the interface as charge transfer resistnace $R_{\mathrm{ct}}$ and double-layer capacitance $C_{\mathrm{dl}}$ is obtain analytically from the linearization of the Butler-Volmer equation and the double layer capacitance of the Stern model.
 
 \subsection{Linearisation and charge-transfer resistance}
 
-Electrochemical impedance spectroscopy relies on applying a small perturbation $\delta \eta$ around a well-defined operating point. In this limit, the nonlinear Butler-Volmer expression may be linearised. Expanding Eq.~\eqref{eq:BV} to first order about $\eta = 0$ yields
+In the limit of small perturbations, the nonlinear Butler-Volmer expression may be linearised expanding Eq.~\eqref{eq:BV} to first order about $\eta = 0$ yelding to:
 \begin{equation}
     i \approx \left( \frac{\partial i}{\partial \eta} \right)_{\eta=0} \eta = \frac{nF i_0}{RT}\,\eta.
 \end{equation}
@@ -252,97 +244,20 @@ The inverse of this proportionality defines the charge-transfer resistance,
 \begin{equation}
     R_{\mathrm{ct}} = \frac{RT}{nF i_0},
 \end{equation}
-which represents the kinetic contribution to the interfacial impedance. In the absence of mass-transfer limitations, the small-signal impedance of an activation-controlled interface therefore contains a resistive contribution $R_{\mathrm{ct}}$ in parallel with the capacitive behaviour of the double layer.
+which represents the kinetic contribution to the interfacial impedance. 
+In the absence of mass-transfer limitations, the small-signal impedance of an activation-controlled interface therefore contains a resistive contribution $R_{\mathrm{ct}}$ in parallel with the capacitive behaviour of the double layer.
 
 \subsection{Double-layer capacitance}
-In the context of small-signal electrochemical impedance spectroscopy, the double layer behaves as an effective capacitor whose value reflects the local ionic environment and electrode potential. Together with the charge-transfer resistance arising from activation kinetics, it forms a parallel combination that constitutes the fundamental interfacial element in equivalent-circuit models. Deviations from ideal capacitive behaviour, often observed in porous or heterogeneous electrodes, manifest as constant-phase-element (CPE) behaviour, but the physical origin remains the distributed nature of interfacial charge storage and transport.
 
-\subsection{Basic circuit elements}
+Under small perturbations, the double layer behaves as an effective capacitor whose value reflects the adsorbed charges and electrode potential. 
+Together with the charge-transfer resistance arising from activation kinetics, it forms a parallel combination that constitutes the fundamental interfacial element in equivalent-circuit models. 
 
-Resistor:
-\begin{equation}
-    Z_R = R \quad \text{(real; no phase shift).}
-    \label{eq:ZR}
-\end{equation}
-
-Capacitor:
-\begin{equation}
-    Z_C = \frac{1}{j\omega C}, \quad \text{current leads voltage by $90^\circ$; blocks DC, passes AC with decreasing impedance as $\omega$ increases.}
-    \label{eq:ZC}
-\end{equation}
-
-Inductor:
-\begin{equation}
-    Z_L = j\omega L, \quad \text{voltage leads current by $90^\circ$.}
-    \label{eq:ZL}
-\end{equation}
-
-\subsection{Series/parallel combinations}
-
-For elements in series, impedances add:
-\begin{equation}
-    Z_{\mathrm{series}} = \sum_k Z_k.
-    \label{eq:Zseries}
-\end{equation}
-For elements in parallel, admittances add:
-\begin{equation}
-    \frac{1}{Z_{\mathrm{parallel}}} = \sum_k \frac{1}{Z_k}.
-    \label{eq:Zparallel}
-\end{equation}
-A useful kernel for battery interfaces is the Randles circuit: $R_s$ in series with $(R_{\mathrm{ct}} \parallel C_{\mathrm{dl}})$ and, optionally, a Warburg element for diffusion.
-
-\subsection{Equivalent-circuit signatures}
-
-Ohmic resistance ($R_s$): high-frequency intercept (electrolyte, separator, leads).
-
-Charge transfer ($R_{\mathrm{ct}}$) in parallel with double layer ($C_{\mathrm{dl}}$ or CPE): one (or more) semicircles in Nyquist with apex near $\omega \approx 1/(R_{\mathrm{ct}} C_{\mathrm{dl}})$.
-
-Diffusion (Warburg):
-\begin{equation}
-    Z_W = \frac{\sigma}{\sqrt{j\omega}} \quad \Rightarrow \quad \text{45$^\circ$ line in Nyquist.}
-    \label{eq:warburg}
-\end{equation}
-Finite-length diffusion bends toward vertical (capacitive) at low frequency:
-\begin{equation}
-    Z_{W,\mathrm{FL}} = \frac{\sigma}{\sqrt{j\omega}} \tanh\!\left(\sqrt{j\omega \tau_D}\right) \quad \text{or} \quad \coth\!\left(\sqrt{j\omega \tau_D}\right),
-    \label{eq:warburg_fl}
-\end{equation}
-depending on boundary condition.
-
-\subsection{Impedance plots}
-
-Magnitude and phase are
-\begin{equation}
-    |Z(\omega)| = \sqrt{ \big(\Re Z\big)^2 + \big(\Im Z\big)^2 },
-    \qquad
-    \phi(\omega) = \arctan\!\left( \frac{\Im Z}{\Re Z} \right).
-    \label{eq:mag_phase}
-\end{equation}
-Nyquist: plot $-\Im(Z)$ vs $\Re(Z)$; each point corresponds to a frequency. Bode: plot $|Z(\omega)|$ and $\phi(\omega)$ vs $\omega$; useful for separating overlapping processes by corner frequencies.
-
-\subsection{Data quality and validation}
-
-Causality, linearity, and stability imply Kramers-Kronig (KK) consistency. Report KK residuals or use H-/J-tests; large violations indicate drift, nonlinearity, or artifacts. Verify linearity by checking that $Z$ does not depend on perturbation amplitude and by absence of harmonic distortion. Use coherence or repeatability to justify fit weights and average multiple records when possible.
-
-Uncompensated $IR$ and RE placement matter: minimise $R_s$ contributions to the measured overpotential or correct them post hoc. Temperature strongly affects impedance; monitor/control $T$.
-
-% \subsection{Practical notes}
-
-% Choose frequency grids with logarithmic spacing (e.g. 5-10 points/decade). At the lowest frequency, ensure sufficient time per point (e.g. $\ge$3-5 cycles per tone), or use multi-sine with integer-period windows to avoid spectral leakage. Minimise lead inductance and stray capacitance; verify high-frequency behaviour on a dummy cell. Report area-normalised quantities (e.g. $\Omega\cdot\mathrm{cm}^2$, $\mathrm{F}\cdot\mathrm{cm}^{-2}$) where appropriate.
-
-% \subsection{Remarks on non-stationary/operando EIS}
-
-% During cycling, treat the system as locally time-invariant within each analysis window; window length is set by the lowest frequency and acceptable drift. Validate with KK and linearity checks. Avoid intermodulation and spectral leakage by using integer-period multi-sine designs (e.g. odd harmonics, phase optimisation) and synchronised acquisition.
-
-% \section{Experimental factors}
-
-% Shield cabling and instrumentation (e.g. Faraday cage) to reduce electromagnetic interference. Use proper grounding and minimise loop areas to reduce inductive pickup. Control temperature and, for three-electrode cells, place the RE close to the WE to minimise uncompensated $IR$ drop.
-
-% From GPT
+Deviations from ideal capacitive behaviour, often observed in porous or heterogeneous electrodes, manifest as constant-phase-element (CPE) behaviour, but the physical origin remains the distributed nature of interfacial charge storage and transport.
 
 \subsection{Diffusion impedance}
 
-When mass transport contributes to the interfacial response, the impedance acquires a characteristic frequency dependence that reflects the dynamics of concentration relaxation. Starting from the diffusion equation under small-signal perturbation,
+When mass transport contributes to the interfacial response, the impedance acquires a characteristic frequency dependence that reflects the dynamics of concentration relaxation.
+Starting from the diffusion equation under small-signal perturbation,
 \[
 \frac{\partial c}{\partial t} = D \nabla^2 c,
 \]
@@ -370,7 +285,22 @@ while for transmissive (open) boundaries,
 \end{equation}
 where $\tau_D = L^2/D$ is the characteristic diffusion time for a layer of thickness $L$. At high frequencies, both expressions recover the semi-infinite Warburg form, whereas at low frequencies the impedance transitions to a purely real resistance reflecting complete depletion of the diffusion layer.
 
-Diffusion-related impedance elements are essential for interpreting battery electrode behaviour, where mass transport in the electrolyte, within porous electrode structures, and through solid particles strongly influences the dynamic response. The distinction between semi-infinite and finite-length diffusion is particularly important when analysing non-stationary or transient impedance measurements, as the effective diffusion domain may change with state of charge, cycling history, or electrode microstructure.
+Diffusion-related impedance elements are essential for interpreting battery electrode behaviour, where mass transport in the electrolyte, within porous electrode structures, and through solid particles strongly influences the dynamic response. 
+The distinction between semi-infinite and finite-length diffusion is particularly important when analysing non-stationary or transient impedance measurements, as the effective diffusion domain may change with state of charge, cycling history, or electrode microstructure.
+
+\section{Equivalent circtuit models}
+
+With the linearization of electrochemical equation one obtains processes behaving like electrical elements connected in series or in parallel, depending on the system characteristics.
+To visualize the components, it is common to translate the set of equations into a circuit and use the lows of series and parallel connection of electrocal elements to obtain a simplified and linearized model of the interface.
+This approach was introduced by Randles [put citation] and it is the \emph{de facto} method to visualize models in scientific publications.
+
+The impedance of electrical elements and basic circuits is described in the Appendix \ref{app:imp elements}.
+
+\subsection{Data quality and validation}
+
+Causality, linearity, and stability imply Kramers-Kronig (KK) consistency. Report KK residuals or use H-/J-tests; large violations indicate drift, nonlinearity, or artifacts. Verify linearity by checking that $Z$ does not depend on perturbation amplitude and by absence of harmonic distortion. Use coherence or repeatability to justify fit weights and average multiple records when possible.
+
+Uncompensated $IR$ and RE placement matter: minimise $R_s$ contributions to the measured overpotential or correct them post hoc. Temperature strongly affects impedance; monitor/control $T$.
 
 \section{Potentiostat and galvanostat architecture}
 
@@ -379,24 +309,67 @@ Modern electrochemical measurements rely on potentiostats or galvanostats, elect
 While seldom overlooked, the inner function of the instrument helps the scientist to design more appropriate experiment and troubleshoot problems. 
 For this work insted, it is necessary to support the choice on the setup assembling discussed in Chapter \ref{ch:acquisition}
 
-\subsection{Potentiostat operation}
+\section{Validity and consistency of electrochemical impedance}
 
-The purpose of a potentiostat is to maintain the potential of a working electrode (WE) at a prescribed value relative to a reference electrode (RE). This is achieved using a high-gain feedback loop. The potential difference between WE and RE is measured through a high-impedance voltage follower connected to the RE. This stage ensures that virtually no current flows through the RE, preserving its equilibrium potential. The measured potential is compared to a user-defined setpoint, and the resulting error signal drives a power amplifier connected to the counter electrode (CE). By adjusting the CE potential, the amplifier forces the WE potential toward the setpoint. The output stage must source or sink the full cell current while maintaining stability of the feedback loop.
+Electrochemical Impedance Spectroscopy relies on a set of assumptions that define the conditions under which impedance is a physically meaningful quantity. 
+
+First, the system must be \emph{linear} with respect to the applied perturbation. 
+This requires that the amplitude of the AC excitation be sufficiently small so that the response can be accurately described by the first-order linearisation of the governing equations. 
+In practice, this condition implies that the measured impedance must be independent of the perturbation amplitude and that higher harmonics in the response are negligible.
+
+Second, the system must be \emph{stationary} during the measurement, meaning that the underlying thermodynamic state (electrode potential, surface composition, temperature, state of charge) does not change significantly over the duration of the impedance experiment. 
+This assumption is often implicit in classical EIS but becomes critical in battery systems, where slow processes such as diffusion, phase transitions, and interphase growth continuously evolve.
+
+Third, the system must be \emph{stable} and \emph{causal}. 
+Stability ensures that bounded perturbations produce bounded responses, while causality requires that the response at any time depends only on present and past inputs. 
+These properties are automatically satisfied for most passive electrochemical systems under equilibrium or near-equilibrium conditions, but may be violated in the presence of strong feedback, parasitic reactions, or measurement artefacts.
+
+\subsection{electrochemical instrumentation}
+
+Electrochemical methods consist of a perturbation of one cell variable among voltage and current while recording the other as function of time.
+To do so, two types of instruments are needed: a potentiostat or a galvanostat; usually packed inside one banchtop device.
+The purpose of a potentiostat is to maintain the potential of a working electrode (WE) at a prescribed value relative to a reference electrode (RE). 
+This is achieved using a high-gain feedback loop. 
+The potential difference between WE and RE is measured through a high-impedance voltage follower connected to the RE. 
+This element ensures that only a negligible current flows through the RE, preserving its equilibrium potential. 
+The measured potential is compared to a user-defined setpoint, and the resulting error signal drives a power amplifier connected to the counter electrode (CE). 
+By adjusting the CE potential, the amplifier forces the WE potential toward the setpoint.
+The output stage must source or sink the full cell current while maintaining stability of the feedback loop.
+
+This check is performed continously with a velocity dictated by the bandwidth of the operational amplifier. 
+Usually this value is arbitrary in a scale of integer.
+Hihg values means fast loops, while low values, lower.
+To reduce noise or fluctuation a low bandwidth is an ideal choice while for measuring the dynamic of fast system is necessary to use high values and introduce more noise.
 
 The current flowing through the WE-CE path is measured by a current-to-voltage converter, typically implemented using a transimpedance amplifier. The converter output provides a low-noise measurement of the cell current and is digitised for acquisition and further processing. The transimpedance gain determines the current range, and switching networks or programmable gain amplifiers are often used to accommodate multiple decades of current.
 
-\subsection{Galvanostatic control}
+In galvanostatic mode, the instrument controls the current rather than the potential. 
+The measured current is compared to a desired setpoint, and the feedback loop adjusts the CE potential to maintain the prescribed current. The WE potential freely responds to the applied current and is measured through the high-impedance RE input. Internally, the same analogue blocks are used as in potentiostatic operation, but with the error signal derived from the difference between measured and commanded current. High-quality galvanostatic control requires wide bandwidth and accurate transimpedance conversion, as well as protection circuitry to prevent saturation when the cell dynamics change abruptly.
+Figure \ref{fig:pot/galv schematics} contains a draw of the connections for a typical electrochemical device with hihglights of the electronics schematics for the potentiostatic and galvanostatic mode.
+It is not included the circuitry for measuring the impedance as part of the device; the core schematics remains the same.
 
-In galvanostatic mode, the instrument controls the current rather than the potential. The measured current is compared to a desired setpoint, and the feedback loop adjusts the CE potential to maintain the prescribed current. The WE potential freely responds to the applied current and is measured through the high-impedance RE input. Internally, the same analogue blocks are used as in potentiostatic operation, but with the error signal derived from the difference between measured and commanded current. High-quality galvanostatic control requires wide bandwidth and accurate transimpedance conversion, as well as protection circuitry to prevent saturation when the cell dynamics change abruptly.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{figures/electrochemistry/pot_galv_schematics.png}
+    \caption{Schematic of a potentiostat/galvanostat instrument. From 10.1007/s11581-019-03132-z}
+    \label{fig:pot/galv schematics}
+\end{figure}
 
 \subsection{Auxiliary analogue inputs and outputs}
 
-Modern potentiostats incorporate auxiliary input and output channels to enable external excitation or synchronisation with additional hardware. Analogue output ports are typically connected upstream of the main control loop, allowing externally generated waveforms to be superimposed on the programmed potential or current. Depending on the instrument architecture, the auxiliary output is added either at the setpoint input of the control amplifier or directly at the summing node of the error amplifier. This functionality is essential for experiments requiring composite perturbations, such as multisine excitation superimposed on galvanostatic cycling.
+Modern potentiostats incorporate auxiliary input and output connections to enable external excitation or synchronisation with additional hardware. 
+Analogue input ports are typically connected upstream of the main control loop, allowing externally generated waveforms to be superimposed on the programmed potential or current (see \ref{fig:pot/galv schematics} b) top left of the schematics). 
+Depending on the instrument architecture, the auxiliary output is added either at the setpoint input of the control amplifier or directly at the summing node of the error amplifier. 
+This functionality is essential for experiments requiring composite perturbations as will be described in the Methods part of this work.
 
-Auxiliary analogue inputs provide direct access to the measured analogue signals before digital conversion. These inputs may tap into the potential follower, the current-to-voltage converter, or other diagnostic nodes within the instrument. Recording these signals enables high-resolution acquisition beyond the default sampling configuration of the potentiostat and facilitates the development of custom measurement protocols, including broadband impedance excitation and time-resolved analysis. Because the auxiliary ports bypass part of the instrument's internal filtering and signal conditioning, their bandwidth is often significantly higher than that of the standard measurement channel, making them suitable for external oscilloscopes or dedicated data-acquisition systems.
+Auxiliary analogue inputs provide direct access to the measured analogue signals before digital conversion bypassing part of the instrument's internal filtering and signal conditioning. 
+Recording these signals enables high-resolution acquisition beyond the default sampling configuration of the potentiostat with a dedicated device.
 
 \subsection{Digital control and communication}
 
-Although the analogue front-end implements the critical control functions, contemporary potentiostats operate under digital supervision. A microcontroller or embedded processor manages range selection, filter configuration, calibration, safety interlocks, and communication with a host computer. The digital unit also handles data transfer, typically via USB, Ethernet or proprietary interfaces, and provides synchronization mechanisms for combined measurements with external equipment. From the user's perspective the potentiostat behaves as a stand-alone device, but internally it exchanges commands and measurement data continuously with the host software, which orchestrates the experiment, logs data, and provides real-time visualisation.
+Although the core of the functinality of the potentiosta/galvanostat is analog circtuitry, the control and signal acquisition is digital and implemented with FPGAs or microcontrollers.
+The measurment electronics interfaces with a communication board that connects via USB or Ethernet to Personal Computers. 
+This interface sets the measurment hardware parameters to the users definition (chosen via dedicated program on the PC) and retrives the sampled data.
+The instruments is then capable of working indipendenlty of the computer storing data temporary in a buffer memory.
 
-The combination of analogue control loops, high-resolution converters, and versatile auxiliary interfaces makes modern potentiostats suitable platforms for advanced perturbation techniques. In particular, the capability to superimpose external excitation signals and to record high-bandwidth analogue responses is crucial for non-stationary broadband impedance measurements, as developed in this work.
+This description is pertinent to this work because later in the Methods Part I will describe a Python program that communicates with the board to set parameters and retrive data and device information.

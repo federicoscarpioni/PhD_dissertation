@@ -1,5 +1,71 @@
 \appendix
 
+\chapter{Impedance of electrical elements and basic circuits}
+\label{app:imp elements}
+
+\subsection{Basic circuit elements}
+Resistor:
+\begin{equation}
+    Z_R = R \quad \text{(real; no phase shift).}
+    \label{eq:ZR}
+\end{equation}
+
+Capacitor:
+\begin{equation}
+    Z_C = \frac{1}{j\omega C}, \quad \text{current leads voltage by $90^\circ$; blocks DC, passes AC with decreasing impedance as $\omega$ increases.}
+    \label{eq:ZC}
+\end{equation}
+
+Inductor:
+\begin{equation}
+    Z_L = j\omega L, \quad \text{voltage leads current by $90^\circ$.}
+    \label{eq:ZL}
+\end{equation}
+
+\subsection{Series/parallel combinations}
+
+For elements in series, impedances add:
+\begin{equation}
+    Z_{\mathrm{series}} = \sum_k Z_k.
+    \label{eq:Zseries}
+\end{equation}
+For elements in parallel, admittances add:
+\begin{equation}
+    \frac{1}{Z_{\mathrm{parallel}}} = \sum_k \frac{1}{Z_k}.
+    \label{eq:Zparallel}
+\end{equation}
+A useful kernel for battery interfaces is the Randles circuit: $R_s$ in series with $(R_{\mathrm{ct}} \parallel C_{\mathrm{dl}})$ and, optionally, a Warburg element for diffusion.
+
+\subsection{Equivalent-circuit signatures}
+
+Ohmic resistance ($R_s$): high-frequency intercept (electrolyte, separator, leads).
+
+Charge transfer ($R_{\mathrm{ct}}$) in parallel with double layer ($C_{\mathrm{dl}}$ or CPE): one (or more) semicircles in Nyquist with apex near $\omega \approx 1/(R_{\mathrm{ct}} C_{\mathrm{dl}})$.
+
+Diffusion (Warburg):
+\begin{equation}
+    Z_W = \frac{\sigma}{\sqrt{j\omega}} \quad \Rightarrow \quad \text{45$^\circ$ line in Nyquist.}
+    \label{eq:warburg}
+\end{equation}
+Finite-length diffusion bends toward vertical (capacitive) at low frequency:
+\begin{equation}
+    Z_{W,\mathrm{FL}} = \frac{\sigma}{\sqrt{j\omega}} \tanh\!\left(\sqrt{j\omega \tau_D}\right) \quad \text{or} \quad \coth\!\left(\sqrt{j\omega \tau_D}\right),
+    \label{eq:warburg_fl}
+\end{equation}
+depending on boundary condition.
+
+
+\subsection{Impedance plots}
+
+Magnitude and phase are
+\begin{equation}
+    |Z(\omega)| = \sqrt{ \big(\Re Z\big)^2 + \big(\Im Z\big)^2 },
+    \qquad
+    \phi(\omega) = \arctan\!\left( \frac{\Im Z}{\Re Z} \right).
+    \label{eq:mag_phase}
+\end{equation}
+Nyquist: plot $-\Im(Z)$ vs $\Re(Z)$; each point corresponds to a frequency. Bode: plot $|Z(\omega)|$ and $\phi(\omega)$ vs $\omega$; useful for separating overlapping processes by corner frequencies.
+
 \chapter{building auxiliary connectors}
 \label{ap:aux cable}
 

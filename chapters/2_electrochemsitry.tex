@@ -313,45 +313,27 @@ They are linked by the Kramers--Kronig (KK) relations, which express each compon
 
 For an impedance function $Z(\omega) = Z'(\omega) + j Z''(\omega)$, the KK relations read
 \begin{equation}
-Z'(\omega) = \frac{2}{\pi} \mathcal{P}
-\int_{0}^{\infty}
-\frac{\omega' Z''(\omega')}{\omega'^2 - \omega^2} \, d\omega',
+    Z'(\omega) = \frac{2}{\pi} \mathcal{P}
+    \int_{0}^{\infty}
+    \frac{\omega' Z''(\omega')}{\omega'^2 - \omega^2} \, d\omega',
 \end{equation}
 \begin{equation}
-Z''(\omega) = -\frac{2\omega}{\pi} \mathcal{P}
-\int_{0}^{\infty}
-\frac{Z'(\omega')}{\omega'^2 - \omega^2} \, d\omega',
+    Z''(\omega) = -\frac{2\omega}{\pi} \mathcal{P}
+    \int_{0}^{\infty}
+    \frac{Z'(\omega')}{\omega'^2 - \omega^2} \, d\omega',
 \end{equation}
 where $\mathcal{P}$ denotes the Cauchy principal value.
 
 In electrochemistry, the KK relations provide a powerful consistency check: 
 if an experimentally measured impedance violates KK relations beyond experimental uncertainty, at least one of the underlying assumptions of EIS has been violated.
 
-\subsection{Practical interpretation of Kramers--Kronig violations}
+In practice, KK realations cannot be exaclty veryfied by the above equation since they require spectral information from zero to infinit frequency.
+On limited experimental data fitting a circuit of sereis of RC elements produces a close approximation. [Cite source paper and add something else]
 
 From an experimental standpoint, deviations from KK consistency can arise from several sources.
+Non-linearity of the system response, non-stationarity of the system or artivacts introduced by cell design or the electronic instrumentation.
 
-Nonlinearity is a common cause, particularly in systems undergoing adsorption, phase transitions, or metal deposition. 
-In such cases, the response is no longer proportional to the excitation, and higher-order terms contribute to the measured signal.
-
-Non-stationarity represents another major source of KK violations. 
-If the system drifts during the measurement—due to changing state of charge, evolving concentration profiles, or temperature variations—the impedance spectrum no longer corresponds to a single operating point.
-
-Experimental artefacts can also introduce inconsistencies. 
-Poor reference electrode placement, uncompensated ohmic drops, cable inductance, or bandwidth limitations of the instrumentation distort the measured response and lead to apparent KK violations.
-
-In practice, KK tests (such as residual analysis or H-/J-transforms) are therefore used not only as mathematical checks but as diagnostic tools to assess data quality and experimental validity. 
-Large, systematic deviations should be interpreted as indicators of violated assumptions rather than as fitting errors.
-
-
-\section{Potentiostat and galvanostat architecture}
-
-Modern electrochemical measurements rely on potentiostats or galvanostats, electronic instruments designed to control and measure the electrical variables of an electrochemical cell with high precision and bandwidth. Although commercial instruments vary in implementation, their internal structure is based on a small number of fundamental analogue building blocks that implement the control loops required for accurate electrochemical operation.
-
-While seldom overlooked, the inner function of the instrument helps the scientist to design more appropriate experiment and troubleshoot problems. 
-For this work insted, it is necessary to support the choice on the setup assembling discussed in Chapter \ref{ch:acquisition}
-
-\subsection{electrochemical instrumentation}
+\subsection{Electrochemical instrumentation}
 
 Electrochemical methods consist of a perturbation of one cell variable among voltage and current while recording the other as function of time.
 To do so, two types of instruments are needed: a potentiostat or a galvanostat; usually packed inside one banchtop device.

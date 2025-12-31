@@ -1,10 +1,26 @@
 \chapter{Batteries}
 
-Electrochemical energy storage systems convert chemical potential energy into electrical work through redox reactions occurring at spatially separated electrodes. Among these systems, rechargeable (secondary) batteries have become essential across portable electronics, stationary storage and electric mobility. Lithium-ion batteries in particular have dominated the field due to their high operating voltage, large specific energy and excellent cycle efficiency. This chapter introduces the fundamental principles of rechargeable batteries, their key materials, performance metrics and modern technological evolution. Emphasis is placed on lithium-ion batteries because they serve as the experimental platform in this work.
+Electrochemical energy storage systems convert chemical energy into electrical work through redox reactions occurring at electrodes interfaces.
+Among these systems, rechargeable (or secondary) batteries have become essential across portable electronics, stationary storage and electric mobility. 
+Lithium-ion batteries, in particular, have dominated the field due to their high operating voltage, large specific energy and excellent cycle efficiency. 
+This chapter introduces the fundamental principles of rechargeable batteries, their acive materials, performance metrics and modern technological evolution. 
+Emphasis is placed on lithium-ion batteries because they serve as the experimental platform in this work.
+
+The therm battery refears to a stack of electrochemical cells connected in series, although in modern times it refers an electrochemical device for long-term energy storage even when only one cell with two electrodes is build.
+
+While lithium-ion batteries are used as the primary experimental platform in this work, the concepts introduced in this chapter are formulated to apply broadly to rechargeable batteries based on different charge carriers, electrolytes and storage mechanisms.
+
+Rather than providing a comprehensive review of specific electrode materials, this thesis adopts a mechanism-oriented perspective. Individual battery chemistries and materials are introduced in the chapters where experimental results are discussed, and only to the extent necessary to interpret the measured impedance response.
 
 \section{Basic principles of operation}
 
-A battery consists of two electrodes, a positive and a negative electrode (IUPAC convention), separated by an electronically insulating but ionically conductive electrolyte. During discharge (galvanic cell), oxidation occurs at the negative electrode, releasing electrons to the external circuit and cations to the electrolyte. Concurrently, reduction occurs at the positive electrode, accepting electrons and intercalating the cations arriving through the electrolyte. The reverse processes occur during charging (electrolytic cell).
+A battery consists of two electrodes separated by an electronically insulating but ionically conductive electrolyte. 
+During discharge, oxidation occurs at the negative voltage electrode, releasing electrons to the external circuit and cations to the electrolyte. 
+Concurrently, reduction occurs at the positive electrode, accepting electrons and intercalating the cations arriving through the electrolyte. 
+A negative current flow is produced on the external circuit of the cell until the electrodes reach the same potential and no driving force is present.
+The reaction is spontaneous and the system referred as a \emph{galvanic cell}. 
+The reverse processes occur during charging: the current flows on the opposite direction producing the reductive Redox half-reaction at the positive electrode and the oxidation at the negative one.
+Such a system si called instead \emph{electrolytic cell} and the reaction is not spontaneous but requires external work on the system.
 
 \subsection{Electrode potentials and cell voltage}
 
@@ -12,7 +28,8 @@ The electrochemical potential of an ionic species $i$ is
 \begin{equation}
     \tilde{\mu}_i = \mu_i + z_i F \phi,
 \end{equation}
-where $\mu_i$ is the chemical potential, $z_i$ the charge number, $F$ Faraday's constant and $\phi$ the electrostatic potential. For a redox reaction of the form
+where $\mu_i$ is the chemical potential, $z_i$ the charge number, $F$ Faraday's constant and $\phi$ the electrostatic potential. 
+For a redox reaction of the form
 \[
 \mathrm{Ox} + ne^- \rightleftharpoons \mathrm{Red},
 \]
@@ -20,43 +37,15 @@ the equilibrium potential is given by the Nernst equation
 \begin{equation}
     E = E^\circ + \frac{RT}{nF} \ln\!\left(\frac{a_{\mathrm{Ox}}}{a_{\mathrm{Red}}}\right),
 \end{equation}
-where $a$ denotes activity and $E^\circ$ the standard reduction potential. In a full cell, the open-circuit voltage (OCV) is the difference between the equilibrium potentials of the positive and negative electrodes:
+where $a$ denotes the \emph{activity} and $E^\circ$ the \emph{standard reduction potential}. 
+In a full cell, the open-circuit voltage (OCV) is the difference between the equilibrium potentials of the positive and negative electrodes:
 \begin{equation}
     U_{\mathrm{OCV}} = E_+ - E_-.
 \end{equation}
 
-Because each electrode hosts a composition-dependent chemical potential for the intercalated species, the OCV becomes a function of electrode stoichiometry. For an intercalation compound $M_x A$, where $A$ is the guest species (Li, Na, \ldots), the chemical potential is
-\begin{equation}
-    \mu_A(x) = \mu_A^\circ + RT \ln\!\left(\frac{x}{1 - x}\right) + \frac{\partial G_{\mathrm{mix}}}{\partial x},
-\end{equation}
-where $G_{\mathrm{mix}}$ accounts for non-ideal interactions. The OCV profile thus reflects phase transitions, entropy terms and the mixing thermodynamics within the active materials.
-
-% \subsection{Gibbs free energy and electrical work}
-
-% The electrical work delivered during discharge is related to the Gibbs free energy of reaction:
-% \begin{equation}
-%     \Delta G = -n F U_{\mathrm{OCV}}.
-% \end{equation}
-% For a battery cycled between states of charge with stoichiometries $x_1$ and $x_2$, the theoretical energy is
-% \begin{equation}
-%     E_{\mathrm{th}} = n F \int_{x_1}^{x_2} U_{\mathrm{OCV}}(x)\, dx.
-% \end{equation}
-
 \section{Performance metrics}
 
-Battery performance is evaluated using energy, power and capacity:
-
-\subsection{Capacity}
-
-The theoretical capacity of an intercalation material accommodating $n$ electrons per formula unit is
-\begin{equation}
-    Q_{\mathrm{th}} = \frac{n F}{M},
-\end{equation}
-where $M$ is the molar mass. For a composite electrode of active mass $m_{\mathrm{act}}$, the theoretical specific capacity is $q_{\mathrm{th}} = Q_{\mathrm{th}} m_{\mathrm{act}}$.
-
-The practical capacity is limited by side reactions, rate capability and electrode macroscopic structure (porosity and thickness).
-
-\subsection{Energy and power}
+Battery performance is evaluated using energy, power and capacity.
 
 The specific energy (gravimetric)
 \begin{equation}
@@ -66,79 +55,105 @@ and specific power
 \begin{equation}
     P_{\mathrm{sp}} = \frac{U_{\mathrm{load}}(t) I(t)}{m_{\mathrm{cell}}},
 \end{equation}
-are commonly represented in Ragone plots showing trade-offs between the two.
+% are commonly represented in Ragone plots showing trade-offs between the two.
 
-\subsection{C-rate}
+The theoretical capacity of an intercalation material accommodating $n$ electrons per formula unit is
+\begin{equation}
+    Q_{\mathrm{th}} = \frac{n F}{M},
+\end{equation}
+where $M$ is the molar mass. For a composite electrode of active mass $m_{\mathrm{act}}$, the theoretical specific capacity is $q_{\mathrm{th}} = Q_{\mathrm{th}} m_{\mathrm{act}}$.
 
-A C-rate is defined as the charge or discharge current normalized by the nominal capacity $Q_{\mathrm{nom}}$:
+The practical capacity is limited by side reactions, rate capability and electrode macroscopic structure (porosity and thickness).
+
+% It is important to note that the achievable voltage window, the rate capability, and the long-term stability associated with these performance metrics are not intrinsic constants, but emerge from the underlying electrochemical kinetics and transport properties, which depend on the specific combination of electrode materials, electrolyte composition, and operating conditions.
+
+In battery technology the current flowing in the cell is expressed as C-rate, defined as the charge or discharge current normalized by the nominal capacity $Q_{\mathrm{nom}}$:
 \begin{equation}
     I = C\, Q_{\mathrm{nom}}.
 \end{equation}
 A 1C current charges or discharges the battery in 1 hour, while C/10 corresponds to 10 hours.
 
 \section{Storage mechanisms}
+
+The type of Redox reaction at each of the battery electrodes can be of different nature.
+The first "pile" of Alessandro Volta was a battery using the electrodissolution and deposition of copper and zinc respectivly, while modern rechargible batteries are base on the much more efficient process of ion intercalation.
+These mechanisms are not specific to lithium-based systems and can, in principle, involve different alkali or multivalent ions depending on the electrolyte and host structure.
+
 \subsection{Intercalation}
 
-Intercalation is a primary storage mechanism in rechargeable batteries. Guest ions (Li$^+$, Na$^+$, K$^+$, Mg$^{2+}$, etc.) reversibly insert into the crystal lattice of host materials without fundamentally disrupting the host structure. The process is topotactic, meaning the crystal symmetry and connectivity are preserved during insertion and extraction cycles.
+In intercalation, guest metallic ions reversibly insert into the crystal lattice of a host material without disrupting its structure. 
+This principles applied to inorganic materials where crystals planes are stacked and bound with electrostatic forces.
+When an element of the structure undergoes oxidation or reduction to balance the overall charge an ion inserts or it is removed from the interlayer volume.
+Example of such material crystal structure are octahedral transition metal oxides, olivines and spinel structures.
 
-In layered oxides such as NMC, ions occupy octahedral sites between transition-metal oxide layers. The intercalation reaction can be written as
+In layered oxides such as Cobalt or Manganese oxides, host ions occupy octahedral sites between transition-metal oxide layers. 
+The intercalation reaction can be written as
 \begin{equation}
     \mathrm{M}_x \mathrm{A}_y + (1-x)\mathrm{M}^{n+} + (1-x)ne^- \rightleftharpoons \mathrm{MA}_y,
 \end{equation}
-where M denotes the intercalated metal ion, A is the host framework, and stoichiometry $x$ varies with state of charge. The layered structure provides two-dimensional ion diffusion pathways, enabling rapid ion transport.
+where M denotes the intercalated metal ion, A is the host framework, and stoichiometry $x$ varies with state of charge. 
+The layered structure provides two-dimensional ion diffusion pathways, enabling rapid ion transport.
 
-In olivine phosphates like LiFePO$_4$, ions occupy sites within one-dimensional channels running through the crystal. The two-phase behavior (coexistence of intercalated and deintercalated domains) arises from the crystal structure and electrostatic interactions, producing the characteristic flat voltage plateau.
-
-The intercalation voltage $U(x)$ is determined by the electrochemical potential difference between the two electrodes and depends sensitively on composition. This composition dependence allows OCV profiling to infer state of charge, making intercalation materials ideal for battery management.
+In olivine phosphates like LiFePO$_4$, ions occupy sites within one-dimensional channels running through the crystal. 
+The two-phase behavior (coexistence of intercalated and deintercalated domains) arises from the crystal structure and electrostatic interactions, producing the characteristic flat voltage plateau.
 
 \subsection{Alloying}
 
-Alloying mechanisms store metal ions through formation of intermetallic phases rather than lattice insertion. Silicon, for instance, forms a series of phases with lithium:
+In the alloying mechanism metal ions are stored in the active material through formation of intermetallic phases rather than lattice insertion. 
+Silicon, for instance, forms a series of phases with lithium:
 \begin{equation}
     \mathrm{Si} + \beta \mathrm{Li}^+ + \beta e^- \rightleftharpoons \mathrm{Li}_\beta \mathrm{Si},
 \end{equation}
-where $\beta$ can range up to 4.4, giving a theoretical specific capacity of 4200~mAh~g$^{-1}$, nearly ten times that of graphite.
+where $\beta$ can range up to 4.4, giving a theoretical specific capacity of 4200~mAh~g$^{-1}$, nearly ten times that of graphite the state of the art of modern commercial batteries.
 
-However, the dramatic volume expansion accompanying alloying ($\sim 300\%$ for silicon) induces mechanical stress, particle fragmentation and rapid electrode degradation. Modern high-capacity anodes employ silicon-graphite composites and carbon coatings to mitigate pulverization and maintain electrical contact across cycling.
+However, the dramatic volume expansion accompanying alloying ($\sim 300\%$ for silicon) induces mechanical stress, particle fragmentation and rapid electrode degradation. 
+Modern high-capacity anodes employ silicon-graphite composites  and carbon coatings with a small percentage of silicon to mitigate damages and maintain electrical contact across cycling.
 
 \subsection{Conversion}
 
-Conversion reactions involve reduction of a metal oxide or fluoride to metallic form, coupled with oxide/fluoride ion migration. These reactions typically exhibit multiple voltage plateaus corresponding to sequential reduction steps and offer very high theoretical capacities. However, conversion materials suffer from large voltage hysteresis, low coulombic efficiency and rapid capacity fade due to electrolyte decomposition and material restructuring during cycling. Consequently, they remain largely in research phase and are not employed in commercial cells.
+Conversion reactions involve reduction of a metal oxide or fluoride to metallic form, coupled with oxide/fluoride ion migration. 
+These reactions typically exhibit multiple voltage plateaus corresponding to sequential reduction steps and offer very high theoretical capacities. 
+However, conversion materials suffer from large voltage hysteresis, low coulombic efficiency and rapid capacity fade due to electrolyte decomposition and material restructuring during cycling. Consequently, they remain largely in research phase and are not employed in commercial cells.
 
-\subsection{Metallic electrodes}
+\subsection{Electrodeposition}
 
-Metallic electrodes store energy through electroplating and stripping of the metal itself. Lithium metal anodes offer the highest specific capacity (3861~mAh~g$^{-1}$) and lowest potential, enabling very high energy density cells. Sodium and other alkali metals provide similar benefits for their respective battery chemistries. However, metallic deposition is prone to dendritic growth, which increases surface area and accelerates electrolyte decomposition, reducing cycle life and raising safety concerns. Metallic cathodes (e.g., sulfur, oxygen) pair with metal anodes in advanced chemistries like Li-S and Li-air, but face severe degradation and efficiency challenges. Solid-state electrolytes and protective coatings aim to stabilize metallic electrode operation.
-Intercalation is the primary storage mechanism in commercial lithium-ion batteries. Guest lithium ions reversibly insert into the crystal lattice of host materials without fundamentally disrupting the host structure. The process is topotactic, meaning the crystal symmetry and connectivity are preserved during lithiation and delithiation cycles.
+Ions can be also converted directly to their metallic form tand avoid any host structure through electrodeposition and dissolution of the metal itself. 
+Lithium metal as negative electrode offers the highest specific capacity (3861~mAh~g$^{-1}$) and lowest potential for lithium-ion batteries, enabling very high energy density cells. 
+Also sodium and other alkali metals provide similar benefits for their respective battery chemistries. 
+However, metallic deposition is prone to dendritic growth, which increases surface area and accelerates electrolyte decomposition and loss of active material, reducing cycle life and raising safety concerns.
 
-\section{State of the art of intercalation materials}
+% \section{State of the art of intercalation materials}
 
-\subsection{Positive electrodes}
+% \subsection{Positive electrodes fro LIBs}
 
-The positive electrode determines cell voltage and significantly influences energy density. Modern Li-ion cathodes fall into three main families:
+% Modern Li-ion cathodes fall into three main families: Layered oxides, olivines and spinels.
 
-\paragraph{Layered oxides (NMC, NCA).}  
-These compounds have the general formula $\mathrm{Li}_{x}\mathrm{MO}_2$ (M = Ni, Mn, Co, Al). The redox couples involve transition-metal oxidation beyond +3. Their high operating voltage (up to 4.3–4.5 V vs Li) arises from large TM–O covalency. NMC622 and NMC811 are industry standards. Their advantages include high energy density and mature manufacturing; limitations include electrolyte oxidation, transition-metal dissolution and thermal instability at high SOC.
+% Layered oxides have the general formula $\mathrm{Li}_{x}\mathrm{MO}_2$ (M = Ni, Mn, Co, Al). 
+% The redox couples involve transition-metal oxidation beyond +3. 
+% % Their high operating voltage (up to 4.3-4.5 V vs Li) arises from large TM-O covalency. 
+% More transition metal can be included in the same structure to balance properties such as safety, capacity and chemical stability.
+% Nikel, Manganese and Cobalt in fraction proportions 60-20-20\% (NMC622) and 80-10-10\% (NMC811) are the industry standards. 
+% Transition metals are considered critical materials for their high cost of extraction and limited geografical location that poses threats to the supplay chain.
+% % Their advantages include high energy density and mature manufacturing; limitations include electrolyte oxidation, transition-metal dissolution and thermal instability at high SOC.
 
-\paragraph{Olivine phosphates (LFP, LMFP).}  
-LiFePO$_4$ and LiMnFePO$_4$ have a robust olivine structure with one-dimensional lithium channels, offering excellent thermal stability and long life. Their flat voltage plateau at 3.4 V results from a two-phase coexistence between lithiated and delithiated phases.
+% LiFePO$_4$ and LiMnFePO$_4$ have a robust olivine structure with one-dimensional lithium channels, offering excellent thermal stability and long life. 
+% Their flat voltage plateau at 3.4 V results from a two-phase coexistence between lithiated and delithiated phases.
+% Despite having less energy density than layered oxides, they imploy non-critical raw materials.
 
-\paragraph{Spinels (LMO).}  
-Spinel LiMn$_2$O$_4$ provides high power capability due to three-dimensional Li diffusion pathways but suffers from Mn dissolution and limited lifetime.
+% Spinel LiMn$_2$O$_4$ provides high power capability due to three-dimensional Li diffusion pathways but suffers from Mn dissolution and limited lifetime.
 
-\subsection{Negative electrodes}
+% \subsection{Negative electrodes for LIBs}
 
-\paragraph{Graphite.}  
-Graphite remains the dominant negative electrode material. Its electrochemical profile shows a series of plateaus corresponding to staging transitions:
-\[
-\mathrm{Li}_x\mathrm{C}_6,\quad x = 0 \to 1.
-\]
-The lowest potential ($\sim 0$ V vs Li) yields high energy density but lies close to lithium deposition, especially under high current densities or low temperatures.
+% Graphite is the dominant negative electrode material in lithium-ion batteries. 
+% Its electrochemical profile shows a series of plateaus corresponding to staging transitions:
+% \[
+% \mathrm{Li}_x\mathrm{C}_6,\quad x = 0 \to 1.
+% \]
+% The lowest potential ($\sim 0$ V vs Li) yields high energy density but lies close to lithium deposition, especially under high current densities or low temperatures.
 
-\paragraph{Silicon and silicon-graphite blends.}  
-Si can alloy with Li up to Li$_{15}$Si$_4$, giving enormous theoretical capacity. However, $\sim 300\%$ volume expansion induces mechanical stress and rapid SEI reformation, necessitating composite architectures.
+% Silicon can alloy with Li up to Li$_{15}$Si$_4$, giving enormous theoretical capacity. However, $\sim 300\%$ volume expansion induces mechanical stress and rapid SEI reformation, necessitating composite architectures.
 
-\paragraph{Lithium metal.}  
-Lithium metal has the highest specific capacity and lowest potential but is prone to dendritic deposition, limiting its use with liquid electrolytes. Solid-state electrolytes aim to stabilize its operation.
+% Lithium metal has the highest specific capacity and lowest potential but is prone to dendritic deposition, limiting its use with liquid electrolytes. Solid-state electrolytes, a technology under strong development, aim to stabilize its operation, but to this time the cycle life remains low.
 
 \subsection{Electrode porosity}
 
@@ -146,7 +161,8 @@ In intercalation materials, the rate capability is governed by solid-state diffu
 \begin{equation}
     \frac{\partial c}{\partial t} = D_s \left( \frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial c}{\partial r}\right)\right),
 \end{equation}
-with $D_s$ the solid diffusion coefficient. A characteristic diffusion time is
+with $D_s$ the solid diffusion coefficient. 
+A characteristic diffusion time is
 \begin{equation}
     \tau_D = \frac{R^2}{D_s}.
 \end{equation}
@@ -170,13 +186,6 @@ depends on mobility, concentration and viscosity. Solvent mixtures balance stabi
 
 Aqueous electrolytes have excellent conductivity but a thermodynamic stability window around 1.23 V. Highly concentrated systems (“water-in-salt”) extend this window to $\sim 3$ V by reducing water activity.
 
-% \subsection{Solid electrolytes}
-
-% Solid electrolytes aim to enable lithium-metal operation and improve safety. They include:
-% - oxide ceramics (LLZO, LAGP),
-% - sulfide glasses and crystals (LPS, LGPS),
-% - polymer electrolytes (PEO-based),
-% each with distinct mechanical and interfacial behaviors. Their impedance response is often dominated by grain-boundary transport and solid-solid interface resistance.
 
 \section{Degradation mechanisms}
 
@@ -236,14 +245,18 @@ By cycling a cell at progressively increasing C-rates, the dependence of deliver
 
 \subsection{Electrochemical impedance spectroscopy (EIS)}
 
-EIS characterizes the response of the cell to small-signal perturbations in frequency domain. The complex impedance $Z(\omega)$ embeds contributions from ohmic resistance, charge-transfer kinetics, double-layer capacitance, interphase layers and diffusion. The Warburg impedance,
+EIS characterizes the response of the cell to small-signal perturbations in frequency domain. 
+The complex impedance $Z(\omega)$ embeds contributions from ohmic resistance, charge-transfer kinetics, double-layer capacitance, interphase layers and diffusion. The Warburg impedance,
 \begin{equation}
     Z_W(\omega) = \sigma_W (1 - j)\, \omega^{-1/2},
 \end{equation}
-appears for semi-infinite diffusion, while finite-length diffusion yields a transmission-line-type behavior. EIS is central to this thesis and will be discussed extensively in Chapter~X.
+appears for semi-infinite diffusion, while finite-length diffusion yields a transmission-line-type behavior. 
+% Among these techniques, EIS is unique in its ability to separate overlapping processes by characteristic timescale, making it particularly suitable for comparative analysis across different battery chemistries.
+EIS is central to this thesis and will be discussed extensively in Chapter~X.
 
 \section{Nomenclature}
 
-Positive and negative electrodes are the IUPAC-recommended terms for battery operation regardless of current direction. In spontaneous discharge (Galvanic cell), the positive electrode is the cathode and undergoes reduction, while the negative electrode acts as the anode. During charging (electrolytic cell), the current direction reverses, but the electrode names positive and negative are retained to avoid confusion. Though, in the battery literature and specific language, scientist tend to use the term cathod and anode to indicate the postive and negative electrode. In an electrolytic cell, the role of anode and cathod are reversed. Probably this convention is of historical reason from the material science of primary batteries that are not recharged.
+Positive and negative electrodes are the IUPAC-recommended terms for battery operation regardless of current direction. 
+In spontaneous discharge (Galvanic cell), the positive electrode is the cathode and undergoes reduction, while the negative electrode acts as the anode. During charging (electrolytic cell), the current direction reverses, but the electrode names positive and negative are retained to avoid confusion. Though, in the battery literature and specific language, scientist tend to use the term cathod and anode to indicate the postive and negative electrode. In an electrolytic cell, the role of anode and cathod are reversed. Probably this convention is of historical reason from the material science of primary batteries that are not recharged.
 
 The common term \textit{capacity} strictly refers to the total amount of charge, measured in Ah in teh battery community or Coulombs according to the International System of Measures. It must not be confused with capacitance of a capacitor electrical elemetn. Throughout this thesis, the IUPAC convention will be followed.

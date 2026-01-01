@@ -189,17 +189,24 @@ Aqueous electrolytes have excellent conductivity but a thermodynamic stability w
 
 \section{Degradation mechanisms}
 
-Battery degradation arises from a combination of chemical, mechanical and interfacial processes that progressively reduce the accessible lithium inventory, active material and ionic/electronic transport pathways. The evolution of degradation with cycling or calendar time directly determines the state of health (SOH). Although multiple mechanisms coexist, they are commonly grouped into three major families: loss of lithium inventory (LLI), loss of active material (LAM) and impedance growth.
+Battery degradation arises from a combination of chemical, mechanical and interfacial processes that progressively reduce the accessible lithium inventory, active material and ionic/electronic transport pathways. The evolution of degradation with cycling or calendar time directly determines the state of health (SOH). Although multiple mechanisms coexist, they are commonly grouped into three major families: loss of shuttling ions (in LIBs called loss lithium inventory or LLI), loss of active material (LAM) and impedance growth.
 
-\subsection{Loss of lithium inventory}
+\subsection{Loss of shuttling ions}
 
-LLI is primarily caused by parasitic reactions that consume cyclable lithium. A major contributor is the continuous formation and repair of the solid-electrolyte interphase (SEI) at the negative electrode. Although a stable SEI is essential for suppressing further electrolyte reduction, mechanical stress, particle cracking, volume changes (especially in Si-based anodes) or local overpotential can expose fresh surface and trigger additional SEI growth. The amount of lithium irreversibly trapped in the SEI increases with cycling and causes a progressive loss in capacity.
+Loss of shuttling ions is primarily caused by parasitic reactions that consume the ions. 
+In organic electrolyte base batteries a major contributor is the continuous formation and repair of the solid-electrolyte interphase (SEI) at the negative electrode. 
+Although a stable SEI is essential for suppressing further electrolyte reduction, mechanical stress, particle cracking, volume changes or local overpotential can expose uncovered surface and produce additional SEI growth. 
+The amount of metallic ions irreversibly trapped in the SEI increases with cycling and causes a progressive loss in capacity.
 
-Lithium plating also consumes lithium. When the anode potential drops below 0~V vs Li/Li$^+$, metallic lithium can deposit on the surface. Plating is favored by high current density, low temperature or large concentration overpotentials. If the deposited lithium remains electronically connected, it can be stripped in the following cycle; otherwise it may lose contact with the current collector, forming electrically isolated "dead lithium" that irreversibly reduces the active lithium inventory.
+Metal plating also consumes shuttling ions. When the negative electrode potential drops below 0~V vs the standard metal reduction potential, metallic ions can deposit on the surface. 
+Plating is favored by high current density, low temperature or large concentration overpotentials. 
+If the deposited metal remains electronically connected, it can be stripped in the following cycle; otherwise it may lose contact with the current collector, forming electrically isolated ("dead lithium" in LIBs) that irreversibly reduces the shuttling ion inventory.
 
 \subsection{Loss of active material}
 
-Mechanical degradation of electrode materials results in reduced electrochemically active surface. In positive electrodes such as layered NMCs, repeated Li intercalation and deintercalation induces anisotropic lattice strain, phase transitions and microcrack formation. Cracking leads to particle fragmentation and loss of contact with the conductive carbon network or current collector, increasing both the resistance and the inaccessible fraction of active material.
+Mechanical degradation of electrode materials results in reduced electrochemically active surface. 
+In positive electrodes such as layered NMCs, repeated Li intercalation and deintercalation induces anisotropic lattice strain, phase transitions and microcrack formation. 
+Cracking leads to particle fragmentation and loss of contact with the conductive carbon network or current collector, increasing both the resistance and the inaccessible fraction of active material.
 
 Graphite particles also undergo structural degradation under fast cycling due to expansion/contraction associated with staging transitions. Silicon-based anodes suffer even more severe mechanical degradation due to their large volumetric expansion, requiring advanced composite architectures to maintain structural integrity.
 
@@ -213,11 +220,12 @@ With aging, the ohmic, charge-transfer and diffusion-related impedance component
     \item increase of charge-transfer resistance due to surface restructuring,
     \item reduced effective diffusion coefficients due to material degradation.
 \end{itemize}
-Impedance growth not only reduces power capability but also induces non-uniform current distribution, accelerating further degradation. Electrochemical impedance spectroscopy (EIS) is therefore a powerful diagnostic tool for quantifying these aging phenomena, and will be treated in detail in Chapter~X.
+Impedance growth not only reduces power capability but also induces non-uniform current distribution, accelerating further degradation. Electrochemical impedance spectroscopy (EIS) is therefore a powerful diagnostic tool for quantifying these aging phenomena.
 
 \section{Electrochemical characterization of batteries}
 
-Understanding battery performance and degradation requires controlled electrochemical testing. The most widely used methods rely on galvanostatic or potentiostatic excitation and analysis of voltage, current and time responses.
+Understanding battery performance and degradation requires controlled electrochemical testing. 
+The most widely used methods rely on galvanostatic or potentiostatic excitation and analysis of voltage, current and time responses.
 
 \subsection{Galvanostatic cycling}
 

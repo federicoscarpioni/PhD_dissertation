@@ -1,20 +1,21 @@
 \chapter{System Identification of Dynamical Systems}
 
-This is the first version of the text with less content but less schematic writing.
-
-Electrochemical systems such as batteries are inherently dynamical systems governed by nonlinear partial differential equations that describe mass transport, charge transfer and electric-field driven migration. Impedance spectroscopy, as used in this thesis, relies on the fact that under sufficiently small perturbations these systems behave locally as linear time-invariant (LTI) systems. The purpose of this chapter is to introduce the mathematical tools necessary to justify this approximation, to connect the physical transport equations to linear models, and to show how the resulting transfer functions arise naturally from the linearisation of the governing equations. Special attention is given to the Kramers--Kronig relations, which constitute the theoretical foundation for verifying linearity, causality and stationarity in impedance measurements.
+Electrochemical systems such as batteries are \emph{dynamical systems} governed by nonlinear temporal partial differential equations that describe mass transport and charge transfer. 
+Impedance spectroscopy, as used in this thesis, relies on the fact that under sufficiently small perturbations these systems behave locally as \emph{linear time-invariant} (LTI) systems. 
+The purpose of this chapter is to introduce the mathematical tools necessary to justify this approximation, to connect the physical transport equations to linear models, and to show that a \emph{transfer function} arise from the linearisation of the governing equations. 
+% Special attention is given to the Kramers--Kronig relations, which constitute the theoretical foundation for verifying linearity, causality and stationarity in impedance measurements.
 
 
 \section{Dynamical systems and linearization}
 \label{sec:dynamical_systems}
 
-Dynamic impedance measurements rely on the interpretation of an electrochemical cell as a dynamical system whose input--output behavior can be locally approximated by linear models.
-This section introduces the system-theoretic framework required for such an interpretation, focusing on input--output representations, linearization, and the assumptions underlying their validity.
-Electrochemical aspects are deliberately excluded and addressed in the dedicated background chapter.
+% Dynamic impedance measurements rely on the interpretation of an electrochemical cell as a dynamical system whose input--output behavior can be locally approximated by linear models.
+% This section introduces the system-theoretic framework required for such an interpretation, focusing on input--output representations, linearization, and the assumptions underlying their validity.
+% Electrochemical aspects are deliberately excluded and addressed in the dedicated background chapter.
 
-\subsection{Dynamical systems as input--output operators}
+% \subsection{Dynamical systems as input--output operators}
 
-A dynamical system can be described as a mapping between an input signal \( u(t) \in \mathbb{R}^{n_u} \), an internal state \( x(t) \in \mathbb{R}^{n_x} \), and an output signal \( y(t) \in \mathbb{R}^{n_y} \).
+A dynamical system can be described as a relation between an input signal \( u(t) \in \mathbb{R}^{n_u} \), an internal state \( x(t) \in \mathbb{R}^{n_x} \), and an output signal \( y(t) \in \mathbb{R}^{n_y} \).
 In its most general continuous-time form, such a system can be written as
 \begin{equation}
 \begin{aligned}
@@ -57,17 +58,17 @@ can be described by linearizing Eq.~\eqref{eq:nonlinear_system} through a first-
 where the matrices \( A(t), B(t), C(t), D(t) \) are the Jacobians of \( f \) and \( g \) evaluated along the nominal trajectory.
 
 This formulation defines a \emph{linear time-varying} (LTV) system.
-The validity of the linear approximation depends on the amplitude of the perturbation and on the smoothness of the nonlinear functions.
-In practice, this motivates the use of small-amplitude excitation signals superimposed on a slowly varying operating point.
+The validity of the linear approximation depends on the amplitude of the perturbation.
+In practice, this motivates the use of small-amplitude excitation signals superimposed on a slowly varying operating point (compared to the lower frequency of the excitation).
 
 \subsection{Drift and frozen-time approximation}
 
 In many experimental conditions, the operating point of the system evolves slowly in time due to external forcing or intrinsic dynamics.
 This slow evolution is commonly referred to as \emph{drift}.
-If the characteristic timescale of the drift is much larger than the period of the excitation signal, the system can be approximated as locally time-invariant over a finite observation window.
+If the characteristic timescale of the drift is much larger than the period of the excitation signal, the system can be approximated as "temporarly" time-invariant over a finite observation window.
 
-Under this \emph{frozen-time approximation}, the LTV system in Eq.~\eqref{eq:lvt_system} is replaced by a sequence of LTI models, each associated with a specific time instant \( t_0 \).
-Within a sufficiently short window around \( t_0 \), the system matrices are assumed constant, and the input--output relation can be described by a transfer function \( G(s; t_0) \).
+Under this "frozen-time" approximation, the LTV system in Eq.~\eqref{eq:lvt_system} is replaced by a sequence of LTI models, each associated with a specific time instant \( t_i \).
+Within a sufficiently short window around \( t_i \), the system matrices are assumed constant, and the input--output relation can be described by a transfer function \( G(s; t_i) \), where $s$ is the complex variable.
 
 This approximation provides the theoretical basis for windowed frequency-domain identification methods, such as those employed in Dynamic Electrochemical Impedance Spectroscopy.
 The choice of the window length reflects a trade-off between temporal resolution and frequency resolution, and is dictated by the relative separation between the timescales of excitation and drift.

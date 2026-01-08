@@ -24,22 +24,14 @@ y(t) &= g\big(x(t), u(t), t\big),
 \end{aligned}
 \label{eq:nonlinear_system}
 \end{equation}
-where \( f(\cdot) \) and \( g(\cdot) \) are, in general, nonlinear functions.
+where \( f \) and \( g \) are nonlinear functions for electrochemical systems.
 
-For the purposes of system identification, it is often sufficient to focus on the observable relationship between input and output, treating the internal state as a latent variable.
-This input--output viewpoint is particularly suitable for frequency-domain analysis, where the system is characterized by its response to periodic excitations.
+With the term \emph{internal state} is referred a set of specific system properites like ion interfacial concentration, temperature, or electrode potential.
+For the purposes of system identification, it is sufficient to focus on the observable relationship between input and output, treating the internal state as a latent variable, opposite to what a scientist is interested.
 
-Three properties play a central role in the subsequent developments:
-\begin{itemize}
-    \item \emph{Causality}: the output at time \( t \) depends only on past and present values of the input;
-    \item \emph{Linearity}: the system obeys the superposition principle;
-    \item \emph{Time invariance}: the system dynamics do not change with absolute time.
-\end{itemize}
-When these conditions are satisfied, the system is said to be linear time-invariant (LTI), and admits a frequency-domain representation through a transfer function.
+\subsection{Linearization for small perturbations}
 
-\subsection{Linearization and small-signal approximation}
-
-Most physical systems of interest, including electrochemical cells, are inherently nonlinear.
+Most physical systems of interest, including electrochemical ones, are inherently nonlinear.
 However, when subjected to sufficiently small perturbations around a given operating point, their behavior can often be approximated by a linear model.
 Let \( \bar{x}(t) \) and \( \bar{u}(t) \) denote a nominal trajectory of the system.
 Small deviations
@@ -57,6 +49,29 @@ can be described by linearizing Eq.~\eqref{eq:nonlinear_system} through a first-
 \end{equation}
 where the matrices \( A(t), B(t), C(t), D(t) \) are the Jacobians of \( f \) and \( g \) evaluated along the nominal trajectory.
 
+
+
+Let the full nonlinear model be
+\[
+    \dot{x} = f(x,u), \qquad y=g(x,u).
+\]
+Choose an operating point $(x_0,u_0)$ and define perturbations $\tilde{x}=x-x_0$, $\tilde{u}=u-u_0$,
+$\tilde{y}=y-y_0$. A first-order Taylor expansion yields
+\[
+    \dot{\tilde{x}} = A \tilde{x} + B \tilde{u}, \qquad
+    \tilde{y} = C \tilde{x} + D \tilde{u},
+\]
+where $A,B,C,D$ are Jacobians evaluated at the operating point. This \emph{linear time-invariant} (LTI)
+approximation forms the basis of impedance modelling and transfer-function identification.
+After linearization, applying the Laplace transform converts temporal derivatives to algebraic multiplication by $s$, yielding
+\[
+    (sI - A)\tilde{X}(s) = B \tilde{U}(s).
+\]
+The input--output relation is
+\[
+    \tilde{Y}(s) = H(s)\tilde{U}(s), \qquad H(s)=C(sI-A)^{-1}B + D.
+\]
+
 This formulation defines a \emph{linear time-varying} (LTV) system.
 The validity of the linear approximation depends on the amplitude of the perturbation.
 In practice, this motivates the use of small-amplitude excitation signals superimposed on a slowly varying operating point (compared to the lower frequency of the excitation).
@@ -73,12 +88,12 @@ Within a sufficiently short window around \( t_i \), the system matrices are ass
 This approximation provides the theoretical basis for windowed frequency-domain identification methods, such as those employed in Dynamic Electrochemical Impedance Spectroscopy.
 The choice of the window length reflects a trade-off between temporal resolution and frequency resolution, and is dictated by the relative separation between the timescales of excitation and drift.
 
-\section{Linear models and transfer-function representations}
+\section{Transfer function representations}
 \label{sec:transfer_functions}
 
-Once a dynamical system has been locally linearized around an operating point, its behavior can be described using linear models.
-For frequency-domain identification and impedance analysis, the most relevant representation is the input--output transfer function.
-This section introduces transfer-function models from a system-theoretic perspective and clarifies their scope and limitations in non-stationary conditions.
+Once a dynamical system has been linearized around an operating point, its behavior can be described using linear models.
+For frequency-domain identification and impedance analysis, the most relevant representation is the \emph{input--output transfer function}.
+% This section introduces transfer function rapresentation from a system-theoretic perspective and discuss the limitations in non-stationary conditions.
 
 \subsection{Linear time-invariant input--output models}
 
@@ -100,7 +115,7 @@ where
 G(s) = \mathcal{L}\{h(t)\}
 \end{equation}
 is the transfer function.
-The transfer function fully characterizes the input--output dynamics of an LTI system under zero initial conditions.
+The transfer function fully characterizes the input--output dynamics of an LTI system.% under zero initial conditions.
 
 For sinusoidal excitation at angular frequency \( \omega \), the steady-state response is governed by the frequency response function
 \begin{equation}
@@ -112,7 +127,7 @@ which maps directly to the experimentally measured impedance in electrochemical 
 \label{sec:time_vs_frequency}
 
 System identification can be broadly classified according to the domain in which system dynamics are characterized.
-In the time-domain approach, the system is excited using transient signals such as steps, pulses, ramps, or pseudo-random sequences, and models are inferred from the temporal evolution of the output.
+In the time-domain approach, the system is excited using transient signals such as steps and pulses, and models are inferred from the temporal evolution of the output.
 This paradigm is widely used in control engineering and is well suited for systems whose dominant dynamics can be captured through time-response features.
 
 An alternative and complementary approach is \emph{frequency-domain characterization}, in which the system is excited using sinusoidal or periodic signals and its response is analyzed in the frequency domain.

@@ -172,19 +172,18 @@ This time constant critically affects high-rate performance and appears later in
 
 Electrolytes must provide high ionic conductivity, wide electrochemical stability and compatibility with both electrodes.
 
-\subsection{Organic electrolytes}
-
-Most Li-ion cells use organic carbonate solvents (EC, DEC, EMC) with lithium salts such as LiPF$_6$. Their voltage stability window extends to $\sim 4.5-5.0$ V vs Li but decompose at low potentials, forming the SEI.
+Most Li-ion cells use organic carbonate solvents (EC, DEC, EMC) with lithium salts such as LiPF$_6$. 
+Their voltage stability window extends to $\sim 4.5-5.0$ V vs Li but decompose at low potentials, forming the SEI.
 
 The ionic conductivity
 \[
 \sigma = \sum_i z_i^2 F^2 u_i c_i,
 \]
-depends on mobility, concentration and viscosity. Solvent mixtures balance stability and conductivity.
+depends on mobility, concentration and viscosity. 
+Solvent mixtures balance stability and conductivity.
 
-\subsection{Aqueous electrolytes}
-
-Aqueous electrolytes have excellent conductivity but a thermodynamic stability window around 1.23 V. Highly concentrated systems (“water-in-salt”) extend this window to $\sim 3$ V by reducing water activity.
+Aqueous electrolytes have excellent conductivity but a thermodynamic stability window around 1.23 V. 
+Highly concentrated systems (“water-in-salt”) extend this window to $\sim 3$ V by reducing water activity.
 
 
 \section{Degradation mechanisms}
@@ -225,46 +224,85 @@ Impedance growth not only reduces power capability but also induces non-uniform 
 \section{Electrochemical characterization of batteries}
 
 Understanding battery performance and degradation requires controlled electrochemical testing. 
-The most widely used methods rely on galvanostatic or potentiostatic excitation and analysis of voltage, current and time responses.
+The most widely used methods rely on galvanostatic or potentiostatic excitation and analysis of voltage, current responses with time.
 
 \subsection{Galvanostatic cycling}
 
-Galvanostatic charge and discharge at fixed current $I$ is the standard method for determining capacity, coulombic efficiency and cycle life. The measured voltage response $U(t)$ includes OCV contributions and overpotentials due to kinetic, ohmic and mass-transfer limitations:
+Galvanostatic charge and discharge at fixed current $I$ is the standard method for determining capacity, coulombic efficiency and cycle life. 
+The measured voltage $U(t)$ is the sum of OCV and overpotentials due to kinetic, ohmic and mass-transfer limitations:
 \begin{equation}
     U(t) = U_{\mathrm{OCV}}(x) + \eta_{\mathrm{kin}} + \eta_{\mathrm{ohm}} + \eta_{\mathrm{mt}}.
 \end{equation}
 The extracted capacity is
 \begin{equation}
-    Q = \int I\, dt.
+    Q = \int I\, dt
 \end{equation}
-The coulombic efficiency (CE) is
+and the coulombic efficiency (CE) is
 \begin{equation}
     \mathrm{CE} = \frac{Q_{\mathrm{dis}}}{Q_{\mathrm{chg}}}.
 \end{equation}
 For practical Li-ion cells, CE must exceed 99.9~\% to achieve thousand-cycle lifetimes.
 
-\subsection{CC-CV charging protocol}
+In galvanostatic cycling, the cell is kept between a lower and higher operation voltage (voltage limits) to avoid degradation of electrodes or electrolyte.
 
-At high states of charge, the overpotentials limit the achievable capacity in pure galvanostatic operation. Therefore, Li-ion cells are typically charged using a constant-current / constant-voltage (CC-CV) protocol: first a constant current up to an upper voltage limit $U_{\max}$, then a constant voltage stage at $U_{\max}$ until the current tapers below a threshold. The CC-CV method enables fuller lithiation without exceeding voltage or plating limits.
+At high states of charge, the diffusional overpotentials limits the achievable capacity of a cell in galvanostatic operation by reaching the voltage limited.
+Therefore, Li-ion cells are typically charged using a constant-current / constant-voltage (CC-CV) protocol: first a constant current up to an upper voltage limit, then a constant voltage stage at $V_{\max}$ until the current tapers below a threshold. 
+The CC-CV method enables to fully charge a battery without undesired side reactions.
 
 \subsection{Rate capability tests}
 
-By cycling a cell at progressively increasing C-rates, the dependence of delivered capacity on current reveals transport limitations. The characteristic rate at which the capacity drops significantly corresponds to limitations in solid-state diffusion, electrolyte transport or internal resistance.
+By cycling a cell at progressively increasing C-rates, the dependence of delivered capacity on current reveals transport limitations. 
+The characteristic rate at which the capacity drops significantly corresponds to limitations in solid-state diffusion, electrolyte transport or internal resistance.
 
 \subsection{Electrochemical impedance spectroscopy (EIS)}
 
-EIS characterizes the response of the cell to small-signal perturbations in frequency domain. 
-The complex impedance $Z(\omega)$ embeds contributions from ohmic resistance, charge-transfer kinetics, double-layer capacitance, interphase layers and diffusion. The Warburg impedance,
-\begin{equation}
-    Z_W(\omega) = \sigma_W (1 - j)\, \omega^{-1/2},
-\end{equation}
-appears for semi-infinite diffusion, while finite-length diffusion yields a transmission-line-type behavior. 
-% Among these techniques, EIS is unique in its ability to separate overlapping processes by characteristic timescale, making it particularly suitable for comparative analysis across different battery chemistries.
-EIS is central to this thesis and will be discussed extensively in Chapter~X.
+Electrochemical Impedance Spectroscopy is extensively used in battery characterization for its capability of identifying and separate processes such as ohmic resistance, charge-transfer kinetics, double-layer capacitance, and diffusion, which kinetics evolves with the aging of the cell and the occurance of degradation pehnomenon.
+The impedance of a cell is measured at different State of Charge (SOC) and State of Health (SOH) by interrupting the CCCV cycling protocol at fixed states and waiting for the relaxation of the interfaces.
+A correct impedance measruement with classic sinusodial perturbation of decreasing frequency may take 30 minutes or more to probe the frequency response of a common lithium-ion battery (1MHz-10mHz).
+This time inreases significanlty the experiment duration limiting its utilization for long-term explorations.
+This limit is the topic adressed by my work and requires an interoduction to the concepts of System Identification and Dynamic System Theroy provided in the next chapter to better frame the problem and justify the provided solutions.
 
-\section{Nomenclature}
+% \subsection{Vaidity}
+% The physical interpretation of electrochemical impedance spectroscopy relies on a set of assumptions that must be carefully examined in the context of battery operation.
+% Chief among these are linearity, stationarity over the measurement window, and causality.
 
-Positive and negative electrodes are the IUPAC-recommended terms for battery operation regardless of current direction. 
-In spontaneous discharge (Galvanic cell), the positive electrode is the cathode and undergoes reduction, while the negative electrode acts as the anode. During charging (electrolytic cell), the current direction reverses, but the electrode names positive and negative are retained to avoid confusion. Though, in the battery literature and specific language, scientist tend to use the term cathod and anode to indicate the postive and negative electrode. In an electrolytic cell, the role of anode and cathod are reversed. Probably this convention is of historical reason from the material science of primary batteries that are not recharged.
+% Linearity is ensured by applying sufficiently small perturbations around a given operating point, such that the current--voltage relationship can be locally approximated as linear.
+% In battery systems, this condition constrains the amplitude of the excitation signal and limits the range of states of charge over which impedance measurements can be meaningfully interpreted without inducing nonlinear effects.
 
-The common term \textit{capacity} strictly refers to the total amount of charge, measured in Ah in teh battery community or Coulombs according to the International System of Measures. It must not be confused with capacitance of a capacitor electrical elemetn. Throughout this thesis, the IUPAC convention will be followed.
+% Stationarity is more problematic, as batteries inherently evolve during operation due to ongoing electrochemical reactions, mass transport, and degradation.
+% Classical impedance measurements therefore assume that the operating point remains effectively constant over the duration of the experiment.
+% This assumption becomes increasingly difficult to satisfy at low frequencies, where long acquisition times are required.
+
+% Causality and thermodynamic consistency further require that the measured response reflects a physically realizable system.
+% Violations of these assumptions may arise from experimental artifacts, insufficient equilibration, or genuine non-stationary behavior of the cell.
+
+% These considerations highlight the intrinsic tension between the assumptions underlying classical EIS and the dynamic nature of batteries, motivating the development of impedance methods capable of operating under non-stationary conditions.
+
+% \subsection{Kramers--Kronig relations and physical consistency}
+
+% The Kramers--Kronig relations provide a fundamental consistency check for impedance data by linking the real and imaginary parts of the frequency response through causality and linearity.
+% In electrochemical systems, compliance with these relations implies that the measured impedance corresponds to a stable, causal, and linear system.
+
+% In battery applications, deviations from Kramers--Kronig consistency may arise for several reasons.
+% Experimental factors such as noise, drift, or insufficient frequency resolution can produce apparent violations.
+% More importantly, genuine physical phenomena—including slow relaxation processes, evolving interfacial structures, and changes in operating point during the measurement—can invalidate the assumptions required for strict Kramers--Kronig validity.
+
+% As a result, Kramers--Kronig analysis in batteries should not be interpreted solely as a data-quality test, but also as an indicator of non-stationary behavior.
+% In dynamic impedance measurements, controlled and interpretable deviations from Kramers--Kronig relations are therefore expected and reflect the limits of classical impedance interpretation.
+
+
+
+
+
+
+
+
+
+
+
+% \section{Nomenclature}
+
+% Positive and negative electrodes are the IUPAC-recommended terms for battery operation regardless of current direction. 
+% In spontaneous discharge (Galvanic cell), the positive electrode is the cathode and undergoes reduction, while the negative electrode acts as the anode. During charging (electrolytic cell), the current direction reverses, but the electrode names positive and negative are retained to avoid confusion. Though, in the battery literature and specific language, scientist tend to use the term cathod and anode to indicate the postive and negative electrode. In an electrolytic cell, the role of anode and cathod are reversed. Probably this convention is of historical reason from the material science of primary batteries that are not recharged.
+
+% The common term \textit{capacity} strictly refers to the total amount of charge, measured in Ah in teh battery community or Coulombs according to the International System of Measures. It must not be confused with capacitance of a capacitor electrical elemetn. Throughout this thesis, the IUPAC convention will be followed.

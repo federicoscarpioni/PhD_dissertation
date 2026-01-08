@@ -5,3 +5,10 @@
 *.mtc?
 *.gz
 *.txss2
+*.aux
+*.bcf
+*.fdb_latexmk
+*.out
+*.xml
+*.toc
+*.blg

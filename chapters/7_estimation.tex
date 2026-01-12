@@ -34,6 +34,18 @@ The frequency content and the period of one multi-sine is dictated from the exci
 As analyzed in \cite{chukwuStatisticalAnalysisMeasurement2022}, to estimate every instantaneous impedance indipendently from the privous and succesfull instants, the bandwidth must be an integer times the inverse of the multi-sine period and the order of the filter should be a number around 8. 
 The latter shapes the amplitude of the side-bands of the filter.
 
+\subsection{Filters in DSP (to be corrected)}
+Although system identification in electrochemsitry for the frequency domain employs cyclic perturbation (i.e. single sine waves or multi-sines), it will be usefull in the following discussio in this text to introduce some aspect of window functions. 
+The most known are Hanning, Hamming and Blackman  functions characterised by three main properties:
+\begin{itemize}
+    \item roll-off and characteristic frequency
+    \item passband flatness
+    \item group delay
+\end{itemize}
+The main characteristic is called roll-off which means "how fast" the amplitude of the original signal is attenuated. From the view of the frequency domain, the part of the filter that attenuates the signal are colled sidelobes. The characteristic frequency, also called cut-off, is the frequency at which the attenuation is $\sqrt{2}$ (\~= -3 dB) of the maximum value. Different windows function have steeper or smoother roll-off and this is important when realizing, for example, a low pass filter using the same function. Passband flatness is how uniform is the magnitude response across the main lobe (the passband) to avoid any distortion of the amplitude.
+It is also important, especially for the complex signals like the impedance, to evaluate also the phase shift or group delay that must be flat in the frequency region of analysis. Windows have usually a zero or very low attenuation in the middle that translates to a very well analysis of the spectral characteristics of the middle point of the signal. This is somehow translated to an "instantaneous information" even if the windows has finite length.
+Usually it is impossible to have optimal values for this parameters but a compromise has to be made.
+
 \section{On-line processing and data reduction}
 \label{On-line computation}
 

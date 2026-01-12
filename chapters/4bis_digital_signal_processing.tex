@@ -1,0 +1,98 @@
+\chapter{Digital signal processing}
+
+\section{Sampling and quantization}
+
+In real world any quantity changes continuously in time. 
+When performing an experiment, the scientist measures the values of those quantities with instrumentation at a specific point in time.  
+In practice, the electronic circuit digitally recording analog signals is called analog-to-digital converted (ADC) and it is a staple in digital signal processing.
+
+Any digital measurement system samples a continuous signal $x(t)$ at discrete times $t=nT_s$, producing $x[n]$. 
+The most important parameter to consider in sampling is the time interval or its reciprocal: the sampling frequency $f_s=1/T_s$.
+To analyze the spectral content of a signal, the sampling frequency must be at least two folds the frequency of the highest oscillation components. This is know as Nyquist-Shannon sampling theorem. Sampling below this threshold causes higher-frequency components to “fold” back into lower frequencies—a phenomenon known as aliasing—which corrupts the true spectral content of the signal.
+
+
+\section{Discrete Fourier Transform}
+
+After acquiring a digital signal, the role of digital signal processing is to analyze or act on the frequency components of the it.
+As introduced in the previous chapter, the Fourier Transform is used for the spectral analysis of signals, that is the process of decomposing a time-domain signal into its constituent frequencies and quantifying the amplitude and phase associated with each. 
+
+One converts a signal $x(t)$ or $x[n]$ into $X(\omega)$ or $X[k]$, revealing how its energy or variance is distributed across frequency. 
+
+Since digital signals are discrete vectors in practice it is used the discrete version of the Fourier transform called simply discrete Fourier transform (DFT) and has the form
+$$
+F(\omega)=\sum_{0}^{n-1} x[n] e^{-j2\pi kn/N}.
+$$
+The inverse descrete Fouerie trasnform (iDFT) takes the form:
+$$
+F(\omega)= \frac{1}{N} \sum_{0}^{n-1} x[n] e^{j2\pi kn/N}.
+$$
+
+The discrete Fourier transform of a signal is calculated in a computer using the Fast Fourier Transform algorithm, the most efficient implementation from Colley and Tukey.
+The complexity of the problem is $O(N\log N)$ compare to the $O(N^2)$ of the direct summation, although it requires the length of the input signal to be equal to $2^n$ with n integer number.
+
+
+\subsection{Spectral leakage}
+
+Spectral leakage is the effect typical in the Discrete Fourier Trasnform of "leaking" or "spilling" of spectral components into neighboring frequency bins, producing spurious components where the spectra baseline should be flat (to noise level). 
+Multiple causes produce spectral leakage. 
+The most typical is due to a discrete signal x[n] that does not contain an integer number of periods of the oscillatory components. 
+Other causes of spectral leakage derive from practical hardware limitations such or user errors in the choice on the design of the experiment such as:
+\begin{itemize}
+    \item asyncronization of ADC and DAC clock
+    \item Instability of the ADC (data acquisition) or DAC (signal generator) clock;
+    \item ADC  jitter and slew-rate;
+    \item Low resolution of the ADC compared to the oscillation amplitude might produce spourous harmonics;
+    \item aliasing due to the choice of sampling frequency without proper filtering;
+\end{itemize}
+
+\subsection{Noise}
+
+Noise denotes random, unwanted fluctuations superimposed on the signal originating from physical sources (thermal, shot), instrumentation (quantization, clock jitter) or environment (EM interference). 
+
+Signal to noise ratio (SNR) quantifies the relative power between the signal components and the noise
+$$
+SNR = \frac{P_{signal}}{P_{noise}}
+$$
+and dictates how reliably one can detect or process the signal. 
+
+When increasing the excitation amplitude is not possible, averaging is the an alternative tool for improving SNR: by repeating the same measurement or subdividing a long record into M independent segments, uncorrelated noise averages toward zero while the coherent signal adds constructively. 
+This concept is used in electrochemical instrumentation where Impedance Spectroscopy is implemented. 
+The user can choose how many sinusoidal waves to average on.
+The net SNR gain scales with the square root of the number of indipendent measurements. 
+In the time domain this is ensemble or block averaging; in the frequency domain it appears as spectral averaging. 
+The avaraging can be alternativly obtained increasing the acquisition time of the periodic signal or the length of the window. 
+In fact narrowing the spectral bin's bandwidth reduces linearly the noise power in it (i.e. doubling the signal length, $\Delta f$ halves and so the power in each bin while the coherent signal amplitude in the bin does not change.
+
+\section{Filters}
+
+A filter in signal processing is a system that selectively modifies an input signal's amplitude and/or phase as a function of frequency and it is a core subject of signal processing.
+
+Filters may be analog—operating continuously on voltages or currents—or digital—processing sampled data—and they can be linear (obeying superposition) or nonlinear (introducing harmonics). 
+
+By their effect on frequency content, filters are classified as low-pass (passing frequencies below a cutoff fc), high-pass (passing frequencies above fc), band-pass (passing a band between two cutoffs), or band-stop/notch (rejecting a specific band).  
+  
+Filters can be distinguished between analog, a physical circuit in the signal acquisition pipeline, or digital, applied on the digitized signal by a microcontroller or computer.
+
+There are different types of digital implementation of filters, but for the purpose of this work it is only necessary to consider the effect on the frequency content of a signal and performance metrics such as passband ripple (amplitude variation within the passband), stopband attenuation (suppression of unwanted bands), and transition bandwidth (width of the roll-off region).  
+
+\section{Removal of trends}
+Baseline or trend removal, often called detrending, is the process of eliminating slow-varying offsets or drifts from a signal so that its remaining fluctuations can be treated as (approximately) zero-mean and stationary.  
+In electrochemical measurements, trends arise from the drift the system is undertaking, its thermodynamic state and relaxation processes.
+If left uncorrected they bias spectral estimates, manifesting as excessive low-frequency power or leakage and undermines the excitation frequency analysis.  
+Common detrending techniques include subtracting the signals long-term mean or a low-order polynomial fit, applying a high-pass filter with a cutoff below the band of interest (using a linear-phase FIR to avoid phase distortion), or employing moving-average/median filters to track and remove slow baseline wander. 
+In all cases, one must choose parameters (filter cutoff, polynomial order, window length) so that genuine signal dynamics are preserved while the unwanted trend is effectively suppressed.
+
+In the analysis of signals trough Fourier Analysis, the removal of trends mitigate an effect called Gibbs phenomenon that is the presence of an infinite series of harmonics produce by sharp transition in the signals caused by its dynamic (drift) as well as instrumental coming from the digitization process (an artifact known as ringing).
+
+\section{Signal synthesis}
+
+To perform certain experiments, one might be interested to perturb the system with non-constant signals like pulses, ramps, sinuses or other arbitrary shapes. 
+This requires to design a digital waveform and generate it in the analog sense with electronic instrumentations. 
+The process is called digital to analog conversion and the electronic component capable of it the digital to analog converter (DAC). 
+There are several techniques of implementing a digital to analog converter on hardware with different complexity and properties, the most simple is the \emph{direct digital synthesis} (DDS).
+This methods relays on the 'look-up table' method in which the desired waveform is stored as table of pairs value-time and at constant time interval the value is read from the table and converted to analog value.
+In arbitrary waveform generator the table of points is usually saved in a limited buffer memory with a size of a few thousands of samples.
+The generated signal is usually passed though a series of filters to smooth it and avoid the production of harmonics or cause spectra leakage.
+The synthesis procedure is crucial for the quality of the excitation in system identification.
+
+The length of the arbitrary waveform can be extended when the signal is stored in a bigger memory and sent directly to digital to analog converter using the Direct Memory Access (DMA) protocol, although it requires the use of dedicated microcontroller unit and digital signal processes implementation knowledge outside the background of electrochemists.

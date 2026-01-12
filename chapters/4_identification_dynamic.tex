@@ -1,418 +1,236 @@
-\chapter{System Identification of Dynamical Systems}
+\chapter{Identification of Dynamical Systems}
 
-Electrochemical systems such as batteries are \emph{dynamical systems} governed by nonlinear temporal partial differential equations that describe mass transport and charge transfer. 
-Impedance spectroscopy, as used in this thesis, relies on the fact that under sufficiently small perturbations these systems behave locally as \emph{linear time-invariant} (LTI) systems. 
-The purpose of this chapter is to introduce the mathematical tools necessary to justify this approximation, to connect the physical transport equations to linear models, and to show that a \emph{transfer function} arise from the linearisation of the governing equations. 
-% Special attention is given to the Kramers--Kronig relations, which constitute the theoretical foundation for verifying linearity, causality and stationarity in impedance measurements.
+Electrochemical systems such as batteries are dynamical systems in the sense that their behavior is governed by differential equations describing the time evolution of internal variables, including ionic concentrations, electrode potentials and temperature, under given operating conditions.
 
+Electrochemical Impedance Spectroscopy (EIS), introduced in the previous chapter, provides an experimental technique to probe these systems by quantifying their response to small perturbations.
+Impedance is defined as a frequency response function, expressing the relationship between an input excitation and the corresponding output response in the frequency domain.
 
-\section{Dynamical systems and linearization}
-\label{sec:dynamical_systems}
+The concept of a frequency response function originates from the theory of dynamical systems and is formally treated within the discipline of system identification.
+System identification provides the mathematical framework for defining input--output relationships, introducing suitable approximations, and validating experimentally obtained models.
 
-% Dynamic impedance measurements rely on the interpretation of an electrochemical cell as a dynamical system whose input--output behavior can be locally approximated by linear models.
-% This section introduces the system-theoretic framework required for such an interpretation, focusing on input--output representations, linearization, and the assumptions underlying their validity.
-% Electrochemical aspects are deliberately excluded and addressed in the dedicated background chapter.
+The purpose of this chapter is to introduce the notation and concepts of dynamical system theory relevant to electrochemical systems, to formalize the assumptions underlying impedance measurements, and to establish the conditions under which experimentally determined frequency response functions can be considered physically meaningful.
 
-% \subsection{Dynamical systems as input--output operators}
+\section{Dynamical systems}
 
-A dynamical system can be described as a relation between an input signal \( u(t) \in \mathbb{R}^{n_u} \), an internal state \( x(t) \in \mathbb{R}^{n_x} \), and an output signal \( y(t) \in \mathbb{R}^{n_y} \).
-In its most general continuous-time form, such a system can be written as
+A dynamical system is defined as a system whose evolution in time is governed by a set of differential equations.
+In general form, the dynamics can be expressed as
 \begin{equation}
-\begin{aligned}
-\dot{x}(t) &= f\big(x(t), u(t), t\big), \\
-y(t) &= g\big(x(t), u(t), t\big),
-\end{aligned}
-\label{eq:nonlinear_system}
+    \frac{d\mathbf{x}(t)}{dt} = \mathbf{f}\!\left(\mathbf{x}(t), \mathbf{u}(t), t\right),
 \end{equation}
-where \( f \) and \( g \) are nonlinear functions for electrochemical systems.
+where $\mathbf{x}(t)$ is the vector of state variables and $\mathbf{u}(t)$ represents external inputs.
 
-With the term \emph{internal state} is referred a set of specific system properites like ion interfacial concentration, temperature, or electrode potential.
-For the purposes of system identification, it is sufficient to focus on the observable relationship between input and output, treating the internal state as a latent variable, opposite to what a scientist is interested.
+In electrochemical systems, the state variables include quantities such as ionic concentrations, electric potentials, temperature and interfacial coverages.
+The governing equations typically consist of coupled partial differential equations arising from mass transport, charge conservation and reaction kinetics.
 
-\subsection{Linearization for small perturbations}
+\section{System identification}
 
-Most physical systems of interest, including electrochemical ones, are inherently nonlinear.
-However, when subjected to sufficiently small perturbations around a given operating point, their behavior can often be approximated by a linear model.
-Let \( \bar{x}(t) \) and \( \bar{u}(t) \) denote a nominal trajectory of the system.
-Small deviations
-\[
-\delta x(t) = x(t) - \bar{x}(t), \qquad
-\delta u(t) = u(t) - \bar{u}(t)
-\]
-can be described by linearizing Eq.~\eqref{eq:nonlinear_system} through a first-order Taylor expansion, yielding
+System identification is the discipline concerned with building mathematical models of dynamical systems based on measured input--output data.
+Rather than deriving models exclusively from first principles, system identification seeks to infer system behavior experimentally by applying controlled excitations and analyzing the resulting responses.
+
+The identified model does not necessarily coincide with the full physical description of the system.
+Instead, it represents an effective input--output relationship that is valid within a specified operating regime and under given assumptions.
+In this sense, impedance spectroscopy constitutes a system identification experiment performed in the frequency domain.
+
+\section{Linearization and time-invariant approximation}
+
+Electrochemical systems are inherently nonlinear and time-varying.
+However, system identification commonly relies on linear approximations around a given operating point.
+
+Let $\mathbf{x}_0$ denote a nominal state.
+For sufficiently small perturbations, the system dynamics can be linearized as
 \begin{equation}
-\begin{aligned}
-\delta \dot{x}(t) &= A(t)\,\delta x(t) + B(t)\,\delta u(t), \\
-\delta y(t) &= C(t)\,\delta x(t) + D(t)\,\delta u(t),
-\end{aligned}
-\label{eq:lvt_system}
+    \delta\dot{\mathbf{x}}(t) = \mathbf{A}\,\delta\mathbf{x}(t) + \mathbf{B}\,\delta\mathbf{u}(t),
 \end{equation}
-where the matrices \( A(t), B(t), C(t), D(t) \) are the Jacobians of \( f \) and \( g \) evaluated along the nominal trajectory.
+where $\mathbf{A}$ and $\mathbf{B}$ are Jacobian matrices evaluated at the operating point.
 
+If the operating point evolves slowly compared to the timescale of the excitation, the system can be treated as locally time-invariant.
+This assumption underlies the interpretation of impedance as a linear frequency response.
 
-
-Let the full nonlinear model be
+A system is said to be \emph{linear} if it satisfies the superposition principle, meaning that the response to a linear combination of inputs equals the corresponding linear combination of the individual responses.
+Formally, for any inputs $\mathbf{u}_1(t)$ and $\mathbf{u}_2(t)$ and scalars $\alpha$, $\beta$, linearity implies
 \[
-    \dot{x} = f(x,u), \qquad y=g(x,u).
-\]
-Choose an operating point $(x_0,u_0)$ and define perturbations $\tilde{x}=x-x_0$, $\tilde{u}=u-u_0$,
-$\tilde{y}=y-y_0$. A first-order Taylor expansion yields
-\[
-    \dot{\tilde{x}} = A \tilde{x} + B \tilde{u}, \qquad
-    \tilde{y} = C \tilde{x} + D \tilde{u},
-\]
-where $A,B,C,D$ are Jacobians evaluated at the operating point. This \emph{linear time-invariant} (LTI)
-approximation forms the basis of impedance modelling and transfer-function identification.
-After linearization, applying the Laplace transform converts temporal derivatives to algebraic multiplication by $s$, yielding
-\[
-    (sI - A)\tilde{X}(s) = B \tilde{U}(s).
-\]
-The input--output relation is
-\[
-    \tilde{Y}(s) = H(s)\tilde{U}(s), \qquad H(s)=C(sI-A)^{-1}B + D.
+\mathbf{y}\!\left(\alpha \mathbf{u}_1 + \beta \mathbf{u}_2\right)
+= \alpha \mathbf{y}\!\left(\mathbf{u}_1\right) + \beta \mathbf{y}\!\left(\mathbf{u}_2\right).
 \]
 
-This formulation defines a \emph{linear time-varying} (LTV) system.
-The validity of the linear approximation depends on the amplitude of the perturbation.
-In practice, this motivates the use of small-amplitude excitation signals superimposed on a slowly varying operating point (compared to the lower frequency of the excitation).
+A system is \emph{time invariant} if its input--output relationship does not depend explicitly on absolute time.
+If an input $\mathbf{u}(t)$ produces an output $\mathbf{y}(t)$, then a time-shifted input $\mathbf{u}(t - t_0)$ produces the correspondingly shifted output $\mathbf{y}(t - t_0)$ for any $t_0$.
 
-\subsection{Drift and frozen-time approximation}
+When both properties hold, the system is referred to as a \emph{linear time-invariant} (LTI) system.
+Under the assumptions of small-signal linearization and sufficiently slow evolution of the operating point, electrochemical systems can be locally approximated as LTI over finite time intervals.
+This approximation underpins the definition of impedance as a transfer function and is invoked throughout the remainder of this thesis.
 
-In many experimental conditions, the operating point of the system evolves slowly in time due to external forcing or intrinsic dynamics.
-This slow evolution is commonly referred to as \emph{drift}.
-If the characteristic timescale of the drift is much larger than the period of the excitation signal, the system can be approximated as "temporarly" time-invariant over a finite observation window.
+\section{Time-domain representation}
 
-Under this "frozen-time" approximation, the LTV system in Eq.~\eqref{eq:lvt_system} is replaced by a sequence of LTI models, each associated with a specific time instant \( t_i \).
-Within a sufficiently short window around \( t_i \), the system matrices are assumed constant, and the input--output relation can be described by a transfer function \( G(s; t_i) \), where $s$ is the complex variable.
+In linear time-invariant form, a dynamical system can be represented in the so called \emph{state-space model} as
+\begin{align}
+    \dot{\mathbf{x}}(t) &= \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t), \\
+    \mathbf{y}(t) &= \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t),
+\end{align}
+where $\mathbf{y}(t)$ denotes the measured output.
 
-This approximation provides the theoretical basis for windowed frequency-domain identification methods, such as those employed in Dynamic Electrochemical Impedance Spectroscopy.
-The choice of the window length reflects a trade-off between temporal resolution and frequency resolution, and is dictated by the relative separation between the timescales of excitation and drift.
+In electrochemistry, time-domain identification methods are commonly employed to estimate transport parameters from transient experiments.
+A notable example is the Galvanostatic Intermittent Titration Technique (GITT), in which diffusion coefficients are estimated from the relaxation of the electrode potential following a current step.
+However, electrochemical systems exhibit a wide spectrum of characteristic timescales.
+Charge-transfer reactions, double-layer charging, and adsorption phenomena occur on timescales several orders of magnitude shorter than solid-state diffusion.
+Capturing the full system dynamics in the time domain would therefore require both very high temporal resolution to resolve fast processes and very long experiments to observe slow relaxation, which is often impractical.
 
-\section{Transfer function representations}
-\label{sec:transfer_functions}
+Moreover, the superposition of multiple coupled processes leads to transient responses that are difficult to model using simple exponential functions.
+While diffusion-dominated behavior can be interpreted in the time domain under restrictive assumptions, the simultaneous presence of faster interfacial phenomena complicates parameter identification.
 
-Once a dynamical system has been linearized around an operating point, its behavior can be described using linear models.
-For frequency-domain identification and impedance analysis, the most relevant representation is the \emph{input--output transfer function}.
-% This section introduces transfer function rapresentation from a system-theoretic perspective and discuss the limitations in non-stationary conditions.
+Frequency-domain identification offers a better solution for addressing this complexity separating processes according to their characteristic time constant.
 
-\subsection{Linear time-invariant input--output models}
 
-Consider a linear time-invariant (LTI) system obtained under the frozen-time approximation discussed in Section~\ref{sec:dynamical_systems}.
-In continuous time, such a system admits a convolution representation
+
+
+
+\section{Frequency-domain identification}
+
+\subsection{From differential equations to frequency domain}
+
+Linearized electrochemical models are commonly expressed as ordinary or partial differential equations in time.
+The Laplace transform was introduced as a method to convert linear differential equations into algebraic equations in a complex variable, exploiting the well known mathematical framework of linear algebra to solve them.
+In doing so, it replaces differentiation with multiplication by the complex frequency variable \( s \).
+
+For a time-dependent function \( x(t) \), defined for \( t \geq 0 \), the Laplace transform is defined as
 \begin{equation}
-y(t) = \int_{0}^{\infty} h(\tau)\,u(t-\tau)\,\mathrm{d}\tau,
-\label{eq:convolution}
+X(s) = \mathcal{L}\{x(t)\} = \int_{0}^{\infty} x(t)\,e^{-s t}\,\mathrm{d}t,
 \end{equation}
-where \( h(t) \) is the impulse response of the system.
+where \( s = \sigma + j\omega \) is a complex variable.
 
-Taking the Laplace transform of Eq.~\eqref{eq:convolution} yields the algebraic relation
+A key property of the Laplace transform is that differentiation in time corresponds to multiplication in the Laplace domain:
 \begin{equation}
-Y(s) = G(s)\,U(s),
-\label{eq:laplace_tf}
+\mathcal{L}\left\{\frac{\mathrm{d}x}{\mathrm{d}t}\right\} = s X(s) - x(0).
 \end{equation}
-where
+Under zero initial conditions, which are typically assumed in impedance analysis, this reduces to a simple algebraic relation.
+
+Furthermore, when the real part \( \sigma \) of the complex variable \( s = \sigma + j\omega \) is set to zero, the Laplace transform formally reduces to the Fourier transform, provided that the integral converges.
+This condition is satisfied for linear time-invariant and stable systems subjected to bounded excitations, as typically assumed in impedance spectroscopy.
+
+Under these assumptions, the system dynamics can be characterized by evaluating the transfer function along the imaginary axis \( s = j\omega \).
+This evaluation corresponds to the steady-state response to sinusoidal perturbations and motivates the term \emph{frequency-domain} characterization.
+
+\subsection{Fourier Transform}
+
+The Fourier transform provides a mathematical framework to represent time-dependent signals as a superposition of sinusoidal components.
+Given a continuous-time signal \( x(t) \), its Fourier transform \( X(\omega) \) is defined as
 \begin{equation}
-G(s) = \mathcal{L}\{h(t)\}
+X(\omega) =
+\int_{-\infty}^{+\infty}
+x(t)\, e^{-j\omega t}\, dt,
 \end{equation}
-is the transfer function.
-The transfer function fully characterizes the input--output dynamics of an LTI system.% under zero initial conditions.
-
-For sinusoidal excitation at angular frequency \( \omega \), the steady-state response is governed by the frequency response function
+while the inverse Fourier transform reconstructs the original signal:
 \begin{equation}
-G(j\omega) = \left. G(s) \right|_{s=j\omega},
+x(t) =
+\frac{1}{2\pi}
+\int_{-\infty}^{+\infty}
+X(\omega)\, e^{j\omega t}\, d\omega.
 \end{equation}
-which maps directly to the experimentally measured impedance in electrochemical systems.
 
-\subsection{Time-domain versus frequency-domain characterization}
-\label{sec:time_vs_frequency}
+In the context of system identification, the Fourier transform enables the analysis of linear systems in the frequency domain by converting differential equations in time into algebraic relations in frequency.
+For a linear time-invariant (LTI) system, the response to a sinusoidal excitation at angular frequency \( \omega \) is also sinusoidal at the same frequency, differing only in amplitude and phase.
+This property allows the system behavior to be fully characterized by its frequency response.
 
-System identification can be broadly classified according to the domain in which system dynamics are characterized.
-In the time-domain approach, the system is excited using transient signals such as steps and pulses, and models are inferred from the temporal evolution of the output.
-This paradigm is widely used in control engineering and is well suited for systems whose dominant dynamics can be captured through time-response features.
+\subsection{Definition of the transfer function}
 
-An alternative and complementary approach is \emph{frequency-domain characterization}, in which the system is excited using sinusoidal or periodic signals and its response is analyzed in the frequency domain.
-Under linear conditions, sinusoidal excitation at a given frequency produces a sinusoidal response at the same frequency, allowing the system dynamics to be characterized independently at each frequency.
-This property underpins the use of frequency response functions and transfer functions as primary system descriptors.
-
-The choice between time-domain and frequency-domain characterization is dictated by both theoretical and practical considerations.
-Time-domain methods often require broadband excitation and rely on model structures that implicitly couple dynamics across frequencies.
-In contrast, frequency-domain methods allow the separation of processes according to their characteristic timescales and are particularly advantageous when systems exhibit dynamics spanning several orders of magnitude in time.
-
-In electrochemical systems, frequency-domain characterization has a long tradition through impedance spectroscopy, while time-domain identification is commonly employed using pulsed or transient techniques, for example to extract diffusion coefficients or kinetic parameters from relaxation behavior.
-The approach adopted in this work explicitly follows the frequency-domain paradigm, using periodic multi-sine excitation signals to obtain localized estimates of the system frequency response.
-
-This choice is motivated by three main considerations:
-\begin{itemize}
-    \item the ability to separate overlapping physical processes by timescale;
-    \item the direct compatibility with transfer-function and impedance representations;
-    \item the suitability of periodic excitation for non-stationary systems under the frozen-time approximation.
-\end{itemize}
-
-Throughout this thesis, impedance is therefore interpreted as a frequency-domain input--output characterization, locally defined in time and estimated from periodic excitation rather than from transient responses.
-
-
-\subsection{Rational transfer functions and physical realizability}
-
-In practical applications, transfer functions are commonly expressed as rational functions of the Laplace variable,
+Consider a linearized dynamical system described by a differential equation of the form
 \begin{equation}
-G(s) = \frac{b_0 + b_1 s + \dots + b_m s^m}{a_0 + a_1 s + \dots + a_n s^n}.
-\label{eq:rational_tf}
+\frac{\mathrm{d}y(t)}{\mathrm{d}t} + a\,y(t) = b\,u(t),
 \end{equation}
-Such representations arise naturally from linear differential equations with constant coefficients and are compatible with both physical modeling and data-driven identification.
+where \( u(t) \) is an input perturbation and \( y(t) \) is the measured response.
 
-The poles and zeros of \( G(s) \) encode the characteristic time constants and dynamic modes of the system.
-Stability, causality, and passivity impose constraints on their location in the complex plane, which are particularly relevant when fitting models to experimental impedance data.
-
-In the context of impedance spectroscopy, rational transfer functions provide a compact and flexible description of broadband frequency responses.
-They also form the basis for equivalent-circuit models and for more general parametric representations used in system identification.
-
-\subsection{Discrete-time representations}
-
-Experimental data are acquired in discrete time, and it is therefore convenient to consider discrete-time models alongside their continuous-time counterparts.
-Let the input and output signals be sampled with period \( T_s \).
-An LTI system can then be represented by a discrete-time transfer function
+Applying the Laplace transform under zero initial conditions yields
 \begin{equation}
-G(z) = \frac{b_0 + b_1 z^{-1} + \dots + b_m z^{-m}}{1 + a_1 z^{-1} + \dots + a_n z^{-n}},
-\label{eq:discrete_tf}
+s Y(s) + a Y(s) = b U(s),
 \end{equation}
-where \( z \) is the complex variable of the \( z \)-transform.
-
-Discrete-time representations are particularly useful for numerical estimation and real-time processing.
-However, care must be taken when interpreting high-frequency dynamics, as sampling introduces aliasing and limits the observable bandwidth.
-Throughout this work, discrete-time models are used as computational tools, while the underlying physical interpretation is maintained in the continuous-time domain.
-
-\subsection{Time-varying transfer functions}
-
-When the operating point of the system evolves in time, the frozen-time approximation leads to a family of transfer functions parameterized by time,
+which can be rearranged to give
 \begin{equation}
-G(s; t_k),
+Y(s) = \frac{b}{s + a} U(s).
 \end{equation}
-each describing the local linear dynamics around a given instant \( t_k \).
 
-In Dynamic Electrochemical Impedance Spectroscopy, the objective is not to identify a single global model, but rather to estimate the evolution of the frequency response as the system drifts.
-This perspective naturally leads to the concept of time-varying transfer functions and motivates windowed or adaptive identification techniques.
-
-It is important to note that such time-varying representations are not transfer functions in the strict LTI sense.
-They should instead be interpreted as local descriptors of system dynamics, whose validity is restricted to the temporal neighborhood over which the frozen-time approximation holds.
-
-\subsection{Relevance to impedance estimation}
-
-The system-theoretic framework introduced here provides the conceptual bridge between time-domain measurements and frequency-domain impedance estimation.
-The impedance can be interpreted as a transfer function between current and voltage perturbations, locally defined in time and estimated over finite observation windows.
-
-Subsequent chapters build upon this framework to:
-\begin{itemize}
-    \item estimate non-stationary frequency responses from multisine excitation signals;
-    \item fit parametric models to time-resolved impedance spectra;
-    \item track the evolution of transfer-function parameters as indicators of system state and degradation.
-\end{itemize}
-
-\section{Frequency-domain representations and spectral analysis}
-\label{sec:frequency_domain}
-
-Frequency-domain characterization relies on representing time-domain signals in terms of their spectral content.
-This section introduces the fundamental tools required to interpret periodic excitation and response signals in the frequency domain, with emphasis on concepts that directly impact impedance estimation in non-stationary conditions.
-
-\subsection{Fourier representation of periodic signals}
-
-A periodic signal \( x(t) \) with period \( T \) can be expressed as a Fourier series,
+The transfer function is defined as the ratio between the Fourier-transformed output and input:
 \begin{equation}
-x(t) = \sum_{k=-\infty}^{\infty} X_k \, e^{j 2\pi k t / T},
-\label{eq:fourier_series}
+G(s) = \frac{Y(s)}{U(s)}
 \end{equation}
-where the coefficients \( X_k \) encode the amplitude and phase of each harmonic component.
-For real-valued signals, the spectrum is conjugate symmetric, and the series can equivalently be written in terms of sines and cosines.
+and it describes how the system responds with the output \( Y(s) \) to certain input \( U(s) \).
 
-When a linear time-invariant system is excited by a periodic input, the steady-state output is also periodic with the same fundamental period.
-Each harmonic component is independently scaled and phase-shifted according to the system frequency response.
-This property forms the basis of frequency-domain system identification and impedance spectroscopy.
+% In electrochemical systems, the impedance is obtained by evaluating this transfer function along the imaginary axis,
+% \begin{equation}
+% Z(j\omega) = \left. G(s) \right|_{s=j\omega},
+% \end{equation}
+% which corresponds to steady-state sinusoidal excitation.
 
-\subsection{Discrete Fourier Transform and sampled signals}
+\subsection{Connection to state-space representations}
 
-In experimental practice, signals are acquired in discrete time over a finite observation window.
-Given a sampled signal \( x[n] = x(nT_s) \) of length \( N \), its spectral content is obtained via the Discrete Fourier Transform (DFT),
+The same transfer function can be derived from a state-space model obtained by rewriting the governing differential equations in first-order form.
+For a linear time-invariant system
 \begin{equation}
-X[k] = \sum_{n=0}^{N-1} x[n]\,e^{-j 2\pi k n / N},
-\label{eq:dft}
+\dot{x}(t) = A x(t) + B u(t), \qquad
+y(t) = C x(t) + D u(t),
 \end{equation}
-which maps the signal onto a discrete set of frequency bins.
-
-The DFT implicitly assumes that the finite-length signal corresponds to one period of an underlying periodic waveform.
-If this assumption is violated, spectral energy leaks into adjacent frequency bins, a phenomenon known as \emph{spectral leakage}.
-Avoiding or controlling leakage is essential for accurate estimation of frequency responses and motivates careful excitation and window design.
-
-\subsection{Frequency resolution and observation window}
-
-The frequency resolution of the DFT is determined by the length of the observation window,
+application of the Laplace transform yields
 \begin{equation}
-\Delta f = \frac{1}{N T_s}.
+G(s) = C (sI - A)^{-1} B + D.
 \end{equation}
-Longer windows provide finer frequency resolution, while shorter windows improve temporal localization.
-This trade-off is fundamental and cannot be circumvented.
 
-In the context of non-stationary systems, this trade-off translates into a compromise between:
-\begin{itemize}
-    \item resolving low-frequency dynamics accurately;
-    \item tracking time variations in the system response.
-\end{itemize}
+This expression demonstrates that state-space and transfer-function models are mathematically equivalent descriptions of the same linear system.
+The choice between them depends on the intended application.
 
-Dynamic impedance methods exploit this trade-off by adapting the analysis window to the characteristic timescales of the excitation and the system drift.
+% \subsection{Relevance to impedance spectroscopy}
 
-\subsection{Windowing and leakage control}
+% Impedance spectroscopy exploits the fact that linearized electrochemical dynamics can be represented by transfer functions evaluated in the frequency domain.
+% Rather than solving the governing equations explicitly, the frequency response is measured experimentally and interpreted through physically motivated models.
 
-When the acquired signal does not contain an integer number of periods of all excited frequencies, spectral leakage occurs.
-This effect distorts the estimated amplitude and phase of the frequency components and degrades impedance accuracy.
+% This frequency-domain viewpoint forms the theoretical basis for both classical impedance spectroscopy and the dynamic impedance methods developed in this thesis.
 
-Windowing functions can be applied in the time domain to reduce leakage by smoothly tapering the signal at the window boundaries.
-However, windowing also broadens spectral peaks and reduces frequency resolution.
-In this work, leakage is primarily controlled through excitation design—specifically by ensuring that all excited frequencies are integer multiples of a fundamental frequency—rather than by aggressive windowing.
+\section{Experimental estimation of frequency response functions}
 
-This design choice is particularly important for multisine excitation, where accurate separation of closely spaced frequency components is required.
+The transfer function is a mathematical concept deduced from first principle model of a system subjected to a small periodical perturbation of frequency \( f = \frac{\omega}{2 \pi} \).
+In practical settings a system at steady state can be perturbed with a small sinusoidal excitation to assume the linear and time-invariant conditions and estimate the \emph{frequency response function} (FRF) over the frequencies \( f_k \).
+In other words, the frequency response function is the practical realization of the transfer function.
 
-\subsection{Short-time Fourier analysis}
+\section{Kramers--Kronig relations and measure validity}
 
-For systems whose properties evolve in time, a single Fourier transform over the entire dataset is insufficient.
-Instead, the signal can be analyzed over successive, partially overlapping windows, leading to a short-time Fourier representation.
+The physical interpretation of electrochemical impedance spectroscopy relies on a set of assumptions that must be satisfied during the measurement.
+In particular, the system must respond linearly to small perturbations, remain approximately time-invariant over the duration of the experiment, and exhibit causal behavior, meaning that the measured response occurs only after the applied excitation.
 
-Given a window length \( T_w \), the Short-Time Fourier Transform (STFT) provides a sequence of local spectra, each associated with a specific time interval.
-If the system dynamics evolve slowly compared to \( T_w \), each local spectrum can be interpreted as the frequency response of a locally stationary system.
-
-This frozen-time interpretation underlies the use of windowed FFT-based methods for dynamic impedance estimation at high frequencies, where many oscillation periods are contained within each window.
-
-\subsection{Implications for impedance estimation}
-
-The concepts introduced in this section establish the signal-processing foundation for the methods presented in Chapters~6 and~7.
-In particular:
-\begin{itemize}
-    \item multisine excitation exploits the Fourier representation of periodic signals;
-    \item frequency resolution constraints dictate multisine period and window length;
-    \item leakage considerations motivate harmonic frequency selection;
-    \item short-time analysis enables time-resolved impedance estimation.
-\end{itemize}
-
-The estimation algorithms themselves are discussed separately.
-Here, the focus is on the conditions under which frequency-domain representations are meaningful and reliable in non-stationary experimental settings.
-
-\section{Multisine excitation for dynamic system identification}
-\label{sec:multisine_background}
-
-Frequency-domain characterization requires excitation signals that are both information-rich and compatible with the assumptions of linearization and frozen-time analysis.
-This section introduces multisine excitation as a deliberate design choice for dynamic system identification and clarifies its advantages over alternative broadband excitation strategies.
-
-\subsection{Requirements for excitation signals in non-stationary systems}
-
-To estimate a frequency response function, the excitation signal must sufficiently excite the system across the frequency band of interest while preserving the validity of the linear approximation.
-In non-stationary systems, additional constraints arise:
-\begin{itemize}
-    \item the excitation must be periodic to enable frequency-domain analysis over finite windows;
-    \item the duration of one excitation period must be short compared to the drift timescale;
-    \item the signal amplitude must remain small enough to avoid nonlinear distortion;
-    \item the excitation must allow separation of frequency components without intermodulation.
-\end{itemize}
-
-These requirements significantly restrict the class of admissible excitation signals and motivate the use of deterministic periodic waveforms.
-
-\subsection{Broadband excitation strategies}
-
-Several classes of broadband excitation signals are commonly used in system identification:
-\begin{itemize}
-    \item \emph{impulsive or step excitations}, suitable for time-domain analysis but inefficient for resolving multiple timescales;
-    \item \emph{pseudo-random binary sequences (PRBS)}, widely used in control applications but prone to spectral leakage and poor frequency selectivity;
-    \item \emph{chirp signals}, which sweep frequencies sequentially but require long acquisition times and assume stationarity over the sweep;
-    \item \emph{multisine signals}, which excite multiple discrete frequencies simultaneously.
-\end{itemize}
-
-Among these options, multisine excitation uniquely satisfies the constraints imposed by dynamic impedance experiments: it provides simultaneous broadband excitation while maintaining strict control over frequency content and phase relationships.
-
-\subsection{Definition and properties of multisine signals}
-
-A multisine signal is defined as the superposition of \( K \) sinusoidal components,
+Under these conditions, the impedance of an electrochemical system is not an arbitrary complex function of frequency.
+Instead, the real and imaginary parts of the impedance are intrinsically linked by fundamental constraints known as the Kramers--Kronig relations.
+For an impedance function \( Z(j\omega) = Z'(\omega) + j Z''(\omega) \), the simplified formulations of the Kramers--Kronig relations is
 \begin{equation}
-u(t) = \sum_{k=1}^{K} A_k \sin\left(2\pi f_k t + \phi_k\right),
-\label{eq:multisine_def}
+Z'(\omega) = \frac{2}{\pi} \, \int_{0}^{\infty}
+\frac{\omega' Z''(\omega')}{\omega'^2 - \omega^2} \, d\omega',
 \end{equation}
-where \( f_k \), \( A_k \), and \( \phi_k \) denote the frequency, amplitude, and phase of the \( k \)-th component.
-
-When the frequencies are chosen as integer multiples of a fundamental frequency, the resulting waveform is exactly periodic.
-This property ensures that the Fourier representation of the signal is discrete and that spectral leakage is minimized when analyzing integer numbers of periods.
-
-For linear systems, each sinusoidal component is transmitted independently, allowing the frequency response to be estimated at all excited frequencies from a single time record.
-
-\subsection{Multisine excitation under frozen-time assumptions}
-
-In dynamic impedance experiments, the system operating point evolves continuously.
-Multisine excitation is compatible with this non-stationary setting provided that:
-\begin{itemize}
-    \item the excitation period is short compared to the drift timescale;
-    \item the analysis window contains many oscillation periods of the excited frequencies.
-\end{itemize}
-
-Under these conditions, each frequency component probes a locally stationary system, and the estimated frequency response can be interpreted as a frozen-time transfer function.
-Higher-frequency components are less sensitive to drift, while lower-frequency components require longer observation windows and are more affected by non-stationarity.
-
-This separation of timescales is central to the mixed estimation strategies adopted later in this work.
-
-\subsection{Advantages for impedance spectroscopy}
-
-Multisine excitation offers several advantages that are particularly relevant for impedance-based characterization:
-\begin{itemize}
-    \item efficient use of experimental time by simultaneous excitation of many frequencies;
-    \item precise control of frequency grid and resolution;
-    \item compatibility with harmonic analysis and FFT-based estimation;
-    \item flexibility in amplitude and phase optimization to manage signal-to-noise ratio and crest factor.
-\end{itemize}
-
-These properties make multisine signals well suited for long-term, high-resolution monitoring of non-stationary electrochemical systems.
-The practical design and implementation of multisine excitation, including frequency selection, amplitude scaling, and phase optimization, are addressed in Chapter~6.
-
-\section{Mathematical optimization for impedance model fitting}
-\label{sec:optimization_background}
-
-The estimation of parametric models from impedance data ultimately relies on numerical optimization.
-In this work, optimization is used to fit complex-valued, nonlinear models to experimentally measured frequency responses.
-This section introduces the essential concepts required to understand such fitting procedures, with emphasis on practical aspects relevant to impedance spectroscopy.
-
-\subsection{Nonlinear least-squares formulation}
-
-Let \( Z_{\text{exp}}(\omega_k) \in \mathbb{C} \) denote the experimentally measured impedance at angular frequency \( \omega_k \), and let
-\[
-Z_{\text{model}}(\omega_k; \boldsymbol{\theta})
-\]
-be a parametric model depending on a vector of parameters \( \boldsymbol{\theta} \in \mathbb{R}^p \).
-Model fitting is formulated as a nonlinear least-squares problem, where the objective is to minimize the discrepancy between model and data over all measured frequencies.
-
-A common formulation of the cost function is
 \begin{equation}
-J(\boldsymbol{\theta}) =
-\sum_{k=1}^{N}
-\left\|
-Z_{\text{exp}}(\omega_k) -
-Z_{\text{model}}(\omega_k; \boldsymbol{\theta})
-\right\|^2,
-\label{eq:nlls_basic}
+Z''(\omega) = -\frac{2 \omega}{\pi} \, \int_{0}^{\infty}
+\frac{Z'(\omega')}{\omega'^2 - \omega^2} \, d\omega',
 \end{equation}
-where \( \|\cdot\| \) denotes the complex modulus.
-This formulation treats the impedance as a complex quantity and penalizes deviations in both magnitude and phase.
+These relations originate from causality and linearity and apply to the transfer function of any physically realizable linear system.
+Since the impedance spectrum corresponds to the frequency response function of the system, it must satisfy the same constraints.
 
-Equivalent formulations may explicitly separate real and imaginary parts,
+In electrochemical systems, a strict verification of the Kramers--Kronig relations is complicated by the finite frequency range of measurements and experimental noise.
+An alternative validation approach consists in fitting the measured impedance spectra with an equivalent circuit model composed of a series of RC elements that are guaranteed to satisfy the Kramers--Kronig relations, as they represent causal and stable linear systems.
+If such a model reproduces the experimental data within the experimental uncertainty, the impedance measurement is generally considered physically consistent.
+
+\section{Parameter estimation from impedance spectra}
+
+Once a frequency response function has been measured for a given system and validated, the goal of system identification is to infer a mathematical model that represents the underlying transfer function.
+In this work, the focus is placed on parametric models, which are defined by a finite set of parameters.
+Such models may be derived from first-principles physical assumptions or formulated as more general mathematical expressions, such as rational functions or polynomials.
+In both cases, the resulting models are typically nonlinear with respect to their parameters.
+
+\subsection{Fitting procedure}
+
+After selecting a model structure, parameter estimation is performed by fitting the model to the experimentally measured complex-valued impedance data.
+The fitting procedure consists of solving an optimization problem to determine the parameter vector \( \boldsymbol{\theta} \) that minimizes the discrepancy between the model response \( Z_{\text{model}}(\omega_k; \boldsymbol{\theta}) \) and the experimental data \( Z_{\text{exp}}(\omega_k) \), up to a measurement error \( \epsilon_Z \).
+This relationship can be expressed as
 \begin{equation}
-J(\boldsymbol{\theta}) =
-\sum_{k=1}^{N}
-\left[
-\left( \Re\{Z_{\text{exp}} - Z_{\text{model}}\} \right)^2
-+
-\left( \Im\{Z_{\text{exp}} - Z_{\text{model}}\} \right)^2
-\right],
-\label{eq:nlls_split}
+Z_{\text{exp}}(\omega_k) =
+Z_{\text{model}}(\omega_k; \boldsymbol{\theta}) + \epsilon_Z.
 \end{equation}
-which is often convenient for numerical solvers that operate on real-valued residual vectors.
 
-\subsection{Weighting and noise considerations}
-
-In practical impedance measurements, the uncertainty associated with each data point is frequency dependent.
-Low-frequency points often exhibit larger variance due to drift and long acquisition times, while high-frequency points may be affected by instrumentation noise.
-
-To account for this heteroscedasticity, weighted least squares formulations are commonly employed,
+The optimization problem is commonly formulated as a least-squares minimization.
+Since the impedance is a complex quantity, the real and imaginary parts are treated jointly in the definition of the objective function:
 \begin{equation}
 J(\boldsymbol{\theta}) =
 \sum_{k=1}^{N}
@@ -421,91 +239,551 @@ w_k
 Z_{\text{exp}}(\omega_k) -
 Z_{\text{model}}(\omega_k; \boldsymbol{\theta})
 \right\|^2,
-\label{eq:weighted_nlls}
+\label{eq:nlls_basic}
 \end{equation}
-where \( w_k \) is a weighting factor.
+where \( w_k \) is a weighting factor associated with the measurement uncertainty at angular frequency \( \omega_k \).
+This approach is commonly referred to as complex nonlinear least squares (CNLS).
 
-Common choices include:
-\begin{itemize}
-    \item inverse variance weighting, \( w_k = 1/\sigma_k^2 \), when noise statistics are known or estimated;
-    \item modulus weighting, \( w_k = 1/|Z_{\text{exp}}(\omega_k)|^2 \), to balance contributions across decades of impedance magnitude;
-    \item custom frequency-dependent weights to emphasize specific spectral regions.
-\end{itemize}
+In practice, the measurement uncertainty is not uniform across the frequency range.
+At low frequencies, impedance measurements are generally affected by larger noise and drift, often proportional to  \(1/f\).
+Appropriate weighting of the residuals is therefore essential to avoid overemphasizing low-frequency data and to obtain physically meaningful parameter estimates.
 
-The choice of weighting has a direct impact on parameter estimates and should reflect the dominant sources of experimental uncertainty.
+The objective function is evaluated iteratively for different parameter values in order to locate its minimum.
+Most impedance fitting routines rely on derivative-based optimization algorithms, which exploit local gradient information in the parameter space.
+These methods require the computation of the Jacobian matrix of the residuals with respect to the parameters, either analytically or by numerical differentiation.
 
-\subsection{Gradient-based optimization algorithms}
+\subsection{Initial parameters and local minima}
 
-The cost functions encountered in impedance fitting are generally nonlinear and must be minimized numerically.
-Among the most widely used methods are derivative-based algorithms that exploit local gradient information.
+A major challenge in impedance model fitting arises from the fact that the objective function \( J(\boldsymbol{\theta}) \) is non-convex in non-linear problems.
+The associated hypersurface in parameter space may exhibit multiple local minima, strong parameter correlations and flat directions, and narrow valleys and sharp ridges.
 
-Common solvers include:
-\begin{itemize}
-    \item the Gauss--Newton method, efficient for mildly nonlinear problems;
-    \item the Levenberg--Marquardt algorithm, which interpolates between Gauss--Newton and gradient descent and is particularly robust for impedance fitting;
-    \item quasi-Newton methods (e.g.\ BFGS), which approximate second-order information without explicit Hessian computation.
-\end{itemize}
+As a consequence, gradient-based optimization algorithms converge to a local minimum that depends on the initial parameter guess.
+There is no guarantee that this minimum corresponds to the global optimum or to a physically meaningful parameter set.
 
-These algorithms require the evaluation of the Jacobian of the residuals with respect to the parameters, either analytically or via numerical differentiation.
-In this work, derivative-based solvers are preferred due to their efficiency and compatibility with moderately sized parametric models.
+This issue becomes more pronounced for models with a large number of parameters or when fitting broadband impedance spectra spanning several decades of frequency.
 
-\subsection{Non-convexity and local minima}
+The choice of initial parameters therefore plays a critical role in the success of nonlinear optimization.
+Well-informed initial guesses can significantly improve convergence speed and increase the likelihood of identifying the global minimum.
 
-A central difficulty in impedance model fitting is that the objective function \( J(\boldsymbol{\theta}) \) is generally non-convex.
-The associated hypersurface in parameter space may exhibit:
-\begin{itemize}
-    \item multiple local minima;
-    \item flat directions and parameter correlations;
-    \item narrow valleys and sharp ridges.
-\end{itemize}
+In principle, global optimization strategies based on random or systematic sampling of the parameter space can be employed, followed by local refinement of the best candidates.
+While such approaches improve robustness, they are often computationally expensive and may become impractical for complex models or large datasets.
 
-As a consequence, gradient-based algorithms converge to a local minimum that depends on the initial parameter guess.
-There is no guarantee that this minimum corresponds to the global optimum or to physically meaningful parameters.
 
-This issue is exacerbated for models with many parameters or when fitting broadband impedance data spanning several decades of frequency.
 
-\subsection{Role of initial parameters}
 
-The choice of initial parameters plays a critical role in determining the outcome of nonlinear optimization.
-Good initial guesses can significantly improve convergence speed and increase the likelihood of reaching the global minimum.
 
-In practice, initial parameters may be obtained from:
-\begin{itemize}
-    \item physical intuition or prior knowledge of the system;
-    \item simplified models fitted to restricted frequency ranges;
-    \item parameter values obtained at previous time steps in dynamic experiments.
-\end{itemize}
 
-In dynamic impedance spectroscopy, temporal continuity provides a natural strategy: parameter estimates from one time instant can be used as initial guesses for the next.
-This approach exploits the slow evolution of system properties and improves robustness in time-resolved fitting.
 
-\subsection{Implications for dynamic impedance analysis}
 
-The optimization framework outlined here underpins the model-based analysis presented in later chapters.
-The combination of weighted nonlinear least squares, derivative-based solvers, and informed initialization enables the extraction of meaningful parameters from time-resolved impedance spectra.
 
-At the same time, the limitations imposed by non-convexity and noise must be kept in mind when interpreting fitted parameters.
-For this reason, the emphasis in this work is placed not only on absolute parameter values, but also on their temporal trends and relative evolution.
 
-\section{Summary and outlook toward non-stationary impedance estimation}
-\label{sec:chapter_summary}
 
-This chapter has established the theoretical framework required to interpret dynamic impedance measurements from a system-identification perspective.
-Starting from a general description of dynamical systems, the conditions under which nonlinear electrochemical systems can be locally approximated as linear were clarified through linearization and frozen-time arguments.
-This led naturally to the interpretation of impedance as a time-localized transfer function, whose validity is constrained by excitation amplitude, drift timescales, and observation windows.
 
-The chapter further introduced the frequency-domain paradigm adopted throughout this work, emphasizing its advantages for systems exhibiting dynamics over multiple decades in time.
-Fourier-based signal representations, multisine excitation, and windowed spectral analysis were discussed as enabling tools for extracting localized frequency responses from non-stationary systems.
-Finally, the mathematical optimization background required to fit parametric models to complex-valued impedance data was presented, highlighting both the capabilities and limitations of nonlinear least-squares approaches in dynamic settings.
 
-Together, these elements define the conceptual boundaries within which non-stationary impedance estimation can be meaningfully performed.
-What has deliberately been omitted so far is a discussion of \emph{how} these concepts are implemented in practice and how they are realized in the existing literature.
 
-The next chapter therefore reviews the state of the art in non-stationary impedance spectroscopy.
-It surveys the principal methodological approaches used to estimate time-varying frequency responses, including short-time Fourier transform (STFT)-based techniques, Dynamic Multi-Frequency Analysis (DMFA), and alternative formulations proposed in recent years.
-Particular attention is given to the assumptions underlying each method, their achievable time--frequency resolution, and their compatibility with slowly drifting electrochemical systems.
 
-In addition to methodological aspects, the next chapter discusses the experimental and hardware contexts in which these techniques have been applied, ranging from laboratory-grade impedance analyzers to custom-built measurement systems and embedded implementations.
-Examples from different classes of electrochemical systems—including batteries, fuel cells, and model electrochemical interfaces—are used to highlight both the potential and the current limitations of non-stationary impedance methods.
 
-This review provides the necessary context for positioning the mixed estimation strategy developed in this thesis, which combines complementary techniques to achieve broadband, time-resolved impedance characterization under realistic experimental constraints.
+
+% \section{Dynamical systems }
+% \label{sec:dynamical_systems}
+
+% % Dynamic impedance measurements rely on the interpretation of an electrochemical cell as a dynamical system whose input--output behavior can be locally approximated by linear models.
+% % This section introduces the system-theoretic framework required for such an interpretation, focusing on input--output representations, linearization, and the assumptions underlying their validity.
+% % Electrochemical aspects are deliberately excluded and addressed in the dedicated background chapter.
+
+% % \subsection{Dynamical systems as input--output operators}
+
+% A dynamical system can be described as a relation between an input signal \( u(t) \in \mathbb{R}^{n_u} \), an internal state \( x(t) \in \mathbb{R}^{n_x} \), and an output signal \( y(t) \in \mathbb{R}^{n_y} \).
+% In its most general continuous-time form, such a system can be written as
+% \begin{equation}
+% \begin{aligned}
+% \dot{x}(t) &= f\big(x(t), u(t), t\big), \\
+% y(t) &= g\big(x(t), u(t), t\big),
+% \end{aligned}
+% \label{eq:nonlinear_system}
+% \end{equation}
+% where \( f \) and \( g \) are nonlinear functions for electrochemical systems.
+
+% With the term \emph{internal state} is referred a set of specific system properites like ion interfacial concentration, temperature, or electrode potential.
+% For the purposes of system identification, it is sufficient to focus on the observable relationship between input and output, treating the internal state as a latent variable, opposite to what a scientist is interested.
+
+% \subsection{Linearization for small perturbations}
+
+% Most physical systems of interest, including electrochemical ones, are inherently nonlinear.
+% However, when subjected to sufficiently small perturbations around a given operating point, their behavior can often be approximated by a linear model.
+% Let \( \bar{x}(t) \) and \( \bar{u}(t) \) denote a nominal trajectory of the system.
+% Small deviations
+% \[
+% \delta x(t) = x(t) - \bar{x}(t), \qquad
+% \delta u(t) = u(t) - \bar{u}(t)
+% \]
+% can be described by linearizing Eq.~\eqref{eq:nonlinear_system} through a first-order Taylor expansion, yielding
+% \begin{equation}
+% \begin{aligned}
+% \delta \dot{x}(t) &= A(t)\,\delta x(t) + B(t)\,\delta u(t), \\
+% \delta y(t) &= C(t)\,\delta x(t) + D(t)\,\delta u(t),
+% \end{aligned}
+% \label{eq:lvt_system}
+% \end{equation}
+% where the matrices \( A(t), B(t), C(t), D(t) \) are the Jacobians of \( f \) and \( g \) evaluated along the nominal trajectory.
+
+
+
+% Let the full nonlinear model be
+% \[
+%     \dot{x} = f(x,u), \qquad y=g(x,u).
+% \]
+% Choose an operating point $(x_0,u_0)$ and define perturbations $\tilde{x}=x-x_0$, $\tilde{u}=u-u_0$,
+% $\tilde{y}=y-y_0$. A first-order Taylor expansion yields
+% \[
+%     \dot{\tilde{x}} = A \tilde{x} + B \tilde{u}, \qquad
+%     \tilde{y} = C \tilde{x} + D \tilde{u},
+% \]
+% where $A,B,C,D$ are Jacobians evaluated at the operating point. This \emph{linear time-invariant} (LTI)
+% approximation forms the basis of impedance modelling and transfer-function identification.
+% After linearization, applying the Laplace transform converts temporal derivatives to algebraic multiplication by $s$, yielding
+% \[
+%     (sI - A)\tilde{X}(s) = B \tilde{U}(s).
+% \]
+% The input--output relation is
+% \[
+%     \tilde{Y}(s) = H(s)\tilde{U}(s), \qquad H(s)=C(sI-A)^{-1}B + D.
+% \]
+
+% This formulation defines a \emph{linear time-varying} (LTV) system.
+% The validity of the linear approximation depends on the amplitude of the perturbation.
+% In practice, this motivates the use of small-amplitude excitation signals superimposed on a slowly varying operating point (compared to the lower frequency of the excitation).
+
+% \subsection{Drift and frozen-time approximation}
+
+% In many experimental conditions, the operating point of the system evolves slowly in time due to external forcing or intrinsic dynamics.
+% This slow evolution is commonly referred to as \emph{drift}.
+% If the characteristic timescale of the drift is much larger than the period of the excitation signal, the system can be approximated as "temporary" time-invariant over a finite observation window.
+
+% Under this "frozen-time" approximation, the LTV system in Eq.~\eqref{eq:lvt_system} is replaced by a sequence of LTI models, each associated with a specific time instant \( t_i \).
+% Within a sufficiently short window around \( t_i \), the system matrices are assumed constant, and the input--output relation can be described by a transfer function \( G(s; t_i) \), where $s$ is the complex variable.
+
+% This approximation provides the theoretical basis for windowed frequency-domain identification methods, such as those employed in Dynamic Electrochemical Impedance Spectroscopy.
+% The choice of the window length reflects a trade-off between temporal resolution and frequency resolution, and is dictated by the relative separation between the timescales of excitation and drift.
+
+% \section{Transfer function representations}
+% \label{sec:transfer_functions}
+
+% Once a dynamical system has been linearized around an operating point, its behavior can be described using linear models.
+% For frequency-domain identification and impedance analysis, the most relevant representation is the \emph{input--output transfer function}.
+% % This section introduces transfer function representation from a system-theoretic perspective and discuss the limitations in non-stationary conditions.
+
+% \subsection{Linear time-invariant input--output models}
+
+% Consider a linear time-invariant (LTI) system obtained under the frozen-time approximation discussed in Section~\ref{sec:dynamical_systems}.
+% In continuous time, such a system admits a convolution representation
+% \begin{equation}
+% y(t) = \int_{0}^{\infty} h(\tau)\,u(t-\tau)\,\mathrm{d}\tau,
+% \label{eq:convolution}
+% \end{equation}
+% where \( h(t) \) is the impulse response of the system.
+
+% Taking the Laplace transform of Eq.~\eqref{eq:convolution} yields the algebraic relation
+% \begin{equation}
+% Y(s) = G(s)\,U(s),
+% \label{eq:laplace_tf}
+% \end{equation}
+% where
+% \begin{equation}
+% G(s) = \mathcal{L}\{h(t)\}
+% \end{equation}
+% is the transfer function.
+% The transfer function fully characterizes the input--output dynamics of an LTI system.% under zero initial conditions.
+
+% For sinusoidal excitation at angular frequency \( \omega \), the steady-state response is governed by the frequency response function
+% \begin{equation}
+% G(j\omega) = \left. G(s) \right|_{s=j\omega},
+% \end{equation}
+% which maps directly to the experimentally measured impedance in electrochemical systems.
+
+% \subsection{Time-domain versus frequency-domain characterization}
+% \label{sec:time_vs_frequency}
+
+% System identification can be broadly classified according to the domain in which system dynamics are characterized.
+% In the time-domain approach, the system is excited using transient signals such as steps and pulses, and models are inferred from the temporal evolution of the output.
+% This paradigm is widely used in control engineering and is well suited for systems whose dominant dynamics can be captured through time-response features.
+
+% An alternative and complementary approach is \emph{frequency-domain characterization}, in which the system is excited using sinusoidal or periodic signals and its response is analyzed in the frequency domain.
+% Under linear conditions, sinusoidal excitation at a given frequency produces a sinusoidal response at the same frequency, allowing the system dynamics to be characterized independently at each frequency.
+% This property underpins the use of frequency response functions and transfer functions as primary system descriptors.
+
+% The choice between time-domain and frequency-domain characterization is dictated by both theoretical and practical considerations.
+% Time-domain methods often require broadband excitation and rely on model structures that implicitly couple dynamics across frequencies.
+% In contrast, frequency-domain methods allow the separation of processes according to their characteristic timescales and are particularly advantageous when systems exhibit dynamics spanning several orders of magnitude in time.
+
+% In electrochemical systems, frequency-domain characterization has a long tradition through impedance spectroscopy, while time-domain identification is commonly employed using pulsed or transient techniques, for example to extract diffusion coefficients or kinetic parameters from relaxation behavior.
+% The approach adopted in this work explicitly follows the frequency-domain paradigm, using periodic multi-sine excitation signals to obtain localized estimates of the system frequency response.
+
+% This choice is motivated by three main considerations:
+% \begin{itemize}
+%     \item the ability to separate overlapping physical processes by timescale;
+%     \item the direct compatibility with transfer-function and impedance representations;
+%     \item the suitability of periodic excitation for non-stationary systems under the frozen-time approximation.
+% \end{itemize}
+
+% Throughout this thesis, impedance is therefore interpreted as a frequency-domain input--output characterization, locally defined in time and estimated from periodic excitation rather than from transient responses.
+
+
+% \subsection{Rational transfer functions and physical realizability}
+
+% In practical applications, transfer functions are commonly expressed as rational functions of the Laplace variable,
+% \begin{equation}
+% G(s) = \frac{b_0 + b_1 s + \dots + b_m s^m}{a_0 + a_1 s + \dots + a_n s^n}.
+% \label{eq:rational_tf}
+% \end{equation}
+% Such representations arise naturally from linear differential equations with constant coefficients and are compatible with both physical modeling and data-driven identification.
+
+% The poles and zeros of \( G(s) \) encode the characteristic time constants and dynamic modes of the system.
+% Stability, causality, and passivity impose constraints on their location in the complex plane, which are particularly relevant when fitting models to experimental impedance data.
+
+% In the context of impedance spectroscopy, rational transfer functions provide a compact and flexible description of broadband frequency responses.
+% They also form the basis for equivalent-circuit models and for more general parametric representations used in system identification.
+
+% \subsection{Discrete-time representations}
+
+% Experimental data are acquired in discrete time, and it is therefore convenient to consider discrete-time models alongside their continuous-time counterparts.
+% Let the input and output signals be sampled with period \( T_s \).
+% An LTI system can then be represented by a discrete-time transfer function
+% \begin{equation}
+% G(z) = \frac{b_0 + b_1 z^{-1} + \dots + b_m z^{-m}}{1 + a_1 z^{-1} + \dots + a_n z^{-n}},
+% \label{eq:discrete_tf}
+% \end{equation}
+% where \( z \) is the complex variable of the \( z \)-transform.
+
+% Discrete-time representations are particularly useful for numerical estimation and real-time processing.
+% However, care must be taken when interpreting high-frequency dynamics, as sampling introduces aliasing and limits the observable bandwidth.
+% Throughout this work, discrete-time models are used as computational tools, while the underlying physical interpretation is maintained in the continuous-time domain.
+
+% \subsection{Time-varying transfer functions}
+
+% When the operating point of the system evolves in time, the frozen-time approximation leads to a family of transfer functions parameterized by time,
+% \begin{equation}
+% G(s; t_k),
+% \end{equation}
+% each describing the local linear dynamics around a given instant \( t_k \).
+
+% In Dynamic Electrochemical Impedance Spectroscopy, the objective is not to identify a single global model, but rather to estimate the evolution of the frequency response as the system drifts.
+% This perspective naturally leads to the concept of time-varying transfer functions and motivates windowed or adaptive identification techniques.
+
+% It is important to note that such time-varying representations are not transfer functions in the strict LTI sense.
+% They should instead be interpreted as local descriptors of system dynamics, whose validity is restricted to the temporal neighborhood over which the frozen-time approximation holds.
+
+% \subsection{Relevance to impedance estimation}
+
+% The system-theoretic framework introduced here provides the conceptual bridge between time-domain measurements and frequency-domain impedance estimation.
+% The impedance can be interpreted as a transfer function between current and voltage perturbations, locally defined in time and estimated over finite observation windows.
+
+% Subsequent chapters build upon this framework to:
+% \begin{itemize}
+%     \item estimate non-stationary frequency responses from multisine excitation signals;
+%     \item fit parametric models to time-resolved impedance spectra;
+%     \item track the evolution of transfer-function parameters as indicators of system state and degradation.
+% \end{itemize}
+
+% \section{Frequency-domain representations and spectral analysis}
+% \label{sec:frequency_domain}
+
+% Frequency-domain characterization relies on representing time-domain signals in terms of their spectral content.
+% This section introduces the fundamental tools required to interpret periodic excitation and response signals in the frequency domain, with emphasis on concepts that directly impact impedance estimation in non-stationary conditions.
+
+% \subsection{Fourier representation of periodic signals}
+
+% A periodic signal \( x(t) \) with period \( T \) can be expressed as a Fourier series,
+% \begin{equation}
+% x(t) = \sum_{k=-\infty}^{\infty} X_k \, e^{j 2\pi k t / T},
+% \label{eq:fourier_series}
+% \end{equation}
+% where the coefficients \( X_k \) encode the amplitude and phase of each harmonic component.
+% For real-valued signals, the spectrum is conjugate symmetric, and the series can equivalently be written in terms of sines and cosines.
+
+% When a linear time-invariant system is excited by a periodic input, the steady-state output is also periodic with the same fundamental period.
+% Each harmonic component is independently scaled and phase-shifted according to the system frequency response.
+% This property forms the basis of frequency-domain system identification and impedance spectroscopy.
+
+% \subsection{Discrete Fourier Transform and sampled signals}
+
+% In experimental practice, signals are acquired in discrete time over a finite observation window.
+% Given a sampled signal \( x[n] = x(nT_s) \) of length \( N \), its spectral content is obtained via the Discrete Fourier Transform (DFT),
+% \begin{equation}
+% X[k] = \sum_{n=0}^{N-1} x[n]\,e^{-j 2\pi k n / N},
+% \label{eq:dft}
+% \end{equation}
+% which maps the signal onto a discrete set of frequency bins.
+
+% The DFT implicitly assumes that the finite-length signal corresponds to one period of an underlying periodic waveform.
+% If this assumption is violated, spectral energy leaks into adjacent frequency bins, a phenomenon known as \emph{spectral leakage}.
+% Avoiding or controlling leakage is essential for accurate estimation of frequency responses and motivates careful excitation and window design.
+
+% \subsection{Frequency resolution and observation window}
+
+% The frequency resolution of the DFT is determined by the length of the observation window,
+% \begin{equation}
+% \Delta f = \frac{1}{N T_s}.
+% \end{equation}
+% Longer windows provide finer frequency resolution, while shorter windows improve temporal localization.
+% This trade-off is fundamental and cannot be circumvented.
+
+% In the context of non-stationary systems, this trade-off translates into a compromise between:
+% \begin{itemize}
+%     \item resolving low-frequency dynamics accurately;
+%     \item tracking time variations in the system response.
+% \end{itemize}
+
+% Dynamic impedance methods exploit this trade-off by adapting the analysis window to the characteristic timescales of the excitation and the system drift.
+
+% \subsection{Windowing and leakage control}
+
+% When the acquired signal does not contain an integer number of periods of all excited frequencies, spectral leakage occurs.
+% This effect distorts the estimated amplitude and phase of the frequency components and degrades impedance accuracy.
+
+% Windowing functions can be applied in the time domain to reduce leakage by smoothly tapering the signal at the window boundaries.
+% However, windowing also broadens spectral peaks and reduces frequency resolution.
+% In this work, leakage is primarily controlled through excitation design—specifically by ensuring that all excited frequencies are integer multiples of a fundamental frequency—rather than by aggressive windowing.
+
+% This design choice is particularly important for multisine excitation, where accurate separation of closely spaced frequency components is required.
+
+% \subsection{Short-time Fourier analysis}
+
+% For systems whose properties evolve in time, a single Fourier transform over the entire dataset is insufficient.
+% Instead, the signal can be analyzed over successive, partially overlapping windows, leading to a short-time Fourier representation.
+
+% Given a window length \( T_w \), the Short-Time Fourier Transform (STFT) provides a sequence of local spectra, each associated with a specific time interval.
+% If the system dynamics evolve slowly compared to \( T_w \), each local spectrum can be interpreted as the frequency response of a locally stationary system.
+
+% This frozen-time interpretation underlies the use of windowed FFT-based methods for dynamic impedance estimation at high frequencies, where many oscillation periods are contained within each window.
+
+% \subsection{Implications for impedance estimation}
+
+% The concepts introduced in this section establish the signal-processing foundation for the methods presented in Chapters~6 and~7.
+% In particular:
+% \begin{itemize}
+%     \item multisine excitation exploits the Fourier representation of periodic signals;
+%     \item frequency resolution constraints dictate multisine period and window length;
+%     \item leakage considerations motivate harmonic frequency selection;
+%     \item short-time analysis enables time-resolved impedance estimation.
+% \end{itemize}
+
+% The estimation algorithms themselves are discussed separately.
+% Here, the focus is on the conditions under which frequency-domain representations are meaningful and reliable in non-stationary experimental settings.
+
+% \section{Multisine excitation for dynamic system identification}
+% \label{sec:multisine_background}
+
+% Frequency-domain characterization requires excitation signals that are both information-rich and compatible with the assumptions of linearization and frozen-time analysis.
+% This section introduces multisine excitation as a deliberate design choice for dynamic system identification and clarifies its advantages over alternative broadband excitation strategies.
+
+% \subsection{Requirements for excitation signals in non-stationary systems}
+
+% To estimate a frequency response function, the excitation signal must sufficiently excite the system across the frequency band of interest while preserving the validity of the linear approximation.
+% In non-stationary systems, additional constraints arise:
+% \begin{itemize}
+%     \item the excitation must be periodic to enable frequency-domain analysis over finite windows;
+%     \item the duration of one excitation period must be short compared to the drift timescale;
+%     \item the signal amplitude must remain small enough to avoid nonlinear distortion;
+%     \item the excitation must allow separation of frequency components without intermodulation.
+% \end{itemize}
+
+% These requirements significantly restrict the class of admissible excitation signals and motivate the use of deterministic periodic waveforms.
+
+% \subsection{Broadband excitation strategies}
+
+% Several classes of broadband excitation signals are commonly used in system identification:
+% \begin{itemize}
+%     \item \emph{impulsive or step excitations}, suitable for time-domain analysis but inefficient for resolving multiple timescales;
+%     \item \emph{pseudo-random binary sequences (PRBS)}, widely used in control applications but prone to spectral leakage and poor frequency selectivity;
+%     \item \emph{chirp signals}, which sweep frequencies sequentially but require long acquisition times and assume stationarity over the sweep;
+%     \item \emph{multisine signals}, which excite multiple discrete frequencies simultaneously.
+% \end{itemize}
+
+% Among these options, multisine excitation uniquely satisfies the constraints imposed by dynamic impedance experiments: it provides simultaneous broadband excitation while maintaining strict control over frequency content and phase relationships.
+
+% \subsection{Definition and properties of multisine signals}
+
+% A multisine signal is defined as the superposition of \( K \) sinusoidal components,
+% \begin{equation}
+% u(t) = \sum_{k=1}^{K} A_k \sin\left(2\pi f_k t + \phi_k\right),
+% \label{eq:multisine_def}
+% \end{equation}
+% where \( f_k \), \( A_k \), and \( \phi_k \) denote the frequency, amplitude, and phase of the \( k \)-th component.
+
+% When the frequencies are chosen as integer multiples of a fundamental frequency, the resulting waveform is exactly periodic.
+% This property ensures that the Fourier representation of the signal is discrete and that spectral leakage is minimized when analyzing integer numbers of periods.
+
+% For linear systems, each sinusoidal component is transmitted independently, allowing the frequency response to be estimated at all excited frequencies from a single time record.
+
+% \subsection{Multisine excitation under frozen-time assumptions}
+
+% In dynamic impedance experiments, the system operating point evolves continuously.
+% Multisine excitation is compatible with this non-stationary setting provided that:
+% \begin{itemize}
+%     \item the excitation period is short compared to the drift timescale;
+%     \item the analysis window contains many oscillation periods of the excited frequencies.
+% \end{itemize}
+
+% Under these conditions, each frequency component probes a locally stationary system, and the estimated frequency response can be interpreted as a frozen-time transfer function.
+% Higher-frequency components are less sensitive to drift, while lower-frequency components require longer observation windows and are more affected by non-stationarity.
+
+% This separation of timescales is central to the mixed estimation strategies adopted later in this work.
+
+% \subsection{Advantages for impedance spectroscopy}
+
+% Multisine excitation offers several advantages that are particularly relevant for impedance-based characterization:
+% \begin{itemize}
+%     \item efficient use of experimental time by simultaneous excitation of many frequencies;
+%     \item precise control of frequency grid and resolution;
+%     \item compatibility with harmonic analysis and FFT-based estimation;
+%     \item flexibility in amplitude and phase optimization to manage signal-to-noise ratio and crest factor.
+% \end{itemize}
+
+% These properties make multisine signals well suited for long-term, high-resolution monitoring of non-stationary electrochemical systems.
+% The practical design and implementation of multisine excitation, including frequency selection, amplitude scaling, and phase optimization, are addressed in Chapter~6.
+
+% \section{Mathematical optimization for impedance model fitting}
+% \label{sec:optimization_background}
+
+% The estimation of parametric models from impedance data ultimately relies on numerical optimization.
+% In this work, optimization is used to fit complex-valued, nonlinear models to experimentally measured frequency responses.
+% This section introduces the essential concepts required to understand such fitting procedures, with emphasis on practical aspects relevant to impedance spectroscopy.
+
+% \subsection{Nonlinear least-squares formulation}
+
+% Let \( Z_{\text{exp}}(\omega_k) \in \mathbb{C} \) denote the experimentally measured impedance at angular frequency \( \omega_k \), and let
+% \[
+% Z_{\text{model}}(\omega_k; \boldsymbol{\theta})
+% \]
+% be a parametric model depending on a vector of parameters \( \boldsymbol{\theta} \in \mathbb{R}^p \).
+% Model fitting is formulated as a nonlinear least-squares problem, where the objective is to minimize the discrepancy between model and data over all measured frequencies.
+
+% A common formulation of the cost function is
+% \begin{equation}
+% J(\boldsymbol{\theta}) =
+% \sum_{k=1}^{N}
+% \left\|
+% Z_{\text{exp}}(\omega_k) -
+% Z_{\text{model}}(\omega_k; \boldsymbol{\theta})
+% \right\|^2,
+% \label{eq:nlls_basic}
+% \end{equation}
+% where \( \|\cdot\| \) denotes the complex modulus.
+% This formulation treats the impedance as a complex quantity and penalizes deviations in both magnitude and phase.
+
+% Equivalent formulations may explicitly separate real and imaginary parts,
+% \begin{equation}
+% J(\boldsymbol{\theta}) =
+% \sum_{k=1}^{N}
+% \left[
+% \left( \Re\{Z_{\text{exp}} - Z_{\text{model}}\} \right)^2
+% +
+% \left( \Im\{Z_{\text{exp}} - Z_{\text{model}}\} \right)^2
+% \right],
+% \label{eq:nlls_split}
+% \end{equation}
+% which is often convenient for numerical solvers that operate on real-valued residual vectors.
+
+% \subsection{Weighting and noise considerations}
+
+% In practical impedance measurements, the uncertainty associated with each data point is frequency dependent.
+% Low-frequency points often exhibit larger variance due to drift and long acquisition times, while high-frequency points may be affected by instrumentation noise.
+
+% To account for this heteroscedasticity, weighted least squares formulations are commonly employed,
+% \begin{equation}
+% J(\boldsymbol{\theta}) =
+% \sum_{k=1}^{N}
+% w_k
+% \left\|
+% Z_{\text{exp}}(\omega_k) -
+% Z_{\text{model}}(\omega_k; \boldsymbol{\theta})
+% \right\|^2,
+% \label{eq:weighted_nlls}
+% \end{equation}
+% where \( w_k \) is a weighting factor.
+
+% Common choices include:
+% \begin{itemize}
+%     \item inverse variance weighting, \( w_k = 1/\sigma_k^2 \), when noise statistics are known or estimated;
+%     \item modulus weighting, \( w_k = 1/|Z_{\text{exp}}(\omega_k)|^2 \), to balance contributions across decades of impedance magnitude;
+%     \item custom frequency-dependent weights to emphasize specific spectral regions.
+% \end{itemize}
+
+% The choice of weighting has a direct impact on parameter estimates and should reflect the dominant sources of experimental uncertainty.
+
+% \subsection{Gradient-based optimization algorithms}
+
+% The cost functions encountered in impedance fitting are generally nonlinear and must be minimized numerically.
+% Among the most widely used methods are derivative-based algorithms that exploit local gradient information.
+
+% Common solvers include:
+% \begin{itemize}
+%     \item the Gauss--Newton method, efficient for mildly nonlinear problems;
+%     \item the Levenberg--Marquardt algorithm, which interpolates between Gauss--Newton and gradient descent and is particularly robust for impedance fitting;
+%     \item quasi-Newton methods (e.g.\ BFGS), which approximate second-order information without explicit Hessian computation.
+% \end{itemize}
+
+% These algorithms require the evaluation of the Jacobian of the residuals with respect to the parameters, either analytically or via numerical differentiation.
+% In this work, derivative-based solvers are preferred due to their efficiency and compatibility with moderately sized parametric models.
+
+% \subsection{Non-convexity and local minima}
+
+% A central difficulty in impedance model fitting is that the objective function \( J(\boldsymbol{\theta}) \) is generally non-convex.
+% The associated hypersurface in parameter space may exhibit:
+% \begin{itemize}
+%     \item multiple local minima;
+%     \item flat directions and parameter correlations;
+%     \item narrow valleys and sharp ridges.
+% \end{itemize}
+
+% As a consequence, gradient-based algorithms converge to a local minimum that depends on the initial parameter guess.
+% There is no guarantee that this minimum corresponds to the global optimum or to physically meaningful parameters.
+
+% This issue is exacerbated for models with many parameters or when fitting broadband impedance data spanning several decades of frequency.
+
+% \subsection{Role of initial parameters}
+
+% The choice of initial parameters plays a critical role in determining the outcome of nonlinear optimization.
+% Good initial guesses can significantly improve convergence speed and increase the likelihood of reaching the global minimum.
+
+% In practice, initial parameters may be obtained from:
+% \begin{itemize}
+%     \item physical intuition or prior knowledge of the system;
+%     \item simplified models fitted to restricted frequency ranges;
+%     \item parameter values obtained at previous time steps in dynamic experiments.
+% \end{itemize}
+
+% In dynamic impedance spectroscopy, temporal continuity provides a natural strategy: parameter estimates from one time instant can be used as initial guesses for the next.
+% This approach exploits the slow evolution of system properties and improves robustness in time-resolved fitting.
+
+% \subsection{Implications for dynamic impedance analysis}
+
+% The optimization framework outlined here underpins the model-based analysis presented in later chapters.
+% The combination of weighted nonlinear least squares, derivative-based solvers, and informed initialization enables the extraction of meaningful parameters from time-resolved impedance spectra.
+
+% At the same time, the limitations imposed by non-convexity and noise must be kept in mind when interpreting fitted parameters.
+% For this reason, the emphasis in this work is placed not only on absolute parameter values, but also on their temporal trends and relative evolution.
+
+% \section{Summary and outlook toward non-stationary impedance estimation}
+% \label{sec:chapter_summary}
+
+% This chapter has established the theoretical framework required to interpret dynamic impedance measurements from a system-identification perspective.
+% Starting from a general description of dynamical systems, the conditions under which nonlinear electrochemical systems can be locally approximated as linear were clarified through linearization and frozen-time arguments.
+% This led naturally to the interpretation of impedance as a time-localized transfer function, whose validity is constrained by excitation amplitude, drift timescales, and observation windows.
+
+% The chapter further introduced the frequency-domain paradigm adopted throughout this work, emphasizing its advantages for systems exhibiting dynamics over multiple decades in time.
+% Fourier-based signal representations, multisine excitation, and windowed spectral analysis were discussed as enabling tools for extracting localized frequency responses from non-stationary systems.
+% Finally, the mathematical optimization background required to fit parametric models to complex-valued impedance data was presented, highlighting both the capabilities and limitations of nonlinear least-squares approaches in dynamic settings.
+
+% Together, these elements define the conceptual boundaries within which non-stationary impedance estimation can be meaningfully performed.
+% What has deliberately been omitted so far is a discussion of \emph{how} these concepts are implemented in practice and how they are realized in the existing literature.
+
+% The next chapter therefore reviews the state of the art in non-stationary impedance spectroscopy.
+% It surveys the principal methodological approaches used to estimate time-varying frequency responses, including short-time Fourier transform (STFT)-based techniques, Dynamic Multi-Frequency Analysis (DMFA), and alternative formulations proposed in recent years.
+% Particular attention is given to the assumptions underlying each method, their achievable time--frequency resolution, and their compatibility with slowly drifting electrochemical systems.
+
+% In addition to methodological aspects, the next chapter discusses the experimental and hardware contexts in which these techniques have been applied, ranging from laboratory-grade impedance analyzers to custom-built measurement systems and embedded implementations.
+% Examples from different classes of electrochemical systems—including batteries, fuel cells, and model electrochemical interfaces—are used to highlight both the potential and the current limitations of non-stationary impedance methods.
+
+% This review provides the necessary context for positioning the mixed estimation strategy developed in this thesis, which combines complementary techniques to achieve broadband, time-resolved impedance characterization under realistic experimental constraints.

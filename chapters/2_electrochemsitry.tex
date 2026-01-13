@@ -212,6 +212,7 @@ Early work, dating back to Kohlrausch, showed that by using high-frequency AC si
 Crucially, the frequency-dependent measurements of capacitance provided direct experimental evidence for the EDL, demonstrating that AC techniques are unique in their ability to resolve fundamental physical elements based on their distinct \emph{time constants} ($\tau = RC$).
 
 \subsubsection{Electrochemical Impedance Spectroscopy (EIS)}
+\label{sec:EIS}
 
 Electrochemical Impedance Spectroscopy (EIS) is a non-destructive technique that employs a small-amplitude sinusoidal perturbation (typically $\pm 5-10 \text{ mV}$) applied over a wide range of frequencies. 
 The impedance is the frequency dependent function:
@@ -228,6 +229,15 @@ At high frequencies, the capacitive branch dominates and the impedance becomes p
 At low frequencies, the capacitive reactance becomes large and the impedance approaches $R_{\mathrm{ct}}$. 
 Deviations from ideal capacitive behaviour, commonly observed in rough or porous electrodes, are often captured using a constant-phase element to represent distributed interfacial properties.
 The representation of the interface as charge transfer resistnace $R_{\mathrm{ct}}$ and double-layer capacitance $C_{\mathrm{dl}}$ is obtain analytically from the linearization of the Butler-Volmer equation and the double layer capacitance of the Stern model.
+
+Before the advent of microcomputers in the 70s, impedance was estimated frequency by frequency manually with the aid of an analog circuit called lock-in amplifier.
+The value of the impedance $Z(\omega_k)$ is claculated from the amplitude ratio and phase shift $\Delta\phi$ of input (reference) and output signals with the formula 
+$$
+Z(\omega_k) = \frac{A_I}{A_O}e^{j\omega\Delta\phi}.
+$$
+
+Later, digital signal processing was integrated into microcontrolers creating the digital Frequency Response Analyzer (FRA) capable of automatic frequency sweep, avarging, automatic current range selector and application a voltage or current bias (Solartron 1174 in 1978 and Solartron 1250 in 1983). 
+These instruments set the standard for impedance measurements that we still find today in commercial devices. 
 
 \subsection{Linearisation and charge-transfer resistance}
 
@@ -283,7 +293,7 @@ where $\tau_D = L^2/D$ is the characteristic diffusion time for a layer of thick
 Diffusion-related impedance elements are essential for interpreting battery electrode behaviour, where mass transport in the electrolyte, within porous electrode structures, and through solid particles strongly influences the dynamic response. 
 The distinction between semi-infinite and finite-length diffusion is particularly important when analysing non-stationary or transient impedance measurements, as the effective diffusion domain may change with state of charge, cycling history, or electrode microstructure.
 
-\section{Equivalent circtuit models}
+\section{Equivalent circuit models}
 
 With the linearization of electrochemical equation one obtains processes behaving like electrical elements connected in series or in parallel, depending on the system characteristics.
 To visualize the components, it is common to translate the set of equations into a circuit and use the lows of series and parallel connection of electrocal elements to obtain a simplified and linearized model of the interface.

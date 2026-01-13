@@ -22,13 +22,34 @@ Since digital signals are discrete vectors in practice it is used the discrete v
 $$
 F(\omega)=\sum_{0}^{n-1} x[n] e^{-j2\pi kn/N}.
 $$
-The inverse descrete Fouerie trasnform (iDFT) takes the form:
+The inverse descrete Fourier transform (iDFT) takes the form:
 $$
 F(\omega)= \frac{1}{N} \sum_{0}^{n-1} x[n] e^{j2\pi kn/N}.
 $$
 
 The discrete Fourier transform of a signal is calculated in a computer using the Fast Fourier Transform algorithm, the most efficient implementation from Colley and Tukey.
 The complexity of the problem is $O(N\log N)$ compare to the $O(N^2)$ of the direct summation, although it requires the length of the input signal to be equal to $2^n$ with n integer number.
+
+\subsection{Short-time Fourier Transform (STFT)}
+
+[Put some introduction here on why the STFFT is important in genreal and why for this work.]
+
+To analyse drifting or time-varying systems one applies the STFT:
+\[
+X(m,k)=\sum_{n=0}^{N-1} x[n+mR]\, w[n]\, e^{-j2\pi kn/N},
+\]
+where $m$ indexes time windows and $w[n]$ is a window function.  
+The STFT reveals how the spectral content evolves in time and provides the foundation for non-stationary impedance estimation discussed in later chapters.
+
+In real world applications of signal processing, the spectral information changes with time. A few examples are the real-time processing of music (digital equalization), human voice (speech recognition) or images (object recognition). To analyze this signals, the approach is to perform the Fourier Trasnform on a small part of the signal at the time, with a process called windowing. The method is called short-time Fourier Trasnform (STFT) and extends the classic FT to non-stationary signals by sliding a finite window w[n] along the data and computing a local DFT on each segment. Formally, for a discrete signal x[n] and window shift R:
+
+$$
+X(m,k) = \sum _{n=0} ^{n-1} x[n + mR] \cdot w[n] \cdot e^{-j2\pi kn/N},
+$$
+
+where m indexes time frames and k frequency bins. While the short-time Fourier Trasnfomr can effectively capture the spectral contect of transient processes, the accuracy of the result depends on careful design of the calculation. First, there is a time-frequency resolution trade-off, known also as Gabor uncenrtainty principle $\Delta t \cdot \Delta f $ where $\Delta t$ is the windows lenght and $\Delta f$ is the inverse of it. Equality is reached only by a Gaussian window, which is therefore “optimal” in the sense of joint time-frequency localization. The window length N controls the balance: a short window localizes well in time (small $\Delta t$) but its Fourier transform is broad (large $\Delta f$), so fast transients are captured but spectral peaks smear, while a long window gives fine frequency discrimination (small $\Delta f$) at the expense of temporal precision (large $\Delta t$), so you resolve closely spaced frequencies but miss rapid changes. Another important aspect is the window shape and the overlap, the latter derived by the windows shift value $R$ in the STFT definition.  To produce smooth progression between following windowing, an overlap is used of 50\% or 75\%. 
+
+These concepts are essential for the discussion on the methods to estimate the non-stationary impedance given later in the text and they must be carefully taken into consideration depending on the characteristic frequency of evolution of the given signal.
 
 
 \subsection{Spectral leakage}

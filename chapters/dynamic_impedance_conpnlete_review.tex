@@ -6,11 +6,11 @@
 \subsection{Single sine impedance}
 We need to start from the basics of the practical measurement of Electrochemical Impedance Spectroscopy to understand the use of multi-frequency waveform and measurements in non-stationary conditions. During the 1970s impedance or admittance was already measured for electrochemical systems over a wide range of frequencies for the study of the kinetics of charge transfer and transport after the pioneering works of Randles (1947) based on Warburg formalization of transport impedance in 1889. The practical methods to measure impedance was though alternate current bridges methods (where an unknown impedance elemtn is put in a network of known resistors with a certain design) and using a lock-in amplifier with a sinus function generator. The lock-in amplifier is an analog electrical component capable of extracting the amplitude and phases of a signal frequency component from a noisy signals. The frequency is dictated by the choice of the sinus waves. The frequency was manually changes and a full spectra could take a time of a few minutes per decade. At that time the frequency band was limited to 100kHz -10mHz for the hardware. The lock-in amplifiers technologies was quite mature at that time starting from the commercialization from Princeton Applied  Research (model 124A) by Robert H. Dicke. 
 [Troppi dettagli e informazioni discordandi da LLM. Meglio dire solo del modello 1205. Il 1174 usava dell'elettronics per automatizzare lo sweep e data-handling] The breakthrough became with the production of the Solartron 1174 in 1978 from Princeton Applied  Research. It integrates for the first time a frequency response analyzer (FRA) to compute the impedance using digital cross-correlation. The frequency band was also extended to the range 10 $\mu$ Hz and 1 MHz. With the following model 1250 in 1983 potential controll, automatic frequency sweep and digital signal processing brings the de facto standard of electrochemical impedance measurement. The measurement time is reduces to 10-30 minutes. 
-Modern workstations still use the same concept. Circuits are now more complex, though, allowing to apply a bias voltage or current. They also use avaraging and automaticocurrante range selection to increase signal to noise ratio over all decades.
+Modern workstations still use the same concept. Circuits are now more complex, though, allowing to apply a bias voltage or current. They also use a averaging and automatic currant range selection to increase signal to noise ratio over all decades.
 Nowadays FPGA offer fast, inexpensive and reliable digital signal processing. Their are the core of modern electrochemical workstation as well as audio processing and any other signal application.
 
 \subsection{Multi-frequency excitation}
-During the 1970 the revolution of the microcomputer was also taking place allowing the first digital data processing. Smith and Creason in 1972 dintegrated an algorithm into a micrcoputer for the online computation of admittance based on the Fast Fourier Transform 
+During the 1970 the revolution of the microcomputer was also taking place allowing the first digital data processing. Smith and Creason in 1972 dintegrated an algorithm into a micrcomputer for the online computation of admittance based on the Fast Fourier Transform 
 
 In the years 1971, 1972 and 1973 a seires of pubblications showed the possiblity of obtaing the impedance using algorithms based on the Fast Fourier Trasnform performed by microcomputers. Kojima and Fujiwara \cite{kojima1971fourier} and later Glover and Smith \cite{gloverAlternatingCurrentPolarography1973} showed the possibility of perfoming "alternated polarography" with digital signal processing on microcomputers. Creason and Smith applied the method for the estimation of faradaic admittance in fast reactions \cite{creasonFourierTransformFaradaic1972} and performed a screening of possible multif-requency exitations \cite{creasonFourierTransformFaradaic1973a}.
 
@@ -121,4 +121,48 @@ Galvanodynamic? How can one also specificy the type of drift in the name of the 
 NSEIS nonstationary electrochemical impedance spectroscopy
 
 
-\section{Embedded specttrometers}
+
+% ChatGPT summary
+\section{Evolution of Multi-Frequency EIS}
+
+\subsection{From Single Sine to Multi-Sine (1970s-1990s)}
+
+Traditional EIS relied on stepped-sine measurements where each frequency is measured sequentially using lock-in amplifiers or frequency response analyzers (FRAs). While precise, this approach requires 30 minutes to several hours for a full spectrum. The advent of microcomputers and Fast Fourier Transform algorithms in the 1970s opened the possibility of multi-sine excitation—simultaneously applying multiple frequencies and extracting impedance from a single measurement \cite{kojima1971fourier, creasonFourierTransformFaradaic1972, gloverAlternatingCurrentPolarography1973}.
+
+Bond, Schwall and Smith (1977) pioneered the coupling of multi-sine with cyclic voltammetry \cite{schwallOnlineFastFourier1977, bondOnlineFFTFaradaic1977}, creating the first "dynamic impedance" measurement—later termed Fourier Transform Faradaic Admittance Measurements (FT-FAM). Despite early promise, the method remained niche due to hardware complexity and the dominance of FRA-based instruments.
+
+The breakthrough came with Popkirov and Schindler (1992), who developed a complete FFT-based impedance spectrometer using a custom potentiostat, waveform generator, and data acquisition system \cite{popkirovOptimizationPerturbationSignal1993a}. Their work established key principles: multi-sine phase optimization to minimize crest factor \cite{popkirovOptimizationPerturbationSignal1993a}, validation against nonlinear distortions \cite{popkirovValidationExperimentalData1993a}, and demonstration across diverse applications (electropolymerization, metal dissolution, redox kinetics). This work defined the instrumental architecture still used today.
+
+\subsection{Operando Impedance with Short-Time Fourier Transform (2000s-2010s)}
+
+Three major research groups expanded multi-sine EIS in the 2000s, each with distinct focuses:
+
+\textbf{Roy and coworkers (Clarkson University)} applied multi-sine EIS to surface electrochemistry—adsorption kinetics, metal electrodeposition, and electrochemical planarization—using commercial instruments controlled via LabVIEW and analyzing data with short-time Fourier transforms \cite{waltersWeakAdsorptionAnions2001a, garlandAnalysisExperimentalConstraints2004}. Their work established practical guidelines for parameter selection and experimental limitations.
+
+\textbf{Darowicki and Ślepski (Gdańsk)} focused on corrosion science and energy storage, developing both chirp and multi-sine perturbations \cite{darowickiDynamicElectrochemicalImpedance2003a, darowickiInstantaneousElectrochemicalImpedance2004a}. They demonstrated applications ranging from stress corrosion cracking to fuel cells and redox flow batteries, extending frequency ranges down to 30 mHz.
+
+\textbf{Hubin, Pintelon, Schoukens (Brussels/VUB)} brought rigorous system identification theory to electrochemical impedance. Their "Odd Random Phase" (ORP) multi-sine approach \cite{vaningelgemAdvantagesOddRandom2009} separated nonlinear distortions from linear impedance by using only odd harmonics, enabling quantitative validation of data quality. They provided systematic comparisons of excitation signals \cite{schoukensSurveyExcitationSignals1988a} and established that multi-sine methods achieve superior signal-to-noise ratios compared to sequential measurements \cite{schoukensBroadbandSteppedSine1999}.
+
+These groups established multi-sine EIS for quasi-stationary systems where parameter drift is slow relative to the measurement period (typically >10 seconds for one multi-sine cycle).
+
+\subsection{Non-Stationary System Identification (2012-Present)}
+
+The limitation of STFT-based methods is the assumption of local stationarity: the impedance must not change significantly during the window length (typically one multi-sine period). This restricts measurements to either high frequencies (>1 Hz) or systems with very slow drift.
+
+\textbf{Bruegelmans and colleagues (VUB/UAntwerp)} extended system identification theory for truly time-varying systems \cite{breugelmansOddRandomPhase2012}, developing the Best Linear Time-Varying Approximation (BLTVA) framework. Their method quantifies both nonlinearity and non-stationarity \cite{hallemansDetectionClassificationQuantification2021, hallemansBestLinearTimeVarying2021} and has been applied to fast electrochemical processes: electrograining, metal electrodeposition, and SEI formation in batteries \cite{dabirihavighOperandoORPEISMonitoring2025, hallemansOperandoElectrochemicalImpedance2022}.
+
+\textbf{Battistel, La Mantia and colleagues (Bremen)} developed Dynamic Multi-Frequency Analysis (DMFA) \cite{kosterDynamicImpedanceSpectroscopy2017, battistelPhysicalDefinitionDynamic2019}, using frequency-domain filtering rather than time-domain windowing. By convolving multi-sine data with a narrow-band filter (e.g., Fermi-Dirac function), they extract localized impedance spectra even under strong drift. DMFA has been applied to intercalation processes \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a, erinmwingbovoDynamicImpedanceSpectroscopy2019, erinmwingbovoDynamicImpedanceSpectroscopy2020} and dissolution reactions \cite{kosterMeasurementAnalysisDynamic2018}. The group also addressed the challenge of fitting large time-resolved datasets through regularized optimization \cite{battistelAnalysisNonstationaryImpedance2016, chukwuDynamicImpedanceSpectroscopy2023}.
+
+Recent work by Zappen et al. \cite{zappenApplicationTimeResolvedMultiSine2018} demonstrated battery-specific applications, including fast impedance screening for quality control and operando measurements during thermal runaway \cite{zappenInOperandoImpedanceSpectroscopy2020a}.
+
+\section{Remaining Challenges}
+
+Despite these advances, several limitations persist:
+
+\begin{itemize}
+\item \textbf{Broadband coverage}: Most studies focus on narrow frequency bands (1 Hz - 10 kHz) due to data management challenges at high sampling rates.
+\item \textbf{Long-term measurements}: Continuous operando impedance over battery lifetime (weeks to months) requires automated systems and online data processing—capabilities not demonstrated in prior work.
+\item \textbf{Accessibility}: Existing implementations rely on custom software or expensive FPGA-based systems, limiting adoption by the broader electrochemistry community.
+\end{itemize}
+
+This thesis addresses these gaps by developing an open-source, automated methodology for broadband (10 mHz - 100 kHz) impedance acquisition during multi-week battery cycling, validated across multiple electrochemical systems.

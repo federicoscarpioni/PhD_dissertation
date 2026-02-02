@@ -2,23 +2,27 @@
 \label{chap:coins}
 
 % Objectives
-In this chapter, it is presented the measurement of dynamic impedance on commercial batteries during operation. 
-The aim is to demonstrate the applicability on batteries of the mixed method for instantaous impedance estimation in non-stationary conditions.
+In this chapter, I present measurements of dynamic impedance on commercial batteries during operation. 
+The aim is to demonstrate the applicability of the mixed method for instantaneous impedance estimation under non-stationary conditions.
 
 % Why coin cells
-I choose to make this experiment on commercial coin cells of theretical capacity of 45mAh, because of the conveniancy of buy big lots, for cheap. 
-I acquired a set of identical commercial coin cells and tested them with dynamic impednace method during cycling and conventional electrochemical measurement as comparison. 
-The results from the dynamic impedance experiment are compared with a sereis of classic stationary impedance spectrscopy measurements. 
+\marginpar{
+  \centering
+  \includegraphics[width=0.6\marginparwidth]{figures/results_coin/panasonic_ML2020_photo.jpg}
+}
+I chose to conduct this experiment on commercial coin cells with a theoretical capacity of 45~mAh because of the convenience and low cost of purchasing large quantities. 
+I acquired a set of identical commercial coin cells and tested them using the dynamic impedance method during cycling, alongside conventional electrochemical measurements for comparison. 
+The results from the dynamic impedance experiment are compared with a series of classical stationary impedance spectroscopy measurements. 
 
-Furthermore I prove that the presence of a multisine perturbation, continously applyed during the dynamic impedance spectroscopy test,  doesn't effect the aging of the cells.
+Furthermore, I demonstrate that the presence of a multi-sine perturbation continuously applied during the dynamic impedance spectroscopy test does not affect cell aging.
 
 % Summary of experiments
-This study is composed of the following measurements:
+This study comprises the following measurements:
 \begin{table}[]
 \begin{tabular}{lllll}
 Measurement type            & Number of cells & Number of cycles &  &  \\
 DEIS during CCCV            & 9               & 30               &  &  \\
-Traditional CCCV            & 12              & 22-30            &  &  \\
+Traditional CCCV            & 12              & 22--30           &  &  \\
 EIS during interrupted CCCV & 3               & 1                &  & 
 \end{tabular}
 \end{table}
@@ -27,48 +31,51 @@ EIS during interrupted CCCV & 3               & 1                &  &
 
 \subsection{Cell choice}
 % Cell chemistry and implications
-For this research, I acquired a set of identical Panasonic ML2020 coin cell batteries containing manganese dioxide (MnO2) as positive electrode and lithium-aluminum alloy as negative electrode. 
-The lithium content is approximately 0.02g. 
-These cells utilize an electrolyte solution composed of 1,2-dimethoxyethane and ethylene glycol dimethyl ether (EGDME) combined with an unspecified lithium salt compound.
+For this research, I acquired a set of identical Panasonic ML2020 coin cell batteries containing manganese dioxide (MnO$_2$) as the positive electrode and a lithium--aluminum alloy as the negative electrode. 
+The lithium content is approximately 0.02~g. 
+These cells utilize an electrolyte solution composed of 1,2-dimethoxyethane and ethylene glycol dimethyl ether (EGDME) combined with an unspecified lithium salt.
 
-According to manufacturer specifications, these batteries have a nominal capacity of 45mAh and are designed to operate within a voltage window of 1-3V, with a recommended charging current of 100$\mu$A. 
+According to manufacturer specifications, these batteries have a nominal capacity of 45~mAh and are designed to operate within a voltage window of 1--3~V, with a recommended charging current of 100~$\mu$A. 
 
-The cells exhibit relatively slow kinetics compared to NMC/graphite systems, due to the viscosity of the electrolyte, and rapid capacity fade—characteristics already at modest c-rates. 
-They are designed as buffer for low-power electronics hence a viscous solvent is used as electrolyte to reduced  self-discharge.
-When cycling at a C-rate of C/10 the cells degrade fast, in just circa 22 cycels, and short-circuits were observed. 
-I supposed the lithium plating into dendrici form.
+The cells exhibit relatively slow kinetics compared to NMC/graphite systems due to the viscosity of the electrolyte, and they experience rapid capacity fade---a characteristic of low-power designs at modest C-rates. 
+They are designed as buffers for low-power electronics; thus, a viscous solvent is used as the electrolyte to reduce self-discharge.
+When cycling at a C-rate of C/10, the cells degrade rapidly, reaching end-of-life in approximately 22 cycles, with short-circuits observed. 
+I attribute this to lithium plating in dendritic form.
 
-The limitations are actually favorable for rapidly iterate optimizations of the set-up.
-The use of commercial cells ensures reporducibility for the validation of the method. 
+These limitations are actually favorable for rapidly iterating optimizations of the set-up.
+The use of commercial cells ensures reproducibility for validation of the method. 
 
-\subsection{Dynamic impedance spectoscopy measurements}
+\subsection{Dynamic impedance spectroscopy measurements}
 \subsubsection{Setup description}
-I conducted the measurements of this chapter using the setup configured for broadband multi-sine waves: two channels of the generator apply two multi-sine excitation for a total of 7 frequency decades, and the computer processes the streamed data from the scope in real time as described in section \ref{On-line computation}. 
-Three of the six channels of the BioLogic SP300 potentiostat measured simultaneously thanks to the multi-threading capability of the software \emph{DEIStools}. 
-The connection of the insturments is reported in Figure XXXX.
-%[Add figure of the set-up ]
+\marginpar{
+  \includegraphics[width = 0.8\marginparwidth]{figures/results_coin/sketch_DEIS_setup_new.jpg}
+  \label{fig:DEIS setup coins}
+}
+I conducted the measurements of this chapter using the setup configured for broadband multi-sine waves: two channels of the generator apply two multi-sine excitations covering a total of 7 frequency decades, and the computer processes the streamed data from the oscilloscope in real time as described in Section~\ref{On-line computation}. 
+Three of the six channels of the BioLogic SP-300 potentiostat measured simultaneously thanks to the multi-threading capability of the software \emph{DEIStools}. 
+The connection of the instruments is shown in Figure~\ref{fig:DEIS setup coins}.
 
 \subsubsection{Multi-sine design}
-The mutli-sine waveform excitation contains 49 frequencies components in the range 10mHz - 100kHz, generated at 250 kSa/s, hence one period is 100s. 
-The total waveform is splitted in two parts as described in Section \ref{sec:multisine split} as a workaround for the memory limitation of one channel of the generator. 
-The amplitude of the mutli-sine was optimized from a previous experiment as described in Section \ref{sec:amplitude optim}. 
+The multi-sine waveform excitation contains 49 frequency components in the range 10~mHz--100~kHz, generated at 250~kSa/s; thus, one period is 100~s. 
+The total waveform is split into two parts as described in Section~\ref{sec:multisine split} to work around the memory limitation of one generator channel. 
+The amplitude of the multi-sine was optimized from a previous experiment as described in Section~\ref{sec:amplitude optim}. 
 
 \subsubsection{Applied drift}
-The potentiostat applies a constant current - constant voltage sequence with higher voltage limit of 3V in charge, and same value for the constant voltage step with a limit on the minium current of 1 mA. The lower voltage limit for discharge was 1V. The current applied was 4.5 mA equivalent to a c-rate of C/10. Becasue of the presence of the multisine, the limits are checked during the online computation algorithm as avarage value of the block of data (as described in section XXX). The cell are connected as new and the measurements run for 30 cycles continously until the cell reaches the end of life. 
+The potentiostat applies a constant current--constant voltage sequence with an upper voltage limit of 3~V during charge and the same value for the constant voltage step with a lower current limit of 1~mA. The lower voltage limit for discharge was 1~V. The applied current was 4.5~mA, equivalent to a C-rate of C/10. Because of the multi-sine perturbation, the limits are checked during the online computation algorithm as the average value of the data block (as described in Section~XXX). The cells are cycled from new condition for 30 cycles continuously until reaching end-of-life. 
 
-To allow the update of the waveform in the set-up between galvanostatic and potentiostatic techniques in the sequence, a 3 second open sircuit is added in between. 
+To allow waveform updates in the set-up between galvanostatic and potentiostatic techniques in the sequence, a 3~s open circuit period is added between them. 
 
-The voltage and current signals are sampled with a two-channel PicoScope 4000 series with a sampling rate of 500 kSa/s.
+The voltage and current signals are sampled with a two-channel PicoScope 4000 series at a sampling rate of 500~kSa/s.
 
-After the experiment the automated software returns the impedance of the high frequencies 10Hz-100kHz computed online with the short-time FFT method and the voltage and current signals form the cells at the reduced sampling rate of 50 Sa/s. The signals contains the lowest 21 frequencies components from 10mHz to around 8 Hz.
+After the experiment, the automated software returns the impedance of the high frequencies (10~Hz--100~kHz) computed online using the short-time FFT method and the voltage and current signals from the cells at the reduced sampling rate of 50~Sa/s. The signals contain the lowest 21 frequency components, ranging from 10~mHz to approximately 8~Hz.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/raw_data_multifrequency.png}
-  \caption{Voltage and current signals at 50 Sa/s after teh online computation step.}
+  \caption{Voltage and current signals at 50~Sa/s after the online computation step.}
 \end{figure}
 
-The impedance of the lower frequency band and the drift are estimated with the DMFA using a filter bandwidth of 0.01 Hz that leads to a time resolution of 100s, equal to one period of multisine and the signal block used in the online computation. The total impedance spectra is the concatenation of the parts computed with short-time FFT and DMFA.
+The impedance of the lower frequency band and the drift are estimated using the DMFA with a filter bandwidth of 0.01~Hz, which yields a time resolution of 100~s, equal to one period of the multi-sine and the signal block used in the online computation. The total impedance spectrum is the concatenation of the parts computed with short-time FFT and DMFA.
 
 \begin{figure}[H]
   \centering
@@ -79,129 +86,234 @@ The impedance of the lower frequency band and the drift are estimated with the D
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/dmfa_impedance_result.png}
-  \caption{Impedance of charge and discharge estimated with DMFA. One spectra every 10 is plotted and the first 2 plots are discarded.}
+  \caption{Impedance of charge and discharge estimated with DMFA. One spectrum per 10 cycles is plotted; the first 2 plots are discarded.}
 \end{figure}
 
-\subsection{Classic electrochemical test}
-I performed cycling experiments with the same constant current - constant voltage protocol in BioLogic battery cycler on 12 cells from new to aged with the aim to compare the degradation in presence of the multisine excitation and without.
+\subsubsection{Impedance fitting}
+A battery contains at least two principal interfaces (positive and negative electrodes), whose impedances are connected in series in an equivalent circuit model.
+This makes it challenging to develop a physical model that is not overparametrized.
+In this work, I approached the identification problem as a black-box and used a rational polynomial function for fitting through complex nonlinear least-squares:
+\begin{equation}
+  Z (\sqrt{j\omega})= \frac{a_0 + a_1(j\omega)^{-1/2}+\cdots+a_n(j\omega)^{-n/2}}{1 + b_1(j\omega)^{-1/2}+\cdots+b_n(j\omega)^{-n/2}}
+\end{equation}
+as presented in Section~???. 
+Setting $b_0 = 1$ prevents the function from diverging.
+
+Before fitting, I removed the first three and last two spectra from the dataset, as well as the first three and last frequency points (remaining range: 30~mHz--42~kHz).
+
+The error in a frequency response function increases at lower frequencies.
+Orazem et al.\ originally proposed using the inverse of the impedance modulus, but I found that using the square root of the modulus is more effective in this case; it weights the middle to high frequency range more heavily, allowing the model to fit the two semicircles better.
+
+A better strategy would be to estimate the error from error propagation rules through elementary mathematical operations, as Chukwu~\cite{chukwuStatisticalAnalysisMeasurement2022} did for admittance data estimated via DMFA.
+Unfortunately, I was unable to replicate his derivation for my impedance data.
+Furthermore, error propagation for the FFT impedance method is not available in the literature and must be derived from first principles.
+
+Another fundamental procedure is to add L1 regularization to the objective function, also called LASSO (\emph{least absolute shrinkage and selection operator}).
+In practice, the minimization problem is written as:
+\begin{equation}
+  \min_{\theta}\{ \text{obj} + \lambda ||\theta||_1  \}
+\end{equation}
+where $\text{obj}$ is the least-squares objective function described in Section~???, $\theta$ is the parameters array, and $\lambda$ is a penalty factor that controls the regularization strength.
+Regularization is important because rational function parameters can grow unnecessarily large and be compensated by parameters in the denominator.
+
+The choice of penalty factor is somewhat arbitrary, but I found that values as small as $1 \times 10^{-12}$ are effective, which I expected to be comparable to the precision error of single-precision calculations.
+Removing the regularization terms makes the optimization procedure ineffective or causes it to fail.
+
+I adopted a classical derivative-based approach (Trust Region Reflective method) as implemented in the Python module LMFIT~\cite{newville_2014_11813} to solve such minimization problems.
+I first fit the spectrum at the middle of the dataset using random initial parameters (seed 42) and then use the optimized parameters as the starting point for the first spectrum of the dataset. Subsequently, I proceed consecutively, passing optimized parameters as initial points for the next fitting.
+
+Regarding the order of the rational polynomial, I chose the same order for numerator and denominator and found that 7 was the minimum order needed to represent all features.
+
+The difficulty in fitting dynamic impedance data is identifying one set of values for polynomial order, regularization penalty factor, and least-squares weighting factor that work effectively across all electrochemical techniques in the experiment, all cycles, and are general enough to apply to multiple cells.
+
+\subsection{Classical electrochemical test}
+I performed cycling experiments using the same constant current--constant voltage protocol on a BioLogic battery cycler with 12 cells from new to aged condition to compare degradation with and without multi-sine excitation.
 
 \subsubsection{EIS during interrupted cycling}
-I also prepared an experiment performing a classic electrochemial impednace spectroscopy technique in the same battery cycler. I prepared a sequence to interrupt the cycling protocol every 10 per cent of the nominal capacity and included a rest of 1 hour before the measurement of the impedance in the frequency range 10mHZ-20kHz (8 points per decade).
+I also prepared an experiment performing classical electrochemical impedance spectroscopy on the same battery cycler. I created a sequence that interrupts the cycling protocol every 10\% of nominal capacity and includes a 1~h rest before impedance measurement in the frequency range 10~mHz--20~kHz (8~points/decade).
 
 
 \section{DEIS results}
 
-% Geometrical features across SoC (semicirlce, diffusion tail, ohmic resistance) 
+% Geometrical features across SoC (semicircles, diffusion tail, ohmic resistance) 
 % and their evolution with SoH
 
-% First cycle behaviour and conditioning affects impedance
+% First cycle behavior and conditioning affects impedance
 
-% Cell to cell variability and outliers
+% Cell-to-cell variability and outliers
 
 \subsection{Impedance at different battery states}
 
-The continous impedance acquisition gives a full view of the battery interfaces resistance at any state of charge and state of health. The figures \ref{fig:deis_aging_charge} and \ref{fig:deis_aging_discharge} gives this information at a glance for the charge (including the potentiostic part) and discharge. I choose to compare the impedance at 4 states of health that correspond to the beginnig, middle point, befor the 80\% treshold of the first cycle capacity and after it. 
+Continuous impedance acquisition provides a complete view of battery interface resistance at any state of charge and state of health. Figures~\ref{fig:deis_aging_charge} and~\ref{fig:deis_aging_discharge} show this information for charge (including the potentiostatic portion) and discharge. I compared the impedance at four states of health corresponding to the beginning, midpoint, just before the 80\% threshold of first-cycle capacity, and after it. 
 
-One observes the presence of at least two semicircles consecutive one to the other and a diffusive tail. At lower states of charges, rapresented with the red colour in the scale, a third semicircle appear pushing the diffusion to lower frequencies. [DEVO RENDERE QUESTA COSA PIÙ CHIARA CON UN'ALTRA FIGURA...]
+One observes at least two consecutive semicircles and a diffusive tail. At lower states of charge, represented in red, a third semicircle appears, shifting the diffusion to lower frequencies.
 
-Another observation is the change in homic drop resistance with state of charge.
+Another observation is the change in ohmic drop resistance with state of charge.
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/PanCoin2025_009_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
+  \caption{Dynamic impedance during charge at different states of health.}
   \label{fig:deis_aging_charge}
 \end{figure}
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/PanCoin2025_009_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
+  \caption{Dynamic impedance during discharge at different states of health.}
   \label{fig:deis_aging_discharge}
 \end{figure}
 
-The cell comes from the manigacturers already charged. During the first cycle, the cell voltage reaches soon the charging limits and continues to with the discharge as reported in Figure \ref{fig:first_cycle_coin}. 
+The cell arrives from the manufacturer already charged. During the first cycle, the cell voltage quickly reaches the charging limit and continues to discharge as shown in Figure~\ref{fig:first_cycle_coin}. 
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/Voltage_dmfa_first_cycle_cell009.png}
-  \caption{svg image}
+  \caption{Voltage profile of the first cycle.}
   \label{fig:first_cycle_coin}
 \end{figure}
 
-The impedance, reported in Figure \ref{fig:impedance_first_cycle_coin}, is different than the rest of the cycles both in magnetude and shape.
+The impedance, reported in Figure~\ref{fig:impedance_first_cycle_coin}, differs from subsequent cycles in both magnitude and shape.
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/PanCoin2025_009_DEIS_first_cycle.png}
-  \caption{The picutre on the left is the carge (every impedance plotted) while the one the right is the discharge (plotted one spectra every 10).}
+  \caption{First-cycle impedance: left panel shows all charge impedance spectra, right panel shows discharge with one spectrum per 10 cycles plotted.}
   \label{fig:impedance_first_cycle_coin}
 \end{figure}
 
-All the beheviours observed here are reproduce in the other 8 cells of the set, including the higher impendance observed in the first discharge. The detailed results are reported in the Appendix, but in Figure \ref{fig:eis_dyanmic_variability} are reported the impedance for all the cells of the dataset at 90\%, 50\% and 10\% state of charge of the second discharge cycles.
+All behaviors observed here are reproduced in the other 8 cells of the set, including the higher impedance in the first discharge. Detailed results are reported in the Appendix; Figure~\ref{fig:eis_dyanmic_variability} shows the impedance for all cells at 90\%, 50\%, and 10\% state of charge during the second discharge cycle.
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/eiS_dynamic_variability.png}
-  \caption{svg image}
+  \caption{Dynamic impedance variability across all cells at three selected states of charge.}
   \label{fig:eis_dyanmic_variability}
 \end{figure}
 
-As for any production process, the cells don't response identically but mostly similar. One can notice variation in the impedance magnitude for Cell10 and in the homic drop that in Cell17 is quite higher than the others.
+As with any production process, cells do not respond identically but show similar behavior. One can notice impedance magnitude variations for Cell~10 and variations in the ohmic drop, which is notably higher in Cell~17 than in the others.
 
-It is challenging to compare qulitatively the complex impedance in  the planar plane of this many cells in two dimensions (state of charge and of health). A better approach is to fit the data with a model and compare the coefficients between them. Not only they are fewer than the number of impedance points, 10-15 against 50, but also real- valued.
+Comparing complex impedance qualitatively in the complex plane across many cells in two dimensions (state of charge and state of health) is challenging. A better approach is to fit the data with a model and compare the coefficients. Not only are they fewer than the number of impedance points (10--15 versus 50), but they are also real-valued.
 
-[NON L'HO ANCORA FATTO....]
 
-% Effect of multisine on aging
-\subsection{The effect of the multisine on the aging}
-
-% Capacity retrention curves
-% Statistics
-% Justified conclusion
-
-I verified that the constant superimposition of a multisine to the drift does not induce any alteration of the aging behaviour. Figure \ref{fig:aging_comp} shows the statistical summary discharge capacity for 12 cells cycled with DC signal and 9 cell cycled with the mutli-sine superimposed. No significal difference is noticible.
+\subsection{Effect of the multi-sine on aging}
+I verified that continuous superimposition of a multi-sine signal does not induce alterations in aging behavior. Figure~\ref{fig:aging_comp} shows the statistical summary of discharge capacity for 12~cells cycled with DC signal and 9~cells with multi-sine superimposed. No significant difference is observed.
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/Boxplot_aging.png}
-  \caption{svg image}
+  \caption{Capacity retention comparison: DC-only versus DC plus multi-sine.}
   \label{fig:aging_comp}
 \end{figure}
 
-For this experiment the cells are small and cycled with slow c-rate. To peak to peak amplitude of the multisine is also of a similir value. It is important that the excitation doesn't impact the performance of the batteries. This might not be the case for bigger batteries and higher c-rates.
+In this experiment, the cells are small and cycled at a slow C-rate. The peak-to-peak amplitude of the multi-sine is also comparable. It is important that the excitation does not impact battery performance. This may not be the case for larger batteries and higher C-rates.
 
-% Comparison with statoinary EIS
-\subsection{Non-stationary vs stationary measurements}
-% same SoC, same points
-% quantitative comparison
-% reason for agreement (C/10 slow)
-% implications
+% Comparison with stationary EIS
+\subsection{Non-stationary versus stationary measurements}
 
-[FARE LA FIGURA IN CUI SI VEDE IL POTENZIALE INTERROTTO a tratti]
+\begin{figure}
+  \centering
+  \includegraphics[width = 0.6\textwidth]{figures/results_coin/static_vs_dynamic_experiment_discharge_2d.png}
+\end{figure}
 
-The static impedace measured at different state of charges also returns good consistency. Figure \ref{fig:eis_staitc_variability} report the data from three cells at the same states of charge of Figure \ref{fig:eis_dyanmic_variability}
+Static impedance measured at different states of charge also shows good consistency. Figure~\ref{fig:eis_staitc_variability} reports data from three cells at the same states of charge as Figure~\ref{fig:eis_dyanmic_variability}.
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/eiS_static_variability.png}
-  \caption{svg image}
+  \caption{Static impedance variability across three cells at selected states of charge.}
   \label{fig:eis_staitc_variability}
 \end{figure}
 
-The impedance in the two conditions, stationary and non-stationary look comparable withitin the experimental variability of the cells. 
+The impedance under stationary and non-stationary conditions appears comparable within the experimental variability of the cells. 
 
 \begin{figure} [H]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/eiS_static_vs_dynamic_soc.png}
-  \caption{svg image}
+  \caption{Comparison of static and dynamic impedance measurements across state of charge.}
   \label{fig:eis_staitc_vs_dyanmic}
 \end{figure}
 
-This result suggests that with such a lower c-rate (C/10), the electrode interfaces are at a similar state compare to the static case, while reducing significantly the measurement time.
+This result suggests that at such a low C-rate (C/10), the electrode interfaces are in a similar state to the static case, while significantly reducing measurement time.
+
+\section{Results of fitting}
+
+Evaluating the fitting quality of dynamic impedance data involves multiple assessments: qualitative visualization, magnitude and shape of residuals, and consistency of model parameters across cycles.
+
+From visual inspection of the fitting results, the order-7 rational polynomial is versatile enough to represent the different shapes of instantaneous impedance, as shown in Figure~\ref{fig: results fitting coin cycle 5} for impedance at different voltages during the discharge of cycle~6. 
+Residuals are small for the real part (approximately 1\%), but larger in the imaginary part.
+Large residuals for the highest three points signal that the model may not adequately reproduce all features of the dataset.
+This could also be attributed to the arbitrary choice of the weighting factor in the least-squares objective function.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_[7, 78, 144, 225, 311].png}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_7.png}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_78.png}
+  \caption{Fitting results at different states of charge showing impedance (symbols) and model (line) with residuals.}
+  \label{fig: results fitting coin cycle 5}
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_144.png}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_225.png}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_311.png}
+\end{figure}
+
+Despite the small residual values, the oscillatory behavior indicates that the model is not fully adequate and persists for polynomial orders up to 8 (the highest tested).
+Residuals should be randomly distributed with magnitude comparable to the measurement variance.
+
+The fitted parameters vary smoothly across state of charge and state of health except for the first 5~cycles, where the magnitude jumps abruptly. 
+Representing complex-valued impedance as real-valued model parameters simplifies data-driven modeling of cell aging.
+One can use the parameters as features to train a neural network to predict state of health.
+
+In Figure~\ref{fig: fitting parameters ouput cycle 2}, parameters $a_1$ (orange line) and $a_3$ (red line) for cycle~2 jump between values because a new feature in the impedance becomes significant: a semicircle appears only at high state of charge and then smoothly disappears into another semicircle at high frequency.
+The jump occurs because the regularized least-squares procedure captures the new semicircle only when the residual contribution in that spectral region becomes significant enough to force the solver to substantially increase or decrease one parameter. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle1.png}
+  \caption{Upper row: fitting parameters for all techniques in cycle~2; lower row: cell response to input estimated via DMFA.}
+  \label{fig: fitting parameters ouput cycle 2}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle4.png}
+  \caption{Upper row: fitting parameters for all techniques in cycle~5; lower row: cell response to input estimated via DMFA.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle10.png}
+  \caption{Upper row: fitting parameters for all techniques in cycle~11; lower row: cell response to input estimated via DMFA.}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle19.png}
+  \caption{Upper row: fitting parameters for all techniques in cycle~20; lower row: cell response to input estimated via DMFA.}
+\end{figure}
 
 \section{Summary and implications}
 
-% What this results prove about DEIS?
-% What limitation remain
-% Why this matter for later chapters?
+In this chapter, dynamic electrochemical impedance spectroscopy was applied to commercial lithium-based coin cells operated under non-stationary charge/discharge cycling using a typical constant current--constant voltage protocol.
+The objective was not to extract detailed physicochemical parameters, but to validate the proposed DEIS methodology at the full-cell level and assess its consistency, robustness, and impact on battery operation.
+
+Continuous impedance spectra were successfully acquired throughout cycling using a broadband (7~decades) multi-sine excitation combined with online and offline signal processing.
+The resulting dynamic impedance measurements capture the evolution of interfacial resistance, charge-transfer processes, and diffusion-related features as functions of both state of charge and state of health.
+Comparison with classical stationary EIS measurements performed during interrupted cycling shows good agreement within the experimental variability of the cells, indicating that at moderate C-rates (C/10), the non-stationary operating conditions do not significantly alter the electrochemical state of the interfaces.
+
+Importantly, statistical comparison of capacity retention demonstrates that continuous superimposition of the multi-sine perturbation does not affect cell aging under the investigated conditions.
+This result supports the practical applicability of DEIS for long-term experiments without compromising cell integrity, at least for small-format cells and low to moderate current densities.
+
+Dynamic impedance spectra were fitted using rational polynomial models through complex nonlinear least-squares with regularization.
+Although the chosen black-box model does not provide direct physical interpretation of individual electrochemical processes, it enables real-valued parametrization of impedance evolution across cycles.
+The smooth variation of fitted parameters with state of charge and state of health suggests that such representations may serve as effective features for data-driven aging diagnostics.
+
+At the same time, the limitations of full-cell impedance analysis are evident.
+The superposition of positive and negative electrode responses leads to complex models that may not be fully represented by a rational polynomial, as evidenced by oscillatory residuals.
+Furthermore, a single model has limited ability to represent impedance across all operating conditions.
+
+Nevertheless, the flexibility of rational polynomials is promising.
+With proper characterization of the actual measurement error structure and systematic exploration of regularization penalty factors, the robustness of the fitting can be improved.
+I suggest conducting a study with simulated electrochemical impedance data where the degrees of freedom and noise levels are known a priori.

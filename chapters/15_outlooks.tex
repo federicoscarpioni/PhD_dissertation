@@ -1,0 +1,183 @@
+\chapter{Outlook and perspectives}
+
+The results presented in this thesis demonstrate that Dynamic Electrochemical Impedance Spectroscopy has significant potential for elucidating fast interfacial processes and non-stationary kinetics in alkali-ion battery electrodes. At the same time, the exploratory nature of the work revealed several methodological limitations whose resolution opens clear avenues for future research. The most promising directions are outlined below.
+
+\section{Multisine optimization}
+In this work amplitude and phase of the sinusodial multisie components were not fully optimize for the lowest crest factor and best signal-to-noise ration.
+This issue might become important in bigger cells where the multisine amplitude is higher and hence more power is generated that could produce heat.
+
+Also, the synthesis of the multisine could be improve to reduce spectal leakage.
+Mainly the signal number of samples here was 10 times the maximum frequency.
+Textbooks raccomend 100 times. 
+The leakage is also due to the generation design.
+The Keysight TrueForm deivces have a special electronics to reduce jitters and hence the spectra leakage. 
+The same multisine might perfome worse on other generators.
+
+\section{Software optimization}
+
+The latest version of the automated DEIS platform—including real-time tracking of the high-frequency resistance—should be fully integrated into future experiments. This enhancement would allow:
+
+\begin{itemize}
+    \item accurate detection of the instantaneous ohmic resistance, even at high C-rates;
+    \item clearer discrimination between cell artefacts and physicochemical features;
+    \item early identification of reference-electrode drift or contact issues during long experiments.
+\end{itemize}
+
+Extending the measurable frequency range above 100\,kHz would also improve sensitivity to nucleation phenomena and interfacial film growth.
+
+\section{Improved reference electrode concepts}
+
+A priority for future work is the development of reliable, non-intrusive reference electrodes compatible with thin-layer pouch cells. Several alternatives merit systematic investigation:
+
+\begin{itemize}
+    \item ultra-thin metallic wires ($<10\,\mu$m) to reduce mechanical deformation and current-field perturbations;
+    \item mesh or grid electrodes that minimise indentation while preserving ionic access;
+    \item intercalation-based references (e.g.\ LiFePO\textsubscript{4}, Na$_x$MPO$_4$) offering more stable potentials and reduced sensitivity to local current density;
+    \item vapor-deposited thin-film references integrated directly onto the separator or current collector.
+\end{itemize}
+
+A rigorous benchmarking campaign comparing these geometries under identical DEIS conditions would establish best practices for three-electrode pouch-cell measurements.
+
+\section{Reproducible SiCN(O) electrodes and controlled microstructure}
+
+The mechanistic interpretation of sodium storage in SiCN(O) was hindered by microstructural variability. Future work should focus on:
+
+\begin{itemize}
+    \item standardising the synthesis and electrode formulation (binder content, mixing energy, porosity control);
+    \item characterising porosity and carbon-domain connectivity via nitrogen adsorption, small-angle scattering, or tomography;
+    \item performing DEIS on statistically significant electrode sets to separate intrinsic behaviour from fabrication variability.
+\end{itemize}
+
+Such studies would enable a more definitive assessment of reversible metal plating in SiCN(O) and its impedance signature.
+
+\section{Mechanistic identification via combined DEIS and operando characterisation}
+
+Several impedance features observed here—such as the transient drop in impedance during reduction and the positive imaginary part during sodium deposition—call for complementary operando diagnostics. Future work should pair DEIS with:
+
+\begin{itemize}
+    \item operando NMR or Raman spectroscopy to identify chemical states during plating or desolvation;
+    \item high-speed optical imaging to correlate impedance signatures with nucleation morphology;
+    \item X-ray or neutron scattering to probe ion confinement and pore filling in disordered carbons.
+\end{itemize}
+
+Coupling time-resolved impedance with structural or spectroscopic data would provide definitive mechanistic assignments.
+
+\section{Quantification of plating and stripping efficiency}
+
+Future experiments should incorporate galvanostatic efficiency measurements to directly correlate impedance features with metal-deposition efficiency. Systematic variation of current density, cut-off potentials, and cycling protocols would clarify:
+
+\begin{itemize}
+    \item the onset conditions for reversible versus irreversible plating,
+    \item the relationship between nucleation overpotential and impedance signatures,
+    \item the impact of SEI growth on subsequent impedance evolution.
+\end{itemize}
+
+This would strengthen the link between dynamic impedance features and practical battery degradation mechanisms.
+
+\section{Towards model-based interpretation of non-stationary impedance}
+
+With improved data quality and reproducibility, future work should move toward quantitative, model-driven analysis. Promising directions include:
+
+\begin{itemize}
+    \item physics-based parametric models capturing plating nucleation, SEI growth, and pore filling;
+    \item time-varying equivalent-circuit models linked to diffusion-reaction PDEs;
+    \item system-identification frameworks that estimate kinetic parameters as continuous functions of state of charge.
+\end{itemize}
+
+Such tools would enable the extraction of mechanistically meaningful parameters directly from DEIS data and deepen the connection between non-stationary impedance and electrode health.
+
+\section{Implications for battery-health diagnostics}
+
+The exploratory results on graphite, SiCN(O), and sodium systems already suggest that DEIS is sensitive to early indicators of plating, concentration polarisation, and surface evolution. After addressing the experimental limitations identified in this thesis, future work may extend these findings to:
+
+\begin{itemize}
+    \item fast-charging protocols for commercial electrodes;
+    \item in situ monitoring of SEI evolution during accelerated aging;
+    \item detection of early plating events in high-power operation;
+    \item integration of DEIS-based indicators into real-time battery-management algorithms.
+\end{itemize}
+
+Ultimately, this line of research aims to establish DEIS as a high-information, real-time diagnostic tool capable of identifying degradation pathways before they become irreversible.
+
+% New version
+\chapter{Outlook and Perspectives}
+
+The work presented in this thesis establishes a complete experimental and computational framework for broadband electrochemical impedance spectroscopy under non-stationary conditions. While the methodology has been validated on laboratory-scale systems and commercial coin cells, several important directions remain open for extending its applicability, robustness, and technological relevance. This chapter outlines these perspectives, with particular emphasis on signal design, hardware integration, scalability to realistic battery systems, and implications for battery management systems (BMSs).
+
+\section{Further optimization of excitation signals}
+
+In this thesis, multisine excitations was selected as a broadband perturbation, but its realization is not unique and can be further optimized at multiple levels.
+First, the frequency grid itself can be refined. Alternative distributions of frequency components may reduce sensitivity to intermodulation, improve signal-to-noise ratio in targeted bands, or better align with the dominant electrochemical time constants of specific systems. In particular, adaptive or chemistry-specific grids could concentrate the power in frequency regions that are most informative for aging or transport phenomena.
+
+Second, phase optimization strategies remain an open research direction. While stochastic phase randomization with crest-factor minimization proved sufficient for the present work, more advanced deterministic or hybrid optimization algorithms could further reduce peak-to-average power ratios, allowing higher effective excitation amplitudes while preserving linearity. This is especially relevant for systems with very low impedance, where signal amplitudes are intrinsically constrained.
+
+Finally, the interaction between multisine design and impedance estimation methods (STFT, DMFA, BLTVA) deserves systematic investigation. Excitation signals optimized jointly with the estimation algorithm may enable improved low-frequency resolution or reduced sensitivity to drift, especially under strongly non-stationary conditions.
+
+\section{Extension to realistic lithium-ion batteries}
+
+The experimental validation presented in this thesis primarily employed small-format commercial coin cells and laboratory-scale electrodes. While these systems are fine for methodological development and rapid iteration, extending the approach to realistic lithium-ion cells remains a crucial step.
+
+Future work should focus on applying dynamic impedance spectroscopy to commercially relevant chemistries such as NMC/graphite and LFP/graphite cells, with capacities in the range of 1--4~Ah. These cells exhibit significantly lower internal impedance and higher nominal currents, which poses new challenges for both excitation amplitude and measurement precision.
+
+The instrumentation used in this work is limited to a maximum current output of approximately 500~mA, which is insufficient for exciting large-format cells at representative C-rates. This limitation motivates either the integration of a current booster stage or, more fundamentally, the development of dedicated hardware platforms capable of delivering higher currents while maintaining precise small-signal perturbations.
+This is especially convinient when studying only full cell batteries with only two terminals. Removing the voltage follower of the reference sensing reducing significantly the complexity of the electronics.
+In fact commercial battery cyclers are much cheaper than thre-electrode potential for analytical purposes.
+
+\section{Toward embedded hardware}
+
+Scaling dynamic impedance spectroscopy to higher currents and larger cells strongly suggests the need for dedicated hardware solutions. FPGA-based platforms, microcontrollers with integrated DSP blocks, or hybrid microcomputer--FPGA architectures represent promising directions.
+
+Such platforms could:
+\begin{itemize}
+    \item generate broadband excitation signals with minimal memory usage,
+    \item perform real-time filtering directly on the hardware,
+    \item reduce data throughput,
+    \item enable multi-channel operation for battery modules.
+\end{itemize}
+Developing such integrated systems would be a necessary step toward translating the methodology from laboratory research to industrial or embedded applications.
+
+\section{Precision and signal-to-noise challenges}
+
+As battery size increases and impedance decreases, maintaining adequate precision becomes increasingly challenging. For large-format cells operating at high currents, the voltage response to small perturbations may approach the noise floor of the measurement system.
+
+Future work must therefore address:
+\begin{itemize}
+    \item the fundamental limits of impedance resolution under realistic operating conditions,
+    \item the trade-off between perturbation amplitude, linearity, and signal-to-noise ratio,
+    \item uncertainty quantification and error propagation in non-stationary impedance estimates.
+\end{itemize}
+
+These considerations are essential for assessing whether dynamic impedance spectroscopy can reliably extract informative features in practical battery systems, or whether its applicability is restricted to specific operating regimes.
+
+\section{From Single Cells to Battery Packs}
+
+An important open question concerns the extension of dyancmi impedance charachterization from single cells to battery packs composed of cells connected in series and parallel. In such configurations, impedance contributions are aggregated and potentially masked by cell-to-cell variability, contact resistances, and thermal gradients.
+
+Future investigations should address whether aging signatures remain identifiable at the pack level, and whether dynamic impedance measurements can detect imbalance, weak cells, or localized degradation. This question is particularly relevant for BMS applications, where measurements are inherently performed at the module or pack scale.
+The possibility of identify a faulty or less performative battery pack inside the module could effectivly extend the life-time of the battery though a reduced use of the specific pack.
+
+\section{Temperature Sensitivity and Multi-Physics Correlations}
+
+Electrochemical impedance is strongly temperature-dependent, and this sensitivity represents both a challenge and an opportunity. On one hand, temperature variations complicate impedance interpretation under dynamic operating conditions. On the other hand, impedance measurements may serve as indirect temperature sensors.
+
+Establishing reliable correlations between impedance features and temperature requires systematic experiments under controlled thermal conditions. Future work should therefore combine dynamic impedance spectroscopy with temperature-controlled cycling to disentangle thermal effects from aging-related changes and to assess the feasibility of impedance-based temperature estimation.
+
+\section{Alternative broadband excitations for BMS applications}
+
+Multisine excitation, while powerful, relies on relatively expensive arbitrary waveform generators and precise synchronization hardware. For large-scale deployment in BMSs, simpler broadband excitation schemes may be preferable.
+Pseudo-random binary sequences, maximum-length sequences, or other stochastic excitations represent promising alternatives that can be generated efficiently on low-cost embedded platforms. Evaluating their compatibility with non-stationary impedance estimation, their robustness to noise and nonlinearities, and their computational requirements remains an important topic for future research.
+
+\section{Compact impedance spectrometers for analytical purposes}
+
+While scaling dynamic impedance spectroscopy toward high-current battery systems presents significant engineering challenges, an equally important and complementary direction concerns low-current, three-electrode analytical setups. In recent years, numerous research groups have proposed inexpensive, microcontroller-based potentiostats capable of precision and stability comparable to commercial laboratory instruments for small-signal electrochemical measurements.
+
+These open and modular platforms typically target currents in the microampere to milliampere range and are optimized for fundamental electrochemical studies, including redox kinetics, adsorption processes, and interfacial capacitance measurements. Their open hardware and software architectures make them particularly attractive as foundations for compact and cost-effective dynamic impedance spectrometers.
+
+Integrating dynamic impedance capabilities into microcontroller-based potentiostats would require relatively modest extensions compared to high-current battery platforms. Broadband excitation signals can be generated digitally with minimal power requirements, and frequency-domain filtering can be implemented either on-board or through lightweight external processing.
+This metodology shares similar hardware requirment to audio processing and voice recognition.
+
+Such platforms would enable compact, portable, and inexpensive dynamic impedance-enabled devices that could be deployed widely in research laboratories. They would also provide an accessible testbed for comparing excitation strategies (multisine, pseudo-random, chirp-based) and impedance estimation methods under well-controlled conditions before transferring validated approaches to larger-scale battery systems.
+
+\section{Perspective}
+
+Overall, this thesis provides a methodological and instrumental foundation for dynamic electrochemical impedance spectroscopy under realistic operating conditions. The perspectives outlined above highlight that the primary challenge ahead is no longer conceptual feasibility, but engineering scalability, robustness, and integration. Addressing these challenges will determine whether dynamic impedance spectroscopy can evolve from a powerful laboratory technique into a practical diagnostic tool for next-generation battery systems and battery management systems.

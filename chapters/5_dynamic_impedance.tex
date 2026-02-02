@@ -1,186 +1,304 @@
-\chapter{Electrochemical Impedance Spectroscopy of non-stationary systems}
+\chapter{Electrochemical impedance spectroscopy beyond stationarity}
+\label{ch:deis state art}
 
-The previous chapter set the foundation of system identification for linear and time-invariant systems.
-The time-invariance condition poses a limitation on measuring impedance of evolving electrochemical system, which are most interesting to study.
-In fact knowing the change in charge transfer resistance or adsorbtion capacitance at any change of operating condition is valuable for both active material development and electrochemical device characterization. 
-It especially true for monitoring the state of batteries while charging and discahrging with the purpose of effective control and safety assessment.
+% Electrochemical impedance spectroscopy (EIS) is traditionally defined as the frequency-domain characterization of an electrochemical system under the assumption that the system is linear and time-invariant over the duration of the measurement.
+% Under this assumption, the impedance is uniquely defined as a transfer function relating a small perturbation in potential or current to the corresponding system response.
 
-The problem of stationarity has been addressed in research since the beginning of electrochemical impedance development.
-This chapter covers the state of the art in non-stationary impedance research, giving an historical perspective analyzing the main corner stones toward the development of a methodology highlighitng the logical steps for the estimation of the impedance in non-stationary systems.
-With the term methodology I include assumption on stability, hardware, excitation choice and impedance calculation method.
+% In practice, the time-invariance requirement implies that the electrochemical system must remain in a steady state throughout the entire frequency sweep.
+% This condition is approximately satisfied only when the system is at equilibrium or when the characteristic time of its evolution is much longer than the total measurement time.
+% For many electrochemical systems of practical interest, however, this assumption is violated.
+% Temperature fluctuations, surface restructuring, adsorption processes, state-of-charge variations, and ongoing faradaic reactions induce continuous drift of system parameters during the experiment.
 
-\subsection{Multisine vs single sine excitations}
+% The limitation imposed by stationarity is particularly severe for batteries.
+% During charge and discharge, electrochemical processes evolve over multiple time scales, and the impedance itself carries information about reaction kinetics, transport limitations, and degradation mechanisms.
+% Accessing this information under realistic operating conditions requires impedance measurements that can be performed while the system is evolving, rather than only at steady states.
 
-The time-invariant condition for transfer function validity rises the necessity of the electrochemical system being in equilibrium condition or being steady throughout the complete frequency sweep.
-Though, electrochemical system are always drifting due to temperature change or other mechanisms.
-This limitation was under scrutiny since the early development of electrochemical impedance spectroscopy.
+% This chapter gives an overview of ....
 
-A mulitsine waveform allows to reduce the measurment time significanlty.
-A multisine is a waveform composed of the sum of sinusoidal waves.
-In swept-frequency methods the measurment time is:
-$$
-$$
-while for a multisine, the experiment time is the period of the excitation, equivalent to the inverse of the lowest frequency.
+Classical electrochemical impedance spectroscopy relies on the assumption that the system under investigation is linear and time invariant (LTI) over the duration of the measurement.
+Under these conditions, frequency-domain techniques introduced in the previous chapter allow the impedance to be estimated reliably from periodic perturbations.
+In many electrochemical systems of practical interest, however, this assumption does not hold.
+Processes such as charging and discharging of batteries, surface modification, aging, or phase transformations introduce a slow but continuous evolution of the system state during the measurement.
+When the characteristic time scale of this evolution becomes comparable to the duration required to probe low frequencies, the interpretation of impedance spectra obtained with conventional methods becomes ambiguous.
 
-When multisine are employed, the amplitude attenuation and phase shift of each frequency component mast be isolated though Fourier analysis to compute the impedance at each angular frequency
-$$
-Z(\omega _k) = \frac{FT I(\omega _k)}{FT V(\omega _k)}
-$$
-or admittance
-$$
-Y(\omega _k) = \frac{FT V(\omega _k)}{FT I(\omega _k)}.
-$$
+This chapter reviews the methodological developments that extend impedance spectroscopy beyond the stationary regime.
+Emphasis is placed on multi-frequency excitation, time-frequency analysis, and time-resolved impedance estimation, highlighting the assumptions, limitations, and validity domains of each approach.
+These methods form the conceptual basis for the experimental implementation described in Chapter \ref{ch:acquisition}.
 
-\section{Prototypes of multi-sine impedance}
+\section{Reducing acquisition time}
 
-In the early 70's some a few researchers introduced the concept of multisine excitation to reduce the time for acquiring one impedance spectra.
-Around the same time, Kojima and Fujiwara \cite{kojima1971fourier} and later Glover and Smith \cite{gloverAlternatingCurrentPolarography1973} performed the first "alternated polarography" with digital signal processing on microcomputers.
-Creason and Smith applied the method for the estimation of Faradaic admittance in fast reactions \cite{creasonFourierTransformFaradaic1972} also performed a screening of possible multi-frequency excitations \cite{creasonFourierTransformFaradaic1973a} among which the multisine showed the highest signal to noise ratio.
+The challenge of measuring impedance in non-stationary electrochemical systems has been recognized since the early development of EIS.
+Over the decades, several conceptual strategies have been proposed to overcome the stationarity constraint.
+All the method share a common principle: reducing the time of the acquisition of alle frequencies such that the system can be considered "temporarly" time-invariant.
+One of the earliest and most widely adopted strategies to address non-stationarity is the reduction of measurement time through broadband excitation that contain multiple frequencies simultanously instead of a single sinusoidal excitation.
+The most used broadband excitation is the multisine, a sum of sinudoidal waves with different frequencies, beacuse it gives the better signal-to-noise ratio \cite{creasonFourierTransformFaradaic1973a}.
 
-Multisine excitations can be used in impedance measurements for systems in equilibrium condition, but its best use case is for drifting systems.
+In classical single-sine EIS, the impedance spectrum is obtained by sequentially exciting the system at individual frequencies. The time require to collect one spectra is 
+\begin{equation}
+    T = n \sum_k \frac{1}{f_k},
+\end{equation}
+where $f_k$ are the exciteted frequencies and $n$ is the number of repetition to avarge on for computing the impedance.
+On the other hand, in an experiment with multisine the time required is
+\begin{equation}
+    T = \frac{1}{f_{min}},
+\end{equation}
+where $f_min$ is the minimum excited frequency.
+Depending on the choice of $n$ and the freuquency grid, the time required for the stepped method is 3 to 10 times longer \cite{schoukensBroadbandSteppedSine1999}.
+Figure \ref{fig:multisine length} reports the comparison of duration of single sine sweeps with different repetions $n$ and a single multisine period; the frequency range is 10mHZ-1kHz logarithmically distributed with 8 point per decade.
 
-\subsection{Systems under drift}
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/deis_state_art/single_sine_vs_multisine.pdf}
+    \includegraphics[width=\textwidth]{figures/deis_state_art/multisine_frequencies.pdf}
+    \caption{}
+    \label{fig:multisine length}
+\end{figure}
 
-Bond, Schwall and Smith in 1977 \cite{schwallOnlineFastFourier1977} used a microcontroller-based online fourier analysis during cyclic voltammetry experiments
-and applied it on mercury and platinum electrodes \cite{bondOnlineFFTFaradaic1977} \cite{schwallOnlineFastFourier1977}\cite{schwallHighSpeedSynchronous1977}. 
-Now the formula is
-$$
-Z(\omega _k, t) = \frac{FT I(\omega _k) g(\tau - t)}{FT V(\omega _k) g(\tau - t)}
-$$
-In the following years, Smith collaborated with many reseracher to apply the method, called by them "Fourier Transform Faradaic Admittance Measurements (FT-FAM)" for the investigation of electron transfer \cite{hayesACPolarographyUsing1980} \cite{grzeszczukMeasurementsMarcusTheory1983} \cite{grzeszczukStructuralConsequencesElectron1983} \cite{grzeszczukElectrochemicalInvestigationsTetraphenylethylene1984} \cite{ivaskaApplicationOnlineFast1985} \cite{grzeszczukElectronHydrogenAtom1986}.
-The frequency range of this method is ???.
+The impedance at each angular frequency $\omega_k$ is then obtained by isolating the corresponding spectral components of the voltage and current signals through Fourier analysis:
+\begin{equation}
+Z(\omega_k) = \frac{\mathcal{F}\{v(t)\}(\omega_k)}{\mathcal{F}\{i(t)\}(\omega_k)}.
+\end{equation}
 
-In Section \ref{sec:EIS}, I mentioned that today every electrochemical instrumentatin uses the single sine implementation, but the choice is more hystorical the technologocial.
-In 1986 T. Tsuru and S. Haruyama \cite{1986296} discussed in a review paper the advantages and disadvantages of the single sine and multisine methods highlighting the precision and ease of implementation for single sine method compared to the multisine method capable instead of highly time-resolved measurment of transient systems or other speed-critical applications.
-The authors argue that improvement in digital signal processing and hardware, especially with FPGAs, narrowed the gap in accuracy and noise handling, and they envisioned instruments that implements both approaches and leave the liberty of choice to users for the specific application.
-With the popularity of Solartron instruments the research community gravitated to the single sine methods which is well understood and validated. 
+The use of multisine excitation was explored as early as the 1970s, notably by Kojima and Fujiwara \cite{kojima1971fourier}, Glover and Smith \cite{gloverAlternatingCurrentPolarography1973}, and Creason and Smith \cite{creasonFourierTransformFaradaic1972}, who demonstrated its advantages in terms of measurement speed and signal-to-noise ratio.
+While initially developed for stationary systems, multisine methods naturally lend themselves to applications involving slow system drift.
 
-The main selling point is the practically unlimited frequency band of the single sine impedance while the multisine method is technically binded by the waveform memory.
-To the date of this thesis, no practical effort has been taken by instrument manufacturer in this direction, but the renewed interest from the scientific community on the subject might change the thing in the following years.
+% In 1986 T. Tsuru and S. Haruyama \cite{1986296} discussed in a review paper the advantages and disadvantages of the single sine and multisine methods highlighting the precision and ease of implementation for single sine method compared to the multisine method capable instead of highly time-resolved measurment of transient systems or other speed-critical applications.
+% The authors argue that improvement in digital signal processing and hardware, especially with FPGAs, narrowed the gap in accuracy and noise handling, and they envisioned instruments that implements both approaches and leave the liberty of choice to users for the specific application.
+% With the popularity of Solartron instruments the research community gravitated to the single sine methods which is well understood and validated. 
 
-\section{Modern time-resolved impedance}
+% The main selling point is the practically unlimited frequency band of the single sine impedance while the multisine method is technically binded by the waveform memory.
+% To the date of this thesis, no practical effort has been taken by instrument manufacturer in this direction, but the renewed interest from the scientific community on the subject might change the thing in the following years.
 
-In the 90s and early two thousand, with the advancement in computing power and electronic instrumentation, multiple research groups regain interest in the topic.
-They commonly share the instrumental setup made of three independent devices connected together: a potentiostat/galvanostat, an arbitrary waveform generator and a digital signal acquisition unit.
+\subsection{Short-time Fourier transform impedance}
 
-The first works were from G.S. Popkirov and R.N Schindler \cite{popkirovNewImpedanceSpectrometer1992} in 1992 that used an home made potentiostat capable of two frequency ranges: 100kHz-100Hz or 0.76Hz-0.76mHz.
-They also show that a multisine wave (of 42 components) gives the best signal to noise ratio compared other waveforms \cite{popkirovOptimizationPerturbationSignal1993a} and the validation of the measurement for the interference of non-linearities \cite{popkirovValidationExperimentalData1993a} \cite{popkirovEffectSampleNonlinearity1995a}.
-The authors applied the method for electropolymerization \cite{popkirovInSituTimeResolved1993}, the characterization of redox process in conductive polymers \cite{popkirovInsituImpedanceMeasurements1995} \cite{popkirovElectrochemicalImpedanceSpectroscopy1995} \cite{popkirovInvestigationConductingPolymer1997} \cite{garcia-belmonteDeterminationElectronicConductivity2003a}, silver dissolution \cite{popkirovElectrodePotentialRedistribution1995} \cite{baltrunasTimeEvolutionActive1997} and Benzophenone/Benzophenone anion radical couple in different solutions \cite{walczykInvestigationRedoxCouple1995}.
-They used both sweeping voltage and galavnostatic techniques as main drift and a multisine between 1 Hz and 31 kHz.
+When a non-stationary system drifts slower than the period of the applyed multisine, the stationarity assumption is valid over the time window equal to the inverse of the period.
+An "instantanous" impedance can be defined as the ration between the Fourier transform (denoted $\mathcal{F}$) of the voltage $v(t)$ and current $i(t)$ signals:
+\begin{equation}\label{eq:stft}
+    Z(\omega, \tau) = \frac{\mathcal{F}[v(t) w(t-\tau)](\omega)}{\mathcal{F}[i(t)w(t-\tau)](\omega)},    
+\end{equation}
+where $w(t)$ is the window function and $\tau$ is the the time resolution of the impedance, equivalent to the window length.
+The STFT method is graphically summarized in Figure \ref{fig: stft scheme}
+This approach was introduced by Bond, Schwall and Smith in 1977 \cite{schwallOnlineFastFourier1977} used a microcontroller-based online fourier analysis during cyclic voltammetry experiments.
 
-From 2000 to 2005 D. Roy, J. E. Garland, C.M. Pettit and collegues proposed measuremnet setup using a 133 components multi-sine perturbation  of only odd frequencies, random phase and equal amplitude \cite{waltersWeakAdsorptionAnions2001a}. 
-They also discussess in details how to choose experimental parameters and the limitation of such technique \cite{garlandAnalysisExperimentalConstraints2004}. 
-They applied the method to study difference processes on gold such as deposition of bismuth \cite{garlandKineticAnalysisElectrosorption2002a} and indium with focus on co-adsorbtion, electro-oxidation of methanol \cite{assiongbonElectrooxidationMethanolGold2005}, redox couple kinetics with focus on co-adsorbtion \cite{emeryTimeResolvedImpedance2005} and chemical reduction of Nickel \cite{shiElectrocatalysisHypophosphiteNickel2014}. 
-They also coupled time-resolved impedance with optical measurements during indium deposition on molybdenum \cite{pettitElectrodepositionIndiumMolybdenum2002}. 
-Furthermore, they studied surface reaction and effect planarization for different metals: Tallium \cite{assiongbonChemicalRolesPeroxidebased2004} \cite{gorantlaChemicalEffectsChemical2005} \cite{pettitRoleIodateIons2005}, Copper \cite{luRelativeRoles22004} \cite{pettitTimeResolvedStudy2004} \cite{gorantlaCitricAcidComplexing2005} and Silver \cite{assiongbonElectrooxidationMethanolGold2005} .
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \textwidth]{figures/deis_state_art/STFT-EIS Darowicki 2004.jpg}
+    \caption{Graphical representation of the STFT method for impedance estimation during a cycli voltammetry experiment.}
+    \label{fig: stft scheme}
+\end{figure}
 
-From 2003, K. Darowicki, P. Slepski and their colleagues, develop different experimental setups for the estimation of instantanous impedance \cite{darowickiInvestigationsPassiveLayer2003} \cite{darowickiInstantaneousElectrochemicalImpedance2004a}. 
-The impedance is still estimated via short-time Fourier transform, at first emplying exponential chirp excitation (in the range 1320-144 Hz) \cite{darowickiDynamicElectrochemicalImpedance2003a} \cite{darowickiContinuousFrequencyMethodMeasurement2003} \cite{darowickiDeterminationElectrodeImpedance2004a} and later with multisine \cite{darowickiInvestigationsPassiveLayer2003}. 
-The prolific work conducted by the group touches multiple applications: corrosion evaluation on stainless steel \cite{darowickiEvaluationPittingCorrosion2004a} \cite{darowickiTimeDependencePit2004} \cite{krakowiakImpedanceInvestigationPassive2005} \cite{krakowiakImpedanceMetastablePitting2005} \cite{orlikowskiInstantaneousImpedanceMonitoring2015} \cite{rylInstantaneousImpedanceMonitoring2016} \cite{orlikowskiDeterminationPittingCorrosion2017} \cite{naroznyApplicationElectrochemicalImpedance2018} \cite{darowickiNovelApplicationDynamic2020a} \cite{rylInstantaneousImpedanceAnalysis2017} and metal alloys \cite{arutunowElectricalMechanicalCharacterization2015} \cite{zielinskiApplicationMultisineNanoscale2015} \cite{wysockaInvestigationElectrochemicalBehaviour2016} \cite{gawelImpedanceMonitoringCorrosion2017}, monitoring of the crack of corrosion layers on stainless steel \cite{darowickiDetectionStressCorrosion2004}, characterization of conductive polymers \cite{darowickiImpedanceCharacterizationProcess2004} \cite{darowickiDynamicElectrochemicalImpedance2004}, investigating the hydrogen storage alloy [2010], monitoring the discharge of nickel/nickel hydride batteries [2013],  monitoring the adhesion of organic coating to stainless steel and galvanic coupling \cite{burczykLocalElectrochemicalImpedance2018}.
-The frequency range of the multi-sine of these works is about 3 Hz - 20 kHz. 
-The method was also coupled with atomic force microscopy for the study of surface terminations of boron-doped diamond \cite{zielinskiMultifrequencyNanoscaleImpedance2019} \cite{rylStudySurfaceTermination2016} and the quartz crystal microbalance \cite{parasinskaApplicationQuartzCrystal2024}. 
-The researchers applied the techniques to study fuel cell under different operation \cite{slepskiImpedanceMonitoringFuel2015} \cite{darowickiInfluenceDynamicLoad2019} \cite{darowickiImpedanceHydrogenOxidation2020a} and redox-flow batteries \cite{krakowiakThreeModesElectrochemical2024}. 
-Here the frequency range was extended to 4.5 kHz-0.3 Hz (or 30 mHz). 
+% They applied it for the study of fast reaction on mercury and platinum electrodes \cite{bondOnlineFFTFaradaic1977} \cite{schwallOnlineFastFourier1977}\cite{schwallHighSpeedSynchronous1977}. 
 
-In 2004 J. Schouckens and R. Pintelon started to apply their theoretical framework [???] of system identification in the frequency domain characterization of electrochemical systems with A. Hubin to obtain the electrochemical impedance of corroding metals using multisine perurbations with low frequency components down to 0.01Hz \cite{vangheemElectrochemicalImpedanceSpectroscopy2004a}\cite{vangheemElectrochemicalImpedanceSpectroscopy2006a} \cite{blajievImprovementImpedanceMeasurement2006}. 
-It is interesting how they compare multi-sine and stepped sine consecutive measurement to validate the experiment in \cite{vangheemInstantaneousImpedanceMeasurements2004}. 
-In 2009 they discussed the advantage of using only the odd-number harmonics in the sequence of summed sinusoidal with 220 components between 10mHz and 2kHz \cite{vaningelgemAdvantagesOddRandom2009}. 
-In particular, they put attention on the quantitative estimation of the impedance variance and the error due to the non-linearities and non-stationarity of the system.
-They also discussed the difference in estimating the frequency response function with multi-frequency waveform and stepped sine though simulation adressing signal to noise ratio and measurement time \cite{schoukensBroadbandSteppedSine1999} and  compared different excitation signals including periodic, transient and aperiodic signals \cite{schoukensSurveyExcitationSignals1988a}.
-Their method was applied for the study of multiple systems: corrosion of Copper\cite{vaningelgemApplicationMultisineImpedance2008}, Alluminum and stainless steel \cite{breugelmansOddRandomPhase2010a} \cite{alvarez-pampliegaCorrosionStudyAlrich2014} \cite{jiOddRandomPhase2018} \cite{jiElectrochemicalRamanAnalysis2020}, the adsorbtion of molecules on metals \cite{blajievPotentiodynamicEISInvestigation2008} \cite{geboesInvestigationAdsorptionMechanism2015} and oxides \cite{hauffmanMeasuringAdsorptionEthanol2012}, self-assembling monolayers \cite{hauffmanDynamicSituStudy2013}\cite{fernandezmaciaStudyElectronTransfer2014}, polymeric coatings \cite{jorcinInvestigationSelfhealingProperties2010}\cite{breugelmansOddRandomPhase2010}\cite{woutersMonitoringInitialContact2021} \cite{meeusenFEMModellingPredict2023}\cite{madelatSituMonitoringLateral2023}, ferri/ferrocyanide reaction on gold \cite{fernandezmaciaORPEISStudyTime2015}, aptomer as biosensors \cite{pauwelsNewMultisinebasedImpedimetric2016} and alloy protection \cite{meeusenUseOddRandom2018}. 
+% In the following years, Smith collaborated with many reseracher to apply the method, called by them "Fourier Transform Faradaic Admittance Measurements (FT-FAM)" for the investigation of electron transfer \cite{hayesACPolarographyUsing1980} \cite{grzeszczukMeasurementsMarcusTheory1983} \cite{grzeszczukStructuralConsequencesElectron1983} \cite{grzeszczukElectrochemicalInvestigationsTetraphenylethylene1984} \cite{ivaskaApplicationOnlineFast1985} \cite{grzeszczukElectronHydrogenAtom1986}.
 
-In 2009 R.L Sacci and D. A. Harrington proposed a multi-sine with 1Hz - 1.3 kHz with removed harmonics to avoid intermodulation following Popkirov 1993  and amplitude decreasing by a factor of two every two decades, superimposed to cylic voltammetry.
-They used the method to study electroxidation of metanol  \cite{sacciDynamicImpedanceFormic2009}
-\cite{holmUnderstandingReactionMechanisms2018} \cite{holmDynamicElectrochemicalImpedance2019} \cite{holmUnderstandingReactionMechanisms2019}, electrocatalytic reactions \cite{sacciDynamicElectrochemicalImpedance2014} and droplet interface bilayers \cite{sacciDisentanglingMemristiveMemcapacitive2022}.
+With the advancement in computing power in the 90s, Popkirov and Schindler developed a versatile instrumental setup for dynamic impedance spectroscopy assembling an home-made potentiostat, an arbitrary waveform generator and a digital acquisition device that streams the multi-frequency voltage and curernt signal to a persona computer.
+This configuration is still used today and it is how I carrued the measruement in this work.
 
-In 2020 T. Pajkossy and G. Mészáros proposed a set-up in which the potentiostat is custom build in order to analogically seperate the drift and oscillations.
-The input controll is still made by the superposition of a main drift, sweeping voltage, and small multi-frequency excitation with odd prime frequencies in the band 18.3 Hz - 17.8 kHz \cite{pajkossyConnectionCVsImpedance2020}. 
-The four outputs are recorded with analog to digital converter. 
-The researchers did also an extensive theoretical evaluation of the coupling of cyclic voltammetry and impedance for the estimation of charge transfer resistance for quasi-reversible redox systems \cite{pajkossyDynamicElectrochemicalImpedance2019}  \cite{pajkossyVoltammetryCoupledImpedance2020} \cite{pajkossyDynamicElectrochemicalImpedance2021}. 
+Various authors implemented their own version of this setup in the last 3 decades using device of different brand, but without changin the formula:
+\begin{itemize}
+    \item Hazi and Bond \cite{haziMicrocomputerbasedInstrumentationMultifrequency1997};
+    \item Roy, Garland and Pettit \cite{waltersWeakAdsorptionAnions2001a};
+    \item Darowicki and Slepski \cite{darowickiInstantaneousElectrochemicalImpedance2004a};
+    \item Schouckens, Pintelon and Hubin \cite{vangheemElectrochemicalImpedanceSpectroscopy2004a};
+    \item Sacci and Harrington \cite{sacciDynamicImpedanceFormic2009};
+    \item Pajkossy and Mészáros \cite{pajkossyConnectionCVsImpedance2020}.
+\end{itemize}
 
+What sets apart the work of the different groups is the system type, the speed of its drift and the frequency components of the multisine used.
+The choice of the frequency range and distribution is important to get the full electrochemical response of the cell while avoiding intermodulation between the harmonics and the foundamental components.
+The multi-sine prepared by Popkirov or Schindler was a multisine of three decades (100kHz-100Hz or 0.76Hz-0.76mHz) with 42 prime number components \cite{popkirovOptimizationPerturbationSignal1993a}.
+Roy, Garland and Pettit and collegues proposed a multisine with 133 components of only odd frequencies, random phase and equal amplitude \cite{waltersWeakAdsorptionAnions2001a}.
+The choice of the phase and amplitude of each sinusoidal component of the multisine affects the quality of the estimated impedance and it will be discussed in detail in Chapter \ref{ch:acquisition}.
+Schouckens, Pintelon, Hubin and collegues proposed also a multisine using odd-number harmonics with 220 components between 10mHz and 2kHz \cite{vaningelgemAdvantagesOddRandom2009}.
+Sacci and Harrington designed a multi-sine in the frequency band 1Hz - 1.3 kHz with removed specific harmonics that causes intermodulation following the work of Popkirov \cite{popkirovOptimizationPerturbationSignal1993a} and amplitude decreasing by a factor of two every two decades.
 
-\subsection{Modernization of early prototypes}
+Table \ref{tab:literature parameters stft} reports some of the parameters of the multisine and drift used in the literate.
+A detailed chronological  review of the work on dynamic impedance spectrocpy is provided in Appendix \ref{app:literature review stft}.
 
-In 1990, Ivaska and collegues ported the technique of Smith into a smaller form factor with details on the hardware \cite{engblomExperiencesOnLineFourier1990}.
-In 1996 Hazi, Bond and collegues, extended the system to modern hardare for the measurement of admittance or impedance in the frequency range 50Hz-50kHz during staircase voltammetry \cite{haziMicrocomputerbasedInstrumentationMultifrequency1997} \cite{schieweUnifiedApproachTrace1998}.
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cccccc}
+        \toprule
+        Method & $f_{min}$(Hz) & $f_{max} $(Hz) & Drift type & Drift speed & Publication\\
+        \midrule
+        STFT & 1.8 & 3.1k & CV & 8.5mV/s & \cite{popkirovInsituImpedanceMeasurements1995}\\
+        STFT & 40 & 10k & LSV & 4mV/s & \cite{waltersWeakAdsorptionAnions2001}\\
+        STFT & 5 & 10k & CV & 10mV/s & \cite{garlandKineticAnalysisElectrosorption2002}\\
+        STFT & 20 & 16k & CV & 30mV/s & \cite{darowickiImpedanceCharacterizationProcess2004}\\
+        STFT & 0.7 & 4.5k & CV & 0.01mV/s & \cite{slepskiElectrochemicalImpedanceStudies2010}\\
+        STFT & 0.03 or 0.170 & 4.5k & CP & 1/2.5 C & \cite{slepskiApplicationElectrochemicalImpedance2013}\\
+        STFT & 0.1 & 1.3k & CV & 5mV/s & \cite{sacciDynamicElectrochemicalImpedance2009}\\
+        STFT & 1 & 100k & CV & 5mV/s & \cite{holmUnderstandingReactionMechanisms2018}\\
+        STFT & 10 & 13.2k & CV & 50mV/s & \cite{pajkossyDynamicElectrochemicalImpedance2019}\\
+        STFT & 18.3 & 17.8k & CV & 200mV/s & \cite{pajkossyConnectionCVsImpedance2020}\\
+        \bottomrule
+    \end{tabular}
+    \caption{Summary of dynamic impedance spectroscopy paramters across the literature. Drift types are: CP = chrono-potentiometry, CV = cycic voltammetry and LSV = lienar sweep voltammetry.}
+    \label{tab:literature parameters stft}
+\end{table}
 
-\section{Non-stationary impedance and the low frequency band}
+The technique of dynamic impedance spectroscopy can be applied to any electrochemical system under differnt type of drift, such cyclic voltammetry, chronopotentiometry, spontaneous oxidation or even mechanical strain. 
+Examples of  system studied with the STFT method are:
+\begin{itemize}
+    \item  redox couples \cite{walczykInvestigationRedoxCouple1995, emeryTimeResolvedImpedance2005, macia2015orp, pajkossyDynamicElectrochemicalImpedance2021}; 
+    \item conductive polymers \cite{popkirovInvestigationConductingPolymer1997, darowickiImpedanceCharacterizationProcess2004}; 
+    \item electrodeposition \cite{pettitElectrodepositionIndiumMolybdenum2002}; 
+    \item molecule electro-oxidation \cite{assiongbonElectrooxidationMethanolGold2005, holmUnderstandingReactionMechanisms2019}; 
+    \item stainless steel corrosion \cite{rylInstantaneousImpedanceMonitoring2016, jiOddRandomPhase2018}; 
+    \item metal alloy corrosion \cite{wysockaInvestigationElectrochemicalBehaviour2016}; 
+    \item polymeric coatings \cite{madelatSituMonitoringLateral2023}; 
+    \item hydride battery discharge \cite{slepskiApplicationElectrochemicalImpedance2013a}; 
+    \item fuel cells \cite{darowickiImpedanceHydrogenOxidation2020a}; 
+    \item redox-flow batteries \cite{krakowiakThreeModesElectrochemical2024}.
+\end{itemize}
 
-All the research mentionened so far in this chapter is based on the assumption that the system is linear and time-invariant over the FFT window.
-The window length should be short for compared to the evolution of the system and this impeeds the identification of low frequencies that require long recording time.
-Looking at the research cited above, the lower frequency limit is around 1Hz.
-In battery identification expecially, the response on diffusion, interesting to interpret degradation patterns, is well below the 1Hz thrashold, but as low as 1-10mHz.
-In recent years other estimation techniques have been explored to obtain instantanous impedance spectra of low frequencies.
+\section{The limiting lower frequency}
 
-\subsection{Best Linear Time-Varying Approximation}
+The STFT method is based on the idea that the system is temporary stationary for the time of the window length, but how to determine the lowest frequency that respects the LTI condition?
+In the literature have been proposed a couple of formulas that applies to cyclic voltammetry multisine experiments on redox couples\cite{sacciDynamicElectrochemicalImpedance2009}\cite{waltersWeakAdsorptionAnions2001}:
+\begin{equation}
+    \frac{F\nu}{RT} \ll 2\pi f_{min}
+\end{equation}
+based on the scan rate $\nu$ of the voltage input and 
+\begin{equation}
+    \frac{\text{d}i}{\text{d}t} \ll 2\pi A_{min} f_{min}
+\end{equation}
+based on the derivative of the ouput currnt $i$, and $A_{min}$ is the amplitude of the system output at frequency $f_{min}$.
+These formulas present a general inequality and it is not possible to define how greter the minimum frequency should be compared to the speed of the drift. 
+A few time might be sufficient or maybe one or more orders of magnitude is needed.
+Furthermore they don't generalize to other electrochemical systems or other other drift types outside cyclic voltammetry.
 
-The issue was firstly address in 2012 T. Bruegelmans, J. Latier and their colleagues extending the theory of system identification of linear and \emph{time-varying} (LTV) systems to the estimation of electrochemical impedance \cite{breugelmansOddRandomPhase2012} for system that are effected by a strong drift and they were still able to estimate the impedance to frequency as low as 0.3 Hz.
+The only solution is to proceed by tentative acquiring the impedance at a low desired frequency and test the linearity and stationarity condition via a Kramer-Kroning test.
 
-The core idea is that the small oscillations around a trajectory of a system in the paramters hyperspace can be approximated with the so called Best Linear Time-Variant Approximation (BLTVA).
-The approximation is not the \emph{real impedance}, but an approximation of it, and this rises the issue of the choice of method and parameters to get the approximation as best as possible.
-This is the reason why I choose to use the word "estimation" of isntantanous impedance instead of "calculation" to underline the attempt on getting closer to the real impedance.
+\section{Dynamic Multi-Frequency Analysis}
+\label{sec:dmfa description}
 
-[FORMULAS: superimposition of linear things]
-[Explain that is a fitting]
+Even when the lowest frequency of the multisine is fast enough to estimate a correctr frequency respone function, the STFT method has a limitation due to the reprocity of time and frequency.
+In fact, if the window is short, the frequency resolution in the Fourir secptrum is poor (see Figure \ref{fig:frequency resolution periods}) and it is not possible to identify the lower frequency band.
+This problem is worsened by the presence of a strong pink noise in this region as well as the zero-frquency skirt produced by the drift.
 
-The method has been further extended with the identification of non-linearities \cite{hallemansNonparametricIdentificationLinear2020} \cite{hallemansDetectionClassificationQuantification2021} and generalized for any non-statoinary systems \cite{hallemansBestLinearTimeVarying2021}. 
-In Halleman 2022 they also introduce a new method for detrending the signal before calculate the best linear time-varying approximation.
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.5\textwidth]{figures/deis_state_art/periods and resolution.jpg}
+    \caption{Increased resolution (red ticks) when more periods of a wave are sampled.}
+    \label{fig:frequency resolution periods}
+\end{figure}
 
-From 2018 on, the group applied the method for the identification of the transfer function of many highly non-stationary electrochemical systems under constant current drift: electrograining \cite{woutersUseInstantaneousImpedance2018},  metal electrodeposition \cite{colletOperandoORPEISStudy2021} \cite{dabirihavighOperandoOddRandom2022}, the conversion of zinc to zirconia \cite{dabirihavighOperandoOddRandom2023} and to study fast charging \cite{hallemansOperandoElectrochemicalImpedance2022} and SEI formation in Li-ion batteries \cite{dabirihavighOperandoORPEISMonitoring2025}.
+To increase the frequency resolution La Mantia, Battistel, and Koster introduced the \emph{dynamic multi-frequency analysis} (DMFA) as a method to estimate instantaneous impedance spectra during fast electrochemical experiments while retaining access to low-frequency information \cite{kosterDynamicImpedanceSpectroscopy2017, battistelPhysicalDefinitionDynamic2019}.
 
-\subsection{Dynamic Multi-Frequency Analysis}
+The key idea of DMFA is to record the entire multi-frequency signals of the experiment and perform a \emph{frequency-selective analysis} of the measured signals.
+Rather than windowing the signal in time, the DMFA isolates individual frequency components in the frequency domain using narrow band-pass filters and reconstructs their time evolution via inverse Fourier transformation.
+The time resolution of the instantanous impedance is not anymore determined by the window length, but by the bandwidth of the band-pass filter.
 
-In 2017 F. La Mantia, A. Battistel, D. Koster developed another method to estimate instantanous impedance during fast cyclic voltammetry \cite{kosterDynamicImpedanceSpectroscopy2017}  \cite{battistelPhysicalDefinitionDynamic2019}. 
+Let $V(\omega)$ and $I(\omega)$ denote the Fourier transforms of the measured voltage and current signals obtained during a dynamic experiment with a multisine excitation.
+For a given excitation frequency $\omega_k$, DMFA estimates the instantaneous impedance as
+\begin{equation}
+\label{eq:formual DMFA}
+Z(\omega_k, \tau) =
+\frac{
+\mathcal{F}^{-1}\!\left[ V(\omega)\, F(\omega - \omega_k) \right](\tau)
+}{
+\mathcal{F}^{-1}\!\left[ I(\omega)\, F(\omega - \omega_k) \right](\tau)
+},
+\end{equation}
+where $F(\omega - \omega_k)$ is a flat top filter function centered at $\omega_k$, $\mathcal{F}^{-1}$ denotes the inverse Fourier transform, and $\tau$ represents time.
+This operation extracts the contribution of a single excitation frequency and reconstructs its time-dependent amplitude and phase.
+The steps of a DMFA algorithm are depicted schematically in Figure \ref{fig:dmfa steps}. In Step 3 one notice that the peacks corresponding on the freuquency component are not sharp but broadened; that is the effect of the time-invariance.
 
-They identified the discrepancy between STFFT and DMFA for simulated redoc couple data.
+\begin{figure}
+    \centering
+    \includegraphics[width =\textwidth]{figures/deis_state_art/DMFA steps.png}
+    \caption{Visualization of the step in the algorithm to estimate impedance via DMFA. The steps are repeated for each frequency component to produce the entire frequencu spectrum. Adapted from \cite{piantaEvaluationKineticParameters2023a}.}
+    \label{fig:dmfa steps}
+\end{figure}
 
-[Put here the mathematical derivation]
+As filter function the author proposed a symmetric Fermi-Diract function \cite{battistel2019physical}, defined as 
+\begin{equation}
+g(\omega - \omega_k) =
+\frac{[1 + \exp(-n)]^2}
+{[1 + \exp(-n(\omega - \omega_k + bw)/bw)]
+ [1 + \exp(n(\omega - \omega_k - bw)/bw)]},
+\end{equation}
+where the parameter $n$ controls the steepness of the filter edges and $bw$ is the bandwidth and its minimum value correspond to the maximum time resolution $\tau$.
+The filter shape, reported in Figure \ref{fig:fermi dirac filter} resembles a rounded rectangle in the frequency domain, ensuring smooth transitions and minimizing spectral leakage.
 
-This filtering behaves like a convolution of a sinc function of the original signal, a concept similar to the wavelet transform in signal processing but deduduced from intuition.
-The group hilighted how the calculation of the time-resolved impedance with their method analytically converges to the short time fourier transform when the filter is as wide as the signal lenth. 
-The researchers also discussed how the choice of the frequencies poresent in the multisine impact the quality of the impedance estimation with thier method and how to reduce the drift impact on the frequency sepctrogram a quasi-triangular wave was designed to replace the classic triangular voltage waveform used in the cyclic voltammetry. 
+\begin{figure}
+    \includegraphics[width = \textwidth]{figures/deis_state_art/symmetric fermi dirac.jpg}
+    \caption{A symmetric Fermi-Dirac function used as bass badn filter, a) in the frequency domain, b) in the time domain. Differnt values of $n$ produce different the roll-offs. Adapted from \cite{battistelPhysicalDefinitionDynamic2019}}.
+    \label{fig:fermi dirac filter}
+\end{figure}
+
+The choice of the bandwidth $bw$ and attenuation parameter $n$ play a big role in the quality of the estimated impedance.
+In fact, they shape the width and lateral oscillatory behaviour of the equivalent time-domain window \cite{chukwuStatisticalAnalysisMeasurement2022}.
+An optimal combinatio of $bw$ and $n$ ensures that two consecutive impedance are indipendent from the information of the other.
+
+When using this type of filter with the DMFA, the resulting impedance dataset soffers of high noise at the extremes beacuse the filter function brings the signal values to zero before the inverse transform is performed.
+As a consequnce some of the first and last spectrum of a dataset are always discarded.
+Other filter shall be investigated to mitigate this problem.
+
+\subsection{Relation to STFT and interpretation}
+
+From a signal-processing perspective, DMFA can be interpreted as a generalization of the STFT.
+When the filter bandwidth is increased to include the full excitation spectrum, the DMFA formulation analytically converges to the STFT-based impedance estimation.
+Conversely, narrow filters allow individual frequency components to be tracked independently over time.
+
+In the time domain, the filtering operation corresponds to a convolution of the original signal with the impulse response of the filter, resulting in a smoothed, frequency-specific representation.
+This behavior is conceptually related to wavelet transforms, although DMFA is derived directly from Fourier-domain considerations and tailored to multisine excitation.
+
+\subsection{Application of the DMFA}
 
 The method was used to study the redox active species \cite{kosterDynamicImpedanceSpectroscopy2017} [Mugisa 2024], disolution of p-type silicon \cite{kosterMeasurementAnalysisDynamic2018}, the intercalation of cations in Nickel Hexacyanoferrate \cite{erinmwingbovoDynamicImpedanceSpectroscopy2019}, lithium manganese oxide \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020} [Erinwingbovo 2023] and lithium titanium phosphate \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a} and for the adsorbtion of ion on porous carbon electrodes. (The latter two are part of the discussion of this thesis).
 The group also fronted the problem of fitting the great ammount of data from time-resolved impedance measurements \cite{battistelAnalysisNonstationaryImpedance2016} \cite{chukwuDynamicImpedanceSpectroscopy2023}. 
-In 2025 the group published a work using piece-wise linearization approach from dynamic system theory to model the non-stationary impedance of an electrochemical system and validate the results of the Dynamic Multi-Frequency Analysis with bassband frequency filtering. 
-Fruthermore the difference between stationary and non-stationary impedance is addressed. 
-Is it correct ???
 
-\section{Embedded spectrometers}
+A recent work from the group approached the problem of defining the idea instantnous impedance from a system theoretical perspective and how it can be estimated from the experimetnal impedance estimated via DMFA \cite{potdorModelingDynamicElectrochemical2025}.
 
-The modern set-up for dynamic electrochemical impedance consisting of three dedicated benchtop devices and a computer works fine for research applications at laboratory scale, but it is expensive (around 20-30 thousand euros per channel), voluminous and limited in currents output.
-For industrial applications like monitoring or characterizaing battery packs, electrolyzers or fuel cells the instrumentation must be embedded in cheaper and scalabel hardware such as FPGA and microntrollers.
+\section{Best linear time-varying approximation}
 
-In 2018 H. Zappen D. U. Sauer and collegues from RWTH Aachen Univeristy in Germany, used the usual schematic of Popkirov with only one FPGA based potentiostat board of which they could modify the software to generate a multi-frequency waveform with 20 sinusoids in the frequency band 1 Hz - 1kHz \cite{zappenApplicationTimeResolvedMultiSine2018}. 
-In their work, they put enphasis on the design of the multisine and the screening of the main phase optimization strategies in both efficiency and effectivnes (resulting crest factor). The impedance is measured in equilibrium state and during externally induced thermal runaway (no drifts) coupling ultrasonic measurements \cite{zappenInOperandoImpedanceSpectroscopy2020a}. 
-Zappen later openeed a startup, Safion GmbH, for the use of the method for fast quality assessment of battery after production with a dedicated device.
+The STFT and DMFA methods exploits the temporary stationarity of a system applying a signal processing algorithm.
+A different appraoch was presented in 2012 by Bruegelmans, Latier and their colleagues recontructing the best linear time-varying approximation of the outut signal of a non-stationary system exposed to multisine perturbation \cite{breugelmansOddRandomPhase2012}.
 
-Kanoun and Kallel developed micrcontroller based impedance spectrometers for battery characterization ...
+The principle is that a linear time-varying system can be espressed as a sum of $N_p$ parallel connected LTI systems $G_p$ muiltiplied by time-varying gains $b_p(t)$ such that the relation between an input $u(t)$ and output $y(t)$ is given by:
+\begin{equation}
+    y(t) = \sum _{p=0}^{N_p} G_p{u(t)}b_p(t).
+\end{equation}
 
-Since the literature is reach of proposed micocontroller-based potetiostat/galvanostat device, even with impedance capabilties, I am expecting in the future an integration of multisine EIS methods on those platforms. 
+The gains $b_p(t)$ are 
+In practice, the BLTVA method consist in performing a parametric fitting of the output Fourer spectrum to approximate the linear and time-invariante response. 
+Noise, non-linearities \cite{hallemansNonparametricIdentificationLinear2020, hallemansDetectionClassificationQuantification2021}, and non-stationarities \cite{hallemansBestLinearTimeVarying2021} are estimated form the residues of the fitting.
 
-% \section{Nomenclature}
+After the fitting the instantantneous imepdance is estimated as alwasy as ration of input and output:
+\begin{align}\label{eq:bltva_impedance}
+    Z_{inst} (\omega_k, \tau) =  \frac{U(\omega_k)}{Y(\omega_k, \tau)} = \frac{U(\omega_k)}{\sum_{p=0}^{N_p} \theta_{p,k}\, b_p(\tau)}, 
+\end{align}
+where $U$ and $Y$ are Fourier transforms of $u$ and $y$, respectively, and $\theta_{p,k}$ are optimized parameters. 
 
-% The method for identify the impedance of systems outside equilibrium, for being still in development, doesn't have a named agreed upon in the community. 
-% Let start from the single stepped sine impedance method based referred as classic, traditional, static or stationary. 
-% The immediate interposition to static, used in the sense of a system that is not changing (i.e stationary according to system theory jargon), is to call it dynamic. 
-% This word give an immediate picture in the mind of a system that changes with time. 
-% On the other hand, even the classic experiment is dynamic in nature in the sense that the system is drifted minimally and reversibly from its thermodynamic equilibrium state. 
-% The beginning and final state remain then unperturbed and we can use the definition of stationary. 
-% The type of measurement described in this work are instead applyed on systems that change with time, i.e non-stationary systems. 
-% Therefore the inequivocal name for the method should be non-stationary EIS to highlight the superposition of the characteristic time constant of the drift and excitation frequencies. 
-% The result of the experiment is the estimation of a time-varying impedance. 
-% I also use here the word estimation instead of calculation to highlight the presence of many assumption. 
-% The obtained frequency response function from the experiment might not be the real linear impedance response. 
-% That happen when the assumption are not verified in the practical system. 
-% For example the system varies to fast.
+The group applied the method for the identification of the transfer function of many highly non-stationary electrochemical systems under constant current drift: metal electrodeposition \cite{colletOperandoORPEISStudy2021} \cite{dabirihavighOperandoOddRandom2022}, the conversion of zinc to zirconia \cite{dabirihavighOperandoOddRandom2023}, to study fast charging \cite{hallemansOperandoElectrochemicalImpedance2022} and SEI formation in Li-ion batteries \cite{dabirihavighOperandoORPEISMonitoring2025}.
 
-% Time-resolved multi-sine electrochemical impedance spectroscopy is the best name for the technique. 
-% Impedance is the name of the measured quantity in any case. Time-resolved adjective can add information on the change to the impedance. 
-% Time-varying is a better adjectvie for the system.
+\subsection{Comparison with DMFA}
+The BLTVA estimation is simalr to the DMFA in the sense that the voltage and current signals are Fourier transformed in its entirety before the fitting.
+Furthermore the fitting is performed in the frequency band ($\{\omega_{k-1}, \omega_k, \omega_{k+1}\}$) which is equivalent to a rectangular band-pass filter.
 
-% Popkirov/schindler calls it also time domain eis.
+The advantage of the BLTVA is that the resulting impedance is LTI by definition and doens't require a validation, but its excecution is computationally more expensive because it requires an iterative regression procedure.
 
-% Galvanodynamic? How can one also specificy the type of drift in the name of the technique?
+Table \ref{tab:literature parameters dmfa bltva} reports the parameters from some of the paper where the DMFA and BLTVA methods are used.
+A complete comparison is not possible since the drift and frequency ranges are so different.
+An interesting work would be to test all the methods on the same simulated data under different condition to discover teh effect of the drift speed to the stationarity and how the experietnal methods approeach the ideal theoretical impedance.
 
-% NSEIS nonstationary electrochemical impedance spectroscopy
+\begin{table}[h]
+    \centering
+    \begin{tabular}{cccccc}
+        \toprule
+        Method & $f_{min}$(Hz) & $f_{max} $(Hz) & Drift type & Drift speed & Publication\\
+        \midrule
+        DMFA & 10 & 125k & CV & 200mV/s & \cite{erinmwingbovoDynamicImpedanceSpectroscopy2019}\\
+        DMFA & 2.5 & 210k & CV & 16mV/s & \cite{erinmwingbovoEffectFilmThickness2023}\\
+        DMFA & 0.1 & 100k & CV & 8mV/s & \cite{piantaEvaluationKineticParameters2023a}\\
+        DMFA & 0.1 & 10k & CV & 0.8mV/s & \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}\\
+        \midrule
+        BLTVA & 0.0056 & 67 & CP & C/2 & \cite{hallemansOperandoElectrochemicalImpedance2022}\\
+        BLTVA & 0.1 & 10k & LSV & 5mV/s & \cite{dabirihavighOperandoORPEISMonitoring2025}\\
+        \bottomrule
+    \end{tabular}
+    \caption{Summary of dynamic impedance spectroscopy paramters across the literature. Drift types are: CP = chrono-potentiometry, CV = cycic voltammetry and LSV = lienar sweep voltammetry.}
+    \label{tab:literature parameters dmfa bltva}
+\end{table}

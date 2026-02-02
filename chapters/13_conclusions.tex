@@ -1,166 +1,85 @@
 \chapter{Conclusions}
 
-\section{Summary of contributions}
-% Intro with summary
-This work presents a complete methodology for the acquisition of impedance spectra in non-stationary electrochemical systems. The novelty reported here is the use of automation and online computation to measure impedance in a wide band of frequency continuously during the cycling of batteries.
+This thesis addressed a fundamental limitation of electrochemical impedance spectroscopy when applied to realistic energy storage systems: the incompatibility between the classical assumption of stationarity and the intrinsically dynamic nature of batteries during operation. 
+While impedance spectroscopy is widely recognized as a powerful diagnostic tool, its practical use has remained largely confined to equilibrium or quasi-equilibrium conditions, limiting its ability to probe processes that evolve continuously during cycling. 
+The central objective of this work was therefore to establish a complete methodology for broadband impedance characterization under non-stationary conditions.
 
-Before this work, the impedance of batteries in non-stationary conditions had been measured only for short times and limited frequency bands. That misses the characterization of the entire frequency response of batteries or its degradation. The main cause is the technical difficulty of managing and storing high sampling frequency signals and the estimation of the instantaneous impedance from them.
+By combining frequency-domain system identification theory with electrochemical insight and digital signal processing, this thesis demonstrated that meaningful impedance information can be extracted from evolving systems. 
+The work clarified the conceptual distinction between classical impedance and instantaneous impedance of a time-varying system, and showed how multi-frequency excitation and time-resolved estimation techniques allow this estimation in practice.
 
-Continuous sampling at 250 kSa/s would generate ~4.3 GB per hour per channel, making multi-week battery studies impractical. Previous dynamic impedance work was therefore limited to short experiments (minutes to hours) or narrow frequency bands that could be sampled at lower rates.
+A complete experimental framework for dynamic electrochemical impedance spectroscopy was developed and validated. 
+This framework integrates optimized multisine excitation, synchronized high-speed acquisition, online signal processing, and automated experiment control. 
+Particular attention was devoted to overcoming practical limitations that have historically hindered the adoption of multisine-based impedance methods, including waveform memory constraints, data volume management, and long experiment duration. 
+The resulting platform enables continuous impedance acquisition over seven decades of frequency during multi-week battery cycling experiments, while reducing raw data storage requirements by several orders of magnitude through online processing.
 
-I solved this problem by extending an existing hardware configuration (commercial potentiostat, waveform generator, and oscilloscope) with custom automation software that synchronizes the devices, manages data streaming, and performs online impedance calculation for high frequencies before data storage. The impedance of the low frequencies is calculated offline after the experiment with existing methods.
+The methodology was validated across a range of electrochemical systems and configurations. 
+Measurements on commercial coin cells demonstrated that continuous impedance acquisition during cycling yields results consistent with stationary measurements, while providing access to the evolution of impedance features across state of charge and state of health. 
+Single-electrode studies further showed that the approach is applicable to both Faradaic and non-Faradaic systems, and that low-frequency processes relevant to diffusion and interfacial phenomena can be accessed under non-stationary conditions. 
+These applications served not as isolated case studies, but as validation of the generality and robustness of the proposed framework.
 
-The complete software stack is released as open-source Python libraries:
-\begin{itemize}
-\item Multisine: Excitation signal generation and optimization; 
-\item pyeclab, pypicostreaming, TrueFormAWG: Remote control of set-up components;
-\item DEIStools: Multi-channel automation, online processing, impedance calculation lagorithms and data visualization.
-\end{itemize}
-This effort reduces the technical barrier (using commercial instruments) to perform long-term dynamic ipedance experiments and allows more scientist to get into the topic.
+Beyond specific experimental results, this work delivers a set of open-source software tools that make advanced dynamic impedance measurements accessible using standard laboratory equipment. 
+By lowering the technical barrier to long-duration, broadband, non-stationary impedance experiments, the framework enables future studies to focus on physical interpretation, model development, and data-driven analysis.
 
-The modular nature of the software library permits to adapt the method for devices of other brands or modify the online processing calculation whihle keeping the core logic of the automation untouched.
-
-I demonstrated the applicability of the method for commercial coin cell batteries made of manganese oxide and lithium/aluminum alloy acquiring the instantaneous impedance throughout their cycling lifetime. A multi-sine excitation is continuously applied and the spectra are computed with a time resolution of 100s. The impedance, estimated in the broadband frequency of 10mHz to 100kHz shows correlation with the state of charge and state of health. The measurement shows reproducibility over 9 cells and the analysis shows no alteration of the aging caused by the multi-sine excitation when compared to the control experiment set.
-
-The instantaneous impedance estimated via multi-sine excitation in non-stationary condition removes any overhead time usually present for stationary impedance during interrupted cycling and reduces the time for the estimation of a single spectrum bringing not only a saving of time but also 25 to 30 times more spectra. With around 1000 spectra per cell across 30 cycles at a C-rate of C/10, dynamic impedance is a promising source of data for data-driven modeling approaches of batteries. While physical modeling for batteries is complicated and prone to overparametrization, a simpler black-box model could be a valid alternative for practical and cell-specific implementation.
-
-This initial validation step is very promising and I suggest further investigation using bigger format cells and standard electrode materials such as lithium nickel cobalt manganese oxide, lithium iron poshpate and graphite.
-
-The C/10 rate used in this validation study represents a conservative starting point where drift is slow relative to perturbation frequencies. Extension to higher C-rates (1C and above) will require careful consideration of the time-frequency resolution trade-off and validation that the system remains quasi-stationary on the timescale of the multisine period.
-
-% Other measurements
-Dynamic impedance spectroscopy is not restricted to full cell applications. In this work I also included experiments for the electrochemical characterization of single electrodes for Faradaic and non-Faradaic energy storage types in three-electrode laboratory cells. In this case, the separation of the electrodes impedance by the presence of a reference electrode makes the physical interpretation easier and enabled extraction of kinetics parameters using existing physical models.
-
-The first case-study was lithium titanium phosphate for sodium ion intercalation as possible active material in aqueous sodium-ion battery negative electrodes. Here we showed the difference in the impedance obtained when the drift is a constant current, typical for battery characterization, or cyclic voltage sweep, typical in electroanalytics. The instantaneous impedance of the working electrode shows how the surface kinetics is slowed down when the peak of the voltammetry is approached and suggests why intercalation materials should be studied with the constant current technique. 
-
-We fitted a physical model for ion intercalation with porous electrode theory to the data of one charge and discharge cycle with galvanostatic drift to estimate the kinetics parameters. The most interesting finding was the asymmetry in the charge transfer process between charge and discharge that we interpreted as a difference in solvation and desolvation activation energy. 
-
-The other case-study was an electrical double layer capacitor made of symmetric activated porous carbon electrodes in an aqueous solution of KF in a three-electrode Swagelok type cell. Here, we experimented with the instrumental set-up using two channels of a potentiostat with one scope each for the acquisition of full cell and half cell voltages that allows for the separated estimation of the impedance for positive and negative electrode. Such experiment demonstrates that even in symmetric systems the impedance of the electrodes is different because of the history and electric potential. This type of experiment can also identify cross-talk between the electrodes while the electrochemical device is cycling. In fact, the second channel of the workstation is used only to measure the voltage drop of one half-cell (the other is deduced by subtraction with the full-cell voltage).
-
-Another interesting result is about the position of the reference electrode. On the same cell, we positioned the tip of the reference electrode outside the electrodes stack and then in the middle of it, between two separators, obtaining the appearance of an artifact in the impedance in the first case as obtained in some theoretical investigation.
-
-We used again a physical model for the adsorption of ions on porous electrodes to estimate the kinetics parameters from the impedance data, although it doesn't change significantly during the cycling.
-
-In these two experiments we focused only on the impedance change within a cycle since at that time the instrumental set-up was not yet automatized. I suggest a follow-up project in which the impedance of single interfaces in three-electrode cells is measured over multiple cycles to characterize the degradation.
-
-% Preliminary measurements
-I also conducted explorative measurements on anodes for lithium- and sodium-ion batteries in compact systems with organic electrolytes. The goal was of characterize the storage mechanisms and identifying side reactions, mainly ion electrodeposition. After some tests on Swagelok type cells I realized the best cell geometry for this experiment is the pouch cell with a micro-reference electrode because of reproducible pressure and no contact with other metallic (and possibly reactive) cell components. With the pouch cell geometry I conducted experiments on graphite negative electrode for lithium-ion intercalation and SiCN(O) negative electrode for sodium-ion insertion.
-
-The measurements of the cell with graphite where perfomrmed at different C-rates, from C/5 to 2C. Before the dynamic impedance spectroscopy measurement I cycled the cell a few times using the theoretical capacity as limit. That caused the voltage to go negative during fast charging at 1C. The istantaneous impedance exhibits a sudden shrinkage in the middle of the third plateau, that I associated with lithium deposition. Another interesting observation from these experiments is the comparison of the impedance of the same electrode at different C-rates. The ohmic drop increases with the C-rate and the asymmetry between oxidation and reduction widens.
-
-I also did a set of experiments on SiCN(O), a material for the insertion of sodium ion. 
-% We prepared cells using Swagelok format, but we had poor reproducibility of the impedance magnitude and shape, leakage of electrolyte and reaction at the metallic pistons (visible as white or light brown residues at disassembling).
-
-% Once in the pouch cell format, 
-the shape and magnitude of the impedance was instead consistent but we could not identify any correlation between the shape and possible mechanisms of sodium storage. It is possible to notice also here a sudden shrinkage of the impedance towards the end of the reduction step, similar to the case of lithium. We speculate that it is a sign of metal electrodeposition, but further experiments are needed.
-
-In both cases, the reference electrode was lithium or sodium electrodeposited on the section of an insulated copper wire of micrometric diameter to be easily placed in the stack of the electrode between two glass fiber separators and avoid the incidence of artifacts in the impedance.
-
-The preparation of such type of micro-reference electrodes was critical and not often reproducible, especially for the case of lithium that I obtained only once (although with outstanding stability of a few months with a potential of 2mV vs lithium counter electrode).
-
-These experiments identified that while dynamic impedance can detect electrochemical events (e.g., the impedance shrinkage suggesting metal plating), unambiguous mechanism identification in complex systems requires: reproducible reference electrode preparation protocols, correct placement and proper cell deisgn. The analysis of the data requires physical models tailored to the specific chemistry under investigation. 
-
-\section{Challenges and future work}
-% Better optimization of the multisine and choice of the harmonics with other methods.
-% Compare DMFA and BLTVA on a simple system with existing model.
-
-% Car batteries second life
-
-% Better trend removal
-
-\section{Future Work and Outlook}
-
-The results presented in this thesis demonstrate that Dynamic Electrochemical Impedance Spectroscopy has significant potential for elucidating fast interfacial processes and non-stationary kinetics in alkali-ion battery electrodes. At the same time, the exploratory nature of the work revealed several methodological limitations whose resolution opens clear avenues for future research. The most promising directions are outlined below.
-
-\subsection{Improved reference electrode concepts}
-
-A priority for future work is the development of reliable, non-intrusive reference electrodes compatible with thin-layer pouch cells. Several alternatives merit systematic investigation:
-
-\begin{itemize}
-    \item ultra-thin metallic wires ($<10\,\mu$m) to reduce mechanical deformation and current-field perturbations;
-    \item mesh or grid electrodes that minimise indentation while preserving ionic access;
-    \item intercalation-based references (e.g.\ LiFePO\textsubscript{4}, Na$_x$MPO$_4$) offering more stable potentials and reduced sensitivity to local current density;
-    \item vapor-deposited thin-film references integrated directly onto the separator or current collector.
-\end{itemize}
-
-A rigorous benchmarking campaign comparing these geometries under identical DEIS conditions would establish best practices for three-electrode pouch-cell measurements.
-
-\subsection{High-frequency, online impedance extraction}
-
-The latest version of the automated DEIS platform—including real-time tracking of the high-frequency resistance—should be fully integrated into future experiments. This enhancement would allow:
-
-\begin{itemize}
-    \item accurate detection of the instantaneous ohmic resistance, even at high C-rates;
-    \item clearer discrimination between cell artefacts and physicochemical features;
-    \item early identification of reference-electrode drift or contact issues during long experiments.
-\end{itemize}
-
-Extending the measurable frequency range above 100\,kHz would also improve sensitivity to nucleation phenomena and interfacial film growth.
-
-\subsection{Reproducible SiCN(O) electrodes and controlled microstructure}
-
-The mechanistic interpretation of sodium storage in SiCN(O) was hindered by microstructural variability. Future work should focus on:
-
-\begin{itemize}
-    \item standardising the synthesis and electrode formulation (binder content, mixing energy, porosity control);
-    \item characterising porosity and carbon-domain connectivity via nitrogen adsorption, small-angle scattering, or tomography;
-    \item performing DEIS on statistically significant electrode sets to separate intrinsic behaviour from fabrication variability.
-\end{itemize}
-
-Such studies would enable a more definitive assessment of reversible metal plating in SiCN(O) and its impedance signature.
-
-\subsection{Mechanistic identification via combined DEIS and operando characterisation}
-
-Several impedance features observed here—such as the transient drop in impedance during reduction and the positive imaginary part during sodium deposition—call for complementary operando diagnostics. Future work should pair DEIS with:
-
-\begin{itemize}
-    \item operando NMR or Raman spectroscopy to identify chemical states during plating or desolvation;
-    \item high-speed optical imaging to correlate impedance signatures with nucleation morphology;
-    \item X-ray or neutron scattering to probe ion confinement and pore filling in disordered carbons.
-\end{itemize}
-
-Coupling time-resolved impedance with structural or spectroscopic data would provide definitive mechanistic assignments.
-
-\subsection{Quantification of plating and stripping efficiency}
-
-Future experiments should incorporate galvanostatic efficiency measurements to directly correlate impedance features with metal-deposition efficiency. Systematic variation of current density, cut-off potentials, and cycling protocols would clarify:
-
-\begin{itemize}
-    \item the onset conditions for reversible versus irreversible plating,
-    \item the relationship between nucleation overpotential and impedance signatures,
-    \item the impact of SEI growth on subsequent impedance evolution.
-\end{itemize}
-
-This would strengthen the link between dynamic impedance features and practical battery degradation mechanisms.
-
-\subsection{Towards model-based interpretation of non-stationary impedance}
-
-With improved data quality and reproducibility, future work should move toward quantitative, model-driven analysis. Promising directions include:
-
-\begin{itemize}
-    \item physics-based parametric models capturing plating nucleation, SEI growth, and pore filling;
-    \item time-varying equivalent-circuit models linked to diffusion-reaction PDEs;
-    \item system-identification frameworks that estimate kinetic parameters as continuous functions of state of charge.
-\end{itemize}
-
-Such tools would enable the extraction of mechanistically meaningful parameters directly from DEIS data and deepen the connection between non-stationary impedance and electrode health.
-
-\subsection{Implications for battery-health diagnostics}
-
-The exploratory results on graphite, SiCN(O), and sodium systems already suggest that DEIS is sensitive to early indicators of plating, concentration polarisation, and surface evolution. After addressing the experimental limitations identified in this thesis, future work may extend these findings to:
-
-\begin{itemize}
-    \item fast-charging protocols for commercial electrodes;
-    \item in situ monitoring of SEI evolution during accelerated aging;
-    \item detection of early plating events in high-power operation;
-    \item integration of DEIS-based indicators into real-time battery-management algorithms.
-\end{itemize}
-
-Ultimately, this line of research aims to establish DEIS as a high-information, real-time diagnostic tool capable of identifying degradation pathways before they become irreversible.
-
-\subsection{Overall outlook}
-
-With improvements in cell design, reference-electrode architecture, operando diagnostics, and modelling, the DEIS methodology developed in this thesis can evolve into a powerful platform for studying dynamic electrochemical processes at high temporal and spectral resolution. The preliminary observations reported here—although limited by practical constraints—already reveal distinctive mechanistic fingerprints that justify deeper investigation. The next steps will consolidate DEIS as both a research-grade and potentially application-grade tool for understanding and predicting battery degradation phenomena.
+Overall, this thesis establishes dynamic electrochemical impedance spectroscopy as a practical and scalable tool for operando characterization of batteries and related electrochemical systems. 
+While the present work focused on developing and validating the measurement methodology itself, it lays the foundation for future research aimed at linking time-resolved impedance features to degradation mechanisms, control strategies, and predictive models for battery health and performance.
 
 
-\section{Closing remarks}
+% \section{Summary of contributions}
+% % Intro with summary
+% This work presents a complete methodology for the acquisition of impedance spectra in non-stationary electrochemical systems. The novelty reported here is the use of automation and online computation to measure impedance in a wide band of frequency continuously during the cycling of batteries.
+
+% Before this work, the impedance of batteries in non-stationary conditions had been measured only for short times and limited frequency bands. That misses the characterization of the entire frequency response of batteries or its degradation. The main cause is the technical difficulty of managing and storing high sampling frequency signals and the estimation of the instantaneous impedance from them.
+
+% Continuous sampling at 250 kSa/s would generate ~4.3 GB per hour per channel, making multi-week battery studies impractical. Previous dynamic impedance work was therefore limited to short experiments (minutes to hours) or narrow frequency bands that could be sampled at lower rates.
+
+% I solved this problem by extending an existing hardware configuration (commercial potentiostat, waveform generator, and oscilloscope) with custom automation software that synchronizes the devices, manages data streaming, and performs online impedance calculation for high frequencies before data storage. The impedance of the low frequencies is calculated offline after the experiment with existing methods.
+
+% The complete software stack is released as open-source Python libraries:
+% \begin{itemize}
+% \item Multisine: Excitation signal generation and optimization; 
+% \item pyeclab, pypicostreaming, TrueFormAWG: Remote control of set-up components;
+% \item DEIStools: Multi-channel automation, online processing, impedance calculation lagorithms and data visualization.
+% \end{itemize}
+% This effort reduces the technical barrier (using commercial instruments) to perform long-term dynamic ipedance experiments and allows more scientist to get into the topic.
+
+% The modular nature of the software library permits to adapt the method for devices of other brands or modify the online processing calculation whihle keeping the core logic of the automation untouched.
+
+% I demonstrated the applicability of the method for commercial coin cell batteries made of manganese oxide and lithium/aluminum alloy acquiring the instantaneous impedance throughout their cycling lifetime. A multi-sine excitation is continuously applied and the spectra are computed with a time resolution of 100s. The impedance, estimated in the broadband frequency of 10mHz to 100kHz shows correlation with the state of charge and state of health. The measurement shows reproducibility over 9 cells and the analysis shows no alteration of the aging caused by the multi-sine excitation when compared to the control experiment set.
+
+% The instantaneous impedance estimated via multi-sine excitation in non-stationary condition removes any overhead time usually present for stationary impedance during interrupted cycling and reduces the time for the estimation of a single spectrum bringing not only a saving of time but also 25 to 30 times more spectra. With around 1000 spectra per cell across 30 cycles at a C-rate of C/10, dynamic impedance is a promising source of data for data-driven modeling approaches of batteries. While physical modeling for batteries is complicated and prone to overparametrization, a simpler black-box model could be a valid alternative for practical and cell-specific implementation.
+
+% This initial validation step is very promising and I suggest further investigation using bigger format cells and standard electrode materials such as lithium nickel cobalt manganese oxide, lithium iron poshpate and graphite.
+
+% The C/10 rate used in this validation study represents a conservative starting point where drift is slow relative to perturbation frequencies. Extension to higher C-rates (1C and above) will require careful consideration of the time-frequency resolution trade-off and validation that the system remains quasi-stationary on the timescale of the multisine period.
+
+% % Other measurements
+% Dynamic impedance spectroscopy is not restricted to full cell applications. In this work I also included experiments for the electrochemical characterization of single electrodes for Faradaic and non-Faradaic energy storage types in three-electrode laboratory cells. In this case, the separation of the electrodes impedance by the presence of a reference electrode makes the physical interpretation easier and enabled extraction of kinetics parameters using existing physical models.
+
+% The first case-study was lithium titanium phosphate for sodium ion intercalation as possible active material in aqueous sodium-ion battery negative electrodes. Here we showed the difference in the impedance obtained when the drift is a constant current, typical for battery characterization, or cyclic voltage sweep, typical in electroanalytics. The instantaneous impedance of the working electrode shows how the surface kinetics is slowed down when the peak of the voltammetry is approached and suggests why intercalation materials should be studied with the constant current technique. 
+
+% We fitted a physical model for ion intercalation with porous electrode theory to the data of one charge and discharge cycle with galvanostatic drift to estimate the kinetics parameters. The most interesting finding was the asymmetry in the charge transfer process between charge and discharge that we interpreted as a difference in solvation and desolvation activation energy. 
+
+% The other case-study was an electrical double layer capacitor made of symmetric activated porous carbon electrodes in an aqueous solution of KF in a three-electrode Swagelok type cell. Here, we experimented with the instrumental set-up using two channels of a potentiostat with one scope each for the acquisition of full cell and half cell voltages that allows for the separated estimation of the impedance for positive and negative electrode. Such experiment demonstrates that even in symmetric systems the impedance of the electrodes is different because of the history and electric potential. This type of experiment can also identify cross-talk between the electrodes while the electrochemical device is cycling. In fact, the second channel of the workstation is used only to measure the voltage drop of one half-cell (the other is deduced by subtraction with the full-cell voltage).
+
+% Another interesting result is about the position of the reference electrode. On the same cell, we positioned the tip of the reference electrode outside the electrodes stack and then in the middle of it, between two separators, obtaining the appearance of an artifact in the impedance in the first case as obtained in some theoretical investigation.
+
+% We used again a physical model for the adsorption of ions on porous electrodes to estimate the kinetics parameters from the impedance data, although it doesn't change significantly during the cycling.
+
+% In these two experiments we focused only on the impedance change within a cycle since at that time the instrumental set-up was not yet automatized. I suggest a follow-up project in which the impedance of single interfaces in three-electrode cells is measured over multiple cycles to characterize the degradation.
+
+% % Preliminary measurements
+% I also conducted explorative measurements on anodes for lithium- and sodium-ion batteries in compact systems with organic electrolytes. The goal was of characterize the storage mechanisms and identifying side reactions, mainly ion electrodeposition. After some tests on Swagelok type cells I realized the best cell geometry for this experiment is the pouch cell with a micro-reference electrode because of reproducible pressure and no contact with other metallic (and possibly reactive) cell components. With the pouch cell geometry I conducted experiments on graphite negative electrode for lithium-ion intercalation and SiCN(O) negative electrode for sodium-ion insertion.
+
+% The measurements of the cell with graphite where perfomrmed at different C-rates, from C/5 to 2C. Before the dynamic impedance spectroscopy measurement I cycled the cell a few times using the theoretical capacity as limit. That caused the voltage to go negative during fast charging at 1C. The istantaneous impedance exhibits a sudden shrinkage in the middle of the third plateau, that I associated with lithium deposition. Another interesting observation from these experiments is the comparison of the impedance of the same electrode at different C-rates. The ohmic drop increases with the C-rate and the asymmetry between oxidation and reduction widens.
+
+% I also did a set of experiments on SiCN(O), a material for the insertion of sodium ion. 
+% % We prepared cells using Swagelok format, but we had poor reproducibility of the impedance magnitude and shape, leakage of electrolyte and reaction at the metallic pistons (visible as white or light brown residues at disassembling).
+
+% % Once in the pouch cell format, 
+% the shape and magnitude of the impedance was instead consistent but we could not identify any correlation between the shape and possible mechanisms of sodium storage. It is possible to notice also here a sudden shrinkage of the impedance towards the end of the reduction step, similar to the case of lithium. We speculate that it is a sign of metal electrodeposition, but further experiments are needed.
+
+% In both cases, the reference electrode was lithium or sodium electrodeposited on the section of an insulated copper wire of micrometric diameter to be easily placed in the stack of the electrode between two glass fiber separators and avoid the incidence of artifacts in the impedance.
+
+% The preparation of such type of micro-reference electrodes was critical and not often reproducible, especially for the case of lithium that I obtained only once (although with outstanding stability of a few months with a potential of 2mV vs lithium counter electrode).
+
+% These experiments identified that while dynamic impedance can detect electrochemical events (e.g., the impedance shrinkage suggesting metal plating), unambiguous mechanism identification in complex systems requires: reproducible reference electrode preparation protocols, correct placement and proper cell deisgn. The analysis of the data requires physical models tailored to the specific chemistry under investigation. 

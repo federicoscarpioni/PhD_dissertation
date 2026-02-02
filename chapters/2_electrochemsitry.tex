@@ -5,13 +5,15 @@ Electrochemistry provides the fundamental framework for understanding the operat
 All essential processes in a battery (ion intercalation, charge transfer, solid-electrolyte interphase formation, and lithium plating) are governed by electrochemical thermodynamics and kinetics of the redox reactions occurring at the interfaces between electrodes and electrolyte. 
 The voltage, efficiency, power capability, and long-term stability of a cell are arise from these reactions and transport mechanisms taking place at these interfaces.
 
-This chapter lays the foundation to understand basic electrochemical processes and how the appear in the impedance measurment for the characterization of batteries.
+To characterize these processes in electrochemistry, the Electrochemical Impedance Spectroscopy (EIS) technique is used for its capability of separating processing happining at different time scales in one single experiment while being non-destrucitve for the system and operating \emph{in situ}, meainig that system is kept in its state of operation (in contrast to other spectroscopy analysis that requires a specifi sample preparation). 
 
-It is organized as follows. 
-First the thermodynamics and kinetics of interfacial redo reaction are discussed with recall to basic equations that describe electrode potential and charge-transfer resistance.
+EIS does not probe isolated physicochemical phenomena, but rather the linearized response of a coupled system involving charge transfer, mass transport, and interfacial storage.
+A meaningful interpretation of impedance spectra therefore requires identifying which electrochemical processes can contribute to the measured response, over which time and length scales, and under which thermodynamic and kinetic assumptions.
+
+For this reason, the present chapter introduces only those electrochemical concepts that directly govern the small-signal response of an electrochemical interface, with particular emphasis on interfacial kinetics, capacitive storage, and transport phenomena that manifest as distinct features in the impedance spectrum. 
+First the thermodynamics and kinetics of interfacial redox reaction are discussed with recall to basic equations that describe electrode potential and charge-transfer resistance.
 Then, the structure of the electrical double-layer is described with mention on the adsorbtion capacitance.
 The chapter follows with a brief description of electrochemical methods based on direct or alternate current controll.
-Finally, the ineer working of a potentiostat/galvanostat is reported as reference for the description of the custom experimental set-up discussed in the Method part.
 
 \section{Thermodynamics}
 
@@ -46,7 +48,7 @@ When the activities of the reacting species deviate from standard equilibrium co
     \right),
     \label{eq:nernst}
 \end{equation}
-where $E^\circ$ is the standard redox potential and $a_i$ is the activity of species $i$. Equation~\eqref{eq:nernst} shows that the electrode potential is determined not only by the intrinsic thermodynamics of the redox couple but also by the composition and temperature of the interface. 
+where $E^\circ$ is the standard redox potential and $a_i$ is the activity of species $i$. Equation \ref{eq:nernst} shows that the electrode potential is determined not only by the intrinsic thermodynamics of the redox couple but also by the composition and temperature of the interface. 
 
 \subsection{Measurement of electrode potentials}
 
@@ -88,7 +90,7 @@ The activation-controlled charge transfer is described by the Butler-Volmer equa
 \end{equation}
 where $i_0$ is the exchange current density and $\alpha_a$ and $\alpha_c$ are the anodic and cathodic transfer coefficients. 
 The exchange current density quantifies the intrinsic reactivity of the interface and depends on the concentrations of reacting species at the surface. 
-Equation~\eqref{eq:BV} connects the near-equilibrium regime, where the response is linear, with the high-overpotential regime, where one exponential term dominates.
+Equation \ref{eq:BV} connects the near-equilibrium regime, where the response is linear, with the high-overpotential regime, where one exponential term dominates.
 This equation highlight the intrinsic non-linearity of electrochemical systems, especially out of equilibrium; an important point for the following discussion of non-stationary Impedance Spectroscopy.
 
 \subsection{Mass transport: diffusion and migration}
@@ -117,7 +119,7 @@ which, in the absence of migration, reduces to Fick's second law:
 Diffusion describes the spontaneous relaxation of concentration gradients, and the associated characteristic time scale is proportional to the square of the diffusion length. 
 This slow relaxation becomes relevant whenever the rate of the electrochemical reaction is high enough to deplete or enrich the surface concentration relative to the bulk.
 
-The migration term in Eq.~\eqref{eq:nernst-planck} accounts for the contribution of the electric field to ionic motion. 
+The migration term in Eq. \ref{eq:nernst-planck} accounts for the contribution of the electric field to ionic motion. 
 Although migration is essential for maintaining electroneutrality on macroscopic length scales, its effect is strongly damped in regions of high ionic strength, such as battery electrolytes, where screening is efficient and concentration gradients dominate the local dynamics. 
 Nevertheless, under conditions of significant current flow or low ionic conductivity, migration modifies the local distribution of ions and influences the effective transport parameters near the interface.
 
@@ -138,11 +140,18 @@ A commonly used form is
     i = \left[ \frac{1}{i_{\mathrm{act}}} + \frac{1}{i_{\mathrm{diff}}} \right]^{-1},
     \label{eq:mixed-control}
 \end{equation}
-where $i_{\mathrm{act}}$ is the activation current given by Eq.~\eqref{eq:BV} and $i_{\mathrm{diff}}$ accounts for diffusive transport, typically written as
+where $i_{\mathrm{act}}$ is the activation current given by Eq. \ref{eq:BV} and $i_{\mathrm{diff}}$ accounts for diffusive transport, typically written as
 \begin{equation}
     i_{\mathrm{diff}} = i_{\mathrm{lim}} \left(1 - \frac{c_s}{c_{\infty}}\right).
 \end{equation}
 In steady-state diffusion-limited conditions, $i \to i_{\mathrm{lim}}$ regardless of how large $\eta$ becomes. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \textwidth]{figures/electrochemistry/butler_volmer_lin.pdf}
+    \caption{Butler volmeter equation, the diffusion-limited case and the linerization around zero.}
+    \label{fig:bulter-volmer}
+\end{figure}
 
 \section{Double-layer structure and interfacial capacitance}
 
@@ -184,6 +193,15 @@ Since the compact and diffuse layers are arranged in series, the total different
 \end{equation}
 For highly concentrated electrolytes, as typically found in batteries, the Debye length becomes very small and the diffuse-layer capacitance grows correspondingly large, making the compact layer the dominant contributor to $C_{\mathrm{dl}}$. cite(https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00867)
 Conversely, in dilute electrolytes the diffuse layer significantly affects the interfacial response, and the potential dependence of $C_{\mathrm{GC}}$ can lead to pronounced nonlinearity.
+
+Figure \ref{fig: double layer structure} depict a simple electro electrolyte interface and the double layer strcture with the main electrochemical processes.
+
+\begin{figure}
+    \centering
+    \includegraphics[width =\textwidth]{figures/electrochemistry/double layer structure.pdf}
+    \caption{Double layer structure and its processes.}
+    \label{fig: double layer structure}
+\end{figure}
 
 \section{Electrochemical methods}
 
@@ -241,7 +259,7 @@ These instruments set the standard for impedance measurements that we still find
 
 \subsection{Linearisation and charge-transfer resistance}
 
-In the limit of small perturbations, the nonlinear Butler-Volmer expression may be linearised expanding Eq.~\eqref{eq:BV} to first order about $\eta = 0$ yelding to:
+In the limit of small perturbations, the nonlinear Butler-Volmer expression may be linearised expanding Eq. \ref{eq:BV} to first order about $\eta = 0$ yelding to:
 \begin{equation}
     i \approx \left( \frac{\partial i}{\partial \eta} \right)_{\eta=0} \eta = \frac{nF i_0}{RT}\,\eta.
 \end{equation}
@@ -301,6 +319,20 @@ This approach was introduced by Randles [put citation] and it is the \emph{de fa
 
 The impedance of electrical elements and basic circuits is described in the Appendix \ref{app:imp elements}.
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width =\textwidth]{figures/electrochemistry/interface mechanisms impedance.pdf}
+\end{figure}
+
+\section{Reference electrode in EIS}
+
+Using a reference electrode is both important for direct and alternate methods.
+
+\begin{figure}
+    \centering
+    \includegraphics[width =\textwidth]{figures/electrochemistry/reference electrode impedance.pdf}
+\end{figure}
+
 \section{Validity and consistency of electrochemical impedance}
 
 Electrochemical Impedance Spectroscopy relies on a set of assumptions that define the conditions under which impedance is a physically meaningful quantity. 
@@ -342,53 +374,3 @@ On limited experimental data fitting a circuit of sereis of RC elements produces
 
 From an experimental standpoint, deviations from KK consistency can arise from several sources.
 Non-linearity of the system response, non-stationarity of the system or artivacts introduced by cell design or the electronic instrumentation.
-
-\subsection{Electrochemical instrumentation}
-
-Electrochemical methods consist of a perturbation of one cell variable among voltage and current while recording the other as function of time.
-To do so, two types of instruments are needed: a potentiostat or a galvanostat; usually packed inside one banchtop device.
-The purpose of a potentiostat is to maintain the potential of a working electrode (WE) at a prescribed value relative to a reference electrode (RE). 
-This is achieved using a high-gain feedback loop. 
-The potential difference between WE and RE is measured through a high-impedance voltage follower connected to the RE. 
-This element ensures that only a negligible current flows through the RE, preserving its equilibrium potential. 
-The measured potential is compared to a user-defined setpoint, and the resulting error signal drives a power amplifier connected to the counter electrode (CE). 
-By adjusting the CE potential, the amplifier forces the WE potential toward the setpoint.
-The output stage must source or sink the full cell current while maintaining stability of the feedback loop.
-
-This check is performed continously with a velocity dictated by the bandwidth of the operational amplifier. 
-Usually this value is arbitrary in a scale of integer.
-Hihg values means fast loops, while low values, lower.
-To reduce noise or fluctuation a low bandwidth is an ideal choice while for measuring the dynamic of fast system is necessary to use high values and introduce more noise.
-
-The current flowing through the WE-CE path is measured by a current-to-voltage converter, typically implemented using a transimpedance amplifier. The converter output provides a low-noise measurement of the cell current and is digitised for acquisition and further processing. The transimpedance gain determines the current range, and switching networks or programmable gain amplifiers are often used to accommodate multiple decades of current.
-
-In galvanostatic mode, the instrument controls the current rather than the potential. 
-The measured current is compared to a desired setpoint, and the feedback loop adjusts the CE potential to maintain the prescribed current. The WE potential freely responds to the applied current and is measured through the high-impedance RE input. Internally, the same analogue blocks are used as in potentiostatic operation, but with the error signal derived from the difference between measured and commanded current. High-quality galvanostatic control requires wide bandwidth and accurate transimpedance conversion, as well as protection circuitry to prevent saturation when the cell dynamics change abruptly.
-Figure \ref{fig:pot/galv schematics} contains a draw of the connections for a typical electrochemical device with hihglights of the electronics schematics for the potentiostatic and galvanostatic mode.
-It is not included the circuitry for measuring the impedance as part of the device; the core schematics remains the same.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{figures/electrochemistry/pot_galv_schematics.png}
-    \caption{Schematic of a potentiostat/galvanostat instrument. From 10.1007/s11581-019-03132-z}
-    \label{fig:pot/galv schematics}
-\end{figure}
-
-\subsection{Auxiliary analogue inputs and outputs}
-
-Modern potentiostats incorporate auxiliary input and output connections to enable external excitation or synchronisation with additional hardware. 
-Analogue input ports are typically connected upstream of the main control loop, allowing externally generated waveforms to be superimposed on the programmed potential or current (see \ref{fig:pot/galv schematics} b) top left of the schematics). 
-Depending on the instrument architecture, the auxiliary output is added either at the setpoint input of the control amplifier or directly at the summing node of the error amplifier. 
-This functionality is essential for experiments requiring composite perturbations as will be described in the Methods part of this work.
-
-Auxiliary analogue inputs provide direct access to the measured analogue signals before digital conversion bypassing part of the instrument's internal filtering and signal conditioning. 
-Recording these signals enables high-resolution acquisition beyond the default sampling configuration of the potentiostat with a dedicated device.
-
-\subsection{Digital control and communication}
-
-Although the core of the functinality of the potentiosta/galvanostat is analog circtuitry, the control and signal acquisition is digital and implemented with FPGAs or microcontrollers.
-The measurment electronics interfaces with a communication board that connects via USB or Ethernet to Personal Computers. 
-This interface sets the measurment hardware parameters to the users definition (chosen via dedicated program on the PC) and retrives the sampled data.
-The instruments is then capable of working indipendenlty of the computer storing data temporary in a buffer memory.
-
-This description is pertinent to this work because later in the Methods Part I will describe a Python program that communicates with the board to set parameters and retrive data and device information.

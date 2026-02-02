@@ -1,82 +1,61 @@
 \chapter{Impedance estimation}
 \label{chap:estimation}
 
-\section{Introduction to the combined method}
-The previous chapter shows how I deisgnied, applied and recorded multi-frequency electrochemical signals of drifting systems.
-In this chapter I will elucidate the methods I used for the estimation of instantanous impedance from the multi-frequency signals.
-Of the three methods described in the introduction, namely ST-FFT \pageref{sec:fft-eis}, DMFA \pageref{sec:dmfa} and fitting the BLTVA \pageref{sec:BLTVA}, I used in this work only the first two because of the ease of implementation with basic signal processing concepts and well enstablished use in the literature.
-The novelty of this work is the introduction of a mixed method in which ST-FFT and DMFA are combined to achieved broad band frequency response function estimation while maitning the best characteristics of both and reudcing the disk space otherwise needed.
-This is achieved by estimating the high-frequency band of the impedance on-line during the experiment with the ST-FFT and the remaining lower frequency band offline with DMFA.
-This was possible thanks to the automation described in the previous chapter.
-With the full control on the data stream and the multi-threded excecution, it is possible to perform calculations on the data recieved from the piscope.
+The previous chapter showed how to design a multi-frequency experiment and digitally acquire the voltage and current signals fo the electrochemical cell, while this chapter discusses the methods used in this work to estimate instantanous impednace form the multi-frequency signals.
+In Chapter \ref{ch:deis state art} I reported the three main methods for estimating impedance: STFT, DMFA and BLTVA. For its semplicity of implementation I used mainly the DMFA method and the STFT for the online computation of part of the impedance.
+The novelty of this work is the use of the combination of DMFA and STFT to exploit the advantages of both: high frequency resolution of the DMFA for the low freuqncy band of the impedance spectrum and fast computation of the STFT for the high frequency band.
+The STFT method was implemented online in the experiometn dataflow thanks to its modular design and multi-threaded excecution.
 
-This chapter describes how impedance is estmiated off-line with the DMFA and the downsaides of the method. 
-Then I will described the signal workflow to estimate part of the impedance on-line.
-The mixed method was used for the long-term broad-band characterization of li-ion commerical batteries discussed in Chapter \ref{chap:coins}, while the rest of the applications used only the off-line DMFA method (Chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}) because they where perfomred alongside the develoment of the setup.
-
-\section{Temporary stationarity of the system}
-% Here goes the explanation and the figure I had in mind
-This method is valid because of the assumption that there is a superimposition only of the lowest frequencies with the drift wile the high frequencies are not influenced.
-In other words, for the high frequency band the system is considered stationary. 
-The critical frequency that separates the frequency bands depends on the drift rate and the kinetics of the system.
-One can look at the Fourier Spectrum of a signal to deduce the treshold for which the system doesn't respond anymore.
+This chapter describes how impedance is estmiated off-line 
+as used in the experiments presented later in the results part (Chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}), then I will described the signal workflow to estimate part of the impedance online with STFT method as it was used for the main result chapter on li-ion commercial batteries (Chapter \ref{chap:coins}).
 
 \section{Off-line estimation with DMFA}
-%Under which conditions the system can be approximated as locally LTI
-%Over what window the drift is negligible
-%Why the multisine period must be shorter than the drift timescale
-In this work I use the term \emph{off-line} to emphasize the difference with the \emph{on-line} approach that is the subject of development.
-The off-line method is the traditional method used in system identification for which input and output mutlti-frequency signals are sampled for an integer number of periods and the time-varying frequency transfer funciton is estimated though a Fourier Analysis. 
-In this work I used the Dynamic Multi-Frequency Analysis (DMFA) to estimate the estimate the impedance choising a symmetric Fermi-Dirac function as fitler.
-The approach is the same presented in previous work of the ESECS group [cite works].
+In this work I use the term \emph{off-line} to emphasize the difference with the \emph{on-line} approach that is descussed later in the chapter.
+The off-line method is the traditional method used in system identification for which input and output mutlti-frequency signals are sampled for an integer number of periods and the instantanous frequency response funciton is estimated through a Fourier-transform-based analysis. 
 
-The frequency content and the period of one multi-sine is dictated from the excitation waveform and they define the parameters of the filter of the DMFA: bandwidth and order.
-As analyzed in \cite{chukwuStatisticalAnalysisMeasurement2022}, to estimate every instantaneous impedance indipendently from the privous and succesfull instants, the bandwidth must be an integer times the inverse of the multi-sine period and the order of the filter should be a number around 8. 
-The latter shapes the amplitude of the side-bands of the filter.
+In practice, the acuiredmulti-frequency data are stored in single files that contain either a whole electrochemical experiment (as for in Chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}) or the data of one technique of the entire sequence that deifned the experiment.
+The latter is the case for long battery cycling (as in Chapter \ref{chap:coins}) so the estimation of the instantanous impednace for the whole experiment require to loop though single datasets and excute the DMFA algorithm for this.
+In both cases, before starting the estimation algorithm the signal baseline was removed to reduce the Gibb's effect.
+This procedure, referred as \emph{detrending}, is important in system identification to obtain clean Fourier spectra.
+The linear detrending used here is the simplest of the detrending methods; better solution exist \cite{hallemansTrendRemovalMeasurements2022, lentkaMethodsTrendRemoval2019}, but they are computationally difficult for long signals like the ones in this work.
 
-\subsection{Filters in DSP (to be corrected)}
-Although system identification in electrochemsitry for the frequency domain employs cyclic perturbation (i.e. single sine waves or multi-sines), it will be usefull in the following discussio in this text to introduce some aspect of window functions. 
-The most known are Hanning, Hamming and Blackman  functions characterised by three main properties:
-\begin{itemize}
-    \item roll-off and characteristic frequency
-    \item passband flatness
-    \item group delay
-\end{itemize}
-The main characteristic is called roll-off which means "how fast" the amplitude of the original signal is attenuated. From the view of the frequency domain, the part of the filter that attenuates the signal are colled sidelobes. The characteristic frequency, also called cut-off, is the frequency at which the attenuation is $\sqrt{2}$ (\~= -3 dB) of the maximum value. Different windows function have steeper or smoother roll-off and this is important when realizing, for example, a low pass filter using the same function. Passband flatness is how uniform is the magnitude response across the main lobe (the passband) to avoid any distortion of the amplitude.
-It is also important, especially for the complex signals like the impedance, to evaluate also the phase shift or group delay that must be flat in the frequency region of analysis. Windows have usually a zero or very low attenuation in the middle that translates to a very well analysis of the spectral characteristics of the middle point of the signal. This is somehow translated to an "instantaneous information" even if the windows has finite length.
-Usually it is impossible to have optimal values for this parameters but a compromise has to be made.
+When excecuting the DMFA, the important parameters to choose are the filter function, its strength and its bandwidth.
+Following the study of Chuckwu et. al \cite{chukwuStatisticalAnalysisMeasurement2022} as presented in Section \ref{sec:dmfa description}, in this work I used the symmteric Fermi-Dirac function as filter with a value $n$ of 8 that produces a flat band pass and fast roll-off.
+The bandwidth, instead, varies by experiment since it is chosen as the inverse of the multisine period, corresponding to the maximum temporal resolution of the DMFA method.
 
 \section{On-line processing and data reduction}
 \label{On-line computation}
 
 \subsection{Motivation}
-Using the method of DMFA (but also fitting a BLTVA) requires storing the complete signals from beginning to end of the experiment.
-When the sample rate of the acquisition is high or the experiment is long, the ammount of disk-space occupied by the signals become significant.
-The sample rate is determined by the maximum frequencies of the excitation wave (at least twice according to the Nyquist Theorem) while the experiment time depend on the desired characterization of the system; charaterization of redox couple via cyclic voltammetry might last a few minutes while characterizing the intercalation in layered material takes hours, and the phenomena of battery aging appears in weeks.
+Using the method of DMFA requires storing the complete signal of an experiment or a technique.
+When the sample rate of the acquisition is high or the acquisition time is long, the ammount of disk-space occupied by the signals become significant.
+The sample rate is determined by the maximum frequencies of the excitation wave (at least twice according to the Nyquist theorem) while the experiment time depend on the desired characterization of the system; charaterization of redox couple via cyclic voltammetry might last a few minutes while characterizing the intercalation in layered material takes hours, and the phenomena of battery aging appears in weeks.
 
-The frequency dictates the ammount of data per hour to be stored.
-% An fast system that express its dynamic up to a frequncy of 1kHz (for example a big battery) if voltage and current are sampled at 5kHz with a resolution of 16\,bit the disk space taken is of 72 \,MB per hour, that correspond to 1.7\,GB per day enche cycling jut one battery would fill up modest hard drives in a few weeks.
-
-Typically, batteries and other electrochemical systems responds to escitations up to few hundred Hertz.
+Typically, batteries and other electrochemical systems responds to escitations from mHz up to few thausands of Hertz.
 Sampling, for axample, the signals of as system at 500kHz creates 7.2\,GB per hour, filling up even the most spacious hard drives in a few days.
-Using Dynamic Impednace with high frequency excitations and for long time become unpractical under these circumstances, especially when interested in performing replicas or parallel cells measurments with the same computer.
-Furthermore, integrating the methods of Dynamic Impedance in more modest hardware like micro-computers and micro-controllers for the real time estimation of energy storage or generation devices is practically impossible.
-
-This work provides a solution to the problem of data volume computing the impedance via Short-time Fast Fourier Transform on-line on the high frequency band. 
-The short-time FFT has a frequency resolution that is the invers of the windows length, while the DMFA has the frequency resolution of the inverse of the entire signal lenght. 
-This means that the first is not adeguate to estimate the low frequency band and furthrmore it is not capable of separating the excitation frequency response from the drift.
-The solution is to use the FFT of a short window and estimate the impedance for the frequencies that are fast enough to consider the system "frozen" in time. 
-For example, in chapter \ref{chap:coins} I show Li-ion batteries cycle at C/10 with the FFT applied on a window of 100s where only the impedance for the frequencies componets above 10Hz is estimated.
-Such components oscillates a full period 1,000 to 100,000,000 times during the 100s window hence their frequency analysis shows sharp and defined peaks beacase everaging over so many periods and the system can be considered statinoary.
-Saving this information for hours is redundant, therfore I developed a strategy to calculate part of the impedance on-line, low-pass filtering the signals and decimate them for a later off-line analysis with DMFA.
+Employing dynamic impednace spectroscopy with high frequency excitations and for long time become unpractical under these circumstances, especially when interested in performing replicas or parallel cells measurments with the same computer.
+Furthermore, integrating such measurment in more modest hardware, like micro-controllers, for the real time estimation of energy storage or generation devices is practically impossible.
 
 \subsection{Strategy of the on-line processing}
 
-The on-line processing is possible thanks to a software component excecuted inside the automation software described in previous chapter which excecutes the estimation and decimation when the signal reaches the size of the desired window (ex. 100s to keep the same example as before).
+This work provides a solution to the problem of data volume computing the high frequency band impedance on-line via STFT method over a short time window, then filtering and downsampling the windowed signal for the offline estimation of the lower band impedances via DMFA. 
 
-When a voltage and current blocks of data equivalent to the window length are acquired, the software part in charge of the streaming copies the signals to another object that performs the processing. 
-I called this new object "BlockCalculator" and added as submodule of DEIStools.
-The processing performs the following actions:
+The online processing of the multi-frequency signals is possible thanks to a software component excecuted inside the automation software described in previous chapter.
+The online processing consist of the object \verb|PicoCalculator|, part of the \verb|DEIStools| module, which adds the possibilty of excecuting operations on the data streamed by the PicoScope device.
+On its core, it simply adds in the streaming loop a condition that checks if the buffed data is long enough (i.e. the window of the STFT) to be processed.
+The baseline of the signal is removed before excecuting the algorithm and no bell-shaped function is multiplied since it makes no difference for system drifting slowly as for the system studied in Chapter \ref{chap:coins}.
+The workflow is schematically reported in Figure \ref{fig:DEIS automation workflow online}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/acquisition/deis_workflow_online_calc.png}
+    \caption{Schematics of the signal flow in an automated dynamic impedance spectroscopy experiment with online calculation of the high frequencies impedance.}
+    \label{fig:DEIS automation workflow online}
+\end{figure}
+
+\subsection{Details of the data processing}
+
+When a voltage and current blocks of data equivalent to the window length are acquired, \verb|PicoCalculator| copies the signals to another object, \verb|BlockCalculator|, that performs the following actions:
 \begin{itemize}
     \item remove linear baseline of both signlas;
     \item perform the DFT of the signals;
@@ -85,11 +64,7 @@ The processing performs the following actions:
     \item perform inverse DFT of the filtered signals;
     \item decimate the signals and store them.
 \end{itemize}
-The user must choose the low-pass filter critical frequency to remove all the frequency components already estimated in the previous step. Continuing the example of before it would be all the frequencies above 10Hz, so I choose a critical frequency of 8Hz.
-
-Later the DMFA is used to estimate impedance from 10mHz to 10Hz (exclueded) and the two are merged together to obtain the complete broadband impedance.
-If the time resolution of the DMFA and the window length are the same there is no need to process the istantaneous impedances to match the time steps.
-
+The user must choose the low-pass filter critical frequency to remove all the frequency components estimated with the STFT method. 
 The strategy is summarized in Figure \ref{fig:online processing scheme}.
 \begin{figure}[H]
     \includegraphics[width = \textwidth]{figures/estimation/computation_scheme.png}
@@ -97,35 +72,54 @@ The strategy is summarized in Figure \ref{fig:online processing scheme}.
     \label{fig:online processing scheme}
 \end{figure}
 
+In this work I characterize with this combined method commercial lithium-ion batteries in the frequeny range 10mHz-200kHz. 
+The online STFT was configured to compute the impedance of all the frequencies above 10Hz, so the low-pass filter choose a critical frequency was 8Hz.
+For ease of implementation a performed the filtering by multiplying the 
+The filter was the same symmetric Fermi-Dirac funtion used in the DMFA and was set with an $n$ value of 25 that produces a gain roll-off fast enough to bring the 10Hz signal to noise level. 
+Later the DMFA is used to estimate impedance from 10mHz to 10Hz (exclueded) and the two are merged together to obtain the complete broadband impedance.
+If the time resolution of the DMFA and the window length are the same there is no need to process the istantaneous impedances to match the time steps and the results of the two methods are simply concatenated.
+
+In Appendix \ref{app:deis meas script} are reported examples on how to write scripts to configure the onlie computation of impednace and downsampling and integrate it in the automation software.
+
+\subsection{Software limits}
+
+Electrochemical methods applied to energy storage devices usually apply a drift between upper and lower limit of voltage (either in cyclic voltammetry or galvanostatic) or current (in potentiostatic).
+When a multisine is applyed on top of the drift, it is important to know the average of the signals to accuratley compare it with the chosen limit instead of solely their latest value.
+In this work I implemented an avarage signal calculator based on 
+This avarage limit can be added to \verb|DEISChannel| (see Appendix \ref{app:deis meas script}) on the values working electrode voltage, cell voltage or current returned by the potentiostat.
+When the object \verb|PicoCalculator| is used for the online computation of the impedance, the avarage of the signal can be estimated directly from the Fourier spectra of the windowed signals.
+
 \subsection{Validation against DMFA}
-To validate the impedanceobtained with combined STFFT and DMFA method I applied it together with pure DMFA on all frequencies components for the same dataset.
-[Put the figure]
-[Caluclate the difference in absolute Ohms between the two points]
-The data are acquire over the ?discharge? of a coin cell at C/10, and a frequency range from 1kHz to 10mHz. 
-The same cells are used in the measurments discussed in Chapter \ref{chap:coins}.
+Before implementing the STFT online in the acquisition dataflow, I simulated the process offline to very that the ouput of the STFT and downsampling procedure was not altering the impedance.
+As example dataset I used the multi-frequency charging voltage and current obtained from a galvanostatic experiment at C/10 C-rate with a multisine in the range 10mHz-1kHz.
+The cell used for the experiment is a lithium-ion coin cell of the same type used in the study prosented in Chapter \ref{chap:coins}.
 
-\section{Data visualization}
-A Dynamic Impedance experiment might return dozens to thousend of istantanous spectra depending on the temporal resolution and acquisitino length. 
-This is why the analysis, subject of the next chapter, is even more relevant.
+Firstly, I verified that the downsampling and filtering was not causing any alteration of the frequency component, as reportedin figure \ref{fig:downsampling validation}.
+As a low-pass filter I applied a Bessel filter - of order 7 and cut-off frequency 100 Hz - on data block of 100 s lenght.
 
-\section{Limitations of this approach}
-The use of a mixed method allows for a real braod-band Dynamic Impedance Spectroscopy but it brings some complications with it.
-First of all the number of calculation is not a problem for a desktop computer but the method is not ready for being implemented as it is on micro-controller or micro-computer where I believe will make a tangible impact on device characterization and controll.
-The ammount of calculations and memory must be optimized.
-Furthermore the analyis in blocks of data creates small discontinouties of circa 6mV between two consecutives. 
-This arises from the Gibb's effect.
-The effect on the final impendace presents as an oscillation feature at the noise level so it doesn't disrupt the capability of DMFA to estimate the impedance. 
-I don't know if the effect remains small at higher current densities.
-Though it is possible to substitute the impedance calculation and low-pass filtering with a properly designed Finite Response Filter (FRF) that would be compatible with micro-controllers architecture.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = 0.45\textwidth]{figures/estimation/orginal vs downsampled voltage charge.png}
+    \includegraphics[width = 0.45\textwidth]{figures/estimation/orignal vs voltage DFT.png}
+    \caption{Validation of frequincy content after downsampling.}
+    \label{fig:downsampling validation}
+\end{figure}
 
+I estimated the impednace for all the frequencies in the multisine with the DMFA on the original dataset; then the impedance of high frequencies impedance on consecutive data windows with the STFT and estimated the low frequencies impedance on the downsample signals with the DMFA.
+The coimparison in Figure \ref{fig: hybrid method validation} shows that no distortion is introduced by the low-pass filtering.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width = \textwidth]{figures/estimation/mixed method validation.png}
+    \caption{The use of a hybrid impedance esetimation method with STFT and DMFA gives the same result as using the DMFA for all the frequencies.}
+    \label{fig: hybrid method validation}
+\end{figure}
 
-
-
-% \section{Drift removal}
-
-% In both methods, one can strongly reduce the zero-frequency skirt in the Fourier space and the Gibbs effect by removing the baseline for current and voltage signals. 
-% I chose to use just a simple baseline removing because other classical methods did not work for me. 
-% Typically one can use sliding window averaging, spline or polynomial fitting or gaussian process regression to name the main one. 
-% In my experience non of these methods could effectively decouple the trend and the first few frequencies of the multisine that are overlapping. 
-% A complete Python library can be used to test these and more trend removal techniques, it is called Wotan. Hellemans and al. developed a method for de-trending signals with low frequency containing multi-sine but there is no available Python implementation to try out and the functional analysis used in the official is above my mathematical skills to implementing it myself.
+\section{Summary and limitations}
+The use of a hybrid impedance estimation method allows for a real braod-band dynamic impedance spectroscopy to characterize the full spectrum of energy storage systems tyhat respond over multiple decades (7-8).
+While the idea is valid, the practical implementation has some limitation due to the technical characteristic of the setup used.
+Firstly, the ammount of calculations and memory managment could be optimized.
+Now it is possible to run the algorithm on dedicated computer, but it is unlikley to work on micro-controllers.
+Seocnd, the analyis in blocks of data using a multiplicative filter creates small discontinouties of circa 6mV between two consecutive signal blocks. 
+While I could prove that the use of proper Finite Response Filter \footnote{This filter act on the time domain data by multiplication with the filter trasnfer function. This is the standard way of filtering in digital signal proccesing and can be easily implemented in micro-controller} with a Bessel filter returns undistorted data, for my limited software engneering skills I wasn't able to implement it in the software.
+Nontheless the modularity of the automation software will permit to easly optimize each of the steps when needed.

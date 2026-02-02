@@ -9,7 +9,7 @@
 \usepackage{listings} % format code
 \usepackage{multicol}
 \usepackage{makecell} % Allow text to wrap in tables
-\usepackage{booktabs} % Rulers in tabels
+\usepackage{booktabs} % Rulers in tables
 \usepackage{changepage}
 \usepackage{indentfirst}
 \usepackage{float}
@@ -27,6 +27,8 @@ sorting=none
 ]{biblatex}
 \addbibresource{Literature overview.bib}
 \addbibresource{other-papers.bib}
+\addbibresource{Rational polynomial models.bib}
+\addbibresource{background_literature.bib}
 
 % Set page layout
 \usepackage{geometry} %[showframe]
@@ -41,6 +43,32 @@ bottom=25mm,
 marginparwidth = 50mm
 }
 
+% Set up code blocks env
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
 
 % Choose main font for the text
 \usepackage{XCharter}

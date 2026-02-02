@@ -66,6 +66,59 @@ Magnitude and phase are
 \end{equation}
 Nyquist: plot $-\Im(Z)$ vs $\Re(Z)$; each point corresponds to a frequency. Bode: plot $|Z(\omega)|$ and $\phi(\omega)$ vs $\omega$; useful for separating overlapping processes by corner frequencies.
 
+\chapter{Literature chronological overview}
+\label{app:literature review stft}
+In the 90s and early two thousand, with the advancement in computing power and electronic instrumentation, multiple research groups regain interest in the topic.
+They commonly share the instrumental setup made of three independent devices connected together: a potentiostat/galvanostat, an arbitrary waveform generator and a digital signal acquisition unit.
+
+The first works were from G.S. Popkirov and R.N Schindler \cite{popkirovNewImpedanceSpectrometer1992} in 1992 that used an home made potentiostat capable of two frequency ranges: 100kHz-100Hz or 0.76Hz-0.76mHz.
+They also show that a multisine wave (of 42 components) gives the best signal to noise ratio compared other waveforms \cite{popkirovOptimizationPerturbationSignal1993a} and the validation of the measurement for the interference of non-linearities \cite{popkirovValidationExperimentalData1993a} \cite{popkirovEffectSampleNonlinearity1995a}.
+The authors applied the method for electropolymerization \cite{popkirovInSituTimeResolved1993}, the characterization of redox process in conductive polymers \cite{popkirovInsituImpedanceMeasurements1995} \cite{popkirovElectrochemicalImpedanceSpectroscopy1995} \cite{popkirovInvestigationConductingPolymer1997} \cite{garcia-belmonteDeterminationElectronicConductivity2003a}, silver dissolution \cite{popkirovElectrodePotentialRedistribution1995} \cite{baltrunasTimeEvolutionActive1997} and Benzophenone/Benzophenone anion radical couple in different solutions \cite{walczykInvestigationRedoxCouple1995}.
+They used both sweeping voltage and galavnostatic techniques as main drift and a multisine between 1 Hz and 31 kHz.
+
+From 2000 to 2005 D. Roy, J. E. Garland, C.M. Pettit and collegues proposed measuremnet setup using a 133 components multi-sine perturbation  of only odd frequencies, random phase and equal amplitude \cite{waltersWeakAdsorptionAnions2001a}. 
+They also discussess in details how to choose experimental parameters and the limitation of such technique \cite{garlandAnalysisExperimentalConstraints2004}. 
+They applied the method to study difference processes on gold such as deposition of bismuth \cite{garlandKineticAnalysisElectrosorption2002a} and indium with focus on co-adsorbtion, electro-oxidation of methanol \cite{assiongbonElectrooxidationMethanolGold2005}, redox couple kinetics with focus on co-adsorbtion \cite{emeryTimeResolvedImpedance2005} and chemical reduction of Nickel \cite{shiElectrocatalysisHypophosphiteNickel2014}. 
+They also coupled time-resolved impedance with optical measurements during indium deposition on molybdenum \cite{pettitElectrodepositionIndiumMolybdenum2002}. 
+Furthermore, they studied surface reaction and effect planarization for different metals: Tallium \cite{assiongbonChemicalRolesPeroxidebased2004} \cite{gorantlaChemicalEffectsChemical2005} \cite{pettitRoleIodateIons2005}, Copper \cite{luRelativeRoles22004} \cite{pettitTimeResolvedStudy2004} \cite{gorantlaCitricAcidComplexing2005} and Silver \cite{assiongbonElectrooxidationMethanolGold2005} .
+
+From 2003, K. Darowicki, P. Slepski and their colleagues, develop different experimental setups for the estimation of instantanous impedance \cite{darowickiInvestigationsPassiveLayer2003} \cite{darowickiInstantaneousElectrochemicalImpedance2004a}. 
+The impedance is still estimated via short-time Fourier transform, at first emplying exponential chirp excitation (in the range 1320-144 Hz) \cite{darowickiDynamicElectrochemicalImpedance2003a} \cite{darowickiContinuousFrequencyMethodMeasurement2003} \cite{darowickiDeterminationElectrodeImpedance2004a} and later with multisine \cite{darowickiInvestigationsPassiveLayer2003}. 
+The prolific work conducted by the group touches multiple applications: corrosion evaluation on stainless steel \cite{darowickiEvaluationPittingCorrosion2004a} \cite{darowickiTimeDependencePit2004} \cite{krakowiakImpedanceInvestigationPassive2005} \cite{krakowiakImpedanceMetastablePitting2005} \cite{orlikowskiInstantaneousImpedanceMonitoring2015} \cite{rylInstantaneousImpedanceMonitoring2016} \cite{orlikowskiDeterminationPittingCorrosion2017} \cite{naroznyApplicationElectrochemicalImpedance2018} \cite{darowickiNovelApplicationDynamic2020a} \cite{rylInstantaneousImpedanceAnalysis2017} and metal alloys \cite{arutunowElectricalMechanicalCharacterization2015} \cite{zielinskiApplicationMultisineNanoscale2015} \cite{wysockaInvestigationElectrochemicalBehaviour2016} \cite{gawelImpedanceMonitoringCorrosion2017}, monitoring of the crack of corrosion layers on stainless steel \cite{darowickiDetectionStressCorrosion2004}, characterization of conductive polymers \cite{darowickiImpedanceCharacterizationProcess2004} \cite{darowickiDynamicElectrochemicalImpedance2004}, investigating the hydrogen storage alloy [2010], monitoring the discharge of nickel/nickel hydride batteries [2013],  monitoring the adhesion of organic coating to stainless steel and galvanic coupling \cite{burczykLocalElectrochemicalImpedance2018}.
+The frequency range of the multi-sine of these works is about 3 Hz - 20 kHz. 
+The method was also coupled with atomic force microscopy for the study of surface terminations of boron-doped diamond \cite{zielinskiMultifrequencyNanoscaleImpedance2019} \cite{rylStudySurfaceTermination2016} and the quartz crystal microbalance \cite{parasinskaApplicationQuartzCrystal2024}. 
+The researchers applied the techniques to study fuel cell under different operation \cite{slepskiImpedanceMonitoringFuel2015} \cite{darowickiInfluenceDynamicLoad2019} \cite{darowickiImpedanceHydrogenOxidation2020a} and redox-flow batteries \cite{krakowiakThreeModesElectrochemical2024}. 
+Here the frequency range was extended to 4.5 kHz-0.3 Hz (or 30 mHz). 
+
+In 2004 J. Schouckens and R. Pintelon started to apply their theoretical framework [???] of system identification in the frequency domain characterization of electrochemical systems with A. Hubin to obtain the electrochemical impedance of corroding metals using multisine perurbations with low frequency components down to 0.01Hz \cite{vangheemElectrochemicalImpedanceSpectroscopy2004a}\cite{vangheemElectrochemicalImpedanceSpectroscopy2006a} \cite{blajievImprovementImpedanceMeasurement2006}. 
+It is interesting how they compare multi-sine and stepped sine consecutive measurement to validate the experiment in \cite{vangheemInstantaneousImpedanceMeasurements2004}. 
+In 2009 they discussed the advantage of using only the odd-number harmonics in the sequence of summed sinusoidal with 220 components between 10mHz and 2kHz \cite{vaningelgemAdvantagesOddRandom2009}. 
+In particular, they put attention on the quantitative estimation of the impedance variance and the error due to the non-linearities and non-stationarity of the system.
+They also discussed the difference in estimating the frequency response function with multi-frequency waveform and stepped sine though simulation adressing signal to noise ratio and measurement time \cite{schoukensBroadbandSteppedSine1999} and  compared different excitation signals including periodic, transient and aperiodic signals \cite{schoukensSurveyExcitationSignals1988a}.
+Their method was applied for the study of multiple systems: corrosion of Copper\cite{vaningelgemApplicationMultisineImpedance2008}, Alluminum and stainless steel \cite{breugelmansOddRandomPhase2010a} \cite{alvarez-pampliegaCorrosionStudyAlrich2014} \cite{jiOddRandomPhase2018} \cite{jiElectrochemicalRamanAnalysis2020}, the adsorbtion of molecules on metals \cite{blajievPotentiodynamicEISInvestigation2008} \cite{geboesInvestigationAdsorptionMechanism2015} and oxides \cite{hauffmanMeasuringAdsorptionEthanol2012}, self-assembling monolayers \cite{hauffmanDynamicSituStudy2013}\cite{fernandezmaciaStudyElectronTransfer2014}, polymeric coatings \cite{jorcinInvestigationSelfhealingProperties2010}\cite{breugelmansOddRandomPhase2010}\cite{woutersMonitoringInitialContact2021} \cite{meeusenFEMModellingPredict2023}\cite{madelatSituMonitoringLateral2023}, ferri/ferrocyanide reaction on gold \cite{fernandezmaciaORPEISStudyTime2015}, aptomer as biosensors \cite{pauwelsNewMultisinebasedImpedimetric2016} and alloy protection \cite{meeusenUseOddRandom2018}. 
+
+In 2009 R.L Sacci and D. A. Harrington proposed a multi-sine with 1Hz - 1.3 kHz with removed harmonics to avoid intermodulation following Popkirov 1993  and amplitude decreasing by a factor of two every two decades, superimposed to cylic voltammetry.
+They used the method to study electroxidation of metanol  \cite{sacciDynamicImpedanceFormic2009}
+\cite{holmUnderstandingReactionMechanisms2018} \cite{holmDynamicElectrochemicalImpedance2019} \cite{holmUnderstandingReactionMechanisms2019}, electrocatalytic reactions \cite{sacciDynamicElectrochemicalImpedance2014} and droplet interface bilayers \cite{sacciDisentanglingMemristiveMemcapacitive2022}.
+
+In 2020 T. Pajkossy and G. Mészáros proposed a set-up in which the potentiostat is custom build in order to analogically seperate the drift and oscillations.
+The input controll is still made by the superposition of a main drift, sweeping voltage, and small multi-frequency excitation with odd prime frequencies in the band 18.3 Hz - 17.8 kHz \cite{pajkossyConnectionCVsImpedance2020}. 
+The four outputs are recorded with analog to digital converter. 
+The researchers did also an extensive theoretical evaluation of the coupling of cyclic voltammetry and impedance for the estimation of charge transfer resistance for quasi-reversible redox systems \cite{pajkossyDynamicElectrochemicalImpedance2019}  \cite{pajkossyVoltammetryCoupledImpedance2020} \cite{pajkossyDynamicElectrochemicalImpedance2021}. 
+
+In 1990, Ivaska and collegues ported the technique of Smith into a smaller form factor with details on the hardware \cite{engblomExperiencesOnLineFourier1990}.
+In 1996 Hazi, Bond and collegues, extended the system to modern hardare for the measurement of admittance or impedance in the frequency range 50Hz-50kHz during staircase voltammetry \cite{haziMicrocomputerbasedInstrumentationMultifrequency1997} \cite{schieweUnifiedApproachTrace1998}.
+
+\section{Embedded spectrometers}
+The modern set-up for dynamic electrochemical impedance consisting of three dedicated benchtop devices and a computer works fine for research applications at laboratory scale, but it is expensive (around 20-30 thousand euros per channel), voluminous and limited in currents output.
+For industrial applications like monitoring or characterizaing battery packs, electrolyzers or fuel cells the instrumentation must be embedded in cheaper and scalabel hardware such as FPGA and microntrollers.
+
+In 2018 H. Zappen D. U. Sauer and collegues from RWTH Aachen Univeristy in Germany, used the usual schematic of Popkirov with only one FPGA based potentiostat board of which they could modify the software to generate a multi-frequency waveform with 20 sinusoids in the frequency band 1 Hz - 1kHz \cite{zappenApplicationTimeResolvedMultiSine2018}. 
+In their work, they put enphasis on the design of the multisine and the screening of the main phase optimization strategies in both efficiency and effectivnes (resulting crest factor). The impedance is measured in equilibrium state and during externally induced thermal runaway (no drifts) coupling ultrasonic measurements \cite{zappenInOperandoImpedanceSpectroscopy2020a}. 
+Zappen later openeed a startup, Safion GmbH, for the use of the method for fast quality assessment of battery after production with a dedicated device.
+
+Kanoun and Kallel developed micrcontroller based impedance spectrometers for battery characterization ...
+
 \chapter{building auxiliary connectors}
 \label{ap:aux cable}
 
@@ -74,15 +127,19 @@ I needed to access the pins X, Y and Z, as in figure XX. I then used 3 cables, s
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.3\textwidth]{figures/appendix_cable/connection_pins.jpg}
-  \includegraphics[width=0.3\textwidth]{figures/appendix_cable/connection_pins_with_ground.jpg}
-  \includegraphics[width=0.3\textwidth]{figures/appendix_cable/enclosure.jpg}
+  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/9 pin scheme.png}
+  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/connection_pins.jpg}
+  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/connection_pins_with_ground.jpg}
+  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/enclosure.jpg}
   \caption{From left to right: steps for the construction of cables for interfacesing with BioLogic 9 pin ports.}
   \label{fig:aux cables}
 \end{figure}
 
 \chapter{Multisine crest factor minimization}
 \label{ch:crest factor}
+Multiple approaches has been proposed in the field to minimize the crest factor and each is a trade-off between speed and accuracy (find the absolute minimum). 
+The right method strongly depends on the type of problem and on the following characteristics: distribution of frequency (logarithmic or linear), number of points per decades, number of frequencies in the waveform and relative amplitude (flat, linear, logarithmic, arbitrary). 
+
 The first to deal with the problem was Schroeder in 1990 whom proposed the analytical formula that carries his name:
 
 $$
@@ -93,9 +150,36 @@ Since it is fast to calculate, it is often used as both  reference value and ini
 
 As an alternative, randomization of the phases offers an equal or better crest factor but the computational time increases significantly with the number of frequencies.
 
-Iterative algorithms achieve much better results. They belong to two families. One is based on the "clipping" method of the DFT peaks of the multi sine until the crest factor reaches a constant value. The other consist in a mathematical optimization using metaheuristic approaches that perform better than derivative methods for such big parameters space (ex simulated annealing and genetic algorithm).
+Iterative algorithms achieve much better results. They belong to two families. One is based on the "clipping" method of the DFT peaks of the multi sine until the crest factor reaches a constant value. 
+The other consist in a mathematical optimization using metaheuristic approaches that perform better than derivative methods for such big parameters space (ex simulated annealing and genetic algorithm).
 
 Recently Kallel et al. proposed a mixed method, though it gives better results than the analytical formula for small multisine of 3-4 decades.
+
+\chapter{Creating Python script for dynamci impedance experiments}
+\label{app:deis meas script}
+
+After importing the relevant libraries the single instruments are separatly instantiated and configured.
+Then the objects are injected into another objects where the controll loop is implemented and the instruments are sinchronized.
+
+\section{Initializing the potentiostat}
+\lstinputlisting[language=Python]{code_blocks/initialize_potentiostat.py}
+
+\section{Initializing the waveform generator}
+\lstinputlisting[language=Python]{code_blocks/initialize_awg.py}
+
+\section{Initializing the scope}
+\lstinputlisting[language=Python]{code_blocks/initialize_oscilloscope.py}
+
+\section{Dependancies injections}
+\lstinputlisting[language=Python]{code_blocks/deis_inject_and_start.py}
+
+\section{Initializing online calculator}
+\lstinputlisting[language=Python]{code_blocks/initialize_online_calc.py}
+
+\section{Dependancies injections for online calcualtion}
+\lstinputlisting[language=Python]{code_blocks/deis_online_inject_and_start.py}
+
+
 
 \chapter{Auxiliary data of coin cells}
 
@@ -287,7 +371,7 @@ Sudden changes in characteristic time constants, transitions between adsorption-
 Moreover, DEIS can track the evolution of SEI resistance during the first cycles, distinguish formation-related impedance from intrinsic electrode impedance, and allow a direct comparison between different synthesis batches or porosity levels without relying exclusively on capacity values. 
 In the context of this thesis, DEIS was used to investigate whether such characteristic signatures could be associated with the hypothesized sodium storage mechanisms in SiCN(O), and in particular whether reversible sodium deposition within confined pores manifests as a measurable, transient reduction of the impedance.
 
-The purpose of this appendix is not to provide a complete review of SiCN(O) electrochemistry, but rather to supply the structural and mechanistic background necessary to interpret the DEIS measurements presented in Chapter~\ref{chap:graphite}. 
+The purpose of this appendix is not to provide a complete review of SiCN(O) electrochemistry, but rather to supply the structural and mechanistic background necessary to interpret the DEIS measurements presented in Chapter~\ref{chap:anodes}. 
 Readers interested in a comprehensive treatment of the synthesis, structure, and electrochemical behaviour of polymer-derived ceramics are referred to the foundational literature (Reinold et al.\ 2013; Sic et al.\ 2022; Cheng et al.\ 2021; Chen et al.\ 2022).
 
 \chapter{Fabrication and Characterization of Microscopic Reference Electrodes}
@@ -394,7 +478,7 @@ The solution (cite paper) is to scrap the insulation of the wire at one end and 
 In the paper they use the machine to solder the contact in micro-electronics which I didn't have at disposal. 
 Instead I tried with the ultrasonic woldering with poor reproducibility even with the best setting I could find. 
 Too much pressure cause the wire to brake while too little didn't solder the metals.
-Reports on the attempt with this methods are found in Appendix \ref{app:ultrasonic wire soldering}
+% Reports on the attempt with this methods are found in Appendix \ref{app:ultrasonic wire soldering}
 Finally I tried to put current collector and exposed wire in contect and sealed them togather with the thermosetting polymer strips.
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/anodes/pealed_gold_wire.jpg}

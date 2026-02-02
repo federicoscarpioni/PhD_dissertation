@@ -76,7 +76,7 @@ Here, we focus solely on the motivation for DEIS measurements.
 Two properties of SiCN(O) make it particularly interesting for dynamic impedance studies:
 \begin{enumerate}
     \item its highly porous microstructure, which can host different Na storage modes that may evolve during a single half-cycle;
-    \item experimental evidence from galvanostatic cycling (e.g.\ Ref.~[MdE]) suggesting that lowering the cutoff potential below~0~V vs.\ Na/Na\textsuperscript{+} triggers additional reversible capacity, possibly associated with sodium metal deposition within the pore network.
+    \item experimental evidence from galvanostatic cycling (e.g.\ Ref.~[MdE]) suggesting that lowering the cutoff potential below~0~V vs.\ Na\textsuperscript{+}/Na triggers additional reversible capacity, possibly associated with sodium metal deposition within the pore network.
 \end{enumerate}
 
 DEIS offers a unique opportunity to probe whether these mechanisms leave distinct, time-localized signatures in the impedance, especially during the transition between adsorption, insertion-like processes, and hypothesized metal deposition.  
@@ -86,17 +86,31 @@ This approach complements conventional characterization methods such as ex situ 
 
 Introducing a reference electrode into a pouch-cell configuration presents significant geometric and electrochemical challenges.  
 As discussed in Chapter~\ref{chap:LTP}, the placement and size of the reference electrode strongly influence the measured impedance, particularly in compact cells where the electric field is highly non-uniform.  
-Macroscopic reference electrodes, such as Ag/AgCl or metal strips, distort the potential distribution and introduce artefacts in the high- and mid-frequency regions, making them unsuitable for dynamic impedance measurements in multilayer or small-area cells.
+Macroscopic reference electrodes, such as AgCl/Ag or metal strips, distort the potential distribution and introduce artefacts in the high- and mid-frequency regions, making them unsuitable for dynamic impedance measurements in multilayer or small-area cells.
 
 For this reason, I adopted microscopic reference electrodes based on insulated metal wires with only the cross-section area exposed to the electrolyte.  
 Such electrodes approximate a point-like probe and minimize perturbation of the current distribution.  
 When placed between two separators at the mid-plane of the stack, they provide an acceptable compromise between electrochemical stability and geometric neutrality.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 0.5\textwidth]{figures/anodes/reference electrode position.pdf}
+    \caption{Cartoon depiting the distortion of the field lines at the border of a compact cell.}
+    \label{fig:micro reference positioning}
+\end{figure}
 
 In lithium systems, microreference electrodes are achieved by in situ alloying of Gold (in the form of wire) and Lithium, whereas in sodium systems few attempts were made because its incapacity to alloy with gold. 
 Soiudm alloys insted with Tin but in a more copmlex multiphase chemstry.
 In this expolarory work I could not replicate the alloying procedure foud in the literature so I decided to procede with metal electrodeposition on copper wires for both Lithium and Sodium. 
 The electrochemical stability of these microscopic electrodes is therefore strongly dependent on the quality of the insulation and the suppression of parasitic side reactions.  
 Although the approach enabled DEIS measurements for extended periods, reproducibility remained limited because small imperfections in insulation, wire geometry, or deposition uniformity lead to drifts of the reference potential or intermittent artefacts.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \textwidth]{figures/anodes/micro reference electrode.pdf}
+    \caption{Micro-reference electrode in pouch cell.}
+    \label{fig: micro reference pouch}
+\end{figure}
 
 A detailed account of the fabrication procedures, attempts with different substrates, stability tests, and failure modes is provided in Appendix~\ref{app:microRE}.  
 In this chapter, only the essential aspects are reported, as the purpose of these measurements is not to optimise reference electrode design but to demonstrate that DEIS can be performed operando in three-electrode pouch cells.
@@ -178,7 +192,7 @@ However, the impedance estimates at 2C were notably degraded by the reduced sign
 
 \subsection{Applied drift and DEIS parameters for SiCN(O)}
 SiCN(O) electrodes were tested under galvanostatic cycling between 0\,V and 2.5\,V vs.\ Na/Na$^+$, using a C/10 current defined relative to the theoretical capacity reported in MdE~\textit{On the reversible sodium plating}.
-Being Silicon Carbonitrate an amorfoud material, it is not possible to calculate the gravimetric maximum charge from its crycatl structure as for typical inorganic materials.
+Being Silicon Carbonitrate an amorfous material, it is not possible to calculate the gravimetric maximum charge from its crycatl structure as for typical inorganic materials.
 A multi-sine excitation from 10\,mHz to 1\,kHz was used. 
 A flat voltage amplitude of 80\,mV was applied at the generator; the resulting current perturbation depended on the potentiostat's selected current range and was monitored during acquisition.  
 Voltage and current were sampled at 5\,kHz.

@@ -2,13 +2,14 @@
 
 Electrochemical systems such as batteries are dynamical systems in the sense that their behavior is governed by differential equations describing the time evolution of internal variables, including ionic concentrations, electrode potentials and temperature, under given operating conditions.
 
-Electrochemical Impedance Spectroscopy (EIS), introduced in the previous chapter, provides an experimental technique to probe these systems by quantifying their response to small perturbations.
-Impedance is defined as a frequency response function, expressing the relationship between an input excitation and the corresponding output response in the frequency domain.
+Electrochemical impedance is commonly interpreted as a frequency-dependent material or interfacial property, yet its definition originates from linear system theory.
+Impedance corresponds to the frequency response of a system obtained by linearizing its input-output behavior around a given operating point, under assumptions of linearity, causality, and time invariance.
 
-The concept of a frequency response function originates from the theory of dynamical systems and is formally treated within the discipline of system identification.
-System identification provides the mathematical framework for defining input--output relationships, introducing suitable approximations, and validating experimentally obtained models.
+These assumptions are not merely mathematical conveniences: they determine whether an impedance spectrum is well-defined, reproducible, and physically interpretable.
+When they are violated—as in the presence of drift, nonlinearity, or strong operating transients—the measured frequency response may no longer correspond to a true impedance, but to an approximation whose validity must be carefully assessed.
 
-The purpose of this chapter is to introduce the notation and concepts of dynamical system theory relevant to electrochemical systems, to formalize the assumptions underlying impedance measurements, and to establish the conditions under which experimentally determined frequency response functions can be considered physically meaningful.
+This chapter introduces the elements of system theory required to formalize the concept of impedance, including linear time-invariant systems, transfer functions, and frequency-domain representations.
+The aim is not to develop system theory in full generality, but to establish a precise framework within which electrochemical impedance measurements can be defined, analyzed, and later extended to non-stationary conditions.
 
 \section{Dynamical systems}
 
@@ -87,6 +88,7 @@ Frequency-domain identification offers a better solution for addressing this com
 \section{Frequency-domain identification}
 
 \subsection{From differential equations to frequency domain}
+\label{sec:laplace}
 
 Linearized electrochemical models are commonly expressed as ordinary or partial differential equations in time.
 The Laplace transform was introduced as a method to convert linear differential equations into algebraic equations in a complex variable, exploiting the well known mathematical framework of linear algebra to solve them.
@@ -132,7 +134,7 @@ For a linear time-invariant (LTI) system, the response to a sinusoidal excitatio
 This property allows the system behavior to be fully characterized by its frequency response.
 
 \subsection{Definition of the transfer function}
-
+\label{sec:transfer function def diff equations}
 Consider a linearized dynamical system described by a differential equation of the form
 \begin{equation}
 \frac{\mathrm{d}y(t)}{\mathrm{d}t} + a\,y(t) = b\,u(t),
@@ -151,6 +153,7 @@ Y(s) = \frac{b}{s + a} U(s).
 The transfer function is defined as the ratio between the Fourier-transformed output and input:
 \begin{equation}
 G(s) = \frac{Y(s)}{U(s)}
+\label{eq:transfer function dy sys}
 \end{equation}
 and it describes how the system responds with the output \( Y(s) \) to certain input \( U(s) \).
 

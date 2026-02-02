@@ -30,11 +30,13 @@ This work proposes a complete pipeline for the measurementes of dynamic impednac
     \item on-line estimation of the high frequency band of the impedance;
     \item analysis of the impedance data with physical or non-physical models.
 \end{itemize}
-The excecution workflow of a complete expeirment is schematized in Figure \ref{fig:DEIS pipeline}.
+To clarify the scope and modular structure of the proposed methodology, Figure \ref{fig:DEIS-pipeline} summarizes the complete experimental and analytical workflow adopted in this work.
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/acquisition/DEIS_pipeline.png}
-    \caption{Execution workflow of a Dynamic Impednace experiment and analysis.}
-    \label{fig:DEIS pipeline}
+    \caption{Conceptual pipeline of dynamic electrochemical impedance spectroscopy.
+    The workflow spans multisine excitation design, synchronized signal acquisition, time-resolved impedance estimation, and subsequent model-based analysis.
+    This chapter focuses on the acquisition layer, while impedance estimation and analysis are addressed in Chapters \ref{chap:estimation} and \ref{chap:analysis}, respectively.}
+    \label{fig:DEIS-pipeline}
 \end{figure}
 The schematic can be simplified in three steps:
 \begin{center}
@@ -72,14 +74,19 @@ The current flowing through the WE-CE path is measured by a current-to-voltage c
 
 In galvanostatic mode, the instrument controls the current rather than the potential. 
 The measured current is compared to a desired setpoint, and the feedback loop adjusts the CE potential to maintain the prescribed current. The WE potential freely responds to the applied current and is measured through the high-impedance RE input. Internally, the same analogue blocks are used as in potentiostatic operation, but with the error signal derived from the difference between measured and commanded current. High-quality galvanostatic control requires wide bandwidth and accurate transimpedance conversion, as well as protection circuitry to prevent saturation when the cell dynamics change abruptly.
-Figure \ref{fig:pot/galv schematics} contains a draw of the connections for a typical electrochemical device with hihglights of the electronics schematics for the potentiostatic and galvanostatic mode.
+
+Because the implementation of dynamic impedance spectroscopy relies on injecting external perturbations and accessing raw analogue signals, it is essential to understand the internal structure of a potentiostat and its control loops.
+Figure \ref{fig:pot-galv-schematics} contains a draw of the connections for a typical electrochemical device with hihglights of the electronics schematics for the potentiostatic and galvanostatic mode.
 It is not included the circuitry for measuring the impedance as part of the device; the core schematics remains the same.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{figures/electrochemistry/pot_galv_schematics.png}
-    \caption{Schematic of a potentiostat/galvanostat instrument. From 10.1007/s11581-019-03132-z}
-    \label{fig:pot/galv schematics}
+    \caption{Simplified schematic of a potentiostat/galvanostat architecture.
+    The feedback loops governing potentiostatic and galvanostatic control, the transimpedance current measurement, and the analogue summing nodes are highlighted.
+    Understanding these internal blocks is essential for safely injecting external multisine excitations and accessing raw voltage and current signals in dynamic impedance experiments.
+    Adapted from 10.1007/s11581-019-03132-z.}
+    \label{fig:pot-galv-schematics}
 \end{figure}
 
 \subsection{Auxiliary analogue inputs and outputs}
@@ -139,20 +146,22 @@ For the purpose of this project I was interested in only three:
 The manifacturer supplies adapters for the 9-pin to BNC connectors but for me was more practical to build them myself with longer and indipendent cables. 
 A reference for the contruction is available in the Appendix \ref{ap:aux cable}.
 
-Figure \ref{fig:deis setup schematics} shows the schematics of the connections and Figure \ref{fig:setup} shows a photography of one of the laboratory set-up used in this work. 
-
+The modular separation between electrochemical control, excitation generation, and signal acquisition is illustrated schematically in Figure \ref{fig:deis-setup-schematics}, while Figure \ref{fig:photo-setup} contains a photo of the instrumentation in our laboratory.
 \begin{figure}[h]
     \centering
     \includegraphics[width = \textwidth]{figures/acquisition/setup scheme.pdf}
-    \caption{Setup connections schematics.}
-    \label{fig:deis setup schematics}
+    \caption{Schematic of the experimental setup for dynamic impedance spectroscopy.
+    A potentiostat imposes the electrochemical operating trajectory, while an external arbitrary waveform generator injects the multisine excitation and a dedicated acquisition device records voltage and current signals with high temporal resolution.
+    This modular architecture enables full control over excitation, synchronization, and data access.}
+    \label{fig:deis-setup-schematics}
 \end{figure}
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{figures/acquisition/setup.jpg}
-    \caption{Photo of the laboratory setup for a 6-channel potentiostat of which 4 channles are configures fot the Dynamic Impednace experiment though the auxiliary port and external devices.}
-    \label{fig:setup}
+    \caption{Photograph of the laboratory setup used for dynamic impedance measurements.
+    A multi-channel potentiostat is interfaced with external waveform generators and acquisition devices through auxiliary analogue ports, enabling parallel dynamic impedance experiments on multiple electrochemical cells.}
+    \label{fig:photo-setup}
 \end{figure}
 
 \section{Multi-sine design}
@@ -274,6 +283,16 @@ Keysight devices have a proprietary 'TrueForm' technology to reduce jitter that 
 Generating one single braodband waveform correspond to 100 MSa (obtained as $period \times f_{gen}$). 
 Dividing the frequency band at the value of 100Hz creates two smaller multisines: one from 10mHz to 100Hz (not included) generated at 1000Hz (size 100kSa), and a second one from exactly 100Hz to 100kHz generated a 1MHz that, chosing a period of 1s, leads to a waveform of 100kSa. 
 The two smaller multisine takes up only 200kSa of the generator memory to produce the same excitation of the complete multiusine of 100MSa.
+Figure \ref{fig:multisine-split-time-domain} reports the origianl and reduced multisines in the time-domain.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \textwidth]{figures/acquisition/multisine_split.png}
+    \caption{Broadband multisine generation using frequency-band splitting.
+    A single wideband multisine (right) is reproduced by summing two narrower-band multisines (left), each fitting within the memory constraints of the waveform generator.
+    This strategy enables excitation spanning multiple decades of frequency without loss of spectral coherence.}
+    \label{fig:multisine-split-time-domain}
+\end{figure}
 
 In the example I used two arbitrary parameters: the 100Hz boundary frequency and the 1s period of the high band waveform. 
 For my case 100Hz sits in the middle so this might be adjusted case by case with the same rationale. 
@@ -285,25 +304,20 @@ If for both waveform one generates the frequencies starting from the harmonic of
 To get a uniform distibution of points, I generated the high frequency series starting from 1 Hz and discarded the frequencies until 10Hz (not included), since they are already present in the low band waveform. 
 Then, the period of the waveform must be of 1Hz otherwise there will be spectral leakage in the final excitation (note that the frequencies are all integer multiples of 1Hz). 
 The sum of the two shorter waveforms generated with this method have the exact distribution of a signle-gnerated wave. 
-Figure \ref{fig:splitting_design} shows the density of points when restarting the multisine from 100Hz, from 10 Hz and discarding the first decade, and 1 Hz and discarding the first two decades.
+The effect of different strategies for restarting harmonic sequences when splitting a broadband multisine is illustrated in Figure \ref{fig:splitting-design}.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{figures/harmonics_supporting.png}
-    \caption{Enter Caption}
-    \label{fig:splitting_design}
+    \caption{Effect of frequency-band splitting on harmonic density in broadband multisine design.
+    Different restart strategies for the high-frequency band lead to non-uniform spectral density near the band boundary.
+    Starting the harmonic sequence at 1 Hz and discarding overlapping decades preserves a uniform logarithmic distribution across the full frequency range.}
+    \label{fig:splitting-design}
 \end{figure}
 
 To summarize, for a CCCV experiment for batteries, on channel of the generator would have loaded in memory two low band multisine waves, one optimized for chronoamperometry and the other from chronopotentiometry, and the other channel have loaded the two optimized high band mutisine waves.
 
 The automatic switch of the multisine during electrochemical experiments as described before can still be done by DEISchannel for the case of combined multisine waves passing during initialization the object MultisineWaveCombined, also provided  in the package TrueFormAWG.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width = \textwidth]{figures/acquisition/multisine_split.png}
-    \caption{Example of a broadband multisine, on the right, and two multisine that split the frequency, on the left.}
-    \label{fig:multisine split}
-\end{figure}
 
 \section{Automation software}
 \label{sec:software}
@@ -332,7 +346,9 @@ The flow of digital signals is schematize is figure \ref{fig:DEIS automation wor
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/acquisition/deis_worflow_basic.png}
-    \caption{Schematics of the signal flow in an automated dynamic impedance spectroscopy experiment.}
+    \caption{Signal flow in the automated dynamic impedance spectroscopy framework.
+    Continuous voltage and current streams are acquired in memory blocks, transferred to persistent storage, and reinitialized without interrupting excitation or acquisition.
+    This strategy enables arbitrarily long experiments without RAM limitations.}
     \label{fig:DEIS automation workflow}
 \end{figure}
 
@@ -350,14 +366,22 @@ The \verb|DEISchannel| object provided in it coordinates the workflow of the set
 
 \begin{figure}[h]
     \includegraphics[width = \textwidth]{figures/acquisition/software_object_scheme_hand_draft.jpg}
-    \caption{Scheme of the objects and their composition.}
+    \caption{Object-oriented software architecture for dynamic impedance acquisition.
+    Each instrument is encapsulated in a dedicated worker object, coordinated by a central control loop.
+    This modular design enables synchronization, extensibility, and hardware abstraction across different experimental configurations.}
     \label{fig:objects composition}
 \end{figure}
 
+The coordination of the electrochemical sequence, excitation waveform, and data acquisition is implemented through a central software control loop.
+This loop continuously monitors the execution state of the potentiostat, synchronizes the activation of the multisine excitation, and manages the transfer of acquired data from volatile memory to persistent storage.
+By reacting to technique completion events and loop counters, the control logic ensures uninterrupted acquisition while preserving phase coherence between excitation and response signals.
+The structure of this control loop, implemented in Python and used throughout the battery aging experiments presented in this thesis, is illustrated in Figure~\ref{fig:python-controll-loop}.
+
 \begin{figure}[h]
     \includegraphics[width = \textwidth]{figures/acquisition/python_control_loop.png}
-    \caption{Python control loop of a CCCV experimetn for batteries.}
-    \label{fig:python controll loop}
+    \caption{Python-based control loop for a CCCV battery experiment with embedded dynamic impedance spectroscopy.
+    The loop monitors technique progression, triggers data transfer and multisine activation, and maintains synchronization between electrochemical control and signal acquisition.}
+    \label{fig:python-controll-loop}
 \end{figure}
 
 To make the automation possible, each instrument must be indipendently excecute its routine in a dedicated thtoead while its action being triggered from the main control loop.

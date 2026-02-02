@@ -146,10 +146,13 @@ where $i_{\mathrm{act}}$ is the activation current given by Eq. \ref{eq:BV} and 
 \end{equation}
 In steady-state diffusion-limited conditions, $i \to i_{\mathrm{lim}}$ regardless of how large $\eta$ becomes. 
 
+Figure \ref{fig:bulter-volmer} illustrates the nonlinear current--overpotential relationship described by the Butler--Volmer equation, highlighting both the diffusion-limited regime and the near-equilibrium region where linearization is valid. The latter regime forms the basis of impedance spectroscopy, as small perturbations around the operating point lead to a proportional relationship between current and overpotential.
+
 \begin{figure}[h]
     \centering
     \includegraphics[width = \textwidth]{figures/electrochemistry/butler_volmer_lin.pdf}
-    \caption{Butler volmeter equation, the diffusion-limited case and the linerization around zero.}
+    \caption{Current--overpotential relationship described by the Butler--Volmer equation. 
+The nonlinear response transitions to diffusion-limited behavior at large overpotentials, while the linearized region around $\eta = 0$ defines the charge-transfer resistance used in small-signal impedance analysis.}
     \label{fig:bulter-volmer}
 \end{figure}
 
@@ -191,16 +194,17 @@ Since the compact and diffuse layers are arranged in series, the total different
 \begin{equation}
     \frac{1}{C_{\mathrm{dl}}} = \frac{1}{C_{\mathrm{H}}} + \frac{1}{C_{\mathrm{GC}}(\psi_0)}.
 \end{equation}
-For highly concentrated electrolytes, as typically found in batteries, the Debye length becomes very small and the diffuse-layer capacitance grows correspondingly large, making the compact layer the dominant contributor to $C_{\mathrm{dl}}$. cite(https://pubs.acs.org/doi/10.1021/acs.jpclett.6b00867)
+For highly concentrated electrolytes, as typically found in batteries, the Debye length becomes very small and the diffuse-layer capacitance grows correspondingly large, making the compact layer the dominant contributor to $C_{\mathrm{dl}}$ \cite{smithElectrostaticScreeningLength2016}.
 Conversely, in dilute electrolytes the diffuse layer significantly affects the interfacial response, and the potential dependence of $C_{\mathrm{GC}}$ can lead to pronounced nonlinearity.
 
-Figure \ref{fig: double layer structure} depict a simple electro electrolyte interface and the double layer strcture with the main electrochemical processes.
+Figure \ref{fig:double-layer-structure} schematically represents the electrode--electrolyte interface, highlighting the compact (Helmholtz) and diffuse layers and their role in charge storage and interfacial polarization.
 
 \begin{figure}
     \centering
     \includegraphics[width =\textwidth]{figures/electrochemistry/double layer structure.pdf}
-    \caption{Double layer structure and its processes.}
-    \label{fig: double layer structure}
+    \caption{Schematic representation of the electrode--electrolyte interface and electrical double-layer structure.
+The separation of charge across the compact and diffuse layers gives rise to the interfacial capacitance that contributes to the frequency-dependent impedance response.}
+    \label{fig:double-layer-structure}
 \end{figure}
 
 \section{Electrochemical methods}
@@ -286,6 +290,8 @@ Starting from the diffusion equation under small-signal perturbation,
 \]
 a sinusoidal perturbation of frequency $\omega$ leads to concentration profiles that vary as $\exp(-\sqrt{j\omega/D}\, x)$. The associated flux at the surface is therefore proportional to $(j\omega)^{1/2}$, giving rise to the classical diffusion impedance.
 
+In the complex plane, diffusion impedance manifests as characteristic frequency-dependent trajectories whose shape reflects the underlying transport geometry as described in the rest of the section.
+
 \subsubsection{Semi-infinite (infinite-length) Warburg impedance}
 
 For a planar electrode with a semi-infinite diffusion domain, the small-signal diffusion impedance is
@@ -317,20 +323,29 @@ With the linearization of electrochemical equation one obtains processes behavin
 To visualize the components, it is common to translate the set of equations into a circuit and use the lows of series and parallel connection of electrocal elements to obtain a simplified and linearized model of the interface.
 This approach was introduced by Randles [put citation] and it is the \emph{de facto} method to visualize models in scientific publications.
 
-The impedance of electrical elements and basic circuits is described in the Appendix \ref{app:imp elements}.
+The correspondence between electrochemical processes and their electrical analogues is summarized in Figure \ref{fig:interface-mechanisms-impedance}, where charge transfer, double-layer charging, and diffusion are mapped to resistive, capacitive, and dispersive circuit elements.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width =\textwidth]{figures/electrochemistry/interface mechanisms impedance.pdf}
+    \caption{Mapping between electrochemical interfacial processes and their equivalent electrical impedance elements.
+    Charge-transfer kinetics, double-layer charging, and mass transport contribute distinct features to the impedance spectrum and can be represented using lumped circuit components.}
+    \label{fig:interface-mechanisms-impedance}
+
 \end{figure}
 
 \section{Reference electrode in EIS}
 
 Using a reference electrode is both important for direct and alternate methods.
 
+Figure~\ref{fig:reference-electrode-impedance} illustrates the role of the reference electrode in separating the working electrode response from counter-electrode and electrolyte contributions, which is essential for reliable impedance measurements.
+
 \begin{figure}
     \centering
     \includegraphics[width =\textwidth]{figures/electrochemistry/reference electrode impedance.pdf}
+    \caption{Role of the reference electrode in electrochemical impedance measurements.
+    A stable reference electrode ensures that the measured impedance reflects the response of the working electrode alone, minimizing artefacts arising from counter-electrode polarization or uncompensated resistance.}
+    \label{fig:reference-electrode-impedance}
 \end{figure}
 
 \section{Validity and consistency of electrochemical impedance}

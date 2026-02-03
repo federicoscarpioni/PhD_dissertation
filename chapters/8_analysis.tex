@@ -49,26 +49,30 @@ It accounts for ionic transport in the electrolyte-filled pores, electron conduc
 Z_T = R_s + \frac{R_p}{k l} \coth(k l),
 \end{equation*}
 
-where $R_s$ is the uncompensated solution resistance, $R_p$ combines pore-solution and solid-particle resistances, and $kl$ embeds the finite diffusion or charge-transfer response of the porous electrode. This approach has been discussed in \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a} and references therein.
+where $R_s$ is the uncompensated solution resistance, $R_p$ combines pore-solution and solid-particle resistances, and $kl$ embeds the finite diffusion or charge-transfer response of the porous electrode. This approach has been discussed in \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}.
+Figure \ref{fig:LTP circuit} shows the full equivalent circuit corresponding to the porous electrode model adopted in this work.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/LTP/ltp_circuit_new.png}
+    \caption{Equivalent-circuit representation of the porous electrode model used to fit dynamic impedance spectra.
+    The circuit captures ionic transport through electrolyte-filled pores, interfacial charge-transfer kinetics, double-layer and chemical capacitances, and distributed transport effects along the pore depth.
+    This formulation follows a transmission-line approach commonly used for intercalation electrodes.}
     \label{fig:LTP circuit}
-    \caption{Equivalent circuit of the physical model used to fit DEIS spectra.}
 \end{figure}
 
 The interface processes are described by the following simplified unit (Figure \ref{fig:LTP circuit simplified}) in the transmission line where the Warburg element representing the charge transfer has been substitute with a capacitor. This simplification produces better fit with lower amount of parameters.
 
-\begin{figure}[h!]
+\begin{figure}[h]
     \includegraphics[width=0.8\textwidth]{figures/LTP/EC_collins_simplified.jpg}
-    \caption{Equivalent circuit of the physical model developed for the intercalation processes of MnO2 in \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020}}
+    \caption{Simplified interfacial unit used in the porous electrode transmission-line model.
+    The diffusion-related Warburg element is replaced by an effective capacitive representation, reducing model complexity and improving parameter identifiability in dynamic impedance fitting.
+    Adapted from the intercalation model developed in \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020}.}
     \label{fig:LTP circuit simplified}
 \end{figure}
 
-
 \subsection{Simplified model for time-varying impedance}
 
-For the dynamic impedance measurements presented in this work (Chapters 10-11), a simplified version of this model was employed. At frequencies above the diffusion regime but below where inductive effects dominate, the impedance can be approximated by:
+For the dynamic impedance measurements presented in this work (Chapters \ref{chap:LTP} and \ref{chap:capacitor}), a simplified version of this model was employed. At frequencies above the diffusion regime but below where inductive effects dominate, the impedance can be approximated by:
 
 \[
 Z(\omega) = R_s + \frac{R_{pore}}{\sqrt{1 + j\omega\tau_{pore}}} + \frac{R_{ct}}{1 + j\omega R_{ct}(C_{dl} + C_\mu)}

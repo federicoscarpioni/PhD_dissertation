@@ -223,7 +223,7 @@ Such models may be derived from first-principles physical assumptions or formula
 In both cases, the resulting models are typically nonlinear with respect to their parameters.
 
 \subsection{Fitting procedure}
-
+\label{sec:fitting-sys-id}
 After selecting a model structure, parameter estimation is performed by fitting the model to the experimentally measured complex-valued impedance data.
 The fitting procedure consists of solving an optimization problem to determine the parameter vector \( \boldsymbol{\theta} \) that minimizes the discrepancy between the model response \( Z_{\text{model}}(\omega_k; \boldsymbol{\theta}) \) and the experimental data \( Z_{\text{exp}}(\omega_k) \), up to a measurement error \( \epsilon_Z \).
 This relationship can be expressed as

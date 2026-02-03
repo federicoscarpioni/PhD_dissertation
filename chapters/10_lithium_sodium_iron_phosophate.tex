@@ -32,22 +32,27 @@ A slurry of carbon-coated LTP (80\,wt\%), carbon black (10\,wt\%) and PVDF binde
 % Counter electrode
 % Schematic of the cell (figure)
 
-All measurements were performed in a three-electrode glass cell. A Pt mesh was used as counter electrode, while a Ag/AgCl electrode served as reference and placed behind the counter electrode. A schematic representation is shown in Figure~\ref{fig:3elecsetup}. 
+All measurements were performed in a three-electrode glass cell. A Pt mesh was used as counter electrode, while a Ag/AgCl electrode served as reference and placed behind the counter electrode. 
+A schematic representation of the three-electrode flooded cell, including reference electrode placement relative to the counter electrode,is shown in Figure~\ref{fig:3elecsetup}. 
 
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/application2/image1.png}
+    \captionof{figure}{Three-electrode flooded cell configuration.
+Schematic of the glass cell used for DEIS measurements, showing the working electrode ($LiTi_2(PO_4)_3$), Pt mesh counter electrode, and Ag/AgCl reference electrode positioned behind the counter to minimize perturbation of the working electrode impedance.}
     \label{fig:3elecsetup}
 }
 
 \section{DEIS measurement setup}
 % How the potentiostat is wired to the 3-electrode cell
 
-The setup for dynamic impedance measurements consisted of a SP-300 potentiostat, a Keysight TrueForm 33522B arbitrary waveform generator, and a PicoTech Piscoscope 4000a as voltage and current signal recorder. 
+The setup for dynamic impedance measurements consisted of a BioLogic SP-300 potentiostat, a Keysight TrueForm 33522B arbitrary waveform generator, and a PicoTech Piscoscope 4000a as voltage and current signal recorder. 
 Since this work is priorior the one reported in previous chapter, the automation was not yet implemented and the waveform is loaded via USB in the waveform generator as a CSV file (in \emph{.arb} format). The signal length was limited to the 16GB of RAM of the laboratory computer so only two cycles with DEIS could be recorded.
 
-\marginpar{
-    \includegraphics[width=\marginparwidth]{figures/application2/image2.png}
-}
+% \marginpar{
+%     \includegraphics[width=\marginparwidth]{figures/application2/image2.png}
+%     \captionof{figure}{Experimental setup comprising potentiostat, arbitrary waveform generator, and external data acquisition used to apply broadband multi-sine excitation and record voltage and current signals during continuous drift.}
+%     \label{fig:ltp_deis_setup}
+% }
 
 \subsection{Multi-sine excitation}
 % Frequenies: 0.1 Hz - 10 kHz
@@ -84,49 +89,59 @@ The impedance was estimated off-line using the Dynamic Multi-Frequency Analysis 
 % Qualitative comment
 During the galvanostatic experiment, the electrode crosses the entire intercalation window at a continuous current. 
 
-\begin{figure}[h!]
-    \includegraphics[width=\textwidth]{figures/LTP/V(t)_CC.png}
-    \caption{Potential time-series of LTP negative electrode during cyclic voltammetry.}
-    \label{fig: LTP galvanostati result}
+The electrode potential evolution during galvanostatic intercalation and deintercalation is shown in Figure~\ref{fig:LTP_CC_voltage}. 
+\begin{figure}[h]
+    \includegraphics[width=0.6\textwidth]{figures/LTP/V(t)_CC.png}
+    \caption{Electrode potential under galvanostatic drift.
+    Time evolution of the working electrode potential during constant-current cycling at 138 mA/g, covering the full intercalation window of carbon-coated $LiTi_2(PO_4)_3$}
+    \label{fig:LTP_CC_voltage}
 \end{figure}
-
-The results are reported in  Figure \ref{fig: LTP galvanostati result}. The impedance shows a relatively stable shape despite the change in state of charge although a stronger variation is visibile when the system changes phases (orange and blue spectra in the figure), so before and after the voltage plateau.
+The time-resolved impedance spectra obtained during the galvanostatic experiment are reported in Figure \ref{fig:LTP_CC_impedance}. Selected spectra illustrate the evolution of interfacial and transport-related features as the electrode crosses the intercalation plateau.
 
 \begin{figure}[h!]
     \includegraphics[width=\textwidth]{figures/LTP/results_deis_galavanostatic.png}
-    \label{}
-    \caption{}
+    \label{fig:LTP_CC_impedance}
+    \caption{Dynamic impedance during galvanostatic intercalation.
+    Instantaneous impedance spectra estimated via DMFA during constant-current cycling. Spectra before, during, and after the voltage plateau highlight changes in charge-transfer and diffusion-related contributions.}
 \end{figure}
 
 % Comment on asymmetry
-A notable observation is the contrast in impedance measured during ion insertion vs.\ removal. The larger adsorption resistance and depressed semicircle during oxidation suggest that the energy barrier for desolvation/adsorption differs from that of release and re-solvation. Although both processes occur over a similar potential region, the system appears kinetically more hindered upon oxidation. This asymmetry underscores the advantage of dynamic impedance in detecting differences that equilibrium EIS might obscure.
+A notable observation is the contrast in impedance measured during ion insertion or removal. The larger adsorption resistance and depressed semicircle during oxidation suggest that the energy barrier for desolvation/adsorption differs from that of release and re-solvation. Although both processes occur over a similar potential region, the system appears kinetically more hindered upon oxidation. This asymmetry underscores the advantage of dynamic impedance in detecting differences that equilibrium EIS might obscure.
 Interestingly, an asymmetry in shape emerges when switching from intercalation (negative current) to deintercalation (positive current). The semicircle in oxidation look more depressed at the beginning, to then recover the same shape of the reduction. The time-dependent resistance associated with ion adsorption onto the electrode surface changes more significantly upon oxidation. This hints at non-symmetric free energies of ion insertion vs.\ extraction, consistent with earlier reports of asymmetry in alkali-ion adsorption processes.
 
 \subsection{Model fitting}
-In order to extract quantitative information about the electrode processes, we fitted the dynamic impedance spectra with a porous-electrode-based model, adapted from Ref.~\cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}. The approach is grounded in the simplified transmission line concept for intercalation electrodes, which includes terms for ohmic resistance, interfacial kinetics, and finite-length diffusion or pseudocapacitive behavior.
+In order to extract quantitative information about the electrode processes, we fitted the dynamic impedance spectra with a porous-electrode-based model, adapted from Reference \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}. The approach is grounded in the simplified transmission line concept for intercalation electrodes, which includes terms for ohmic resistance, interfacial kinetics, and finite-length diffusion or pseudocapacitive behavior.
 
-\begin{figure}[H]
+The porous-electrode model used to interpret the dynamic impedance data, including its lumped parameters and their physical meaning, is illustrated in Figure \ref{fig:LTP_model}.
+\begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/LTP/model parameters together with letters.png}
-    \label{}
-    \caption{}
+    \caption{Porous-electrode model fitting.
+    Parameters evoleve with the state of charge, changing mainly when the electrode potential changes plateau. 
+    Abrupt jumps in some of the parameters are observed when the current is reversed since the double layer has no rest time to relax to OCV condition.}
+    \label{fig:LTP_model}
 \end{figure}
 
-We carried out the fitting using the library pymultipleis that fits all the spectra in one go considering the problem as a multidamnsial as number of specra x number of parameters.
+We carried out the fitting using the library \verb|pymultipleis| that fits all the spectra in one go considering the problem as a multidimensional as number of specra times the number of parameters.
 
 \subsection{Time-resolved impedance under CV drift}
 
 In the cyclic voltammetry experiment, the potential scans at 0.8\,mV\,s$^{-1}$, and the electrode can momentarily reach kinetic regimes strongly influenced by concentration polarization. This manifests in the DEIS data as a pronounced rise in impedance, especially around the lower plateau, where transport limitations are accentuated. The real-time spectra show more noticeable distortions in the low-frequency region, tied to the voltage-driven layer-by-layer intercalation behavior.
 
-\begin{figure}[H]
+The current-potential response recorded during the cyclic voltammetry experiment is shown in Figure~\ref{fig:LTP_CV_IV}.
+
+\begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/LTP/I(V)_CV.png}
-    \label{}
-    \caption{}
+    \label{fig:LTP_CV_IV}
+    \caption{Current-potential response under voltage-sweep drift.
+    Cyclic voltammetry of the LTP electrode at 0.8 mV/s, showing the intercalation and deintercalation plateaus probed during DEIS measurements.}
 \end{figure}
 
-\begin{figure}[H]
+The corresponding time-resolved impedance spectra acquired during the voltage-sweep experiment are shown in Figure~\ref{fig:LTP_CV_impedance}.
+\begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/LTP/results_deis_cv.png}
-    \label{}
-    \caption{}
+    \label{fig:LTP_CV_impedance}
+    \caption{Dynamic impedance during cyclic voltammetry.
+    Instantaneous impedance spectra estimated via DMFA during voltage-controlled operation, revealing stronger low-frequency distortions associated with concentration polarization and potential-driven interfacial dynamics.}
 \end{figure}
 
 \subsection{Direct comparison}
@@ -148,10 +163,13 @@ Once each spectrum was fitted with its respective Padé polynomial, a Kramers-Kr
 
 This validation confirms that the measured DEIS spectra meet the requirements of causality, stability, and linearity to a high degree of confidence, justifying subsequent physical-model fitting under the LTI assumption.
 
-\begin{figure}[H]
+The Akaike Information Criterion used to select the optimal Padé polynomial order for both galvanostatic and voltammetric datasets is shown in Figure \ref{fig:LTP_AIC}.
+
+\begin{figure}[h]
     \includegraphics[width=\textwidth]{figures/LTP/AIC_CC_and_CV.png}
-    \label{fig:validation AIC}
-    \caption{}
+    \label{fig:LTP_AIC}
+    \caption{Model-order selection via Akaike Information Criterion.
+    AIC values computed for Padé polynomial fits of increasing order for galvanostatic (CC) and cyclic voltammetry (CV) datasets. The minima identify the optimal trade-off between goodness of fit and model complexity.}
 \end{figure}
 
 \section{Summary and perspective}

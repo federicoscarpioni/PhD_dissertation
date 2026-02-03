@@ -5,7 +5,7 @@ Electrochemistry provides the fundamental framework for understanding the operat
 All essential processes in a battery (ion intercalation, charge transfer, solid-electrolyte interphase formation, and lithium plating) are governed by electrochemical thermodynamics and kinetics of the redox reactions occurring at the interfaces between electrodes and electrolyte. 
 The voltage, efficiency, power capability, and long-term stability of a cell are arise from these reactions and transport mechanisms taking place at these interfaces.
 
-To characterize these processes in electrochemistry, the Electrochemical Impedance Spectroscopy (EIS) technique is used for its capability of separating processing happining at different time scales in one single experiment while being non-destrucitve for the system and operating \emph{in situ}, meainig that system is kept in its state of operation (in contrast to other spectroscopy analysis that requires a specifi sample preparation). 
+To characterize these processes in electrochemistry, the Electrochemical Impedance Spectroscopy (EIS) technique is used for its capability of separating processing happining at different time scales in one single experiment while being non-destrucitve for the system and operating \emph{in situ}, meainig that system is kept in its state of operation (in contrast to other spectroscopy analysis that requires a specific sample preparation). 
 
 EIS does not probe isolated physicochemical phenomena, but rather the linearized response of a coupled system involving charge transfer, mass transport, and interfacial storage.
 A meaningful interpretation of impedance spectra therefore requires identifying which electrochemical processes can contribute to the measured response, over which time and length scales, and under which thermodynamic and kinetic assumptions.
@@ -321,7 +321,7 @@ The distinction between semi-infinite and finite-length diffusion is particularl
 
 With the linearization of electrochemical equation one obtains processes behaving like electrical elements connected in series or in parallel, depending on the system characteristics.
 To visualize the components, it is common to translate the set of equations into a circuit and use the lows of series and parallel connection of electrocal elements to obtain a simplified and linearized model of the interface.
-This approach was introduced by Randles [put citation] and it is the \emph{de facto} method to visualize models in scientific publications.
+This approach was introduced by Randles \ref{randles1947kinetics} \ref{randles1952kinetics} and it is the \emph{de facto} method to visualize models in scientific publications.
 
 The correspondence between electrochemical processes and their electrical analogues is summarized in Figure \ref{fig:interface-mechanisms-impedance}, where charge transfer, double-layer charging, and diffusion are mapped to resistive, capacitive, and dispersive circuit elements.
 
@@ -332,20 +332,6 @@ The correspondence between electrochemical processes and their electrical analog
     Charge-transfer kinetics, double-layer charging, and mass transport contribute distinct features to the impedance spectrum and can be represented using lumped circuit components.}
     \label{fig:interface-mechanisms-impedance}
 
-\end{figure}
-
-\section{Reference electrode in EIS}
-
-Using a reference electrode is both important for direct and alternate methods.
-
-Figure~\ref{fig:reference-electrode-impedance} illustrates the role of the reference electrode in separating the working electrode response from counter-electrode and electrolyte contributions, which is essential for reliable impedance measurements.
-
-\begin{figure}
-    \centering
-    \includegraphics[width =\textwidth]{figures/electrochemistry/reference electrode impedance.pdf}
-    \caption{Role of the reference electrode in electrochemical impedance measurements.
-    A stable reference electrode ensures that the measured impedance reflects the response of the working electrode alone, minimizing artefacts arising from counter-electrode polarization or uncompensated resistance.}
-    \label{fig:reference-electrode-impedance}
 \end{figure}
 
 \section{Validity and consistency of electrochemical impedance}
@@ -385,7 +371,7 @@ In electrochemistry, the KK relations provide a powerful consistency check:
 if an experimentally measured impedance violates KK relations beyond experimental uncertainty, at least one of the underlying assumptions of EIS has been violated.
 
 In practice, KK realations cannot be exaclty veryfied by the above equation since they require spectral information from zero to infinit frequency.
-On limited experimental data fitting a circuit of sereis of RC elements produces a close approximation. [Cite source paper and add something else]
+On limited experimental data fitting a circuit of sereis of RC elements produces a close approximation \cite{Boukamp_1995, orazemEIS,SCHONLEBER201420}.
 
 From an experimental standpoint, deviations from KK consistency can arise from several sources.
 Non-linearity of the system response, non-stationarity of the system or artivacts introduced by cell design or the electronic instrumentation.

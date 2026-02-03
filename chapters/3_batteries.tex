@@ -6,8 +6,8 @@ Lithium-ion batteries, in particular, have dominated the field due to their high
 % This chapter introduces the fundamental principles of rechargeable batteries, their active materials, performance metrics, and modern technological evolution. 
 % Emphasis is placed on lithium-ion batteries because they serve as the experimental platform in this work.
 
-Battery typically are modelled as black-box systems, defined solely by their input and output relations (current and voltage, respectivly).
-Electrochemical impedance spectroscopy serves as an ideal technique to monitor the internal resistance of the battery and to estimate its state of health (SOH).
+Battery typically are modelled as black-box systems, defined solely by their input and output relations (current and voltage, respectively).
+Electrochemical impedance spectroscopy serves as an ideal technique to monitor the internal resistance of the battery and to estimate its state of health (SOH) \cite{liuStateHealthEst,Hofmann_2023, QIAN2025125272}.
 Without the separation of electrodes, impedance measurements on batteries do not probe a single interface or reaction, but rather the collective response of multiple electrodes, electrolyte phases, and transport pathways embedded within a specific cell architecture.
 As a consequence, the measured impedance depends not only on intrinsic electrochemical properties, but also on the state of charge, operating history, and degradation state of the battery as a system.
 Hence, in contrast to classic electrochemical characterization, the impedance of battery is measured at different states and its difference is monitored, rater then solely consider its absolute value.
@@ -80,14 +80,14 @@ A 1C current charges or discharges the battery in 1 hour, while C/10 corresponds
 
 The type of Redox reaction at each of the battery electrodes can be of different nature.
 The first "pile" of Alessandro Volta was a battery using the electrodissolution and deposition of copper and zinc respectivly, while modern rechargible batteries are base on the much more efficient process of ion intercalation.
-These mechanisms are not specific to lithium-based systems and can, in principle, involve different alkali or multivalent ions depending on the electrolyte and host structure.
+These mechanisms are not specific to lithium-based systems and can, in principle, involve different alkali or multivalent ions depending on the electrolyte and host structure \cite{PAN2025184607}.
 
 \subsection{Intercalation}
 
 In intercalation, guest metallic ions reversibly insert into the crystal lattice of a host material without disrupting its structure. 
 This principles applied to inorganic materials where crystals planes are stacked and bound with electrostatic forces.
 When an element of the structure undergoes oxidation or reduction to balance the overall charge an ion inserts or it is removed from the interlayer volume.
-Example of such material crystal structure are octahedral transition metal oxides, olivines and spinel structures.
+Example of such material crystal structure are octahedral transition metal oxides, olivines and spinel structures \cite{KOECH2024321}.
 
 In layered oxides such as Cobalt or Manganese oxides, host ions occupy octahedral sites between transition-metal oxide layers. 
 The intercalation reaction can be written as
@@ -107,14 +107,14 @@ Silicon, for instance, forms a series of phases with lithium:
 \begin{equation}
     \mathrm{Si} + \beta \mathrm{Li}^+ + \beta e^- \rightleftharpoons \mathrm{Li}_\beta \mathrm{Si},
 \end{equation}
-where $\beta$ can range up to 4.4, giving a theoretical specific capacity of 4200~mAh~g$^{-1}$, nearly ten times that of graphite the state of the art of modern commercial batteries.
+where $\beta$ can range up to 4.4, giving a theoretical specific capacity of 4200~mAh~g$^{-1}$, nearly ten times that of graphite the state of the art of modern commercial batteries \cite{JAREER2025177124}.
 
 However, the dramatic volume expansion accompanying alloying ($\sim 300\%$ for silicon) induces mechanical stress, particle fragmentation and rapid electrode degradation. 
 Modern high-capacity anodes employ silicon-graphite composites  and carbon coatings with a small percentage of silicon to mitigate damages and maintain electrical contact across cycling.
 
 \subsection{Conversion}
 
-Conversion reactions involve reduction of a metal oxide or fluoride to metallic form, coupled with oxide/fluoride ion migration. 
+Conversion reactions involve reduction of a metal oxide or fluoride to metallic form, coupled with oxide/fluoride ion migration \cite{Gao_2024}. 
 These reactions typically exhibit multiple voltage plateaus corresponding to sequential reduction steps and offer very high theoretical capacities. 
 However, conversion materials suffer from large voltage hysteresis, low coulombic efficiency and rapid capacity fade due to electrolyte decomposition and material restructuring during cycling. Consequently, they remain largely in research phase and are not employed in commercial cells.
 
@@ -122,7 +122,7 @@ However, conversion materials suffer from large voltage hysteresis, low coulombi
 
 Ions can be also converted directly to their metallic form tand avoid any host structure through electrodeposition and dissolution of the metal itself. 
 Lithium metal as negative electrode offers the highest specific capacity (3861~mAh~g$^{-1}$) and lowest potential for lithium-ion batteries, enabling very high energy density cells. 
-Also sodium and other alkali metals provide similar benefits for their respective battery chemistries. 
+Also sodium and other alkali metals provide similar benefits for their respective battery chemistries \cite{brunklausMetalElectrodeNextGen2024}. 
 However, metallic deposition is prone to dendritic growth, which increases surface area and accelerates electrolyte decomposition and loss of active material, reducing cycle life and raising safety concerns.
 
 % \section{State of the art of intercalation materials}
@@ -158,24 +158,24 @@ However, metallic deposition is prone to dendritic growth, which increases surfa
 
 % Lithium metal has the highest specific capacity and lowest potential but is prone to dendritic deposition, limiting its use with liquid electrolytes. Solid-state electrolytes, a technology under strong development, aim to stabilize its operation, but to this time the cycle life remains low.
 
-\subsection{Electrode porosity}
+% \subsection{Electrode porosity}
 
-In intercalation materials, the rate capability is governed by solid-state diffusion of the guest ions. The diffusion equation for concentration $c(x,t)$ inside a spherical particle of radius $R$ is
-\begin{equation}
-    \frac{\partial c}{\partial t} = D_s \left( \frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial c}{\partial r}\right)\right),
-\end{equation}
-with $D_s$ the solid diffusion coefficient. 
-A characteristic diffusion time is
-\begin{equation}
-    \tau_D = \frac{R^2}{D_s}.
-\end{equation}
-This time constant critically affects high-rate performance and appears later in impedance spectra as finite-length diffusion elements.
+% In intercalation materials, the rate capability is governed by solid-state diffusion of the guest ions. The diffusion equation for concentration $c(x,t)$ inside a spherical particle of radius $R$ is
+% \begin{equation}
+%     \frac{\partial c}{\partial t} = D_s \left( \frac{1}{r^2} \frac{\partial}{\partial r}\left(r^2 \frac{\partial c}{\partial r}\right)\right),
+% \end{equation}
+% with $D_s$ the solid diffusion coefficient. 
+% A characteristic diffusion time is
+% \begin{equation}
+%     \tau_D = \frac{R^2}{D_s}.
+% \end{equation}
+% This time constant critically affects high-rate performance and appears later in impedance spectra as finite-length diffusion elements.
 
 \section{Electrolytes}
 
 Electrolytes must provide high ionic conductivity, wide electrochemical stability and compatibility with both electrodes.
 
-Most Li-ion cells use organic carbonate solvents (EC, DEC, EMC) with lithium salts such as LiPF$_6$. 
+Most Li-ion cells use organic carbonate solvents (EC, DEC, EMC) with lithium salts such as LiPF$_6$ \cite{brunklausMetalElectrodeNextGen2024}. 
 Their voltage stability window extends to $\sim 4.5-5.0$ V vs Li but decompose at low potentials, forming the SEI.
 
 The ionic conductivity
@@ -186,12 +186,48 @@ depends on mobility, concentration and viscosity.
 Solvent mixtures balance stability and conductivity.
 
 Aqueous electrolytes have excellent conductivity but a thermodynamic stability window around 1.23 V. 
-Highly concentrated systems (“water-in-salt”) extend this window to $\sim 3$ V by reducing water activity.
+Highly concentrated systems (“water-in-salt”) extend this window to $\sim 3$ V by reducing water activity \cite{PHOGAT2025117314}.
 
+\section{Solid Electrolyte Interphase (SEI)}
+
+The solid electrolyte interphase (SEI) is a nanometer-scale passivation layer that forms spontaneously on the surface of negative electrodes in non-aqueous alkali-ion batteries when the electrode potential falls outside the thermodynamic stability window of the electrolyte.
+It originates from the reductive decomposition of electrolyte components, including solvents, salts, and additives, and is a defining feature of lithium-ion and sodium-ion battery operation.
+
+Although initially regarded as a static and protective film, the SEI is now understood as a chemically and structurally heterogeneous, dynamically evolving interphase whose properties strongly depend on electrode material, electrolyte composition, operating conditions, and cycling history.
+Its formation and evolution govern several key battery characteristics, including irreversible capacity loss, Coulombic efficiency, rate capability, and long-term degradation.
+
+\subsection{Formation and composition}
+
+SEI formation occurs predominantly during the first reduction of a negative electrode, when the electrode potential approaches the reduction potential of the electrolyte.
+At this stage, electrolyte components undergo electrochemical and chemical reactions that generate insoluble products, which precipitate onto the electrode surface and form a passivating layer.
+Typical inorganic SEI constituents include LiF, Li$_2$CO$_3$, Li$_2$O, and Li$_2$SO$_3$, while organic components often consist of polymeric or oligomeric species derived from solvent decomposition \ref{WU2025102124}.
+
+The resulting SEI is generally described as a multilayer structure, with an inorganic-rich inner layer in contact with the electrode and a more organic, polymeric outer layer interfacing with the electrolyte.
+This structure is not uniform across the electrode surface and varies locally depending on surface chemistry, morphology, and current distribution.
+
+\subsection{Functional role in battery operation}
+
+From a functional standpoint, the SEI must satisfy two conflicting requirements:
+it must be electronically insulating to prevent continuous electrolyte reduction, while remaining sufficiently permeable to Li$^+$ or Na$^+$ ions to enable reversible charge transfer.
+When these conditions are met, the SEI stabilizes the electrode--electrolyte interface and enables long-term cycling.
+
+However, the SEI is not thermodynamically stable.
+Mechanical stress induced by electrode volume changes, temperature fluctuations, current density gradients, and continued electrolyte reactions lead to continuous restructuring, thickening, and partial dissolution of the SEI during battery operation.
+As a consequence, SEI growth is one of the primary contributors to capacity fade and impedance increase in alkali-ion batteries.
+
+\subsection{SEI as a dynamic, non-stationary interphase}
+
+Crucially for this work, the SEI cannot be treated as a static element with fixed properties.
+Its resistance, capacitance, and transport characteristics evolve with time, state of charge, current direction, and cycling history.
+Processes such as SEI cracking and reformation, electrolyte consumption, and accumulation of resistive inorganic phases introduce slow but continuous changes in interfacial kinetics.
+
+These time-dependent changes directly affect the electrochemical impedance response of the system.
+In classical stationary electrochemical impedance spectroscopy (EIS), SEI-related features are typically represented by one or more resistive--capacitive elements, often lumped together with charge-transfer processes \cite{Morasch_2024}.
+However, such representations implicitly assume stationarity and therefore obscure transient or history-dependent interfacial phenomena.
 
 \section{Degradation mechanisms}
 
-Battery degradation arises from a combination of chemical, mechanical and interfacial processes that progressively reduce the accessible lithium inventory, active material and ionic/electronic transport pathways. The evolution of degradation with cycling or calendar time directly determines the state of health (SOH). Although multiple mechanisms coexist, they are commonly grouped into three major families: loss of shuttling ions (in LIBs called loss lithium inventory or LLI), loss of active material (LAM) and impedance growth.
+Battery degradation arises from a combination of chemical, mechanical and interfacial processes that progressively reduce the accessible lithium inventory, active material and ionic/electronic transport pathways. The evolution of degradation with cycling or calendar time directly determines the state of health (SOH). Although multiple mechanisms coexist, they are commonly grouped into three major families: loss of shuttling ions (in LIBs called loss lithium inventory or LLI), loss of active material (LAM) and impedance growth \cite{JEON2025237242}.
 Figure \ref{fig: overview degradation LIBs} summarized schematically the main degradation mechanisms for a lithium ion battery and the to witch group the are classified.
 
 \begin{figure}
@@ -222,9 +258,9 @@ Graphite particles also undergo structural degradation under fast cycling due to
 
 \subsection{Impedance growth}
 
-With aging, the ohmic, charge-transfer and diffusion-related impedance components increase due to:
+With aging, the ohmic, charge-transfer and diffusion-related impedance components increase \cite{KIANI2023157638} due to:
 \begin{itemize}
-    \item thickening of interphases at both electrodes (SEI and CEI),
+    \item thickening of SEI,
     \item buildup of resistive reaction products,
     \item loss of electrolyte conductivity,
     \item increase of charge-transfer resistance due to surface restructuring,

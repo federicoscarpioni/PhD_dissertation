@@ -44,12 +44,16 @@ The online processing of the multi-frequency signals is possible thanks to a sof
 The online processing consist of the object \verb|PicoCalculator|, part of the \verb|DEIStools| module, which adds the possibilty of excecuting operations on the data streamed by the PicoScope device.
 On its core, it simply adds in the streaming loop a condition that checks if the buffed data is long enough (i.e. the window of the STFT) to be processed.
 The baseline of the signal is removed before excecuting the algorithm and no bell-shaped function is multiplied since it makes no difference for system drifting slowly as for the system studied in Chapter \ref{chap:coins}.
-The workflow is schematically reported in Figure \ref{fig:DEIS automation workflow online}.
+
+The combination of on-line and off-line impedance estimation requires a carefully structured data-processing pipeline.
+High-frequency components must be extracted immediately to reduce storage requirements, while low-frequency components must be preserved for later analysis.
+This separation imposes a strict ordering of operations on the streamed data and motivates the hybrid processing architecture illustrated in Figure \ref{fig:DEIS automation workflow online}.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/acquisition/deis_workflow_online_calc.png}
-    \caption{Schematics of the signal flow in an automated dynamic impedance spectroscopy experiment with online calculation of the high frequencies impedance.}
+    \caption{Data-flow architecture for dynamic impedance spectroscopy with on-line estimation of the high-frequency impedance band.
+    Voltage and current signals are streamed continuously, processed in short-time windows for STFT-based impedance estimation, filtered to remove high-frequency components, and downsampled for subsequent off-line DMFA analysis of the low-frequency band.}
     \label{fig:DEIS automation workflow online}
 \end{figure}
 
@@ -65,10 +69,15 @@ When a voltage and current blocks of data equivalent to the window length are ac
     \item decimate the signals and store them.
 \end{itemize}
 The user must choose the low-pass filter critical frequency to remove all the frequency components estimated with the STFT method. 
-The strategy is summarized in Figure \ref{fig:online processing scheme}.
+
+The individual signal-processing steps performed during on-line computation are summarized in Figure\ref{fig:online processing scheme}.
+The figure highlights the separation between real-time operations, which must be computationally lightweight, and deferred processing steps executed off-line.
+
 \begin{figure}[H]
     \includegraphics[width = \textwidth]{figures/estimation/computation_scheme.png}
-    \caption{Schematics of the on-line processing.}
+    \caption{Schematic representation of the on-line signal-processing pipeline.
+    Each acquired data block is detrended, transformed to the frequency domain, and used to estimate the high-frequency impedance via STFT.
+    After low-pass filtering, the signals are transformed back to the time domain, downsampled, and stored for off-line DMFA analysis of the low-frequency impedance band.}
     \label{fig:online processing scheme}
 \end{figure}
 
@@ -83,7 +92,8 @@ In Appendix \ref{app:deis meas script} are reported examples on how to write scr
 
 \subsection{Software limits}
 
-Electrochemical methods applied to energy storage devices usually apply a drift between upper and lower limit of voltage (either in cyclic voltammetry or galvanostatic) or current (in potentiostatic).
+The presence of a broadband excitation superimposed on a drifting operating point complicates the definition of voltage and current limits.
+Generally, electrochemical methods apply an external perturbation between upper and lower limit of voltage (either in cyclic voltammetry or galvanostatic) or current (in potentiostatic).
 When a multisine is applyed on top of the drift, it is important to know the average of the signals to accuratley compare it with the chosen limit instead of solely their latest value.
 In this work I implemented an avarage signal calculator based on 
 This avarage limit can be added to \verb|DEISChannel| (see Appendix \ref{app:deis meas script}) on the values working electrode voltage, cell voltage or current returned by the potentiostat.
@@ -93,29 +103,37 @@ When the object \verb|PicoCalculator| is used for the online computation of the 
 Before implementing the STFT online in the acquisition dataflow, I simulated the process offline to very that the ouput of the STFT and downsampling procedure was not altering the impedance.
 As example dataset I used the multi-frequency charging voltage and current obtained from a galvanostatic experiment at C/10 C-rate with a multisine in the range 10mHz-1kHz.
 The cell used for the experiment is a lithium-ion coin cell of the same type used in the study prosented in Chapter \ref{chap:coins}.
+Figure~\ref{fig:downsampling validation} compares the original and processed signals in both the time and frequency domains.
+As a low-pass filter I applied a Bessel filter - of order 7 and cut-off frequency 100 Hz - on data block of 100 s length.
 
-Firstly, I verified that the downsampling and filtering was not causing any alteration of the frequency component, as reportedin figure \ref{fig:downsampling validation}.
-As a low-pass filter I applied a Bessel filter - of order 7 and cut-off frequency 100 Hz - on data block of 100 s lenght.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 0.45\textwidth]{figures/estimation/orginal vs downsampled voltage charge.png}
     \includegraphics[width = 0.45\textwidth]{figures/estimation/orignal vs voltage DFT.png}
-    \caption{Validation of frequincy content after downsampling.}
+    \caption{Validation of spectral integrity after filtering and downsampling.
+    Left: comparison of the original and downsampled voltage signals in the time domain.
+    Right: corresponding Fourier spectra demonstrating preservation of the excitation frequencies and absence of spectral distortion introduced by the processing chain.}
     \label{fig:downsampling validation}
 \end{figure}
 
 I estimated the impednace for all the frequencies in the multisine with the DMFA on the original dataset; then the impedance of high frequencies impedance on consecutive data windows with the STFT and estimated the low frequencies impedance on the downsample signals with the DMFA.
-The coimparison in Figure \ref{fig: hybrid method validation} shows that no distortion is introduced by the low-pass filtering.
+To validate the hybrid impedance estimation approach, the impedance obtained from the combined STFT--DMFA method was compared against a reference impedance estimated using DMFA alone on the full-resolution dataset.
+The results of this comparison are shown in Figure~\ref{fig: hybrid method validation}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width = \textwidth]{figures/estimation/mixed method validation.png}
-    \caption{The use of a hybrid impedance esetimation method with STFT and DMFA gives the same result as using the DMFA for all the frequencies.}
+    \caption{Validation of the hybrid impedance estimation method.
+    Impedance spectra obtained using the combined STFT (high-frequency band) and DMFA (low-frequency band) approach are compared with reference spectra estimated using DMFA alone.
+    The agreement across the entire frequency range confirms that the on-line processing and downsampling do not introduce measurable distortion.}
     \label{fig: hybrid method validation}
 \end{figure}
 
 \section{Summary and limitations}
+This chapter presented a hybrid strategy for estimating non-stationary electrochemical impedance over an extended frequency range.
+By combining on-line STFT-based estimation for the high-frequency band with off-line DMFA for the low-frequency band, it is possible to reduce data volume by several orders of magnitude while preserving spectral accuracy.
+This approach enables continuous broadband impedance tracking during long-duration experiments such as battery aging.
 The use of a hybrid impedance estimation method allows for a real braod-band dynamic impedance spectroscopy to characterize the full spectrum of energy storage systems tyhat respond over multiple decades (7-8).
 While the idea is valid, the practical implementation has some limitation due to the technical characteristic of the setup used.
 Firstly, the ammount of calculations and memory managment could be optimized.

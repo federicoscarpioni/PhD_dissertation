@@ -49,12 +49,20 @@ The combination of on-line and off-line impedance estimation requires a carefull
 High-frequency components must be extracted immediately to reduce storage requirements, while low-frequency components must be preserved for later analysis.
 This separation imposes a strict ordering of operations on the streamed data and motivates the hybrid processing architecture illustrated in Figure \ref{fig:DEIS automation workflow online}.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figures/acquisition/deis_workflow_online_calc.png}
     \caption{Data-flow architecture for dynamic impedance spectroscopy with on-line estimation of the high-frequency impedance band.
     Voltage and current signals are streamed continuously, processed in short-time windows for STFT-based impedance estimation, filtered to remove high-frequency components, and downsampled for subsequent off-line DMFA analysis of the low-frequency band.}
     \label{fig:DEIS automation workflow online}
+\end{figure}
+
+\begin{figure}[h]
+    \includegraphics[width = \textwidth]{figures/estimation/online_software_objects_scheme.pdf}
+    \caption{Object-oriented software architecture for dynamic impedance acquisition with online computation of the impedance.
+    Each instrument is encapsulated in a dedicated worker object, coordinated by a central control loop inside DEISChannel.
+    This modular design enables synchronization, extensibility, and hardware abstraction across different experimental configurations.}
+    \label{fig:objects composition online calculation}
 \end{figure}
 
 \subsection{Details of the data processing}
@@ -73,7 +81,7 @@ The user must choose the low-pass filter critical frequency to remove all the fr
 The individual signal-processing steps performed during on-line computation are summarized in Figure\ref{fig:online processing scheme}.
 The figure highlights the separation between real-time operations, which must be computationally lightweight, and deferred processing steps executed off-line.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \includegraphics[width = \textwidth]{figures/estimation/computation_scheme.png}
     \caption{Schematic representation of the on-line signal-processing pipeline.
     Each acquired data block is detrended, transformed to the frequency domain, and used to estimate the high-frequency impedance via STFT.

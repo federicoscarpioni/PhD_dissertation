@@ -358,6 +358,13 @@ BioLogic EC-Lab or EC-Lab Express don't allow to automate this process even usin
 Luckily BioLogic provides a simple Software Development Kit to communicate with the potentiostats using various programming languages, which I expanded into a more sofisticated object-oriented Python library that I called \verb|pyeclab|\footnote{Available at https://github.com/federicoscarpioni/pyeclab}.
 Through the \verb|Channel| object, the status and data points are recurcively retrieved from each channel of the potentiast to the computer program converts, store, and plot data, and excecutes a \emph{callback} function when a techniques is finished. 
 
+\marginpar{
+    \centering
+    \includegraphics[width=0.8\marginparwidth]{figures/acquisition/general object.pdf}
+    \captionof{figure}{Structure of a generic object as used in object oriented programming (OOP).}
+    \label{fig:object}
+}
+
 The callback is the heart of the autamtion because allows to trigger special behaviour of the program excecution.
 To syncronize actions to the waveform generator \footnote{Available at https://github.com/federicoscarpioni/trueformawg} and the scope \footnote{Availabel at https://github.com/federicoscarpioni/pypicostreaming}, I developed python libraries for both.
 
@@ -365,9 +372,10 @@ A chomprehensive library is then used to coordinate the devices, called \verb|DE
 The \verb|DEISchannel| object provided in it coordinates the workflow of the set-up according to Figure \ref{fig:objects composition}.
 
 \begin{figure}[h]
-    \includegraphics[width = \textwidth]{figures/acquisition/software_object_scheme_hand_draft.jpg}
+    \centering
+    \includegraphics[width = 0.7\textwidth]{figures/acquisition/software_object_scheme.pdf}
     \caption{Object-oriented software architecture for dynamic impedance acquisition.
-    Each instrument is encapsulated in a dedicated worker object, coordinated by a central control loop.
+    Each instrument is encapsulated in a dedicated worker object, coordinated by a central control loop inside DEISChannel.
     This modular design enables synchronization, extensibility, and hardware abstraction across different experimental configurations.}
     \label{fig:objects composition}
 \end{figure}

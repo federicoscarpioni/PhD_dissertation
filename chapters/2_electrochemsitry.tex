@@ -324,9 +324,16 @@ In the Bode plot, the magnitude $|Z(\omega)|$ and phase $\phi(\omega)$ are displ
 
 Alternatively, the Nyquist plot represents the negative imaginary part of the impedance as a function of its real part for each excitation frequency. Each point on the curve corresponds to a specific frequency, although frequency is not explicitly shown on the axes. For electrochemical systems, this representation is often preferred because it allows a direct geometric interpretation of the impedance. Ohmic resistances appear as intercepts on the real axis, while interfacial processes characterized by parallel resistance-capacitance elements produce semicircular arcs whose diameter corresponds to the associated resistance. Diffusion-controlled processes generate straight lines or curved tails at approximately $45^\circ$ or tending toward the vertical direction at low frequency.
 
-For complex electrochemical systems containing multiple overlapping processes, the Nyquist representation provides an immediate visual assessment of the relative contributions of resistive and capacitive elements and of their evolution with operating conditions. For this reason, Nyquist plots are used extensively throughout this work to analyze time-varying impedance data.
+For complex electrochemical systems containing multiple overlapping processes, the Nyquist representation provides an immediate visual assessment of the relative contributions of resistive and capacitive elements and of their evolution with operating conditions. For this reason, Nyquist plots are used extensively throughout this work to analyze time-varying impedance data. A comparison between Bode and Nyquist is provided in Figure \ref{fig:bode_vs_nyquist}.
 
 When interpreting Nyquist plots geometrically, it is essential that the real and imaginary axes are plotted with identical scaling. Only with equal axis scaling do semicircles, straight diffusion lines, and intercepts retain their correct geometric meaning; any distortion of the aspect ratio can lead to misinterpretation of resistances and time constants.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width =\textwidth]{figures/electrochemistry/circuit_example_bode_nyquist.pdf}
+    \caption{Different representation of the same impedance with two types of visualization. The Bode plot shows separatly phase and amplitude as function of frequency while the Nyquist plot shows the impedance in the complex plane keeping the frequency implicit. The simulated circuits is made of two R//C elements in series followed by a semi-infinite Warburg element.}
+    \label{fig:bode_vs_nyquist}
+\end{figure}
 
 \section{Equivalent circuit models}
 

@@ -212,11 +212,11 @@ The separation of charge across the compact and diffuse layers gives rise to the
 Electrochemical methods are broadly classified into direct current (DC) and alternating current (AC) techniques. 
 This distinction highlights a crucial difference: DC methods typically probe macro-kinetic \footnote{overall, measured reaction rate that accounts for all physical steps (charge transfer, diffusion, ohmic losses) at the scale of the entire electrode} and thermodynamic parameters under large perturbations, while AC methods resolve specific interfacial mechanisms under small-signal control (perturbative).
 
-\subsection{DC Methods: Macro-Kinetics and Device Performance}
+\subsection{DC methods}
 
 Direct current (DC) methods involve applying a constant or time-varying potential or current to the cell.
 
-Historically, Cyclic Voltammetry (CV) has been fundamental in electroanalytical chemistry, probing the thermodynamic potential window of redox species and characterizing chemical reversibility. 
+Historically, cyclic voltammetry (CV) has been fundamental in electroanalytical chemistry, probing the thermodynamic potential window of redox species and characterizing chemical reversibility. 
 
 An alternative approach to voltage-controlled techniques is the potentiostatic method, in which the electrode potential is held constant. 
 This approach fixes the \emph{thermodynamic driving force} (the overpotential, $\eta$) and allows the resulting current response to be solely governed by the rate-limiting kinetic and transport processes.
@@ -224,25 +224,25 @@ It is used, for example, in electrolyzers or fuel cells.
 The current output varies depending on the interface electrochemistry so the methods are also called chrono-amperometry. 
 This is ideal for studying reaction mechanisms where the interfacial potential needs to be tightly controlled. 
 
-In contrast, Galvanostatic methods apply a constant current to the cell. 
+In contrast, galvanostatic methods apply a constant current to the cell. 
 This is the standard method for simulating battery operation, yielding data for device-relevant metrics such as capacity, energy density, and cycle life, rather than isolated fundamental kinetic parameters.
 
-\subsection{AC Methods: Small-Signal Dynamic Analysis}
+\subsection{AC methods}
 
 The use of AC signals originated from the need to resolve the electrified double-layer. 
-Early work, dating back to Kohlrausch, showed that by using high-frequency AC signals, the large interfacial capacitance could be "short-circuited," allowing the isolation of the pure ohmic resistance of the electrolyte. 
-Crucially, the frequency-dependent measurements of capacitance provided direct experimental evidence for the EDL, demonstrating that AC techniques are unique in their ability to resolve fundamental physical elements based on their distinct \emph{time constants} ($\tau = RC$).
+Early work, dating back to Kohlrausch, showed that by using high-frequency AC signals, the large interfacial capacitance could be \"short-circuited\", allowing the isolation of the pure ohmic resistance of the electrolyte. 
+Crucially, the frequency-dependent measurements of capacitance provided direct experimental evidence for the electrical double-layer, demonstrating that AC techniques are unique in their ability to resolve fundamental physical elements based on their distinct \emph{time constants} ($\tau = RC$).
 
-\subsubsection{Electrochemical Impedance Spectroscopy (EIS)}
+\subsubsection{Electrochemical impedance spectroscopy}
 \label{sec:EIS}
 
-Electrochemical Impedance Spectroscopy (EIS) is a non-destructive technique that employs a small-amplitude sinusoidal perturbation (typically $\pm 5-10 \text{ mV}$) applied over a wide range of frequencies. 
+Electrochemical impedance spectroscopy (EIS) is a non-destructive technique that employs a small-amplitude sinusoidal perturbation (typically $\pm 5-10 \text{ mV}$) applied over a wide range of frequencies. 
 The impedance is the frequency dependent function:
 \begin{equation}
     Z(\omega) = \frac{\tilde{E}(\omega)}{\tilde{I}(\omega)},
 \end{equation}
 where $\omega$ is the angular frequency.
-The tilde notation over $\tilde{E}$ and $\tilde{I}$ denotes the phasor representation proposed by Orazem and Tribollet.
+The tilde notation over $\tilde{E}$ and $\tilde{I}$ denotes the phasor representation proposed by Orazem and Tribollet \cite{orazemEIS}.
 By varying the frequency of the sinusoidal perturbation, the impedance response of different interfacial processes is measured; hence the name spectroscopy.
 The primary advantage of impedance spectroscopy is its ability to separate and quantify phenomena occurring at vastly different time scales without altering the system state.
 
@@ -254,11 +254,11 @@ The representation of the interface as charge-transfer resistance $R_{\mathrm{ct
 
 Before the advent of microcomputers in the 70s, impedance was estimated frequency by frequency manually with the aid of an analog circuit called lock-in amplifier.
 The impedance $Z(\omega_k)$ is calculated from the amplitude ratio and phase shift $\Delta\phi$ between input (reference) and output signals using the formula 
-$$
+\begin{equation}
 Z(\omega_k) = \frac{A_I}{A_O}e^{j\omega\Delta\phi}.
-$$
+\end{equation}
 
-Later, digital signal processing was integrated into microcontrollers, creating the digital Frequency Response Analyzer (FRA) capable of automatic frequency sweeping, averaging, automatic current range selection, and application of voltage or current bias (Solartron 1174 in 1978 and Solartron 1250 in 1983). 
+Later, digital signal processing was integrated into micro-controllers, creating the digital Frequency Response Analyzer (FRA) capable of automatic frequency sweeping, averaging, automatic current range selection, and application of voltage or current bias (Solartron 1174 in 1978 and Solartron 1250 in 1983). 
 These instruments set the standard for impedance measurements that we still find today in commercial devices. 
 
 \subsection{Linearisation and charge-transfer resistance}
@@ -317,11 +317,22 @@ where $\tau_D = L^2/D$ is the characteristic diffusion time for a layer of thick
 Diffusion-related impedance elements are essential for interpreting battery electrode behaviour, where mass transport in the electrolyte, within porous electrode structures, and through solid particles strongly influences the dynamic response. 
 The distinction between semi-infinite and finite-length diffusion is particularly important when analyzing non-stationary or transient impedance measurements, as the effective diffusion domain may change with state of charge, cycling history, or electrode microstructure.
 
+\subsection{Visualize impedance}
+
+The complex impedance can be represented graphically in two equivalent forms: the Bode representation and the Nyquist representation.
+In the Bode plot, the magnitude $|Z(\omega)|$ and phase $\phi(\omega)$ are displayed as functions of frequency on logarithmic axes. This format is particularly useful for identifying characteristic time constants and separating processes occurring over different frequency decades.
+
+Alternatively, the Nyquist plot represents the negative imaginary part of the impedance as a function of its real part for each excitation frequency. Each point on the curve corresponds to a specific frequency, although frequency is not explicitly shown on the axes. For electrochemical systems, this representation is often preferred because it allows a direct geometric interpretation of the impedance. Ohmic resistances appear as intercepts on the real axis, while interfacial processes characterized by parallel resistance-capacitance elements produce semicircular arcs whose diameter corresponds to the associated resistance. Diffusion-controlled processes generate straight lines or curved tails at approximately $45^\circ$ or tending toward the vertical direction at low frequency.
+
+For complex electrochemical systems containing multiple overlapping processes, the Nyquist representation provides an immediate visual assessment of the relative contributions of resistive and capacitive elements and of their evolution with operating conditions. For this reason, Nyquist plots are used extensively throughout this work to analyze time-varying impedance data.
+
+When interpreting Nyquist plots geometrically, it is essential that the real and imaginary axes are plotted with identical scaling. Only with equal axis scaling do semicircles, straight diffusion lines, and intercepts retain their correct geometric meaning; any distortion of the aspect ratio can lead to misinterpretation of resistances and time constants.
+
 \section{Equivalent circuit models}
 
 The linearization of the electrochemical equations yields processes that behave as electrical elements connected in series or parallel, depending on the system characteristics.
 To visualize the components, one typically translates the set of equations into a circuit and applies the laws of series and parallel connection of electrical elements to obtain a simplified and linearized model of the interface.
-This approach was introduced by Randles \ref{randles1947kinetics} \ref{randles1952kinetics} and it is the \emph{de facto} method to visualize models in scientific publications.
+This approach was introduced by Randles \cite{randles1947kinetics} \cite{randles1952kinetics} and it is the \emph{de facto} method to visualize models in scientific publications.
 
 The correspondence between electrochemical processes and their electrical analogues is summarized in Figure \ref{fig:interface-mechanisms-impedance}, where charge transfer, double-layer charging, and diffusion are mapped to resistive, capacitive, and dispersive circuit elements.
 
@@ -371,6 +382,6 @@ In electrochemistry, the KK relations provide a powerful consistency check:
 if an experimentally measured impedance violates KK relations beyond experimental uncertainty, at least one of the underlying assumptions of EIS has been violated.
 
 In practice, KK relations cannot be exactly verified by the above equation because they require spectral information from zero to infinite frequency.
-Fitting experimental data to a circuit consisting of a series of RC elements produces a close approximation \cite{Boukamp_1995, orazemEIS,SCHONLEBER201420}.
+Fitting experimental data to a circuit consisting of a series of RC elements produces a close approximation to the formula and it is usually referred as a KK test \cite{Boukamp_1995, orazemEIS,SCHONLEBER201420}.
 
-From an experimental standpoint, deviations from KK consistency can arise from several sources: nonlinearity of the system response, non-stationarity of the system, or artifacts introduced by cell design or the instrumentation electronics.
+From an experimental standpoint, deviations from KK consistency can arise from several sources: non-linearity or non-stationarity of the system, artifacts introduced by cell design, or the instrumentation electronics.

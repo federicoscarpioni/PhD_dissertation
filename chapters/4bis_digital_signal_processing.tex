@@ -5,35 +5,35 @@ As a consequence, impedance is not directly observed, but estimated through sign
 The accuracy, resolution, and physical validity of impedance measurements therefore depend not only on the electrochemical system and the applied excitation, but also on the underlying signal processing assumptions.
 While system theory defines impedance as the frequency response of a linear system, digital signal processing determines how this response can be experimentally accessed in practice.
 
-This chapter introduces the signal processing concepts required to manipulate discrete digital signals, including the concept Fourier transform, spectral leakage, and noise considerations.
+This chapter introduces the signal processing concepts required to manipulate discrete digital signals, including the discrete Fourier transform, spectral leakage, and noise considerations.
 These tools form the basis for understanding both classical impedance spectroscopy and the advanced time-resolved methods discussed in the following chapters.
 
 \section{Sampling and quantization}
-In real world any quantity changes continuously in time. 
-When performing an experiment, the scientist measures the values of those quantities with instrumentation at a specific point in time.  
-In practice, the electronic circuit digitally recording analog signals is called analog-to-digital converted (ADC) and it is a staple in digital signal processing.
+In the real world, any quantity changes continuously in time. 
+When performing an experiment, the scientist measures the values of those quantities with instrumentation at specific points in time.
+In practice, the electronic circuit that digitally records analog signals is called an analog-to-digital converter (ADC) and is a staple in digital signal processing.
 
 Any digital measurement system samples a continuous signal $x(t)$ at discrete times $t=nT_s$, producing $x[n]$. 
-The most important parameter to consider in sampling is the time interval or its reciprocal: the sampling frequency $f_s=1/T_s$.
-To analyze the spectral content of a signal, the sampling frequency must be at least two folds the frequency of the highest oscillation components. This is know as Nyquist-Shannon sampling theorem. Sampling below this threshold causes higher-frequency components to “fold” back into lower frequencies—a phenomenon known as aliasing—which corrupts the true spectral content of the signal.
+The most important parameter to consider in sampling is the time interval or its reciprocal: the sampling frequency $f_s = 1/T_s$.
+To analyze the spectral content of a signal, the sampling frequency must be at least twice the highest oscillation frequency. This is known as the Nyquist--Shannon sampling theorem. Sampling below this threshold causes higher-frequency components to "fold" back into lower frequencies—a phenomenon known as aliasing—which corrupts the true spectral content of the signal.
 
 \section{Discrete Fourier Transform}
-After acquiring a digital signal, the role of digital signal processing is to analyze or act on the frequency components of the it.
-As introduced in the previous chapter, the Fourier Transform is used for the spectral analysis of signals, that is the process of decomposing a time-domain signal into its constituent frequencies and quantifying the amplitude and phase associated with each. 
+After acquiring a digital signal, the role of digital signal processing is to analyze or act on the frequency components of the signal.
+As introduced in the previous chapter, the Fourier Transform is used for spectral analysis of signals, which is the process of decomposing a time-domain signal into its constituent frequencies and quantifying the amplitude and phase associated with each.
 
 One converts a signal $x(t)$ or $x[n]$ into $X(\omega)$ or $X[k]$, revealing how its energy or variance is distributed across frequency. 
 
-Since digital signals are discrete vectors in practice it is used the discrete version of the Fourier transform called simply discrete Fourier transform (DFT) and has the form
-$$
-F(\omega)=\sum_{0}^{n-1} x[n] e^{-j2\pi kn/N}.
-$$
-The inverse descrete Fourier transform (iDFT) takes the form:
-$$
-F(\omega)= \frac{1}{N} \sum_{0}^{n-1} x[n] e^{j2\pi kn/N}.
-$$
+Since digital signals are discrete vectors, the discrete version of the Fourier transform is used, called the discrete Fourier transform (DFT):
+\begin{equation}
+X[k]=\sum_{n=0}^{N-1} x[n] e^{-j2\pi kn/N}.
+\end{equation}
+The inverse discrete Fourier transform (iDFT) takes the form:
+\begin{equation}
+x[n]= \frac{1}{N} \sum_{k=0}^{N-1} X[k] e^{j2\pi kn/N}.
+\end{equation}
 
-The discrete Fourier transform of a signal is calculated in a computer using the Fast Fourier Transform algorithm, the most efficient implementation from Colley and Tukey.
-The complexity of the problem is $O(N\log N)$ compare to the $O(N^2)$ of the direct summation, although it requires the length of the input signal to be equal to $2^n$ with n integer number.
+The discrete Fourier transform of a signal is calculated in a computer using the Fast Fourier Transform (FFT) algorithm, the most efficient implementation developed by Cooley and Tukey.
+The computational complexity is $O(N\log N)$ compared to the $O(N^2)$ of direct summation, although it requires the signal length to be a power of 2, i.e., $N = 2^n$ for some integer $n$.
 
 % \subsection{Short-time Fourier Transform (STFT)}
 
@@ -59,35 +59,35 @@ The complexity of the problem is $O(N\log N)$ compare to the $O(N^2)$ of the dir
 
 \subsection{Spectral leakage}
 
-Spectral leakage is the effect typical in the Discrete Fourier Trasnform of "leaking" or "spilling" of spectral components into neighboring frequency bins, producing spurious components where the spectra baseline should be flat (to noise level). 
-Multiple causes produce spectral leakage. 
-The most typical is due to a discrete signal x[n] that does not contain an integer number of periods of the oscillatory components. 
-Other causes of spectral leakage derive from practical hardware limitations such or user errors in the choice on the design of the experiment such as:
+Spectral leakage is the effect in the Discrete Fourier Transform of spectral components "leaking" or "spilling" into neighboring frequency bins, producing spurious components where the spectrum baseline should be flat (at noise level).
+Multiple causes produce spectral leakage.
+The most common cause is a discrete signal $x[n]$ that does not contain an integer number of periods of the oscillatory components.
+Other causes of spectral leakage derive from practical hardware limitations or user errors in the experimental design, such as:
 \begin{itemize}
-    \item asyncronization of ADC and DAC clock
-    \item Instability of the ADC (data acquisition) or DAC (signal generator) clock;
-    \item ADC  jitter and slew-rate;
-    \item Low resolution of the ADC compared to the oscillation amplitude might produce spourous harmonics;
-    \item aliasing due to the choice of sampling frequency without proper filtering;
+    \item lack of synchronization between ADC and DAC clocks;
+    \item instability of the ADC (data acquisition) or DAC (signal generator) clock;
+    \item ADC jitter and slew-rate;
+    \item low resolution of the ADC compared to the oscillation amplitude, which may produce spurious harmonics;
+    \item aliasing due to improper choice of sampling frequency without adequate filtering.
 \end{itemize}
 
 \subsection{Noise}
 
 Noise denotes random, unwanted fluctuations superimposed on the signal originating from physical sources (thermal, shot), instrumentation (quantization, clock jitter) or environment (EM interference). 
 
-Signal to noise ratio (SNR) quantifies the relative power between the signal components and the noise
+Signal-to-noise ratio (SNR) quantifies the relative power between the signal components and the noise:
 $$
-SNR = \frac{P_{signal}}{P_{noise}}
+SNR = \frac{P_{\mathrm{signal}}}{P_{\mathrm{noise}}}
 $$
-and dictates how reliably one can detect or process the signal. 
+and dictates how reliably the signal can be detected or processed. 
 
-When increasing the excitation amplitude is not possible, averaging is the an alternative tool for improving SNR: by repeating the same measurement or subdividing a long record into M independent segments, uncorrelated noise averages toward zero while the coherent signal adds constructively. 
-This concept is used in electrochemical instrumentation where Impedance Spectroscopy is implemented. 
-The user can choose how many sinusoidal waves to average on.
-The net SNR gain scales with the square root of the number of indipendent measurements. 
-In the time domain this is ensemble or block averaging; in the frequency domain it appears as spectral averaging. 
-The avaraging can be alternativly obtained increasing the acquisition time of the periodic signal or the length of the window. 
-In fact narrowing the spectral bin's bandwidth reduces linearly the noise power in it (i.e. doubling the signal length, $\Delta f$ halves and so the power in each bin while the coherent signal amplitude in the bin does not change.
+When increasing the excitation amplitude is not possible, averaging is an alternative tool for improving SNR: by repeating the same measurement or subdividing a long record into M independent segments, uncorrelated noise averages toward zero while the coherent signal adds constructively.
+This concept is used in electrochemical instrumentation where impedance spectroscopy is implemented.
+The user can choose the number of sinusoidal wave periods to average.
+The net SNR gain scales with the square root of the number of independent measurements.
+In the time domain, this is called ensemble or block averaging; in the frequency domain, it appears as spectral averaging.
+Averaging can alternatively be obtained by increasing the acquisition time of the periodic signal or the window length.
+In fact, narrowing the spectral bin bandwidth reduces the noise power in it linearly (i.e., doubling the signal length halves $\Delta f$, and thus the power in each bin, while the coherent signal amplitude in the bin does not change).
 
 \section{Filters}
 
@@ -95,7 +95,7 @@ A filter in signal processing is a system that selectively modifies an input sig
 
 Filters may be analog—operating continuously on voltages or currents—or digital—processing sampled data—and they can be linear (obeying superposition) or nonlinear (introducing harmonics). 
 
-By their effect on frequency content, filters are classified as low-pass (passing frequencies below a cutoff fc), high-pass (passing frequencies above fc), band-pass (passing a band between two cutoffs), or band-stop/notch (rejecting a specific band).  
+By their effect on frequency content, filters are classified as low-pass (passing frequencies below a cutoff $f_c$), high-pass (passing frequencies above $f_c$), band-pass (passing a band between two cutoffs), or band-stop/notch (rejecting a specific band).  
   
 Filters can be distinguished between analog, a physical circuit in the signal acquisition pipeline, or digital, applied on the digitized signal by a microcontroller or computer.
 
@@ -124,16 +124,16 @@ There are different types of digital implementation of filters, but for the purp
 
 \section{Signal synthesis}
 
-To perform certain experiments, one might be interested to perturb the system with non-constant signals like pulses, ramps, sinuses or other arbitrary shapes. 
-This requires to design a digital waveform and generate it in the analog sense with electronic instrumentations. 
-The process is called digital to analog conversion and the electronic component capable of it the digital to analog converter (DAC). 
-There are several techniques of implementing a digital to analog converter on hardware with different complexity and properties, the most simple is the \emph{direct digital synthesis} (DDS).
-This methods relays on the 'look-up table' method in which the desired waveform is stored as table of pairs value-time and at constant time interval the value is read from the table and converted to analog value.
-In arbitrary waveform generator the table of points is usually saved in a limited buffer memory with a size of a few thousands of samples.
-The generated signal is usually passed though a series of filters to smooth it and avoid the production of harmonics or cause spectra leakage.
+To perform certain experiments, one might want to perturb the system with non-constant signals such as pulses, ramps, sinusoids, or other arbitrary shapes.
+This requires designing a digital waveform and generating it in analog form using electronic instrumentation.
+This process is called digital-to-analog conversion, and the electronic component performing it is the digital-to-analog converter (DAC).
+Several techniques exist for implementing a digital-to-analog converter on hardware with different complexity and properties; the simplest is \emph{direct digital synthesis} (DDS).
+This method relies on a 'look-up table' in which the desired waveform is stored as a table of value-time pairs and at constant time intervals the value is read and converted to an analog voltage.
+In arbitrary waveform generators, the table of points is usually stored in limited buffer memory of a few thousand samples.
+The generated signal is typically passed through a series of filters to smooth it and avoid producing harmonics or causing spectral leakage.
 The synthesis procedure is crucial for the quality of the excitation in system identification.
 
-The length of the arbitrary waveform can be extended when the signal is stored in a bigger memory and sent directly to digital to analog converter using the Direct Memory Access (DMA) protocol, although it requires the use of dedicated microcontroller unit and digital signal processes implementation knowledge outside the background of electrochemists.
+The length of the arbitrary waveform can be extended by storing the signal in larger memory and sending it directly to the digital-to-analog converter using the Direct Memory Access (DMA) protocol; however, this approach requires dedicated microcontroller units and knowledge of digital signal processor implementation that may be outside the typical background of electrochemists.
 
 \section{Conclusion}
 The mathematical framework introduced in this chapter enables the transformation and analysis of time-domain signals in the frequency domain.

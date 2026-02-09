@@ -6,11 +6,11 @@ Lithium-ion batteries, in particular, have dominated the field due to their high
 % This chapter introduces the fundamental principles of rechargeable batteries, their active materials, performance metrics, and modern technological evolution. 
 % Emphasis is placed on lithium-ion batteries because they serve as the experimental platform in this work.
 
-Battery typically are modelled as black-box systems, defined solely by their input and output relations (current and voltage, respectively).
+Batteries are typically modeled as black-box systems, defined solely by their input and output relations (current and voltage, respectively).
 Electrochemical impedance spectroscopy serves as an ideal technique to monitor the internal resistance of the battery and to estimate its state of health (SOH) \cite{liuStateHealthEst,Hofmann_2023, QIAN2025125272}.
 Without the separation of electrodes, impedance measurements on batteries do not probe a single interface or reaction, but rather the collective response of multiple electrodes, electrolyte phases, and transport pathways embedded within a specific cell architecture.
 As a consequence, the measured impedance depends not only on intrinsic electrochemical properties, but also on the state of charge, operating history, and degradation state of the battery as a system.
-Hence, in contrast to classic electrochemical characterization, the impedance of battery is measured at different states and its difference is monitored, rater then solely consider its absolute value.
+Hence, in contrast to classic electrochemical characterization, the impedance of a battery is measured at different states and changes are monitored rather than considering its absolute value.
 
 This chapter introduces the fundamental principles of rechargeable batteries required to interpret impedance spectra measured at the cell level, including electrode configuration, operating states, and common degradation modes.
 The focus is not on a comprehensive description of battery chemistry, but on those aspects that directly influence the structure, evolution, and variability of impedance spectra during operation and aging.
@@ -18,12 +18,12 @@ The focus is not on a comprehensive description of battery chemistry, but on tho
 \section{Basic principles of operation}
 
 A battery consists of two electrodes separated by an electronically insulating but ionically conductive electrolyte. 
-During discharge, oxidation occurs at the negative voltage electrode, releasing electrons to the external circuit and cations to the electrolyte. 
+During discharge, oxidation occurs at the negative electrode, releasing electrons to the external circuit and cations to the electrolyte. 
 Concurrently, reduction occurs at the positive electrode, accepting electrons and intercalating the cations arriving through the electrolyte. 
-A negative current flow is produced on the external circuit of the cell until the electrodes reach the same potential and no driving force is present.
-The reaction is spontaneous and the system referred as a \emph{galvanic cell}. 
-The reverse processes occur during charging: the current flows on the opposite direction producing the reductive Redox half-reaction at the positive electrode and the oxidation at the negative one.
-Such a system si called instead \emph{electrolytic cell} and the reaction is not spontaneous but requires external work on the system.
+A positive current flows through the external circuit until the electrodes reach the same potential and no driving force remains.
+The reaction is spontaneous, and this system is referred to as a \emph{galvanic cell}. 
+During charging, the current reverses direction, producing the reductive redox half-reaction at the positive electrode and oxidation at the negative electrode.
+Such a system is called an \emph{electrolytic cell}, and the reaction is not spontaneous but requires external work.
 
 \subsection{Electrode potentials and cell voltage}
 
@@ -79,15 +79,15 @@ A 1C current charges or discharges the battery in 1 hour, while C/10 corresponds
 \section{Storage mechanisms}
 
 The type of Redox reaction at each of the battery electrodes can be of different nature.
-The first "pile" of Alessandro Volta was a battery using the electrodissolution and deposition of copper and zinc respectivly, while modern rechargible batteries are base on the much more efficient process of ion intercalation.
+The first "pile" of Alessandro Volta used electrodissolution and deposition of copper and zinc, respectively, while modern rechargeable batteries rely on the far more efficient process of ion intercalation.
 These mechanisms are not specific to lithium-based systems and can, in principle, involve different alkali or multivalent ions depending on the electrolyte and host structure \cite{PAN2025184607}.
 
 \subsection{Intercalation}
 
 In intercalation, guest metallic ions reversibly insert into the crystal lattice of a host material without disrupting its structure. 
-This principles applied to inorganic materials where crystals planes are stacked and bound with electrostatic forces.
-When an element of the structure undergoes oxidation or reduction to balance the overall charge an ion inserts or it is removed from the interlayer volume.
-Example of such material crystal structure are octahedral transition metal oxides, olivines and spinel structures \cite{KOECH2024321}.
+This principle applies to inorganic materials where crystal planes are stacked and held together by electrostatic forces.
+When an element of the structure undergoes oxidation or reduction to balance the overall charge, an ion is either inserted or removed from the interlayer volume.
+Examples of such material structures include octahedral transition metal oxides, olivines, and spinel structures \cite{KOECH2024321}.
 
 In layered oxides such as Cobalt or Manganese oxides, host ions occupy octahedral sites between transition-metal oxide layers. 
 The intercalation reaction can be written as
@@ -98,7 +98,7 @@ where M denotes the intercalated metal ion, A is the host framework, and stoichi
 The layered structure provides two-dimensional ion diffusion pathways, enabling rapid ion transport.
 
 In olivine phosphates like LiFePO$_4$, ions occupy sites within one-dimensional channels running through the crystal. 
-The two-phase behavior (coexistence of intercalated and deintercalated domains) arises from the crystal structure and electrostatic interactions, producing the characteristic flat voltage plateau.
+The two-phase behavior (coexistence of intercalated and de-intercalated domains) arises from the crystal structure and electrostatic interactions, producing the characteristic flat voltage plateau.
 
 \subsection{Alloying}
 
@@ -107,7 +107,7 @@ Silicon, for instance, forms a series of phases with lithium:
 \begin{equation}
     \mathrm{Si} + \beta \mathrm{Li}^+ + \beta e^- \rightleftharpoons \mathrm{Li}_\beta \mathrm{Si},
 \end{equation}
-where $\beta$ can range up to 4.4, giving a theoretical specific capacity of 4200~mAh~g$^{-1}$, nearly ten times that of graphite the state of the art of modern commercial batteries \cite{JAREER2025177124}.
+where $\beta$ can range up to 4.4, giving a theoretical specific capacity of 4200~mAh~g$^{-1}$, nearly ten times higher than the graphite used in state-of-the-art commercial batteries \cite{JAREER2025177124}.
 
 However, the dramatic volume expansion accompanying alloying ($\sim 300\%$ for silicon) induces mechanical stress, particle fragmentation and rapid electrode degradation. 
 Modern high-capacity anodes employ silicon-graphite composites  and carbon coatings with a small percentage of silicon to mitigate damages and maintain electrical contact across cycling.
@@ -120,7 +120,7 @@ However, conversion materials suffer from large voltage hysteresis, low coulombi
 
 \subsection{Electrodeposition}
 
-Ions can be also converted directly to their metallic form tand avoid any host structure through electrodeposition and dissolution of the metal itself. 
+Ions can be directly converted to their metallic form and avoid any host structure through electrodeposition and dissolution of the metal itself. 
 Lithium metal as negative electrode offers the highest specific capacity (3861~mAh~g$^{-1}$) and lowest potential for lithium-ion batteries, enabling very high energy density cells. 
 Also sodium and other alkali metals provide similar benefits for their respective battery chemistries \cite{brunklausMetalElectrodeNextGen2024}. 
 However, metallic deposition is prone to dendritic growth, which increases surface area and accelerates electrolyte decomposition and loss of active material, reducing cycle life and raising safety concerns.
@@ -179,9 +179,9 @@ Most Li-ion cells use organic carbonate solvents (EC, DEC, EMC) with lithium sal
 Their voltage stability window extends to $\sim 4.5-5.0$ V vs Li but decompose at low potentials, forming the SEI.
 
 The ionic conductivity
-\[
+\begin{equation}
 \sigma = \sum_i z_i^2 F^2 u_i c_i,
-\]
+\end{equation}
 depends on mobility, concentration and viscosity. 
 Solvent mixtures balance stability and conductivity.
 
@@ -201,6 +201,12 @@ Its formation and evolution govern several key battery characteristics, includin
 SEI formation occurs predominantly during the first reduction of a negative electrode, when the electrode potential approaches the reduction potential of the electrolyte.
 At this stage, electrolyte components undergo electrochemical and chemical reactions that generate insoluble products, which precipitate onto the electrode surface and form a passivating layer.
 Typical inorganic SEI constituents include LiF, Li$_2$CO$_3$, Li$_2$O, and Li$_2$SO$_3$, while organic components often consist of polymeric or oligomeric species derived from solvent decomposition \ref{WU2025102124}.
+
+\marginpar{
+    \includegraphics[width=\marginparwidth]{figures/batteries/SEI_composition.jpeg}
+    \captionof{figure}{Illustration of the composition of the SEI layer on lithium or carbon. \cite{}}
+    \label{fig:SEI_composition}
+}
 
 The resulting SEI is generally described as a multilayer structure, with an inorganic-rich inner layer in contact with the electrode and a more organic, polymeric outer layer interfacing with the electrolyte.
 This structure is not uniform across the electrode surface and varies locally depending on surface chemistry, morphology, and current distribution.
@@ -227,13 +233,13 @@ However, such representations implicitly assume stationarity and therefore obscu
 
 \section{Degradation mechanisms}
 
-Battery degradation arises from a combination of chemical, mechanical and interfacial processes that progressively reduce the accessible lithium inventory, active material and ionic/electronic transport pathways. The evolution of degradation with cycling or calendar time directly determines the state of health (SOH). Although multiple mechanisms coexist, they are commonly grouped into three major families: loss of shuttling ions (in LIBs called loss lithium inventory or LLI), loss of active material (LAM) and impedance growth \cite{JEON2025237242}.
-Figure \ref{fig: overview degradation LIBs} summarized schematically the main degradation mechanisms for a lithium ion battery and the to witch group the are classified.
+Battery degradation arises from a combination of chemical, mechanical, and interfacial processes that progressively reduce the accessible lithium inventory, active material, and ionic/electronic transport pathways. The evolution of degradation with cycling or calendar time directly determines the state of health (SOH). Although multiple mechanisms coexist, they are commonly grouped into three major families: loss of shuttling ions (called loss of lithium inventory or LLI in lithium-ion batteries), loss of active material (LAM), and impedance growth \cite{JEON2025237242}.
+Figure \ref{fig: overview degradation LIBs} schematically summarizes the main degradation mechanisms for a lithium-ion battery and the categories into which they are classified.
 
 \begin{figure}
     \centering
     \includegraphics[width = \textwidth]{figures/batteries/degradation mechanisms.pdf}
-    \caption{Sumary of the principal degradation mechanisms in single layer lithium ion battery. The colours groups the various processes into the general catagories: loss of lithium inventory, loss of active material and impedance growth.}
+    \caption{Summary of the principal degradation mechanisms in a single-layer lithium-ion battery. The cell, in the middle, is represented as parallel current collectors, active materials and separators. The colors group the various processes into three general categories: loss of lithium inventory, loss of active material, and impedance growth.}
     \label{fig: overview degradation LIBs}
 \end{figure}
 
@@ -251,7 +257,7 @@ If the deposited metal remains electronically connected, it can be stripped in t
 \subsection{Loss of active material}
 
 Mechanical degradation of electrode materials results in reduced electrochemically active surface. 
-In positive electrodes such as layered NMCs, repeated Li intercalation and deintercalation induces anisotropic lattice strain, phase transitions and microcrack formation. 
+In positive electrodes such as layered NMCs, repeated lithium intercalation and de-intercalation induce anisotropic lattice strain, phase transitions, and microcrack formation. 
 Cracking leads to particle fragmentation and loss of contact with the conductive carbon network or current collector, increasing both the resistance and the inaccessible fraction of active material.
 
 Graphite particles also undergo structural degradation under fast cycling due to expansion/contraction associated with staging transitions. Silicon-based anodes suffer even more severe mechanical degradation due to their large volumetric expansion, requiring advanced composite architectures to maintain structural integrity.
@@ -303,11 +309,18 @@ The characteristic rate at which the capacity drops significantly corresponds to
 
 \subsection{Electrochemical impedance spectroscopy (EIS)}
 
-Electrochemical Impedance Spectroscopy is extensively used in battery characterization for its capability of identifying and separate processes such as ohmic resistance, charge-transfer kinetics, double-layer capacitance, and diffusion, which kinetics evolves with the aging of the cell and the occurance of degradation pehnomenon.
-The impedance of a cell is measured at different State of Charge (SOC) and State of Health (SOH) by interrupting the CCCV cycling protocol at fixed states and waiting for the relaxation of the interfaces.
-A correct impedance measruement with classic sinusodial perturbation of decreasing frequency may take 30 minutes or more to probe the frequency response of a common lithium-ion battery (1MHz-10mHz).
-This time inreases significanlty the experiment duration limiting its utilization for long-term explorations.
-This limit is the topic adressed by my work and requires an interoduction to the concepts of System Identification and Dynamic System Theroy provided in the next chapter to better frame the problem and justify the provided solutions.
+Electrochemical Impedance Spectroscopy is extensively used in battery characterization for its capability to identify and separate processes such as ohmic resistance, charge-transfer kinetics, double-layer capacitance, and diffusion. These kinetics evolve with the aging of the cell and the occurrence of degradation phenomena.
+The impedance of a cell is measured at different States of Charge (SOC) and States of Health (SOH) by interrupting the constant-current constant-voltage (CC-CV) cycling protocol at fixed points and waiting for interface relaxation.
+A correct impedance measurement using classical sinusoidal perturbation across a decreasing frequency range may take 30 minutes or longer to probe the complete frequency response of a typical lithium-ion battery (1~MHz to 10~mHz).
+This time requirement significantly increases the overall experiment duration, limiting its use for long-term explorations.
+This limitation is the focus of the present work and requires an introduction to the concepts of System Identification and Dynamic System Theory provided in the next chapter to frame the problem and justify the proposed solutions.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \textwidth]{figures/batteries/battery_processes_time_constants.png}
+    \caption{Battery processes time constants. Some processes are expresses in the time frame of cycling test, while many requires EIS to probe them, especcially the fastest that are not reachable with time-domain system identification. This will be discussed in Chapter \ref{ch:system_identification}. \cite{quProbingProcessKinetics2022}}
+    \label{fig:battery_time_constants}
+\end{figure}
 
 % \subsection{Vaidity}
 % The physical interpretation of electrochemical impedance spectroscopy relies on a set of assumptions that must be carefully examined in the context of battery operation.
@@ -352,4 +365,4 @@ This limit is the topic adressed by my work and requires an interoduction to the
 % Positive and negative electrodes are the IUPAC-recommended terms for battery operation regardless of current direction. 
 % In spontaneous discharge (Galvanic cell), the positive electrode is the cathode and undergoes reduction, while the negative electrode acts as the anode. During charging (electrolytic cell), the current direction reverses, but the electrode names positive and negative are retained to avoid confusion. Though, in the battery literature and specific language, scientist tend to use the term cathod and anode to indicate the postive and negative electrode. In an electrolytic cell, the role of anode and cathod are reversed. Probably this convention is of historical reason from the material science of primary batteries that are not recharged.
 
-% The common term \textit{capacity} strictly refers to the total amount of charge, measured in Ah in teh battery community or Coulombs according to the International System of Measures. It must not be confused with capacitance of a capacitor electrical elemetn. Throughout this thesis, the IUPAC convention will be followed.
+% The term \textit{capacity} strictly refers to the total amount of charge, measured in Ah in the battery community or coulombs according to the International System of Units. It must not be confused with the capacitance of a capacitor electrical element. Throughout this thesis, the IUPAC convention will be followed.

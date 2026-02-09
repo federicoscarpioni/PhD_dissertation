@@ -1,4 +1,5 @@
 \chapter{Identification of Dynamical Systems}
+\label{ch:system_identification}
 
 Electrochemical systems such as batteries are dynamical systems in the sense that their behavior is governed by differential equations describing the time evolution of internal variables, including ionic concentrations, electrode potentials and temperature, under given operating conditions.
 
@@ -188,8 +189,8 @@ The choice between them depends on the intended application.
 
 \section{Experimental estimation of frequency response functions}
 
-The transfer function is a mathematical concept deduced from first principle model of a system subjected to a small periodical perturbation of frequency \( f = \frac{\omega}{2 \pi} \).
-In practical settings a system at steady state can be perturbed with a small sinusoidal excitation to assume the linear and time-invariant conditions and estimate the \emph{frequency response function} (FRF) over the frequencies \( f_k \).
+The transfer function is a mathematical concept deduced from a first-principles model of a system subjected to a small periodic perturbation of frequency \( f = \omega/2 \pi \).
+In practical settings, a system at steady state can be perturbed with a small sinusoidal excitation to establish the linear and time-invariant conditions and estimate the \emph{frequency response function} (FRF) at frequencies \( f_k \).
 In other words, the frequency response function is the practical realization of the transfer function.
 
 \section{Kramers--Kronig relations and measure validity}
@@ -212,7 +213,7 @@ These relations originate from causality and linearity and apply to the transfer
 Since the impedance spectrum corresponds to the frequency response function of the system, it must satisfy the same constraints.
 
 In electrochemical systems, a strict verification of the Kramers--Kronig relations is complicated by the finite frequency range of measurements and experimental noise.
-An alternative validation approach consists in fitting the measured impedance spectra with an equivalent circuit model composed of a series of RC elements that are guaranteed to satisfy the Kramers--Kronig relations, as they represent causal and stable linear systems.
+An alternative validation approach consists of fitting the measured impedance spectra with an equivalent circuit model composed of a series of RC elements that are guaranteed to satisfy the Kramers--Kronig relations, since they represent causal and stable linear systems.
 If such a model reproduces the experimental data within the experimental uncertainty, the impedance measurement is generally considered physically consistent.
 
 \section{Parameter estimation from impedance spectra}

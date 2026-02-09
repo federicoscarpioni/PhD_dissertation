@@ -111,7 +111,7 @@ Starting in 2003, Darowicki, S\l{}ępski, and collaborators developed a parallel
 Early implementations employed exponential chirp excitation signals in the frequency range 1320--144~Hz~\cite{darowickiDynamicElectrochemicalImpedance2003a, darowickiContinuousFrequencyMethodMeasurement2003}, later transitioning to multisine perturbations~\cite{darowickiInvestigationsPassiveLayer2003}.
 The group proposed multiple experimental configurations for dynamic impedance estimation~\cite{darowickiInstantaneousElectrochemicalImpedance2004a}.
 
-This methodology was applied extensively to corrosion science, including the study of passive layers and pitting corrosion on stainless steels~\cite{darowickiEvaluationPittingCorrosion2004a, darowickiTimeDependencePit2004, krakowiakImpedanceInvestigationPassive2005, krakowiakImpedanceMetastablePitting2005, orlikowskiInstantaneousImpedanceMonitoring2015, rylInstantaneousImpedanceMonitoring2016, orlikowskiDeterminationPittingCorrosion2017, naroznyApplicationElectrochemicalImpedance2018, darowickiNovelApplicationDynamic2020a, rylInstantaneousImpedanceAnalysis2017}, metal alloys~\cite{arutunowElectricalMechanicalCharacterization2015, zielinskiApplicationMultisineNanoscale2015, wysockaInvestigationElectrochemicalBehaviour2016, gawelImpedanceMonitoringCorrosion2017}, and stress corrosion cracking~\cite{darowickiDetectionStressCorrosion2004}.
+This methodology was applied extensively to corrosion science, including the study of passive layers and pitting corrosion on stainless steels~\cite{darowickiEvaluationPittingCorrosion2004a, darowickiTimeDependencePit2004, krakowiakImpedanceInvestigationPassive2005, krakowiakImpedanceMetastablePitting2005, orlikowskiInstantaneousImpedanceMonitoring2015, rylInstantaneousImpedanceMonitoring2016, orlikowskiDeterminationPittingCorrosion2017, naroznyApplicationElectrochemicalImpedance2018, darowickiNovelApplicationDynamic2020a, rylInstantaneousImpedanceAnalysis2017}, metal alloys~\cite{arutunowElectricalMechanicalCharacterization2015, zielinskiApplicationMultisineNanoscale2015, wysockaInvestigationElectrochemicalBehavior2016, gawelImpedanceMonitoringCorrosion2017}, and stress corrosion cracking~\cite{darowickiDetectionStressCorrosion2004}.
 Additional applications include conductive polymers~\cite{darowickiImpedanceCharacterizationProcess2004, darowickiDynamicElectrochemicalImpedance2004}, hydrogen storage alloys, nickel-metal hydride batteries, and coating adhesion studies~\cite{burczykLocalElectrochemicalImpedance2018}.
 
 The frequency range in these studies typically spanned 3~Hz to 20~kHz, later extended down to approximately 30~mHz.
@@ -147,25 +147,26 @@ Extensive theoretical analysis was provided on the coupling between cyclic volta
 Earlier efforts toward compact implementations include the work of Ivaska and co-workers, who adapted Smith’s technique into a smaller hardware platform~\cite{engblomExperiencesOnLineFourier1990}.
 Hazi, Bond, and colleagues later extended this concept using microcomputer-based instrumentation capable of admittance and impedance measurements in the range 50~Hz to 50~kHz during staircase voltammetry~\cite{haziMicrocomputerbasedInstrumentationMultifrequency1997, schieweUnifiedApproachTrace1998}.
 
-\chapter{building auxiliary connectors}
+\chapter{Building auxiliary connectors}
 \label{ap:aux cable}
 
-Each channel of BioLogic workstation (not valid for battery cyclers) has a 9-pin port for input and output for the connection of external devices. The manual provides all the details on the pins positioning such that one can build their own cable. As material we gathered a 9-pin connector, BNC connector and coaxial cable. As instrumentation was needed only a solder with tin soldering wire and sharp scissors to cut and unsking the cable.\\
+Each channel of BioLogic workstation (not valid for battery cyclers) has a 9-pin port for input and output for the connection of external devices. The manual provides all the details on the pins positioning such that one can build their own cable. As material we gathered a 9-pin connector, BNC connector and coaxial cable. As instrumentation was needed only a solder with tin soldering wire and sharp scissors to cut and strip the cable.\\
 I needed to access the pins X, Y and Z, as in figure XX. I then used 3 cables, soldering the core to the proper pin and the shell together to the ground. Finally I connected the other end of the cable to the BNC connecter and close the encapsulation of the 9-pin connector after testing all the terminal points with a multimeter. Figure \ref{fig:aux cables} shows the soldering on the 9-pin connector.
 
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/9 pin scheme.png}
-  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/connection_pins.jpg}
-  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/connection_pins_with_ground.jpg}
-  \includegraphics[width=0.2\textwidth]{figures/appendix_cable/enclosure.jpg}
-  \caption{From left to right: steps for the construction of cables for interfacesing with BioLogic 9 pin ports.}
+  \includegraphics[width=0.45\textwidth]{figures/appendix_cable/9 pin scheme.png}
+  \includegraphics[width=0.45\textwidth]{figures/appendix_cable/connection_pins.jpg}
+
+  \includegraphics[width=0.45\textwidth]{figures/appendix_cable/connection_pins_with_ground.jpg}
+  \includegraphics[width=0.45\textwidth]{figures/appendix_cable/enclosure.jpg}
+  \caption{In order: BioLogic 9 pin port schematics; soldering of cable for Auxiliary In 2, voltage out and current out; soldering of the common ground for all coaxial cables; final construction before closing the enclosure.}
   \label{fig:aux cables}
 \end{figure}
 
 \chapter{Multisine crest factor minimization}
 \label{ch:crest factor}
-Multiple approaches has been proposed in the field to minimize the crest factor and each is a trade-off between speed and accuracy (find the absolute minimum). 
+Multiple approaches have been proposed in the field to minimize the crest factor and each is a trade-off between speed and accuracy (find the absolute minimum) \cite{zappenApplicationTimeResolvedMultiSine2018}. 
 The right method strongly depends on the type of problem and on the following characteristics: distribution of frequency (logarithmic or linear), number of points per decades, number of frequencies in the waveform and relative amplitude (flat, linear, logarithmic, arbitrary). 
 
 The first to deal with the problem was Schroeder in 1990 whom proposed the analytical formula that carries his name:
@@ -174,20 +175,20 @@ $$
 \varphi_m = \varphi _0 - 2 \pi \sum _{n=0} ^{m-1} (m-n) \frac{|a_m|^2}{\sum_{k=0}^{M-1}|a_k|^2}. 
 $$
 
-Since it is fast to calculate, it is often used as both  reference value and initial parameters for a following iterative optimization. Newman and Ojarand took the work forward with analytical formulas but without significant advantages.
+Since it is fast to calculate, it is often used as both  reference value and initial parameters for a following iterative optimization. Newman and Ojarand took the work forward with analytical formulas but without significant advantages \cite{ojarandRecentAdvancesCrest2017}.
 
 As an alternative, randomization of the phases offers an equal or better crest factor but the computational time increases significantly with the number of frequencies.
 
-Iterative algorithms achieve much better results. They belong to two families. One is based on the "clipping" method of the DFT peaks of the multi sine until the crest factor reaches a constant value. 
-The other consist in a mathematical optimization using metaheuristic approaches that perform better than derivative methods for such big parameters space (ex simulated annealing and genetic algorithm).
+Iterative algorithms achieve much better results. They belong to two families. One is based on the "clipping" method of the DFT peaks of the multi sine until the crest factor reaches a constant value \cite{yangImprovedCrestFactor2015}. 
+The other consists in a mathematical optimization using metaheuristic approaches that perform better than derivative methods for such big parameters space (ex simulated annealing and genetic algorithm) \cite{janeiroPeakFactorOptimization2020}.
 
-Recently Kallel et al. proposed a mixed method, though it gives better results than the analytical formula for small multisine of 3-4 decades.
+Recently Kallel et al. proposed a mixed method, though it gives better results than the analytical formula for small multisine of 3-4 decades \cite{batteries8100176}.
 
-\chapter{Creating Python script for dynamci impedance experiments}
+\chapter{Creating Python script for dynamic impedance experiments}
 \label{app:deis meas script}
 
-After importing the relevant libraries the single instruments are separatly instantiated and configured.
-Then the objects are injected into another objects where the controll loop is implemented and the instruments are sinchronized.
+After importing the relevant libraries the single instruments are separately instantiated and configured.
+Then the objects are injected into another objects where the control loop is implemented and the instruments are synchronized.
 
 \section{Initializing the potentiostat}
 \lstinputlisting[language=Python]{code_blocks/initialize_potentiostat.py}
@@ -204,168 +205,207 @@ Then the objects are injected into another objects where the controll loop is im
 \section{Initializing online calculator}
 \lstinputlisting[language=Python]{code_blocks/initialize_online_calc.py}
 
-\section{Dependancies injections for online calcualtion}
+\section{Dependencies injections for online calculation}
 \lstinputlisting[language=Python]{code_blocks/deis_online_inject_and_start.py}
 
 \chapter{Auxiliary data of coin cells}
 
-\begin{figure}
+In the experiment presented in Chapter \ref{chap:coins}, nine CC-CV dynamic impednac spectroscopy experiments were performed for indipendent but identical cells.
+This chapter reports the results of all the cells, expect for the first already present in the main text, to showcase the reproducibility. 
+The cells have the following code names:
+\begin{table}[h]
   \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
+  \begin{tabular}{c}
+    \toprule
+    \textbf{Coin cell names} \\
+    \midrule
+    PanCoin2025\_009 \\
+    PanCoin2025\_010 \\
+    PanCoin2025\_011 \\
+    PanCoin2025\_012 \\
+    PanCoin2025\_013 \\
+    PanCoin2025\_014 \\
+    PanCoin2025\_015 \\
+    PanCoin2025\_016 \\
+    PanCoin2025\_017\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Cell 10}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width =\textwidth]{figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 10. Ploted one spectra every 10.}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
+  \includegraphics[width =\textwidth]{figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 10. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.8\textwidth]{figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png}
+  \caption{Impedance spectra during the first cycle for cell 10.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.
+  }
 \end{figure}
 
-\begin{figure}
+\section{Cell 11}
+\begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
+  \includegraphics[width = 0.8\textwidth]{figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 11. Ploted one spectra every 10.}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
+  \includegraphics[width = 0.8\textwidth]{figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 11. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = 0.8\textwidth]{figures/appendix_coin/PanCoin2025_011_DEIS_first_cycle.png}
+  \caption{Impedance spectra during the first cycle for cell 11.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.}
 \end{figure}
 
-\begin{figure}
+\section{Cell 12}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 12. Ploted one spectra every 10.}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 12. Ploted one spectra every 10.}
 \end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png}
-  \caption{svg image}
-\end{figure}
-
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png}
-  \caption{svg image}
-\end{figure}
-\begin{figure}
-  \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_011_DEIS_first_cycle.png}
-  \caption{svg image}
-\end{figure}
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_012_DEIS_first_cycle.png}
-  \caption{svg image}
+  \caption{Impedance spectra during the first cycle for cell 12.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.}
 \end{figure}
-\begin{figure}
+
+\section{Cell 13}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 13. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 13. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_013_DEIS_first_cycle.png}
-  \caption{svg image}
+  \caption{Impedance spectra during the first cycle for cell 13.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.}
 \end{figure}
-\begin{figure}
+
+\section{Cell 14}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 14. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 14. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_014_DEIS_first_cycle.png}
-  \caption{svg image}
+  \caption{Impedance spectra during the first cycle for cell 14.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.}
 \end{figure}
-\begin{figure}
+
+\section{Cell 15}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 15. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 15. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_015_DEIS_first_cycle.png}
-  \caption{svg image}
+  \caption{Impedance spectra during the first cycle for cell 15.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.}
 \end{figure}
-\begin{figure}
+
+\section{Cell 16}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 16. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 16. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_016_DEIS_first_cycle.png}
-  \caption{svg image}
+  \caption{Impedance spectra during the first cycle for cell 16.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.}
 \end{figure}
-\begin{figure}
+
+\section{Cell 17}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 17. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 17. Ploted one spectra every 10.}
+\end{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png}
-  \caption{svg image}
+  \caption{Impedance spectra during the first cycle for cell 17.
+  Left: all charge spectra; right: discharge spectra with one spectrum every ten cycles.}
 \end{figure}
 
 \chapter{Validation of LTP data}
 \label{app:validation LTP}
 
-\begin{figure}
+\section{Fit of galvanostatic data}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_galvanostatic.png}
   \caption{Fitting of rational polynomial of order 6 on galvanostatic DEIS data.}
 \end{figure}
-
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_galvanostatic_residues.png}
   \caption{Residues of the fitting of rational polynomial of order 6 on galvanostatic DEIS data.}
 \end{figure}
 
-\begin{figure}
+\section{Fit of cyclic voltammetry data}
+\begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_cv.png}
   \caption{Fitting of rational polynomial of order 5 on cyclic voltammetry DEIS data.}
 \end{figure}
-
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_cv.png}
+  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_cv_residues.png}
   \caption{Residues of the fitting of rational polynomial of order 5 on cyclic voltammetry DEIS data.}
 \end{figure}
 
-\chapter{Background on Silicon Carbonitride as Negative Electrode Material}
+\chapter{Silicon carbonitride as energy storage material}
 \label{app:SiCNO_background}
 
 Silicon carbonitride (SiCN(O)) belongs to the class of polymer-derived ceramics obtained through the pyrolysis of preceramic polymers, typically polysilazanes or polysiloxanes, under inert atmosphere at temperatures in the range of 800-1200\,$^\circ$C. 
@@ -391,14 +431,14 @@ Adsorption, pore filling, SEI formation, and possible metal deposition all occur
 The SEI itself forms on chemically distinct surfaces (carbonaceous domains and ceramic phases), leading to spatially non-uniform interphase compositions and potentially time-dependent changes during cycling. 
 As a result, traditional techniques such as galvanostatic cycling or ex situ surface analysis often provide incomplete or ambiguous information.
 
-In this context, Dynamic Electrochemical Impedance Spectroscopy (DEIS) is particularly well suited for studying SiCN(O). 
+In this context, dynamic electrochemical impedance spectroscopy (DEIS) is particularly well suited for studying SiCN(O). 
 Because DEIS resolves the instantaneous impedance along a non-stationary potential trajectory, it can reveal transient kinetic events that are difficult to detect with steady-state techniques.
 Sudden changes in characteristic time constants, transitions between adsorption- and insertion-dominated regimes, or the onset of fast transport pathways associated with quasi-metallic phases become visible as local impedance features that coincide with specific points of the voltage profile. 
 Moreover, DEIS can track the evolution of SEI resistance during the first cycles, distinguish formation-related impedance from intrinsic electrode impedance, and allow a direct comparison between different synthesis batches or porosity levels without relying exclusively on capacity values. 
 In the context of this thesis, DEIS was used to investigate whether such characteristic signatures could be associated with the hypothesized sodium storage mechanisms in SiCN(O), and in particular whether reversible sodium deposition within confined pores manifests as a measurable, transient reduction of the impedance.
 
 The purpose of this appendix is not to provide a complete review of SiCN(O) electrochemistry, but rather to supply the structural and mechanistic background necessary to interpret the DEIS measurements presented in Chapter~\ref{chap:anodes}. 
-Readers interested in a comprehensive treatment of the synthesis, structure, and electrochemical behaviour of polymer-derived ceramics are referred to the foundational literature (Reinold et al.\ 2013; Sic et al.\ 2022; Cheng et al.\ 2021; Chen et al.\ 2022).
+Readers interested in a comprehensive treatment of the synthesis, structure, and electrochemical behavior of polymer-derived ceramics are referred to the foundational literature (Reinold et al.\ 2013; Sic et al.\ 2022; Cheng et al.\ 2021; Chen et al.\ 2022).
 
 \chapter{Fabrication and Characterization of Microscopic Reference Electrodes}
 \label{app:microRE}
@@ -412,9 +452,9 @@ Because the reference electrode must be inserted within the separator stack of a
 For lithium systems, the most straightforward approach is to electrodeposit Li onto an insulated copper wire.  
 For sodium systems, Na can be electrodeposited on Cu, although Na does not alloy with noble metals such as Au or Al; this limits the use of stable alloy-type references commonly used in lithium-ion research.
 
-\section{Insulated wire fabrication}
+\section{Fabrication of micro-reference electrodes}
 
-Three types of wire substrates were tested:
+Three types of current collectors were tested:
 \begin{itemize}
     \item manually insulated copper wire (diameter $\sim$130\,$\mu$m);
     \item polymer-coated 50\,$\mu$m Cu wire (Goodfellow);
@@ -472,15 +512,15 @@ Potential strategies include the use of metallic meshes as mechanically stable s
 % Expected stability
 % Issues (geometry, metal dissolution)
 
-Microscopic reference electrode introduced in pouch cells are made out of an insulated metallic wire with the section esposed. 
+Microscopic reference electrodes introduced in pouch cells are made from an insulated metallic wire with the section exposed. 
 This concept is the closest realization of a punctual electrode. 
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/anodes/copper_wire_microscope.jpg}
 }
-The goal is to being able to probe the local potential in only one point where the field lines are equipotential.
+The goal is to probe the local potential at a single point where the field lines are equipotential.
 In this work I used three types of insulated wires:
 \begin{itemize}
-    \item circa 130$\mu$m copper manually insulated with termosetting polymer strips.
+    \item circa 130$\mu$m copper manually insulated with thermosetting polymer strips.
     \item 50$\mu$m diameter polymer insulated Copper from Goodfellow;
     \item 50$\mu$m diameter polymer insulated Gold from Goodfellow;
 \end{itemize}
@@ -499,13 +539,13 @@ Figure \ref{fig:microref_wires} shows the components used to assemble the wire a
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/anodes/gold_wire_microscope_better.jpg}
 }
-The commercial 50$\mu$m is to thin to clamp to potentiostat crocodile clamps and also prone to brake when sealed though the pouch cell foils. 
-The solution (cite paper) is to scrap the insulation of the wire at one end and solder it to a peace of metal to act as current collector. 
+The commercial 50$\mu$m wire is too thin to clamp to potentiostat crocodile clamps and also prone to break when sealed through the pouch cell foils. 
+The solution (cite paper) is to uninsulate the wire at one end and solder it to a piece of metal to act as current collector. 
 In the paper they use the machine to solder the contact in micro-electronics which I didn't have at disposal. 
-Instead I tried with the ultrasonic woldering with poor reproducibility even with the best setting I could find. 
-Too much pressure cause the wire to brake while too little didn't solder the metals.
+Instead I tried ultrasonic welding with poor reproducibility even with the best settings I could find. 
+Too much pressure caused the wire to break while too little didn't solder the metals.
 % Reports on the attempt with this methods are found in Appendix \ref{app:ultrasonic wire soldering}
-Finally I tried to put current collector and exposed wire in contect and sealed them togather with the thermosetting polymer strips.
+Finally I tried to put current collector and exposed wire in contact and sealed them together with the thermosetting polymer strips.
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/anodes/pealed_gold_wire.jpg}
 }
@@ -514,10 +554,10 @@ Finally I tried to put current collector and exposed wire in contect and sealed 
     \includegraphics[width=0.4\textwidth]{figures/anodes/preparation_hadesive_bonding.jpg}
     \includegraphics[width=0.25\textwidth]{figures/anodes/insulated_tab_hadesive_bonding.jpg}
 \end{figure}
-Although this provided electrical contact and I could performe electrodeposition of lithium with multiple techniques (CP, CA, CV), the deposited lithium was dissolving back into solution. I know this because the voltage drifts from the lithium potential to the original value of copper in a few hours (30-90). My hypotesys is that some of the current collector remain esposed and the electrodeposition happeoccours on its surface with a very low current density, not enough to form stable gems.
-Furthermore the electrodeposition in organic electrolytes is cuncurrent with the degradation of the electrolyte.
+Although this provided electrical contact and I could perform electrodeposition of lithium with multiple techniques (CP, CA, CV), the deposited lithium was dissolving back into solution. I observed this because the voltage drifts from the lithium potential to the original value of copper within hours (30-90 minutes). My hypothesis is that some current-collector area remained exposed and electrodeposition occurred on its surface with a very low current density, not sufficient to form stable deposits.
+Furthermore, electrodeposition in organic electrolytes is concurrent with the degradation of the electrolyte.
 
-The insulation of the wire was done putting the wire between to strips of polymeric strip longitudinal to the heating strip of an ultrasonic sealer for coffee bags. The Excess polymer were removed with a scalpel and a section of the wire exposed like shown in Figure XX. It takes a bit of practice to cut the section parallel to the axis and get aproximatly a circular section. Without checking on the optical microscope, one might end up with elliptical section resulted from non perpendicular cut and hence a much higher surface area.
+The insulation of the wire was accomplished by positioning the wire between two thermoplastic strips. These were sealed using an ultrasonic sealer, with the excess polymer removed with a scalpel to expose a circular wire section, as shown in Figure XX. Achieving a perpendicular cut to obtain an approximately circular section requires practice. Without microscopic verification, one might end up with an elliptical section from a non-perpendicular cut, resulting in higher surface area.
 
 For the electrodeposition the wire was connected to the working pole of a potentiostat using a disk of metallic lithium as counter (12 mm diameter) in a two-electrode configuration. The procedure was conducted with a two steps technique, first 10 minutes of potentiostatic set at -100mV and then 3 hours in galvanostatic with -50uA of current. It followed an open circuit technique. The reference electrode produced with such techniques were stable under parasitic  current of the potentiostat for 6 months.
 
@@ -527,14 +567,22 @@ I could not replicate the same the processes with my electrodes, probably becuas
 \section{Ultrasonic wire soldering on metallica tab}
 \label{sec:ultrasonic wire soldering}
 
-Parameters:
-Nachimpuls 0.3s
-Haltzeit 0.3s
-Höhe 0.56mm
-Ws 90J
-T.P. 4 PSI
-W.P. 2PSI
-Oscillation 15um
+\begin{table}[H]
+  \centering
+  \begin{tabular}{l l}
+    \toprule
+    Parameter names & value \\
+    \midrule
+    Nachimpuls & 0.3s\\
+    Haltzeit & 0.3s\\
+    Höhe & 0.56mm\\
+    Ws & 90J\\
+    T.P. & 4 PSI\\
+    W.P. & 2PSI\\
+    Oscillation & 15um\\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
 \begin{figure}

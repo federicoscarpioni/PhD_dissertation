@@ -101,7 +101,7 @@ Recording these signals enables high-resolution acquisition beyond the default s
 
 \subsection{Digital control and communication}
 
-Although the core functionality of the potentiostat is analog circuitry, the control and signal acquisition is digital and implemented with field-programmable gate arrays (FPGAs)\footnote{In FPGAs, logic blocks can be programmed to execute simple digital operations like sums and multiplication. The advantage is the possibility of parallelizing these operations for real-time data processing. They are more expensive than microcontrollers} or microcontrollers.
+Although the core functionality of the potentiostat is analog circuitry, the control and signal acquisition is digital and implemented with field-programmable gate arrays (FPGAs\footnote{In FPGAs, logic blocks can be programmed to execute simple digital operations like sums and multiplication. The advantage is the possibility of parallelizing these operations for real-time data processing. They are more expensive than microcontrollers}) or microcontrollers.
 Each channel of the potentiostat is connected with a communication board that sends signals and receives commands to and from a personal computer via USB or Ethernet.
 This interface sets on the hardware the measurement parameters chosen by the user and retrieves the sampled data.
 The instrument is then capable of working independently of the computer, storing data temporarily in a buffer memory.
@@ -356,13 +356,26 @@ The flow of digital signals is schematize is figure \ref{fig:DEIS automation wor
 A control loop must monitor the sequence advancement and loop number returned by querying the potentiostat.
 BioLogic EC-Lab or EC-Lab Express do not allow automating this process even using the output triggers functionality.
 Luckily, BioLogic provides a simple Software Development Kit to communicate with the potentiostats using various programming languages, which I expanded into a more sophisticated object-oriented Python library that I called \verb|pyeclab|\footnote{Available at https://github.com/federicoscarpioni/pyeclab}.
+
+Object-oriented programming (OOP) is a software design paradigm in which complex systems are represented as collections of interacting \emph{objects}.  
+Each object encapsulates both data and the operations that can be performed on that data, allowing physical devices or logical processes to be represented as modular software entities. 
+Tipycally, objects are schematized as in Figure \ref{fig:generic_object} to highlight their name, attributes and methods.
+For semplicity, in the rest of this disussion, only the methods (that incapsulate the behaviour) are represented.
+
+In the present implementation, each laboratory instrument (potentiostat, waveform generator, and oscilloscope) is abstracted as an independent object exposing a well-defined \emph{interface} for configuration, status monitoring, and data exchange.  
+This abstraction layer separates the experimental logic from the hardware-specific communication details, enabling the same high-level control code to operate across different hardware configurations with minimal modification.
+
+Encapsulation and modularity are particularly advantageous for long-duration experiments, where robustness and maintainability are essential.  
+By structuring the automation software as a set of interacting objects, individual components can be extended, replaced, or debugged without affecting the entire acquisition framework.  
+This design also enables \emph{hierarchical composition}, where higher-level objects coordinate the behaviour of lower-level instrument objects, reflecting the physical structure of the experimental setup.
+
 Through the \verb|Channel| object, the status and data points are recursively retrieved from each channel of the potentiostat to the computer program, which converts, stores, and plots data, and executes a \emph{callback} function when a technique is finished.
 
 \marginpar{
     \centering
     \includegraphics[width=0.8\marginparwidth]{figures/acquisition/general object.pdf}
     \captionof{figure}{Structure of a generic object as used in object oriented programming (OOP).}
-    \label{fig:object}
+    \label{fig:generic_object}
 }
 
 The callback is the heart of the automation because it allows triggering special behavior of the program execution.
@@ -392,12 +405,31 @@ The structure of this control loop, implemented in Python and used throughout th
     \label{fig:python-controll-loop}
 \end{figure}
 
+Because the potentiostat, waveform generator, and acquisition device operate simultaneously and exchange data in real time, the automation software must manage multiple processes concurrently.  
+Sequential execution of instrument commands would introduce delays and risk data loss, particularly during high-bandwidth streaming.  
+For this reason, the control software employs concurrent execution through \emph{multithreading}.
+
+In multithreaded programming, multiple execution threads run within the same process and share access to memory and program state.  
+This approach allows independent tasks to proceed in parallel while remaining coordinated through a central control logic.  
+
 To make the automation possible, each instrument must independently execute its routine in a dedicated thread, with its actions being triggered from the main control loop.
-The typical approach is to implement each instrument as a \emph{worker} object, which executes operations inside a \emph{while True} loop that terminates with a pause during which the main thread is allowed to execute code for another worker object.
+The typical approach is to implement each instrument as a \emph{worker} object, which executes operations inside a \emph{while: True} loop that terminates with a pause during which the main thread is allowed to execute code for another worker object.
 The multi-threading standard library of Python, \verb|threading|, is capable of automatically managing all objects without user indication in the code (compared to other libraries like \verb|asyncio|).
 
 A worker object has a property with the name \verb|running| that can be used by other objects to check their status.
-This idea is the basis of all the libraries used to synchronize the potentiostat, waveform generator, and scope.
+This idea is the basis of all the libraries used to synchronize the potentiostat, waveform generator, and acquisition device.
+This shared-state approach allows the main control loop to coordinate the execution of all instruments without blocking, ensuring deterministic synchronization between electrochemical control, excitation, and data acquisition.
+
+The multithreaded capability is not only used to coordinate the 3 instruments for a dynamic impedance spectroscopy measurment, but also allows to use multiple channels of the potentiostat (and relative waveforms generators and acquisition devices) indipendently and simultanously.
+Figure \ref{fig:multi-channel} shows four cells connect to the same mulit-channel potentiostat and the streming of data from the acquisition device to the computer.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = \textwidth]{figures/acquisition/4 channel experiment.png}
+    \caption{Multi-channel execution of dynamic impendance experiments. Left: photo of four identical lithim-ion coin cells connected to the same potentiostat and indipendent waveform generators and acquisition devices. Right: screenshot of the computer screen with the real-time plotting of the multi-frequency voltage and current signals from the acquisition device.}
+    \label{fig:multi-channel}
+\end{figure}
+
 Given the modularity of the approach presented here, it is possible to use different hardware to perform the experiment in the same manner, provided a similar interface is available.
 
 In Appendix \ref{app:deis meas script} are reported examples of scripts to load and use the libraries to perform dynamic impedance spectroscopy experiments with broadband multisine and online impedance computation.

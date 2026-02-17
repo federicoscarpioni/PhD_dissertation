@@ -6,11 +6,11 @@ Electrochemical systems such as batteries are dynamical systems in the sense tha
 Electrochemical impedance is commonly interpreted as a frequency-dependent material or interfacial property, yet its definition originates from linear system theory.
 Impedance corresponds to the frequency response of a system obtained by linearizing its input-output behavior around a given operating point, under assumptions of linearity, causality, and time invariance.
 
-These assumptions are not merely mathematical conveniences: they determine whether an impedance spectrum is well-defined, reproducible, and physically interpretable.
-When they are violated—as in the presence of drift, nonlinearity, or strong operating transients—the measured frequency response may no longer correspond to a true impedance, but to an approximation whose validity must be carefully assessed.
+These assumptions determine whether an impedance spectrum is physically valid.
+When they are violated, as in the presence of drift, nonlinearity, or strong operating transients, the measured frequency response function may no longer correspond to a true impedance, but to an approximation whose validity must be carefully assessed.
 
 This chapter introduces the elements of system theory required to formalize the concept of impedance, including linear time-invariant systems, transfer functions, and frequency-domain representations.
-The aim is not to develop system theory in full generality, but to establish a precise framework within which electrochemical impedance measurements can be defined, analyzed, and later extended to non-stationary conditions.
+The aim is not to develop system theory in full generality, but to establish a precise framework within which electrochemical impedance measurements can be defined, and later extended to non-stationary conditions.
 
 \section{Dynamical systems}
 
@@ -55,7 +55,7 @@ Formally, for any inputs $\mathbf{u}_1(t)$ and $\mathbf{u}_2(t)$ and scalars $\a
 = \alpha \mathbf{y}\!\left(\mathbf{u}_1\right) + \beta \mathbf{y}\!\left(\mathbf{u}_2\right).
 \]
 
-A system is \emph{time invariant} if its input--output relationship does not depend explicitly on absolute time.
+A system is \emph{time-invariant} if its input--output relationship does not depend explicitly on absolute time.
 If an input $\mathbf{u}(t)$ produces an output $\mathbf{y}(t)$, then a time-shifted input $\mathbf{u}(t - t_0)$ produces the correspondingly shifted output $\mathbf{y}(t - t_0)$ for any $t_0$.
 
 When both properties hold, the system is referred to as a \emph{linear time-invariant} (LTI) system.
@@ -64,7 +64,7 @@ This approximation underpins the definition of impedance as a transfer function 
 
 \section{Time-domain representation}
 
-In linear time-invariant form, a dynamical system can be represented in the so called \emph{state-space model} as
+In linear time-invariant form, a dynamical system can be represented in the so called "state-space model" as
 \begin{align}
     \dot{\mathbf{x}}(t) &= \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t), \\
     \mathbf{y}(t) &= \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t),
@@ -74,17 +74,12 @@ where $\mathbf{y}(t)$ denotes the measured output.
 In electrochemistry, time-domain identification methods are commonly employed to estimate transport parameters from transient experiments.
 A notable example is the Galvanostatic Intermittent Titration Technique (GITT), in which diffusion coefficients are estimated from the relaxation of the electrode potential following a current step.
 However, electrochemical systems exhibit a wide spectrum of characteristic timescales.
-Charge-transfer reactions, double-layer charging, and adsorption phenomena occur on timescales several orders of magnitude shorter than solid-state diffusion.
+Charge-transfer reactions, adsorption, and interfacial transport phenomena occur at timescales several orders of magnitude shorter than bulk diffusion.
 Capturing the full system dynamics in the time domain would therefore require both very high temporal resolution to resolve fast processes and very long experiments to observe slow relaxation, which is often impractical.
-
-Moreover, the superposition of multiple coupled processes leads to transient responses that are difficult to model using simple exponential functions.
+Moreover, the superposition of multiple coupled processes leads to transient responses that are difficult to model using simple exponential or power low functions.
 While diffusion-dominated behavior can be interpreted in the time domain under restrictive assumptions, the simultaneous presence of faster interfacial phenomena complicates parameter identification.
 
 Frequency-domain identification offers a better solution for addressing this complexity separating processes according to their characteristic time constant.
-
-
-
-
 
 \section{Frequency-domain identification}
 
@@ -131,7 +126,7 @@ X(\omega)\, e^{j\omega t}\, d\omega.
 \end{equation}
 
 In the context of system identification, the Fourier transform enables the analysis of linear systems in the frequency domain by converting differential equations in time into algebraic relations in frequency.
-For a linear time-invariant (LTI) system, the response to a sinusoidal excitation at angular frequency \( \omega \) is also sinusoidal at the same frequency, differing only in amplitude and phase.
+For a linear time-invariant system, the response to a sinusoidal excitation at angular frequency \( \omega \) is also sinusoidal at the same frequency, differing only in amplitude and phase.
 This property allows the system behavior to be fully characterized by its frequency response.
 
 \subsection{Definition of the transfer function}
@@ -157,6 +152,7 @@ G(s) = \frac{Y(s)}{U(s)}
 \label{eq:transfer function dy sys}
 \end{equation}
 and it describes how the system responds with the output \( Y(s) \) to certain input \( U(s) \).
+Equation \ref{eq:transfer function dy sys} resembles the definition of impedance reported in Chapter \ref{ch:electrochemistry} that is, in fact, the same mathematical object for electrochemical systems.
 
 % In electrochemical systems, the impedance is obtained by evaluating this transfer function along the imaginary axis,
 % \begin{equation}
@@ -193,6 +189,9 @@ The transfer function is a mathematical concept deduced from a first-principles 
 In practical settings, a system at steady state can be perturbed with a small sinusoidal excitation to establish the linear and time-invariant conditions and estimate the \emph{frequency response function} (FRF) at frequencies \( f_k \).
 In other words, the frequency response function is the practical realization of the transfer function.
 
+While the transfer function is a theoretical object and LTI by definition, an experimetnal frequency response function is an approximation of it. 
+The validity of the approximation depends on the condition in which the experiment is performed.
+
 \section{Kramers--Kronig relations and measure validity}
 
 The physical interpretation of electrochemical impedance spectroscopy relies on a set of assumptions that must be satisfied during the measurement.
@@ -213,7 +212,7 @@ These relations originate from causality and linearity and apply to the transfer
 Since the impedance spectrum corresponds to the frequency response function of the system, it must satisfy the same constraints.
 
 In electrochemical systems, a strict verification of the Kramers--Kronig relations is complicated by the finite frequency range of measurements and experimental noise.
-An alternative validation approach consists of fitting the measured impedance spectra with an equivalent circuit model composed of a series of RC elements that are guaranteed to satisfy the Kramers--Kronig relations, since they represent causal and stable linear systems.
+An alternative validation approach consists of fitting the measured impedance spectra with an equivalent circuit model composed of a series of R/C elements that are guaranteed to satisfy the Kramers--Kronig relations, since they represent causal and stable linear systems \cite{Agarwal_1995}.
 If such a model reproduces the experimental data within the experimental uncertainty, the impedance measurement is generally considered physically consistent.
 
 \section{Parameter estimation from impedance spectra}
@@ -233,7 +232,7 @@ Z_{\text{exp}}(\omega_k) =
 Z_{\text{model}}(\omega_k; \boldsymbol{\theta}) + \epsilon_Z.
 \end{equation}
 
-The optimization problem is commonly formulated as a least-squares minimization.
+The optimization problem is commonly formulated as a least-squares minimization \cite{pintelonTransferFunctions1994,orazemEIS}.
 Since the impedance is a complex quantity, the real and imaginary parts are treated jointly in the definition of the objective function:
 \begin{equation}
 J(\boldsymbol{\theta}) =
@@ -249,7 +248,7 @@ where \( w_k \) is a weighting factor associated with the measurement uncertaint
 This approach is commonly referred to as complex nonlinear least squares (CNLS).
 
 In practice, the measurement uncertainty is not uniform across the frequency range.
-At low frequencies, impedance measurements are generally affected by larger noise and drift, often proportional to  \(1/f\).
+At low frequencies, impedance measurements are generally affected by larger noise and drift, often proportional to  \(1/|Z|\).
 Appropriate weighting of the residuals is therefore essential to avoid overemphasizing low-frequency data and to obtain physically meaningful parameter estimates.
 
 The objective function is evaluated iteratively for different parameter values in order to locate its minimum.

@@ -452,24 +452,91 @@ Because the reference electrode must be inserted within the separator stack of a
 For lithium systems, the most straightforward approach is to electrodeposit Li onto an insulated copper wire.  
 For sodium systems, Na can be electrodeposited on Cu, although Na does not alloy with noble metals such as Au or Al; this limits the use of stable alloy-type references commonly used in lithium-ion research.
 
-\section{Fabrication of micro-reference electrodes}
+\section{Micro-reference electrodes}
+Microscopic reference electrodes introduced in pouch cells are made from an insulated metallic wire with the section exposed. 
+This concept is the closest realization of a punctual electrode. 
 
-Three types of current collectors were tested:
+The goal is to probe the local potential at a single point where the field lines are equipotential.
+In this work I used three types of insulated wires:
 \begin{itemize}
-    \item manually insulated copper wire (diameter $\sim$130\,$\mu$m);
-    \item polymer-coated 50\,$\mu$m Cu wire (Goodfellow);
-    \item polymer-coated 50\,$\mu$m Au wire (Goodfellow).
+    \item circa 130$\mu$m copper manually insulated with thermosetting polymer strips.
+    \item 50$\mu$m diameter polymer insulated Copper from Goodfellow;
+    \item 50$\mu$m diameter polymer insulated Gold from Goodfellow;
 \end{itemize}
 
-The manually insulated wires were prepared by sandwiching the copper wire between two thermoplastic sealing strips typically used for pouch-cell fabrication.  
-The polymer was heat-fused using an ultrasonic sealer.  
-Excess polymer was removed with a scalpel to expose a circular cross-section at the tip.  
-Achieving a symmetric circular opening required practice; non-perpendicular cuts resulted in elliptical exposed areas and increased electrode surface.
+\subsection{Manually insulated wire} 
+I took a copper wire from a woven desoldering cloth and used the polymeric thermosetting strips used for sealing pouch cells to cover the wire.
+Figure \ref{fig:microref_wires} shows the components used to assemble the wire and the comparison with the commercial one.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=2cm]{figures/application3/image5.1.jpg}
+    \includegraphics[width=2.5cm]{figures/anodes/unwoven_copper_wires.jpg}
+    \includegraphics[width=2cm]{figures/application3/image5.2.jpg}
+    \includegraphics[width=4cm]{figures/anodes/copper_130um_insulated.jpg}
+    \caption{From left to right: step for the preparation of insulated copper wire.}
+    \label{fig:microref_wires}
+\end{figure}
 
-Commercial 50\,$\mu$m wires provided reproducible insulation thickness but posed mechanical challenges: they were too thin for crocodile clips, prone to breaking during sealing, and difficult to integrate into current collectors.  
-Attempts to solder these wires to metallic tabs using ultrasonic welding were unsuccessful, as excessive pressure broke the wire, while insufficient pressure resulted in incomplete bonding.
 
-An alternative approach, sealing both the current collector tab and the wire tip with thermoplastic strips, ensured electrical contact and mechanical stability but compromised the integrity of the exposed area, leading to partial copper exposure during use.
+\subsection{Commerical insulated wires}
+The commercial 50$\mu$m wire is too thin to clamp to potentiostat crocodile clamps and also prone to break when sealed through the pouch cell foils. 
+\begin{figure}[H]
+    \includegraphics[width=0.45\textwidth]{figures/anodes/gold_wire_microscope_better.jpg}
+    \includegraphics[width=0.45\textwidth]{figures/anodes/copper_wire_microscope.jpg}
+    \caption{Photos of 50$\mu$m wires. Left in gold and right in copper.}
+\end{figure}
+The solution is to remove partial of the insulation of the wire at one end and solder it to a piece of metal to act as current collector as reported in Reference \cite{Oehler_2023}. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.4\textwidth]{figures/anodes/pealed_gold_wire.jpg}
+  \caption{Gold wire with removed insolution.}
+\end{figure}
+In the paper they use the machine to solder the contact in micro-electronics which I didn't have at disposal. 
+
+\subsubsection{Attempt with ultrasonic welding}
+\label{sec:ultrasonic wire soldering}
+
+As an alternative, I tried the ultrasonic welder used to solder battery electrode tabs.
+The device is not ment for such precision jobs but I could tune the parameters to fix the wire to the tabs as in Figure \ref{fig:wires-ultrasonic-soldered}
+\begin{figure}[H]
+  \includegraphics[width=0.2\textwidth]{figures/anodes/good_soldering.jpg}
+  \includegraphics[width=0.25\textwidth]{figures/anodes/bad_soldering.jpg}
+  \includegraphics[width=0.25\textwidth]{figures/anodes/broken_soldering.jpg}
+  \includegraphics[width=0.25\textwidth]{figures/anodes/microreference_on_tab.jpg}
+  \caption{}
+  \label{fig:wires-ultrasonic-soldered}
+\end{figure}
+The parmeter for the welding are reported in the following table:
+\begin{table}[H]
+  \centering
+  \begin{tabular}{l l}
+    \toprule
+    Parameter names & value \\
+    \midrule
+    Nachimpuls & 0.3 s\\
+    Haltzeit & 0.3 s\\
+    Höhe & 0.56 mm\\
+    Ws & 90 J\\
+    T.P. & 4 PSI\\
+    W.P. & 2 PSI\\
+    Oscillation & 15 $\mu$m\\
+    \bottomrule
+  \end{tabular}
+\end{table}
+This method proved to be ineffective due to poor mechanical stability and lack of insulation.
+
+\subsubsection{Attempt with thermosetting sealing}
+Finally I tried to put current collector and exposed wire in contact and sealed them together with the thermosetting polymer strips.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/anodes/preparation_hadesive_bonding.jpg}
+    \includegraphics[width=0.35\textwidth]{figures/anodes/insulated_tab_hadesive_bonding.jpg}
+\end{figure}
+Although this provided electrical contact and I could perform electrodeposition of lithium with multiple techniques (CP, CA, CV), the deposited lithium was dissolving back into solution. I observed this because the voltage drifts from the lithium potential to the original value of copper within hours (30-90 minutes). My hypothesis is that some current-collector area remained exposed and electrodeposition occurred on its surface with a very low current density, not sufficient to form stable deposits.
+Furthermore, electrodeposition in organic electrolytes is concurrent with the degradation of the electrolyte.
+
+The insulation of the wire was accomplished by positioning the wire between two thermoplastic strips. These were sealed using an ultrasonic sealer, with the excess polymer removed with a scalpel to expose a circular wire section, as shown in Figure XX. Achieving a perpendicular cut to obtain an approximately circular section requires practice. Without microscopic verification, one might end up with an elliptical section from a non-perpendicular cut, resulting in higher surface area.
 
 \section{Electrodeposition procedures}
 
@@ -481,6 +548,9 @@ Electrodes fabricated by this method remained stable for several months, as veri
 Sodium deposition followed analogous protocols.  
 However, Na deposition in organic electrolytes competes with electrolyte reduction, and the formation of a heterogeneous SEI layer frequently destabilized the deposited Na.  
 In several cases, the Na film dissolved partially over time, causing the reference potential to drift back toward that of bare copper.
+
+Gold produces an alloy with lithium. Alloys have better defined potential compared to metallic phase and there are less problem with the SEI fomred on the surface since no new phase is grown. Stable reference electrodes were reported in the literature produced by alloying at cathodic anodic current of 50pA for 1 hour \cite{Oehler_2023}. 
+I could not replicate the same the processes with my electrodes, probably becuase of the ineffective current contact betwwen wires and nickel tab.
 
 For Au-wire substrates, alloy formation with Na was not achieved, despite attempts to reproduce literature procedures involving extremely low cathodic currents (tens of picoamperes).  
 This difficulty is attributed to the presence of exposed regions on the metallic current collector tab.
@@ -499,98 +569,3 @@ Several failure modes were observed during extended cycling:
 
 These issues limit reproducibility and currently prevent quantitative comparison across cells.  
 Nonetheless, in many cases the micro-REs remained sufficiently stable over the duration of a DEIS measurement to enable meaningful qualitative analysis.
-
-\section{Implications for future work}
-
-The results indicate that while micro-reference electrodes are feasible for operando DEIS in pouch cells, achieving reproducibility requires improvements in wire insulation, mechanical protection, and electrodeposition quality.  
-Potential strategies include the use of metallic meshes as mechanically stable supports, the adoption of laser-cut insulating sleeves, or the exploration of alloy-type reference systems when compatible with the chemistry under study.
-
-\section{Old text to be redistributed here}
-\subsection{Micro-reference electrodes}
-% Fabrication
-% Types of substrates
-% Expected stability
-% Issues (geometry, metal dissolution)
-
-Microscopic reference electrodes introduced in pouch cells are made from an insulated metallic wire with the section exposed. 
-This concept is the closest realization of a punctual electrode. 
-\marginpar{
-    \includegraphics[width=\marginparwidth]{figures/anodes/copper_wire_microscope.jpg}
-}
-The goal is to probe the local potential at a single point where the field lines are equipotential.
-In this work I used three types of insulated wires:
-\begin{itemize}
-    \item circa 130$\mu$m copper manually insulated with thermosetting polymer strips.
-    \item 50$\mu$m diameter polymer insulated Copper from Goodfellow;
-    \item 50$\mu$m diameter polymer insulated Gold from Goodfellow;
-\end{itemize}
-I want to explain better the last electrode support. 
-I took a copper wire from a woven desoldering cloth and used the polymeric thermosetting strips used for sealing pouch cells to cover the wire.
-Figure \ref{fig:microref_wires} shows the components used to assemble the wire and the comparison with the commercial one.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=2cm]{figures/application3/image5.1.jpg}
-    \includegraphics[width=2.5cm]{figures/anodes/unwoven_copper_wires.jpg}
-    \includegraphics[width=2cm]{figures/application3/image5.2.jpg}
-    \includegraphics[width=4cm]{figures/anodes/copper_130um_insulated.jpg}
-    \caption{From left to right: step for the preparation of insulated copper wire.}
-    \label{fig:microref_wires}
-\end{figure}
-\marginpar{
-    \includegraphics[width=\marginparwidth]{figures/anodes/gold_wire_microscope_better.jpg}
-}
-The commercial 50$\mu$m wire is too thin to clamp to potentiostat crocodile clamps and also prone to break when sealed through the pouch cell foils. 
-The solution (cite paper) is to uninsulate the wire at one end and solder it to a piece of metal to act as current collector. 
-In the paper they use the machine to solder the contact in micro-electronics which I didn't have at disposal. 
-Instead I tried ultrasonic welding with poor reproducibility even with the best settings I could find. 
-Too much pressure caused the wire to break while too little didn't solder the metals.
-% Reports on the attempt with this methods are found in Appendix \ref{app:ultrasonic wire soldering}
-Finally I tried to put current collector and exposed wire in contact and sealed them together with the thermosetting polymer strips.
-\marginpar{
-    \includegraphics[width=\marginparwidth]{figures/anodes/pealed_gold_wire.jpg}
-}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.4\textwidth]{figures/anodes/preparation_hadesive_bonding.jpg}
-    \includegraphics[width=0.25\textwidth]{figures/anodes/insulated_tab_hadesive_bonding.jpg}
-\end{figure}
-Although this provided electrical contact and I could perform electrodeposition of lithium with multiple techniques (CP, CA, CV), the deposited lithium was dissolving back into solution. I observed this because the voltage drifts from the lithium potential to the original value of copper within hours (30-90 minutes). My hypothesis is that some current-collector area remained exposed and electrodeposition occurred on its surface with a very low current density, not sufficient to form stable deposits.
-Furthermore, electrodeposition in organic electrolytes is concurrent with the degradation of the electrolyte.
-
-The insulation of the wire was accomplished by positioning the wire between two thermoplastic strips. These were sealed using an ultrasonic sealer, with the excess polymer removed with a scalpel to expose a circular wire section, as shown in Figure XX. Achieving a perpendicular cut to obtain an approximately circular section requires practice. Without microscopic verification, one might end up with an elliptical section from a non-perpendicular cut, resulting in higher surface area.
-
-For the electrodeposition the wire was connected to the working pole of a potentiostat using a disk of metallic lithium as counter (12 mm diameter) in a two-electrode configuration. The procedure was conducted with a two steps technique, first 10 minutes of potentiostatic set at -100mV and then 3 hours in galvanostatic with -50uA of current. It followed an open circuit technique. The reference electrode produced with such techniques were stable under parasitic  current of the potentiostat for 6 months.
-
-Gold produces an alloy with lithium. Alloys have better defined potential compared to metallic phase and there are less problem with the SEI formation. Stable reference electrodes were reported in the literature produced by alloying at cathodic anodic current of 50pA for 1 hour. 
-I could not replicate the same the processes with my electrodes, probably becuase of the ineffective insulation of the nickel tabs.
-
-\section{Ultrasonic wire soldering on metallica tab}
-\label{sec:ultrasonic wire soldering}
-
-\begin{table}[H]
-  \centering
-  \begin{tabular}{l l}
-    \toprule
-    Parameter names & value \\
-    \midrule
-    Nachimpuls & 0.3s\\
-    Haltzeit & 0.3s\\
-    Höhe & 0.56mm\\
-    Ws & 90J\\
-    T.P. & 4 PSI\\
-    W.P. & 2PSI\\
-    Oscillation & 15um\\
-    \bottomrule
-  \end{tabular}
-\end{table}
-
-
-\begin{figure}
-  \includegraphics[width=0.3\textwidth]{figures/anodes/good_soldering.jpg}
-  \includegraphics[width=0.3\textwidth]{figures/anodes/bad_soldering.jpg}
-  \includegraphics[width=0.3\textwidth]{figures/anodes/broken_soldering.jpg}
-\end{figure}
-
-\begin{figure}
-  \includegraphics[width=0.5\textwidth]{figures/anodes/microreference_on_tab.jpg}
-\end{figure}

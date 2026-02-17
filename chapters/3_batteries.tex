@@ -1,4 +1,5 @@
 \chapter{Batteries}
+\label{ch:batteries}
 
 Electrochemical energy storage systems convert chemical energy into electrical work through redox reactions occurring at electrode interfaces.
 Among these systems, rechargeable (or secondary) batteries have become essential across portable electronics, stationary storage, and electric mobility. 
@@ -6,18 +7,17 @@ Lithium-ion batteries, in particular, have dominated the field due to their high
 % This chapter introduces the fundamental principles of rechargeable batteries, their active materials, performance metrics, and modern technological evolution. 
 % Emphasis is placed on lithium-ion batteries because they serve as the experimental platform in this work.
 
-Batteries are typically modeled as black-box systems, defined solely by their input and output relations (current and voltage, respectively).
-Electrochemical impedance spectroscopy serves as an ideal technique to monitor the internal resistance of the battery and to estimate its state of health (SOH) \cite{liuStateHealthEst,Hofmann_2023, QIAN2025125272}.
+Electrochemical impedance spectroscopy serves as an ideal technique to monitor the internal resistance of the battery and to estimate its state of health (SoH) \cite{liuStateHealthEst,Hofmann_2023, QIAN2025125272}.
 Without the separation of electrodes, impedance measurements on batteries do not probe a single interface or reaction, but rather the collective response of multiple electrodes, electrolyte phases, and transport pathways embedded within a specific cell architecture.
 As a consequence, the measured impedance depends not only on intrinsic electrochemical properties, but also on the state of charge, operating history, and degradation state of the battery as a system.
-Hence, in contrast to classic electrochemical characterization, the impedance of a battery is measured at different states and changes are monitored rather than considering its absolute value.
+Hence, in contrast to classic electrochemical characterization, the impedance of a battery is measured at different states and changes are monitored throughout its lifetime rather than considering its absolute value.
 
-This chapter introduces the fundamental principles of rechargeable batteries required to interpret impedance spectra measured at the cell level, including electrode configuration, operating states, and common degradation modes.
+This chapter introduces the fundamental principles of rechargeable batteries required to interpret impedance spectra measured at the cell level, including electrode configuration, operating states, and common degradation processes.
 The focus is not on a comprehensive description of battery chemistry, but on those aspects that directly influence the structure, evolution, and variability of impedance spectra during operation and aging.
 
 \section{Basic principles of operation}
 
-A battery consists of two electrodes separated by an electronically insulating but ionically conductive electrolyte. 
+A battery consists of two electrodes separated by an electronically insulating, but ionically conductive, electrolyte. 
 During discharge, oxidation occurs at the negative electrode, releasing electrons to the external circuit and cations to the electrolyte. 
 Concurrently, reduction occurs at the positive electrode, accepting electrons and intercalating the cations arriving through the electrolyte. 
 A positive current flows through the external circuit until the electrodes reach the same potential and no driving force remains.
@@ -78,7 +78,7 @@ A 1C current charges or discharges the battery in 1 hour, while C/10 corresponds
 
 \section{Storage mechanisms}
 
-The type of Redox reaction at each of the battery electrodes can be of different nature.
+The type of redox reaction at each of the battery electrodes can be of different nature.
 The first "pile" of Alessandro Volta used electrodissolution and deposition of copper and zinc, respectively, while modern rechargeable batteries rely on the far more efficient process of ion intercalation.
 These mechanisms are not specific to lithium-based systems and can, in principle, involve different alkali or multivalent ions depending on the electrolyte and host structure \cite{PAN2025184607}.
 
@@ -200,11 +200,11 @@ Its formation and evolution govern several key battery characteristics, includin
 
 SEI formation occurs predominantly during the first reduction of a negative electrode, when the electrode potential approaches the reduction potential of the electrolyte.
 At this stage, electrolyte components undergo electrochemical and chemical reactions that generate insoluble products, which precipitate onto the electrode surface and form a passivating layer.
-Typical inorganic SEI constituents include LiF, Li$_2$CO$_3$, Li$_2$O, and Li$_2$SO$_3$, while organic components often consist of polymeric or oligomeric species derived from solvent decomposition \ref{WU2025102124}.
+Typical inorganic SEI constituents include LiF, Li$_2$CO$_3$, Li$_2$O, and Li$_2$SO$_3$, while organic components often consist of polymeric or oligomeric species derived from solvent decomposition \cite{WU2025102124}.
 
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/batteries/SEI_composition.jpeg}
-    \captionof{figure}{Illustration of the composition of the SEI layer on lithium or carbon. \cite{}}
+    \captionof{figure}{Illustration of the composition of the SEI layer on lithium or carbon. \cite{peledReviewSEIPresent2017}}
     \label{fig:SEI_composition}
 }
 
@@ -309,8 +309,8 @@ The characteristic rate at which the capacity drops significantly corresponds to
 \subsection{Electrochemical impedance spectroscopy (EIS)}
 
 Electrochemical Impedance Spectroscopy is extensively used in battery characterization for its capability to identify and separate processes such as ohmic resistance, charge-transfer kinetics, double-layer capacitance, and diffusion. These kinetics evolve with the aging of the cell and the occurrence of degradation phenomena.
-The impedance of a cell is measured at different States of Charge (SOC) and States of Health (SOH) by interrupting the constant-current constant-voltage (CC-CV) cycling protocol at fixed points and waiting for interface relaxation.
-A correct impedance measurement using classical sinusoidal perturbation across a decreasing frequency range may take 30 minutes or longer to probe the complete frequency response of a typical lithium-ion battery (1~MHz to 10~mHz).
+The impedance of a cell is measured at different states of charge (SoC) and states of health (SoH) by interrupting the constant-current constant-voltage (CC-CV) cycling protocol at fixed points and waiting for interface relaxation.
+A correct impedance measurement using classical sinusoidal perturbation across a decreasing frequency range may take 30 minutes or longer to probe the complete frequency response of a typical lithium-ion battery (1~MHz to 10~mHz), as schematized in Figure \ref{fig:battery_time_constants}.
 This time requirement significantly increases the overall experiment duration, limiting its use for long-term explorations.
 This limitation is the focus of the present work and requires an introduction to the concepts of System Identification and Dynamic System Theory provided in the next chapter to frame the problem and justify the proposed solutions.
 

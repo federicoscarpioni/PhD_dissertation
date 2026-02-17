@@ -7,7 +7,7 @@ Therefore, the strategy is to fit a generic rational function of order $n$, infe
 
 \section{Physical model for intercalation in porous electrodes}
 
-The impedance of intercalation materials is modeled using porous electrode theory, originally developed by De Levie for porous metal electrodes and later adapted by Bisquert and others for insertion battery materials. The model accounts for both the ionic transport through the electrolyte-filled pores and the charge transfer/intercalation processes at the electrode-electrolyte interface.
+The impedance of intercalation materials is modeled using porous electrode theory, originally developed by De Levie \cite{deleviePorousElectrodesElectrolyte1963} for porous metal electrodes and later adapted by Bisquert \cite{bisquertInfluenceBoundaries2000} and others \cite{lamantiaImpedancePorous2008} for insertion battery materials. The model accounts for both the ionic transport through the electrolyte-filled pores and the charge transfer/intercalation processes at the electrode-electrolyte interface.
 
 % \subsection{Theoretical framework}
 
@@ -47,9 +47,9 @@ The impedance of intercalation materials is modeled using porous electrode theor
 in this work I used a physically-based porous electrode model derived from a simplified transmission-line approach. 
 It accounts for ionic transport in the electrolyte-filled pores, electron conduction in the active material, and Faradaic intercalation kinetics. The overall impedance is represented as:
 
-\begin{equation*}
+\begin{equation}
 Z_T = R_s + \frac{R_p}{k l} \coth(k l),
-\end{equation*}
+\end{equation}
 
 where $R_s$ is the uncompensated solution resistance, $R_p$ combines pore-solution and solid-particle resistances, and $kl$ embeds the finite diffusion or charge-transfer response of the porous electrode. This approach has been discussed in \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}.
 Figure \ref{fig:LTP circuit} shows the full equivalent circuit corresponding to the porous electrode model adopted in this work.
@@ -58,7 +58,7 @@ Figure \ref{fig:LTP circuit} shows the full equivalent circuit corresponding to 
     \includegraphics[width=\textwidth]{figures/LTP/ltp_circuit_new.png}
     \caption{Equivalent-circuit representation of the porous electrode model used to fit dynamic impedance spectra.
     The circuit captures ionic transport through electrolyte-filled pores, interfacial charge-transfer kinetics, double-layer and chemical capacitances, and distributed transport effects along the pore depth.
-    This formulation follows a transmission-line approach commonly used for intercalation electrodes.}
+    This formulation follows a transmission-line approach commonly used for intercalation electrodes. \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}}
     \label{fig:LTP circuit}
 \end{figure}
 
@@ -180,6 +180,16 @@ In this work, I used such a rational polynomial function of order $n=m$ as a mea
 The concept is not new \cite{zoltowskiNontraditionalApproachMeasurement2005,gheemTheoreticalApproachModelling2008a,liModelReductionFractional2024}, but it is the first time this model has been used for instantaneous impedance of time-varying systems.
 
 Polynomial functions can flexibly fit impedance with any complex shapes and also have the advantage of working as a test for the linear Kramers-Kronig relations \cite{sadkowskiCNLSFitsKramers2004}.
+
+A fundamental procedure for the regression of rational polynomial function is to add L1 regularization to the objective function, also called LASSO (\emph{least absolute shrinkage and selection operator}).
+In practice, the minimization problem is written as:
+\begin{equation}
+  \min_{\theta}\{ \text{obj} + \lambda ||\theta||_1  \}
+\end{equation}
+where $\text{obj}$ is the least-squares objective function described in Section \ref{sec:fitting-sys-id}, $\theta$ is the parameters array, and $\lambda$ is a penalty factor that controls the regularization strength.
+Regularization is important because rational function parameters can grow unnecessarily large and be compensated by parameters in the denominator.
+The choice of penalty factor is somewhat arbitrary, but I found that values as small as $1 \times 10^{-12}$ are effective, although I expected to be ineffective since comparable to the round-up error of single-precision calculations.
+Removing the regularization terms makes the optimization procedure ineffective or causes it to fail.
 
 General measurement functions do not inform about the physics of the system, but they are a valuable approach to following the evolution of the parameters $a_n$ and $b_n$ with time.
 In principle, it is possible to connect the parameters $a_n$ and $b_n$ of a rational polynomial with appropriate order $N$ to a physical model, at least for simple systems such as those modeled with Randles circuits \cite{gheemTheoreticalApproachModelling2008a}.

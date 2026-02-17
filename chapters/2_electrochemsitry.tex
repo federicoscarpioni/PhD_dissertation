@@ -1,11 +1,12 @@
 \chapter{Electrochemistry}
+\label{ch:electrochemistry}
 % \minitoc
 
 Electrochemistry provides the fundamental framework for understanding the operation and ageing of rechargeable batteries. 
 All essential processes in a battery (ion intercalation, charge transfer, solid-electrolyte interphase formation, and lithium plating) are governed by electrochemical thermodynamics and kinetics of the redox reactions occurring at the interfaces between electrodes and electrolyte. 
 The voltage, efficiency, power capability, and long-term stability of a cell arise from these reactions and transport mechanisms taking place at these interfaces.
 
-To characterize these processes in electrochemistry, the Electrochemical Impedance Spectroscopy (EIS) technique is used for its capability of separating processes occurring at different time scales in one single experiment while being non-destructive to the system and operating \emph{in situ}, meaning that the system is kept in its operational state (in contrast to other spectroscopy analyses that require specific sample preparation). 
+To characterize these processes in electrochemistry, the electrochemical impedance spectroscopy (EIS) technique is used for its capability of separating processes occurring at different time scales in one single experiment while being non-destructive to the system and operating \emph{in situ}, meaning that the system is kept in its operational state (in contrast to other spectroscopy analyses that require specific sample preparation). 
 
 EIS does not probe isolated physicochemical phenomena, but rather the linearized response of a coupled system involving charge transfer, mass transport, and interfacial storage.
 A meaningful interpretation of impedance spectra therefore requires identifying which electrochemical processes can contribute to the measured response, over which time and length scales, and under which thermodynamic and kinetic assumptions.
@@ -13,12 +14,12 @@ A meaningful interpretation of impedance spectra therefore requires identifying 
 For this reason, the present chapter introduces only those electrochemical concepts that directly govern the small-signal response of an electrochemical interface, with particular emphasis on interfacial kinetics, capacitive storage, and transport phenomena that manifest as distinct features in the impedance spectrum. 
 First, the thermodynamics and kinetics of interfacial redox reactions are discussed, referring to the basic equations describing electrode potential and charge-transfer resistance.
 Then, the structure of the electrical double-layer is described, including the adsorption capacitance.
-The chapter follows with a brief description of electrochemical methods based on direct or alternating current control.
+The chapter follows with a brief description of electrochemical methods based on direct or alternating current control; the emphasis is on electrochemical impedance spectroscopy.
 
 \section{Thermodynamics}
 
 Electrochemical systems convert chemical energy into electrical work through redox reactions occurring at electrode-electrolyte interfaces. 
-At equilibrium, when no net current flows in the cell, the driving force for electron transfer is quantified by the \emph{electrode potential}, which originates from differences in the electrochemical potential of ionic and electronic species in the two phases.
+At equilibrium, when no net current flows in the cell, the driving force for electron transfer is quantified by the electrode potential, which originates from differences in the electrochemical potential of ionic and electronic species in the two phases.
 
 \subsection{Electrochemical potential}
 
@@ -48,7 +49,8 @@ When the activities of the reacting species deviate from standard equilibrium co
     \right),
     \label{eq:nernst}
 \end{equation}
-where $E^\circ$ is the standard redox potential and $a_i$ is the activity of species $i$. Equation \ref{eq:nernst} shows that the electrode potential is determined not only by the intrinsic thermodynamics of the redox couple but also by the composition and temperature of the interface. 
+where $E^\circ$ is the standard redox potential and $a_i$ is the activity of species $i$. Equation \ref{eq:nernst} shows that the electrode potential is determined not only by the intrinsic thermodynamics of the redox couple but also by the composition and temperature of the interface.
+Activity can be approximated as the concentration when the concetration itself is low, hence ion-ion interactions are negligible. 
 
 \subsection{Measurement of electrode potentials}
 
@@ -57,7 +59,7 @@ Therefore, determining the potential of an electrode requires a second electrode
 Historically, the standard hydrogen electrode (SHE) was used to define the zero of the electrochemical reduction potential scale, but practical measurements typically rely on secondary references such as Ag/AgCl or calomel electrodes, which offer adequate stability with simpler construction and maintenance. 
 To keep the potential stable, the reference electrode must remain unaltered under small current drawn by the electrochemical instrumentation.
 
-In systems where a classical reference electrode cannot be implemented, such as in full battery cells, a pseudo-reference can be realized by immersing a metal wire directly into the electrolyte. Although convenient, the potential of a pseudo-reference depends on the local ionic composition and often drifts during operation. 
+In systems where a classical reference electrode cannot be implemented for geometrical contains, a pseudo-reference can be realized by immersing a metal wire directly into the electrolyte. Although convenient, the potential of a pseudo-reference depends on the local ionic composition and often drifts during operation. 
 Its use is acceptable only when the resulting uncertainty is quantified and compatible with the intended measurements.
 
 A third option is the use of a quasi-reference electrode that is similar to a pseudo-reference in the sense that the electrode is immersed directly into the electrolyte solution without ionic separation, but it is constituted by a metal covered by its halogen forming a solid state redox couple system for better potential stability.
@@ -69,7 +71,7 @@ Because impedance measurements rely on small perturbations applied around a defi
 
 While thermodynamics defines the equilibrium potential of an electrode, practical electrochemical systems operate away from equilibrium. 
 When a current flows, the interfacial concentrations of reacting species deviate from their equilibrium values, leading to a measurable shift in potential known as the overpotential. 
-Electrode kinetics provides a quantitative description of how charge transfer, mass transport, and interfacial phenomena contribute to this deviation.
+Electrode kinetics provides a quantitative description of how charge-transfer, mass transport, and interfacial phenomena contribute to this deviation.
 
 \subsection{Overpotential and activation kinetics}
 
@@ -83,7 +85,7 @@ At sufficiently large overpotentials, mass transport may become rate-limiting.
 
 \subsection{The Butler-Volmer equation}
 
-The activation-controlled charge transfer is described by the Butler-Volmer equation,
+The activation-controlled charge-transfer is described by the Butler-Volmer equation,
 \begin{equation}
     i = i_0 \left[ \exp\!\left( \frac{\alpha_a F \eta}{RT} \right) - \exp\!\left( -\frac{\alpha_c F \eta}{RT} \right) \right],
     \label{eq:BV}
@@ -163,7 +165,7 @@ Electrons in the electrode and ions in the electrolyte arrange themselves such t
 The resulting region, known as the electrical double layer, stores charge electrostatically and therefore contributes a capacitive component to the interfacial impedance.
 
 The double layer is commonly described as consisting of a compact region adjacent to the electrode surface and a diffuse region that extends into the electrolyte. 
-In the compact layer, often referred to as the Helmholtz layer, specifically adsorbed ions and oriented solvent molecules form a thin dielectric layer of thickness on the order of molecular dimensions (Ångstrom). 
+In the compact layer, often referred to as the Helmholtz layer, specifically adsorbed ions and oriented solvent molecules form a thin dielectric layer of thickness on the order of molecular dimensions (~ tens of Å). 
 Its capacitance per unit area can be approximated by that of a parallel-plate capacitor,
 \begin{equation}
     C_{\mathrm{H}} \approx \frac{\varepsilon_{\mathrm{H}} \varepsilon_0}{d_{\mathrm{H}}},
@@ -230,7 +232,7 @@ This is the standard method for simulating battery operation, yielding data for 
 \subsection{AC methods}
 
 The use of AC signals originated from the need to resolve the electrified double-layer. 
-Early work, dating back to Kohlrausch, showed that by using high-frequency AC signals, the large interfacial capacitance could be \"short-circuited\", allowing the isolation of the pure ohmic resistance of the electrolyte. 
+Early work showed that by using high-frequency AC signals, the large interfacial capacitance could be "short-circuited", allowing the isolation of the pure Ohmic resistance of the electrolyte \cite{randles1947kinetics}. 
 Crucially, the frequency-dependent measurements of capacitance provided direct experimental evidence for the electrical double-layer, demonstrating that AC techniques are unique in their ability to resolve fundamental physical elements based on their distinct \emph{time constants} ($\tau = RC$).
 
 \subsubsection{Electrochemical impedance spectroscopy}
@@ -255,8 +257,9 @@ The representation of the interface as charge-transfer resistance $R_{\mathrm{ct
 Before the advent of microcomputers in the 70s, impedance was estimated frequency by frequency manually with the aid of an analog circuit called lock-in amplifier.
 The impedance $Z(\omega_k)$ is calculated from the amplitude ratio and phase shift $\Delta\phi$ between input (reference) and output signals using the formula 
 \begin{equation}
-Z(\omega_k) = \frac{A_I}{A_O}e^{j\omega\Delta\phi}.
+Z(\omega_k) = A_r e^{j\omega\Delta\phi},
 \end{equation}
+where $A_r$ is the ratio between input and output signals amplituedes.
 
 Later, digital signal processing was integrated into micro-controllers, creating the digital Frequency Response Analyzer (FRA) capable of automatic frequency sweeping, averaging, automatic current range selection, and application of voltage or current bias (Solartron 1174 in 1978 and Solartron 1250 in 1983). 
 These instruments set the standard for impedance measurements that we still find today in commercial devices. 
@@ -265,7 +268,7 @@ These instruments set the standard for impedance measurements that we still find
 
 In the limit of small perturbations, the nonlinear Butler-Volmer expression may be linearized by expanding Eq. \ref{eq:BV} to first order about $\eta = 0$, yielding:
 \begin{equation}
-    i \approx \left( \frac{\partial i}{\partial \eta} \right)_{\eta=0} \eta = \frac{nF i_0}{RT}\,\eta.
+    i \approx \left( \frac{\partial i}{\partial \eta} \right)_{\eta=0}  = \frac{nF i_0}{RT}\,\eta.
 \end{equation}
 The inverse of this proportionality defines the charge-transfer resistance,
 \begin{equation}
@@ -338,8 +341,7 @@ When interpreting Nyquist plots geometrically, it is essential that the real and
 \section{Equivalent circuit models}
 
 The linearization of the electrochemical equations yields processes that behave as electrical elements connected in series or parallel, depending on the system characteristics.
-To visualize the components, one typically translates the set of equations into a circuit and applies the laws of series and parallel connection of electrical elements to obtain a simplified and linearized model of the interface.
-This approach was introduced by Randles \cite{randles1947kinetics} \cite{randles1952kinetics} and it is the \emph{de facto} method to visualize models in scientific publications.
+To estract the valueas of the physical paramters, one typically translates the set of equations into a circuit and applies the laws of series and parallel connection of electrical elements to obtain a simplified and linearized model of the interface. This leads to a physically derived equivalent circtui model of the electrochemical interface, an iodea introduced by Randles \cite{randles1947kinetics, randles1952kinetics}.
 
 The correspondence between electrochemical processes and their electrical analogues is summarized in Figure \ref{fig:interface-mechanisms-impedance}, where charge transfer, double-layer charging, and diffusion are mapped to resistive, capacitive, and dispersive circuit elements.
 
@@ -347,7 +349,8 @@ The correspondence between electrochemical processes and their electrical analog
     \centering
     \includegraphics[width =\textwidth]{figures/electrochemistry/interface mechanisms impedance.pdf}
     \caption{Mapping between electrochemical interfacial processes and their equivalent electrical impedance elements.
-    Charge-transfer kinetics, double-layer charging, and mass transport contribute distinct features to the impedance spectrum and can be represented using lumped circuit components.}
+    Bulk mass transport (high frequencies), adsorbtion (middle-high frequencies), charge-transfer kinetics (middle-low frequencies), and diffusive layer transport (low frequencies) contribute distinct features to the impedance spectrum and can be represented using lumped circuit components.
+    The lower part rapresents the impedance of the electrical or electrochemcial elements and the R/C circuit.}
     \label{fig:interface-mechanisms-impedance}
 
 \end{figure}

@@ -5,7 +5,7 @@
 \usepackage{blindtext}
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
-% \usepackage{floatrow}
+\usepackage{caption}
 \usepackage{listings} % format code
 \usepackage{multicol}
 \usepackage{makecell} % Allow text to wrap in tables
@@ -36,48 +36,12 @@ sorting=none
 a4paper,
 %includeheadfoot,
 %total={190mm,257mm},
-headheight = 10mm,
-footskip = 15mm,
 inner = 25mm,
 outer = 60mm,
 top=25mm,
-bottom=20mm,
+bottom=25mm,
 marginparwidth = 50mm
 }
-\savegeometry{main_body}
-
-\geometry{
-a4paper,
-headheight = 10mm,
-footskip = 15mm,
-inner = 25mm,
-outer = 25mm,
-top=25mm,
-bottom=20mm,
-marginparwidth = 0mm
-}
-\savegeometry{full_page}
-
-\geometry{
-a4paper,
-headheight = 10mm,
-footskip = 15mm,
-inner = 25mm,
-outer = 10mm,
-top=25mm,
-bottom=20mm,
-marginparwidth = 0mm
-}
-\savegeometry{no_margin}
-\loadgeometry{main_body}
-
-% Set the captions
-\usepackage[font={it, small}]{caption}
-% Abilitate continuation to new line
-% \captionsetup[figure]{labelfont=bf}
-% \DeclareCaptionLabelFormat{continued}{#1~#2\ (continued)}
-% \captionsetup[ContinuedFloat]{labelformat=continued}
-
 
 % Set up code blocks env
 \usepackage{listings}
@@ -107,15 +71,12 @@ marginparwidth = 0mm
 \lstset{style=mystyle}
 
 % Choose main font for the text
-% \usepackage{XCharter}
-\usepackage{mlmodern}
+\usepackage{XCharter}
+%\usepackage{mlmodern}
 %\usepackage{fourier}
-% \usepackage{helvet}
+%\usepackage[scaled]{helvet}
 %\usepackage{bookman}
 %\usepackage{lexend}
-
-% \usepackage{oswald}
-% \usepackage{kpfonts}
 
 
 % Create custom command for settimang fonts
@@ -128,17 +89,17 @@ marginparwidth = 0mm
 % Custommize headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\addtolength{\headwidth}{\marginparwidth}%{.1cm}
-\addtolength{\headwidth}{.1cm}
+\addtolength{\headwidth}{\marginparwidth}%{.5cm}
+\addtolength{\headwidth}{.5cm}
 \renewcommand{\chaptermark}[1]{\markboth{Chapter \thechapter.\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
 \fancyhf{}
 \fancyhead[RO]{\rightmark}
 \fancyhead[LE]{\leftmark}
-\fancyfoot[C]{\thepage}
+\fancyfoot[RO,LE]{\thepage}
 \renewcommand{\headrulewidth}{0pt}
 
-%\usepackage{fancyhdr}
+% \usepackage{fancyhdr}
 % \pagestyle{fancy}
 % \fancyhead{} % clear all header fields
 % %\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
@@ -156,19 +117,7 @@ marginparwidth = 0mm
 
 % Format the titles style
 \setcounter{secnumdepth}{2}
-
 % \usepackage{titlesec}
-
-% \newcommand{\oswald}{\fontfamily{oswald}\selectfont}
-% % SECTION
-% \titleformat{\section}
-%   {\oswald\selectfont\Large}
-%   {\thesection}{1em}{}
-
-% % SUBSECTION
-% \titleformat{\subsection}
-%   {\fontfamily{cmr}\selectfont\large}
-%   {\thesubsection}{1em}{}
 
 % \newlength\fullchapwidth
 % \setlength\fullchapwidth{%
@@ -176,23 +125,16 @@ marginparwidth = 0mm
 % }
 
 % \titleformat{\chapter}[display]
-%   {\Huge\bfseries}
-%   {\fontfamily{pbk}\selectfont\scalebox{3}{\color{lightgray}\ \thechapter}
+%   {\filleft\Huge\bfseries\palafont}
+%   {\fontfamily{pbk}\selectfont\scalebox{4}{\color{lightgray}\ \thechapter}
 %   }
 %   {0pt}
 %   {}
 
-% \makeatletter
-% \titleformat{\part}[display]
-%   {\Huge\scshape\filright}
-%   {\partname~\thepart:}
-%   {20pt}
-%   {\thispagestyle{epigraph}}
-% \makeatother
-% \setlength\epigraphwidth{.6\textwidth}
 
 % \titleformat{\section}[display]
-%   {\fontfamily{phv}\selectfont\scalebox{1}{\color{lightgray}\thesection}\quad}
+%   {\LARGE\bfseries\palafont}
+%   {\fontfamily{pbk}\selectfont\scalebox{1}{\color{lightgray}\thesection}\quad}
 %   {0pt}
 %   {}
 
@@ -224,104 +166,35 @@ marginparwidth = 0mm
 % \renewcommand{\mtcSSSfont}{\small\bookfont}
 
 
-% % Create custom environment for whill width content
-% \usepackage{changepage}
-% % The following code should be used *after* any changes to the margins and
-% % page layout are made (e.g., after the geometry package has been loaded).
-% \newlength{\fullwidthlen}
-% \setlength{\fullwidthlen}{\marginparwidth}
-% \addtolength{\fullwidthlen}{\marginparsep}
-
-% \usepackage{fullwidth}
-
-% \captionsetup{
-%   justification=raggedright,
-%   labelfont={color=Gray,bf},
-%   font=small}
-
-% \newenvironment{fullwidthfigure}[1][]{
-%   \begin{figure}[#1]
-%   \noindent
-%   \checkoddpage
-%   \ifoddpage
-%     \hspace*{-\oddsidemargin}\hspace*{-1in}%
-%   \else
-%     \hspace*{-\evensidemargin}\hspace*{-1in}%
-%   \fi
-%   \bgroup
-% }{
-%   \egroup
-%   \end{figure}
-% }
-
-
-% -------------------------------------------------------
-% MARGIN CAPTIONS (kaobook / tufte style)
-% -------------------------------------------------------
-
-% % caption appearance
-% \captionsetup{
-%   font=small,
-%   labelfont=bf,
-%   justification=raggedright,
-%   singlelinecheck=false
-% }
-
-% % floatrow configuration: captions in margin
-% \floatsetup[figure]{
-%   margins=raggedright,
-%   capposition=beside,
-%   capbesideposition={right,top},
-%   capbesidewidth=\marginparwidth
-% }
-% \usepackage{ifoddpage}
-
-% \newcommand{\setmarginfigurecaption}{%
-%   \checkoddpage
-%   \ifoddpage
-%     \floatsetup[figure]{capbesideposition={right,top}}
-%   \else
-%     \floatsetup[figure]{capbesideposition={left,top}}
-%   \fi
-% }
-
-
-% -------------------------------------------------------
-% WIDE FIGURE — twoside aware (pdflatex safe)
-% expands into OUTER margin only
-% -------------------------------------------------------
-
-\usepackage{ifoddpage}
+% Create custom environment for whill width content
 \usepackage{changepage}
+% The following code should be used *after* any changes to the margins and
+% page layout are made (e.g., after the geometry package has been loaded).
+\newlength{\fullwidthlen}
+\setlength{\fullwidthlen}{\marginparwidth}
+\addtolength{\fullwidthlen}{\marginparsep}
 
-% compute margin extension
-\newlength{\outermarginwidth}
-\setlength{\outermarginwidth}{\marginparwidth}
-\addtolength{\outermarginwidth}{\marginparsep}
+\usepackage{fullwidth}
 
-\newenvironment{widefigure}[1][htbp]
-  {\begin{figure}[#1]
-   \checkoddpage
-   \ifoddpage
-     % recto page → expand right
-     \begin{adjustwidth}{0pt}{-\outermarginwidth}
-   \else
-     % verso page → expand left
-     \begin{adjustwidth}{-\outermarginwidth}{0pt}
-   \fi
-   \centering
-  }
-  {\end{adjustwidth}
-   \end{figure}
-  }
+\captionsetup{
+  justification=raggedright,
+  labelfont={color=Gray,bf},
+  font=small}
 
-% \usepackage{etoolbox}
-
-% \AtBeginEnvironment{figure}{\setmarginfigurecaption}
-
-
-
-
+\newenvironment{fullwidthfigure}[1][]{
+  \begin{figure}[#1]
+  \noindent
+  \checkoddpage
+  \ifoddpage
+    \hspace*{-\oddsidemargin}\hspace*{-1in}%
+  \else
+    \hspace*{-\evensidemargin}\hspace*{-1in}%
+  \fi
+  \bgroup
+}{
+  \egroup
+  \end{figure}
+}
 
 \usepackage{adjmulticol}
 \newenvironment{TwoCol}{\small\begin{adjmulticols}{2}{0in}{-2in}}{\end{adjmulticols}}
@@ -335,3 +208,4 @@ marginparwidth = 0mm
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }
+

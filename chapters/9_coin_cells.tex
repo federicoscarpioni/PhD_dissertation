@@ -84,12 +84,12 @@ These signals retain the low-frequency components while discarding high-frequenc
 
 The impedance of the lower frequency band and the drift are estimated using the DMFA with a filter bandwidth of 0.01 Hz, which yields a time resolution of 100 s, equal to one period of the multi-sine and the signal block used in the online computation. The total impedance spectrum is the concatenation of the parts computed with STFT and DMFA and reported in Figure \ref{fig:dmfa_impedance_coin}.
 
-\begin{figure}[h]
+\begin{widefigure}[h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/dmfa_impedance_result.png}
+  \includegraphics[width = \linewidth]{figures/results_coin/dmfa_impedance_result.png}
   \caption{Impedance of charge and discharge estimated with DMFA and online STFT combined. One spectrum per 10 cycles is plotted; the first 2 plots are discarded.}
   \label{fig:dmfa_impedance_coin}
-\end{figure}
+\end{widefigure}
 
 The effectiveness of the DMFA in separating the slow electrochemical drift from the superimposed multi-sine excitation is illustrated in Figure \ref{fig:dmfa_drift_coin}.
 
@@ -150,24 +150,24 @@ It can be observed at least two consecutive semicircles and a diffusive tail. At
 Another observation is the change in ohmic drop resistance with state of charge.
 The evolution of the impedance spectrum with battery aging during charge is summarized in Figure~\ref{fig:deis_aging_charge}.
 
-\begin{figure} [h]
+\begin{widefigure} [h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/PanCoin2025_009_DEIS_charge_aging_mosaic.png}
+  \includegraphics[width = \linewidth]{figures/results_coin/PanCoin2025_009_DEIS_charge_aging_mosaic.png}
   \caption{Dynamic impedance spectra during charge at selected states of health.
   Spectra are shown for four aging stages: beginning of life, mid-life, just before the 80\% capacity threshold, and after crossing it.
   Color coding indicates state of charge.}
   \label{fig:deis_aging_charge}
-\end{figure}
+\end{widefigure}
 
 A corresponding representation for discharge is reported in Figure~\ref{fig:deis_aging_discharge}.
 
-\begin{figure} [!h]
+\begin{widefigure} [!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/PanCoin2025_009_DEIS_discharge_aging_mosaic.png}
+  \includegraphics[width = \linewidth]{figures/results_coin/PanCoin2025_009_DEIS_discharge_aging_mosaic.png}
   \caption{Dynamic impedance spectra during discharge at the same aging stages as Figure~\ref{fig:deis_aging_charge}.
   The appearance and shift of multiple semicircles and diffusive features reflect changes in interfacial and transport processes with aging.}
   \label{fig:deis_aging_discharge}
-\end{figure}
+\end{widefigure}
 
 The cell is originally already charged from the manufacturer. During the first cycle of the measurement, the cell voltage quickly reaches the charging limit and continues to discharge as shown in Figure~\ref{fig:first_cycle_coin}. 
 This is probably due to the state of the solid electrolyte interphase (SEI). 
@@ -198,13 +198,13 @@ The impedance, reported in Figure \ref{fig:impedance_first_cycle_coin}, differs 
 All behaviours observed here are reproduced in the other 8 cells of the set, including the higher impedance in the first discharge. Detailed results are reported in the Appendix. 
 The reproducibility of the dynamic impedance measurements across nominally identical cells is assessed in Figure~\ref{fig:eis_dynamic_variability}.
 
-\begin{figure} [h]
+\begin{widefigure} [!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/eiS_dynamic_variability.png}
+  \includegraphics[width = \linewidth]{figures/results_coin/eiS_dynamic_variability.png}
   \caption{Dynamic impedance variability across nine cells at 90\%, 50\%, and 10\% state of charge during the second discharge cycle.
   While overall spectral features are consistent, variations in magnitude and ohmic resistance reflect manufacturing variability.}
   \label{fig:eis_dynamic_variability}
-\end{figure}
+\end{widefigure}
 
 As with any production process, cells do not respond identically but show similar behavior. One can notice impedance magnitude variations for Cell~10 and variations in the ohmic drop, which is notably higher in Cell~17 than in the others.
 
@@ -214,7 +214,7 @@ Comparing complex impedance qualitatively in the complex plane across many cells
 \subsection{Effect of the multi-sine on aging}
 To assess whether continuous multi-sine excitation influences degradation, capacity retention is compared statistically in Figure \ref{fig:aging_comp}.
 
-\begin{figure} [h]
+\begin{figure} [!h]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/Boxplot_aging.png}
   \caption{Comparison of discharge capacity retention for cells cycled with DC-only excitation and DC with superimposed multi-sine perturbation.
@@ -229,23 +229,23 @@ In this experiment, the cells are small and cycled at a slow C-rate. The peak-to
 Static impedance measured at different states of charge also shows good consistency. Figure~\ref{fig:eis_static_variability} reports data from three cells at the same states of charge as Figure~\ref{fig:eis_dynamic_variability}.
 For reference, the variability of stationary impedance measurements obtained during interrupted cycling is shown in Figure \ref{fig:eis_static_variability}.
 
-\begin{figure} [h]
+\begin{widefigure} [!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/eiS_static_variability.png}
+  \includegraphics[width = \linewidth]{figures/results_coin/eiS_static_variability.png}
   \caption{Static impedance variability across three cells at selected states of charge.
   Impedance was measured after a 1 h rest at each state of charge using conventional stepped-sine EIS.}
   \label{fig:eis_static_variability}
-\end{figure}
+\end{widefigure}
 
 A direct comparison between static and dynamic impedance measurements is presented in Figure~\ref{fig:eis_static_vs_dynamic}.
 
-\begin{figure} [h]
+\begin{widefigure} [!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/eiS_static_vs_dynamic_soc.png}
+  \includegraphics[width = \linewidth]{figures/results_coin/eiS_static_vs_dynamic_soc.png}
   \caption{Comparison of impedance measured under stationary conditions and during non-stationary operation at the same states of charge.
   The close agreement indicates that, at C/10, dynamic impedance measurements capture interfacial properties comparable to equilibrium EIS.}
   \label{fig:eis_static_vs_dynamic}
-\end{figure}
+\end{widefigure}
 
 This result suggests that at such a low C-rate (C/10), the electrode interfaces are in a similar state to the static case, while significantly reducing measurement time.
 
@@ -268,23 +268,24 @@ Residuals are small for the real part (approximately 1\%), but larger in the ima
 Large residuals for the highest three points signal that the model may not adequately reproduce all features of the dataset.
 This could also be attributed to the arbitrary choice of the weighting factor in the least-squares objective function.
 
-\begin{figure}[!h]
+\begin{figure}[!b]
   \centering
   \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_[7, 78, 144, 225, 311].png}
   \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_7.png}
   \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_78.png}
   \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_144.png}
-  \caption{Rational polynomial fitting of dynamic impedance spectra at different states of charge during discharge of cycle 6.
-  Symbols represent measured impedance; solid lines show the fitted model.
-  Residuals are reported below each spectrum.}
+  \caption{Rational polynomial fitting of dynamic impedance spectra at different states of charge (marked with colours dots) during discharge of cycle 6.
+  The figures in the panel after the voltage time series report the impedance data (markers) and fit result (solid black line). Residuals are reported next to each spectrum. The colours of the markers represents the states of charge.}
   \label{fig:results_fitting_coin_cycle5}
 \end{figure}
-\begin{figure}[!h]\ContinuedFloat
+% \clearpage
+\begin{figure}[!ht]\ContinuedFloat
   \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_225.png}
   \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_311.png}
-  \caption{Rational polynomial fitting of dynamic impedance spectra at different states of charge during discharge of cycle 6.
-  Symbols represent measured impedance; solid lines show the fitted model.
-  Residuals are reported below each spectrum.}
+  \caption[]{Continued}
+  % \caption{Rational polynomial fitting of dynamic impedance spectra at different states of charge during discharge of cycle 6.
+  % Symbols represent measured impedance; solid lines show the fitted model.
+  % Residuals are reported below each spectrum.}
 \end{figure}
 
 Despite the small residual values, the oscillatory behavior indicates that the model is not fully adequate and persists for polynomial orders up to nine (the highest tested).
@@ -328,7 +329,7 @@ The same behavior is consistent with the other experiments of this type.
   Lower row: corresponding cell voltage and current reconstructed via DMFA.}
   \label{fig:fitting_parameters_cycle11}
 \end{figure}
-
+\clearpage
 \begin{figure}[!h]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle19.png}
@@ -336,6 +337,7 @@ The same behavior is consistent with the other experiments of this type.
   Lower row: corresponding cell voltage and current reconstructed via DMFA.}
   \label{fig:fitting_parameters_cycle20}
 \end{figure}
+
 
 \section{Summary and implications}
 

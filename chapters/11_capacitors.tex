@@ -72,19 +72,19 @@ The current flows equally in series connection while the voltage drop of the cou
 
 Figure \ref{fig:reference-electrode-impedance} illustrates the role of the reference electrode in separating the working electrode response from counter-electrode and electrolyte contributions, which is essential for reliable impedance measurements.
 
-\begin{figure}
+\begin{widefigure}
     \centering
-    \includegraphics[width =\textwidth]{figures/electrochemistry/reference electrode impedance.pdf}
+    \includegraphics[width =\linewidth]{figures/electrochemistry/reference electrode impedance.pdf}
     \caption{Role of the reference electrode in electrochemical impedance measurements.
     A reliable reference electrode design ensures that the measured impedance reflects the response of the working electrode alone, minimizing artefacts arising from counter-electrode polarization or uncompensated resistance.}
     \label{fig:reference-electrode-impedance}
-\end{figure}
+\end{widefigure}
 
 A schematic overview of the three-electrode DEIS measurement setup, including excitation, acquisition, is shown in Figure \ref{fig:edlc_deis_setup}.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/chap_supercap/Fig2.png}
+    \includegraphics[width=0.6\textwidth]{figures/chap_supercap/Fig2.png}
     \caption{Instrumentation for three-electrode DEIS measurements on EDLCs.
     Experimental configuration showing the potentiostat, arbitrary waveform generator, external data acquisition, and three-electrode cell used to resolve time-varying impedance of each carbon electrode independently.
     Two channels of the potentiostat are used to record the voltage and current signals from both the working half cell and the full cell simultaneously}
@@ -136,13 +136,13 @@ The DEIS data show both electrodes presenting predominantly capacitive spectra u
 Figure \ref{fig:edlc_deis_timefreq} illustrates the time evolution of the impedance modulus at representative mid-frequency (10 Hz) and low-frequency (300 mHz) components for both electrodes.
 The negative electrode impedance remains relatively stable, while the positive electrode experiences a marked drift in the low-frequency domain once the potential exceeds $\sim1.0$\,V vs.\ RHE.
 
-\begin{figure}[h]
+\begin{widefigure}[h]
     \centering
-    \includegraphics[width = \textwidth]{figures/image3.png}
+    \includegraphics[width = \linewidth]{figures/image3.png}
     \caption{Time evolution of selected impedance components during CV.
     Modulus of impedance at 10 Hz and 300 mHz for positive and negative activated carbon electrodes during cyclic voltammetry, highlighting the onset of low-frequency drift at the positive electrode near the upper potential limit.\cite{piantaEvaluationKineticParameters2023a}}
     \label{fig:edlc_deis_timefreq}
-\end{figure}
+\end{widefigure}
 
 \subsection{Electrodes response asymmetry}
 
@@ -151,15 +151,16 @@ Conversely, the negative electrode's impedance shape more closely resembles an i
 
 A direct visual comparison of the impedance spectra for the positive and negative electrodes at comparable states of charge is shown in Figure \ref{fig:edlc_asymmetry}.
 
-\begin{figure}[!h]
+\begin{widefigure}[!h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/image4.png}
-    \includegraphics[width=0.5\textwidth]{figures/chap_supercap/Fig10.png}
+    \includegraphics[width=0.45\linewidth]{figures/image4.png}
+    \includegraphics[width=0.4\linewidth]{figures/chap_supercap/Fig10.png}
+
     \caption{Impedance asymmetry between nominally identical carbon electrodes at 0V cell voltage.
-    Comparison of instantaneous impedance spectra highlighting higher impedance at the positive electrode.
-    This highlights the effect of the electrode history on its impedance reported on the left side.\cite{piantaEvaluationKineticParameters2023a}}
+    Left: Comparison of instantaneous impedance spectra highlighting higher impedance at the positive electrode.
+    Rigth: electrode potential history.\cite{piantaEvaluationKineticParameters2023a}}
     \label{fig:edlc_asymmetry}
-\end{figure}
+\end{widefigure}
 
 \subsection{Capacitance estimation}
 
@@ -176,6 +177,7 @@ where $i_{\mathrm{drift}}$ is the net current from the potential sweep. We also 
 Impedance dataset was fitted with the porous electrode model with adsorbtion described in Chapter \ref{chap:analysis}, but the semplification for the absence of Faradic process led to two different circuits to fit positive and negative electrodes's impedances, which are reporter in Figure \ref{fig:edlc_fit_spectra} with the respecitve circuits.
 
 \begin{figure}[!h]
+    \centering
     \includegraphics[width=0.8\textwidth]{figures/chap_supercap/Fig8.png}
     \caption{Equivalent-circuit fitting of instantaneous EDLC impedance.
     Experimental impedance spectra (symbols) and fitted distributed RC models (lines) for positive and negative electrodes at selected potentials during cyclic voltammetry.}
@@ -191,13 +193,13 @@ A typical DEIS dataset reveals how $C_{\mathrm{dl}}(t)$, $C_{\mathrm{ad}}(t)$, o
 
 The temporal evolution of selected fitted parameters over a full CV cycle is shown in Figure \ref{fig:edlc_param_evolution}.
 
-\begin{figure}[!h]
+\begin{widefigure}[!h]
     \centering
-    \includegraphics[width=0.45\textwidth]{figures/chap_supercap/Fig9.png}
-    \includegraphics[width=0.45\textwidth]{figures/chap_supercap/Fig11.png}
+    \includegraphics[width=0.45\linewidth]{figures/chap_supercap/Fig9.png}
+    \includegraphics[width=0.45\linewidth]{figures/chap_supercap/Fig11.png}
     \caption{Time evolution of fitted physical parameters during CV. Left: effective capacitance and right: adsorption capacitance. The figure reveals strong potential dependence and hysteresis effects at the positive electrode.}
     \label{fig:edlc_param_evolution}
-\end{figure}
+\end{widefigure}
 
 \section{Remarks and perspective}
 In this chapter, we demonstrated the application of non-stationary impedance spectroscopy to an adsorption-controlled energy storage system. Despite using chemically identical carbon electrodes, the three-electrode DEIS reveals distinct shapes and time constants at the positive and negative electrodes, driven by local potential, electrode history, and side reactions. Our results are consistent with prior literature~\cite{tribbiaSuperCap2020,piantaEvaluationKineticParameters2023a}, and confirm the methodological advantages of DEIS over classical EIS in disentangling dynamic adsorption phenomena and electrode asymmetry. Future work will leverage the same approach in galvanostatic drifts, or in synergy with in-situ spectroscopic probes, to explore aging mechanisms and microscopic adsorption processes.

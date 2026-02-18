@@ -152,8 +152,8 @@ In both cases the current-collector tabs were put in contact to aluminium or nic
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.4\textwidth]{figures/anodes/graphite_reference_placing.jpg}
-    \includegraphics[width=0.4\textwidth]{figures/anodes/graphite_final_pouch_3e.jpg}
+    \includegraphics[width=0.45\textwidth]{figures/anodes/graphite_reference_placing.jpg}
+    \includegraphics[width=0.45\textwidth]{figures/anodes/graphite_final_pouch_3e.jpg}
     \caption{Three-electrode graphite/Li pouch cell with micro-reference electrode.
     Left: placement of the insulated micro-reference electrode between separators; right: sealed three-electrode pouch cell used for DEIS measurements on graphite half-cells.}
     \label{fig:graphite_pouch}
@@ -161,8 +161,8 @@ In both cases the current-collector tabs were put in contact to aluminium or nic
 
 \begin{figure}[!h]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/anodes/SiCN_reference_placing.jpg}
-    \includegraphics[width=0.4\textwidth]{figures/anodes/SiCN_final_pouch_3e.jpg}
+    \includegraphics[width=0.57\textwidth]{figures/anodes/SiCN_reference_placing.jpg}
+    \includegraphics[width=0.38\textwidth]{figures/anodes/SiCN_final_pouch_3e.jpg}
     \caption{Three-electrode SiCN(O)/Na pouch cell with micro-reference electrode.
     Left: positioning of the microscopic reference electrode within the separator stack; right: completed three-electrode pouch cell used for operando DEIS measurements.}
     \label{fig:SiCNO_pouch}
@@ -218,13 +218,14 @@ Prior to the DEIS measurements, the graphite half-cells underwent a standard for
 
 \subsubsection{Dynamic impedance at C/5}
 Figure~\ref{fig:graphite_C5} shows the time-resolved impedance during a full C/5 cycle.
-\begin{figure}[!h]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_reduction_C5.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_oxidation_C5.png}
+\begin{widefigure}[!h]
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/graphite_reduction_C5.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/graphite_oxidation_C5.png}
     \caption{Time-resolved impedance of graphite during a C/5 galvanostatic cycle.
     Dynamic impedance spectra acquired during lithiation (left) and delithiation (right), showing systematic evolution of low-frequency features across staging transitions. The first spectrum and lowest-frequency point were excluded.}
     \label{fig:graphite_C5}
-\end{figure}
+\end{widefigure}
+
 A clear evolution of the low-frequency diffusional tail is observed as the voltage crosses the characteristic graphite staging transitions.
 This behavior is consistent for both lithiation and delithiation and parallels the trends previously reported for the LTP system in Chapter~\ref{chap:LTP}, suggesting that changes in intercalation-induced porosity, tortuosity, or solid-phase diffusion influence the instantaneous impedance.
 
@@ -248,19 +249,19 @@ Therefore, while suggestive, these observations must be interpreted cautiously a
 At higher rates (1C and 2C), the behavior differs markedly. As shown in Figure~\ref{fig:graphite_1C}, neither the staging-related changes in the low-frequency region nor the transient impedance reduction are observed. At 1C, the system does not reach the third intercalation plateau due to substantial overpotential, and only approximately 70\,\% of the theoretical capacity is accessed. 
 The high-frequency resistance and charge-transfer semicircle increase systematically with current rate, as is expected in regimes dominated by concentration polarisation and interfacial limitations.
 
-\begin{figure}[!h]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_reduction_1C.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_oxidation_1C.png}
+\begin{widefigure}[!h]
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/graphite_reduction_1C.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/graphite_oxidation_1C.png}
     \caption{Dynamic impedance during 1C galvanostatic lithiation/delithiation.}
     \label{fig:graphite_1C}
-\end{figure}
+\end{widefigure}
 
-\begin{figure}[!h]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_reduction_2C.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/graphite_oxidation_2C.png}
+\begin{widefigure}[!h]
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/graphite_reduction_2C.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/graphite_oxidation_2C.png}
     \caption{Dynamic impedance during 2C galvanostatic lithiation/delithiation.}
     \label{fig:graphite_2C}
-\end{figure}
+\end{widefigure}
 
 To highlight the effect of current rate on the instantaneous impedance response, Figure \ref{fig:graphite impedance comparison} compares spectra at identical state of charge.
 The asymmetry between lithiation and delithiation, previously documented for LTP, is also visible here. 
@@ -268,14 +269,15 @@ Additionally, the strong increase in high-frequency resistance and in the charge
 At 2C the impedance becomes noisy despite reducing the excitation amplitude, indicating that the nonlinear operating point still limits the measurement quality.
 The sources of low precision are poor signal-to-noise ratios and strong intermodulation produced by nonlinearity in mass-transport-controlled operational regimes.
 
-\begin{figure}[!h]
-    \includegraphics[width = 0.3\textwidth]{figures/anodes/image7.png}
-    \includegraphics[width = 0.3\textwidth]{figures/anodes/image8.png}
-    \includegraphics[width = 0.3\textwidth]{figures/anodes/image9.png}
+\begin{widefigure}[!h]
+    \centering
+    \includegraphics[width = 0.3\linewidth]{figures/anodes/image7.png}
+    \includegraphics[width = 0.3\linewidth]{figures/anodes/image8.png}
+    \includegraphics[width = 0.3\linewidth]{figures/anodes/image9.png}
     \caption{Effect of current rate on instantaneous graphite impedance.
     Comparison of impedance spectra at 50 \% state of charge for C/5, 1C, and 2C operation, illustrating the growth of high-frequency resistance and charge-transfer arcs with increasing current.}
     \label{fig:graphite impedance comparison}
-\end{figure}
+\end{widefigure}
 
 Attempts to reproduce the experiment with different graphite electrodes were not successful due to the difficulties in fabricating micro-reference electrodes via electrodeposition when SEI is also formed on the reference electrode tip. As a consequence, confirming whether the impedance transient stems from intrinsic electrochemistry or from electrode history effects remains an open question.
 
@@ -287,21 +289,22 @@ In the 1.0--0.5\,V region, the impedance is large and then decreases sharply.%, 
 In the subsequent oxidation step, the impedance stabilizes, and in the following cycle (Figure \ref{fig:SiCN cell 36 second cycle}) the electrode behavior is distinct from the formation impedance.  
 The accessible capacity is significantly lower than the nominal value used to calculate the nominal C-rate, confirming that the effective electrochemical capacity differs from the theoretical one.
 
-\begin{figure}[H]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_1.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_2.png}
+\begin{widefigure}[!h]
+    \centering
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch36_1.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch36_2.png}
     \caption{First-cycle dynamic impedance of SiCN(O) during SEI formation.
     Time-resolved impedance during the initial sodiation/desodiation cycle at nominal C/10, showing high impedance in the 1.0-0.5 V region associated with SEI formation.}
     \label{fig:SiCN cell 36 first cycle}
-\end{figure}
+\end{widefigure}
 
-\begin{figure}[H]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_3.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch36_4.png}
+\begin{widefigure}[!h]
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch36_3.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch36_4.png}
     \caption{Stabilized impedance response of SiCN(O) after formation.
     Dynamic impedance during the second cycle, demonstrating reduced and more stable impedance compared to the formation cycle.}
     \label{fig:SiCN cell 36 second cycle}
-\end{figure}
+\end{widefigure}
 
 \subsubsection{Transient impedance reduction}
 A feature analogous to that observed for graphite appears in the second SiCN(O) cycle: a sudden reduction in impedance during the cathodic sweep. Figure~\ref{fig:SiCN_feature_zoom} illustrates this behavior and the associated instantaneous impedance spectrum. The spectral shape resembles that observed in graphite (Figure~\ref{fig:graphite_feature_zoom}), which suggests that the underlying mechanism might be similar, although not necessarily identical.
@@ -313,46 +316,45 @@ A feature analogous to that observed for graphite appears in the second SiCN(O) 
     Zoomed impedance magnitude (left) and corresponding instantaneous spectrum (right) highlighting a brief reduction in impedance during the second cycle, qualitatively similar to the feature observed in graphite.}
     \label{fig:SiCN_feature_zoom}
 \end{figure}
-Because SiCN(O) is believed to support reversible sodium metal deposition within microporosity (as previously proposed in the literature), one hypothesis is that metallic sodium nucleates within microcavities once a critical local overpotential is reached. Such a transition could transiently reduce the charge-transfer resistance. Unlike in graphite, no simultaneous increase of the voltage is seen, which implies that the mechanism may be influenced by the specific surface chemistry of SiCN(O).
 
-Figure~\ref{fig:SiCN post mortem} shows a post-mortem image of the electrode with visible metallic sodium deposits, corroborating that plating does occur under the chosen operating conditions. However, this does not confirm that the impedance transient is caused by plating; it merely supports that plating is present.
-
-% \begin{figure}[h]
 \marginpar{
     \centering
-    \includegraphics[width=\marginparwidth]{figures/anodes/SiCN_post_mortem.jpg}
+    \includegraphics[width=0.9\marginparwidth]{figures/anodes/SiCN_post_mortem.jpg}
     \captionof{figure}{Post-mortem evidence of sodium deposition on SiCN(O).
     Optical image of the SiCN(O) electrode after cycling, showing metallic sodium deposits consistent with plating under the applied operating conditions.}
     \label{fig:SiCN post mortem}
-% \end{figure}
 }
+
+Because SiCN(O) is assumed to support reversible sodium metal deposition within microporosity (as previously proposed in the literature), one hypothesis is that metallic sodium nucleates within microcavities once a critical local overpotential is reached. Such a transition could transiently reduce the charge-transfer resistance. Unlike in graphite, no simultaneous increase of the voltage is seen, which implies that the mechanism may be influenced by the specific surface chemistry of SiCN(O).
+
+Figure~\ref{fig:SiCN post mortem} shows a post-mortem image of the electrode with visible metallic sodium deposits, corroborating that plating does occur under the chosen operating conditions. However, this does not confirm that the impedance transient is caused by plating; it merely supports that plating is present.
 
 A repetition of the experiment (Figures~\ref{fig:SiCN cell 39 first cycle}--\ref{fig:SiCN cell 39 third cycle}) revealed similar SEI formation behavior but did not show the transient impedance drop. This difference is plausibly attributable to variations in electrode porosity or local microstructure for the specific electrode.
 Indeed Dr. Melzi D'Eril observed lack of reproducibility of the \emph{activation peak} for reversible electrodeposion \cite{derilReversibleSodiumPlating2023}.
 
-\begin{figure}[H]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_1.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_2.png}
+\begin{widefigure}[!h]
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch39_1.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch39_2.png}
     \caption{First cycle of repeated SiCN(O) experiment.
     Dynamic impedance during initial sodiation/desodiation, showing SEI formation behavior comparable to the first cell.}
     \label{fig:SiCN cell 39 first cycle}
-\end{figure}
+\end{widefigure}
 
-\begin{figure}[H]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_3.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_4.png}
+\begin{widefigure}[!h]
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch39_3.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch39_4.png}
     \caption{Second cycle of repeated SiCN(O) experiment.
     Time-resolved impedance after formation, without appearance of a transient impedance drop.}
     \label{fig:SiCN cell 39 second cycle}
-\end{figure}
+\end{widefigure}
 
-\begin{figure}[H]
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_5.png}
-    \includegraphics[width = 0.5\textwidth]{figures/anodes/SiCN_pouch39_6.png}
+\begin{widefigure}[!h]
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch39_5.png}
+    \includegraphics[width = 0.48\linewidth]{figures/anodes/SiCN_pouch39_6.png}
     \caption{Third cycle of repeated SiCN(O) experiment.
     Continued cycling showing stable impedance evolution and absence of transient features.}
     \label{fig:SiCN cell 39 third cycle}
-\end{figure}
+\end{widefigure}
 
 \subsubsection{Summary of SiCN(O) results}
 Both SiCN(O) electrodes exhibit SEI formation followed by a stable impedance. 
@@ -367,7 +369,7 @@ Metallic sodium plating and stripping were investigated to determine whether DEI
 During plating (Figure~\ref{fig:Na electrodeposition DEIS}), the impedance displays an inductive-like loop (positive imaginary part at intermediate frequencies), followed by a return toward lower resistance. 
 \begin{figure}[h]
     \centering
-    \includegraphics[width = 0.8\textwidth]{figures/anodes/sodium_pouch_1.png}
+    \includegraphics[width = \textwidth]{figures/anodes/sodium_pouch_1.png}
     \caption{Dynamic impedance during initial sodium plating.
     Time-resolved impedance spectra showing an inductive-like loop at intermediate frequencies during early sodium deposition, concurrent with decreasing overpotential.}
     \label{fig:Na electrodeposition DEIS}
@@ -383,7 +385,7 @@ The absence of a diffusion tail across all cycles suggests that mass transport d
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.8\textwidth]{figures/anodes/sodium_pouch_2.png}
+    \includegraphics[width = \textwidth]{figures/anodes/sodium_pouch_2.png}
     \caption{Dynamic impedance during sodium stripping.
     Impedance evolution during anodic dissolution of sodium, characterized by disappearance of inductive features and increasing overall resistance.}
     \label{fig:Na stripping DEIS}
@@ -393,7 +395,7 @@ The absence of a diffusion tail across all cycles suggests that mass transport d
 A second plating step (Figure~\ref{fig:Na second electrodeposition DEIS}) shows no inductive loop, despite maintaining similar overpotential ($\approx$50\,mV). 
 \begin{figure}[H]
     \centering
-    \includegraphics[width = 0.8\textwidth]{figures/anodes/sodium_pouch_3.png}
+    \includegraphics[width = \textwidth]{figures/anodes/sodium_pouch_3.png}
     \caption{Dynamic impedance during repeated sodium plating.
     Second electrodeposition cycle showing absence of the inductive loop observed during initial plating, indicating modified surface or SEI properties.}
     \label{fig:Na second electrodeposition DEIS}

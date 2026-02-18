@@ -32,7 +32,7 @@ This work proposes a complete pipeline for dynamic impedance spectroscopy measur
 \end{itemize}
 To clarify the scope and modular structure of the proposed methodology, Figure \ref{fig:DEIS-pipeline} summarizes the complete experimental and analytical workflow adopted in this work.
 \begin{figure}
-    \includegraphics[width=\textwidth]{figures/acquisition/DEIS_pipeline.png}
+    \includegraphics[width=\textwidth]{figures/acquisition/DEIS_pipeline.drawio.pdf}
     \caption{Conceptual pipeline of dynamic electrochemical impedance spectroscopy.
     The workflow spans multisine excitation design, synchronized signal acquisition, time-resolved impedance estimation, and subsequent model-based analysis.
     This chapter focuses on the acquisition layer, while impedance estimation and analysis are addressed in Chapters \ref{chap:estimation} and \ref{chap:analysis}, respectively.}
@@ -147,14 +147,14 @@ Instructions for the construction of these cables are available in Appendix \ref
 
 The modular separation between electrochemical control, excitation generation, and signal acquisition is illustrated schematically in Figure \ref{fig:deis-setup-schematics}, while Figure \ref{fig:photo-setup} contains a photo of the instrumentation in our laboratory.
 It is possible to see how the auxiliary cables interface the single potentiostat's channels with the external devices.
-\begin{figure}[h]
+\begin{widefigure}[h]
     \centering
-    \includegraphics[width = \textwidth]{figures/acquisition/setup scheme.pdf}
+    \includegraphics[width = \linewidth]{figures/acquisition/setup scheme.pdf}
     \caption{Schematic of the experimental setup for dynamic impedance spectroscopy.
     A potentiostat imposes the electrochemical operating trajectory, while an external arbitrary waveform generator injects the multisine excitation and a dedicated acquisition device records voltage and current signals with high temporal resolution.
     This modular architecture enables full control over excitation, synchronization, and data access.}
     \label{fig:deis-setup-schematics}
-\end{figure}
+\end{widefigure}
 
 \begin{figure}[h]
     \centering
@@ -284,14 +284,14 @@ Dividing the frequency band at the value of 100 Hz creates two smaller multisine
 The two smaller multisines take up only 200 kSa of the generator memory to produce the same excitation as the complete multisine of 100 MSa.
 Figure \ref{fig:multisine-split-time-domain} reports the original and reduced multisines in the time domain.
 
-\begin{figure}[h]
+\begin{widefigure}[h]
     \centering
-    \includegraphics[width = \textwidth]{figures/acquisition/multisine_split.png}
+    \includegraphics[width = \linewidth]{figures/acquisition/multisine_split.png}
     \caption{Broadband multisine generation using frequency-band splitting.
     A single wideband multisine (right) is reproduced by summing two narrower-band multisines (left), each fitting within the memory constraints of the waveform generator.
     This strategy enables excitation spanning multiple decades of frequency without loss of spectral coherence.}
     \label{fig:multisine-split-time-domain}
-\end{figure}
+\end{widefigure}
 
 In the example, I used two arbitrary parameters: the 100 Hz boundary frequency and the 1 s period of the high-band waveform.
 For my case, 100 Hz sits in the middle; this might be adjusted case by case with the same rationale.
@@ -341,14 +341,14 @@ Most of the time, a "loop" technique is inserted in the sequence to repeat it a 
 
 The flow of digital signals is schematize is figure \ref{fig:DEIS automation workflow}
 
-\begin{figure}
+\begin{widefigure}
     \centering
-    \includegraphics[width=\textwidth]{figures/acquisition/deis_worflow_basic.png}
+    \includegraphics[width=\linewidth]{figures/acquisition/deis_worflow_basic.png}
     \caption{Signal flow in the automated dynamic impedance spectroscopy framework.
     Continuous voltage and current streams are acquired in memory blocks, transferred to persistent storage, and reinitialized without interrupting excitation or acquisition.
     This strategy enables arbitrarily long experiments without RAM limitations.}
     \label{fig:DEIS automation workflow}
-\end{figure}
+\end{widefigure}
 
 \subsection{Software solution}
 A control loop must monitor the sequence advancement and loop number returned by querying the potentiostat communication board.
@@ -396,12 +396,12 @@ This loop continuously monitors the execution state of the potentiostat, synchro
 By reacting to technique completion events and loop counters, the control logic ensures uninterrupted acquisition while preserving phase coherence between excitation and response signals.
 The structure of this control loop, implemented in Python and used throughout the battery aging experiments presented in this thesis, is illustrated in Figure~\ref{fig:python-controll-loop}.
 
-\begin{figure}[h]
-    \includegraphics[width = \textwidth]{figures/acquisition/python_control_loop.png}
+\begin{widefigure}[h]
+    \includegraphics[width = \linewidth]{figures/acquisition/python_control_loop.png}
     \caption{Python-based control loop for a CCCV battery experiment with embedded dynamic impedance spectroscopy.
-    The loop monitors technique progression, triggers data transfer and multisine activation, and maintains synchronization between electrochemical control and signal acquisition.}
+    a) Scheme of the software components to interact with the single devices. b) Voltage and current time series of a typical CC-CV experiment on a battery as an example for a complex sequence monitoring. c) Visualization of the multithreaded software approach in multichannel mode. The loop monitors technique progression, triggers data transfer and multisine activation, and maintains synchronization between electrochemical control and signal acquisition.}
     \label{fig:python-controll-loop}
-\end{figure}
+\end{widefigure}
 
 Because the potentiostat, waveform generator, and acquisition device operate simultaneously and exchange data in real time, the automation software must manage multiple processes concurrently.  
 Sequential execution of instrument commands would introduce delays and risk data loss, particularly during high-bandwidth streaming.  

@@ -48,13 +48,13 @@ The combination of on-line and off-line impedance estimation requires a carefull
 High-frequency components must be extracted immediately to reduce storage requirements, while low-frequency components must be preserved for later analysis.
 This separation imposes a strict ordering of operations on the streamed data and motivates the hybrid processing architecture illustrated in Figure \ref{fig:DEIS automation workflow online}.
 
-\begin{figure}[h]
+\begin{widefigure}[h]
     \centering
-    \includegraphics[width=\textwidth]{figures/acquisition/deis_workflow_online_calc.png}
+    \includegraphics[width=\linewidth]{figures/acquisition/deis_workflow_online_calc.png}
     \caption{Data-flow architecture for dynamic impedance spectroscopy with on-line estimation of the high-frequency impedance band.
     Voltage and current signals are streamed continuously, processed in short-time windows for STFT-based impedance estimation, filtered to remove high-frequency components, and downsampled for subsequent off-line DMFA analysis of the low-frequency band.}
     \label{fig:DEIS automation workflow online}
-\end{figure}
+\end{widefigure}
 
 \begin{figure}[h]
     \includegraphics[width = \textwidth]{figures/estimation/online_software_objects_scheme.pdf}
@@ -80,13 +80,13 @@ The user must choose the low-pass filter critical frequency to remove all the fr
 The individual signal-processing steps performed during online computation are summarized in Figure~\ref{fig:online processing scheme}.
 The figure highlights the separation between real-time operations, which must be computationally lightweight, and deferred processing steps executed off-line.
 
-\begin{figure}[h]
-    \includegraphics[width = \textwidth]{figures/estimation/computation_scheme.png}
+\begin{widefigure}[h]
+    \includegraphics[width = \linewidth]{figures/estimation/computation_scheme.png}
     \caption{Schematic representation of the on-line signal-processing pipeline.
     Each acquired data block is detrended, transformed to the frequency domain, and used to estimate the high-frequency impedance via STFT.
     After low-pass filtering, the signals are transformed back to the time domain, downsampled, and stored for off-line DMFA analysis of the low-frequency impedance band.}
     \label{fig:online processing scheme}
-\end{figure}
+\end{widefigure}
 
 In this work I characterized commercial lithium-ion batteries in the frequency range 10 mHz--200 kHz with this combined method.
 The online STFT was configured to compute the impedance of all frequencies above 10 Hz, so the critical frequency of the low-pass filter was set to 8 Hz.

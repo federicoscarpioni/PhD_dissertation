@@ -59,7 +59,7 @@ Electrochemical methods consist of a perturbation of one cell variable among vol
 To do so, two types of instruments are needed: a potentiostat or a galvanostat; usually packed inside one banchtop device.
 The purpose of a potentiostat is to maintain the potential of a working electrode (WE) at a prescribed value relative to a reference electrode (RE). 
 This is achieved using a high-gain feedback loop. 
-The potential difference between WE and RE is measured through a high-impedance \footnote{1-10 $T\Omega$} voltage follower connected to the RE. 
+The potential difference between WE and RE is measured through a high-impedance \sidenote{Usually in the range 1-10 $T\Omega$} voltage follower connected to the RE. 
 This element ensures that only a negligible current flows through the RE, preserving its equilibrium potential. 
 The measured potential is compared to a user-defined setpoint, and the resulting error signal drives a power amplifier connected to the counter electrode (CE). 
 By adjusting the CE potential, the amplifier forces the WE potential toward the setpoint.
@@ -100,7 +100,7 @@ Recording these signals enables high-resolution acquisition beyond the default s
 
 \subsection{Digital control and communication}
 
-Although the core functionality of the potentiostat is analog circuitry, the control and signal acquisition is digital and implemented with field-programmable gate arrays (FPGAs\footnote{In FPGAs, logic blocks can be programmed to execute simple digital operations like sums and multiplication. The advantage is the possibility of parallelizing these operations for real-time data processing. They are more expensive than microcontrollers}) or micro-controllers.
+Although the core functionality of the potentiostat is analog circuitry, the control and signal acquisition is digital and implemented with field-programmable gate arrays (FPGAs\sidenote{In FPGAs, logic blocks can be programmed to execute simple digital operations like sums and multiplication. The advantage is the possibility of parallelizing these operations for real-time data processing. They are more expensive than microcontrollers}) or micro-controllers.
 Each channel of the potentiostat is connected with a communication board that sends signals and receives commands to and from a personal computer via USB or Ethernet.
 This interface sets on the hardware the measurement parameters chosen by the user and retrieves the sampled data.
 The instrument is then capable of working independently of the computer, storing data temporarily in a buffer memory.
@@ -258,7 +258,7 @@ It provides the \verb|Multisine| object that generates multisines, optionally op
 First, one imports the \verb|Multisine| object and defines the interested parameters as follows:
 \lstinputlisting[language=Python]{code_blocks/multisine_user_params.py}
 
-\verb|Multisine| offers a compact way to generate multisines, normalize, and analyze their frequency components\footnote{Useful to spot errors in the parameters that may cause spectral leakage} with a few lines of code:
+\verb|Multisine| offers a compact way to generate multisines, normalize, and analyze their frequency components\sidenote{Useful to spot errors in the parameters that may cause spectral leakage} with a few lines of code:
 \lstinputlisting[language=Python]{code_blocks/multisine_excecution.py}
 
 \subsection{AWG memory limitations and splitting strategy}
@@ -411,7 +411,7 @@ In multithreaded programming, multiple execution threads run within the same pro
 This approach allows independent tasks to proceed in parallel while remaining coordinated through a central control logic.  
 
 To make the automation possible, each instrument must independently execute its routine in a dedicated thread, with its actions being triggered from the main control loop.
-The typical approach is to implement each instrument as a \emph{worker} object, which executes operations inside a \emph{while: True} loop \footnote{It always contains a pause during which the main thread is allowed to execute code for another worker object while new data are accumulated in another.}.
+The typical approach is to implement each instrument as a \emph{worker} object, which executes operations inside a \emph{while: True} loop \sidenote{It always contains a pause during which the main thread is allowed to execute code for another worker object while new data are accumulated in another.}.
 The multi-threading standard library of Python, \verb|threading|, is capable of automatically managing all objects without user indication in the code (compared to other libraries like \verb|asyncio|).
 
 A worker object has a property with the name \verb|running| that can be used by other objects to check their status.

@@ -161,8 +161,8 @@ Comparing the CC and CV results highlights how different drifts can emphasize di
 
 
 \section{Impedance validation}
-To ensure that the estimated instantaneous impedance spectra satisfy the LTI assumption, we fitted the spectra with a general transfer function in the form of a rational polynomial of order $n$. To find the proper model structure differnt orders ranging from 3 to 8 were tested on the galvanostatic (CC) dataset, and from 3 to 9 for the sweep-voltage (CV) dataset, aiming to find the best compromise between goodness of fit and model simplicity. 
-The fitting procedure was carried out with \verb|pymultieis| \footnote{https://github.com/richinex/pymultieis}. 
+To ensure that the estimated instantaneous impedance spectra satisfy the LTI assumption, we fitted the spectra with a general transfer function in the form of a rational polynomial of order $n$. To find the proper model structure differnt orders ranging from 3 to 8 were tested on the galvanostatic (CC) dataset, and from 3 to 9 for the sweep-voltage (CV) dataset, aiming to find the best compromise between goodness of fit and model simplicity.
+The fitting procedure was carried out with \verb|pymultieis| \footnote{Available at https://github.com/richinex/pymultieis}. 
 The Akaike information criterion (AIC) was calculated for each polynomial order, and its minimum value identified the optimal complexity level. As reported in Figure \ref{fig:LTP_AIC}, orders 3 and 4 underfit several sections of the spectra, whereas orders 7 and 8 add marginal improvements but introduce unnecessary parameters. The AIC ultimately indicated order 6 to be optimal for the CC data and order 8 for the CV data.
 
 \begin{figure}[!h]

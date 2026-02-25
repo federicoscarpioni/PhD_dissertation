@@ -184,7 +184,7 @@ The only solution is to proceed by tentative acquiring the impedance at a low de
 Even when the lowest frequency of the multisine is fast enough to estimate a correct frequency response function, the STFT method has a limitation due to the reciprocity of time and frequency.
 In fact, if the window is short, the frequency resolution in the Fourier spectrum is low and it is not possible to identify low frequencies.
 The limitation imposed by time-frequency reciprocity is illustrated in Figure \ref{fig:frequency-resolution-periods}, which shows how frequency resolution improves only when multiple periods of a signal are sampled.
-This problem is worsened by the presence of strong pink noise \footnote{Pink noise, also known as flicker noise, is a type of electronic noise characterized by a power spectral density that is inversely proportional to frequency, meaning it is stronger at lower frequencies. It commonly occurs in electronic devices due to fluctuations in the properties of materials, impacting the performance of components like transistors and sensors.} in this region as well as the zero-frequency skirt produced by the drift.
+This problem is worsened by the presence of strong pink noise \sidenote{Pink noise, also known as flicker noise, is a type of electronic noise characterized by a power spectral density that is inversely proportional to frequency, meaning it is stronger at lower frequencies. It commonly occurs in electronic devices due to fluctuations in the properties of materials, impacting the performance of components like transistors and sensors.} in this region as well as the zero-frequency skirt produced by the drift.
 
 \begin{figure}
     \centering

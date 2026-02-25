@@ -8,10 +8,13 @@
 \input{customization_mainmatter}
 
 \loadgeometry{full_page}
-%\input{cover}
-\maketitle
+\input{cover}
 
 \frontmatter
+
+\input{declaration}
+\loadgeometry{main_body}
+\input{abstract}
 
 \loadgeometry{no_margin}
 \begin{multicols}{2}
@@ -21,46 +24,47 @@
 
 \mainmatter
 
-\loadgeometry{main_body}
-\input{chapters/1_introduction}
+% \loadgeometry{main_body}
+% \input{chapters/1_introduction}
 
-\loadgeometry{full_page}
-\part{Theoretical framework}
-\loadgeometry{main_body}
-\input{chapters/2_electrochemsitry}
-\input{chapters/3_batteries}
-\input{chapters/4_identification_dynamic}
-\input{chapters/4bis_digital_signal_processing}
-\input{chapters/5_dynamic_impedance}
+% \loadgeometry{full_page}
+% \part{Theoretical framework}
+% \loadgeometry{main_body}
+% \input{chapters/2_electrochemsitry}
+% \input{chapters/3_batteries}
+% \input{chapters/4_identification_dynamic}
+% \input{chapters/4bis_digital_signal_processing}
+% \input{chapters/5_dynamic_impedance}
 
-\loadgeometry{full_page}
-\part{Methodologies}
-\loadgeometry{main_body}
-\input{chapters/6_acquisition}
-\input{chapters/7_estimation}
-\input{chapters/8_analysis}
+% \loadgeometry{full_page}
+% \part{Methodologies}
+% \loadgeometry{main_body}
+% \input{chapters/6_acquisition}
+% \input{chapters/7_estimation}
+% \input{chapters/8_analysis}
 
-\loadgeometry{full_page}
-\part{Results and discussions}
-\loadgeometry{main_body}
+% \loadgeometry{full_page}
+% \part{Results and discussions}
+% \loadgeometry{main_body}
 \input{chapters/9_coin_cells}
-\input{chapters/10_lithium_sodium_iron_phosophate}
-\input{chapters/11_capacitors}
-\input{chapters/12_anodes_preliminary.tex}
+% \input{chapters/10_lithium_sodium_iron_phosophate}
+% \input{chapters/11_capacitors}
+% \input{chapters/12_anodes_preliminary.tex}
 
-\input{chapters/13_conclusions}
-\input{chapters/15_outlooks}
+% \input{chapters/13_conclusions}
+% \input{chapters/15_outlooks}
 
-% --- suppress openright for appendix ---
-\let\origcleardoublepage\cleardoublepage
-\let\cleardoublepage\clearpage
+% \part{Appendixes}
+% % --- suppress openright for appendix ---
+% \let\origcleardoublepage\cleardoublepage
+% \let\cleardoublepage\clearpage
 
-\input{chapters/Appendixes.tex}
+% \input{chapters/Appendixes.tex}
 
-\backmatter
+% \backmatter
 
-\loadgeometry{no_margin}
-\printbibliography
+% \loadgeometry{no_margin}
+% \printbibliography
 
 
 \end{document}

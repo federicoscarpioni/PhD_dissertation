@@ -5,7 +5,6 @@
 \usepackage{blindtext}
 \usepackage{graphicx}
 \usepackage[dvipsnames]{xcolor}
-% \usepackage{floatrow}
 \usepackage{listings} % format code
 \usepackage{multicol}
 \usepackage{makecell} % Allow text to wrap in tables
@@ -13,6 +12,7 @@
 \usepackage{changepage}
 \usepackage{indentfirst}
 \usepackage{float}
+\usepackage{setspace}
 
 % Manage bibliography
 \usepackage[
@@ -319,13 +319,25 @@ marginparwidth = 0mm
 
 % \AtBeginEnvironment{figure}{\setmarginfigurecaption}
 
+% Set sidenotes
+\usepackage{marginnote}
+
+% ensure outer-margin placement in twoside
+\reversemarginpar
+
+\newcounter{sidenote}
+
+\newcommand{\sidenote}[1]{%
+  \refstepcounter{sidenote}%
+  \textsuperscript{\thesidenote}%
+  \marginnote{\footnotesize\textsuperscript{\thesidenote}\,#1}%
+}
 
 
 
-
-\usepackage{adjmulticol}
-\newenvironment{TwoCol}{\small\begin{adjmulticols}{2}{0in}{-2in}}{\end{adjmulticols}}
-\newenvironment{OneCol}{\small\begin{adjmulticols}{1}{0in}{-2in}}{\end{adjmulticols}}
+% \usepackage{adjmulticol}
+% \newenvironment{TwoCol}{\small\begin{adjmulticols}{2}{0in}{-2in}}{\end{adjmulticols}}
+% \newenvironment{OneCol}{\small\begin{adjmulticols}{1}{0in}{-2in}}{\end{adjmulticols}}
 
 % Set rules for links
 \usepackage[hidelinks]{hyperref}

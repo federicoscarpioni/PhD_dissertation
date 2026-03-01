@@ -25,23 +25,7 @@ The reaction is spontaneous, and this system is referred to as a \emph{galvanic 
 During charging, the current reverses direction, producing the reductive redox half-reaction at the positive electrode and oxidation at the negative electrode.
 Such a system is called an \emph{electrolytic cell}, and the reaction is not spontaneous but requires external work.
 
-\subsection{Electrode potentials and cell voltage}
-
-The electrochemical potential of an ionic species $i$ is
-\begin{equation}
-    \tilde{\mu}_i = \mu_i + z_i F \phi,
-\end{equation}
-where $\mu_i$ is the chemical potential, $z_i$ the charge number, $F$ Faraday's constant and $\phi$ the electrostatic potential. 
-For a redox reaction of the form
-\[
-\mathrm{Ox} + ne^- \rightleftharpoons \mathrm{Red},
-\]
-the equilibrium potential is given by the Nernst equation
-\begin{equation}
-    E = E^\circ + \frac{RT}{nF} \ln\!\left(\frac{a_{\mathrm{Ox}}}{a_{\mathrm{Red}}}\right),
-\end{equation}
-where $a$ denotes the \emph{activity} and $E^\circ$ the \emph{standard reduction potential}. 
-In a full cell, the open-circuit voltage (OCV) is the difference between the equilibrium potentials of the positive and negative electrodes:
+The open-circuit voltage (OCV) of the cell is the difference between the half-reactions' equilibrium potentials at the positive and negative electrodes:
 \begin{equation}
     U_{\mathrm{OCV}} = E_+ - E_-.
 \end{equation}
@@ -79,25 +63,34 @@ A 1C current charges or discharges the battery in 1 hour, while C/10 corresponds
 \section{Storage mechanisms}
 
 The type of redox reaction at each of the battery electrodes can be of different nature.
-The first "pile" of Alessandro Volta used electrodissolution and deposition of copper and zinc, respectively, while modern rechargeable batteries rely on the far more efficient process of ion intercalation.
+The first "pile" of Alessandro Volta used electrodissolution and deposition of zinc and copper, respectively, while modern rechargeable batteries rely on the far more efficient process of ion intercalation.
 These mechanisms are not specific to lithium-based systems and can, in principle, involve different alkali or multivalent ions depending on the electrolyte and host structure \cite{PAN2025184607}.
 
 \subsection{Intercalation}
 
-In intercalation, guest metallic ions reversibly insert into the crystal lattice of a host material without disrupting its structure. 
+In intercalation, guest metal ions reversibly insert into the crystal lattice of a host material without disrupting its structure. 
 This principle applies to inorganic materials where crystal planes are stacked and held together by electrostatic forces.
 When an element of the structure undergoes oxidation or reduction to balance the overall charge, an ion is either inserted or removed from the interlayer volume.
 Examples of such material structures include octahedral transition metal oxides, olivines, and spinel structures \cite{KOECH2024321}.
 
 In layered oxides such as Cobalt or Manganese oxides, host ions occupy octahedral sites between transition-metal oxide layers. 
-The intercalation reaction can be written as
+As an example, the intercalation half-reaction of lithium in $\mathrm{CoO}_2$ and graphite are\cite{MIZUSHIMA1980783}:
 \begin{equation}
-    \mathrm{M}_x \mathrm{A}_y + (1-x)\mathrm{M}^{n+} + (1-x)ne^- \rightleftharpoons \mathrm{MA}_y,
+    \mathrm{LiCoO}_2 \rightleftharpoons \mathrm{Li}_{1-x}\mathrm{CoO2 + n\mathrm{Li}^+ n\mathrm{e}^-},
+\end{equation} 
+and
+\begin{equation}
+    n\mathrm{Li}^+ n\mathrm{e}^- +n\mathrm{C}_6 \rightleftharpoons n\mathrm{LiC}_6.
 \end{equation}
+
+The intercalation reaction can be written as
+% \begin{equation}
+%     \mathrm{M}_x \mathrm{A}_y + (1-x)\mathrm{M}^{n+} + (1-x)ne^- \rightleftharpoons \mathrm{MA}_y,
+% \end{equation}
 where M denotes the intercalated metal ion, A is the host framework, and stoichiometry $x$ varies with state of charge. 
 The layered structure provides two-dimensional ion diffusion pathways, enabling rapid ion transport.
 
-In olivine phosphates like LiFePO$_4$, ions occupy sites within one-dimensional channels running through the crystal. 
+In olivine phosphates like $\mathrm{LiFePO}_4$, ions occupy sites within one-dimensional channels running through the crystal. 
 The two-phase behavior (coexistence of intercalated and de-intercalated domains) arises from the crystal structure and electrostatic interactions, producing the characteristic flat voltage plateau.
 
 \subsection{Alloying}
@@ -190,7 +183,7 @@ Highly concentrated systems (“water-in-salt”) extend this window to $\sim 3$
 
 \section{Solid electrolyte interphase}
 
-The solid electrolyte interphase (SEI) is a nanometer-scale passivation layer that forms spontaneously on the surface of negative electrodes in non-aqueous alkali-ion batteries when the electrode potential falls outside the thermodynamic stability window of the electrolyte.
+The solid electrolyte interphase (SEI) is a nanometer-scale passivation layer that forms spontaneously on the surface of negative electrodes in non-aqueous alkali-ion batteries when the electrode potential is outside the thermodynamic stability window of the electrolyte.
 It originates from the reductive decomposition of electrolyte components, including solvents, salts, and additives, and is a defining feature of lithium-ion and sodium-ion battery operation \cite{peledReviewSEIPresent2017}.
 
 Although initially regarded as a static and protective film, the SEI is now understood as a chemically and structurally heterogeneous, dynamically evolving interphase whose properties strongly depend on electrode material, electrolyte composition, operating conditions, and cycling history.
@@ -200,7 +193,7 @@ Its formation and evolution govern several key battery characteristics, includin
 
 SEI formation occurs predominantly during the first reduction of a negative electrode, when the electrode potential approaches the reduction potential of the electrolyte.
 At this stage, electrolyte components undergo electrochemical and chemical reactions that generate insoluble products, which precipitate onto the electrode surface and form a passivating layer.
-Typical inorganic SEI constituents include LiF, Li$_2$CO$_3$, Li$_2$O, and Li$_2$SO$_3$, while organic components often consist of polymeric or oligomeric species derived from solvent decomposition \cite{WU2025102124}.
+Typical inorganic SEI constituents include LiF, $\mathrm{Li}_2\mathrm{CO}_3$, $\mathrm{Li}_2\mathrm{O}$, and $\mathrm{Li}_2\mathrm{SO}_3$, while organic components often consist of polymeric or oligomeric species derived from solvent decomposition \cite{WU2025102124}.
 
 \marginpar{
     \includegraphics[width=\marginparwidth]{figures/batteries/SEI_composition.jpeg}
@@ -211,15 +204,12 @@ Typical inorganic SEI constituents include LiF, Li$_2$CO$_3$, Li$_2$O, and Li$_2
 The resulting SEI is generally described as a multilayer structure, with an inorganic-rich inner layer in contact with the electrode and a more organic, polymeric outer layer interfacing with the electrolyte.
 This structure is not uniform across the electrode surface and varies locally depending on surface chemistry, morphology, and current distribution.
 
-\subsection{Functional role in battery operation}
-
-From a functional standpoint, the SEI must satisfy two conflicting requirements:
-it must be electronically insulating to prevent continuous electrolyte reduction, while remaining sufficiently permeable to Li$^+$ or Na$^+$ ions to enable reversible charge transfer.
+From a functional standpoint, the SEI must satisfy two requirements:
+it must be electronically insulating to prevent continuous electrolyte reduction, while remaining sufficiently permeable to $\mathrm{Li}^+$ or $\mathrm{Na}^+$ ions to enable reversible charge transfer.
 When these conditions are met, the SEI stabilizes the electrode--electrolyte interface and enables long-term cycling.
 
-However, the SEI is not thermodynamically stable.
-Mechanical stress induced by electrode volume changes, temperature fluctuations, current density gradients, and continued electrolyte reactions lead to continuous restructuring, thickening, and partial dissolution of the SEI during battery operation.
-As a consequence, SEI growth is one of the primary contributors to capacity fade and impedance increase in alkali-ion batteries.
+% When the SEI is formed, part of the lithium is lost. Hence it is foundamental that the layer stop growing after a certain thickness and do not consume more lithium during the life-cycle of the battery.
+% Adding organic additives and engineering the formation processes produces a relativly stable SEI, but other factors such as mechanical stress, temperature, and current density gradients trigger new SEI formation.
 
 \subsection{SEI characterization with EIS}
 
@@ -246,12 +236,13 @@ Figure \ref{fig: overview degradation LIBs} schematically summarizes the main de
 
 Loss of shuttling ions is primarily caused by parasitic reactions that consume the ions. 
 In organic electrolyte base batteries a major contributor is the continuous formation and repair of the solid-electrolyte interphase (SEI) at the negative electrode. 
-Although a stable SEI is essential for suppressing further electrolyte reduction, mechanical stress, particle cracking, volume changes or local overpotential can expose uncovered surface and produce additional SEI growth. 
-The amount of metallic ions irreversibly trapped in the SEI increases with cycling and causes a progressive loss in capacity.
+Although a stable SEI is essential for suppressing further electrolyte reduction, mechanical stress, particle cracking, volume changes can expose uncovered surface and produce additional SEI growth. 
+Furthermore, temperature affects the composition of SEI resulting in new growth.
+The amount of metallic ions irreversibly trapped in the SEI increases with cycling and causes a progressive loss in capacity \cite{Heidrich_2023}.
 
-Metal plating also consumes shuttling ions. When the negative electrode potential drops below 0~V vs the standard metal reduction potential, metallic ions can deposit on the surface. 
+Metal plating also consumes shuttling ions. When the negative electrode potential reaches values below 0~V vs the standard metal reduction potential, metallic ions can deposit on the surface. 
 Plating is favored by high current density, low temperature or large concentration overpotentials. 
-If the deposited metal remains electronically connected, it can be stripped in the following cycle; otherwise it may lose contact with the current collector, forming electrically isolated ("dead lithium" in LIBs) that irreversibly reduces the shuttling ion inventory.
+If the deposited metal remains electronically connected, it can be redesolved in the electrolyte in the following cycle, otherwise it may lose contact with the current collector, forming electrically isolated phases \sidenote{Called inactive or "dead" lithium in lithium-ion batteries.} that irreversibly reduces the shuttling ion inventory \cite{HSIEH2020100139}.
 
 \subsection{Loss of active material}
 
@@ -280,25 +271,26 @@ The most widely used methods rely on galvanostatic or potentiostatic excitation 
 
 \subsection{Galvanostatic cycling}
 
-Galvanostatic charge and discharge at fixed current $I$ is the standard method for determining capacity, coulombic efficiency and cycle life. 
-The measured voltage $U(t)$ is the sum of OCV and overpotentials due to kinetic, ohmic and mass-transfer limitations:
+A popular method to determine the capacity, columbing efficiency and cycle life of a battery is a recursive galvanostatic charge and discahrge technique. 
+The cell voltage $U(t)$ produced by the constant current $I$ is the sum of OCV and overpotentials due to kinetic, ohmic and mass-transfer limitations:
 \begin{equation}
     U(t) = U_{\mathrm{OCV}}(x) + \eta_{\mathrm{kin}} + \eta_{\mathrm{ohm}} + \eta_{\mathrm{mt}}.
 \end{equation}
-The extracted capacity is
+The charged flown during the galvanostatic technique from a time $t_0$ to $t$ is
 \begin{equation}
-    Q = \int I\, dt
+    Q = \int_{t_0}^t I\, dt.
 \end{equation}
-and the coulombic efficiency (CE) is
+When the time frame $t-t_0$ is a complete half-cycle, one gets the charging $Q_{\mathrm{cha}}$ and discahrging $Q_{\mathrm{dis}}$ charge.
+The half-cycle's charge is referred as \emph{capacity} in the battery community. 
+The coulombic efficiency (CE) of a cycle is
 \begin{equation}
-    \mathrm{CE} = \frac{Q_{\mathrm{dis}}}{Q_{\mathrm{chg}}}.
+    \mathrm{CE} = \frac{|Q_{\mathrm{dis}|}}{|Q_{\mathrm{chg}}|}.
 \end{equation}
-For practical Li-ion cells, CE must exceed 99.9~\% to achieve thousand-cycle lifetimes.
+For a commerical battery, efficiency should exceed 99.98\% to achieve a thousand-cycle lifetime with 80\% capacity retention.
 
 In galvanostatic cycling, the cell is kept between a lower and higher operation voltage (voltage limits) to avoid degradation of electrodes or electrolyte.
-
-At high states of charge, the diffusional overpotentials limits the achievable capacity of a cell in galvanostatic operation by reaching the voltage limited.
-Therefore, Li-ion cells are typically charged using a constant-current / constant-voltage (CC-CV) protocol: first a constant current up to an upper voltage limit, then a constant voltage stage at $V_{\max}$ until the current tapers below a threshold. 
+At high states of charge, the diffusional overpotentials limits the achievable capacity of a cell in galvanostatic operation by reaching the voltage limit.
+Therefore, Li-ion cells are typically charged using a constant-current and constant-voltage (CC-CV) protocol: first a constant current up to an upper voltage limit, then a constant voltage stage at $V_{\max}$ until the current tapers below a threshold. 
 The CC-CV method enables to fully charge a battery without undesired side reactions.
 
 \subsection{Rate capability tests}
@@ -317,7 +309,7 @@ This limitation is the focus of the present work and requires an introduction to
 \begin{figure}[!t]
     \centering
     \includegraphics[width = \linewidth]{figures/batteries/battery_processes_time_constants.png}
-    \caption{Battery processes time constants. Some processes are expresses in the time frame of cycling test, while many requires EIS to probe them, especcially the fastest that are not reachable with time-domain system identification. This will be discussed in Chapter \ref{ch:system_identification}. \cite{quProbingProcessKinetics2022}}
+    \caption{Battery processes time constants. Some processes are expresses in the time frame of cycling test, while many requires EIS to probe them, especcially the fastest that are not reachable with time-domain system identification. This will be discussed in chapter \ref{ch:system_identification}. \cite{quProbingProcessKinetics2022}}
     \label{fig:battery_time_constants}
 \end{figure}
 

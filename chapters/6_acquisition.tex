@@ -1,25 +1,8 @@
 \chapter{Acquisition of non-stationary impedance}
-% \minitoc
 \label{ch:acquisition}
-% Dynamic Electrochemical Impedance Spectroscopy (DEIS) extends classical electrochemical impedance analysis to systems operating under time-varying conditions, such as battery charge-discharge cycles or evolving polarization states. 
-% Unlike conventional Electrochemical Impedance Spectroscopy (EIS), which relies on steady-state assumptions and sequential single-frequency excitation, DEIS aims to characterize an electrochemical system continuously along a non-stationary operating trajectory. This approach fundamentally changes the experimental requirements for signal generation, acquisition, and synchronization.
 
-% From an experimental standpoint, DEIS is intrinsically challenging because the electrochemical system is no longer time-invariant over the duration of an experiment. The response to each excitation frequency is superimposed to a drifting baseline governed by the imposed electrochemical operation. As a result, impedance estimation must rely on broadband excitation and time-resolved signal processing. 
-
-% Standard EIS hardware and software are therefore insufficient for DEIS experiments. Commercial potentiostats are optimized for sequential frequency sweeps, limited waveform memory, and internally scheduled measurement routines. They typically lack the capability to generate long deterministic broadband excitations, to stream high-rate voltage and current signals continuously, or to expose low-level control interfaces necessary for synchronization with external waveform generators and acquisition devices. Moreover, built-in automation tools are designed around stationary measurements and do not provide the flexibility required to embed impedance characterization within complex, long-duration cycling protocols.
-
-% To overcome these limitations, DEIS experiments require the generation of very long arbitrary waveforms spanning multiple decades in frequency, often exceeding the native memory capacity of standard signal generators. At the same time, the acquisition system must sustain uninterrupted high-rate sampling and data transfer. Manual operation is infeasible under these conditions, particularly for experiments extending over tens or hundreds of electrochemical cycles. Robust automation becomes essential not only for practicality, but also for data integrity, reproducibility, and experimental safety.
-
-% This chapter presents the experimental framework developed to address these challenges. It describes the custom instrumentation architecture, the design and deployment of broadband multisine excitations, and the software enabling synchronized, long-duration acquisition of voltage and current signals during non-stationary electrochemical operation. Together, these elements form the acquisition layer of the DEIS pipeline adopted in this thesis, providing the experimental foundation for the impedance estimation and analysis methods introduced in the subsequent chapters.
-
-The estimation of electrochemical impedance under non-stationary conditions requires not only appropriate theoretical models and signal processing methods, but also an experimental platform with the flexibility to implement user-designed excitations and cell signal measurements at high frequency rates.
-Conventional impedance analyzers are designed for stationary systems and sequential single-frequency excitation.
-All data processing is performed in the background and the user receives directly the resulting impedance.
-In dynamic impedance spectroscopy, the excitation waveform, acquisition strategy, and timing control directly affect the validity of the estimated frequency response.
-Therefore, the iInstrumentation must be designed for the specific identification and signal processing methodology.
-
-This chapter presents the hardware and software architecture developed to perform continuous, broadband impedance measurements under controlled operating conditions.
-Emphasis is placed on waveform generation, synchronized acquisition, and automation, which together enable long-duration experiments, such as the study of impedance evolution during battery aging.
+The previous chapters illustrates the state of the art of dynamic impedance spectroscopy with enpohasis on the instrumentation, custom set-up made up of a potentiosta, a waveform generator and a digital data sampler, and the methods for impedance estimation from multi-frequency voltage and current signals.
+This chapter focuses on the hardware and software architecture I developed in this work to perform continuous, broadband impedance measurements under controlled drifts.
 
 \section{A map of the dynamic impedance experiment}
 This work proposes a complete pipeline for dynamic impedance spectroscopy measurements covering:
@@ -35,29 +18,28 @@ To clarify the scope and modular structure of the proposed methodology, Figure \
     \includegraphics[width=\textwidth]{figures/acquisition/DEIS_pipeline.drawio.pdf}
     \caption{Conceptual pipeline of dynamic electrochemical impedance spectroscopy.
     The workflow spans multisine excitation design, synchronized signal acquisition, time-resolved impedance estimation, and subsequent model-based analysis.
-    This chapter focuses on the acquisition layer, while impedance estimation and analysis are addressed in Chapters \ref{chap:estimation} and \ref{chap:analysis}, respectively.}
+    This chapter focuses on the acquisition layer, while impedance estimation and analysis are addressed in chapters \ref{chap:estimation} and \ref{chap:analysis}, respectively.}
     \label{fig:DEIS-pipeline}
 \end{figure}
 The schematic can be simplified in three steps:
 \begin{center}
     Acquisition of signals $\rightarrow$ Estimation of $Z$ $\rightarrow$ Analysis of $Z$
 \end{center}
-This chapter describes the methodology of signal acquisition; Chapter \ref{chap:estimation} describes the estimation of impedance from multi-frequency signals and its online implementation within the acquisition software; finally Chapter \ref{chap:analysis} outlines the strategies to analyze instantaneous impedance data with physical or non-physical mathematical models.
+This chapter describes the methodology of signal acquisition; chapter \ref{chap:estimation} describes the estimation of impedance from multi-frequency signals and its online implementation within the acquisition software; finally chapter \ref{chap:analysis} outlines the strategies to analyze instantaneous impedance data with physical or non-physical mathematical models.
 
-Before attempting the dynamic impedance spectroscopy experiment, the researcher should be familiar with the system under study, performing classic electrochemical techniques to inform the choice of parameters later.
-Classic EIS measurement dictates the frequency interval and makes the multisine optimization informed.
+Before the dynamic impedance spectroscopy experiment, I usually perform classic electrochemical measurement to inform the choice of parameters
+Classic EIS measurement dictates the frequency interval and makes the multisine optimization informed, while direct current methods give information on the macro-kinetics and cycle life.
 
 \section{Electrochemical instrumentation}
 
-In Chapter \ref{ch:deis state art}, I stated that the typical experimental setup for dynamic impedance consists of a potentiostat/galvanostat (or only potentiostat for short), an arbitrary waveform generator, and a digital acquisition device.
+In chapter \ref{ch:deis state art}, I stated that the typical experimental setup for dynamic impedance consists of a potentiostat/galvanostat (or only potentiostat for short), an arbitrary waveform generator, and a digital acquisition device.
 While the latter provides high-fidelity signal generation and sampling, the core of the setup is the potentiostat, which applies those signals and controls the cell terminals.
 The potentiostat provides the user with built-in perturbation waveforms used in cyclic voltammetry, potentiostatic, and galvanostatic experiments.
 The same hardware is used for classic electrochemical experiments and for multi-frequency ones; it is important to discuss the inner components of a typical instrument to address how the setup was implemented for this work.
 
 \subsection{Generalities of potentiostats}
-Electrochemical methods consist of a perturbation of one cell variable among voltage and current while recording the other as function of time.
-To do so, two types of instruments are needed: a potentiostat or a galvanostat; usually packed inside one banchtop device.
-The purpose of a potentiostat is to maintain the potential of a working electrode (WE) at a prescribed value relative to a reference electrode (RE). 
+Typical electrochemical methods consist of the controlled drift of one cell variable among voltage and current while recording the other as function of time, with the use of a potentiostat or galvanostat.
+The purpose of a potentiostat is to maintain the potential of a working electrode (WE) at a prescribed value relative to a reference electrode (RE).
 This is achieved using a high-gain feedback loop. 
 The potential difference between WE and RE is measured through a high-impedance \sidenote{Usually in the range 1-10 $T\Omega$} voltage follower connected to the RE. 
 This element ensures that only a negligible current flows through the RE, preserving its equilibrium potential. 
@@ -72,26 +54,27 @@ To reduce noise or fluctuation a low bandwidth is an ideal choice while for meas
 
 The current flowing through the WE-CE path is measured by a current-to-voltage converter, typically implemented using a transimpedance amplifier. The converter's output provides a low-noise measurement of the cell current and is digitised for acquisition and further processing. The transimpedance gain determines the current range, and switching networks or programmable gain amplifiers are often used to accommodate multiple current's order of magnitude.
 
-In galvanostatic mode, the instrument controls the current rather than the potential. 
-The measured current is compared to a desired setpoint, and the feedback loop adjusts the CE potential to maintain the prescribed current. The WE potential freely responds to the applied current and is measured against the RE potential. Internally, the same analog electronic blocks are used as in potentiostatic operation, but with the controll loop comparing the setpoint current and the cell current (WE-CE).
+Instead, a galvanostat controls the current flowing between WE and CE. 
+The measured current is compared to a desired setpoint, and the feedback loop adjusts the CE potential to maintain the prescribed value. 
+The WE potential is measured against the RE. 
 
 Because the implementation of dynamic impedance spectroscopy relies on injecting external perturbations and accessing raw analogue signals, it is essential to understand the internal structure of a potentiostat and its control loop.
 Figure \ref{fig:pot-galv-schematics} shows a schematic of the connections for a typical electrochemical device with highlights of the electronics for potentiostatic and galvanostatic modes.
 It does not include the circuitry for measuring impedance and the frequency response analyzer, but it is not interesting for this work.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{figures/electrochemistry/pot_galv_schematics.png}
     \caption{Simplified schematic of a potentiostat/galvanostat architecture.
     The feedback loops governing potentiostatic and galvanostatic control, the transimpedance current measurement, and the analogue summing nodes are highlighted.
     Understanding these internal blocks is essential for safely injecting external multisine excitations and accessing raw voltage and current signals in dynamic impedance experiments.
-    Adapted from 10.1007/s11581-019-03132-z.}
+    (Source: CHI 700 Instruction manual)}
     \label{fig:pot-galv-schematics}
 \end{figure}
 
 \subsection{Auxiliary analogue inputs and outputs}
 
-Some modern commercial potentiostats incorporate auxiliary input and output connections to enable external excitation or synchronization with additional hardware.
+Some commercial potentiostats incorporate auxiliary input and output connections to enable external excitation or synchronization with additional hardware.
 Analog input ports are typically connected upstream of the main control loop, allowing externally generated waveforms to be superimposed on the programmed potential or current (see Figure \ref{fig:pot-galv-schematics}, top left of the schematic).
 This functionality is essential for experiments requiring arbitrary perturbations and high-speed signal recording.
 
@@ -128,7 +111,7 @@ The notable features are:
 \begin{itemize}
     \item a big memory of 64MSa per channel of the digital to analog converter;
     \item capability to sum and synchronize the output of the two channels into one signal;
-    \item jitter-free analog conversion that preserve the original signal reducing spectra leakage.
+    \item jitter-free analog conversion that preserve the original signal reducing spectral leakage.
 \end{itemize}
 These devices can be controlled with computers using the \emph{VISA} communication framework and \emph{SCPI} language, both supported in Python with dedicated libraries.
 
@@ -191,28 +174,30 @@ For this work, I obtained sufficient impedance density with eight points per dec
 When the amplitudes are all the same, the multisine is said to be "flat". The question is: how to decide the amplitudes for best signal-to-noise result? It can be achieved via analytical formulas or experimental extrapolation.
 The first case was used in Battistel \cite{battistelAnalysisNonstationaryImpedance2016} and Hallemans \cite{hallemansElectrochemicalImpedanceSpectroscopy2023}, with opposite results, making the amplitudes drop logarithmically with increasing or decreasing frequency.
 
-In this work, I followed an empirical strategy based on the impedance of previous experiments.
-One can simply measure a classic stepped-sine impedance with any and use its modulus to calculate the input's relative amplitudes to obtain a desired ouput's relative amplitudes.
-Alternatively, and more effective for energy storage systems, is to measure the non-stationary impedance first using a flat multisine and then extract from the often-noisy data the average value and use its modulus.
-In mathematical terms, being $|Z_{test}(\omega)|_{avg}$ the average of the impedance modulus, the desired output's voltage for the frequency component $\omega_k$ is $v_{des}(\omega_k)$; hence, the current amplitude follows Ohm's law as:
+In this work, I followed an empirical strategy: the input multi-sine components amplitudes are choosen such to give a constant ouput's amplitude knowing system's impedance.
+To clarify the concpet, let's take the example of a voltage-controlled experiment in which the multi-sine is generate by the waveform generator and directly added to the drift voltage.
+The sinusoidals components ampltidues of the multi-sine $V_{ms}(\omega_k)$ are chosen to have desired ouputs amplitudes $I_{des}(\omega_k)$ according to the formula
 \begin{equation}
-i(\omega_k) = \frac{v_{des}}{|Z_{test}(\omega_k)|_{avg}}.
+V_{ms}(\omega_k) = |Z(\omega_k)| \times I_{des}(\omega_k),
+\label{eq:voltage_ampli_multisine}
 \end{equation}
+where $|Z(\omega_k)|$ is the system's impedance module.
+$I_{des}(\omega_k)$ should be a small value (5-10mV) to ensure linearity of the response.
+$Z(\omega_k)$ is a measured impedance spectra of the system \sidenote{Can be measured with classic stepped-sine method. when the frequency grid doesn't match the multi-sine one, I interpolate or extrapolate the impedance module at the desired frequency from a spline fit.}, but for non-stationary conditions I use the avarge impedance $Z_avg(\omega_k)$ over a complete DEIS experiment perfomed beforehand without optimizing the multi-sine.
 
-The output of the waveform generator is olways a voltage and it is converted to current by the potentiostat during the chronoamperometry technique using the active measurement resistor $R_m$ placed in series to the working electrode (ref. Figure \ref{fig:pot-galv-schematics}).
-In the instrument, the value of such resistor is dictated by the choise of the current range.
-For the experiment in this work, I always chose the same current range of 10 mA, which translates to a measurement resistor of 100 Ohms.
-Hence, for the galvanostatic step, the actual peak-to-peak voltage of the generated waveform is 
+For current-controlled experiments there is one more step to consider because the generated waveform is a voltage converted to current within the galvanostat.
+The conversion is made trough the measurement resistance $R_m$ \sidenote{Contained in the i/R converter in series to the working electrode, see Figure \ref{fig:pot-galv-schematics}} following Ohms' law:
 \begin{equation}
-V(\omega_k) = R_m \times i(\omega_k).
+V_{ms}(\omega_k) = R_m \times I_{ms}(\omega_k).
+\label{eq:ohm_law}
 \end{equation}
-
-For the potentiostatic step, instead, the amplitude of the multisine is 
+In practice, one computes first the desired ouput amplitudes $I_{ms}(\omega_k)$ with the inverse of formula \ref{eq:voltage_ampli_multisine}:
 \begin{equation}
-V(\omega_k) = |Z_{test}(\omega_k)|_{avg}.
+I_{ms}(\omega_k) = \frac{V_{des}(\omega_k)}{|Z(\omega_k)|},
 \end{equation}
+and then generates the exitation with the amplitudes $V_{ms}(\omega_k)$ obtained with formula \ref{eq:ohm_law}.
 
-Despite sounding just like a technicality, the choice of the relative amplitude is a difficult engeneering problem beacuse is directly connect with the signal-to-noise ratio, hence the quality of the estimated impedance.
+The choice of the multi-sine components' amplitudes is a difficult engeneering problem that affects the signal-to-noise ratio of cell voltage and current Fourier spectra, therefore the quality of the estimated impedance.
 
 % The multisine, its design will be throughly eplained in a later chapter, is not just characterized by the frquency content but also its absolute and the relative amplitude of the sinusoidal components. 
 % The absolute amplitude is important for making the experiment itself, in the sense that for a chronoamperometry experiment the amplitude in volt of the excitation is the exact value applied on the cell. 
@@ -353,7 +338,7 @@ The flow of digital signals is schematize is figure \ref{fig:DEIS automation wor
 \subsection{Software solution}
 A control loop must monitor the sequence advancement and loop number returned by querying the potentiostat communication board.
 BioLogic EC-Lab or EC-Lab Express do not allow automating this process. The output triggers functionality is too limited for fine tuning the acquisition as described here.
-Luckily, BioLogic provides a simple software development kit (SDK) to communicate with the potentiostats using various programming languages, which I expanded into a more sophisticated object-oriented Python library that I called \verb|pyeclab|\footnote{Available at https://github.com/federicoscarpioni/pyeclab}.
+BioLogic provides a simple software development kit (SDK) to communicate with the potentiostats using various programming languages, which I expanded into a more sophisticated object-oriented Python library that I called \verb|pyeclab|\footnote{Available at https://github.com/federicoscarpioni/pyeclab}.
 
 Object-oriented programming (OOP) is a software design paradigm in which complex systems are represented as collections of interacting \emph{objects}.  
 Each object encapsulates both data and the operations that can be performed on that data, allowing physical devices or logical processes to be represented as modular software entities. 
@@ -419,17 +404,17 @@ This idea is the basis of all the libraries used to synchronize the potentiostat
 This shared-state approach allows the main control loop to coordinate the execution of all instruments without blocking, ensuring real-time synchronization between electrochemical control, excitation, and data acquisition.
 
 The automatic switch of the multisine between galvannostatic and potentiostatic electrochemical experiments (see Figure \ref{fig:python-controll-loop} the AWG timeline) can still be done by \verb|DEISChannel| for the case of combined multisine waves, passing the \verb|MultisineWaveCombined| object, also provided in the package \verb|TrueFormAWG|, during initialization.
-To allow effective communication with the waveform generation suring multisine updates between galvanostatic and potentiostatic techniques a 3~s open circuit period is added in the sequence. 
+To allow a safe update between galvanostatic and potentiostatic waveforms in the generator, a 3~s open circuit period is added in the sequence when type of technique is changed. 
 
 The multithreaded capability is not only used to coordinate the three instruments for a dynamic impedance spectroscopy, but also allows to use multiple channels of the potentiostat (and relative waveforms generators and acquisition devices) indipendently and simultanously.
 Figure \ref{fig:multi-channel} shows four cells connect to the same mulit-channel potentiostat and the streming of data from the acquisition devices to a single computer.
 
-\begin{figure}[h]
+\begin{widefigure}[h]
     \centering
-    \includegraphics[width = \textwidth]{figures/acquisition/4 channel experiment.png}
+    \includegraphics[width = \linewidth]{figures/acquisition/4 channel experiment.png}
     \caption{Multi-channel execution of dynamic impendance experiments. Left: photo of four identical lithim-ion coin cells connected to the same potentiostat and indipendent waveform generators and acquisition devices. Right: screenshot of the computer screen with the real-time plotting of the multi-frequency voltage and current signals from the acquisition device.}
     \label{fig:multi-channel}
-\end{figure}
+\end{widefigure}
 
 Given the modularity of the approach presented here, it is possible to use different hardware to perform the experiment in the same manner, provided a similar interface is available.
 
@@ -437,7 +422,7 @@ In Appendix \ref{app:deis meas script} are reported examples of scripts to load 
 
 \section{Summary and Contribution}
 
-This chapter presents the experimental framework developed for the acquisition of multi-frequency signlas for the estimation of instantnaous impednace in non-stationary conditions. The focus was deliberately placed on the hardware integration, excitation design, sampling strategy, and software automation required to enable dynamic electrochemical impedance spectroscopy under realistic battery operating conditions.
+This chapter presents the experimental framework developed for the acquisition of multi-frequency signals for the estimation of instantnaous impednace in non-stationary conditions. The focus was deliberately placed on the hardware integration, excitation design, sampling strategy, and software automation required to enable dynamic electrochemical impedance spectroscopy under realistic battery operating conditions.
 
 A central technical contribution of this work is the development of a strategy to generate long, arbitrary broadband excitation signals using commercial laboratory instrumentation.
 By exploiting the dual-channel capabilities and large onboard memory of modern arbitrary waveform generators, and by introducing a frequency-subdivision approach, it was possible to synthesize multisine excitations spanning up to seven decades of frequency while preserving spectral coherence and avoiding intermodulation artifacts.

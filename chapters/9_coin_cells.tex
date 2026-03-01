@@ -23,14 +23,14 @@ This study comprises the following measurements:
 \toprule
 Measurement type & Number of cells & Number of cycles  \\
 \midrule
-DEIS during CCCV & 9 & 30\\
-Traditional CCCV& 12& 22--30\\
-EIS during interrupted CCCV & 3& 1 \\
+DEIS during CC-CV & 9 & 30\\
+Traditional CC-CV& 12& 22--30\\
+EIS during interrupted CC-CV & 3& 1 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\section{Experimental set-up}
+\section{Experimentals}
 
 \subsection{Cell choice}
 % Cell chemistry and implications
@@ -56,7 +56,7 @@ The use of commercial cells ensures reproducibility for validation of the method
 %   \label{fig:DEIS setup coins}
 % }
 I conducted the measurements of this chapter using the setup configured for broadband multi-sine waves: two channels of the generator apply two multi-sine excitations covering a total of 7 frequency decades, and the computer processes the streamed data from the oscilloscope in real time as described in Section~\ref{On-line computation}. 
-Three of the six channels of the BioLogic SP-300 potentiostat were measured simultaneously thanks to the multi-threading capability of the software \emph{DEIStools}. 
+Three of the six channels of the BioLogic SP-300 potentiostat were measured simultaneously thanks to the multi-threading capability of the software \verb|EIStools|. 
 % The connection of the instruments is shown in Figure~\ref{fig:DEIS setup coins}.
 
 \subsubsection{Multi-sine design}
@@ -84,7 +84,7 @@ These signals retain the low-frequency components while discarding high-frequenc
 
 The impedance of the lower frequency band and the drift are estimated using the DMFA with a filter bandwidth of 0.01 Hz, which yields a time resolution of 100 s, equal to one period of the multi-sine and the signal block used in the online computation. The total impedance spectrum is the concatenation of the parts computed with STFT and DMFA and reported in Figure \ref{fig:dmfa_impedance_coin}.
 
-\begin{widefigure}[h]
+\begin{widefigure}[!h]
   \centering
   \includegraphics[width = \linewidth]{figures/results_coin/dmfa_impedance_result.png}
   \caption{Impedance of charge and discharge estimated with DMFA and online STFT combined. One spectrum per 10 cycles is plotted; the first 2 plots are discarded.}
@@ -96,42 +96,84 @@ The effectiveness of the DMFA in separating the slow electrochemical drift from 
 \begin{figure}[h]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/dmfa_drifts_result.png}
-  \caption{Electrochemical drift reconstructed using the DMFA from the downsampled voltage and current signals.
-  The reconstructed drift corresponds to the underlying CCCV charge--discharge profile after removal of the multi-frequency perturbation.}
+  \caption{Drift reconstructed using the DMFA from the downsampled voltage and current signals. The y-axis scale is kept the same as in Figure \ref{fig:raw_multifrequency_coin} for comparison.}
   \label{fig:dmfa_drift_coin}
 \end{figure}
 
-\subsubsection{Impedance fitting}
+\subsection{Impedance analysis}
+\subsubsection{General transfer function model}
 A battery contains at least two principal interfaces (positive and negative electrodes), whose impedances are connected in series in an equivalent circuit model.
-This makes it challenging to develop a physical model that is not overparametrized.
-In this work, I approached the identification problem as a black-box and used a rational polynomial function for fitting through complex nonlinear least-squares:
+This makes it challenging to develop a physical model that effectivelly describe the system without overparametrize.
+
+% In this work, I approached the identification problem as a black-box and used a rational polynomial function for fitting through complex nonlinear least-squares:
+% \begin{equation}
+%   Z (\sqrt{j\omega})= \frac{a_0 + a_1(j\omega)^{-1/2}+\cdots+a_n(j\omega)^{-n/2}}{1 + b_1(j\omega)^{-1/2}+\cdots+b_n(j\omega)^{-n/2}}.
+% \end{equation}
+% Setting $b_0 = 1$ prevents the function from diverging.
+
+
+Instead of attempting to identify its physical parameters with a physical model (referred as a white-box model) it is equally interesting to identigy the system with a matematical model (referred as a black-box model). 
+Thanks to the continous instantaneous impedance spectra generate with dynamic impedance spectroscopy, the time varaition of the mathematical model's parameters remains informative for the purpose of control and prediction. 
+
+In this context of system identification, the battery is considered a generic linear and time-invariant system, hence the input $u(t)$ and the output $y(t)$ of a system are connected by the linear ordinary differential equation
 \begin{equation}
-  Z (\sqrt{j\omega})= \frac{a_0 + a_1(j\omega)^{-1/2}+\cdots+a_n(j\omega)^{-n/2}}{1 + b_1(j\omega)^{-1/2}+\cdots+b_n(j\omega)^{-n/2}}.
+    \sum_{N} a_n \frac{\text{d}^ny(t0)}{dt} = \sum_{M} b_m \frac{\text{d}^my(t0)}{dt}.
 \end{equation}
-Setting $b_0 = 1$ prevents the function from diverging.
+As discussed in Section \ref{sec:laplace}, differential equation can be solved by applying the Laplace transform, which yields
+\begin{equation}
+    \sum_{N} a_n s^n Y(s) = \sum_{M} b_m s^m U(s),
+\end{equation}
+and so the transfer function for the system is given by
+\begin{equation}
+    G(s) = \frac{Y(s)}{U(s)}=\frac{\sum_{N} a_n s^n}{\sum_{M} b_m s^m}.
+\end{equation}
+This equation for the transfer function is the same of Equation \ref{eq:transfer function dy sys} from section \ref{sec:transfer function def diff equations} (p. \pageref{sec:transfer function def diff equations}).
+
+The Laplace variable $s$ for the case of impedance is simplified to $s = j\omega$, but since the system is electrochemical, the homogeneous differential equations describing diffusion are semi-integer \cite{oldhamFractionalDifferentialEquations2010} and lead to solutions as functions of $\sqrt{j\omega}$.
+Therfore for electrochemical systems the generic transfer function has the form:
+\begin{equation}
+    G(\sqrt{j\omega}) = \frac{\sum_{N} a_n (\sqrt{j\omega})^n}{\sum_{M} b_m (\sqrt{j\omega})^m}.
+    \label{eq:general rational polynomial}
+\end{equation}
+
+In this work, I used such a rational polynomial function of order $n=m$ as a measurement model to fit impedance data.
+The concept is not new \cite{zoltowskiNontraditionalApproachMeasurement2005,gheemTheoreticalApproachModelling2008a,liModelReductionFractional2024}, but it is the first time this model has been used for instantaneous impedance of time-varying systems.
+Polynomial functions can flexibly fit impedance with any complex shapes and also have the advantage of working as a test for the linear Kramers-Kronig relations \cite{sadkowskiCNLSFitsKramers2004}.
+
+\subsubsection{Regression procedure}
+
+A fundamental procedure for the regression of rational polynomial function is to add L1 regularization to the objective function, also called LASSO (\emph{least absolute shrinkage and selection operator}).
+In practice, the objective function to minimize is
+\begin{equation}
+  obj = \sum_n r_n^2 + \lambda ||\mathbf{\theta}||_1,
+\end{equation}
+where $r_n^2$ is the weighted complexed squared residual of the n-th point of the spectra as described in Section \ref{sec:fitting-sys-id}, $\mathbf{\theta}$ is the parameters array, and $\lambda$ is a penalty factor that controls the regularization strength.
+Regularization is important because rational function parameters can grow unnecessarily large and be compensated by parameters in the denominator.
+The choice of penalty factor is arbitrary, and I found that values as small as $1 \times 10^{-12}$ is sufficient.
+Removing the regularization terms makes the optimization procedure ineffective (parameters diverge) or causes the solver to fail.
+
 
 Before fitting, I removed the first three and last two spectra from the dataset, as well as the first three and last frequency points (remaining range: 30~mHz--42~kHz).
 
 In least squares objective function introduced in Section \ref{sec:fitting-sys-id} each frequency component residue is weighted by a factor equal to the experimental error.
 The error in a frequency response function increases with the lowering of the frequency.
-Orazem et al.\cite{orazemEIS} originally proposed to use the inverse of the impedance modulus as weighting facotr, but I found that using the square root of the modulus is more effective in this case. It weights the middle-to-high frequency range more heavily, allowing the model to fit the impedance's features better.
+Orazem et al.\cite{orazemEIS} originally proposed to use the inverse of the impedance modulus as weighting factor, but I found that using the square root of the modulus is more effective in this case. It weights the middle-to-high frequency range more heavily, allowing the model to fit the impedance's features better.
 
-A better strategy would be to estimate the error from error propagation rules through elementary mathematical operations, as Chukwu \cite{chukwuStatisticalAnalysisMeasurement2022} did for admittance data estimated via DMFA.
+A better strategy would be to estimate the error from error propagation rules through elementary mathematical operations, as described in Reference \cite{chukwuStatisticalAnalysisMeasurement2022} did for admittance data estimated via DMFA.
 Unfortunately, I was unable to replicate his derivation for my impedance data.
 Furthermore, error propagation for the FFT impedance method is not available in the literature and must be derived from first principles.
 
-For the optimization, I adopted a classical derivative-based approach (Trust Region Reflective method) as implemented in the Python module LMFIT \cite{newville_2014_11813} to solve such minimization problems.
+For the optimization, I adopted a classical derivative-based approach (trust region reflective method) as implemented in the Python package \verb|LMFIT| \cite{newville_2014_11813} to solve such minimization problems.
 I first fited the spectrum at the middle of the dataset using random initial parameters (seed 42) and then used the optimized parameters as the starting points for the first spectrum of the dataset. Subsequently, I proceed passing optimized parameters as initial points for the next fitting.
 
-Regarding the order of the rational polynomial, I chose the same order for numerator and denominator and found that 7 was the minimum order needed to represent all features with a small error.
+% Regarding the order of the rational polynomial, I chose the same order for numerator and denominator and found that 7 was the minimum order needed to represent all features with a small error.
 
 The difficulty in fitting dynamic impedance data is identifying one set of values for polynomial order, regularization penalty factor, and least-squares weighting factor that work effectively across all electrochemical techniques in the experiment, all cycles, and are general enough to apply to multiple cells.
 
 \subsection{Classical electrochemical test}
 I performed cycling experiments using the same constant current--constant voltage protocol on a BioLogic battery cycler with 12 cells from new to aged condition to compare degradation with and without multi-sine excitation.
 
-\subsubsection{EIS during interrupted cycling}
-I also prepared an experiment performing classical electrochemical impedance spectroscopy on the same battery cycler. I created a sequence that interrupts the cycling protocol every 10\% of nominal capacity and includes a 1~h rest before impedance measurement in the frequency range 10~mHz--20~kHz (8~points/decade).
+I also prepared an experiment performing classical electrochemical impedance spectroscopy at fixed states of charge. For this purpose, I created an experiment sequence that interrupts the cycling protocol every 10\% of the nominal capacity and includes a 1~h rest before impedance measurement in the frequency range 10~mHz--20~kHz (8~points/decade).
 
 
 \section{DEIS results}
@@ -146,7 +188,7 @@ I also prepared an experiment performing classical electrochemical impedance spe
 \subsection{Impedance at different battery states}
 
 Continuous impedance acquisition provides a complete view of battery interface resistance at any state of charge and state of health. Figures~\ref{fig:deis_aging_charge} and~\ref{fig:deis_aging_discharge} show this information for charge (including the potentiostatic portion) and discharge. I compared the impedance at four states of health corresponding to the beginning, midpoint, just before the 80\% threshold of first-cycle capacity, and after it. 
-It can be observed at least two consecutive semicircles and a diffusive tail. At lower states of charge, represented in red in the coloured scale, a third semicircle appears, shifting the diffusion to lower frequencies.
+It can be observed at least two consecutive semicircles and a diffusive tail. At lower states of charge, represented in red in the colored scale, a third semicircle appears, shifting the diffusion to lower frequencies.
 Another observation is the change in ohmic drop resistance with state of charge.
 The evolution of the impedance spectrum with battery aging during charge is summarized in Figure~\ref{fig:deis_aging_charge}.
 
@@ -169,12 +211,13 @@ A corresponding representation for discharge is reported in Figure~\ref{fig:deis
   \label{fig:deis_aging_discharge}
 \end{widefigure}
 
-The cell is originally already charged from the manufacturer. During the first cycle of the measurement, the cell voltage quickly reaches the charging limit and continues to discharge as shown in Figure~\ref{fig:first_cycle_coin}. 
-This is probably due to the state of the solid electrolyte interphase (SEI). 
-After the fir charge the SEI is damaged and freshly reformed in the next disharge. 
-I also expect some lithium deposition elongside the alloying with alluminum during the negative electrode reduction that increase the surface area exposed to the electrolyte yielding to further SEI formation.
-Looking at both impedance magnitudes, though, a reduction is noted for the cycles after the second.
-This might be connected to a thinner SEI layer.
+The cell is provided from the manifacturer at 2.75~V, so in the first cycle of the measurement, the cell voltage quickly reaches the charging limit and then precedes the discharge as shown in Figure~\ref{fig:first_cycle_coin}. 
+The impedance of the first cycle is reported in Figure \ref{fig:impedance_first_cycle_coin}
+% This is probably due to the state of the solid electrolyte interphase (SEI). 
+% After the fir charge the SEI is damaged and freshly reformed in the next discharge. 
+% I also expect some lithium deposition alongside the alloying with aluminum during the negative electrode reduction that increase the surface area exposed to the electrolyte yielding to further SEI formation.
+% Looking at both impedance magnitudes, though, a reduction is noted for the cycles after the second.
+% This might be connected to a thinner SEI layer.
 
 \begin{figure} [!h]
   \centering
@@ -184,7 +227,6 @@ This might be connected to a thinner SEI layer.
   \label{fig:first_cycle_coin}
 \end{figure}
 
-The impedance, reported in Figure \ref{fig:impedance_first_cycle_coin}, differs from subsequent cycles in both magnitude and shape.
 
 \begin{figure} [!h]
   \centering
@@ -195,21 +237,20 @@ The impedance, reported in Figure \ref{fig:impedance_first_cycle_coin}, differs 
   \label{fig:impedance_first_cycle_coin}
 \end{figure}
 
-All behaviours observed here are reproduced in the other 8 cells of the set, including the higher impedance in the first discharge. Detailed results are reported in the Appendix. 
+All behaviors observed here are reproduced in the other 8 cells of the set, including the higher impedance in the first discharge. Detailed results are reported in the Appendix. 
 The reproducibility of the dynamic impedance measurements across nominally identical cells is assessed in Figure~\ref{fig:eis_dynamic_variability}.
 
 \begin{widefigure} [!h]
   \centering
   \includegraphics[width = \linewidth]{figures/results_coin/eiS_dynamic_variability.png}
-  \caption{Dynamic impedance variability across nine cells at 90\%, 50\%, and 10\% state of charge during the second discharge cycle.
+  \caption{Dynamic impedance variability across nine cells at 90\%, 50\%, and 10\% state of charge during the second discharge half-cycle.
   While overall spectral features are consistent, variations in magnitude and ohmic resistance reflect manufacturing variability.}
   \label{fig:eis_dynamic_variability}
 \end{widefigure}
 
 As with any production process, cells do not respond identically but show similar behavior. One can notice impedance magnitude variations for Cell~10 and variations in the ohmic drop, which is notably higher in Cell~17 than in the others.
 
-Comparing complex impedance qualitatively in the complex plane across many cells in two dimensions (state of charge and state of health) is challenging. A better approach is to fit the data with a model and compare the coefficients. Not only are they fewer than the number of impedance points (10--15 versus 50), but they are also real-valued.
-
+% Comparing complex impedance qualitatively in the complex plane across many cells in two dimensions (state of charge and state of health) is challenging. A better approach is to fit the data with a model and compare the fittedcoefficients. Not only are they fewer than the number of impedance points (10--15 versus 50), but they are also real-valued.
 
 \subsection{Effect of the multi-sine on aging}
 To assess whether continuous multi-sine excitation influences degradation, capacity retention is compared statistically in Figure \ref{fig:aging_comp}.
@@ -222,10 +263,9 @@ To assess whether continuous multi-sine excitation influences degradation, capac
   \label{fig:aging_comp}
 \end{figure}
 
-In this experiment, the cells are small and cycled at a slow C-rate. The peak-to-peak amplitude of the multi-sine is also comparable. It is important that the excitation does not impact battery performance. This may not be the case for larger batteries and higher C-rates.
+The reduce y-axis scale highlights the marginal differences between the two datasets, therefore I conclude that the multi-sine is not impacting the cycling performance and can be applied continously for system identification; at least for this small cells at low C-rate.
 
-% Comparison with stationary EIS
-\subsection{Non-stationary versus stationary measurements}
+\subsection{Effect of the drift on the impedance}
 Static impedance measured at different states of charge also shows good consistency. Figure~\ref{fig:eis_static_variability} reports data from three cells at the same states of charge as Figure~\ref{fig:eis_dynamic_variability}.
 For reference, the variability of stationary impedance measurements obtained during interrupted cycling is shown in Figure \ref{fig:eis_static_variability}.
 
@@ -255,68 +295,70 @@ The latter takes around 27 hours to produce 10 spectra, while the multisine-base
 \begin{figure}[h]
   \centering
   \includegraphics[width = \textwidth]{figures/results_coin/static_vs_dynamic_experiment_discharge_2d.png}
-  \caption{}
+  \caption{Comparison between classic impedance measurement at different equilibrium voltages and a DEIS measurement. The classic experiments takes much longer time and produces fewer spectra. On the right hand side the multi-sine components are filtered out from voltage and current signals and only one over ten of the instantaneous impedances is plotted.}
   \label{fig:static vs multisine experiment}
 \end{figure}
 
 \section{Results of fitting}
 
-Evaluating the fitting quality of dynamic impedance data involves multiple assessments: qualitative visualization, magnitude and shape of residuals, and consistency of model parameters across cycles.
+Evaluating the fitting quality of dynamic impedance data involves multiple assessments: qualitative visualization, magnitude and structure of residuals, and consistency of model parameters across cycles.
 
-From visual inspection of the fitting results, the order-7 rational polynomial is versatile enough to represent the different shapes of instantaneous impedance, as shown in Figure~\ref{fig:results_fitting_coin_cycle5} for impedance at different voltages during the discharge of cycle~6. 
-Residuals are small for the real part (approximately 1\%), but larger in the imaginary part.
-Large residuals for the highest three points signal that the model may not adequately reproduce all features of the dataset.
-This could also be attributed to the arbitrary choice of the weighting factor in the least-squares objective function.
+In this work, I performed the fitting of rational polynomial functions with orders from 4 to 9. 
+From the visual inspection of the fitting results, I arbitrary selected the order 5 because it can represent all the different shapes of instantaneous impedance, as shown in Figure~\ref{fig:results_fitting_coin_cycle5} with the minimum number of parameters. 
+The residuals are small for the real part, approximately 1\%, but larger for the imaginary part. The systematic structure of the residuals, especially the pronounced deviations at the highest three frequencies, indicates that the model does not fully reproduce all spectral features of the dataset. 
+I believe, this issue is both related to the arbitrary choice of the weighting factors in the least-square objective function and the solver itself.
 
 \begin{figure}[!b]
   \centering
-  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_[7, 78, 144, 225, 311].png}
-  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_7.png}
-  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_78.png}
-  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_144.png}
-  \caption{Rational polynomial fitting of dynamic impedance spectra at different states of charge (marked with colours dots) during discharge of cycle 6.
-  The figures in the panel after the voltage time series report the impedance data (markers) and fit result (solid black line). Residuals are reported next to each spectrum. The colours of the markers represents the states of charge.}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell009_order5_cycle_5_sequence_4_index_[7, 78, 144, 225, 311].pdf}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell009_order5_cycle_5_sequence_4_index_7.pdf}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell009_order5_cycle_5_sequence_4_index_78.pdf}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell009_order5_cycle_5_sequence_4_index_144.pdf}
+  \caption{Rational polynomial fitting of dynamic impedance spectra at different states of charge (marked with colors dots) during discharge of cycle 6.
+  The figures in the panel after the voltage time series report the impedance data (markers) and fit result (solid black line). Residuals are reported next to each spectrum. The colors of the markers represents the states of charge.}
   \label{fig:results_fitting_coin_cycle5}
 \end{figure}
 % \clearpage
 \begin{figure}[!ht]\ContinuedFloat
-  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_225.png}
-  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell015_order7_cycle_5_sequence_4_index_311.png}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell009_order5_cycle_5_sequence_4_index_225.pdf}
+  \includegraphics[width=\textwidth]{figures/results_coin/fit_cell009_order5_cycle_5_sequence_4_index_311.pdf}
   \caption[]{Continued}
   % \caption{Rational polynomial fitting of dynamic impedance spectra at different states of charge during discharge of cycle 6.
   % Symbols represent measured impedance; solid lines show the fitted model.
   % Residuals are reported below each spectrum.}
 \end{figure}
 
-Despite the small residual values, the oscillatory behavior indicates that the model is not fully adequate and persists for polynomial orders up to nine (the highest tested).
-Residuals should be randomly distributed with magnitude comparable to the measurement variance.
+Despite the small residual magnitudes, their oscillatory behavior persists for polynomial orders up to nine (the highest tested). 
+In a well-posed regression problem, residuals are expected to be randomly distributed with magnitude comparable to the measurement variance. 
+The persistence of structured oscillations therefore indicates that the limitation is not simply insufficient model order.
+The fitting with a smaller order of 4, doesn't lead to a correct representation of the impedance since the model is not capable of resolve the two semicircles at higher frequency. This issue could not be connect with the model structure, but rather the arbitrary weighting factor used in the regression problem.
 
-The fitted parameters vary smoothly across state of charge and state of health except for the first 5~cycles, where the magnitude jumps abruptly. 
-Representing complex-valued impedance as real-valued model parameters simplifies data-driven modeling of cell aging.
-One can use the parameters as features to train a neural network to predict state of health.
+Despite the criticalities it is interesting to look at the fitting result for order 5 to have an idea of the advantage of parameterization. The fitted parameters vary smoothly across state of charge and state of health although some abrupt magnitude changes are observed when the impedance manifests a new feature (or the features disappears) and the model must adapt to it. 
+Representing complex-valued impedance through real-valued model parameters provides a compact description of the spectrum and facilitates subsequent data-driven modeling of cell aging. 
+The fitted coefficients can therefore be used as features for machine-learning models to predict state of health.
 
-The evolution of fitted parameters of cycle 2 across all electrochemical techniques is illustrated in Figure \ref{fig:fitting_parameters_cycle2}.
-Parameters $a_1$ (orange line) and $a_3$ (red line) jump between values because a new feature in the impedance becomes significant: a semicircle appears only at high state of charge and then smoothly disappears into another semicircle at high frequency.
-The jump occurs because the regularized least-squares procedure captures the new semicircle only when the residual contribution in that spectral region becomes significant enough to force the solver to substantially increase or decrease one parameter. 
+The evolution of the fitted parameters during cycle~2 across all electrochemical techniques is illustrated in Figure~\ref{fig:fitting_parameters_cycle2}. 
+Parameters $a_1$ (orange line) and $a_3$ (red line) exhibit abrupt transitions when a new spectral feature becomes significant: a semicircle emerges at high state of charge and gradually merges into another high-frequency semicircle. 
+The parameter jump occurs because the regularized least-squares procedure allow the parameters to increase only when the residual contribution in that region becomes sufficiently large to significantly impact the cost function. 
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle1.png}
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell009_fitting_parameters_ouput_order5_cycle1.pdf}
   \caption{Upper row: fitted rational polynomial parameters for all techniques during cycle 2.
   Lower row: corresponding cell voltage and current reconstructed via DMFA.
   Abrupt parameter changes correspond to the emergence of new impedance features.}
   \label{fig:fitting_parameters_cycle2}
 \end{figure}
 
-As seen in Figures \ref{fig:deis_aging_charge} and \ref{fig:deis_aging_discharge}, after cycle 5, the shape of the impedance tends to stabilize, showing two consecutive semicircles and a diffusive feature.
-This is visible in the resulting fitting parameters for cycle 5 (\ref{fig:fitting_parameters_cycle5}) and successive cycles (11 in Figure \ref{fig:fitting_parameters_cycle11} and 20 in Figure \ref{fig:fitting_parameters_cycle20}).
-The parameter shapes and magnitudes are preserved across cycles and are mostly continuous through the techniques of the same cycle.
-Therefore, the parameters appear correlated with the state of charge and state of health of the battery.
-The same behavior is consistent with the other experiments of this type.
+As shown in Figures~\ref{fig:deis_aging_charge} and~\ref{fig:deis_aging_discharge}, after cycle~5 the impedance shape stabilizes, showing two consecutive semicircles followed by a diffusive feature. 
+This stabilization is reflected in the corresponding fitted parameters for cycle~5 (Figure~\ref{fig:fitting_parameters_cycle5}) and subsequent cycles (e.g., cycles~10, 15, 20, and 22). 
+Parameter magnitudes and trends are largely preserved across cycles and remain mostly continuous within the techniques of the same cycle. 
+These observations suggest that, despite their numerical limitations, the fitted parameters capture systematic changes correlated with state of charge and state of health. 
+The same qualitative behavior is observed in the results of the other cells.
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle4.png}
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell009_fitting_parameters_ouput_order5_cycle4.pdf}
   \caption{Upper row: fitted rational polynomial parameters for all techniques during cycle 5.
   Lower row: corresponding cell voltage and current reconstructed via DMFA.}
   \label{fig:fitting_parameters_cycle5}
@@ -324,20 +366,49 @@ The same behavior is consistent with the other experiments of this type.
 
 \begin{figure}[!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle10.png}
-  \caption{Upper row: fitted rational polynomial parameters for all techniques during cycle 11.
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell009_fitting_parameters_ouput_order5_cycle9.pdf}
+  \caption{Upper row: fitted rational polynomial parameters for all techniques during cycle 10.
   Lower row: corresponding cell voltage and current reconstructed via DMFA.}
-  \label{fig:fitting_parameters_cycle11}
+  \label{fig:fitting_parameters_cycle10}
 \end{figure}
 \clearpage
 \begin{figure}[!h]
   \centering
-  \includegraphics[width = \textwidth]{figures/results_coin/Cell015_fitting_parameters_ouput_order7_cycle19.png}
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell009_fitting_parameters_ouput_order5_cycle14.pdf}
+  \caption{Upper row: fitted rational polynomial parameters for all techniques during cycle 15.
+  Lower row: corresponding cell voltage and current reconstructed via DMFA.}
+  \label{fig:fitting_parameters_cycle15}
+\end{figure}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell009_fitting_parameters_ouput_order5_cycle19.pdf}
   \caption{Upper row: fitted rational polynomial parameters for all techniques during cycle 20.
   Lower row: corresponding cell voltage and current reconstructed via DMFA.}
   \label{fig:fitting_parameters_cycle20}
 \end{figure}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[width = \textwidth]{figures/results_coin/Cell009_fitting_parameters_ouput_order5_cycle21.pdf}
+  \caption{Upper row: fitted rational polynomial parameters for all techniques during cycle 22.
+  Lower row: corresponding cell voltage and current reconstructed via DMFA.}
+  \label{fig:fitting_parameters_cycle22}
+\end{figure}
 
+However, the persistence of oscillatory residuals with increasing polynomial order, together with the systematic disparity between numerator and denominator coefficient magnitudes, reveals a structural limitation of the adopted identification formulation. 
+In the least-squares estimation of rational polynomial transfer functions, the problem is \emph{ill-posed} in the sense of inverse problem theory: small perturbations in the measured impedance (e.g., noise or minor spectral features) can produce disproportionately large variations in the estimated parameters, and multiple distinct parameter sets may generate nearly indistinguishable impedance responses \cite{vogelComputationalMethodsInverse2002, ljungSystemIdentificationTheory1999}. 
+
+This behavior is reflected in the observation that denominator coefficients often assume very small magnitudes while numerator coefficients span a significantly larger dynamic range. 
+Such scaling imbalance indicates that the optimizer compensates local spectral mismatches primarily through numerator adjustments while maintaining a weakly constrained denominator structure. 
+Mathematically, this corresponds to a poorly conditioned Jacobian matrix and strong correlation among parameters. 
+Under these conditions, increasing the number of coefficients does not necessarily improve robustness; instead, it can lead to near pole-zero cancellations, ill-scaled parameters, and structured residuals that are not consistent with purely stochastic measurement error.
+The impedance spectrum can often be reproduced accurately in magnitude, but the corresponding parameter values may not be uniquely determined or numerically stable. 
+This explains why increasing model order beyond five does not eliminate oscillatory residuals and does not significantly improve parameter consistency.
+
+Over the past three decades, alternative identification frameworks have been developed in system identification, control engineering, and RF network modeling to address precisely these issues. 
+Methods such as vector fitting estimate poles and residues of rational approximations in a structured and numerically stable manner, allowing automatic determination of effective model order and reducing sensitivity to noise \cite{gustavsenRationalApproximationFrequency1999,gustavsenImprovingPoleRelocating2006}. 
+Similarly, realization-based approaches such as the Loewner framework construct minimal state-space representations directly from sampled frequency data using singular value decomposition, with the model order inferred from the spectral content rather than prescribed a priori \cite{antoulasApproximationLargeScaleDynamical2005, mayoFrameworkSolutionGeneralized2007}. 
+These methods do not require manual smoothing parameters and generally produce more stable dynamical representations of the impedance response, but the knowledge of industrial mathematics limits the applicability in the chemical and engineering community.
+Nevertheless, the rational polynomial parametrization adopted here remains useful as a compact descriptive tool and as an initial framework for transforming complex impedance spectra into real-valued feature trajectories.
 
 \section{Summary and implications}
 

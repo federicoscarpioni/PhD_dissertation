@@ -1,173 +1,36 @@
 \chapter{Interpretation of impedance}
 \label{chap:analysis}
 
-Once the impedance is measured, one can attempt to identify its dynamics by fitting a physical or non-physical mathematical model (parametric). The work presented later in this dissertation uses one type or the other. The physical models were all taken from the literature. We used a model for ion adsorption on nanoparticles to analyze the measurement of electrical double-layer capacitors and we adapted a model for intercalation with porous electrode theory, both developed inside the group in the previous years. The core measurement of this work was made on lithium-ion cells, which are not the classic analytical cells with reference electrodes commonly employed by electrochemists. The absence of the reference electrode makes it cumbersome to develop a physically derived model, so we decided to take the approach of a black-box model. Compared to time-domain characterization, where many black-box models exist for any type of system (ARMA, ARIMA, NARMAX, etc.), frequency-domain characterization lacks such variety and standardization, especially for time-varying systems.
-Our group's approach is to estimate the instantaneous impedance at quasi-stationary points using dynamic multi-frequency analysis, thus treating the system as linear and time-invariant.
-Therefore, the strategy is to fit a generic rational function of order $n$, inferring the correct structure of the transfer function of the system through statistical methods. 
-
-\section{Physical model for intercalation in porous electrodes}
-
-The impedance of intercalation materials is modeled using porous electrode theory, originally developed by De Levie \cite{deleviePorousElectrodesElectrolyte1963} for porous metal electrodes and later adapted by Bisquert \cite{bisquertInfluenceBoundaries2000} and others \cite{lamantiaImpedancePorous2008} for insertion battery materials. The model accounts for both the ionic transport through the electrolyte-filled pores and the charge transfer/intercalation processes at the electrode-electrolyte interface.
-
-% \subsection{Theoretical framework}
-
-% For a porous electrode, the impedance can be derived from a transmission line model where the electrode is represented as a series of parallel resistor-capacitor elements along the pore depth. The total impedance combines:
-
-% \begin{itemize}
-% \item \textbf{Electrolyte resistance in pores} ($R_e$): ionic transport resistance through the liquid-filled porosity
-% \item \textbf{Charge transfer resistance} ($R_{ct}$): resistance to ion insertion/extraction at the particle-electrolyte interface
-% \item \textbf{Double-layer capacitance} ($C_{dl}$): capacitance of the electrical double layer at the interface
-% \item \textbf{Chemical capacitance} ($C_\mu$): capacitance associated with the change in chemical potential during intercalation
-% \item \textbf{Diffusion impedance} ($Z_D$): solid-state diffusion of intercalated ions within particles
-% \end{itemize}
-
-% For a porous electrode with cylindrical pores of length $l$ and distributed impedance per unit length, the total impedance follows:
-
-% \[
-% Z(\omega) = \sqrt{Z_0 \cdot Z_L} \coth\left(\sqrt{\frac{Z_L}{Z_0}}\right)
-% \]
-
-% where $Z_0$ is the electrolyte resistance per unit length and $Z_L$ is the interfacial impedance per unit length, given by:
-
-% \[
-% Z_L = \frac{1}{j\omega C_{dl} + \frac{1}{R_{ct} + Z_D}}
-% \]
-
-% The solid-state diffusion impedance for spherical particles of radius $r_0$ follows:
-
-% \[
-% Z_D = \frac{R_{ct}}{j\omega \tau_D} \coth\sqrt{j\omega \tau_D}
-% \]
-
-% where $\tau_D = r_0^2/D$ is the characteristic diffusion time and $D$ is the chemical diffusion coefficient.
-
-% \section{Physical model for intercalation}
-
-% In order to interpret the dynamic spectra, 
-in this work I used a physically-based porous electrode model derived from a simplified transmission-line approach. 
-It accounts for ionic transport in the electrolyte-filled pores, electron conduction in the active material, and Faradaic intercalation kinetics. The overall impedance is represented as:
-
-\begin{equation}
-Z_T = R_s + \frac{R_p}{k l} \coth(k l),
-\end{equation}
-
-where $R_s$ is the uncompensated solution resistance, $R_p$ combines pore-solution and solid-particle resistances, and $kl$ embeds the finite diffusion or charge-transfer response of the porous electrode. This approach has been discussed in \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}.
-Figure \ref{fig:LTP circuit} shows the full equivalent circuit corresponding to the porous electrode model adopted in this work.
-
-\begin{figure}[h]
-    \includegraphics[width=\textwidth]{figures/LTP/ltp_circuit_new.png}
-    \caption{Equivalent-circuit representation of the porous electrode model used to fit dynamic impedance spectra.
-    The circuit captures ionic transport through electrolyte-filled pores, interfacial charge-transfer kinetics, double-layer and chemical capacitances, and distributed transport effects along the pore depth.
-    This formulation follows a transmission-line approach commonly used for intercalation electrodes. \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}}
-    \label{fig:LTP circuit}
-\end{figure}
-
-The interface processes are described by the following simplified unit (Figure \ref{fig:LTP circuit simplified}) in the transmission line, where the Warburg element representing the charge-transfer has been substituted with a capacitor. This simplification produces better fits with fewer parameters.
-
-\begin{figure}[h]
-    \includegraphics[width=0.8\textwidth]{figures/LTP/EC_collins_simplified.jpg}
-    \caption{Simplified interfacial unit used in the porous electrode transmission-line model.
-    The diffusion-related Warburg element is replaced by an effective capacitive representation, reducing model complexity and improving parameter identifiability in dynamic impedance fitting.
-    Adapted from the intercalation model developed in \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020}.}
-    \label{fig:LTP circuit simplified}
-\end{figure}
-
-\subsection{Simplified model for time-varying impedance}
-
-For the dynamic impedance measurements presented in this work (Chapters \ref{chap:LTP} and \ref{chap:capacitor}), a simplified version of this model was employed. At frequencies above the diffusion regime but below where inductive effects dominate, the impedance can be approximated by:
-
-\[
-Z(\omega) = R_s + \frac{R_{pore}}{\sqrt{1 + j\omega\tau_{pore}}} + \frac{R_{ct}}{1 + j\omega R_{ct}(C_{dl} + C_\mu)}
-\]
-
-where:
+Once the impedance is measured, one can attempt to identify its dynamic by fitting a physical or non-physical mathematical model (parametric) to the data. 
+In Part III of this thesis, different electrochemical system are studied via dynamic impedance spectroscopy:
 \begin{itemize}
-\item $R_s$ is the solution resistance (ohmic drop)
-\item $R_{pore}$ captures the distributed pore resistance
-\item $\tau_{pore} = R_e C_{dl}$ is the characteristic pore time constant
-\item The third term represents the charge-transfer process coupled with both double-layer and chemical capacitance
+\item lithium-ion commercial batteries (chapter \ref{chap:coins}); 
+\item intercalation material for sodium storage (chapter \ref{chap:LTP}); 
+\item electrochemical double-layer capacitor (chapter \ref{chap:capacitor}).
 \end{itemize}
+This time-varying impedance of the three systems has been interpreted using respectivelly a general transfer function model, an intercalation model with porous electrode theory and a nanoporous adsorbtion model.
+This chapter describes these models and the fitting procedures in order of apperance in Part III.
 
-This form yields a characteristic impedance spectrum with:
-\begin{enumerate}
-\item A high-frequency intercept corresponding to $R_s$
-\item A depressed semicircle in the mid-frequency range from the porous electrode behavior
-\item A second semicircle or Warburg-like tail at low frequencies from charge transfer and diffusion
-\end{enumerate}
+\section{General transfer function model}
 
-\subsubsection{Application to lithium titanium phosphate}
+When impedance is measured for two-electrode systems like batteries, the electrodes' contributions cannot be separated for the absence of a reference electrode 
+it is challenging to obtain a physical model from first principles.
+Instead of attempting to identify its physical parameters with a physical model (referred as a white-box model) it is interesting to identigy the system with a matematical model (referred as a black-box model). 
+Thanks to the continous instantaneous impedance spectra generate with dynamic impedance spectroscopy, the time varaition of the mathematical model's parameters remains informative for the purpose of control and prediction. 
 
-For the LiTi$_2$(PO$_4$)$_3$ electrodes studied in Chapter 10, this model was fitted to dynamic impedance data acquired during both galvanostatic and voltammetric perturbations in aqueous sodium-ion electrolyte. The key findings were:
-
-\begin{itemize}
-\item $R_{ct}$ varies significantly with state of charge, reflecting the potential-dependent kinetics of Na$^+$ insertion
-\item An asymmetry was observed between charge and discharge, attributed to differences in solvation and de-solvation activation energies
-\item The porous electrode contribution ($R_{pore}$) remained relatively constant, confirming good ionic connectivity throughout cycling
-\item Chemical capacitance $C_\mu$ peaks near 50\% state of charge, consistent with the voltage plateau region where the thermodynamic factor $\partial \mu / \partial c$ is maximized
-\end{itemize}
-
-This physical interpretation was only possible due to the use of a three-electrode configuration with a properly positioned reference electrode, enabling separation of the working electrode impedance from the counter electrode contribution.
-
-\subsubsection{Model for electrical double-layer capacitors}
-
-For the symmetric activated carbon electrodes (Chapter\ref{chap:capacitor}), a similar porous electrode framework applies, but without the Faradaic charge transfer term. The impedance simplifies to:
-
-\[
-Z(\omega) = R_s + \frac{R_{pore}}{\sqrt{1 + j\omega\tau_{pore}}} + \frac{1}{j\omega C_{dl,eff}}
-\]
-
-where $C_{dl,eff}$ is the effective double-layer capacitance of the porous structure. The model accounts for:
-
-\begin{itemize}
-\item Ion adsorption/desorption at the carbon surface (non-Faradaic process)
-\item Distributed ionic resistance within the nano-porous carbon network
-\item Frequency dispersion due to pore size distribution (often modeled with constant phase elements)
-\end{itemize}
-
-Despite using chemically identical electrodes, the positive and negative electrodes exhibited different impedance magnitudes and time constants during cycling, attributed to:
-\begin{enumerate}
-\item Different electrochemical histories (voltage excursions)
-\item Adsorption of electrochemically inactive species (e.g., oxygen reduction products at positive electrode)
-\item Asymmetric ion accessibility at different potentials
-\end{enumerate}
-
-The time-varying impedance revealed that these effects evolve continuously during charge/discharge, information that would be invisible in traditional equilibrium measurements.
-
-% \section{Simultaneous fitting}
-
-% The approach of fitting for dynamic impedance is similar to what is commonly done for static impedance, but there is the challenge that for a non-stationary experiment the dynamic of the system can change with the activation or deactivation of chemical processes with time, voltage or temperature. For example, a battery would change its state of charge during a galvanostatic technique and the system response might change at different potential, and with its cycling history.  The common approach, sometimes called batch fitting, would be of fitting one spectra of the time using the optimized parameters of the previous spectra for the following. The problem is that some parameter of the model would be close to zero in some part of the dataset and potentially very big in others. Solving optimization problems with small and redundant parameters might lead to local solutions. Furthermore, when more than one parameter is of this type, the solver might converge to different minimum for each spectra even when the optimized parameters of the prevoious spectra are used as starting points. This issue can be addressed minimizing the entire dataset at ones and introducing a regularization term in the objective function as firstly introduced by Battistel et al. The objective function become: \\
-
-% equation?\\
-
-% Intuitively, one can consider a term that minimizes the distance between data points and model while another term keeps the parameters slowly evolving across the dataset. The penalty term avoids sudden variation of parameters that arises in those areas of the dataset where there is unavoidable overparametrization.
-% Recently Cuckwu extended the concept of  penalized objective function implementing modern methods to solve high dimensional optimization problem as used in the field of Machine Learning. An improvement in computation time for big dataset has been obtained combining the efficient methods for calculating derivatives called "automatic gradient" or automatic differentiation and the solver ADAM. Both can be find in the open source package JAX that uses the Python pre-compiling from the jit library to perform the calculation in multiple threads, processors or even distributed computing (including GPUs). JAX is supported for optimization-specific problems in the open source package Optax. Cuckwu implementation is open source but compatible up to Python 3.9 and only with JAXopt, the previous project from which Optax derived (not in development anymore). Dr. Nicoló Pianta updated Chucwu's code base to modern version and added a convenient object rapresentation for the model function, similar to the well-enstablished python library for non linear fitting nlfit. For each experiment of the Applications part I will specify which library was used to analyze the impedance.\\
-
-% \subsection{Fitting error}
-% We estimate the standard deviation from the Jacobian of the objective function. The error allows to verify in most of the cases the accuracy of the model and which parameters are not significant in the estimation.
-
-% \section{Determination of the system degrees of freedom}
-
-% When fitting physical models, the user decides \emph{a priori} the degreese of freedom of the system though the number and types of approximation and the equation that chose to keep. The process of model regression gives to the scientist a confirmation that the model can represent the nature of the system under the operating condition or not. On negative result one keeps modifying the model until satisfied. On the other hand, when working with black-box model the scientist makes the opposite: identifies the degreese of freadom of the system and then look for a proper gray-box or white-box model of the same structure to undenstand the physics of the system.  This data driven apporach relies on the fact that the frequency reponse function is a numerical realization of the real transfer function of the system inside the frequency band of the experiment. From dynamic system theory it is known that the number of parameters of the transfer function is equal to the number of variables in the state space model, directly connected to the differential equations that define the system. For batteries, that works as two-electrode devices, the response of the single electrode is superimposed making even harder to define a general physical model. Usually the model are largely over-parametrized. Knowing the correct transfer function, leads scientists to chose proper approximation when developing physical model or can be is as it for prediction or classification of the system in control engineering. It immediately come to mind the possibility of using it for smart control of the battery in battery management systems. 
-
-\section{Rational polynomial models}
-
-When impedance is measured for complex systems like batteries, where the electrodes' contributions cannot be separated via a reference electrode, or there are multiple layers of electrodes per cell, or even multiple cells are arranged in a battery pack, it is challenging to obtain a physical model from first principles.
-An alternative is to use a measurement model, a mathematical function generic enough to represent the transfer function.
-
-When looking at the problem from this perspective, the system is considered a black-box, and we depart from the knowledge of electrochemistry to draw from the framework of system identification of linear and time-invariant (LTI) systems.
-In this context, the input $u(t)$ and the output $y(t)$ of a system are connected by an ordinary differential equation
+In this context of system identification, the battery is considered a generic liniar and time-variant system and the input $u(t)$ and the output $y(t)$ of a system are connected by the linear ordinary differential equation
 \begin{equation}
     \sum_{N} a_n \frac{\text{d}^ny(t0)}{dt} = \sum_{M} b_m \frac{\text{d}^my(t0)}{dt}.
 \end{equation}
-As discussed in Section \ref{sec:laplace}, the solution is obtained by applying the Laplace transform, which yields
+As discussed in Section \ref{sec:laplace}, differential equation can be more easly solved by applying the Laplace transform, which yields
 \begin{equation}
-    \sum_{N} a_n s^n Y(s) = \sum_{M} b_m s^m U(s)
+    \sum_{N} a_n s^n Y(s) = \sum_{M} b_m s^m U(s),
 \end{equation}
-and hence the transfer function is given by
+and hence the transfer function for the system is given by
 \begin{equation}
     G(s) = \frac{Y(s)}{U(s)}=\frac{\sum_{N} a_n s^n}{\sum_{M} b_m s^m}.
 \end{equation}
-This equation for the transfer function is a different form, but the same concept, as Equation \ref{eq:transfer function dy sys} from Section \ref{sec:transfer function def diff equations}.
+This equation for the transfer function is the same of Equation \ref{eq:transfer function dy sys} from section \ref{sec:transfer function def diff equations} (p. \pageref{sec:transfer function def diff equations}).
 
 The Laplace variable $s$ for the case of impedance is simplified to $s = j\omega$, but since the system is electrochemical, the homogeneous differential equations describing diffusion are semi-integer \cite{oldhamFractionalDifferentialEquations2010} and lead to solutions as functions of $\sqrt{j\omega}$.
 Hence for electrochemical systems the generic transfer function has the form:
@@ -178,7 +41,6 @@ Hence for electrochemical systems the generic transfer function has the form:
 
 In this work, I used such a rational polynomial function of order $n=m$ as a measurement model to fit impedance data.
 The concept is not new \cite{zoltowskiNontraditionalApproachMeasurement2005,gheemTheoreticalApproachModelling2008a,liModelReductionFractional2024}, but it is the first time this model has been used for instantaneous impedance of time-varying systems.
-
 Polynomial functions can flexibly fit impedance with any complex shapes and also have the advantage of working as a test for the linear Kramers-Kronig relations \cite{sadkowskiCNLSFitsKramers2004}.
 
 A fundamental procedure for the regression of rational polynomial function is to add L1 regularization to the objective function, also called LASSO (\emph{least absolute shrinkage and selection operator}).
@@ -188,9 +50,110 @@ In practice, the minimization problem is written as:
 \end{equation}
 where $\text{obj}$ is the least-squares objective function described in Section \ref{sec:fitting-sys-id}, $\theta$ is the parameters array, and $\lambda$ is a penalty factor that controls the regularization strength.
 Regularization is important because rational function parameters can grow unnecessarily large and be compensated by parameters in the denominator.
-The choice of penalty factor is somewhat arbitrary, but I found that values as small as $1 \times 10^{-12}$ are effective, although I expected to be ineffective since comparable to the round-up error of single-precision calculations.
-Removing the regularization terms makes the optimization procedure ineffective or causes it to fail.
+The choice of penalty factor is arbitrary, and I found that values as small as $1 \times 10^{-12}$ is sufficient.
+Removing the regularization terms makes the optimization procedure ineffective (parameters diverge) or causes the solver to fail.
 
-General measurement functions do not inform about the physics of the system, but they are a valuable approach to following the evolution of the parameters $a_n$ and $b_n$ with time.
-In principle, it is possible to connect the parameters $a_n$ and $b_n$ of a rational polynomial with appropriate order $N$ to a physical model, at least for simple systems such as those modeled with Randles circuits \cite{gheemTheoreticalApproachModelling2008a}.
-One can even try to find the best order $N$ via a model selection criterion and estimate the number of parameters needed in the model, then derive a physical model with the same degrees of freedom.
+\section{Intercalation model}
+
+The impedance of intercalation materials is modeled with porous electrode theory inlcuding the Faradaic process, originally developed by De Levie \cite{deleviePorousElectrodesElectrolyte1963} for porous metal electrodes and later adapted by Bisquert \cite{bisquertInfluenceBoundaries2000} for insertion battery materials. The model accounts for both the ionic transport through the electrolyte-filled pores and the charge transfer/intercalation processes at the electrode-electrolyte interface.
+In this work, I used a physically-based porous electrode model derived from a simplified transmission-line approach \cite{lamantiaImpedancePorous2008,erinmwingbovoDynamicImpedanceSpectroscopy2019a}. 
+It accounts for ionic transport in the electrolyte-filled pores, electron conduction in the active material, and Faradaic intercalation kinetics. The overall impedance is 
+\begin{equation}
+Z_T = R_s + \frac{R_p}{k l} \coth(k l),
+\end{equation}
+where $R_s$ is the uncompensated solution resistance, $R_p$ combines pore-solution and solid-particle resistances, $l$ is the length of the pore, and $k$ is a complex factor containing the diffusion coefficient of the reaction product $D$, and the transport number of the cation $t_+$ according to the formula
+\begin{equation}
+    k^2=\frac{j\omega}{2D(1-t_+)}.
+\end{equation}
+Figure \ref{fig:LTP circuit} shows the full equivalent circuit corresponding to the porous electrode model.
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{figures/LTP/ltp_circuit_new.png}
+    \caption{Equivalent-circuit representation of the transmission line  model for porous electrodes in presence of a Faradaic reaction, developed in Reference \ref{erinmwingbovoDynamicImpedanceSpectroscopy2019a}. Reproduced from \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}}
+    \label{fig:LTP circuit}
+\end{figure}
+
+For the material under study ($\mathrm{LiTi}_2(\mathrm{PO}_4)_3$, chapter \ref{chap:LTP}), we simplified the repeating unit of the transmission line substituting the adsorbtion related Warburg element with a capacitor because it produces better fits with fewer parameters. 
+The simplified circuit unit is reported in Figure \ref{fig:LTP circuit simplified}. 
+
+\begin{figure}[h]
+    \includegraphics[width=0.8\textwidth]{figures/LTP/EC_collins_simplified.jpg}
+    \caption{Impedance unit used for the fitting of lithium sodium titanium phosphate. It is simplified from the model developed in Reference \ref{erinmwingbovoDynamicImpedanceSpectroscopy2019a} and depicted in Figure \ref{fig:LTP circuit}. Reproduced from \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a}}
+    \label{fig:LTP circuit simplified}
+\end{figure}
+
+
+
+
+
+
+
+
+% \subsection{Simplified model for time-varying impedance}
+
+% For the dynamic impedance measurements presented in this work (chapters \ref{chap:LTP} and \ref{chap:capacitor}), a simplified version of this model was employed. At frequencies above the diffusion regime but below where inductive effects dominate, the impedance can be approximated by:
+
+% \[
+% Z(\omega) = R_s + \frac{R_{pore}}{\sqrt{1 + j\omega\tau_{pore}}} + \frac{R_{ct}}{1 + j\omega R_{ct}(C_{dl} + C_\mu)}
+% \]
+
+% where:
+% \begin{itemize}
+% \item $R_s$ is the solution resistance (ohmic drop)
+% \item $R_{pore}$ captures the distributed pore resistance
+% \item $\tau_{pore} = R_e C_{dl}$ is the characteristic pore time constant
+% \item The third term represents the charge-transfer process coupled with both double-layer and chemical capacitance
+% \end{itemize}
+
+% This form yields a characteristic impedance spectrum with:
+% \begin{enumerate}
+% \item A high-frequency intercept corresponding to $R_s$
+% \item A depressed semicircle in the mid-frequency range from the porous electrode behavior
+% \item A second semicircle or Warburg-like tail at low frequencies from charge transfer and diffusion
+% \end{enumerate}
+
+% \subsubsection{Application to lithium titanium phosphate}
+
+% For the $\mathrm{LiTi}_2(\mathrm{PO}_4)_3$ electrodes studied in chapter \ref{chap:LTP}, this model was fitted to dynamic impedance data acquired during both galvanostatic and voltammetric perturbations in aqueous sodium-ion electrolyte. The key findings were:
+
+% \begin{itemize}
+% \item $R_{ct}$ varies significantly with state of charge, reflecting the potential-dependent kinetics of $\mathrm{Na}^+$ insertion
+% \item An asymmetry was observed between charge and discharge, attributed to differences in solvation and de-solvation activation energies
+% \item The porous electrode contribution ($R_{pore}$) remained relatively constant, confirming good ionic connectivity throughout cycling
+% \item Chemical capacitance $C_\mu$ peaks near 50\% state of charge, consistent with the voltage plateau region where the thermodynamic factor $\partial \mu / \partial c$ is maximized
+% \end{itemize}
+
+% This physical interpretation was only possible due to the use of a three-electrode configuration with a properly positioned reference electrode, enabling separation of the working electrode impedance from the counter electrode contribution.
+
+
+
+
+
+
+
+% \subsubsection{Model for electrical double-layer capacitors}
+
+% For the symmetric activated carbon electrodes (Chapter\ref{chap:capacitor}), a similar porous electrode framework applies, but without the Faradaic charge transfer term. The impedance simplifies to:
+
+% \[
+% Z(\omega) = R_s + \frac{R_{pore}}{\sqrt{1 + j\omega\tau_{pore}}} + \frac{1}{j\omega C_{dl,eff}}
+% \]
+
+% where $C_{dl,eff}$ is the effective double-layer capacitance of the porous structure. The model accounts for:
+
+% \begin{itemize}
+% \item Ion adsorption/desorption at the carbon surface (non-Faradaic process)
+% \item Distributed ionic resistance within the nano-porous carbon network
+% \item Frequency dispersion due to pore size distribution (often modeled with constant phase elements)
+% \end{itemize}
+
+% Despite using chemically identical electrodes, the positive and negative electrodes exhibited different impedance magnitudes and time constants during cycling, attributed to:
+% \begin{enumerate}
+% \item Different electrochemical histories (voltage excursions)
+% \item Adsorption of electrochemically inactive species (e.g., oxygen reduction products at positive electrode)
+% \item Asymmetric ion accessibility at different potentials
+% \end{enumerate}
+
+% The time-varying impedance revealed that these effects evolve continuously during charge/discharge, information that would be invisible in traditional equilibrium measurements.
+
+\section{Adsorbtion model}

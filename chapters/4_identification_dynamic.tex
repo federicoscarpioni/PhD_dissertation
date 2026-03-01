@@ -41,7 +41,7 @@ However, system identification commonly relies on linear approximations around a
 Let $\mathbf{x}_0$ denote a nominal state.
 For sufficiently small perturbations, the system dynamics can be linearized as
 \begin{equation}
-    \delta\dot{\mathbf{x}}(t) = \mathbf{A}\,\delta\mathbf{x}(t) + \mathbf{B}\,\delta\mathbf{u}(t),
+    \delta \left( \frac{\mathrm{d}\mathbf{x}(t)}{\mathrm{d}t} \right) = \mathbf{A}\,\delta\mathbf{x}(t) + \mathbf{B}\,\delta\mathbf{u}(t),
 \end{equation}
 where $\mathbf{A}$ and $\mathbf{B}$ are Jacobian matrices evaluated at the operating point.
 
@@ -60,23 +60,27 @@ If an input $\mathbf{u}(t)$ produces an output $\mathbf{y}(t)$, then a time-shif
 
 When both properties hold, the system is referred to as a \emph{linear time-invariant} (LTI) system.
 Under the assumptions of small-signal linearization and sufficiently slow evolution of the operating point, electrochemical systems can be locally approximated as LTI over finite time intervals.
-This approximation underpins the definition of impedance as a transfer function and is invoked throughout the remainder of this thesis.
+% This approximation underpins the definition of impedance as a transfer function and is invoked throughout the remainder of this thesis.
 
 \section{Time-domain representation}
 
 In linear time-invariant form, a dynamical system can be represented in the so called "state-space model" as
-\begin{align}
-    \dot{\mathbf{x}}(t) &= \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t), \\
-    \mathbf{y}(t) &= \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t),
-\end{align}
+\begin{equation}
+    \frac{\mathrm{d}\mathbf{x}(t)}{\mathrm{d}t} = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t),
+    \label{eq:state sapce input}
+\end{equation}
+\begin{equation}
+    \mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t),
+    \label{eq:state sapce output}
+\end{equation}
 where $\mathbf{y}(t)$ denotes the measured output.
 
 In electrochemistry, time-domain identification methods are commonly employed to estimate transport parameters from transient experiments.
-A notable example is the Galvanostatic Intermittent Titration Technique (GITT), in which diffusion coefficients are estimated from the relaxation of the electrode potential following a current step.
+A notable example is the galvanostatic intermittent titration technique (GITT), in which diffusion coefficients are estimated from the relaxation of the electrode potential following a current step.
 However, electrochemical systems exhibit a wide spectrum of characteristic timescales.
 Charge-transfer reactions, adsorption, and interfacial transport phenomena occur at timescales several orders of magnitude shorter than bulk diffusion.
 Capturing the full system dynamics in the time domain would therefore require both very high temporal resolution to resolve fast processes and very long experiments to observe slow relaxation, which is often impractical.
-Moreover, the superposition of multiple coupled processes leads to transient responses that are difficult to model using simple exponential or power low functions.
+Moreover, the superposition of multiple coupled processes leads to transient responses that are difficult to model using simple exponential or power law functions.
 While diffusion-dominated behavior can be interpreted in the time domain under restrictive assumptions, the simultaneous presence of faster interfacial phenomena complicates parameter identification.
 
 Frequency-domain identification offers a better solution for addressing this complexity separating processes according to their characteristic time constant.
@@ -152,7 +156,7 @@ G(s) = \frac{Y(s)}{U(s)}
 \label{eq:transfer function dy sys}
 \end{equation}
 and it describes how the system responds with the output \( Y(s) \) to certain input \( U(s) \).
-Equation \ref{eq:transfer function dy sys} resembles the definition of impedance reported in Chapter \ref{ch:electrochemistry} that is, in fact, the same mathematical object for electrochemical systems.
+Equation \ref{eq:transfer function dy sys} resembles the definition of impedance reported in chapter \ref{ch:electrochemistry} that is, in fact, the same mathematical object for electrochemical systems.
 
 % In electrochemical systems, the impedance is obtained by evaluating this transfer function along the imaginary axis,
 % \begin{equation}
@@ -162,19 +166,13 @@ Equation \ref{eq:transfer function dy sys} resembles the definition of impedance
 
 \subsection{Connection to state-space representations}
 
-The same transfer function can be derived from a state-space model obtained by rewriting the governing differential equations in first-order form.
-For a linear time-invariant system
+The same transfer function can be derived from a state-space model defined from equations \cite{eq:state sapce input} and \cite{eq:state sapce output} applying the Laplace transform, which yields to the expression 
 \begin{equation}
-\dot{x}(t) = A x(t) + B u(t), \qquad
-y(t) = C x(t) + D u(t),
+G(s) = \textbf{C} (s\textbf{I} - \textbf{A})^{-1} \textbf{B} + \textbf{D},
 \end{equation}
-application of the Laplace transform yields
-\begin{equation}
-G(s) = C (sI - A)^{-1} B + D.
-\end{equation}
-
+where $\textbf{I}$ is the identify matrix.
 This expression demonstrates that state-space and transfer-function models are mathematically equivalent descriptions of the same linear system.
-The choice between them depends on the intended application.
+The choice between time or frequency domain characterization depends on the intended application.
 
 % \subsection{Relevance to impedance spectroscopy}
 
@@ -189,31 +187,32 @@ The transfer function is a mathematical concept deduced from a first-principles 
 In practical settings, a system at steady state can be perturbed with a small sinusoidal excitation to establish the linear and time-invariant conditions and estimate the \emph{frequency response function} (FRF) at frequencies \( f_k \).
 In other words, the frequency response function is the practical realization of the transfer function.
 
-While the transfer function is a theoretical object and LTI by definition, an experimetnal frequency response function is an approximation of it. 
+While the transfer function is a theoretical object and LTI by definition, an experimental frequency response function is an approximation of it. 
 The validity of the approximation depends on the condition in which the experiment is performed.
+The Kramers--Kronig relations as a test for validity of the transfer functions were discussed in section \ref{sec:kk} (p. \pageref{sec:kk}).
 
-\section{Kramers--Kronig relations and measure validity}
+% \section{Kramers--Kronig relations and measure validity}
 
-The physical interpretation of electrochemical impedance spectroscopy relies on a set of assumptions that must be satisfied during the measurement.
-In particular, the system must respond linearly to small perturbations, remain approximately time-invariant over the duration of the experiment, and exhibit causal behavior, meaning that the measured response occurs only after the applied excitation.
+% The physical interpretation of electrochemical impedance spectroscopy relies on a set of assumptions that must be satisfied during the measurement.
+% In particular, the system must respond linearly to small perturbations, remain approximately time-invariant over the duration of the experiment, and exhibit causal behavior, meaning that the measured response occurs only after the applied excitation.
 
-Under these conditions, the impedance of an electrochemical system is not an arbitrary complex function of frequency.
-Instead, the real and imaginary parts of the impedance are intrinsically linked by fundamental constraints known as the Kramers--Kronig relations.
-For an impedance function \( Z(j\omega) = Z'(\omega) + j Z''(\omega) \), the simplified formulations of the Kramers--Kronig relations is
-\begin{equation}
-Z'(\omega) = \frac{2}{\pi} \, \int_{0}^{\infty}
-\frac{\omega' Z''(\omega')}{\omega'^2 - \omega^2} \, d\omega',
-\end{equation}
-\begin{equation}
-Z''(\omega) = -\frac{2 \omega}{\pi} \, \int_{0}^{\infty}
-\frac{Z'(\omega')}{\omega'^2 - \omega^2} \, d\omega',
-\end{equation}
-These relations originate from causality and linearity and apply to the transfer function of any physically realizable linear system.
-Since the impedance spectrum corresponds to the frequency response function of the system, it must satisfy the same constraints.
+% Under these conditions, the impedance of an electrochemical system is not an arbitrary complex function of frequency.
+% Instead, the real and imaginary parts of the impedance are intrinsically linked by fundamental constraints known as the Kramers--Kronig relations.
+% For an impedance function \( Z(j\omega) = Z'(\omega) + j Z''(\omega) \), the simplified formulations of the Kramers--Kronig relations is
+% \begin{equation}
+% Z'(\omega) = \frac{2}{\pi} \, \int_{0}^{\infty}
+% \frac{\omega' Z''(\omega')}{\omega'^2 - \omega^2} \, d\omega',
+% \end{equation}
+% \begin{equation}
+% Z''(\omega) = -\frac{2 \omega}{\pi} \, \int_{0}^{\infty}
+% \frac{Z'(\omega')}{\omega'^2 - \omega^2} \, d\omega',
+% \end{equation}
+% These relations originate from causality and linearity and apply to the transfer function of any physically realizable linear system.
+% Since the impedance spectrum corresponds to the frequency response function of the system, it must satisfy the same constraints.
 
-In electrochemical systems, a strict verification of the Kramers--Kronig relations is complicated by the finite frequency range of measurements and experimental noise.
-An alternative validation approach consists of fitting the measured impedance spectra with an equivalent circuit model composed of a series of R/C elements that are guaranteed to satisfy the Kramers--Kronig relations, since they represent causal and stable linear systems \cite{Agarwal_1995}.
-If such a model reproduces the experimental data within the experimental uncertainty, the impedance measurement is generally considered physically consistent.
+% In electrochemical systems, a strict verification of the Kramers--Kronig relations is complicated by the finite frequency range of measurements and experimental noise.
+% An alternative validation approach consists of fitting the measured impedance spectra with an equivalent circuit model composed of a series of R/C elements that are guaranteed to satisfy the Kramers--Kronig relations, since they represent causal and stable linear systems \cite{Agarwal_1995}.
+% If such a model reproduces the experimental data within the experimental uncertainty, the impedance measurement is generally considered physically consistent.
 
 \section{Parameter estimation from impedance spectra}
 

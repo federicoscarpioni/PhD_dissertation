@@ -42,7 +42,7 @@ On the other hand, in an experiment with multisine the time required is
 \begin{equation}
     T = \frac{1}{f_{min}},
 \end{equation}
-where $f_min$ is the minimum excited frequency.
+where $f_{min}$ is the minimum excited frequency.
 Depending on the choice of $n$ and the frequency grid, the stepped method requires 3 to 10 times longer \cite{schoukensBroadbandSteppedSine1999}.
 Figure \ref{fig:multisine-length} illustrates this difference by comparing the total acquisition time required for stepped single-sine excitation with different numbers of repetitions to a single multisine period covering the same frequency range.
 
@@ -115,7 +115,7 @@ Intermodulation refers to the phenomenon where two or more different frequency s
 
 The multisine prepared by Popkirov and Schindler consisted of three decades (100 kHz to 100 Hz, or 0.76 Hz to 0.076 mHz) with 42 prime-number components \cite{popkirovOptimizationPerturbationSignal1993a}.
 Roy, Garland, Pettit, and colleagues proposed a multisine with 133 components of only odd frequencies, random phase, and equal amplitude \cite{waltersWeakAdsorptionAnions2001a}.
-The choice of the phase and amplitude of each sinusoidal component of the multisine affects the quality of the estimated impedance and it will be discussed in detail in Chapter \ref{ch:acquisition}.
+The choice of the phase and amplitude of each sinusoidal component of the multisine affects the quality of the estimated impedance and it will be discussed in detail in chapter \ref{ch:acquisition}.
 Schouckens, Pintelon, Hubin, and colleagues also proposed a multisine using odd-number harmonics with 220 components between 10 mHz and 2 kHz \cite{vaningelgemAdvantagesOddRandom2009}.
 Sacci and Harrington designed a multisine in the frequency band 1 Hz to 1.3 kHz with removed specific harmonics that cause intermodulation, following the work of Popkirov, with amplitude decreasing by a factor of two every two decades.
 
@@ -176,7 +176,7 @@ These formulas present a general inequality and it is not possible to define how
 A few time might be sufficient or maybe one or more orders of magnitude is necessary.
 Furthermore they don't generalize to other electrochemical systems or other other drift types outside cyclic voltammetry.
 
-The only solution is to proceed by tentative acquiring the impedance at a low desired frequency and test the linearity and stationarity condition via a Kramer-Kroning test.
+A streightforward practical solution is to proceed by tentative acquiring the impedance at a low desired frequency and test the linearity and stationarity condition via a Kramer-Kroning test.
 
 \section{Dynamic Multi-Frequency Analysis}
 \label{sec:dmfa description}
@@ -252,6 +252,10 @@ When using this type of filter with the DMFA, the resulting impedance dataset so
 As a consequnce some of the first and last spectrum of a dataset are always discarded.
 Other filter shall be investigated to mitigate this problem.
 
+The method was used to study the redox active species \cite{kosterDynamicImpedanceSpectroscopy2017, mugisaEffectIonparingKinetics2024}, disolution of p-type silicon \cite{kosterMeasurementAnalysisDynamic2018}, the intercalation of cations in Nickel Hexacyanoferrate \cite{erinmwingbovoDynamicImpedanceSpectroscopy2019}, lithium manganese oxide \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020, erinmwingbovoEffectFilmThickness2023} and lithium titanium phosphate \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a} and for the adsorbtion of ion on porous carbon electrodes. (The latter two are part of the discussion of this thesis).
+In reference \cite{potdorModelingDynamicElectrochemical2025} the DMFA is performed on simulated multifrequency signals and it is found a deviation of the estimated impedance from the ideal model one at low frequencies.
+% The group also fronted the problem of fitting the great ammount of data from time-resolved impedance measurements \cite{battistelAnalysisNonstationaryImpedance2016} \cite{chukwuDynamicImpedanceSpectroscopy2023}. 
+
 \subsection{Relation to STFT and interpretation}
 
 From a signal-processing perspective, DMFA can be interpreted as a generalization of the STFT.
@@ -261,21 +265,14 @@ Conversely, narrow filters allow individual frequency components to be tracked i
 In the time domain, the filtering operation corresponds to a convolution of the original signal with the impulse response of the filter, resulting in a smoothed, frequency-specific representation.
 This behavior is conceptually related to wavelet transforms, although DMFA is derived directly from Fourier-domain considerations and tailored to multisine excitation.
 
-\subsection{Application of the DMFA}
-
-The method was used to study the redox active species \cite{kosterDynamicImpedanceSpectroscopy2017, mugisaEffectIonparingKinetics2024}, disolution of p-type silicon \cite{kosterMeasurementAnalysisDynamic2018}, the intercalation of cations in Nickel Hexacyanoferrate \cite{erinmwingbovoDynamicImpedanceSpectroscopy2019}, lithium manganese oxide \cite{erinmwingbovoDynamicImpedanceSpectroscopy2020, erinmwingbovoEffectFilmThickness2023} and lithium titanium phosphate \cite{scarpioniElectrochemicalImpedanceSpectroscopy2023a} and for the adsorbtion of ion on porous carbon electrodes. (The latter two are part of the discussion of this thesis).
-The group also fronted the problem of fitting the great ammount of data from time-resolved impedance measurements \cite{battistelAnalysisNonstationaryImpedance2016} \cite{chukwuDynamicImpedanceSpectroscopy2023}. 
-
-A recent work from the group approached the problem of defining the idea instantnous impedance from a system theoretical perspective and how it can be estimated from the experimetnal impedance estimated via DMFA \cite{potdorModelingDynamicElectrochemical2025}.
-
 \section{Best linear time-varying approximation}
 
 While STFT and DMFA rely on signal-processing techniques applied to temporarily stationary data segments, an alternative perspective is to explicitly model the system as linear, but time-varying (LTV).
-In 2012 Bruegelmans, Latier and their colleagues proposed the idea of recontructing the best linear time-varying approximation of the output signal of a non-stationary system exposed to multisine perturbation \cite{breugelmansOddRandomPhase2012} and use it to compute the instantanous impedace.
+In 2012 Bruegelmans, Latier and their colleagues proposed the idea of recontructing the best linear time-varying approximation of the output signal of a non-stationary system exposed to multisine perturbation \cite{breugelmansOddRandomPhase2012} and use it to compute the instantanous impedance.
 
 The principle is that a linear time-varying system can be espressed as a sum of $N_p$ parallel connected LTI systems $G_p$ muiltiplied by time-varying gains $b_p(t)$ such that the relation between an input $u(t)$ and output $y(t)$ is given by:
 \begin{equation}
-    y(t) = \sum _{p=0}^{N_p} G_p{u(t)}b_p(t).
+    y(t) = \sum _{p=0}^{N_p} G_p\{u(t)\}b_p(t).
 \end{equation}
 
 In practice, the BLTVA method consist in performing a parametric fitting of the output Fourer spectrum to approximate the linear and time-invariante response. 
@@ -285,7 +282,7 @@ After the fitting, the instantantneous imepdance is estimated as alwasy as ratio
 \begin{align}\label{eq:bltva_impedance}
     Z_{inst} (\omega_k, \tau) =  \frac{U(\omega_k)}{Y(\omega_k, \tau)} = \frac{U(\omega_k)}{\sum_{p=0}^{N_p} \theta_{p,k}\, b_p(\tau)}, 
 \end{align}
-where $U$ and $Y$ are Fourier transforms of $u$ and $y$, respectively, and $\theta_{p,k}$ are optimized parameters of the output non-parameteric fitting. 
+where $U$ and $Y$ are Fourier transforms of $u$ and $y$, respectively, and $\theta_{p,k}$ are optimized parameters of the output non-parametric fitting. 
 
 The group applied the method for the identification of the transfer function of many highly non-stationary electrochemical systems under constant current drift: metal electrodeposition \cite{colletOperandoORPEISStudy2021} \cite{dabirihavighOperandoOddRandom2022}, the conversion of zinc to zirconia \cite{dabirihavighOperandoOddRandom2023}, to study fast charging \cite{hallemansOperandoElectrochemicalImpedance2022} and SEI formation in Li-ion batteries \cite{dabirihavighOperandoORPEISMonitoring2025}.
 
@@ -298,7 +295,7 @@ The advantage of the BLTVA is that the resulting impedance is LTI by definition 
 Table \ref{tab:literature-parameters-dmfa-bltva} emphasizes that DMFA and BLTVA address complementary regions of the non-stationary impedance problem, trading computational complexity for access to lower frequencies under stronger drift conditions.
 A complete comparison is not possible since the drift and frequency ranges are so different.
 
-An interesting work would be to perform all the methods for impedance estimation on the same simulated data under different condition to uncover the effect of the drift speed to the stationarity and how the experietnal methods approeach the ideal theoretical impedance.
+An interesting work would be to perform all the methods for impedance estimation on the same simulated data under different condition to uncover the effect of the drift speed to the stationarity and how well the experietnally estimated impedance approximate the ideal one.
 
 \begin{table}[h]
     \centering

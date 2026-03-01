@@ -11,10 +11,9 @@ These tools form the basis for understanding both classical impedance spectrosco
 
 \section{Sampling and quantization}
 In the real world, any quantity changes continuously in time. 
-When performing an experiment, the scientist measures the values of those quantities with instrumentation at specific time intervals.
-In practice, the electronic circuit that digitally records analog signals is called an analog-to-digital converter (ADC) and is a staple in digital signal processing.
+When performing an experiment, an electronic instrumentation measures the quantity's value at a defined time interval using an electronic circuit called analog-to-digital converter (ADC).
 
-Any digital measurement system samples a continuous signal $x(t)$ at discrete times $t=nT_s$, producing the sampled discrete signal $x[n]$; where $T_s$ is the sampling time. 
+In mathematical terms, the digital measurement system samples a continuous signal $x(t)$ at discrete times $t=nT_s$, producing the sampled discrete signal $x[n]$; where $T_s$ is the sampling time. 
 The most important parameter to consider in sampling is the time interval or its reciprocal: the sampling frequency $f_s = 1/T_s$.
 To analyze the spectral content of a signal, the sampling frequency must be at least twice the highest oscillation frequency. This is known as the Nyquist--Shannon sampling theorem. Sampling below this threshold causes higher-frequency components to "fold back" into lower frequencies—a phenomenon known as aliasing—which corrupts the true spectral content of the signal.
 
@@ -134,8 +133,8 @@ The synthesis procedure is crucial for the quality of the excitation in system i
 
 The length of the arbitrary waveform can be extended by storing the signal in larger memory and sending it directly to the digital-to-analog converter using the direct memory access (DMA) protocol; however, this approach requires dedicated micro-controller units and knowledge of digital signal processor implementation that may be outside the typical background of electrochemists.
 
-\section{Conclusion}
-The mathematical framework introduced in this chapter enables the transformation and analysis of time-domain signals in the frequency domain.
-However, the application of these tools to electrochemical impedance spectroscopy requires additional assumptions regarding system linearity, time invariance, and experimental excitation.
-In particular, when the electrochemical system evolves on time scales comparable to the measurement duration, the direct application of classical frequency-domain techniques becomes inadequate.
-The following chapter therefore introduces the methodological extensions required to estimate impedance under non-stationary conditions.
+% \section{Conclusion}
+% The mathematical framework introduced in this chapter enables the transformation and analysis of time-domain signals in the frequency domain.
+% However, the application of these tools to electrochemical impedance spectroscopy requires additional assumptions regarding system linearity, time invariance, and experimental excitation.
+% In particular, when the electrochemical system evolves on time scales comparable to the measurement duration, the direct application of classical frequency-domain techniques becomes inadequate.
+% The following chapter therefore introduces the methodological extensions required to estimate impedance under non-stationary conditions.

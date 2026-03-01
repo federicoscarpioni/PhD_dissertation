@@ -2,15 +2,14 @@
 \label{chap:capacitor}
 
 Electrochemical double-layer capacitors are a class of energy storage devices characterized by high power and low energy density. The process of storing energy is based on adsorption of ions, a non-Faradaic process, which gives the characteristic fast kinetics at the expense of capacity; they also exhibit high self-discharge. The capacity depends on the electrode-electrolyte surface area, so materials with high porosity are particularly desirable. This section reports work on self-standing activated carbon electrodes in a three-electrode cell. The presence of the reference electrode allows separation of the instantneous impedance of positive and negative electrodes during device operation.
-As dynamic impedance spectroscopy measrument, the multisine was superimposed to a cyclic voltammetry drift. 
-While it is unusual for capacitors characterization, it was historycially the first measurment of my research transiting from electrochemical analysis to energy storage characterization.
-In any case, for double-layer capacitors sweeping voltage or keeping a constant current leads to very similar results since no Faradic reactions occours.
+As dynamic impedance spectroscopy measurement, the multisine was superimposed to a cyclic voltammetry drift.
 
 The results of this project led to a publication \cite{piantaEvaluationKineticParameters2023a}, and the data are available in a public repository \sidenote{doi: 10.6084/m9.figshare.21082168}.
 
-\section{Materials and cell assembly}
-\subsection{Electrode material}
-Freestanding activated carbon membranes were prepared according to Reference \cite{tribbiaSuperCap2020} to ensure a binder-free, highly porous network with large accessible surface area. The synthesis route includes carbonization and physical activation of a precursor to achieve high microporosity.
+\section{Experimentals}
+\subsection{Materials and cell assembly}
+\subsubsection{Electrode material}
+The freestanding activated carbon electrodes were prepared by Dr. Nicolò Pianta (University of Milano-Bicocca) according to Reference \cite{tribbiaSuperCap2020} to ensure a binder-free, highly porous network with large accessible surface area. The synthesis route includes carbonization and physical activation of a precursor to achieve high microporosity.
 Disks of 12\,mm diameter (approximately 1.54\,cm$^2$ projected area) were punched from the freestanding membranes. Each disk weighed approximately 23.5\,mg of active carbon. The high surface area allows for capacitance in the range of tens of F\,g$^{-1}$.
 % Freestanding activated carbon membranes (cite Tribbia et al. 2020)
 % Key properties: extremely high surface area, microporosity, binderless
@@ -18,10 +17,10 @@ Disks of 12\,mm diameter (approximately 1.54\,cm$^2$ projected area) were punche
 % \subsection{Electrolyte}
 % A solution of 10mM of KF was used as electrolyte, soaked into two glass faber separator to complete the cell stack; the pH of the solution is 10.7. The stack was introduced in a T-shaped cell with a Polyether ether ketone (PEEK) body which posses excellent mechanical properties and is resistant to chemicals (aqueous or organic) and compressed between two stainless-steel cylinders. The third entrance of the body was left for the reference electrode, described in the following. 
 
-\subsection{Electrolyte}
+\subsubsection{Electrolyte}
 A 10\,mol\,kg$^{-1}$ KF aqueous solution was selected as the electrolyte. Compared to neutral dilute solutions, this composition (pH~10.7) offers a wider potential window and a relatively stable interface. The device stores energy mainly by the adsorption of K$^+$ and F$^-$ species at the electrode double layer~\cite{piantaEvaluationKineticParameters2023a}.
 
-\section{Three-electrode cell configuration}
+\subsection{Three-electrode cell configuration}
 
 
 % Content present, but restructe like:
@@ -47,12 +46,7 @@ The electrodes were introduced into a T-shaped PEEK cell body, with two stainles
 % potential = 191 mV vs RHE (from Pourbaix diagram)
 % formed in situ by inserting a Pb wire → surface conversion to PbF₂
 
-\subsection{Reference electrode placement}
-
-Two possible positions of the reference electrode were evaluated: the "side position", where the reference is placed above or to the side of the active stack in a flooded region of the cell; and the "central position", where the Pb wire is inserted in the middle, directly between the two carbon electrodes.
-They are schematically illustrated in Figure~\ref{fig:edlc_ref_position}.
-As highlighted in Reference~\cite{piantaEvaluationKineticParameters2023a}, placing the reference on the side often leads to mid- and high-frequency artifacts caused by non-uniform current paths and additional electrolyte resistances. A direct comparison of impedance spectra from the two positions showed that a loop-like artifact appears if the reference is displaced too far from the working electrodes. Consequently, for the DEIS experiments presented here, the reference was placed in the central region of the stack, minimizing parasitic inductive and capacitive pathways.
-
+\subsubsection{Reference electrode placement}
 \marginpar{
 \captionsetup{type=figure}
 \includegraphics[width=\marginparwidth]{figures/image1.png}
@@ -60,8 +54,12 @@ As highlighted in Reference~\cite{piantaEvaluationKineticParameters2023a}, placi
 Schematic comparison between side-positioned and centrally inserted reference electrodes, highlighting the additional electrolyte path and parasitic impedances introduced when the reference is not in the electrode stack.}
 \label{fig:edlc_ref_position}
 }
+Two possible positions of the reference electrode were evaluated: the "side position", where the reference is placed above or to the side of the active stack in a flooded region of the cell; and the "central position", where the Pb wire is inserted in the middle, directly between the two carbon electrodes.
+They are schematically illustrated in Figure~\ref{fig:edlc_ref_position}.
+As highlighted in Reference~\cite{piantaEvaluationKineticParameters2023a}, placing the reference on the side often leads to mid- and high-frequency artifacts caused by non-uniform current paths and additional electrolyte resistances. A direct comparison of impedance spectra from the two positions showed that a loop-like artifact appears if the reference is displaced too far from the working electrodes. Consequently, for the DEIS experiments presented here, the reference was placed in the central region of the stack, minimizing parasitic inductive and capacitive pathways.
 
-\section{Measurement Setup}
+
+\subsection{DEIS measurement}
 
 In this work, we aimed to measure simultaneously the impedance of both cell electrodes during operation.
 Since each auxiliary port of the potentiostat channel has only the working electrode voltage, we needed to use a second channel for the acquisition of the full cell.
@@ -91,36 +89,34 @@ A schematic overview of the three-electrode DEIS measurement setup, including ex
     \label{fig:edlc_deis_setup}
 \end{figure}
 
-\subsection{Multisine excitation}
+\subsubsection{Multisine excitation}
 
 We generated a multi-sine waveform covering frequencies from about 0.1 Hz up to 100 kHz, with 8 points per decade. Frequencies were constrained to avoid intermodulation. Each sine amplitude was estimated by preliminary EIS tests to guarantee sufficiently large signals above the measurement noise, while avoiding strong nonlinearity. The phase of each sine was randomized to minimize the crest factor.
 
-\subsection{Applied drift}
+\subsubsection{Applied drift}
  
 A quasi-linear potential sweep of 8\,mV\,s$^{-1}$ was superimposed onto the multi-sine. Over one full cycle (charge then discharge) the cell spans from near 0\,V (completely discharged) to $\approx1.2$\,V (fully charged) and back, requiring about 250\,s. This scanning is repeated for a few consecutive cycles. Because the drift period is 250\,s, we restrict ourselves to multi-sine frequencies of 0.3\,Hz and higher in the final analysis, to minimize overlap with the drift fundamental frequency~\cite{battistelPhysicalDefinitionDynamic2019}.
 
-\subsection{Impedance estimation}
+\subsubsection{Impedance estimation}
 
 From the multi-frequency voltage and current, we estimated the time-resolved impedance via DMFA \cite{kosterDynamicImpedanceSpectroscopy2017a,piantaEvaluationKineticParameters2023a}. Simultaneously, we reconstruct the CV-like current--voltage profiles at 1\,s resolution by applying a zero-frequency filter around the drift. 
 
-\section{Physical model}
+\subsection{Physical model}
 
-The non-Faradaic adsorption mechanism for EDLC electrodes can be pictured as parallel pathways of double-layer charging and pore adsorption, each limited by finite or semi-infinite transport. A known approach \cite{janesCharacterizationActivatedNanoporous2007,piantaEvaluationKineticParameters2023a} uses a circuit containing:
-\begin{itemize}
-    \item $R_s$: Ohmic series resistance from electrolyte/conductors,
-    \item $C_{\text{dl}}$ or CPE: the double-layer capacitor (or constant-phase element) across the micropore interface,
-    \item $C_{\text{ad}}$ (or Warburg branch): modeling slow adsorption phenomena or diffusion-limited infiltration,
-    \item possibly a Finite-Length Warburg (FLW) for the negative electrode, capturing localized diffusion.
-\end{itemize}
-% The exact best-fit topology can differ for each electrode, indicating that identical carbon membranes under different polarization can exhibit distinct distributed resistances and pore-filling characteristics.
+The non-Faradaic adsorption mechanism for EDLC electrodes can be pictured as parallel pathways of double-layer charging and pore adsorption, each limited by finite or semi-infinite transport \cite{janesCharacterizationActivatedNanoporous2007}. 
+The model is represented as the equivalent circuit model in Figure \ref{fig:adsorbtion_model_circuit}
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width = 0.5\linewidth]{figures/chap_supercap/circuit_model.png}
+    \label{fig:adsorbtion_model_circuit}
+\end{figure}
+The model was not adeguate to fit the impedance spectra of both positive and negative electrode, so for the negative electrode the the adsorbtion capacting and semi-infinite Warburg element were replaced with a finite-diffusion Warburg element.
 
 \section{Results and discussions}
 
 \subsection{Artifact analysis}
 
-I would like to note that later in the manuscript a wire will also be used as a reference electrode current collector, but here the entire length of the Pb wire has PbF$_2$ deposited, making the electrode surface area quite extensive.
-Nonetheless, the artifacts in the form of a loop in the mid-to-high frequencies are suppressed when the reference is in the middle of the cell stack.
-A representative example of the mid-to high-frequency loop artifact induced by non-ideal reference electrode positioning is shown in Figure~\ref{fig:edlc_artifact}.
+Figure~\ref{fig:edlc_artifact} shows the effect of the reference electrode's position in the same cell. when it is outside the cell stack, the impedance become significantly distorted. The measurement presented in the rest of the chapter are perfomed with the reference in the middle position.
 
 \begin{figure}[h]
     \centering
@@ -130,7 +126,7 @@ A representative example of the mid-to high-frequency loop artifact induced by n
     \label{fig:edlc_artifact}
 \end{figure}
 
-\subsection{Time-varying impedance during CV}
+\subsection{Qualitative evaluation of the impedance}
 
 The DEIS data show both electrodes presenting predominantly capacitive spectra under moderate voltages (below $\approx0.7$\,V vs.\ RHE). However, near the upper region ($\approx1.2$\,V vs.\ RHE at the positive electrode), an additional low-frequency arc develops, signifying parasitic side reactions (likely oxygen evolution).
 Figure \ref{fig:edlc_deis_timefreq} illustrates the time evolution of the impedance modulus at representative mid-frequency (10 Hz) and low-frequency (300 mHz) components for both electrodes.
@@ -143,8 +139,6 @@ The negative electrode impedance remains relatively stable, while the positive e
     Modulus of impedance at 10 Hz and 300 mHz for positive and negative activated carbon electrodes during cyclic voltammetry, highlighting the onset of low-frequency drift at the positive electrode near the upper potential limit.\cite{piantaEvaluationKineticParameters2023a}}
     \label{fig:edlc_deis_timefreq}
 \end{widefigure}
-
-\subsection{Electrodes response asymmetry}
 
 Despite the nominally identical activated carbon electrodes, the positive side consistently shows stronger frequency dispersion and larger apparent capacitance, likely due to local oxygen-containing species adsorbed upon overcharging.
 Conversely, the negative electrode's impedance shape more closely resembles an ideal double-layer: a single semicircle or depressed arc merges into a near-vertical line at low frequencies. Similar discrepancies appear in References~\cite{piantaEvaluationKineticParameters2023a,tribbiaSuperCap2020}, confirming that potential-dependent side reactions or ionic rearrangements can occur in symmetrical carbon electrodes at different operating windows.
@@ -165,16 +159,14 @@ A direct visual comparison of the impedance spectra for the positive and negativ
 \subsection{Capacitance estimation}
 
 From the reconstructed current-voltage curves, we estimated the average electrode capacitance with
-\[
+\begin{equation}
 C_{\mathrm{avg}} \;=\; \frac{i_{\mathrm{drift}}}{\,dV/dt\,},
-\]
+\end{equation}
 where $i_{\mathrm{drift}}$ is the net current from the potential sweep. We also extracted $C_\mathrm{dl}$, $C_\mathrm{ad}$, and any Warburg-like terms from equivalent circuit regressions. Both methods yield values of approximately 40--50\,F\,g$^{-1}$ for each electrode, consistent with free-standing activated carbons in alkaline media~\cite{tribbiaSuperCap2020}. The positive electrode, however, shows a noticeable rise in adsorption-related capacitance above 0.9\,V vs.\ RHE, highlighting contributions from surface-active species formed near the oxygen-evolution threshold~\cite{piantaEvaluationKineticParameters2023a}.
 
-\section{Quantitative interpretation of the impedance}
+\section{Impedance fitting}
 
-\subsection{Spectra fitting}
-
-Impedance dataset was fitted with the porous electrode model with adsorbtion described in Chapter \ref{chap:analysis}, but the semplification for the absence of Faradic process led to two different circuits to fit positive and negative electrodes's impedances, which are reporter in Figure \ref{fig:edlc_fit_spectra} with the respecitve circuits.
+Figure \ref{fig:edlc_fit_spectra} reports the positive and negative spectra from the middle of an half-cycle, fitted with the relative equivalent circuit model.
 
 \begin{figure}[!h]
     \centering
@@ -184,25 +176,43 @@ Impedance dataset was fitted with the porous electrode model with adsorbtion des
     \label{fig:edlc_fit_spectra}
 \end{figure}
 
-A finite-space Warburg improved fits on the negative side, while an adsorption branch in parallel with a CPE gave optimal results for the positive side.
-The resonance frequency and characteristic time constant of the adsorption peak increased as the potential approached 1.2\,V vs. RHE, suggesting slower ion exchange and possible coverage by reaction byproducts.
 
-\subsection{Time-resolved parameters evolution}
 
-A typical DEIS dataset reveals how $C_{\mathrm{dl}}(t)$, $C_{\mathrm{ad}}(t)$, or $R_{\mathrm{s}}(t)$ evolve over the sweeping cycle. For example, $C_{\mathrm{ad}}$ rises sharply in the positive electrode beyond 1.0\,V vs. RHE. Such real-time parameter changes cannot be captured by stationary EIS. This demonstrates the added value of DEIS for diagnosing non-Faradaic processes and extraneous side reactions under real operating conditions.
+% \begin{equation}
+%     C_{eff} = Q_{ad}^{\frac{1}{n}} R_{ad}^{\frac{1-n}{n}}
+% \end{equation}
 
-The temporal evolution of selected fitted parameters over a full CV cycle is shown in Figure \ref{fig:edlc_param_evolution}.
+% A typical DEIS dataset reveals how $C_{\mathrm{dl}}(t)$, $C_{\mathrm{ad}}(t)$, or $R_{\mathrm{s}}(t)$ evolve over the sweeping cycle. For example, $C_{\mathrm{ad}}$ rises sharply in the positive electrode beyond 1.0\,V vs. RHE. Such real-time parameter changes cannot be captured by stationary EIS. This demonstrates the added value of DEIS for diagnosing non-Faradaic processes and extraneous side reactions under real operating conditions.
 
-\begin{widefigure}[!h]
-    \centering
-    \includegraphics[width=0.45\linewidth]{figures/chap_supercap/Fig9.png}
-    \includegraphics[width=0.45\linewidth]{figures/chap_supercap/Fig11.png}
-    \caption{Time evolution of fitted physical parameters during CV. Left: effective capacitance and right: adsorption capacitance. The figure reveals strong potential dependence and hysteresis effects at the positive electrode.}
-    \label{fig:edlc_param_evolution}
-\end{widefigure}
+% The temporal evolution of selected fitted parameters over a full CV cycle is shown in Figure \ref{fig:edlc_param_evolution}.
 
-\section{Remarks and perspective}
-In this chapter, we demonstrated the application of non-stationary impedance spectroscopy to an adsorption-controlled energy storage system. Despite using chemically identical carbon electrodes, the three-electrode DEIS reveals distinct shapes and time constants at the positive and negative electrodes, driven by local potential, electrode history, and side reactions. Our results are consistent with prior literature~\cite{tribbiaSuperCap2020,piantaEvaluationKineticParameters2023a}, and confirm the methodological advantages of DEIS over classical EIS in disentangling dynamic adsorption phenomena and electrode asymmetry. Future work will leverage the same approach in galvanostatic drifts, or in synergy with in-situ spectroscopic probes, to explore aging mechanisms and microscopic adsorption processes.
+% \begin{widefigure}[!h]
+%     \centering
+%     \includegraphics[width=0.45\linewidth]{figures/chap_supercap/Fig9.png}
+%     \includegraphics[width=0.45\linewidth]{figures/chap_supercap/Fig11.png}
+%     \caption{Time evolution of fitted physical parameters during CV. Left: effective capacitance and right: adsorption capacitance. The figure reveals strong potential dependence and hysteresis effects at the positive electrode.}
+%     \label{fig:edlc_param_evolution}
+% \end{widefigure}
+
+\section{Conclusions and perspectives}
+This chapter described the simultanous measurment of dynamic impednace spectroscopy of both half-cells for a symmetric supercapacitorbased on activate nanoporous carbon electrodes.
+The experiment highlights that even chemically identical electrodes can have different interfacial impedance, something not apreciable from the direct current methods.
+Other than manifacturing variation, the two electrodes have different hystory. Analyzing such systems with the whole cell impedance doesn't rapresent inform on the specific reaction. This is important to consider for more complex systems like batteries were the specific reaction at the electrodes might be hidden when looking at the whole cell response.
+
+% In this chapter, we demonstrated the application of non-stationary impedance spectroscopy to an adsorption-controlled energy storage system. Despite using chemically identical carbon electrodes, the three-electrode DEIS reveals distinct shapes and time constants at the positive and negative electrodes, driven by local potential, electrode history, and side reactions. Our results are consistent with prior literature~\cite{tribbiaSuperCap2020,piantaEvaluationKineticParameters2023a}, and confirm the methodological advantages of DEIS over classical EIS in disentangling dynamic adsorption phenomena and electrode asymmetry. Future work will leverage the same approach in galvanostatic drifts, or in synergy with in-situ spectroscopic probes, to explore aging mechanisms and microscopic adsorption processes.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 % \newpage
 % \textbf{Old text: redistribute in the sections or delete}

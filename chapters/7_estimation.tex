@@ -2,18 +2,18 @@
 \label{chap:estimation}
 
 The previous chapter showed how to design a multi-frequency experiment and digitally acquire the voltage and current signals of the electrochemical cell, while this chapter discusses the methods used in this work to estimate instantaneous impedance from the multi-frequency signals.
-Chapter \ref{ch:deis state art} covers the three main methods for estimating impedance: STFT, DMFA, and BLTVA. For its simplicity of implementation, I used mainly the DMFA method and the STFT for the online computation of part of the impedance.
+chapter \ref{ch:deis state art} covers the three main methods for estimating impedance: STFT, DMFA, and BLTVA. For its simplicity of implementation, I used mainly the DMFA method and the STFT for the online computation of part of the impedance.
 The novelty of this work is the use of the combination of DMFA and STFT to exploit the advantages of both: high frequency resolution of the DMFA for the low-frequency band of the impedance spectrum and fast computation of the STFT for the high frequency band.
 The STFT method was implemented online in the experiment dataflow thanks to its modular design and multi-threaded execution.
 
-This chapter describes how impedance is estimated offline as used in the experiments presented later in the results part (Chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}), and then I will describe the signal workflow to estimate part of the impedance online with the STFT method, as used for the main results chapter on commercial lithium-ion batteries (Chapter \ref{chap:coins}).
+This chapter describes how impedance is estimated offline as used in the experiments presented later in the results part (chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}), and then I will describe the signal workflow to estimate part of the impedance online with the STFT method, as used for the main results chapter on commercial lithium-ion batteries (Chapter \ref{chap:coins}).
 
 \section{Off-line estimation with DMFA}
 In this work I use the term \emph{off-line} to emphasize the difference with the \emph{on-line} approach that is discussed later in the chapter.
 The off-line method is the traditional method used in system identification for which input and output multi-frequency signals are sampled for an integer number of periods and the instantaneous frequency response function is estimated through a Fourier-transform-based analysis. 
 
-In practice, the acquired multi-frequency data are stored in single files that contain either a whole electrochemical experiment (as for Chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}) or the data of one technique of the entire sequence that defined the experiment.
-The latter is the case for long battery cycling (as in Chapter \ref{chap:coins}), so the estimation of the instantaneous impedance for the whole experiment requires looping through single datasets and executing the DMFA algorithm for each.
+In practice, the acquired multi-frequency data are stored in single files that contain either a whole electrochemical experiment (as for chapters \ref{chap:LTP}, \ref{chap:capacitor}, \ref{chap:anodes}) or the data of one technique of the entire sequence that defined the experiment.
+The latter is the case for long battery cycling (as in chapter \ref{chap:coins}), so the estimation of the instantaneous impedance for the whole experiment requires looping through single datasets and executing the DMFA algorithm for each.
 In both cases, before starting the estimation algorithm the signal baseline was removed to reduce the Gibb's effect.
 This procedure, referred as \emph{detrending}, is important in system identification to obtain clean Fourier spectra.
 The linear detrending used here is the simplest of the detrending methods; better solution exist \cite{hallemansTrendRemovalMeasurements2022, lentkaMethodsTrendRemoval2019}, but they are computationally difficult for long signals like the ones in this work.
@@ -42,7 +42,7 @@ This work provides a solution to the problem of data volume by computing the hig
 The online processing of the multi-frequency signals is possible thanks to a software component executed inside the automation software described in the previous chapter.
 The online processing consists of the object \verb|PicoCalculator|, part of the \verb|DEIStools| module, which adds the possibility of executing operations on the data streamed by the PicoScope device.
 At its core, it simply adds a condition in the streaming loop that checks whether the buffered data is long enough (i.e., the window of the STFT) to be processed.
-The baseline of the signal is removed before executing the algorithm, and no bell-shaped function is multiplied since it makes no difference for systems drifting slowly, as for the case in Chapter \ref{chap:coins}.
+The baseline of the signal is removed before executing the algorithm, and no bell-shaped function is multiplied since it makes no difference for systems drifting slowly, as for the case in chapter \ref{chap:coins}.
 
 The combination of on-line and off-line impedance estimation requires a carefully structured data-processing pipeline.
 High-frequency components must be extracted immediately to reduce storage requirements, while low-frequency components must be preserved for later analysis.
@@ -77,18 +77,18 @@ When voltage and current data blocks equivalent to the window length are acquire
 \end{itemize}
 The user must choose the low-pass filter critical frequency to remove all the frequency components estimated with the STFT method. 
 
-The individual signal-processing steps performed during online computation are summarized in Figure~\ref{fig:online processing scheme}.
-The figure highlights the separation between real-time operations, which must be computationally lightweight, and deferred processing steps executed off-line.
+% The individual signal-processing steps performed during online computation are summarized in Figure~\ref{fig:online processing scheme}.
+% The figure highlights the separation between real-time operations, which must be computationally lightweight, and deferred processing steps executed off-line.
 
-\begin{widefigure}[h]
-    \includegraphics[width = \linewidth]{figures/estimation/computation_scheme.png}
-    \caption{Schematic representation of the on-line signal-processing pipeline.
-    Each acquired data block is detrended, transformed to the frequency domain, and used to estimate the high-frequency impedance via STFT.
-    After low-pass filtering, the signals are transformed back to the time domain, downsampled, and stored for off-line DMFA analysis of the low-frequency impedance band.}
-    \label{fig:online processing scheme}
-\end{widefigure}
+% \begin{widefigure}[h]
+%     \includegraphics[width = \linewidth]{figures/estimation/computation_scheme.png}
+%     \caption{Schematic representation of the on-line signal-processing pipeline.
+%     Each acquired data block is detrended, transformed to the frequency domain, and used to estimate the high-frequency impedance via STFT.
+%     After low-pass filtering, the signals are transformed back to the time domain, downsampled, and stored for off-line DMFA analysis of the low-frequency impedance band.}
+%     \label{fig:online processing scheme}
+% \end{widefigure}
 
-In this work I characterized commercial lithium-ion batteries in the frequency range 10 mHz--200 kHz with this combined method.
+In this work I characterized commercial lithium-ion batteries in the frequency range 10 mHz--100 kHz with this combined method.
 The online STFT was configured to compute the impedance of all frequencies above 10 Hz, so the critical frequency of the low-pass filter was set to 8 Hz.
 For ease of implementation, I performed the filtering by multiplying the spectra with the filter function.
 The filter was the same symmetric Fermi-Dirac function used in the DMFA and was set with an $n$ value of 25 that produces a gain roll-off fast enough to bring the 10 Hz signal to noise level.
@@ -110,7 +110,7 @@ When the object \verb|PicoCalculator| is used for the online computation of the 
 \subsection{Validation against DMFA}
 Before implementing the STFT online in the acquisition dataflow, I simulated the process offline to verify that the output of the STFT and downsampling procedure was not altering the results.
 As an example dataset, I used the multi-frequency charging voltage and current obtained from a galvanostatic experiment at C/10 C-rate with a multisine in the range 10 mHz--1 kHz.
-The cell used for the experiment is a lithium-ion coin cell of the same type used in the study presented in Chapter \ref{chap:coins}.
+The cell used for the experiment is a lithium-ion coin cell of the same type used in the study presented in chapter \ref{chap:coins}.
 Figure~\ref{fig:downsampling validation} compares the original and processed signals in both the time and frequency domains.
 As a low-pass filter, I applied a Bessel filter of order 7 and cut-off frequency 100 Hz on data blocks of 100~s length.
 
@@ -141,10 +141,8 @@ The results of this comparison are shown in Figure~\ref{fig: hybrid method valid
 This chapter presented a hybrid strategy for estimating non-stationary electrochemical impedance over an extended frequency range.
 By combining online STFT-based estimation for the high-frequency band with offline DMFA for the low-frequency band, it is possible to reduce data volume by several orders of magnitude while preserving spectral accuracy.
 This approach enables continuous broadband impedance tracking during long-duration experiments such as battery aging.
-The use of a hybrid impedance estimation method allows for true broadband dynamic impedance spectroscopy to characterize the full spectrum of energy storage systems that respond over multiple decades of frequency.
-While the idea is valid, the practical implementation has some limitations due to the technical characteristics of the setup used.
-Firstly, the amount of calculations and memory management could be optimized.
-Currently, it is possible to run the algorithm on a dedicated computer, but it is unlikely to work on microcontrollers.
-Secondly, the analysis in blocks of data using a multiplicative filter creates small discontinuities of approximately 6 mV between two consecutive signal blocks.
-While I could prove that the use of a proper finite impulse response filter\sidenote{This filter acts on time-domain data by multiplication with the filter transfer function. This is the standard approach for filtering in digital signal processing and can be easily implemented in microcontrollers} with a Bessel function returns undistorted data, due to my limited software engineering skills, I was unable to implement it in the automated software.
-Nevertheless, its modularity will permit easy optimization of each of the steps when needed in the future.
+The use of a hybrid impedance estimation method allows for true broadband dynamic impedance spectroscopy to characterize the complete frequency response of energy storage systems.
+
+The analysis in blocks of data has a drawback in the use of a multiplicative filter because it produces small discontinuities of approximately 6 mV between two consecutive signal blocks.
+A continous processes of the voltage and current data, using for example the low-pass Bessel filter would improve the downsampled signal.
+The modularity of the software consent easy optimization of each of the steps when needed in the future.

@@ -1,7 +1,8 @@
 *.bbl
 *.bbl-SAVE-ERROR
+*.bcf-SAVE-ERROR
 *.maf
-*.mtc
+*.mtc*
 *.mtc?
 *.gz
 *.txss2
@@ -12,3 +13,5 @@
 *.xml
 *.toc
 *.blg
+*.log
+*.fls

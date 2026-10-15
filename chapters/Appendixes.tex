@@ -85,19 +85,19 @@ With the rapid development of digital electronics and computational capabilities
 A common experimental architecture progressively emerged, consisting of a potentiostat or galvanostat, an arbitrary waveform generator, and a digital data-acquisition system.
 Within this framework, broadband excitation signals and time-frequency analysis enabled the estimation of instantaneous or time-resolved impedance during electrochemical drifts.
 
-\section*{Early multisine implementations (1992--1997)}
+\section*{Early multi-sine implementations (1992--1997)}
 
 The first systematic works on time-resolved impedance spectroscopy using broadband perturbations were reported by Popkirov and Schindler in the early 1990s.
-In 1992, they introduced a custom-built potentiostat capable of operating in two distinct frequency ranges (100~kHz--100~Hz and 0.76~Hz--0.76~mHz) and demonstrated the feasibility of impedance measurements under non-stationary conditions using multisine excitation~\cite{popkirovNewImpedanceSpectrometer1992}.
-Subsequent studies established that multisine signals composed of dozens of frequency components provide superior signal-to-noise ratio compared with alternative broadband waveforms~\cite{popkirovOptimizationPerturbationSignal1993a}.
+In 1992, they introduced a custom-built potentiostat capable of operating in two distinct frequency ranges (100~kHz--100~Hz and 0.76~Hz--0.76~mHz) and demonstrated the feasibility of impedance measurements under non-stationary conditions using multi-sine excitation~\cite{popkirovNewImpedanceSpectrometer1992}.
+Subsequent studies established that multi-sine signals composed of dozens of frequency components provide superior signal-to-noise ratio compared with alternative broadband waveforms~\cite{popkirovOptimizationPerturbationSignal1993a}.
 
 A crucial contribution of this work was the validation of impedance estimation in the presence of nonlinearities and system non-stationarity~\cite{popkirovValidationExperimentalData1993a, popkirovEffectSampleNonlinearity1995a}.
 These methodological developments were applied to a wide range of electrochemical systems, including electropolymerization~\cite{popkirovInSituTimeResolved1993}, redox processes in conducting polymers~\cite{popkirovInsituImpedanceMeasurements1995, popkirovElectrochemicalImpedanceSpectroscopy1995, popkirovInvestigationConductingPolymer1997, garcia-belmonteDeterminationElectronicConductivity2003a}, silver dissolution~\cite{popkirovElectrodePotentialRedistribution1995, baltrunasTimeEvolutionActive1997}, and the benzophenone/benzophenone anion radical redox couple in various solvents~\cite{walczykInvestigationRedoxCouple1995}.
-Both potential-sweep and galvanostatic drifts were employed, with multisine excitation typically spanning frequencies from 1~Hz to 31~kHz.
+Both potential-sweep and galvanostatic drifts were employed, with multi-sine excitation typically spanning frequencies from 1~Hz to 31~kHz.
 
-\section*{High-density multisine and experimental optimization (2000--2005)}
+\section*{High-density multi-sine and experimental optimization (2000--2005)}
 
-Between 2000 and 2005, Roy, Garland, Pettit, and co-workers significantly extended the multisine approach by introducing high-density perturbations composed of up to 133 sinusoidal components.
+Between 2000 and 2005, Roy, Garland, Pettit, and co-workers significantly extended the multi-sine approach by introducing high-density perturbations composed of up to 133 sinusoidal components.
 Their excitation design employed only odd harmonics, random phase distributions, and equal-amplitude components~\cite{waltersWeakAdsorptionAnions2001a}.
 A detailed discussion of experimental constraints, parameter selection, and intrinsic limitations of the technique was provided in subsequent methodological studies~\cite{garlandAnalysisExperimentalConstraints2004}.
 
@@ -121,30 +121,30 @@ Further applications include fuel cells~\cite{slepskiImpedanceMonitoringFuel2015
 \section*{System identification and variance-aware impedance estimation (2004--2018)}
 
 In parallel, Schoukens, Pintelon, and co-workers introduced a rigorous system-identification framework to electrochemical impedance spectroscopy.
-Beginning in 2004, they applied frequency-domain identification theory to impedance measurements on corroding metals using multisine excitation with low-frequency components down to 10~mHz~\cite{vangheemElectrochemicalImpedanceSpectroscopy2004a, vangheemElectrochemicalImpedanceSpectroscopy2006a, blajievImprovementImpedanceMeasurement2006}.
-A detailed comparison between multisine and stepped-sine excitation was provided to validate measurement accuracy~\cite{vangheemInstantaneousImpedanceMeasurements2004}.
+Beginning in 2004, they applied frequency-domain identification theory to impedance measurements on corroding metals using multi-sine excitation with low-frequency components down to 10~mHz~\cite{vangheemElectrochemicalImpedanceSpectroscopy2004a, vangheemElectrochemicalImpedanceSpectroscopy2006a, blajievImprovementImpedanceMeasurement2006}.
+A detailed comparison between multi-sine and stepped-sine excitation was provided to validate measurement accuracy~\cite{vangheemInstantaneousImpedanceMeasurements2004}.
 
-In 2009, the advantages of using only odd random-phase harmonics were demonstrated using multisine signals with up to 220 components spanning 10~mHz to 2~kHz~\cite{vaningelgemAdvantagesOddRandom2009}.
+In 2009, the advantages of using only odd random-phase harmonics were demonstrated using multi-sine signals with up to 220 components spanning 10~mHz to 2~kHz~\cite{vaningelgemAdvantagesOddRandom2009}.
 Particular emphasis was placed on quantitative variance estimation and on separating errors arising from noise, nonlinearity, and non-stationarity.
 Earlier foundational work on excitation signal design and stepped-sine versus broadband methods~\cite{schoukensBroadbandSteppedSine1999, schoukensSurveyExcitationSignals1988a} underpinned this approach.
 
-Applications included corrosion studies of copper~\cite{vaningelgemApplicationMultisineImpedance2008}, aluminium and stainless steel~\cite{breugelmansOddRandomPhase2010a, alvarez-pampliegaCorrosionStudyAlrich2014, jiOddRandomPhase2018, jiElectrochemicalRamanAnalysis2020}, adsorption phenomena on metals and oxides~\cite{blajievPotentiodynamicEISInvestigation2008, geboesInvestigationAdsorptionMechanism2015, hauffmanMeasuringAdsorptionEthanol2012}, self-assembled monolayers~\cite{hauffmanDynamicSituStudy2013, fernandezmaciaStudyElectronTransfer2014}, polymeric coatings~\cite{jorcinInvestigationSelfhealingProperties2010, breugelmansOddRandomPhase2010, woutersMonitoringInitialContact2021, meeusenFEMModellingPredict2023, madelatSituMonitoringLateral2023}, ferri/ferrocyanide kinetics~\cite{fernandezmaciaORPEISStudyTime2015}, biosensors~\cite{pauwelsNewMultisinebasedImpedimetric2016}, and alloy protection~\cite{meeusenUseOddRandom2018}.
+Applications included corrosion studies of copper~\cite{vaningelgemApplicationMultisineImpedance2008}, aluminum and stainless steel~\cite{breugelmansOddRandomPhase2010a, alvarez-pampliegaCorrosionStudyAlrich2014, jiOddRandomPhase2018, jiElectrochemicalRamanAnalysis2020}, adsorption phenomena on metals and oxides~\cite{blajievPotentiodynamicEISInvestigation2008, geboesInvestigationAdsorptionMechanism2015, hauffmanMeasuringAdsorptionEthanol2012}, self-assembled monolayers~\cite{hauffmanDynamicSituStudy2013, fernandezmaciaStudyElectronTransfer2014}, polymeric coatings~\cite{jorcinInvestigationSelfhealingProperties2010, breugelmansOddRandomPhase2010, woutersMonitoringInitialContact2021, meeusenFEMModellingPredict2023, madelatSituMonitoringLateral2023}, ferri/ferrocyanide kinetics~\cite{fernandezmaciaORPEISStudyTime2015}, biosensors~\cite{pauwelsNewMultisinebasedImpedimetric2016}, and alloy protection~\cite{meeusenUseOddRandom2018}.
 
 \section*{Dynamic impedance coupled with cyclic voltammetry}
 
-Sacci and Harrington introduced a multisine excitation spanning 1~Hz to 1.3~kHz, with selectively removed harmonics to suppress intermodulation effects, superimposed on cyclic voltammetry~\cite{sacciDynamicImpedanceFormic2009}.
-The multisine amplitude decreased by a factor of two every two decades, following the design principles introduced by Popkirov.
+Sacci and Harrington introduced a multi-sine excitation spanning 1~Hz to 1.3~kHz, with selectively removed harmonics to suppress intermodulation effects, superimposed on cyclic voltammetry~\cite{sacciDynamicImpedanceFormic2009}.
+The multi-sine amplitude decreased by a factor of two every two decades, following the design principles introduced by Popkirov.
 This approach was applied to electrocatalytic reactions~\cite{holmUnderstandingReactionMechanisms2018, holmDynamicElectrochemicalImpedance2019, holmUnderstandingReactionMechanisms2019, sacciDynamicElectrochemicalImpedance2014} and later extended to droplet interface bilayers~\cite{sacciDisentanglingMemristiveMemcapacitive2022}.
 
 \section*{Analog separation of drift and perturbation}
 
 Pajkossy and Mészáros proposed an alternative architecture in which the potentiostat was custom-built to perform analog separation of the low-frequency drift and high-frequency perturbation~\cite{pajkossyConnectionCVsImpedance2020}.
-The excitation consisted of a sweeping voltage combined with a multisine signal using odd prime frequencies in the range 18.3~Hz to 17.8~kHz.
+The excitation consisted of a sweeping voltage combined with a multi-sine signal using odd prime frequencies in the range 18.3~Hz to 17.8~kHz.
 Extensive theoretical analysis was provided on the coupling between cyclic voltammetry and impedance for quasi-reversible redox systems~\cite{pajkossyDynamicElectrochemicalImpedance2019, pajkossyVoltammetryCoupledImpedance2020, pajkossyDynamicElectrochemicalImpedance2021}.
 
 \section*{Early embedded implementations}
 
-Earlier efforts toward compact implementations include the work of Ivaska and co-workers, who adapted Smith’s technique into a smaller hardware platform~\cite{engblomExperiencesOnLineFourier1990}.
+Earlier efforts toward compact implementations include the work of Ivaska and co-workers, who adapted Smith's technique into a smaller hardware platform~\cite{engblomExperiencesOnLineFourier1990}.
 Hazi, Bond, and colleagues later extended this concept using microcomputer-based instrumentation capable of admittance and impedance measurements in the range 50~Hz to 50~kHz during staircase voltammetry~\cite{haziMicrocomputerbasedInstrumentationMultifrequency1997, schieweUnifiedApproachTrace1998}.
 
 \chapter{Building auxiliary connectors}
@@ -164,7 +164,7 @@ I needed to access the pins X, Y and Z, as in figure XX. I then used 3 cables, s
   \label{fig:aux cables}
 \end{figure}
 
-\chapter{Multisine crest factor minimization}
+\chapter{Multi-sine crest factor minimization}
 \label{ch:crest factor}
 Multiple approaches have been proposed in the field to minimize the crest factor and each is a trade-off between speed and accuracy (find the absolute minimum) \cite{zappenApplicationTimeResolvedMultiSine2018}. 
 The right method strongly depends on the type of problem and on the following characteristics: distribution of frequency (logarithmic or linear), number of points per decades, number of frequencies in the waveform and relative amplitude (flat, linear, logarithmic, arbitrary). 
@@ -182,7 +182,7 @@ As an alternative, randomization of the phases offers an equal or better crest f
 Iterative algorithms achieve much better results. They belong to two families. One is based on the "clipping" method of the DFT peaks of the multi sine until the crest factor reaches a constant value \cite{yangImprovedCrestFactor2015}. 
 The other consists in a mathematical optimization using metaheuristic approaches that perform better than derivative methods for such big parameters space (ex simulated annealing and genetic algorithm) \cite{janeiroPeakFactorOptimization2020}.
 
-Recently Kallel et al. proposed a mixed method, though it gives better results than the analytical formula for small multisine of 3-4 decades \cite{batteries8100176}.
+Recently Kallel et al. proposed a mixed method, though it gives better results than the analytical formula for small multi-sine of 3-4 decades \cite{batteries8100176}.
 
 \chapter{Creating Python script for dynamic impedance experiments}
 \label{app:deis meas script}
@@ -199,7 +199,7 @@ Then the objects are injected into another objects where the control loop is imp
 \section{Initializing the scope}
 \lstinputlisting[language=Python]{code_blocks/initialize_oscilloscope.py}
 
-\section{Dependancies injections}
+\section{Dependencies injections}
 \lstinputlisting[language=Python]{code_blocks/deis_inject_and_start.py}
 
 \section{Initializing online calculator}
@@ -210,7 +210,7 @@ Then the objects are injected into another objects where the control loop is imp
 
 \chapter{Auxiliary data of coin cells}
 
-In the experiment presented in Chapter \ref{chap:coins}, nine CC-CV dynamic impednac spectroscopy experiments were performed for indipendent but identical cells.
+In the experiment presented in Chapter \ref{chap:coins}, nine CC-CV dynamic impedance spectroscopy experiments were performed for independent but identical cells.
 This chapter reports the results of all the cells, expect for the first already present in the main text, to showcase the reproducibility. 
 The cells have the following code names:
 \begin{table}[h]
@@ -234,18 +234,16 @@ The cells have the following code names:
 
 \section{Cell 10}
 
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width =\linewidth]{figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 10. Ploted one spectra every 10.}
-\end{figure}
-
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_010_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 10. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width =\linewidth]{figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 10. Ploted one spectra every 10.}
-\end{figure}
-
+  \includegraphics[width =0.85\linewidth]{figures/appendix_coin/PanCoin2025_010_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 10. Plotted one spectra every 10.}
+\end{widefigure}
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_010_DEIS_first_cycle.png}
@@ -255,17 +253,16 @@ The cells have the following code names:
 \end{figure}
 
 \section{Cell 11}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 11. Ploted one spectra every 10.}
-\end{figure}
-
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_011_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 11. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 11. Ploted one spectra every 10.}
-\end{figure}
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_011_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 11. Plotted one spectra every 10.}
+\end{widefigure}
 
 \begin{figure}[H]
   \centering
@@ -275,16 +272,16 @@ The cells have the following code names:
 \end{figure}
 
 \section{Cell 12}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 12. Ploted one spectra every 10.}
-\end{figure}
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_012_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 12. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 12. Ploted one spectra every 10.}
-\end{figure}
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_012_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 12. Plotted one spectra every 10.}
+\end{widefigure}
 \begin{figure}[H]
   \centering
   \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_012_DEIS_first_cycle.png}
@@ -293,16 +290,16 @@ The cells have the following code names:
 \end{figure}
 
 \section{Cell 13}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 13. Ploted one spectra every 10.}
-\end{figure}
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_013_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 13. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 13. Ploted one spectra every 10.}
-\end{figure}
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_013_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 13. Plotted one spectra every 10.}
+\end{widefigure}
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_013_DEIS_first_cycle.png}
@@ -311,16 +308,16 @@ The cells have the following code names:
 \end{figure}
 
 \section{Cell 14}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 14. Ploted one spectra every 10.}
-\end{figure}
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_014_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 14. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 14. Ploted one spectra every 10.}
-\end{figure}
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_014_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 14. Plotted one spectra every 10.}
+\end{widefigure}
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_014_DEIS_first_cycle.png}
@@ -329,16 +326,16 @@ The cells have the following code names:
 \end{figure}
 
 \section{Cell 15}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 15. Ploted one spectra every 10.}
-\end{figure}
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_015_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 15. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 15. Ploted one spectra every 10.}
-\end{figure}
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_015_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 15. Plotted one spectra every 10.}
+\end{widefigure}
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_015_DEIS_first_cycle.png}
@@ -347,16 +344,16 @@ The cells have the following code names:
 \end{figure}
 
 \section{Cell 16}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 16. Ploted one spectra every 10.}
-\end{figure}
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_016_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 16. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 16. Ploted one spectra every 10.}
-\end{figure}
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_016_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 16. Plotted one spectra every 10.}
+\end{widefigure}
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_016_DEIS_first_cycle.png}
@@ -365,16 +362,16 @@ The cells have the following code names:
 \end{figure}
 
 \section{Cell 17}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \linewidth]{figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during charge at selected states of health for cell 17. Ploted one spectra every 10.}
-\end{figure}
-\begin{figure}[H]
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_017_DEIS_charge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during charge at selected states of health for cell 17. Plotted one spectra every 10.}
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png}
-  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 17. Ploted one spectra every 10.}
-\end{figure}
+  \includegraphics[width = 0.85\linewidth]{figures/appendix_coin/PanCoin2025_017_DEIS_discharge_aging_mosaic.png}
+  \caption{Dynamic impedance spectra during discharge at selected states of health for cell 17. Plotted one spectra every 10.}
+\end{widefigure}
 \begin{figure}[H]
   \centering
   \includegraphics[width = \textwidth]{figures/appendix_coin/PanCoin2025_017_DEIS_first_cycle.png}
@@ -388,26 +385,26 @@ The cells have the following code names:
 \section{Fit of galvanostatic data}
 \begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_galvanostatic.png}
+  \includegraphics[width = \linewidth]{figures/LTP/rational_poly_fit_galvanostatic.png}
   \caption{Fitting of rational polynomial of order 6 on galvanostatic DEIS data.}
 \end{figure}
 \begin{figure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_galvanostatic_residues.png}
+  \includegraphics[width = \linewidth]{figures/LTP/rational_poly_fit_galvanostatic_residues.png}
   \caption{Residues of the fitting of rational polynomial of order 6 on galvanostatic DEIS data.}
 \end{figure}
 
 \section{Fit of cyclic voltammetry data}
-\begin{figure}[H]
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_cv.png}
+  \includegraphics[width = \linewidth]{figures/LTP/rational_poly_fit_cv.png}
   \caption{Fitting of rational polynomial of order 5 on cyclic voltammetry DEIS data.}
-\end{figure}
-\begin{figure}[H]
+\end{widefigure}
+\begin{widefigure}[H]
   \centering
-  \includegraphics[width = \textwidth]{figures/LTP/rational_poly_fit_cv_residues.png}
+  \includegraphics[width = \linewidth]{figures/LTP/rational_poly_fit_cv_residues.png}
   \caption{Residues of the fitting of rational polynomial of order 5 on cyclic voltammetry DEIS data.}
-\end{figure}
+\end{widefigure}
 
 \chapter{Silicon carbonitride as energy storage material}
 \label{app:SiCNO_background}
@@ -439,10 +436,10 @@ In this context, dynamic electrochemical impedance spectroscopy (DEIS) is partic
 Because DEIS resolves the instantaneous impedance along a non-stationary potential trajectory, it can reveal transient kinetic events that are difficult to detect with steady-state techniques.
 Sudden changes in characteristic time constants, transitions between adsorption- and insertion-dominated regimes, or the onset of fast transport pathways associated with quasi-metallic phases become visible as local impedance features that coincide with specific points of the voltage profile. 
 Moreover, DEIS can track the evolution of SEI resistance during the first cycles, distinguish formation-related impedance from intrinsic electrode impedance, and allow a direct comparison between different synthesis batches or porosity levels without relying exclusively on capacity values. 
-In the context of this thesis, DEIS was used to investigate whether such characteristic signatures could be associated with the hypothesized sodium storage mechanisms in SiCN(O), and in particular whether reversible sodium deposition within confined pores manifests as a measurable, transient reduction of the impedance.
+In the context of this thesis, DEIS was used to investigate whether such characteristic signatures could be associated with the hypothesized sodium storage mechanisms in SiCN(O).
 
 The purpose of this appendix is not to provide a complete review of SiCN(O) electrochemistry, but rather to supply the structural and mechanistic background necessary to interpret the DEIS measurements presented in Chapter~\ref{chap:anodes}. 
-Readers interested in a comprehensive treatment of the synthesis, structure, and electrochemical behavior of polymer-derived ceramics are referred to the foundational literature (Reinold et al.\ 2013; Sic et al.\ 2022; Cheng et al.\ 2021; Chen et al.\ 2022).
+Readers interested in a comprehensive treatment of the synthesis, structure, and electrochemical behavior of polymer-derived ceramics are referred to the foundational literature \cite{REINOLD2013224,chengHighThermalConductivity2022,chengElectricalCharacteristicsReliability2021}.
 
 \chapter{Fabrication and Characterization of Microscopic Reference Electrodes}
 \label{app:microRE}
@@ -469,7 +466,7 @@ In this work I used three types of insulated wires:
 \end{itemize}
 
 \subsection{Manually insulated wire} 
-I took a copper wire from a woven desoldering cloth and used the polymeric thermosetting strips used for sealing pouch cells to cover the wire.
+I took a copper wire from a woven de-soldering cloth and used the polymeric thermosetting strips used for sealing pouch cells to cover the wire.
 Figure \ref{fig:microref_wires} shows the components used to assemble the wire and the comparison with the commercial one.
 \begin{figure}[H]
     \centering
@@ -482,7 +479,7 @@ Figure \ref{fig:microref_wires} shows the components used to assemble the wire a
 \end{figure}
 
 
-\subsection{Commerical insulated wires}
+\subsection{Commercial insulated wires}
 The commercial 50$\mu$m wire is too thin to clamp to potentiostat crocodile clamps and also prone to break when sealed through the pouch cell foils. 
 \begin{figure}[H]
   \centering
@@ -494,7 +491,7 @@ The solution is to remove partial of the insulation of the wire at one end and s
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.4\textwidth]{figures/anodes/pealed_gold_wire.jpg}
-  \caption{Gold wire with removed insolution.}
+  \caption{Gold wire with removed insulation.}
 \end{figure}
 In the paper they use the machine to solder the contact in micro-electronics which I didn't have at disposal. 
 
@@ -502,7 +499,7 @@ In the paper they use the machine to solder the contact in micro-electronics whi
 \label{sec:ultrasonic wire soldering}
 
 As an alternative, I tried the ultrasonic welder used to solder battery electrode tabs.
-The device is not ment for such precision jobs but I could tune the parameters to fix the wire to the tabs as in Figure \ref{fig:wires-ultrasonic-soldered}
+The device is not meant for such precision jobs but I could tune the parameters to fix the wire to the tabs as in Figure \ref{fig:wires-ultrasonic-soldered}
 \begin{figure}[H]
   \includegraphics[width=0.2\textwidth]{figures/anodes/good_soldering.jpg}
   \includegraphics[width=0.26\textwidth]{figures/anodes/bad_soldering.jpg}
@@ -511,7 +508,7 @@ The device is not ment for such precision jobs but I could tune the parameters t
   \caption{}
   \label{fig:wires-ultrasonic-soldered}
 \end{figure}
-The parmeter for the welding are reported in the following table:
+The parameters for the welding are reported in the following table:
 \begin{table}[H]
   \centering
   \begin{tabular}{l l}
@@ -554,8 +551,8 @@ Sodium deposition followed analogous protocols.
 However, Na deposition in organic electrolytes competes with electrolyte reduction, and the formation of a heterogeneous SEI layer frequently destabilized the deposited Na.  
 In several cases, the Na film dissolved partially over time, causing the reference potential to drift back toward that of bare copper.
 
-Gold produces an alloy with lithium. Alloys have better defined potential compared to metallic phase and there are less problem with the SEI fomred on the surface since no new phase is grown. Stable reference electrodes were reported in the literature produced by alloying at cathodic anodic current of 50pA for 1 hour \cite{Oehler_2023}. 
-I could not replicate the same the processes with my electrodes, probably becuase of the ineffective current contact betwwen wires and nickel tab.
+Gold produces an alloy with lithium. Alloys have better defined potential compared to metallic phase and there are less problem with the SEI formed on the surface since no new phase is grown. Stable reference electrodes were reported in the literature produced by alloying at cathodic anodic current of 50pA for 1 hour \cite{Oehler_2023}. 
+I could not replicate the same the processes with my electrodes, probably because of the ineffective current contact between wires and nickel tab.
 
 For Au-wire substrates, alloy formation with Na was not achieved, despite attempts to reproduce literature procedures involving extremely low cathodic currents (tens of picoamperes).  
 This difficulty is attributed to the presence of exposed regions on the metallic current collector tab.

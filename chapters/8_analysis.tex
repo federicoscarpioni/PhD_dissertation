@@ -1,28 +1,27 @@
 \chapter{Interpretation of impedance}
 \label{chap:analysis}
 
-Once the impedance is measured, one can attempt to identify its dynamic by fitting a physical or non-physical mathematical model (parametric) to the data. 
-In Part III of this thesis, different electrochemical system are studied via dynamic impedance spectroscopy:
+Once the impedance is measured, one can attempt to identify its dynamics by fitting a physical or non-physical mathematical model (parametric) to the data. 
+In Part III of this thesis, different electrochemical systems are studied via dynamic impedance spectroscopy:
 \begin{itemize}
 \item lithium-ion commercial batteries (chapter \ref{chap:coins}); 
 \item intercalation material for sodium storage (chapter \ref{chap:LTP}); 
 \item electrochemical double-layer capacitor (chapter \ref{chap:capacitor}).
 \end{itemize}
-This time-varying impedance of the three systems has been interpreted using respectivelly a general transfer function model, an intercalation model with porous electrode theory and a nanoporous adsorbtion model.
-This chapter describes these models and the fitting procedures in order of apperance in Part III.
+This time-varying impedance of the three systems has been interpreted using respectively a general transfer function model, an intercalation model with porous electrode theory and a nano-porous adsorption model.
+This chapter describes these models and the fitting procedures in order of appearance in Part III.
 
 \section{General transfer function model}
 
-When impedance is measured for two-electrode systems like batteries, the electrodes' contributions cannot be separated for the absence of a reference electrode 
-it is challenging to obtain a physical model from first principles.
-Instead of attempting to identify its physical parameters with a physical model (referred as a white-box model) it is interesting to identigy the system with a matematical model (referred as a black-box model). 
-Thanks to the continous instantaneous impedance spectra generate with dynamic impedance spectroscopy, the time varaition of the mathematical model's parameters remains informative for the purpose of control and prediction. 
+When impedance is measured for two-electrode systems like batteries, the electrodes' contributions cannot be separated for the absence of a reference electrode. It is challenging to obtain a physical model from first principles.
+Instead of attempting to identify its physical parameters with a physical model (referred to as a white-box model) it is interesting to identify the system with a mathematical model (referred to as a black-box model). 
+Thanks to the continuous instantaneous impedance spectra generated with dynamic impedance spectroscopy, the time variation of the mathematical model's parameters remains informative for the purpose of control and prediction. 
 
-In this context of system identification, the battery is considered a generic liniar and time-variant system and the input $u(t)$ and the output $y(t)$ of a system are connected by the linear ordinary differential equation
+In this context of system identification, the battery is considered a generic linear and time-variant system and the input $u(t)$ and the output $y(t)$ of a system are connected by the linear ordinary differential equation
 \begin{equation}
-    \sum_{N} a_n \frac{\text{d}^ny(t0)}{dt} = \sum_{M} b_m \frac{\text{d}^my(t0)}{dt}.
+    \sum_{N} a_n \frac{\text{d}^ny(t)}{dt} = \sum_{M} b_m \frac{\text{d}^my(t)}{dt}.
 \end{equation}
-As discussed in Section \ref{sec:laplace}, differential equation can be more easly solved by applying the Laplace transform, which yields
+As discussed in Section \ref{sec:laplace}, differential equation can be more easily solved by applying the Laplace transform, which yields
 \begin{equation}
     \sum_{N} a_n s^n Y(s) = \sum_{M} b_m s^m U(s),
 \end{equation}
@@ -30,7 +29,7 @@ and hence the transfer function for the system is given by
 \begin{equation}
     G(s) = \frac{Y(s)}{U(s)}=\frac{\sum_{N} a_n s^n}{\sum_{M} b_m s^m}.
 \end{equation}
-This equation for the transfer function is the same of Equation \ref{eq:transfer function dy sys} from section \ref{sec:transfer function def diff equations} (p. \pageref{sec:transfer function def diff equations}).
+This equation for the transfer function is the same as Equation \ref{eq:transfer function dy sys} from section \ref{sec:transfer function def diff equations} (p. \pageref{sec:transfer function def diff equations}).
 
 The Laplace variable $s$ for the case of impedance is simplified to $s = j\omega$, but since the system is electrochemical, the homogeneous differential equations describing diffusion are semi-integer \cite{oldhamFractionalDifferentialEquations2010} and lead to solutions as functions of $\sqrt{j\omega}$.
 Hence for electrochemical systems the generic transfer function has the form:
@@ -41,7 +40,7 @@ Hence for electrochemical systems the generic transfer function has the form:
 
 In this work, I used such a rational polynomial function of order $n=m$ as a measurement model to fit impedance data.
 The concept is not new \cite{zoltowskiNontraditionalApproachMeasurement2005,gheemTheoreticalApproachModelling2008a,liModelReductionFractional2024}, but it is the first time this model has been used for instantaneous impedance of time-varying systems.
-Polynomial functions can flexibly fit impedance with any complex shapes and also have the advantage of working as a test for the linear Kramers-Kronig relations \cite{sadkowskiCNLSFitsKramers2004}.
+Polynomial functions can flexibly fit impedances with any complex shapes and also have the advantage of working as a test for the linear Kramers-Kronig relations \cite{sadkowskiCNLSFitsKramers2004}.
 
 A fundamental procedure for the regression of rational polynomial function is to add L1 regularization to the objective function, also called LASSO (\emph{least absolute shrinkage and selection operator}).
 In practice, the minimization problem is written as:
@@ -50,12 +49,12 @@ In practice, the minimization problem is written as:
 \end{equation}
 where $\text{obj}$ is the least-squares objective function described in Section \ref{sec:fitting-sys-id}, $\theta$ is the parameters array, and $\lambda$ is a penalty factor that controls the regularization strength.
 Regularization is important because rational function parameters can grow unnecessarily large and be compensated by parameters in the denominator.
-The choice of penalty factor is arbitrary, and I found that values as small as $1 \times 10^{-12}$ is sufficient.
+The choice of penalty factor is arbitrary, and I found that values as small as $1 \times 10^{-12}$ are sufficient.
 Removing the regularization terms makes the optimization procedure ineffective (parameters diverge) or causes the solver to fail.
 
 \section{Intercalation model}
 
-The impedance of intercalation materials is modeled with porous electrode theory inlcuding the Faradaic process, originally developed by De Levie \cite{deleviePorousElectrodesElectrolyte1963} for porous metal electrodes and later adapted by Bisquert \cite{bisquertInfluenceBoundaries2000} for insertion battery materials. The model accounts for both the ionic transport through the electrolyte-filled pores and the charge transfer/intercalation processes at the electrode-electrolyte interface.
+The impedance of intercalation materials is modeled with porous electrode theory including the Faradaic process, originally developed by De Levie \cite{deleviePorousElectrodesElectrolyte1963} for porous metal electrodes and later adapted by Bisquert \cite{bisquertInfluenceBoundaries2000} for insertion battery materials. The model accounts for both the ionic transport through the electrolyte-filled pores and the charge transfer/intercalation processes at the electrode-electrolyte interface.
 In this work, I used a physically-based porous electrode model derived from a simplified transmission-line approach \cite{lamantiaImpedancePorous2008,erinmwingbovoDynamicImpedanceSpectroscopy2019a}. 
 It accounts for ionic transport in the electrolyte-filled pores, electron conduction in the active material, and Faradaic intercalation kinetics. The overall impedance is 
 \begin{equation}
@@ -73,7 +72,7 @@ Figure \ref{fig:LTP circuit} shows the full equivalent circuit corresponding to 
     \label{fig:LTP circuit}
 \end{figure}
 
-For the material under study ($\mathrm{LiTi}_2(\mathrm{PO}_4)_3$, chapter \ref{chap:LTP}), we simplified the repeating unit of the transmission line substituting the adsorbtion related Warburg element with a capacitor because it produces better fits with fewer parameters. 
+For the material under study ($\mathrm{LiTi}_2(\mathrm{PO}_4)_3$, chapter \ref{chap:LTP}), we simplified the repeating unit of the transmission line by substituting the adsorption-related Warburg element with a capacitor because it produces better fits with fewer parameters. 
 The simplified circuit unit is reported in Figure \ref{fig:LTP circuit simplified}. 
 
 \begin{figure}[h]
@@ -156,4 +155,4 @@ The simplified circuit unit is reported in Figure \ref{fig:LTP circuit simplifie
 
 % The time-varying impedance revealed that these effects evolve continuously during charge/discharge, information that would be invisible in traditional equilibrium measurements.
 
-\section{Adsorbtion model}
+\section{Adsorption model}

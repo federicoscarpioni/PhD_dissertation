@@ -2,7 +2,7 @@
 \label{ch:electrochemistry}
 % \minitoc
 
-Electrochemistry provides the fundamental framework for understanding the operation and ageing of rechargeable batteries. 
+Electrochemistry provides the fundamental framework for understanding the operation and aging of rechargeable batteries. 
 All essential processes in a battery (ion intercalation, charge transfer, solid-electrolyte interphase formation, and lithium plating) are governed by electrochemical thermodynamics and kinetics of the redox reactions occurring at the interfaces between electrodes and electrolyte. 
 The voltage, efficiency, power capability, and long-term stability of a cell arise from these reactions and transport mechanisms taking place at these interfaces.
 
@@ -27,7 +27,7 @@ For a species $i$ with charge number $z_i$, the electrochemical potential is def
 \begin{equation}
     \tilde{\mu}_i = \mu_i + z_i F \phi,
 \end{equation}
-where $\mu_i$ is the chemical potential, $F$ is Faraday's constant, and $\phi$ is the electric potential. 
+where $\mu_i$ is the chemical potential, $F$ is Faraday's constant, and $\phi$ is the electric potential.
 At thermodynamic equilibrium, the electrochemical potentials of all species involved in a half-reaction must be equal on both sides of the interface. 
 For a generic half-reaction
 \[
@@ -51,7 +51,7 @@ When the activities of the reacting species deviate from standard equilibrium co
     \label{eq:nernst}
 \end{equation}
 where $E^\circ$ is the standard redox potential and $a_i$ is the activity of species $i$. Equation \ref{eq:nernst} shows that the electrode potential is determined not only by the intrinsic thermodynamics of the redox couple but also by the composition and temperature of the system.
-The activity of the species can be approximated with their concentrations for the case of diluted solutions, where the ion-ion interactions are negligible.
+The activity of the species can be approximated with their concentrations for dilute solutions, where the ion-ion interactions are negligible.
 
 \subsection{Measurement of electrode potentials}
 
@@ -60,7 +60,7 @@ Therefore, determining the potential of an electrode requires a second electrode
 Historically, the standard hydrogen electrode (SHE) was used to define the zero of the electrochemical reduction potential scale, but practical measurements typically rely on secondary references such as Ag/AgCl or calomel electrodes, which offer adequate stability with simpler construction and maintenance. 
 To keep the potential stable, the reference electrode must remain unaltered under small current drawn by the electrochemical instrumentation.
 
-In systems where a classical reference electrode cannot be implemented for geometrical contains, a pseudo-reference can be realized by immersing a metal wire directly into the electrolyte. Although convenient, the potential of a pseudo-reference depends on the local ionic composition and often drifts during operation. 
+In systems where a classical reference electrode cannot be implemented for geometrical constraints, a pseudo-reference can be realized by immersing a metal wire directly into the electrolyte. Although convenient, the potential of a pseudo-reference depends on the local ionic composition and often drifts during operation. 
 Its use is acceptable only when the resulting uncertainty is quantified and compatible with the intended measurements.
 
 A third option is the use of a quasi-reference electrode that is similar to a pseudo-reference in the sense that the electrode is immersed directly into the electrolyte solution without ionic separation, but it is constituted by a metal covered by its halogen forming a solid state redox couple system for better potential stability.
@@ -105,9 +105,9 @@ The flux of an ionic species $i$ in solution is governed by the Nernst--Planck e
     \mathbf{J}_i = -D_i \nabla c_i - z_i u_i F c_i \nabla \phi + c_i \mathbf{v},
     \label{eq:nernst-planck}
 \end{equation}
-where $D_i$ is the diffusion coefficient, $u_i$ the ionic mobility, $z_i$ the charge number, $c_i$ the concentration, $\phi$ the electric potential and $\mathbf{v}$ the solvent velocity. 
-The three terms represent diffusion, migration in an electric field and convection, respectively. 
-In a typical compact battery convection is absent so $\mathbf{v} = \mathbf{0}$.
+where $D_i$ is the diffusion coefficient, $u_i$ the ionic mobility, $z_i$ the charge number, $c_i$ the concentration, $\phi$ the electric potential, and $\mathbf{v}$ the solvent velocity.
+The three terms represent diffusion, migration in an electric field, and convection, respectively.
+In a typical compact battery, convection is absent, so $\mathbf{v} = \mathbf{0}$.
 
 The time evolution of concentration follows from the continuity equation,
 \begin{equation}
@@ -149,14 +149,14 @@ As the surface concentration approaches zero (for reduction) or saturation (for 
 % \end{equation}
 % In steady-state diffusion-limited conditions, $i \to i_{\mathrm{lim}}$ regardless of how large $\eta$ becomes. 
 
-Figure \ref{fig:bulter-volmer} illustrates the nonlinear current--overpotential relationship described by the Butler--Volmer equation, highlighting both the diffusion-limited regime and the near-equilibrium region where linearization is valid. The latter regime forms the basis of impedance spectroscopy, as small perturbations around the operating point lead to a proportional relationship between current and overpotential.
+Figure \ref{fig:butler-volmer} illustrates the nonlinear current--overpotential relationship described by the Butler--Volmer equation, highlighting both the diffusion-limited regime and the near-equilibrium region where linearization is valid. The latter regime forms the basis of impedance spectroscopy, as small perturbations around the operating point lead to a proportional relationship between current and overpotential.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width = \textwidth]{figures/electrochemistry/butler_volmer_lin.pdf}
     \caption{Current--overpotential relationship described by the Butler--Volmer equation. 
 The nonlinear response transitions to diffusion-limited behavior at large overpotentials, while the linearized region around $\eta = 0$ defines the charge-transfer resistance used in small-signal impedance analysis.}
-    \label{fig:bulter-volmer}
+    \label{fig:butler-volmer}
 \end{figure}
 
 \section{Double-layer structure and interfacial capacitance}
@@ -174,7 +174,7 @@ Its capacitance per unit area can be approximated by that of a parallel-plate ca
 where $\varepsilon_{\mathrm{H}}$ is the effective dielectric constant of the compact layer and $d_{\mathrm{H}}$ its thickness.
 
 Beyond the compact layer, ions distribute according to the balance of electrostatic and entropic forces.
-Assuming a symmetric $z:z$ electrolyte and a planar interface, the ion concentrations follow Boltzmann statistics, which combined with Poisson's equation lead to the Gouy--Chapman description of the diffuse region. 
+Assuming a symmetric $z:z$ electrolyte and a planar interface, the ion concentrations follow Boltzmann statistics, which, combined with Poisson's equation, leads to the Gouy--Chapman description of the diffuse region.
 The surface charge density $\sigma$ associated with the potential drop across the diffuse layer $\psi^d$ (Stern potential) is then
 \begin{equation}
     \sigma = \sqrt{8 \varepsilon \varepsilon_0 R T c_\infty} \;
@@ -212,8 +212,8 @@ The separation of charge across the compact and diffuse layers gives rise to the
 
 \section{Electrochemical methods}
 
-In the electrochemical characterization of energy storage materials and devices, a wide classification is between time-domain and frequency-domain method.
-This distinction highlights a crucial difference: time-domain typically probe macro-kinetic \sidenote{Overall, measured reaction rate that accounts for all physical steps (charge transfer, diffusion, ohmic losses) at the scale of the entire electrode} and thermodynamic parameters under large perturbations, while frequency-domain methods resolve electrode processes under small-signal control (perturbative).
+In the electrochemical characterization of energy storage materials and devices, a wide classification is between time-domain and frequency-domain methods.
+This distinction highlights a crucial difference: time-domain methods typically probe macro-kinetic\sidenote{Overall, measured reaction rate that accounts for all physical steps (charge transfer, diffusion, ohmic losses) at the scale of the entire electrode} and thermodynamic parameters under large perturbations, while frequency-domain methods resolve electrode processes under small-signal control (perturbative).
 
 \subsection{Time-domain methods}
 
@@ -222,11 +222,11 @@ Historically, cyclic voltammetry (CV) has been fundamental in electroanalytical 
 The sweep scan rate determines the capability of resolve different processes during a measurement. 
 
 An alternative approach to voltage-controlled techniques is the potentiostatic method, in which the electrode potential is held constant, hence fixing the overpotential $\eta$ and allowing the resulting current response to be solely governed by the rate-limiting kinetics.
-The potentiostatic method is also used to operate electrochemcial devices such as electrolyzers and fuel cells.
+The potentiostatic method is also used to operate electrochemical devices such as electrolyzers and fuel cells.
 The current output varies depending on the interface electrochemistry so the methods are also called chrono-amperometry (CA). 
 This is ideal for studying reaction mechanisms where the interfacial potential needs to be tightly controlled. 
 
-In contrast, in a galvanostatic technique the current flowing though the cell is fixed and, as a consequence, it is controlled the macro-kinietics of the system. 
+In contrast, in a galvanostatic technique the current flowing through the cell is fixed and, as a consequence, it controls the macro-kinetics of the system. 
 The output voltage is composed of the electrode's thermodynamic potential and the overpotential generated by the imposed current.
 This is the standard method for simulating battery operation, yielding data for device-relevant metrics such as capacity, energy density, and cycle life (discussed in chapter \ref{ch:batteries}) rather than isolated fundamental kinetic parameters.
 
@@ -236,10 +236,10 @@ The use of alternating excitation signals in electrochemistry originated from th
 Early works showed that by using high-frequency periodic voltage perturbation, the large interfacial capacitance could be "short-circuited", allowing the isolation of the pure Ohmic resistance of the electrolyte \cite{randles1947kinetics}. 
 Crucially, the frequency-dependent measurements of capacitance provided direct experimental evidence for the electrical double-layer, demonstrating that alternating current techniques are unique in their ability to resolve fundamental physical elements based on their distinct \emph{time constants} ($\tau = RC$ for a parallel resistor and capacitor circuit).
 
-The application of different frequeny excitiations on the same system allows to resolve the processes and their time constant. 
-This type of experimental technique takes the name of electrochemical impedance spectroscopy (EIS).
-Its main characterisitcs are the non-destructive nature because of the small-amplitude sinusoidal perturbation (typically $\pm 5-10 \text{ mV}$) and the wide range of frequencies probed, from mHz to MHZ.
-The result of an EIS measurement is the frequency dependent impedance function obtain with the formula
+The application of different frequency excitations on the same system allows one to resolve the processes and their time constants.
+This type of experimental technique is called electrochemical impedance spectroscopy (EIS).
+Its main characteristics are the non-destructive nature because of the small-amplitude sinusoidal perturbation (typically $\pm 5-10 \text{ mV}$) and the wide range of frequencies probed, from mHz to MHz.
+The result of an EIS measurement is the frequency-dependent impedance function obtained with the formula
 \begin{equation}
     Z(\omega) = \frac{\tilde{E}(\omega)}{\tilde{I}(\omega)},
 \end{equation}
@@ -254,17 +254,17 @@ At low frequencies, the capacitive reactance becomes large and the impedance app
 Deviations from ideal capacitive behavior, commonly observed in rough or porous electrodes, are captured using a constant-phase element to represent distributed interfacial properties.
 The representation of the interface as charge-transfer resistance $R_{\mathrm{ct}}$ and double-layer capacitance $C_{\mathrm{dl}}$ is obtained analytically from the linearization of the Butler-Volmer equation and the double-layer capacitance of the Stern model.
 
-Before the advent of microcomputers in the 70s, impedance was estimated frequency by frequency manually with the aid of an analog circuit called lock-in amplifier.
+Before the advent of microcomputers in the 70s, impedance was estimated frequency by frequency manually with the aid of an analog circuit called a lock-in amplifier.
 The impedance $Z(\omega_k)$ is calculated from the amplitude ratio and phase shift $\Delta\phi$ between input (reference) and output signals using the formula 
 \begin{equation}
 Z(\omega_k) = A_r e^{j\omega\Delta\phi},
 \end{equation}
-where $A_r$ is the ratio between input and output signals amplituedes.
+where $A_r$ is the ratio between input and output signal amplitudes.
 
-Later, digital signal processing was integrated into micro-controllers, creating the digital Frequency Response Analyzer (FRA) capable of automatic frequency sweeping, averaging, automatic current range selection, and application of voltage or current bias (Solartron 1174 in 1978 and Solartron 1250 in 1983). 
+Later, digital signal processing was integrated into microcontrollers, creating the digital Frequency Response Analyzer (FRA) capable of automatic frequency sweeping, averaging, automatic current range selection, and application of voltage or current bias (Solartron 1174 in 1978 and Solartron 1250 in 1983). 
 These instruments set the standard for impedance measurements that we still find today in commercial devices. 
 
-\subsection{Linearisation and charge-transfer resistance}
+\subsection{Linearization and charge-transfer resistance}
 
 In the limit of small perturbations, the nonlinear Butler-Volmer expression may be linearized by expanding Eq. \ref{eq:BV} to first order about $\eta = 0$, yielding:
 \begin{equation}
@@ -275,19 +275,19 @@ The inverse of this proportionality defines the charge-transfer resistance,
     R_{\mathrm{ct}} = \frac{RT}{nF i_0},
 \end{equation}
 which represents the kinetic contribution to the interfacial impedance. 
-In the absence of mass-transfer limitations, the small-signal impedance of an activation-controlled interface therefore contains a resistive contribution $R_{\mathrm{ct}}$ in parallel with the capacitive behaviour of the double layer.
+In the absence of mass-transfer limitations, the small-signal impedance of an activation-controlled interface therefore contains a resistive contribution $R_{\mathrm{ct}}$ in parallel with the capacitive behavior of the double layer.
 
 \subsection{Double-layer capacitance}
 
 Under small perturbations, the double layer behaves as an effective capacitor whose value reflects the adsorbed charges and electrode potential. 
 Together with the charge-transfer resistance arising from activation kinetics, it forms a parallel combination that constitutes the fundamental interfacial element in equivalent-circuit models: the RC element. 
 
-Deviations from ideal capacitive behaviour, often observed in porous or heterogeneous electrodes, requires to adapt the description of the capacitance impednace with the contant-phase-element (CPE) as
+Deviations from ideal capacitive behavior, often observed in porous or heterogeneous electrodes, require adapting the description of the capacitance impedance with the constant-phase-element (CPE) as
 \begin{equation}
     Z(\omega) = \frac{1}{Q (j\omega)^{\alpha}},
 \end{equation}
-where $Q$ is the relative capacitance when the parameter $\alpha$ is qual to 1 \cite{jorcinCPE2006}.
-Despite the CPE provides a better mathematical fitting of some impednace data, the correlation with the physical processes governig the system is often not clear \cite{orazemEIS}. 
+where $Q$ is the relative capacitance when the parameter $\alpha$ is equal to 1 \cite{jorcinCPE2006}.
+Although the CPE provides a better mathematical fitting of some impedance data, the correlation with the physical processes governing the system is often not clear \cite{orazemEIS}.
 
 \subsection{Diffusion impedance}
 
@@ -322,7 +322,7 @@ while for transmissive (open) boundaries,
 \end{equation}
 where $\tau_D = L^2/D$ is the characteristic diffusion time for a layer of thickness $L$.
 
-Diffusion-related impedance elements are essential for interpreting battery electrode behaviour, where mass transport in the electrolyte, within porous electrode structures, and through solid particles strongly influences the dynamic response. 
+Diffusion-related impedance elements are essential for interpreting battery electrode behavior, where mass transport in the electrolyte, within porous electrode structures, and through solid particles strongly influences the dynamic response. 
 The distinction between semi-infinite and finite-length diffusion is particularly important when analyzing non-stationary or transient impedance measurements, as the effective diffusion domain may change with state of charge, cycling history, or electrode microstructure.
 
 \subsection{Visualize impedance}
@@ -339,14 +339,14 @@ When interpreting Nyquist plots geometrically, it is essential that the real and
 \begin{widefigure}[h]
     \centering
     \includegraphics[width =\linewidth]{figures/electrochemistry/circuit_example_bode_nyquist.pdf}
-    \caption{Different representation of the same impedance with two types of visualization. The Bode plot shows separatly phase and amplitude as function of frequency while the Nyquist plot shows the impedance in the complex plane keeping the frequency implicit. The simulated circuits is made of two R//C elements in series followed by a semi-infinite Warburg element.}
+    \caption{Different representation of the same impedance with two types of visualization. The Bode plot shows separately phase and amplitude as function of frequency while the Nyquist plot shows the impedance in the complex plane keeping the frequency implicit. The simulated circuit is made of two RC elements in series followed by a semi-infinite Warburg element.}
     \label{fig:bode_vs_nyquist}
 \end{widefigure}
 
 \section{Equivalent circuit models}
 
 The linearization of the electrochemical equations yields processes that behave as electrical elements connected in series or parallel, depending on the system characteristics.
-To estract the valueas of the physical paramters, one typically translates the set of equations into a circuit and applies the laws of series and parallel connection of electrical elements to obtain a simplified and linearized model of the interface. This leads to a physically derived equivalent circuit model of the electrochemical interface, an idea introduced by Randles \cite{randles1947kinetics, randles1952kinetics}.
+To extract the values of the physical parameters, one typically translates the set of equations into a circuit and applies the laws of series and parallel connection of electrical elements to obtain a simplified and linearized model of the interface. This leads to a physically derived equivalent circuit model of the electrochemical interface, an idea introduced by Randles \cite{randles1947kinetics, randles1952kinetics}.
 
 The correspondence between electrochemical processes and their electrical analogues is summarized in Figure \ref{fig:interface-mechanisms-impedance}, where charge transfer, double-layer charging, and diffusion are mapped to resistive, capacitive, and dispersive circuit elements.
 
@@ -354,8 +354,8 @@ The correspondence between electrochemical processes and their electrical analog
     \centering
     \includegraphics[width =\textwidth]{figures/electrochemistry/interface mechanisms impedance.pdf}
     \caption{Mapping between electrochemical interfacial processes and their equivalent electrical impedance elements.
-    Bulk mass transport (high frequencies), adsorbtion (middle-high frequencies), charge-transfer kinetics (middle-low frequencies), and diffusive layer transport (low frequencies) contribute distinct features to the impedance spectrum and can be represented using lumped circuit components.
-    The lower part rapresents the impedance of the electrical or electrochemcial elements and the RC circuit.}
+    Bulk mass transport (high frequencies), adsorption (middle-high frequencies), charge-transfer kinetics (middle-low frequencies), and diffusive layer transport (low frequencies) contribute distinct features to the impedance spectrum and can be represented using lumped circuit components.
+    The lower part represents the impedance of the electrical or electrochemical elements and the RC circuit.}
     \label{fig:interface-mechanisms-impedance}
 
 \end{figure}
@@ -365,7 +365,7 @@ The correspondence between electrochemical processes and their electrical analog
 Electrochemical Impedance Spectroscopy relies on a set of assumptions that define the conditions under which impedance is a physically meaningful quantity. 
 
 First, the system must be \emph{linear} with respect to the applied perturbation. 
-This requires that the amplitude of the AC excitation be sufficiently small so that the response can be accurately described by the first-order linearisation of the governing equations. 
+This requires that the amplitude of the AC excitation be sufficiently small so that the response can be accurately described by the first-order linearization of the governing equations. 
 In practice, this condition implies that the measured impedance must be independent of the perturbation amplitude and that higher harmonics in the response are negligible.
 
 Second, the system must be \emph{stationary} during the measurement, meaning that the underlying thermodynamic state (electrode potential, surface composition, temperature, state of charge) does not change significantly over the duration of the impedance experiment. 
@@ -398,6 +398,6 @@ In electrochemistry, the KK relations provide a powerful consistency check:
 if an experimentally measured impedance violates KK relations beyond experimental uncertainty, at least one of the underlying assumptions of EIS has been violated.
 
 In practice, KK relations cannot be exactly verified by the above equation because they require spectral information from zero to infinite frequency.
-Fitting experimental data to a measurement model consisting of a series of RC elements produces a close approximation to the formula and it is usually referred as a KK test \cite{Boukamp_1995, orazemEIS,SCHONLEBER201420}.
+Fitting experimental data to a measurement model consisting of a series of RC elements produces a close approximation to the formula and it is usually referred to as a KK test \cite{Boukamp_1995, orazemEIS,SCHONLEBER201420}.
 
 From an experimental standpoint, deviations from KK consistency can arise from several sources: non-linearity or non-stationarity of the system, artifacts introduced by cell design, or the instrumentation electronics.

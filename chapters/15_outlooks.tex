@@ -105,12 +105,12 @@ The work presented in this thesis establishes a complete experimental and comput
 
 \section{Further optimization of excitation signals}
 
-In this thesis, multisine excitations was selected as a broadband perturbation, but its realization is not unique and can be further optimized at multiple levels.
+In this thesis, multi-sine excitation was selected as a broadband perturbation, but its realization is not unique and can be further optimized at multiple levels.
 First, the frequency grid itself can be refined. Alternative distributions of frequency components may reduce sensitivity to intermodulation, improve signal-to-noise ratio in targeted bands, or better align with the dominant electrochemical time constants of specific systems. In particular, adaptive or chemistry-specific grids could concentrate the power in frequency regions that are most informative for aging or transport phenomena.
 
 Second, phase optimization strategies remain an open research direction. While stochastic phase randomization with crest-factor minimization proved sufficient for the present work, more advanced deterministic or hybrid optimization algorithms could further reduce peak-to-average power ratios, allowing higher effective excitation amplitudes while preserving linearity. This is especially relevant for systems with very low impedance, where signal amplitudes are intrinsically constrained.
 
-Finally, the interaction between multisine design and impedance estimation methods (STFT, DMFA, BLTVA) deserves systematic investigation. Excitation signals optimized jointly with the estimation algorithm may enable improved low-frequency resolution or reduced sensitivity to drift, especially under strongly non-stationary conditions.
+Finally, the interaction between multi-sine design and impedance estimation methods (STFT, DMFA, BLTVA) deserves systematic investigation. Excitation signals optimized jointly with the estimation algorithm may enable improved low-frequency resolution or reduced sensitivity to drift, especially under strongly non-stationary conditions.
 
 \section{Extension to realistic lithium-ion batteries}
 
@@ -119,8 +119,8 @@ The experimental validation presented in this thesis primarily employed small-fo
 Future work should focus on applying dynamic impedance spectroscopy to commercially relevant chemistries such as NMC/graphite and LFP/graphite cells, with capacities in the range of 1--4~Ah. These cells exhibit significantly lower internal impedance and higher nominal currents, which poses new challenges for both excitation amplitude and measurement precision.
 
 The instrumentation used in this work is limited to a maximum current output of approximately 500~mA, which is insufficient for exciting large-format cells at representative C-rates. This limitation motivates either the integration of a current booster stage or, more fundamentally, the development of dedicated hardware platforms capable of delivering higher currents while maintaining precise small-signal perturbations.
-This is especially convinient when studying only full cell batteries with only two terminals. Removing the voltage follower of the reference sensing reducing significantly the complexity of the electronics.
-In fact commercial battery cyclers are much cheaper than thre-electrode potential for analytical purposes.
+This is especially relevant when studying full-cell batteries with only two terminals. Removing the voltage follower of the reference sensing significantly reduces the complexity of the electronics.
+In fact, commercial battery cyclers are much cheaper than three-electrode potentiostats for analytical purposes.
 
 \section{Toward embedded hardware}
 
@@ -148,14 +148,14 @@ Future work must therefore address:
 
 These considerations are essential for assessing whether dynamic impedance spectroscopy can reliably extract informative features in practical battery systems, or whether its applicability is restricted to specific operating regimes.
 
-\section{From Single Cells to Battery Packs}
+\section{From single cells to battery packs}
 
-An important open question concerns the extension of dyancmi impedance charachterization from single cells to battery packs composed of cells connected in series and parallel. In such configurations, impedance contributions are aggregated and potentially masked by cell-to-cell variability, contact resistances, and thermal gradients.
+An important open question concerns the extension of dynamic impedance characterization from single cells to battery packs composed of cells connected in series and parallel. In such configurations, impedance contributions are aggregated and potentially masked by cell-to-cell variability, contact resistances, and thermal gradients.
 
 Future investigations should address whether aging signatures remain identifiable at the pack level, and whether dynamic impedance measurements can detect imbalance, weak cells, or localized degradation. This question is particularly relevant for BMS applications, where measurements are inherently performed at the module or pack scale.
-The possibility of identify a faulty or less performative battery pack inside the module could effectivly extend the life-time of the battery though a reduced use of the specific pack.
+The possibility of identify a faulty or less performative battery pack inside the module could effectively extend the life-time of the battery limiting the power drained from that specific pack.
 
-\section{Temperature Sensitivity and Multi-Physics Correlations}
+\section{Temperature sensitivity and multi-physics correlations}
 
 Electrochemical impedance is strongly temperature-dependent, and this sensitivity represents both a challenge and an opportunity. On one hand, temperature variations complicate impedance interpretation under dynamic operating conditions. On the other hand, impedance measurements may serve as indirect temperature sensors \cite{duRevolutionizingSafety2025}.
 
@@ -163,7 +163,7 @@ Establishing reliable correlations between impedance features and temperature re
 
 \section{Alternative broadband excitations for BMS applications}
 
-Multisine excitation, while powerful, relies on relatively expensive arbitrary waveform generators and precise synchronization hardware. For large-scale deployment in BMSs, simpler broadband excitation schemes may be preferable.
+Multi-sine excitations, while powerful, rely on relatively expensive arbitrary waveform generators and precise synchronization hardware. For large-scale deployment in BMSs, simpler broadband excitation schemes may be preferable.
 Pseudo-random binary sequences, maximum-length sequences, or other stochastic excitations represent promising alternatives that can be generated efficiently on low-cost embedded platforms. Evaluating their compatibility with non-stationary impedance estimation, their robustness to noise and nonlinearities, and their computational requirements remains an important topic for future research.
 
 \section{Compact impedance spectrometers for analytical purposes}
@@ -173,9 +173,9 @@ While scaling dynamic impedance spectroscopy toward high-current battery systems
 These open and modular platforms typically target currents in the microampere to milliampere range and are optimized for fundamental electrochemical studies, including redox kinetics, adsorption processes, and interfacial capacitance measurements. Their open hardware and software architectures make them particularly attractive as foundations for compact and cost-effective dynamic impedance spectrometers.
 
 Integrating dynamic impedance capabilities into microcontroller-based potentiostats would require relatively modest extensions compared to high-current battery platforms. Broadband excitation signals can be generated digitally with minimal power requirements, and frequency-domain filtering can be implemented either on-board or through lightweight external processing.
-This metodology shares similar hardware requirment to audio processing and voice recognition.
+This methodology shares similar hardware requirements to audio processing and voice recognition.
 
-Such platforms would enable compact, portable, and inexpensive dynamic impedance-enabled devices that could be deployed widely in research laboratories. They would also provide an accessible testbed for comparing excitation strategies (multisine, pseudo-random, chirp-based) and impedance estimation methods under well-controlled conditions before transferring validated approaches to larger-scale battery systems.
+Such platforms would enable compact, portable, and inexpensive dynamic impedance-enabled devices that could be deployed widely in research laboratories. They would also provide an accessible testbed for comparing excitation strategies (multi-sine, pseudo-random, chirp-based) and impedance estimation methods under well-controlled conditions before transferring validated approaches to larger-scale battery systems.
 
 \section{Perspective}
 

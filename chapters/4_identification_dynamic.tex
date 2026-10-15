@@ -67,11 +67,11 @@ Under the assumptions of small-signal linearization and sufficiently slow evolut
 In linear time-invariant form, a dynamical system can be represented in the so called "state-space model" as
 \begin{equation}
     \frac{\mathrm{d}\mathbf{x}(t)}{\mathrm{d}t} = \mathbf{A}\mathbf{x}(t) + \mathbf{B}\mathbf{u}(t),
-    \label{eq:state sapce input}
+    \label{eq:state space input}
 \end{equation}
 \begin{equation}
     \mathbf{y}(t) = \mathbf{C}\mathbf{x}(t) + \mathbf{D}\mathbf{u}(t),
-    \label{eq:state sapce output}
+    \label{eq:state space output}
 \end{equation}
 where $\mathbf{y}(t)$ denotes the measured output.
 
@@ -155,8 +155,8 @@ The transfer function is defined as the ratio between the Fourier-transformed ou
 G(s) = \frac{Y(s)}{U(s)}
 \label{eq:transfer function dy sys}
 \end{equation}
-and it describes how the system responds with the output \( Y(s) \) to certain input \( U(s) \).
-Equation \ref{eq:transfer function dy sys} resembles the definition of impedance reported in chapter \ref{ch:electrochemistry} that is, in fact, the same mathematical object for electrochemical systems.
+and it describes how the system responds with the output \( Y(s) \) to a certain input \( U(s) \).
+Equation \ref{eq:transfer function dy sys} resembles the definition of impedance reported in chapter \ref{ch:electrochemistry}, which is, in fact, the same mathematical object for electrochemical systems.
 
 % In electrochemical systems, the impedance is obtained by evaluating this transfer function along the imaginary axis,
 % \begin{equation}
@@ -166,11 +166,11 @@ Equation \ref{eq:transfer function dy sys} resembles the definition of impedance
 
 \subsection{Connection to state-space representations}
 
-The same transfer function can be derived from a state-space model defined from equations \cite{eq:state sapce input} and \cite{eq:state sapce output} applying the Laplace transform, which yields to the expression 
+The same transfer function can be derived from a state-space model defined by equations \ref{eq:state space input} and \ref{eq:state space output} applying the Laplace transform, which yields the expression 
 \begin{equation}
 G(s) = \textbf{C} (s\textbf{I} - \textbf{A})^{-1} \textbf{B} + \textbf{D},
 \end{equation}
-where $\textbf{I}$ is the identify matrix.
+where $\textbf{I}$ is the identity matrix.
 This expression demonstrates that state-space and transfer-function models are mathematically equivalent descriptions of the same linear system.
 The choice between time or frequency domain characterization depends on the intended application.
 
@@ -188,7 +188,7 @@ In practical settings, a system at steady state can be perturbed with a small si
 In other words, the frequency response function is the practical realization of the transfer function.
 
 While the transfer function is a theoretical object and LTI by definition, an experimental frequency response function is an approximation of it. 
-The validity of the approximation depends on the condition in which the experiment is performed.
+The validity of the approximation depends on the conditions in which the experiment is performed.
 The Kramers--Kronig relations as a test for validity of the transfer functions were discussed in section \ref{sec:kk} (p. \pageref{sec:kk}).
 
 % \section{Kramers--Kronig relations and measure validity}

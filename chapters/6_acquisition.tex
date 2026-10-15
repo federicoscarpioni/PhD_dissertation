@@ -1,7 +1,7 @@
 \chapter{Acquisition of non-stationary impedance}
 \label{ch:acquisition}
 
-The previous chapters illustrates the state of the art of dynamic impedance spectroscopy with enpohasis on the instrumentation, custom set-up made up of a potentiosta, a waveform generator and a digital data sampler, and the methods for impedance estimation from multi-frequency voltage and current signals.
+The previous chapters illustrate the state of the art of dynamic impedance spectroscopy with emphasis on the instrumentation, a custom set-up comprising a potentiostat, a waveform generator, and a digital data sampler, and the methods for impedance estimation from multi-frequency voltage and current signals.
 This chapter focuses on the hardware and software architecture I developed in this work to perform continuous, broadband impedance measurements under controlled drifts.
 
 \section{A map of the dynamic impedance experiment}
@@ -17,22 +17,21 @@ To clarify the scope and modular structure of the proposed methodology, Figure \
 \begin{figure}
     \includegraphics[width=\textwidth]{figures/acquisition/DEIS_pipeline.drawio.pdf}
     \caption{Conceptual pipeline of dynamic electrochemical impedance spectroscopy.
-    The workflow spans multisine excitation design, synchronized signal acquisition, time-resolved impedance estimation, and subsequent model-based analysis.
-    This chapter focuses on the acquisition layer, while impedance estimation and analysis are addressed in chapters \ref{chap:estimation} and \ref{chap:analysis}, respectively.}
+    The workflow spans multi-sine excitation design, synchronized signal acquisition, time-resolved impedance estimation, and subsequent model-based analysis.}
     \label{fig:DEIS-pipeline}
 \end{figure}
 The schematic can be simplified in three steps:
 \begin{center}
     Acquisition of signals $\rightarrow$ Estimation of $Z$ $\rightarrow$ Analysis of $Z$
 \end{center}
-This chapter describes the methodology of signal acquisition; chapter \ref{chap:estimation} describes the estimation of impedance from multi-frequency signals and its online implementation within the acquisition software; finally chapter \ref{chap:analysis} outlines the strategies to analyze instantaneous impedance data with physical or non-physical mathematical models.
+This chapter describes the methodology of signal acquisition; chapter \ref{chap:estimation} describes the estimation of impedance from multi-frequency signals and its online implementation within the acquisition software. The analysis of impedance data is adressed separately for each application showed in Part III of this work.
 
-Before the dynamic impedance spectroscopy experiment, I usually perform classic electrochemical measurement to inform the choice of parameters
-Classic EIS measurement dictates the frequency interval and makes the multisine optimization informed, while direct current methods give information on the macro-kinetics and cycle life.
+Before the dynamic impedance spectroscopy experiment, I usually perform classic electrochemical measurements to inform the choice of parameters.
+Classic EIS measurement dictates the frequency interval and makes the multi-sine optimization informed, while direct current methods give information on the macro-kinetics and cycle life.
 
 \section{Electrochemical instrumentation}
 
-In chapter \ref{ch:deis state art}, I stated that the typical experimental setup for dynamic impedance consists of a potentiostat/galvanostat (or only potentiostat for short), an arbitrary waveform generator, and a digital acquisition device.
+In chapter \ref{ch:deis state art}, I stated that the typical experimental setup for dynamic impedance consists of a potentiostat/galvanostat (or potentiostat for short), an arbitrary waveform generator, and a digital acquisition device.
 While the latter provides high-fidelity signal generation and sampling, the core of the setup is the potentiostat, which applies those signals and controls the cell terminals.
 The potentiostat provides the user with built-in perturbation waveforms used in cyclic voltammetry, potentiostatic, and galvanostatic experiments.
 The same hardware is used for classic electrochemical experiments and for multi-frequency ones; it is important to discuss the inner components of a typical instrument to address how the setup was implemented for this work.
@@ -41,18 +40,18 @@ The same hardware is used for classic electrochemical experiments and for multi-
 Typical electrochemical methods consist of the controlled drift of one cell variable among voltage and current while recording the other as function of time, with the use of a potentiostat or galvanostat.
 The purpose of a potentiostat is to maintain the potential of a working electrode (WE) at a prescribed value relative to a reference electrode (RE).
 This is achieved using a high-gain feedback loop. 
-The potential difference between WE and RE is measured through a high-impedance \sidenote{Usually in the range 1-10 $T\Omega$} voltage follower connected to the RE. 
+The potential difference between WE and RE is measured through a high-impedance\sidenote{Usually in the range 1-10 $T\Omega$} voltage follower connected to the RE. 
 This element ensures that only a negligible current flows through the RE, preserving its equilibrium potential. 
 The measured potential is compared to a user-defined setpoint, and the resulting error signal drives a power amplifier connected to the counter electrode (CE). 
 By adjusting the CE potential, the amplifier forces the WE potential toward the setpoint.
 The output stage must source or sink the full cell current while maintaining stability of the feedback loop.
 
-This check is performed continuously with a velocity dictated by the bandwidth of the operational amplifier.
+This check is performed continuously at a rate dictated by the bandwidth of the operational amplifier.
 Usually, this value is arbitrary on a scale of integer values.
 High values mean fast loops, while low values result in slower loops.
-To reduce noise or fluctuation a low bandwidth is an ideal choice while for measuring the dynamic of fast systems is necessary to use high values and introduce more noise in the sampling.
+To reduce noise or fluctuation, a low bandwidth is an ideal choice; for measuring the dynamics of fast systems, it is necessary to use high values and accept more noise in the sampling.
 
-The current flowing through the WE-CE path is measured by a current-to-voltage converter, typically implemented using a transimpedance amplifier. The converter's output provides a low-noise measurement of the cell current and is digitised for acquisition and further processing. The transimpedance gain determines the current range, and switching networks or programmable gain amplifiers are often used to accommodate multiple current's order of magnitude.
+The current flowing through the WE-CE path is measured by a current-to-voltage converter, typically implemented using a transimpedance amplifier. The converter's output provides a low-noise measurement of the cell current and is digitized for acquisition and further processing. The transimpedance gain determines the current range, and switching networks or programmable gain amplifiers are often used to accommodate multiple current's order of magnitude.
 
 Instead, a galvanostat controls the current flowing between WE and CE. 
 The measured current is compared to a desired setpoint, and the feedback loop adjusts the CE potential to maintain the prescribed value. 
@@ -67,7 +66,7 @@ It does not include the circuitry for measuring impedance and the frequency resp
     \includegraphics[width=\textwidth]{figures/electrochemistry/pot_galv_schematics.png}
     \caption{Simplified schematic of a potentiostat/galvanostat architecture.
     The feedback loops governing potentiostatic and galvanostatic control, the transimpedance current measurement, and the analogue summing nodes are highlighted.
-    Understanding these internal blocks is essential for safely injecting external multisine excitations and accessing raw voltage and current signals in dynamic impedance experiments.
+    Understanding these internal blocks is essential for safely injecting external multi-sine excitations and accessing raw voltage and current signals in dynamic impedance experiments.
     (Source: CHI 700 Instruction manual)}
     \label{fig:pot-galv-schematics}
 \end{figure}
@@ -100,7 +99,7 @@ The instrument is then capable of working independently of the computer, storing
 % To overcome these limitations, the experimental platform adopted in this work follows a modular architecture in which the functions of electrochemical control, excitation generation, and signal acquisition are explicitly decoupled. A laboratory-grade potentiostat is used exclusively to impose the electrochemical operating trajectory, while an external arbitrary waveform generator provides the broadband multisine perturbation, and a dedicated high-speed digitizer captures voltage and current signals with the temporal resolution required for subsequent impedance estimation. This separation of roles enables precise synchronization, scalable bandwidth, and full access to raw data streams, which are essential prerequisites for non-stationary impedance characterization.
 
 The instrumental setup used in our laboratory follows the same design introduced before: a potentiostat interfaced with a dedicated waveform generator for excitation signal generation and a dedicated acquisition device for high-frequency sampling and streaming to a computer.
-The multisine excitation is generated as an analog voltage signal and injected into the potentiostat, where it is superimposed on the main drift.
+The multi-sine excitation is generated as an analog voltage signal and injected into the potentiostat, where it is superimposed on the main drift.
 The external signal is applied before the voltage/current converter (see Figure \ref{fig:pot-galv-schematics}), so for current-controlled experiments, the current flowing through the circuit is calculated from the external applied voltage and the measurement resistor following Ohm's law.
 Not all commercial potentiostats have the capability to accept external signals.
 In this work, I used devices from BioLogic, which provides an (unsupported) library for controlling the instrument through open-source programming languages.
@@ -128,13 +127,13 @@ For the purpose of this project, I was interested in only three:
 The manufacturer supplies adapters for the 9-pin to BNC connectors, but for me it was more practical to build them myself with longer and independent cables.
 Instructions for the construction of these cables are available in Appendix \ref{ap:aux cable}.
 
-The modular separation between electrochemical control, excitation generation, and signal acquisition is illustrated schematically in Figure \ref{fig:deis-setup-schematics}, while Figure \ref{fig:photo-setup} contains a photo of the instrumentation in our laboratory.
+The modular separation between electrochemical control, excitation generation, and signal acquisition is illustrated schematically in Figure \ref{fig:deis-setup-schematics}, while Figure \ref{fig:photo-setup} shows a photograph of the instrumentation in our laboratory.
 It is possible to see how the auxiliary cables interface the single potentiostat's channels with the external devices.
 \begin{widefigure}[h]
     \centering
     \includegraphics[width = \linewidth]{figures/acquisition/setup scheme.pdf}
     \caption{Schematic of the experimental setup for dynamic impedance spectroscopy.
-    A potentiostat imposes the electrochemical operating trajectory, while an external arbitrary waveform generator injects the multisine excitation and a dedicated acquisition device records voltage and current signals with high temporal resolution.
+    A potentiostat imposes the electrochemical operating trajectory, while an external arbitrary waveform generator injects the multi-sine excitation and a dedicated acquisition device records voltage and current signals with high temporal resolution.
     This modular architecture enables full control over excitation, synchronization, and data access.}
     \label{fig:deis-setup-schematics}
 \end{widefigure}
@@ -149,55 +148,55 @@ It is possible to see how the auxiliary cables interface the single potentiostat
 
 \section{Multi-sine design}
 \label{sec:multisine}
-A multisine is the superposition of sinusoidal components:
+A multi-sine is the superposition of sinusoidal components:
 \[
-u(t) = \sum_{k=1}^{K} A_k \sin(j2\pi f_k t + \phi_k).
+u(t) = \sum_{k=1}^{K} A_k \sin(2\pi f_k t + \phi_k).
 \]
-It allows simultaneous excitation of a large set of frequencies with a single time-domain waveform, reducing the experiment duration by at least a third in battery settings.
+It allows simultaneous excitation of a large set of frequencies with a single time-domain waveform, reducing the experiment duration by at least a third in battery studies.
 
-Obtaining high-quality instantaneous impedance in non-stationary conditions, however, requires careful design of the multisine: frequency grid, crest-factor minimization, amplitude choice and memory constraints of the AWG.
+Obtaining high-quality instantaneous impedance in non-stationary conditions, however, requires careful design of the multi-sine: frequency grid, crest-factor minimization, amplitude choice and memory constraints of the AWG.
 
 \subsection{Frequencies selection}
 
-The frequencies $f$ must be chosen such that one period of the whole multisine contains integer numbers of oscillations to avoid spectral leakage due to non-periodicity.
+The frequencies $f$ must be chosen such that one period of the whole multi-sine contains an integer number of oscillations to avoid spectral leakage due to non-periodicity.
 The period is then defined by one oscillation of the sine wave with lowest frequency: $T = 1/f_{min}$.
 Every other frequency must satisfy the condition $f_k = m \times f_{min}$, where $m$ is an integer. 
-In this work, we generate the desired frequencies from a harmonic series of integers to ensure the above condition and the possibility to reuse the sequence for multisines with different $f_{min}$.
-With the term harmonic sequence, I refer to $h_k = f_k/f_{min}$; such that it always starts from 1 and must contain only integers.
+In this work, we generate the desired frequencies from a harmonic series of integers to ensure the above condition and the possibility of reusing the sequence for multi-sine excitations with different $f_{min}$.
+With the term harmonic sequence, I refer to $h_k = f_k/f_{min}$, such that it always starts from 1 and contains only integers.
 The sequence is generated as a logarithmic distribution with a number of points per decade between six and ten.
-Lower values give sparse spectra, while high values give denser ones.
-Denser spectra are more beneficial for data regression, having more points to fit in the cost function, but the signal power increases.
+Lower values give sparse spectra, while higher values give denser ones.
+Denser spectra are more beneficial for data regression because they provide more points to fit in the cost function, but the signal power increases.
 For this work, I obtained sufficient impedance density with eight points per decade. 
 
 \subsection{Amplitude optimization}
 \label{sec:amplitude optim}
-When the amplitudes are all the same, the multisine is said to be "flat". The question is: how to decide the amplitudes for best signal-to-noise result? It can be achieved via analytical formulas or experimental extrapolation.
+When the amplitudes are all the same, the multi-sine is said to be "flat". The question is: how should the amplitudes be decided for the best signal-to-noise ratio? It can be achieved via analytical formulas or experimental optimization.
 The first case was used in Battistel \cite{battistelAnalysisNonstationaryImpedance2016} and Hallemans \cite{hallemansElectrochemicalImpedanceSpectroscopy2023}, with opposite results, making the amplitudes drop logarithmically with increasing or decreasing frequency.
 
-In this work, I followed an empirical strategy: the input multi-sine components amplitudes are choosen such to give a constant ouput's amplitude knowing system's impedance.
-To clarify the concpet, let's take the example of a voltage-controlled experiment in which the multi-sine is generate by the waveform generator and directly added to the drift voltage.
-The sinusoidals components ampltidues of the multi-sine $V_{ms}(\omega_k)$ are chosen to have desired ouputs amplitudes $I_{des}(\omega_k)$ according to the formula
+In this work, I followed an empirical strategy: the input multi-sine components amplitudes are chosen such to give a constant output's amplitude knowing system's impedance.
+To clarify the concept, let's take the example of a voltage-controlled experiment in which the multi-sine is generate by the waveform generator and directly added to the drift voltage.
+The sinusoidal components amplitudes of the multi-sine $V_{ms}(\omega_k)$ are chosen to have desired outputs amplitudes $I_{des}(\omega_k)$ according to the formula
 \begin{equation}
 V_{ms}(\omega_k) = |Z(\omega_k)| \times I_{des}(\omega_k),
 \label{eq:voltage_ampli_multisine}
 \end{equation}
 where $|Z(\omega_k)|$ is the system's impedance module.
-$I_{des}(\omega_k)$ should be a small value (5-10mV) to ensure linearity of the response.
-$Z(\omega_k)$ is a measured impedance spectra of the system \sidenote{Can be measured with classic stepped-sine method. when the frequency grid doesn't match the multi-sine one, I interpolate or extrapolate the impedance module at the desired frequency from a spline fit.}, but for non-stationary conditions I use the avarge impedance $Z_avg(\omega_k)$ over a complete DEIS experiment perfomed beforehand without optimizing the multi-sine.
+$I_{des}(\omega_k)$ should be a small value (5--10 mV) to ensure linearity of the response.
+$Z(\omega_k)$ is a measured impedance spectrum of the system\sidenote{Can be measured with the classic stepped-sine method. When the frequency grid does not match the multi-sine one, I interpolate or extrapolate the impedance module at the desired frequency from a spline fit.}, but for non-stationary conditions I use the average impedance $Z_{avg}(\omega_k)$ over a complete DEIS experiment performed beforehand without optimizing the multi-sine.
 
-For current-controlled experiments there is one more step to consider because the generated waveform is a voltage converted to current within the galvanostat.
-The conversion is made trough the measurement resistance $R_m$ \sidenote{Contained in the i/R converter in series to the working electrode, see Figure \ref{fig:pot-galv-schematics}} following Ohms' law:
+For current-controlled experiments, there is one more step to consider because the generated waveform is converted to current within the galvanostat.
+The conversion is made through the measurement resistance $R_m$\sidenote{Contained in the i/R converter in series with the working electrode; see Figure \ref{fig:pot-galv-schematics}} following Ohm's law:
 \begin{equation}
 V_{ms}(\omega_k) = R_m \times I_{ms}(\omega_k).
 \label{eq:ohm_law}
 \end{equation}
-In practice, one computes first the desired ouput amplitudes $I_{ms}(\omega_k)$ with the inverse of formula \ref{eq:voltage_ampli_multisine}:
+In practice, one computes first the desired output amplitudes $I_{ms}(\omega_k)$ with the inverse of formula \ref{eq:voltage_ampli_multisine}:
 \begin{equation}
 I_{ms}(\omega_k) = \frac{V_{des}(\omega_k)}{|Z(\omega_k)|},
 \end{equation}
-and then generates the exitation with the amplitudes $V_{ms}(\omega_k)$ obtained with formula \ref{eq:ohm_law}.
+and then generates the excitation with the amplitudes $V_{ms}(\omega_k)$ obtained with formula \ref{eq:ohm_law}.
 
-The choice of the multi-sine components' amplitudes is a difficult engeneering problem that affects the signal-to-noise ratio of cell voltage and current Fourier spectra, therefore the quality of the estimated impedance.
+The choice of the multi-sine components' amplitudes is a difficult engineering problem that affects the signal-to-noise ratio of cell voltage and current Fourier spectra, and therefore the quality of the estimated impedance.
 
 % The multisine, its design will be throughly eplained in a later chapter, is not just characterized by the frquency content but also its absolute and the relative amplitude of the sinusoidal components. 
 % The absolute amplitude is important for making the experiment itself, in the sense that for a chronoamperometry experiment the amplitude in volt of the excitation is the exact value applied on the cell. 
@@ -219,31 +218,31 @@ The choice of the multi-sine components' amplitudes is a difficult engeneering p
 
 \subsection{Phase optimization}
 The process of identification should be carried out with small-amplitude excitation around the operating point.
-Multisine waveforms can often have large peak-to-peak total amplitude after optimizing the relative amplitudes, which derive from the superposition of multiple sinusoidal components at the value of their peaks.
-In most cases, however, it can be reduced by acting on the phase of each sinusoidal component in the total multisine.
+Multi-sine waveforms can often have large peak-to-peak total amplitude after optimizing the relative amplitudes, which derive from the superposition of multiple sinusoidal components at the value of their peaks.
+In most cases, however, it can be reduced by acting on the phase of each sinusoidal component in the total multi-sine.
 The quantity of interest to reduce is the \textit{crest factor} (CF), defined as
 
 $$
 CF = \frac{|x_{max}|}{x_{rms}}
 $$
 
-where $x_{rms}$ is the root-mean-square, and consequently the peak-to-average power ratio (PAPR) equals the square of the crest factor.
-The crest factor of a pure sinusoidal wave is $\sqrt{2}$, which serves as a lower ideal boundary (it is matched only by a chirp waveform; a square wave, however, has a CF of 1). 
+where $x_{rms}$ is the root-mean-square, and the peak-to-average power ratio (PAPR) equals the square of the crest factor.
+The crest factor of a pure sinusoidal wave is $\sqrt{2}$, which serves as a lower ideal boundary (it is matched only by a chirp waveform; a square wave has a CF of 1, which is also ideal). 
  
-In this work, iterative-stochastic optimization was used in all the experiments presented later; although not optimal, it gives a sufficiently low CF for the exploratory stage of this work.
+In this work, iterative-stochastic optimization was used in all experiments presented later; although not optimal, it gives a sufficiently low CF for the exploratory stage of this work.
 The method consists of sampling the phases from a randomly generated distribution and computing the crest factor.
 The process is repeated a certain number of times (e.g., 50 or 100) and the phase that produces the lowest crest factor is kept.
 A summary of the main methods for crest-factor minimization present in the literature is described in Appendix \ref{ch:crest factor}.
 
-\subsection{Multisine design library}
+\subsection{Multi-sine design library}
 
-To streamline the design of multisines, I created an open-source Python library named \verb|multisine|\footnote{Available at https://github.com/federicoscarpioni/multisine}.
-It provides the \verb|Multisine| object that generates multisines, optionally optimizes phases for minimal crest factor via iterative randomization, and provides tools for visual spectral analysis. 
+To streamline the design of multi-sines, I created an open-source Python library named \verb|multisine|\footnote{Available at https://github.com/federicoscarpioni/multisine}.
+It provides the \verb|Multisine| object that generates multi-sines, optionally optimizes phases for minimal crest factor via iterative randomization, and provides tools for visual spectral analysis. 
 
 First, one imports the \verb|Multisine| object and defines the interested parameters as follows:
 \lstinputlisting[language=Python]{code_blocks/multisine_user_params.py}
 
-\verb|Multisine| offers a compact way to generate multisines, normalize, and analyze their frequency components\sidenote{Useful to spot errors in the parameters that may cause spectral leakage} with a few lines of code:
+\verb|Multisine| offers a compact way to generate multi-sines, normalize, and analyze their frequency components\sidenote{Useful to spot errors in the parameters that may cause spectral leakage} with a few lines of code:
 \lstinputlisting[language=Python]{code_blocks/multisine_excecution.py}
 
 \subsection{AWG memory limitations and splitting strategy}
@@ -255,51 +254,51 @@ A solution used in digital signal processing devices (used, for example, for the
 This option requires proficiency in the programming and setting of micro-controllers, specifically synchronizing the components to the same clock. 
 
 In our laboratory, we use instead a dedicated benchtop Arbitrary Waveform Generator (AWG) with two channels, each with 64 MSa; a huge upgrade from conventional integrated DACs.
-This amount of memory allows multisine waveforms containing at least 6 decades.
-To study batteries, however, my goal was to have seven or more decades of frequency range in the multisine and to be able to switch between two waveforms optimized specifically for chronopotentiometry and chronoamperometry.
-The solution I developed is to divide a multisine waveform into two waveforms and use the ability of the generator to sum the signals of the two channels ("dual channel mode") at the output.
-The two separate waves have fewer samples, and the two types of multisines can easily fit in the memory of the device.
+This amount of memory allows multi-sine waveforms containing at least 6 decades.
+To study batteries, however, my goal was to have seven or more decades of frequency range in the multi-sine and to be able to switch between two waveforms optimized specifically for chronopotentiometry and chronoamperometry.
+The solution I developed is to divide a multi-sine waveform into two waveforms and use the ability of the generator to sum the signals of the two channels ("dual channel mode") at the output.
+The two separate waves have fewer samples, and the two types of multi-sines can easily fit in the memory of the device.
 
-As an example, let's consider a seven-decade multisine waveform from 10 mHz to 100 kHz, generated at 1 MHz.
-As generation frequency, using 10 times the value of the maximum frequency multisine component gives good results, although the literature advises using even 100 times to avoid spectral leakage.
+As an example, let's consider a seven-decade multi-sine waveform from 10 mHz to 100 kHz, generated at 1 MHz.
+As generation frequency, using 10 times the value of the maximum frequency multi-sine component gives good results, although the literature advises using even 100 times to avoid spectral leakage.
 Keysight devices have a proprietary "TrueForm" technology to reduce jitter that might help limit spectral leakage in the final signal.
 
-Generating one single broadband waveform produces a file of 100 MSa (obtained as $period \times f_{gen}$).
-Dividing the frequency band at the value of 100 Hz creates two smaller multisines: one from 10 mHz to 100 Hz (not included) generated at 1000 Hz (size 100 kSa), and a second one from exactly 100 Hz to 100 kHz generated at 1 MHz, which, choosing a period of 1 s, leads to a waveform of 100 kSa.
-The two smaller multisines take up only 200 kSa of the generator memory to produce the same excitation as the complete multisine of 100 MSa.
-Figure \ref{fig:multisine-split-time-domain} reports the original and reduced multisines in the time domain.
+Generating one single broadband waveform at 1 MHz produces a file of 100 MSa (obtained as $period \times f_{gen}$).
+Dividing the frequency band at 100 Hz creates two smaller multi-sines: one from 10 mHz to 100 Hz (not included), generated at 1000 Hz (size 100 kSa), and a second one from exactly 100 Hz to 100 kHz, generated at 1 MHz, which, when choosing a period of 1 s, leads to a waveform of 100 kSa.
+The two smaller multi-sines take up only 200 kSa of the generator memory to produce the same excitation as the complete multi-sine of 100 MSa.
+Figure \ref{fig:multisine-split-time-domain} reports the original and reduced multi-sines in the time domain.
 
 \begin{widefigure}[h]
     \centering
     \includegraphics[width = \linewidth]{figures/acquisition/multisine_split.png}
-    \caption{Broadband multisine generation using frequency-band splitting.
-    A single wideband multisine (right) is reproduced by summing two narrower-band multisines (left), each fitting within the memory constraints of the waveform generator.
+    \caption{Broadband multi-sine generation using frequency-band splitting.
+    A single wideband multi-sine (right) is reproduced by summing two narrower-band multi-sines (left), each fitting within the memory constraints of the waveform generator.
     This strategy enables excitation spanning multiple decades of frequency without loss of spectral coherence.}
     \label{fig:multisine-split-time-domain}
 \end{widefigure}
 
 In the example, I used two arbitrary parameters: the 100 Hz boundary frequency and the 1 s period of the high-band waveform.
-For my case, 100 Hz sits in the middle; this might be adjusted case by case with the same rationale.
-Regarding the period of the second wave, one might think of using 0.01 seconds to have one exact period of the lowest frequency, but it must be considered that the frequencies of the two waves should follow the same rules described before to avoid intermodulation artifacts; being made from a sequence of harmonics.
+In this application, 100 Hz sits in the middle; this choice can be adjusted case by case using the same rationale.
+Regarding the period of the second waveform, one might consider using 0.01 seconds to have exactly one period of the lowest frequency, but it must be considered that the frequencies of the two waveforms should follow the same rules described before to avoid intermodulation artifacts; being made from sequences of harmonics.
 Logarithmic sequences optimized for intermodulation tend to be sparser on the low-frequency part and denser at higher frequencies.
-If for both waveforms one generates the frequencies starting from the harmonic of 1, the measured impedance spectra would have a sparser point distribution in the decade from 100 Hz to 1 kHz, where the high-band multisine waveform starts.
+If both waveforms are generated with frequencies starting from the harmonic of 1, the measured impedance spectra would have a sparser point distribution in the decade from 100 Hz to 1 kHz, where the high-band multi-sine waveform starts.
 See Figure \ref{fig:splitting-design} second row.
 
 To get a uniform distribution of points, I generated the high-frequency series starting from 1 Hz and discarded the frequencies until 100 Hz (not included), since they are already present in the low-band waveform.
-Then, the period of the waveform must be 1 Hz; otherwise, there will be spectral leakage in the final excitation (note that the frequencies of the high-frequency series are all integer multiples of 1 Hz).
-The sum of the two shorter waveforms generated with this method has the exact distribution of a single-generated wave as reported in the bottom part of Figure \ref{fig:splitting-design}.
-The effect of different strategies for restarting harmonic sequences when splitting a broadband multisine is illustrated in the same Figure \ref{fig:splitting-design}.
+Then, the period of the waveform must be 1 Hz; otherwise, there will be spectral leakage in the final excitation (note that all frequencies of the high-frequency series are integer multiples of 1 Hz).
+The sum of the two shorter waveforms generated using this method has the exact frequency distribution of a single generated waveform, as shown in the bottom part of Figure \ref{fig:splitting-design}.
+The effect of different strategies for restarting harmonic sequences when splitting a broadband multi-sine is illustrated in the same Figure \ref{fig:splitting-design}.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\linewidth]{figures/harmonics_supporting.png}
-    \caption{Effect of frequency-band splitting on harmonic density in broadband multisine design.
+    \caption{Effect of frequency-band splitting on harmonic density in broadband multi-sine design.
     Different restart strategies for the high-frequency band lead to non-uniform spectral density near the band boundary.
     Starting the harmonic sequence at 1 Hz and discarding overlapping decades preserves a uniform logarithmic distribution across the full frequency range.}
     \label{fig:splitting-design}
 \end{figure}
 
-To summarize, for a CC-CV battery experiments, one channel of the generator has in memory two low-band multisine waves, one optimized for chronoamperometry and the other for chronopotentiometry, and the other channel would have loaded the two optimized high-band multisine waves.
+To summarize: for a CC-CV battery experiment, one channel of the generator contains in memory two low-band multi-sine waveforms, one optimized for chronoamperometry and the other for chronopotentiometry, and the other channel contains the two optimized high-band multi-sine waveforms.
 
 \section{Automation software}
 \label{sec:software}
@@ -322,9 +321,7 @@ A \emph{technique} is the building block of an electrochemical experiment.
 The most basic techniques are chronoamperometry, chronopotentiometry, voltage sweep, and open-circuit voltage.
 A \emph{sequence} of techniques is a set of those building blocks concatenated to perform a desired experiment.
 Most of the time, a "loop" technique is inserted in the sequence to repeat it a certain number of times. 
-% This implementation of controll loop via Python software and the synchronization of the devices is the subject of the rest of the chapter.
-
-The flow of digital signals is schematize is figure \ref{fig:DEIS automation workflow}
+The instrumnets control loop is schematized in Figure \ref{fig:DEIS automation workflow}
 
 \begin{widefigure}
     \centering
@@ -337,20 +334,20 @@ The flow of digital signals is schematize is figure \ref{fig:DEIS automation wor
 
 \subsection{Software solution}
 A control loop must monitor the sequence advancement and loop number returned by querying the potentiostat communication board.
-BioLogic EC-Lab or EC-Lab Express do not allow automating this process. The output triggers functionality is too limited for fine tuning the acquisition as described here.
+BioLogic EC-Lab and EC-Lab Express do not allow automating this process. The output triggers functionality is too limited for fine tuning the acquisition as described here.
 BioLogic provides a simple software development kit (SDK) to communicate with the potentiostats using various programming languages, which I expanded into a more sophisticated object-oriented Python library that I called \verb|pyeclab|\footnote{Available at https://github.com/federicoscarpioni/pyeclab}.
 
 Object-oriented programming (OOP) is a software design paradigm in which complex systems are represented as collections of interacting \emph{objects}.  
 Each object encapsulates both data and the operations that can be performed on that data, allowing physical devices or logical processes to be represented as modular software entities. 
-Tipycally, objects are schematized as in Figure \ref{fig:generic_object} to highlight their name, attributes and methods.
-For semplicity, in the rest of this disussion, only the methods (that incapsulate the behaviour) are represented.
+Typically, objects are schematized as in Figure \ref{fig:generic_object} to highlight their name, attributes and methods.
+For simplicity, in the rest of this discussion, only the methods (that incapsulate the behavior) are represented.
 
 In the present implementation, each laboratory instrument (potentiostat, waveform generator, and oscilloscope) is abstracted as an independent object exposing a well-defined \emph{interface} for configuration, status monitoring, and data exchange.  
 This abstraction layer separates the experimental logic from the hardware-specific communication details, enabling the same high-level control code to operate across different hardware configurations with minimal modification.
 
 Encapsulation and modularity are particularly advantageous for long-duration experiments, where robustness and maintainability are essential.  
 By structuring the automation software as a set of interacting objects, individual components can be extended, replaced, or debugged without affecting the entire acquisition framework.  
-This design also enables \emph{hierarchical composition}, where higher-level objects coordinate the behaviour of lower-level instrument objects, reflecting the physical structure of the experimental setup.
+This design also enables \emph{hierarchical composition}, where higher-level objects coordinate the behavior of lower-level instrument objects, reflecting the physical structure of the experimental setup.
 
 Through the \verb|Channel| object, the status and data points are recursively retrieved from each channel of the potentiostat to the computer program, which converts, stores, and plots data, and executes a \emph{callback} function when a technique is finished.
 
@@ -377,14 +374,14 @@ The \verb|DEISChannel| object provided in it coordinates the workflow of the set
 \end{figure}
 
 The coordination of the electrochemical sequence, excitation waveform, and data acquisition is implemented through a central software control loop.
-This loop continuously monitors the execution state of the potentiostat, synchronizes the activation of the multisine excitation, and manages the transfer of acquired data from volatile memory to persistent storage.
+This loop continuously monitors the execution state of the potentiostat, synchronizes the activation of the multi-sine excitation, and manages the transfer of acquired data from volatile memory to persistent storage.
 By reacting to technique completion events and loop counters, the control logic ensures uninterrupted acquisition while preserving phase coherence between excitation and response signals.
 The structure of this control loop, implemented in Python and used throughout the battery aging experiments presented in this thesis, is illustrated in Figure~\ref{fig:python-controll-loop}.
 
 \begin{widefigure}[h]
     \includegraphics[width = \linewidth]{figures/acquisition/python_control_loop.png}
     \caption{Python-based control loop for a CCCV battery experiment with embedded dynamic impedance spectroscopy.
-    a) Scheme of the software components to interact with the single devices. b) Voltage and current time series of a typical CC-CV experiment on a battery as an example for a complex sequence monitoring. c) Visualization of the multithreaded software approach in multichannel mode. The loop monitors technique progression, triggers data transfer and multisine activation, and maintains synchronization between electrochemical control and signal acquisition.}
+    a) Scheme of the software components to interact with the single devices. b) Voltage and current time series of a typical CC-CV experiment on a battery as an example for a complex sequence monitoring. c) Visualization of the multithreaded software approach in multichannel mode. The loop monitors technique progression, triggers data transfer and multi-sine activation, and maintains synchronization between electrochemical control and signal acquisition.}
     \label{fig:python-controll-loop}
 \end{widefigure}
 
@@ -396,40 +393,40 @@ In multithreaded programming, multiple execution threads run within the same pro
 This approach allows independent tasks to proceed in parallel while remaining coordinated through a central control logic.  
 
 To make the automation possible, each instrument must independently execute its routine in a dedicated thread, with its actions being triggered from the main control loop.
-The typical approach is to implement each instrument as a \emph{worker} object, which executes operations inside a \emph{while: True} loop \sidenote{It always contains a pause during which the main thread is allowed to execute code for another worker object while new data are accumulated in another.}.
+The typical approach is to implement each instrument as a \emph{worker} object, which executes operations inside a \emph{while: True} loop\sidenote{It always contains a pause during which the main thread is allowed to execute code for another worker object while new data are accumulated in another.}.
 The multi-threading standard library of Python, \verb|threading|, is capable of automatically managing all objects without user indication in the code (compared to other libraries like \verb|asyncio|).
 
 A worker object has a property with the name \verb|running| that can be used by other objects to check their status.
 This idea is the basis of all the libraries used to synchronize the potentiostat, waveform generator, and acquisition device.
 This shared-state approach allows the main control loop to coordinate the execution of all instruments without blocking, ensuring real-time synchronization between electrochemical control, excitation, and data acquisition.
 
-The automatic switch of the multisine between galvannostatic and potentiostatic electrochemical experiments (see Figure \ref{fig:python-controll-loop} the AWG timeline) can still be done by \verb|DEISChannel| for the case of combined multisine waves, passing the \verb|MultisineWaveCombined| object, also provided in the package \verb|TrueFormAWG|, during initialization.
-To allow a safe update between galvanostatic and potentiostatic waveforms in the generator, a 3~s open circuit period is added in the sequence when type of technique is changed. 
+The automatic switching of the multi-sine between galvanostatic and potentiostatic electrochemical experiments (see Figure \ref{fig:python-controll-loop}, the AWG timeline) can still be done by \verb|DEISChannel| for the case of combined multi-sine waveforms, by passing the \verb|MultisineWaveCombined| object, also provided in the package \verb|TrueFormAWG|, during initialization.
+To allow a safe update between galvanostatic and potentiostatic waveforms in the generator, a 3~s open-circuit period is added to the sequence when the type of technique is changed. 
 
-The multithreaded capability is not only used to coordinate the three instruments for a dynamic impedance spectroscopy, but also allows to use multiple channels of the potentiostat (and relative waveforms generators and acquisition devices) indipendently and simultanously.
-Figure \ref{fig:multi-channel} shows four cells connect to the same mulit-channel potentiostat and the streming of data from the acquisition devices to a single computer.
+The multithreaded capability is not only used to coordinate the three instruments for dynamic impedance spectroscopy, but also allows using multiple channels of the potentiostat (and corresponding waveform generators and acquisition devices) independently and simultaneously.
+Figure \ref{fig:multi-channel} shows four cells connected to the same multi-channel potentiostat and the streaming of data from the acquisition devices to a single computer.
 
 \begin{widefigure}[h]
     \centering
     \includegraphics[width = \linewidth]{figures/acquisition/4 channel experiment.png}
-    \caption{Multi-channel execution of dynamic impendance experiments. Left: photo of four identical lithim-ion coin cells connected to the same potentiostat and indipendent waveform generators and acquisition devices. Right: screenshot of the computer screen with the real-time plotting of the multi-frequency voltage and current signals from the acquisition device.}
+    \caption{Multi-channel execution of dynamic impedance experiments. Left: photo of four identical lithium-ion coin cells connected to the same potentiostat. Each channel is interfaces with independent waveform generator and acquisition device. Right: screenshot of the computer screen with the real-time visualization of the multi-frequency voltage and current signals from the acquisition device.}
     \label{fig:multi-channel}
 \end{widefigure}
 
 Given the modularity of the approach presented here, it is possible to use different hardware to perform the experiment in the same manner, provided a similar interface is available.
 
-In Appendix \ref{app:deis meas script} are reported examples of scripts to load and use the libraries and perform dynamic impedance spectroscopy experiments with broadband multisine and online impedance computation.
+In Appendix \ref{app:deis meas script} are reported examples of scripts to load and use the libraries and perform dynamic impedance spectroscopy experiments with broadband multi-sine and online impedance computation.
 
-\section{Summary and Contribution}
+\section{Summary}
 
-This chapter presents the experimental framework developed for the acquisition of multi-frequency signals for the estimation of instantnaous impednace in non-stationary conditions. The focus was deliberately placed on the hardware integration, excitation design, sampling strategy, and software automation required to enable dynamic electrochemical impedance spectroscopy under realistic battery operating conditions.
+This chapter presents the experimental framework developed for the acquisition of multi-frequency signals for the estimation of instantaneous impedance in non-stationary conditions. The focus was deliberately placed on the hardware integration, excitation design, sampling strategy, and software automation required to enable dynamic electrochemical impedance spectroscopy under realistic battery operating conditions.
 
 A central technical contribution of this work is the development of a strategy to generate long, arbitrary broadband excitation signals using commercial laboratory instrumentation.
-By exploiting the dual-channel capabilities and large onboard memory of modern arbitrary waveform generators, and by introducing a frequency-subdivision approach, it was possible to synthesize multisine excitations spanning up to seven decades of frequency while preserving spectral coherence and avoiding intermodulation artifacts.
+By exploiting the dual-channel capabilities and large onboard memory of modern arbitrary waveform generators, and by introducing a frequency-subdivision approach, it was possible to synthesize multi-sine excitations spanning up to seven decades of frequency while preserving spectral coherence and avoiding intermodulation artifacts.
 This capability exceeds what is typically achievable with conventional embedded DAC architectures and is essential for broadband impedance characterization of electrochemical systems.
 
 Equally important is the automation layer developed to coordinate the potentiostat, waveform generator, and high-speed acquisition device over long-duration cycling experiments.
-A modular, open-source software ecosystem was created to manage instrument synchronization, multisine activation, continuous data streaming, buffering, and metadata logging without user intervention.
+A modular, open-source software ecosystem was created to manage instrument synchronization, multi-sine activation, continuous data streaming, buffering, and metadata logging without user intervention.
 This infrastructure enables uninterrupted acquisition of multi-frequency voltage and current signals over many charge--discharge cycles, a prerequisite for studying impedance evolution during battery aging.
 The ability to reliably acquire long, synchronized, broadband datasets under controlled electrochemical conditions was a limiting factor in dynamic impedance spectroscopy up to this point.
 This work establishes a practical and extensible platform for time-resolved impedance analysis in batteries and other electrochemical systems.

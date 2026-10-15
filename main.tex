@@ -13,6 +13,7 @@
 \frontmatter
 
 \input{declaration}
+\input{contributions}
 \loadgeometry{main_body}
 \input{abstract}
 
@@ -53,17 +54,17 @@
 \input{chapters/13_conclusions}
 \input{chapters/15_outlooks}
 
+\loadgeometry{full_page}
 \part{Appendixes}
+\loadgeometry{main_body}
 % --- suppress openright for appendix ---
 \let\origcleardoublepage\cleardoublepage
 \let\cleardoublepage\clearpage
-
 \input{chapters/Appendixes.tex}
 
 \backmatter
 
 \loadgeometry{no_margin}
 \printbibliography
-
 
 \end{document}

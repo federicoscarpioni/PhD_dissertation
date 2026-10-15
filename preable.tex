@@ -1,4 +1,9 @@
-% Load packages 
+% PDF/A compliance — must be loaded first; loads hyperref internally
+% Pass xcolor options before pdfx loads xcolor internally
+\PassOptionsToPackage{dvipsnames}{xcolor}
+\usepackage[a-2b,latxmp]{pdfx}
+
+% Load packages
 \usepackage{amsmath, amssymb,mathrsfs}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -339,8 +344,7 @@ marginparwidth = 0mm
 % \newenvironment{TwoCol}{\small\begin{adjmulticols}{2}{0in}{-2in}}{\end{adjmulticols}}
 % \newenvironment{OneCol}{\small\begin{adjmulticols}{1}{0in}{-2in}}{\end{adjmulticols}}
 
-% Set rules for links
-\usepackage[hidelinks]{hyperref}
+% Set rules for links (hyperref loaded by pdfx above)
 \hypersetup{
     colorlinks,
     linkcolor={black},

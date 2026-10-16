@@ -16,3 +16,6 @@
 *.log
 *.fls
 *.vscode/
+.latexmkrc
+main.xmpdata
+pdfa.xmpi
